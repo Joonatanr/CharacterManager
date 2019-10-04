@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterManager
 {
-    class PlayerCharacter
+    public class PlayerCharacter
     {
         /* This is just for very initial testing. */
         private String _name;

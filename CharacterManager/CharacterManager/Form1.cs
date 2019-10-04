@@ -13,6 +13,7 @@ namespace CharacterManager
     public partial class Form1 : Form
     {
         private TextBoxWriter myWriter;
+        private PlayerCharacter activeCharacter = null;
 
         public Form1()
         {
@@ -22,6 +23,20 @@ namespace CharacterManager
             myWriter.WriteColoredLine("Hello World", ConsoleColor.DarkRed);
         }
 
+
+        /************* private methods*****************/
+
+
+        private void updateCharacterAttributes()
+        {
+            if (this.activeCharacter != null)
+            {
+                this.textBoxName.Text = activeCharacter.CharacterName;
+                this.textBoxSTR.Text = activeCharacter.CharacterStrength.ToString();
+            }
+        }
+
+        /*************** Button functions *************/
         private void button1_Click(object sender, EventArgs e)
         {
             /* New character creation - TODO, this is only a placeholder. */
@@ -29,7 +44,8 @@ namespace CharacterManager
             
             if (f2.ShowDialog() == DialogResult.OK)
             {
-               /* TODO */ 
+                activeCharacter = f2.CreatedCharacter;
+                updateCharacterAttributes();
             }
         }
 

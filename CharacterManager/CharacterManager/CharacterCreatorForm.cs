@@ -12,6 +12,8 @@ namespace CharacterManager
 {
     public partial class CharacterCreatorForm : Form
     {
+        public PlayerCharacter CreatedCharacter { get; set; }
+
         public CharacterCreatorForm()
         {
             InitializeComponent();
@@ -19,10 +21,18 @@ namespace CharacterManager
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            /* TODO */
+            if (textBoxCharName.Text != String.Empty)
+            {
+                CreatedCharacter = new PlayerCharacter(textBoxCharName.Text);
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                handleErrorData();
+            }
+            
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)
@@ -31,6 +41,12 @@ namespace CharacterManager
 
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+
+        private void handleErrorData()
+        {
+            MessageBox.Show("Invalid data");
         }
     }
 }
