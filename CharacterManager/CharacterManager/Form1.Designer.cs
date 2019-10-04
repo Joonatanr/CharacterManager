@@ -33,9 +33,9 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxSTR = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.AttributeDisplaySTR = new CharacterManager.UserControlAttributeDisplay();
             this.SuspendLayout();
             // 
             // button1
@@ -82,22 +82,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Character Name";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 143);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "STR";
-            // 
-            // textBoxSTR
-            // 
-            this.textBoxSTR.Location = new System.Drawing.Point(112, 140);
-            this.textBoxSTR.Name = "textBoxSTR";
-            this.textBoxSTR.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSTR.TabIndex = 5;
-            // 
             // buttonSave
             // 
             this.buttonSave.Location = new System.Drawing.Point(13, 72);
@@ -108,14 +92,26 @@
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // AttributeDisplaySTR
+            // 
+            this.AttributeDisplaySTR.AttributeName = "STR";
+            this.AttributeDisplaySTR.AttributeValue = 0;
+            this.AttributeDisplaySTR.Location = new System.Drawing.Point(13, 140);
+            this.AttributeDisplaySTR.Name = "AttributeDisplaySTR";
+            this.AttributeDisplaySTR.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplaySTR.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AttributeDisplaySTR);
             this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxSTR);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.richTextBox1);
@@ -135,9 +131,9 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxSTR;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private UserControlAttributeDisplay AttributeDisplaySTR;
     }
 }
 

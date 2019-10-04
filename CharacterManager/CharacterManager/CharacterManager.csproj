@@ -61,6 +61,12 @@
     <Compile Include="PlayerCharacter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlAttributeDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAttributeDisplay.Designer.cs">
+      <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CharacterCreatorForm.resx">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +82,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlAttributeDisplay.resx">
+      <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

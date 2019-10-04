@@ -35,7 +35,8 @@ namespace CharacterManager
             if (this.activeCharacter != null)
             {
                 this.textBoxName.Text = activeCharacter.CharacterName;
-                this.textBoxSTR.Text = activeCharacter.StrengthAttribute.ToString();
+                //this.textBoxSTR.Text = activeCharacter.StrengthAttribute.ToString();
+                this.AttributeDisplaySTR.AttributeValue = activeCharacter.StrengthAttribute;
             }
         }
 
@@ -54,7 +55,22 @@ namespace CharacterManager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /* Load an existing character - TODO, this is only a placeholder. */
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    XmlSerializer reader = new XmlSerializer(typeof(PlayerCharacter));
+                    StreamReader file = new System.IO.StreamReader(openFileDialog1.FileName);
+
+                    activeCharacter = (PlayerCharacter)reader.Deserialize(file);
+                    updateCharacterAttributes();
+                }
+                catch (Exception ex)
+                {
+                    myWriter.WriteColoredLine("Failed to open file : " + ex.Message, ConsoleColor.DarkRed);
+                }
+            }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
