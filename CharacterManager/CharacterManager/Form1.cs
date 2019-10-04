@@ -32,7 +32,7 @@ namespace CharacterManager
             if (this.activeCharacter != null)
             {
                 this.textBoxName.Text = activeCharacter.CharacterName;
-                this.textBoxSTR.Text = activeCharacter.CharacterStrength.ToString();
+                this.textBoxSTR.Text = activeCharacter.StrengthAttribute.ToString();
             }
         }
 
@@ -52,7 +52,12 @@ namespace CharacterManager
         private void button2_Click(object sender, EventArgs e)
         {
             /* Load an existing character - TODO, this is only a placeholder. */
-        }   
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            /* TODO */
+        }
     }
 
     public static class RichTextBoxExtensions
