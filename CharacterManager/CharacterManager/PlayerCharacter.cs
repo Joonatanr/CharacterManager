@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CharacterManager
 {
+    [Serializable]
     public class PlayerCharacter
     {
         /* This is just for very initial testing. */

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace CharacterManager
 {
@@ -56,7 +59,26 @@ namespace CharacterManager
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            /* TODO */
+            if(activeCharacter != null)
+            {
+                /* Lets test saving the character into an xml format. */
+
+                XmlSerializer xSubmit = new XmlSerializer(typeof(PlayerCharacter));
+
+                using (var sww = new StreamWriter("test.xml"))
+                {
+                    XmlWriterSettings settings = new XmlWriterSettings();
+                    settings.OmitXmlDeclaration = true;
+                    settings.Indent = true;
+                    settings.NewLineOnAttributes = true;
+
+                    using(XmlWriter writer = XmlWriter.Create(sww, settings))
+                    {
+                        xSubmit.Serialize(writer, activeCharacter);
+                        sww.Flush();
+                    }
+                }
+            }
         }
     }
 
