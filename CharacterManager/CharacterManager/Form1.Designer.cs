@@ -36,6 +36,11 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.AttributeDisplaySTR = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayINT = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayWIS = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayCHA = new CharacterManager.UserControlAttributeDisplay();
             this.SuspendLayout();
             // 
             // button1
@@ -68,7 +73,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(112, 114);
+            this.textBoxName.Location = new System.Drawing.Point(212, 16);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
             this.textBoxName.TabIndex = 3;
@@ -76,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 117);
+            this.label1.Location = new System.Drawing.Point(122, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 4;
@@ -100,16 +105,66 @@
             // 
             this.AttributeDisplaySTR.AttributeName = "STR";
             this.AttributeDisplaySTR.AttributeValue = 0;
-            this.AttributeDisplaySTR.Location = new System.Drawing.Point(13, 140);
+            this.AttributeDisplaySTR.Location = new System.Drawing.Point(112, 47);
             this.AttributeDisplaySTR.Name = "AttributeDisplaySTR";
             this.AttributeDisplaySTR.Size = new System.Drawing.Size(168, 34);
             this.AttributeDisplaySTR.TabIndex = 8;
+            // 
+            // AttributeDisplayINT
+            // 
+            this.AttributeDisplayINT.AttributeName = "INT";
+            this.AttributeDisplayINT.AttributeValue = 0;
+            this.AttributeDisplayINT.Location = new System.Drawing.Point(112, 81);
+            this.AttributeDisplayINT.Name = "AttributeDisplayINT";
+            this.AttributeDisplayINT.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayINT.TabIndex = 9;
+            // 
+            // AttributeDisplayDEX
+            // 
+            this.AttributeDisplayDEX.AttributeName = "DEX";
+            this.AttributeDisplayDEX.AttributeValue = 0;
+            this.AttributeDisplayDEX.Location = new System.Drawing.Point(112, 115);
+            this.AttributeDisplayDEX.Name = "AttributeDisplayDEX";
+            this.AttributeDisplayDEX.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayDEX.TabIndex = 10;
+            // 
+            // AttributeDisplayCON
+            // 
+            this.AttributeDisplayCON.AttributeName = "CON";
+            this.AttributeDisplayCON.AttributeValue = 0;
+            this.AttributeDisplayCON.Location = new System.Drawing.Point(112, 149);
+            this.AttributeDisplayCON.Name = "AttributeDisplayCON";
+            this.AttributeDisplayCON.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayCON.TabIndex = 11;
+            // 
+            // AttributeDisplayWIS
+            // 
+            this.AttributeDisplayWIS.AttributeName = "WIS";
+            this.AttributeDisplayWIS.AttributeValue = 0;
+            this.AttributeDisplayWIS.Location = new System.Drawing.Point(112, 183);
+            this.AttributeDisplayWIS.Name = "AttributeDisplayWIS";
+            this.AttributeDisplayWIS.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayWIS.TabIndex = 12;
+            // 
+            // AttributeDisplayCHA
+            // 
+            this.AttributeDisplayCHA.AttributeName = "CHA";
+            this.AttributeDisplayCHA.AttributeValue = 0;
+            this.AttributeDisplayCHA.Location = new System.Drawing.Point(112, 217);
+            this.AttributeDisplayCHA.Name = "AttributeDisplayCHA";
+            this.AttributeDisplayCHA.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayCHA.TabIndex = 13;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AttributeDisplayCHA);
+            this.Controls.Add(this.AttributeDisplayWIS);
+            this.Controls.Add(this.AttributeDisplayCON);
+            this.Controls.Add(this.AttributeDisplayDEX);
+            this.Controls.Add(this.AttributeDisplayINT);
             this.Controls.Add(this.AttributeDisplaySTR);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label1);
@@ -134,6 +189,11 @@
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private UserControlAttributeDisplay AttributeDisplaySTR;
+        private UserControlAttributeDisplay AttributeDisplayINT;
+        private UserControlAttributeDisplay AttributeDisplayDEX;
+        private UserControlAttributeDisplay AttributeDisplayCON;
+        private UserControlAttributeDisplay AttributeDisplayWIS;
+        private UserControlAttributeDisplay AttributeDisplayCHA;
     }
 }
 

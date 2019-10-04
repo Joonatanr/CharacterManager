@@ -46,7 +46,8 @@ namespace CharacterManager
 
         private void updateDisplayedValue(int value)
         {
-            int modifier = (value - 10) / 2;
+            /* TODO : Move this modifier elsewhere. */
+            Decimal modifier = Math.Floor(((Decimal)value - 10) / 2);
 
             String txt = value + " " + "(";
             if(modifier >= 0)

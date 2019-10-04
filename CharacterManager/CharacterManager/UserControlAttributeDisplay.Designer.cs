@@ -46,6 +46,7 @@
             // 
             this.textBoxSTR.Location = new System.Drawing.Point(53, 5);
             this.textBoxSTR.Name = "textBoxSTR";
+            this.textBoxSTR.ReadOnly = true;
             this.textBoxSTR.Size = new System.Drawing.Size(100, 20);
             this.textBoxSTR.TabIndex = 7;
             // 

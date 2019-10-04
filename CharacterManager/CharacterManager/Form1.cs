@@ -35,8 +35,13 @@ namespace CharacterManager
             if (this.activeCharacter != null)
             {
                 this.textBoxName.Text = activeCharacter.CharacterName;
-                //this.textBoxSTR.Text = activeCharacter.StrengthAttribute.ToString();
+                
                 this.AttributeDisplaySTR.AttributeValue = activeCharacter.StrengthAttribute;
+                this.AttributeDisplayINT.AttributeValue = activeCharacter.IntAttribute;
+                this.AttributeDisplayDEX.AttributeValue = activeCharacter.DexAttribute;
+                this.AttributeDisplayCON.AttributeValue = activeCharacter.ConAttribute;
+                this.AttributeDisplayWIS.AttributeValue = activeCharacter.WisAttribute;
+                this.AttributeDisplayCHA.AttributeValue = activeCharacter.CharAttribute;
             }
         }
 
@@ -56,6 +61,7 @@ namespace CharacterManager
         private void button2_Click(object sender, EventArgs e)
         {
 
+            /** Load a file. */
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 try
@@ -65,6 +71,7 @@ namespace CharacterManager
 
                     activeCharacter = (PlayerCharacter)reader.Deserialize(file);
                     updateCharacterAttributes();
+                    file.Close();
                 }
                 catch (Exception ex)
                 {
