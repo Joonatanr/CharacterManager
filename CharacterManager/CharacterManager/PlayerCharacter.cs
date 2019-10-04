@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace CharacterManager
 {
@@ -23,6 +24,7 @@ namespace CharacterManager
 
         private CharacterBaseAttributes _baseAttributes;
 
+        public CharacterBaseAttributes BaseAttributes { get { return _baseAttributes; } set { _baseAttributes = value; } }
 
         public String CharacterName
         {
@@ -37,6 +39,7 @@ namespace CharacterManager
             }
         }
 
+        [XmlIgnore]
         public int StrengthAttribute
         {
             get
@@ -50,6 +53,7 @@ namespace CharacterManager
             }
         }
 
+        [XmlIgnore]
         public int IntAttribute
         {
             get
@@ -63,6 +67,7 @@ namespace CharacterManager
             }
         }
 
+        [XmlIgnore]
         public int WisAttribute
         {
             get
@@ -76,6 +81,7 @@ namespace CharacterManager
             }
         }
 
+        [XmlIgnore]
         public int DexAttribute
         {
             get
@@ -90,6 +96,7 @@ namespace CharacterManager
         }
 
 
+        [XmlIgnore]
         public int CharAttribute
         {
             get
@@ -103,6 +110,7 @@ namespace CharacterManager
             }
         }
 
+        [XmlIgnore]
         public int ConAttribute
         {
             get
