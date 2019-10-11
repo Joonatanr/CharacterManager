@@ -35,7 +35,6 @@ namespace CharacterManager
         private void parseRacesFromXml(String filepath)
         {
             //Lets just test if we can parse one initially... 
-            //PlayerRace test;
             try
             {
                 XmlSerializer reader = new XmlSerializer(typeof(List<PlayerRace>));

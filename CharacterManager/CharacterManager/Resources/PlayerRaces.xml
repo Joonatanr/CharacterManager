@@ -10,6 +10,32 @@
       <WIS>0</WIS>
     </BonusAttributes>
     <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+    <SubRaces>
+       <PlayerRace>
+       <RaceName>Hill Dwarf</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>1</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+       </PlayerRace>
+       <PlayerRace>
+       <RaceName>Mountain Dwarf</RaceName>
+           <BonusAttributes>
+           <STR>2</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+       </PlayerRace>
+    </SubRaces>
   </PlayerRace>
   <PlayerRace>
     <RaceName>Elf</RaceName>
