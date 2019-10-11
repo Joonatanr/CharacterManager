@@ -68,6 +68,27 @@ namespace CharacterManager
            return res;
         }
 
+        public static int getAbilityModifierValue(int score)
+        {
+            /* TODO : Move this modifier elsewhere. */
+            Decimal modifier = Math.Floor(((Decimal)score - 10) / 2);
+            return (int)modifier;
+        }
+
+        public static String getAbilityWithModifierString(Decimal score)
+        {
+            /* TODO : Move this modifier elsewhere. */
+            Decimal modifier = Math.Floor(((Decimal)score - 10) / 2);
+
+            String txt = score + " " + "(";
+            if (modifier >= 0)
+            {
+                txt += "+";
+            }
+
+            txt += modifier + ")";
+            return txt;
+        }
 
         private Boolean resolveCharacterData(PlayerCharacter raw)
         {
