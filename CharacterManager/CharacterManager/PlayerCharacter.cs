@@ -21,6 +21,13 @@ namespace CharacterManager
             public int WIS;
         }
 
+        public static readonly String[] CharacterSkillProficiencies = new String[]
+        {
+            "Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation",
+            "Medicine","Nature","Perception","Performance","Persuasion","Religion","Sleight Of Hand","Stealth","Survival"
+        };
+        
+
         private CharacterBaseAttributes _baseAttributes;
         private PlayerRace MainRace; //This contains the actual object of the race of the character. 
         private PlayerRace SubRace;  ////This contains the actual object of the subrace of the character. 
