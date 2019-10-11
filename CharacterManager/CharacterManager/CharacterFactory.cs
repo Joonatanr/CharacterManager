@@ -35,16 +35,19 @@ namespace CharacterManager
         private void parseRacesFromXml(String filepath)
         {
             //Lets just test if we can parse one initially... 
-            PlayerRace test;
+            //PlayerRace test;
             try
             {
-                XmlSerializer reader = new XmlSerializer(typeof(PlayerRace));
+                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerRace>));
                 StreamReader file = new System.IO.StreamReader(filepath);
 
-                test = (PlayerRace)reader.Deserialize(file);
+                Races = (List<PlayerRace>)reader.Deserialize(file);
                 file.Close();
 
-                logMessage("Parsed : " + test.RaceName + " STR : " + test.BonusAttributes.STR);
+                foreach (PlayerRace race in Races)
+                {
+                    logMessage("Parsed : " + race.RaceName + " STR : " + race.BonusAttributes.STR);
+                }
             }
             catch (Exception ex)
             {
