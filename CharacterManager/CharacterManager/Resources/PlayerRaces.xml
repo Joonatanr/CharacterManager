@@ -1,0 +1,12 @@
+<PlayerRace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RaceName>test</RaceName>
+  <BonusAttributes>
+    <STR>2</STR>
+    <DEX>0</DEX>
+    <INT>0</INT>
+    <CHA>0</CHA>
+    <CON>0</CON>
+    <WIS>0</WIS>
+  </BonusAttributes>
+  <NumberOfGenericBonusAttributes>1</NumberOfGenericBonusAttributes>
+</PlayerRace>

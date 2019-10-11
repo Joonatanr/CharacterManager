@@ -17,6 +17,7 @@ namespace CharacterManager
     {
         private TextBoxWriter myWriter;
         private PlayerCharacter activeCharacter = null;
+        private CharacterFactory myFactory;
 
         public Form1()
         {
@@ -24,6 +25,9 @@ namespace CharacterManager
             myWriter = new TextBoxWriter(this.richTextBox1);
 
             myWriter.WriteColoredLine("Hello World", ConsoleColor.DarkRed);
+            //myFactory = new CharacterFactory();
+            myFactory = new CharacterFactory(myWriter);
+            myFactory.Initialize();
         }
 
 
