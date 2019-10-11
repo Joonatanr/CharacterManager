@@ -64,23 +64,11 @@ namespace CharacterManager
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             /** Load a file. */
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                try
-                {
-                    XmlSerializer reader = new XmlSerializer(typeof(PlayerCharacter));
-                    StreamReader file = new System.IO.StreamReader(openFileDialog1.FileName);
-
-                    activeCharacter = (PlayerCharacter)reader.Deserialize(file);
-                    updateCharacterAttributes();
-                    file.Close();
-                }
-                catch (Exception ex)
-                {
-                    myWriter.WriteColoredLine("Failed to open file : " + ex.Message, ConsoleColor.DarkRed);
-                }
+                activeCharacter = myFactory.LoadFromXml(openFileDialog1.FileName);
+                updateCharacterAttributes();
             }
         }
 

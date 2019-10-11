@@ -21,8 +21,13 @@ namespace CharacterManager
             public int WIS;
         }
 
-
         private CharacterBaseAttributes _baseAttributes;
+        private PlayerRace MainRace; //This contains the actual object of the race of the character. 
+        private PlayerRace SubRace;  ////This contains the actual object of the subrace of the character. 
+
+        /* These are the properties that are to be stored in XML. Actual objects will be loaded through the factory. */
+        public String MainRaceName { get; set; }
+        public String SubRaceName { get; set; }
 
         public CharacterBaseAttributes BaseAttributes { get { return _baseAttributes; } set { _baseAttributes = value; } }
 
@@ -148,6 +153,15 @@ namespace CharacterManager
         {
             this._name = name;
             this._baseAttributes = attrib;
+        }
+
+        public void setMainAndSubrace(PlayerRace race, PlayerRace subrace)
+        {
+            this.MainRace = race;
+            this.SubRace = subrace;
+
+            this.MainRaceName = race.RaceName;
+            this.SubRaceName = subrace.RaceName;
         }
     }
 }
