@@ -72,6 +72,9 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxSpeed = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -392,6 +395,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBoxSpeed);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.richTextBoxProficiencyTest);
             this.groupBox3.Location = new System.Drawing.Point(286, 11);
             this.groupBox3.Name = "groupBox3";
@@ -429,7 +435,7 @@
             // 
             // richTextBoxProficiencyTest
             // 
-            this.richTextBoxProficiencyTest.Location = new System.Drawing.Point(144, 241);
+            this.richTextBoxProficiencyTest.Location = new System.Drawing.Point(6, 278);
             this.richTextBoxProficiencyTest.Name = "richTextBoxProficiencyTest";
             this.richTextBoxProficiencyTest.Size = new System.Drawing.Size(294, 162);
             this.richTextBoxProficiencyTest.TabIndex = 10;
@@ -453,6 +459,7 @@
             this.comboBoxPlayerClasses.Name = "comboBoxPlayerClasses";
             this.comboBoxPlayerClasses.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPlayerClasses.TabIndex = 0;
+            this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -538,6 +545,32 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Total";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(7, 256);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(163, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Weapon and armor proficiencies:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 456);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Speed:";
+            // 
+            // textBoxSpeed
+            // 
+            this.textBoxSpeed.Location = new System.Drawing.Point(57, 453);
+            this.textBoxSpeed.Name = "textBoxSpeed";
+            this.textBoxSpeed.ReadOnly = true;
+            this.textBoxSpeed.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSpeed.TabIndex = 13;
+            // 
             // CharacterCreatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -558,6 +591,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownINT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSTR)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -614,5 +648,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxSpeed;
+        private System.Windows.Forms.Label label12;
     }
 }

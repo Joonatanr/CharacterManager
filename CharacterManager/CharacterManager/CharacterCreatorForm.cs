@@ -23,6 +23,7 @@ namespace CharacterManager
 
         private PlayerRace SelectedMainRace;
         private PlayerRace SelectedSubRace;
+        private PlayerClass SelectedClass;
 
         public CharacterCreatorForm(CharacterFactory factory)
         {
@@ -39,6 +40,13 @@ namespace CharacterManager
             foreach(String str in mainRaceNameList)
             {
                 comboBoxMainRace.Items.Add(str);
+            }
+
+            List<String> ClassNameList = myFactory.getClassList();
+
+            foreach(String str in ClassNameList)
+            {
+                comboBoxPlayerClasses.Items.Add(str);
             }
         }
 
@@ -148,6 +156,28 @@ namespace CharacterManager
             return res;
         }
 
+
+        private int getSpeedValue()
+        {
+            int res = 0;
+
+            if (SelectedMainRace != null)
+            {
+                res = SelectedMainRace.BaseSpeed;
+            }
+
+            if (SelectedSubRace != null)
+            {
+                if(SelectedSubRace.BaseSpeed != 0)
+                {
+                    //We override with subrace speed. 
+                    res = SelectedSubRace.BaseSpeed;
+                } 
+            }
+
+            return res;
+        }
+
         private void updateAllDisplayedData()
         {
             //TODO : Create a base attribute display class. 
@@ -175,7 +205,7 @@ namespace CharacterManager
             updateBaseAttributeFields();
             //TODO : We want to show where the bonuses come from.
 
-            //Lets next try showing weapon and armor proficiencies...
+            //2. Lets next try showing weapon and armor proficiencies...
             //TODO : This is just a test, we really should make the proficiency and attribute displays into a separate class.
             richTextBoxProficiencyTest.Clear();
             richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Bold);
@@ -199,6 +229,9 @@ namespace CharacterManager
             {
                 richTextBoxProficiencyTest.AppendText(aProf + "\n");
             }
+
+            //3. Update the speed of the character.
+            textBoxSpeed.Text = getSpeedValue().ToString() + " ft";
         }
 
         private void updateBaseAttributeFields()
@@ -255,6 +288,10 @@ namespace CharacterManager
             {
                 String selectedItem = comboBoxMainRace.SelectedItem.ToString();
                 comboBoxSubRace.Items.Clear();
+                comboBoxSubRace.SelectedIndex = -1;
+                comboBoxSubRace.Text = "";
+                SelectedSubRace = null;
+
                 List<String> subRaceNames = myFactory.getSubRaceList(selectedItem);
 
                 foreach (String str in subRaceNames)
@@ -284,6 +321,20 @@ namespace CharacterManager
         private void textBoxCHAFinal_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxPlayerClasses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBoxPlayerClasses.Items.Count > 0)
+            {
+                String selectedItem = comboBoxPlayerClasses.SelectedItem.ToString();
+
+                if (selectedItem != null)
+                {
+                    SelectedClass = myFactory.getPlayerClassByName(selectedItem);
+                    updateAllDisplayedData();
+                }
+            }
         }
     }
 }

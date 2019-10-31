@@ -10,6 +10,10 @@ namespace CharacterManager
     public class PlayerClass
     {
         public String PlayerClassName;
+        public int HitDie;
+
+        public List<String> WeaponProficiencies = new List<String>();
+        public List<String> ArmorProficiencies = new List<String>();
 
         public PlayerClass()
         {

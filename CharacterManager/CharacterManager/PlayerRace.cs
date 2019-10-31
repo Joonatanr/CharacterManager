@@ -16,7 +16,7 @@ namespace CharacterManager
         public int MaximumAge { get; set; }
 
         public PlayerCharacter.PlayerSize.SizeDescriptor Size { get; set; }
-        public int BaseSpeed { get; set; }
+        public int BaseSpeed { get; set; } = 0;
 
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> WeaponProficiencies = new List<String>();

@@ -1,8 +1,29 @@
 ﻿<ArrayOfPlayerClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<PlayerClass>
 		<PlayerClassName>Fighter</PlayerClassName>
+		<HitDie>10</HitDie>
+		<WeaponProficiencies>
+			<string>Martial Weapons</string>
+			<string>Simple Weapons</string>
+		</WeaponProficiencies>
+		<ArmorProficiencies>
+			<string>Light Armor</string>
+			<string>Medium Armor</string>
+			<string>Heavy Armor</string>
+			<string>Shields</string>
+		</ArmorProficiencies>
 	</PlayerClass>
 	<PlayerClass>
 		<PlayerClassName>Wizard</PlayerClassName>
+		<HitDie>6</HitDie>
+		<WeaponProficiencies>
+			<string>Daggers</string>
+			<string>Darts</string>
+			<string>Slings</string>
+			<string>Quarterstaffs</string>
+			<string>Light Crossbows</string>
+		</WeaponProficiencies>
+		<ArmorProficiencies>
+		</ArmorProficiencies>
 	</PlayerClass>
 </ArrayOfPlayerClass>

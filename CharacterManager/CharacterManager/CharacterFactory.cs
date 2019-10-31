@@ -43,6 +43,17 @@ namespace CharacterManager
             return res;
         }
 
+        public List<String> getClassList()
+        {
+            List<String> res = new List<String>();
+            foreach(PlayerClass c in Classes)
+            {
+                res.Add(c.PlayerClassName);
+            }
+
+            return res;
+        }
+
         /* Initializes the factory and loads all the necessary resources. */
         public CharacterFactory()
         {
@@ -86,6 +97,12 @@ namespace CharacterManager
             }
         }
 
+        public PlayerClass getPlayerClassByName(String name)
+        {
+            PlayerClass res = Classes.Find(c => c.PlayerClassName == name);
+
+            return res;
+        }
 
         public PlayerCharacter LoadFromXml(String filename)
         {
