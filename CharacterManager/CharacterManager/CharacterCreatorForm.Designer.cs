@@ -62,6 +62,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -70,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownINT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSTR)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxCharName
@@ -81,7 +84,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(12, 374);
+            this.buttonOk.Location = new System.Drawing.Point(13, 599);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 1;
@@ -91,7 +94,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(93, 374);
+            this.buttonCancel.Location = new System.Drawing.Point(94, 599);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 2;
@@ -133,6 +136,7 @@
             this.comboBoxSubRace.Name = "comboBoxSubRace";
             this.comboBoxSubRace.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSubRace.TabIndex = 6;
+            this.comboBoxSubRace.SelectedIndexChanged += new System.EventHandler(this.comboBoxSubRace_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -145,6 +149,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.numericUpDownCHA);
             this.groupBox1.Controls.Add(this.label8);
@@ -159,7 +164,7 @@
             this.groupBox1.Controls.Add(this.numericUpDownSTR);
             this.groupBox1.Location = new System.Drawing.Point(18, 99);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(208, 191);
+            this.groupBox1.Size = new System.Drawing.Size(208, 238);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Base attributes(without modifiers)";
@@ -310,9 +315,9 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Location = new System.Drawing.Point(485, 11);
+            this.groupBox2.Location = new System.Drawing.Point(6, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(232, 226);
+            this.groupBox2.Size = new System.Drawing.Size(174, 186);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Base Attributes";
@@ -419,12 +424,31 @@
             this.label13.TabIndex = 14;
             this.label13.Text = "DEX";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.groupBox2);
+            this.groupBox3.Location = new System.Drawing.Point(232, 11);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(485, 610);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 188);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(189, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Standard values : 15, 14, 13, 12, 10, 8";
+            // 
             // CharacterCreatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 409);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(729, 634);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxSubRace);
@@ -446,6 +470,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSTR)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,5 +512,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label16;
     }
 }

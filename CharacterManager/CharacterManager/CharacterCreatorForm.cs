@@ -21,6 +21,9 @@ namespace CharacterManager
         private int ConBonus = 0;
         private CharacterFactory myFactory;
 
+        private PlayerRace SelectedMainRace;
+        private PlayerRace SelectedSubRace;
+
         public CharacterCreatorForm(CharacterFactory factory)
         {
             InitializeComponent();
@@ -43,7 +46,10 @@ namespace CharacterManager
         {
             if (textBoxCharName.Text != String.Empty)
             {
+                //Set player name.
                 CreatedCharacter = new PlayerCharacter(textBoxCharName.Text);
+
+                //Set base attributes.
                 CreatedCharacter.StrengthAttribute = (int)numericUpDownSTR.Value + StrBonus;
                 CreatedCharacter.WisAttribute = (int)numericUpDownWIS.Value + WisBonus;
                 CreatedCharacter.IntAttribute = (int)numericUpDownINT.Value + IntBonus;
@@ -51,8 +57,19 @@ namespace CharacterManager
                 CreatedCharacter.ConAttribute = (int)numericUpDownCON.Value + ConBonus;
                 CreatedCharacter.CharAttribute = (int)numericUpDownCHA.Value + ChaBonus;
 
-                this.DialogResult = DialogResult.OK;
-                this.Close();
+                //Set race and subrace.
+                if (SelectedMainRace == null)
+                {
+                    MessageBox.Show("Error : No race is selected.");
+                }
+                else
+                {
+                    CreatedCharacter.MainRaceName = SelectedMainRace.RaceName;
+                    CreatedCharacter.SubRaceName = SelectedSubRace.RaceName;
+
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
             else
             {
@@ -73,6 +90,34 @@ namespace CharacterManager
         private void handleErrorData()
         {
             MessageBox.Show("Invalid data");
+        }
+
+        private void updateAllDisplayedData()
+        {
+            //1. Lets begin with the selected race and subrace
+            if (SelectedMainRace != null)
+            {
+                StrBonus = SelectedMainRace.BonusAttributes.STR;
+                IntBonus = SelectedMainRace.BonusAttributes.INT;
+                WisBonus = SelectedMainRace.BonusAttributes.WIS;
+                ConBonus = SelectedMainRace.BonusAttributes.CON;
+                ChaBonus = SelectedMainRace.BonusAttributes.CHA;
+                DexBonus = SelectedMainRace.BonusAttributes.DEX;
+            }
+
+            if (SelectedSubRace != null)
+            {
+                StrBonus += SelectedSubRace.BonusAttributes.STR;
+                IntBonus += SelectedSubRace.BonusAttributes.INT;
+                WisBonus += SelectedSubRace.BonusAttributes.WIS;
+                ConBonus += SelectedSubRace.BonusAttributes.CON;
+                ChaBonus += SelectedSubRace.BonusAttributes.CHA;
+                DexBonus += SelectedSubRace.BonusAttributes.DEX;
+            }
+
+            updateBaseAttributeFields();
+            //TODO : We want to show where the bonuses come from.
+
         }
 
         private void updateBaseAttributeFields()
@@ -117,13 +162,33 @@ namespace CharacterManager
 
         private void comboBoxMainRace_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String selectedItem = comboBoxMainRace.SelectedItem.ToString();
-            comboBoxSubRace.Items.Clear();
-            List<String> subRaceNames = myFactory.getSubRaceList(selectedItem);
-
-            foreach (String str in subRaceNames)
+            if (comboBoxMainRace.Items.Count > 0)
             {
-                comboBoxSubRace.Items.Add(str);
+                String selectedItem = comboBoxMainRace.SelectedItem.ToString();
+                comboBoxSubRace.Items.Clear();
+                List<String> subRaceNames = myFactory.getSubRaceList(selectedItem);
+
+                foreach (String str in subRaceNames)
+                {
+                    comboBoxSubRace.Items.Add(str);
+                }
+
+                SelectedMainRace = myFactory.getRaceByName(comboBoxMainRace.SelectedItem.ToString());
+                updateAllDisplayedData();
+            }
+        }
+
+        private void comboBoxSubRace_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxSubRace.Items.Count > 0)
+            {
+                String selectedItem = comboBoxSubRace.SelectedItem.ToString();
+                String mainRace = comboBoxMainRace.SelectedItem.ToString();
+                if (mainRace != null && selectedItem != null)
+                {
+                    SelectedSubRace = myFactory.getSubRaceByName(mainRace, selectedItem);
+                    updateAllDisplayedData();
+                }
             }
         }
     }

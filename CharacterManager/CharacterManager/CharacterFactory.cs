@@ -64,6 +64,27 @@ namespace CharacterManager
             return this.isInitialized;
         }
 
+
+        public PlayerRace getRaceByName(String name)
+        {
+            return Races.Find(r => r.RaceName == name);
+        }
+
+        public PlayerRace getSubRaceByName(String main, String sub)
+        {
+            PlayerRace _mainRace = Races.Find(r => r.RaceName == main);
+
+            if(_mainRace == null)
+            {
+                return null;
+            }
+            else
+            {
+                return _mainRace.SubRaces.Find(s => s.RaceName == sub);
+            }
+        }
+
+
         public PlayerCharacter LoadFromXml(String filename)
         {
             if (!this.isInitialized)
