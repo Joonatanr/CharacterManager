@@ -21,6 +21,37 @@ namespace CharacterManager
             public int WIS;
         }
 
+        /* TODO : Maybe this can be done differently... */
+        public enum PlayerAlignment
+        {
+            LawfulGood,
+            LawfulNeutral,
+            LawfulEvil,
+            NeutralGood,
+            NeutralTrue,
+            NeutralEvil,
+            ChaoticGood,
+            ChaoticNeutral,
+            ChaoticEvil
+        }
+
+        public struct PlayerSize
+        {
+            public enum SizeDescriptor
+            {
+                Tiny,
+                Small,
+                Medium,
+                Large,
+                Huge,
+                Gargantuan
+            }
+
+            public int height;
+            public int weight;
+            public SizeDescriptor sizeType;
+        }
+
         public static readonly String[] CharacterSkillProficiencies = new String[]
         {
             "Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation",
@@ -31,6 +62,8 @@ namespace CharacterManager
         private CharacterBaseAttributes _baseAttributes;
         private PlayerRace MainRace; //This contains the actual object of the race of the character. 
         private PlayerRace SubRace;  ////This contains the actual object of the subrace of the character. 
+        private PlayerSize Size;
+        private PlayerAlignment Alignment;
 
         /* These are the properties that are to be stored in XML. Actual objects will be loaded through the factory. */
         public String MainRaceName { get; set; }
