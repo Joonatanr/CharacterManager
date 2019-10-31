@@ -53,7 +53,7 @@ namespace CharacterManager
         private void button1_Click(object sender, EventArgs e)
         {
             /* New character creation - TODO, this is only a placeholder. */
-            CharacterCreatorForm f2 = new CharacterCreatorForm();
+            CharacterCreatorForm f2 = new CharacterCreatorForm(this.myFactory);
             
             if (f2.ShowDialog() == DialogResult.OK)
             {

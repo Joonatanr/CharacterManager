@@ -10,6 +10,12 @@
       <WIS>0</WIS>
     </BonusAttributes>
     <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+	<WeaponProficiencies>
+		<string>battleaxe</string>
+		<string>handaxe</string>
+		<string>throwing hammer</string>
+		<string>warhammer</string>
+	</WeaponProficiencies>
     <SubRaces>
        <PlayerRace>
        <RaceName>Hill Dwarf</RaceName>
@@ -34,6 +40,10 @@
            <WIS>0</WIS>
          </BonusAttributes>
          <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <ArmorProficiencies>
+			<string>light armor</string>
+			<string>medium armor</string>
+		 </ArmorProficiencies>
        </PlayerRace>
     </SubRaces>
   </PlayerRace>

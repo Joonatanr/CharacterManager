@@ -9,11 +9,38 @@ using System.Xml.Serialization;
 
 namespace CharacterManager
 {
-    class CharacterFactory
+    public class CharacterFactory
     {
         private TextBoxWriter errorReporter;
         private List<PlayerRace> Races;
         private Boolean isInitialized = false;
+
+        public List<String> getMainRacesList()
+        {
+            List<String> res = new List<string>();
+            foreach(PlayerRace race in Races)
+            {
+                res.Add(race.RaceName);
+            }
+
+            return res;
+        }
+
+        public List<String> getSubRaceList(String mainRaceName)
+        {
+            List<String> res = new List<string>();
+
+            PlayerRace race = Races.Find(r => r.RaceName == mainRaceName);
+            if(race != null)
+            {
+                foreach(PlayerRace sub in race.SubRaces)
+                {
+                    res.Add(sub.RaceName);
+                }
+            }
+
+            return res;
+        }
 
         /* Initializes the factory and loads all the necessary resources. */
         public CharacterFactory()
@@ -29,9 +56,12 @@ namespace CharacterManager
 
         public Boolean Initialize()
         {
-            parseRacesFromXml("Resources/PlayerRaces.xml");
-            this.isInitialized = true;
-            return true;
+            if (!this.isInitialized)
+            {
+                parseRacesFromXml("Resources/PlayerRaces.xml");
+                this.isInitialized = true;
+            }
+            return this.isInitialized;
         }
 
         public PlayerCharacter LoadFromXml(String filename)

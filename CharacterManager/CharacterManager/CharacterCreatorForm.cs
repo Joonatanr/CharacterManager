@@ -19,11 +19,24 @@ namespace CharacterManager
         private int ChaBonus = 0;
         private int WisBonus = 0;
         private int ConBonus = 0;
+        private CharacterFactory myFactory;
 
-
-        public CharacterCreatorForm()
+        public CharacterCreatorForm(CharacterFactory factory)
         {
             InitializeComponent();
+            myFactory = factory;
+
+            if (myFactory.Initialize() == false)
+            {
+                throw new Exception("Error : Failed to initialize Character Factory");
+            }
+
+            List<String> mainRaceNameList = myFactory.getMainRacesList();
+
+            foreach(String str in mainRaceNameList)
+            {
+                comboBoxMainRace.Items.Add(str);
+            }
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
@@ -100,6 +113,18 @@ namespace CharacterManager
         private void numericUpDownCHA_ValueChanged(object sender, EventArgs e)
         {
             updateBaseAttributeFields();
+        }
+
+        private void comboBoxMainRace_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String selectedItem = comboBoxMainRace.SelectedItem.ToString();
+            comboBoxSubRace.Items.Clear();
+            List<String> subRaceNames = myFactory.getSubRaceList(selectedItem);
+
+            foreach (String str in subRaceNames)
+            {
+                comboBoxSubRace.Items.Add(str);
+            }
         }
     }
 }
