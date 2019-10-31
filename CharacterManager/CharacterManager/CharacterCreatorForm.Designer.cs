@@ -66,6 +66,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.richTextBoxProficiencyTest = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -330,7 +331,7 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Location = new System.Drawing.Point(6, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(174, 186);
+            this.groupBox2.Size = new System.Drawing.Size(303, 186);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Base Attributes";
@@ -439,6 +440,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.richTextBoxProficiencyTest);
             this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Location = new System.Drawing.Point(238, 11);
             this.groupBox3.Name = "groupBox3";
@@ -472,6 +474,14 @@
             this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Input";
+            // 
+            // richTextBoxProficiencyTest
+            // 
+            this.richTextBoxProficiencyTest.Location = new System.Drawing.Point(15, 248);
+            this.richTextBoxProficiencyTest.Name = "richTextBoxProficiencyTest";
+            this.richTextBoxProficiencyTest.Size = new System.Drawing.Size(294, 162);
+            this.richTextBoxProficiencyTest.TabIndex = 10;
+            this.richTextBoxProficiencyTest.Text = "";
             // 
             // CharacterCreatorForm
             // 
@@ -543,5 +553,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RichTextBox richTextBoxProficiencyTest;
     }
 }

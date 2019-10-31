@@ -92,8 +92,50 @@ namespace CharacterManager
             MessageBox.Show("Invalid data");
         }
 
+
+        private List<String> getAllArmorProficiencies()
+        {
+            List<String> res = new List<String>();
+
+            foreach (String aProf in SelectedMainRace.ArmorProficiencies)
+            {
+                res.Add(aProf);
+            }
+
+            if (SelectedSubRace != null)
+            {
+                foreach (String aProf in SelectedSubRace.ArmorProficiencies)
+                {
+                    res.Add(aProf);
+                }
+            }
+
+            return res;
+        }
+
+        private List<String> getAllWeaponProficiencies()
+        {
+            List<String> res = new List<String>();
+
+            foreach (String wProf in SelectedMainRace.WeaponProficiencies)
+            {
+                res.Add(wProf);
+            }
+
+            if (SelectedSubRace != null)
+            {
+                foreach (String wProf in SelectedSubRace.WeaponProficiencies)
+                {
+                    res.Add(wProf);
+                }
+            }
+
+            return res;
+        }
+
         private void updateAllDisplayedData()
         {
+            //TODO : Create a base attribute display class. 
             //1. Lets begin with the selected race and subrace
             if (SelectedMainRace != null)
             {
@@ -118,6 +160,30 @@ namespace CharacterManager
             updateBaseAttributeFields();
             //TODO : We want to show where the bonuses come from.
 
+            //Lets next try showing weapon and armor proficiencies...
+            //TODO : This is just a test, we really should make the proficiency and attribute displays into a separate class.
+            richTextBoxProficiencyTest.Clear();
+            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Bold);
+            richTextBoxProficiencyTest.AppendText("Weapon Proficiencies:\n");
+            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Regular);
+
+            List<String> wProfList = getAllWeaponProficiencies();
+
+            foreach (String wProf in wProfList)
+            {
+                richTextBoxProficiencyTest.AppendText(wProf + "\n");
+            }
+
+
+            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Bold);
+            richTextBoxProficiencyTest.AppendText("\nArmorProficiencies:\n");
+            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Regular);
+
+            List<String> aProfList = getAllArmorProficiencies();
+            foreach (String aProf in aProfList)
+            {
+                richTextBoxProficiencyTest.AppendText(aProf + "\n");
+            }
         }
 
         private void updateBaseAttributeFields()
