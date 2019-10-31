@@ -133,6 +133,17 @@ namespace CharacterManager
                 }
             }
 
+            if (SelectedClass != null)
+            {
+                foreach (String aProf in SelectedClass.ArmorProficiencies)
+                {
+                    if (!res.Contains(aProf))
+                    {
+                        res.Add(aProf);
+                    };
+                }
+            }
+
             return res;
         }
 
@@ -150,6 +161,17 @@ namespace CharacterManager
                 foreach (String wProf in SelectedSubRace.WeaponProficiencies)
                 {
                     res.Add(wProf);
+                }
+            }
+
+            if (SelectedClass != null)
+            {
+                foreach(String wProf in SelectedClass.WeaponProficiencies)
+                {
+                    if (!res.Contains(wProf))
+                    {
+                        res.Add(wProf);
+                    };
                 }
             }
 
@@ -232,6 +254,16 @@ namespace CharacterManager
 
             //3. Update the speed of the character.
             textBoxSpeed.Text = getSpeedValue().ToString() + " ft";
+
+            //4. Update hit point values.
+            if (SelectedClass != null)
+            {
+                textBoxHitDie.Text = "1d" + SelectedClass.HitDie;
+                int constitution = (int)numericUpDownCON.Value + ConBonus;
+                int bonus = CharacterFactory.getAbilityModifierValue(constitution);
+                int hp = bonus + SelectedClass.HitDie;
+                textBoxHitPoints.Text = hp.ToString();
+            }
         }
 
         private void updateBaseAttributeFields()

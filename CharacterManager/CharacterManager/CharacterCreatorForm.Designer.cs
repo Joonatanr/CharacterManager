@@ -75,6 +75,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxSpeed = new System.Windows.Forms.TextBox();
+            this.textBoxHitDie = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxHitPoints = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -395,6 +399,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBoxHitPoints);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.textBoxHitDie);
+            this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.textBoxSpeed);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
@@ -565,11 +573,45 @@
             // 
             // textBoxSpeed
             // 
-            this.textBoxSpeed.Location = new System.Drawing.Point(57, 453);
+            this.textBoxSpeed.Location = new System.Drawing.Point(70, 453);
             this.textBoxSpeed.Name = "textBoxSpeed";
             this.textBoxSpeed.ReadOnly = true;
             this.textBoxSpeed.Size = new System.Drawing.Size(100, 20);
             this.textBoxSpeed.TabIndex = 13;
+            // 
+            // textBoxHitDie
+            // 
+            this.textBoxHitDie.Location = new System.Drawing.Point(70, 479);
+            this.textBoxHitDie.Name = "textBoxHitDie";
+            this.textBoxHitDie.ReadOnly = true;
+            this.textBoxHitDie.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHitDie.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(10, 482);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Hit die:";
+            // 
+            // textBoxHitPoints
+            // 
+            this.textBoxHitPoints.Location = new System.Drawing.Point(70, 505);
+            this.textBoxHitPoints.Name = "textBoxHitPoints";
+            this.textBoxHitPoints.ReadOnly = true;
+            this.textBoxHitPoints.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHitPoints.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(10, 508);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Hit points:";
             // 
             // CharacterCreatorForm
             // 
@@ -651,5 +693,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxSpeed;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBoxHitPoints;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxHitDie;
+        private System.Windows.Forms.Label label13;
     }
 }
