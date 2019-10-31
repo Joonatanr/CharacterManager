@@ -22,7 +22,6 @@ namespace CharacterManager
         public List<String> WeaponProficiencies = new List<String>();
         public List<PlayerRace> SubRaces = new List<PlayerRace>();
 
-
         public PlayerRace()
         {
             this.RaceName = "UNKNOWN";

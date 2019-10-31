@@ -56,10 +56,11 @@ namespace CharacterManager
         {
             bool res = true;
 
-            if (textBoxCharName.Text != String.Empty)
+            if (textBoxCharName.Text != String.Empty && SelectedClass != null && SelectedMainRace != null)
             {
                 //1. Set player name.
                 CreatedCharacter = new PlayerCharacter(textBoxCharName.Text);
+                CreatedCharacter.ClassName = SelectedClass.PlayerClassName;
 
                 //2. Set base attributes.
                 CreatedCharacter.StrengthAttribute = (int)numericUpDownSTR.Value + StrBonus;
@@ -84,6 +85,9 @@ namespace CharacterManager
                 //4. Set weapon and armor proficiencies.
                 CreatedCharacter.WeaponProficiencies = getAllWeaponProficiencies();
                 CreatedCharacter.ArmorProficiencies = getAllArmorProficiencies();
+
+                //5. Set saving throw proficiencies.
+                CreatedCharacter.SavingThrowProficiencies = SelectedClass.SavingThrowProficiencies;
             }
 
             return res;
