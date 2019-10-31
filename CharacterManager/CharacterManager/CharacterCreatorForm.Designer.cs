@@ -37,6 +37,7 @@
             this.comboBoxSubRace = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.numericUpDownCHA = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,7 +64,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -73,13 +75,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSTR)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxCharName
             // 
-            this.textBoxCharName.Location = new System.Drawing.Point(105, 13);
+            this.textBoxCharName.Location = new System.Drawing.Point(96, 16);
             this.textBoxCharName.Name = "textBoxCharName";
-            this.textBoxCharName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharName.Size = new System.Drawing.Size(106, 20);
             this.textBoxCharName.TabIndex = 0;
             // 
             // buttonOk
@@ -105,7 +109,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 16);
+            this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 3;
@@ -114,7 +118,7 @@
             // comboBoxMainRace
             // 
             this.comboBoxMainRace.FormattingEnabled = true;
-            this.comboBoxMainRace.Location = new System.Drawing.Point(105, 40);
+            this.comboBoxMainRace.Location = new System.Drawing.Point(61, 19);
             this.comboBoxMainRace.Name = "comboBoxMainRace";
             this.comboBoxMainRace.Size = new System.Drawing.Size(121, 21);
             this.comboBoxMainRace.TabIndex = 4;
@@ -123,7 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 43);
+            this.label2.Location = new System.Drawing.Point(8, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 5;
@@ -132,7 +136,7 @@
             // comboBoxSubRace
             // 
             this.comboBoxSubRace.FormattingEnabled = true;
-            this.comboBoxSubRace.Location = new System.Drawing.Point(105, 67);
+            this.comboBoxSubRace.Location = new System.Drawing.Point(61, 46);
             this.comboBoxSubRace.Name = "comboBoxSubRace";
             this.comboBoxSubRace.Size = new System.Drawing.Size(121, 21);
             this.comboBoxSubRace.TabIndex = 6;
@@ -141,7 +145,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 70);
+            this.label3.Location = new System.Drawing.Point(8, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 7;
@@ -162,12 +166,21 @@
             this.groupBox1.Controls.Add(this.numericUpDownINT);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.numericUpDownSTR);
-            this.groupBox1.Location = new System.Drawing.Point(18, 99);
+            this.groupBox1.Location = new System.Drawing.Point(5, 123);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(208, 238);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Base attributes(without modifiers)";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(9, 188);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(189, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Standard values : 15, 14, 13, 12, 10, 8";
             // 
             // label9
             // 
@@ -427,37 +440,48 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox2);
-            this.groupBox3.Location = new System.Drawing.Point(232, 11);
+            this.groupBox3.Location = new System.Drawing.Point(238, 11);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(485, 610);
+            this.groupBox3.Size = new System.Drawing.Size(597, 582);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Player";
             // 
-            // label16
+            // groupBox4
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(9, 188);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(189, 13);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "Standard values : 15, 14, 13, 12, 10, 8";
+            this.groupBox4.Controls.Add(this.comboBoxMainRace);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.comboBoxSubRace);
+            this.groupBox4.Location = new System.Drawing.Point(6, 42);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(207, 75);
+            this.groupBox4.TabIndex = 10;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Player Race";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.groupBox4);
+            this.groupBox5.Controls.Add(this.textBoxCharName);
+            this.groupBox5.Controls.Add(this.groupBox1);
+            this.groupBox5.Location = new System.Drawing.Point(13, 11);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(219, 582);
+            this.groupBox5.TabIndex = 10;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Input";
             // 
             // CharacterCreatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 634);
+            this.ClientSize = new System.Drawing.Size(847, 634);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBoxSubRace);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBoxMainRace);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
-            this.Controls.Add(this.textBoxCharName);
             this.Name = "CharacterCreatorForm";
             this.Text = "CharacterCreatorForm";
             this.groupBox1.ResumeLayout(false);
@@ -471,8 +495,11 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -514,5 +541,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }
