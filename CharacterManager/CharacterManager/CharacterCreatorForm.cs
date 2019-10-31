@@ -42,14 +42,16 @@ namespace CharacterManager
             }
         }
 
-        private void buttonOk_Click(object sender, EventArgs e)
+        private bool CreateCharacter()
         {
+            bool res = true;
+
             if (textBoxCharName.Text != String.Empty)
             {
-                //Set player name.
+                //1. Set player name.
                 CreatedCharacter = new PlayerCharacter(textBoxCharName.Text);
 
-                //Set base attributes.
+                //2. Set base attributes.
                 CreatedCharacter.StrengthAttribute = (int)numericUpDownSTR.Value + StrBonus;
                 CreatedCharacter.WisAttribute = (int)numericUpDownWIS.Value + WisBonus;
                 CreatedCharacter.IntAttribute = (int)numericUpDownINT.Value + IntBonus;
@@ -57,25 +59,38 @@ namespace CharacterManager
                 CreatedCharacter.ConAttribute = (int)numericUpDownCON.Value + ConBonus;
                 CreatedCharacter.CharAttribute = (int)numericUpDownCHA.Value + ChaBonus;
 
-                //Set race and subrace.
+                //3. Set race and subrace.
                 if (SelectedMainRace == null)
                 {
                     MessageBox.Show("Error : No race is selected.");
+                    res = false;
                 }
                 else
                 {
                     CreatedCharacter.MainRaceName = SelectedMainRace.RaceName;
                     CreatedCharacter.SubRaceName = SelectedSubRace.RaceName;
-
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
                 }
+
+                //4. Set weapon and armor proficiencies.
+                CreatedCharacter.WeaponProficiencies = getAllWeaponProficiencies();
+                CreatedCharacter.ArmorProficiencies = getAllArmorProficiencies();
+            }
+
+            return res;
+        }
+
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            if (CreateCharacter())
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             else
             {
                 handleErrorData();
-            }
-            
+            }   
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

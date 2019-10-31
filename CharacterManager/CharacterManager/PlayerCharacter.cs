@@ -72,6 +72,8 @@ namespace CharacterManager
         public CharacterBaseAttributes BaseAttributes { get { return _baseAttributes; } set { _baseAttributes = value; } }
 
         public List<String> SkillProficiencies = new List<String>();
+        public List<String> WeaponProficiencies = new List<String>();
+        public List<String> ArmorProficiencies = new List<String>();
 
         public String CharacterName
         {
