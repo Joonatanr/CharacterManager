@@ -17,6 +17,17 @@
 			<string>STR</string>
 			<string>CON</string>
 		</SavingThrowProficiencies>
+		<AvailableSkillProficiencies>
+			<string>Acrobatics</string>
+			<string>Animal Handling</string>
+			<string>Athletics</string>
+			<string>Insight</string>
+			<string>History</string>
+			<string>Intimidation</string>
+			<string>Perception</string>
+			<string>Survival</string>
+		</AvailableSkillProficiencies>
+		<NumberOfSkillsToChoose>2</NumberOfSkillsToChoose>
 	</PlayerClass>
 	
 	
@@ -36,5 +47,14 @@
 			<string>INT</string>
 			<string>WIS</string>
 		</SavingThrowProficiencies>
+		<NumberOfSkillsToChoose>2</NumberOfSkillsToChoose>
+		<AvailableSkillProficiencies>
+			<string>Arcana</string>
+			<string>History</string>
+			<string>Insight</string>
+			<string>Investigation</string>
+			<string>Medicine</string>
+			<string>Religion</string>
+		</AvailableSkillProficiencies>
 	</PlayerClass>
 </ArrayOfPlayerClass>

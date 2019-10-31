@@ -38,12 +38,13 @@
             this.checkBoxProfSTR.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.checkBoxProfSTR.AutoCheck = false;
             this.checkBoxProfSTR.AutoSize = true;
-            this.checkBoxProfSTR.Location = new System.Drawing.Point(128, 3);
+            this.checkBoxProfSTR.Location = new System.Drawing.Point(128, 2);
             this.checkBoxProfSTR.Name = "checkBoxProfSTR";
             this.checkBoxProfSTR.Size = new System.Drawing.Size(44, 17);
             this.checkBoxProfSTR.TabIndex = 32;
             this.checkBoxProfSTR.Text = "prof";
             this.checkBoxProfSTR.UseVisualStyleBackColor = true;
+            this.checkBoxProfSTR.CheckedChanged += new System.EventHandler(this.checkBoxProfSTR_CheckedChanged);
             // 
             // textBoxStrSave
             // 
@@ -58,10 +59,10 @@
             // 
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 1);
+            this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold);
+            this.label24.Location = new System.Drawing.Point(6, 2);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(31, 16);
+            this.label24.Size = new System.Drawing.Size(30, 16);
             this.label24.TabIndex = 30;
             this.label24.Text = "STR";
             // 
@@ -73,7 +74,7 @@
             this.Controls.Add(this.textBoxStrSave);
             this.Controls.Add(this.label24);
             this.Name = "UserControlProficiency";
-            this.Size = new System.Drawing.Size(176, 21);
+            this.Size = new System.Drawing.Size(176, 20);
             this.ResumeLayout(false);
             this.PerformLayout();
 

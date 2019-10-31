@@ -27,6 +27,11 @@ namespace CharacterManager
         private PlayerRace SelectedSubRace;
         private PlayerClass SelectedClass;
 
+        private int numberOfSkillsToChoose = 0;
+        private List<String> AvailableSkillsToChoose = new List<String>();
+
+        List<UserControlProficiency> skillProficiencyControlList = new List<UserControlProficiency>();
+
         public CharacterCreatorForm(CharacterFactory factory)
         {
             InitializeComponent();
@@ -49,6 +54,17 @@ namespace CharacterManager
             foreach(String str in ClassNameList)
             {
                 comboBoxPlayerClasses.Items.Add(str);
+            }
+
+            //Lets populate our list so we don't have to do this every time.
+            foreach (Control c in groupBoxSkillProfs.Controls)
+            {
+                if (c is UserControlProficiency)
+                {
+                    UserControlProficiency profControl = (UserControlProficiency)c;
+                    skillProficiencyControlList.Add(profControl);
+                    profControl.ChangeListener = SkillProfCheckedChanged;
+                }
             }
         }
 
@@ -273,6 +289,9 @@ namespace CharacterManager
 
             //5. Update saving throw values.
             updateSavingThrowFields();
+
+            //6. Update skill proficiency values.
+            updateSkillProficiencyFields();
         }
 
         private void updateBaseAttributeFields()
@@ -294,6 +313,7 @@ namespace CharacterManager
 
             //These also need to be updated here.. 
             updateSavingThrowFields();
+            updateSkillProficiencyFields();
         }
 
 
@@ -337,12 +357,64 @@ namespace CharacterManager
         private void updateSavingThrowFields()
         {
             // TODO : Should make the saving throw display into a separate class altogether.
-            userControlProficiencySTR.setValue(getCurrentAttributeBonus("STR"), isCharacterSaveProfIn("STR"), 2);
-            userControlProficiencyINT.setValue(getCurrentAttributeBonus("INT"), isCharacterSaveProfIn("INT"), 2);
-            userControlProficiencyDEX.setValue(getCurrentAttributeBonus("DEX"), isCharacterSaveProfIn("DEX"), 2);
-            userControlProficiencyCON.setValue(getCurrentAttributeBonus("CON"), isCharacterSaveProfIn("CON"), 2);
-            userControlProficiencyWIS.setValue(getCurrentAttributeBonus("WIS"), isCharacterSaveProfIn("WIS"), 2);
-            userControlProficiencyCHA.setValue(getCurrentAttributeBonus("CHA"), isCharacterSaveProfIn("CHA"), 2);
+            userControlProficiencySTR.setValueAndProficiency(getCurrentAttributeBonus("STR"), isCharacterSaveProfIn("STR"), 2);
+            userControlProficiencyINT.setValueAndProficiency(getCurrentAttributeBonus("INT"), isCharacterSaveProfIn("INT"), 2);
+            userControlProficiencyDEX.setValueAndProficiency(getCurrentAttributeBonus("DEX"), isCharacterSaveProfIn("DEX"), 2);
+            userControlProficiencyCON.setValueAndProficiency(getCurrentAttributeBonus("CON"), isCharacterSaveProfIn("CON"), 2);
+            userControlProficiencyWIS.setValueAndProficiency(getCurrentAttributeBonus("WIS"), isCharacterSaveProfIn("WIS"), 2);
+            userControlProficiencyCHA.setValueAndProficiency(getCurrentAttributeBonus("CHA"), isCharacterSaveProfIn("CHA"), 2);
+        }
+
+
+        private void updateSkillProficiencyFields()
+        {
+            foreach (UserControlProficiency profControl in skillProficiencyControlList)
+            {
+                String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
+                profControl.setValue(getCurrentAttributeBonus(baseSkill));
+            }
+        }
+
+        private void SkillProfCheckedChanged(String name)
+        {
+            //So we have manually checked a proficiency.
+            //TODO : Implement this.
+            UserControlProficiency selectedControl = null;
+
+            foreach(UserControlProficiency ctrl in skillProficiencyControlList)
+            {
+                if(ctrl.ProficiencyName == name)
+                {
+                    selectedControl = ctrl;
+                    break;
+                }
+            }
+
+            if (selectedControl == null)
+            {
+                //Something went really wrong...
+                return;
+            }
+
+            if (selectedControl.IsProficient())
+            {
+                if (numberOfSkillsToChoose == 0)
+                {
+                    //Reset this control.
+                    selectedControl.setProficiency(false, 2);
+                }
+                else
+                {
+                    numberOfSkillsToChoose--;
+                }
+
+            }
+            else
+            {
+                numberOfSkillsToChoose++;
+            }
+
+            labelNumberOfProficienciesToChoose.Text = numberOfSkillsToChoose.ToString();
         }
 
 
@@ -359,6 +431,79 @@ namespace CharacterManager
 
             return result;
         }
+
+
+        private UserControlProficiency getSkillProficiencyControlRefByName(String name)
+        {
+            foreach (UserControl c in groupBoxSkillProfs.Controls)
+            {
+                if (c is UserControlProficiency)
+                {
+                    UserControlProficiency res = (UserControlProficiency)c;
+                    if (res.ProficiencyName == name)
+                    {
+                        return res;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        private void resetSkillProficiencies()
+        {
+            //1. Reset the controls
+            foreach (UserControlProficiency profControl in skillProficiencyControlList)
+            {
+                profControl.setEditable(false);
+                String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
+                profControl.setValueAndProficiency(getCurrentAttributeBonus(baseSkill), false, 0);
+            }
+
+
+            List<String> racialProficiencies = new List<string>();
+
+            foreach (String prof in SelectedMainRace.SkillProficiencies)
+            {
+                racialProficiencies.Add(prof);
+            }
+
+            foreach(String prof in SelectedSubRace.SkillProficiencies)
+            {
+                racialProficiencies.Add(prof);
+            }
+
+            //2. Lets get the skill proficiencies from race first.
+            foreach (String prof in racialProficiencies)
+            {
+                UserControlProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == prof);
+                if (ctrl != null)
+                {
+                    ctrl.setProficiency(true, 2);
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect skill proficiency : " + prof + ", failed to parse");
+                }
+            }
+
+
+            //3. Set up choosing new skill proficiencies.
+            //TODO : This is unfinished.
+            numberOfSkillsToChoose = SelectedClass.NumberOfSkillsToChoose;
+            AvailableSkillsToChoose = SelectedClass.AvailableSkillProficiencies;
+
+            labelNumberOfProficienciesToChoose.Text = numberOfSkillsToChoose.ToString();
+
+            foreach(UserControlProficiency ctrl in skillProficiencyControlList)
+            {
+                if (AvailableSkillsToChoose.Contains(ctrl.ProficiencyName) && (!racialProficiencies.Contains(ctrl.ProficiencyName)))
+                {
+                    ctrl.setEditable(true);
+                }
+            }
+        }
+
 
         private void numericUpDownSTR_ValueChanged(object sender, EventArgs e)
         {
@@ -441,6 +586,8 @@ namespace CharacterManager
                 {
                     SelectedClass = myFactory.getPlayerClassByName(selectedItem);
                     updateAllDisplayedData();
+                    /* There is a difference between resetting and updating these values. Update should be done elsewhere... */
+                    resetSkillProficiencies();
                 }
             }
         }

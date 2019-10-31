@@ -15,6 +15,8 @@ namespace CharacterManager
         public List<String> WeaponProficiencies = new List<String>();
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> SavingThrowProficiencies = new List<String>();
+        public List<String> AvailableSkillProficiencies = new List<String>();
+        public int NumberOfSkillsToChoose;
 
         public PlayerClass()
         {

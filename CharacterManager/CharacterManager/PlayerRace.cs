@@ -20,6 +20,7 @@ namespace CharacterManager
 
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> WeaponProficiencies = new List<String>();
+        public List<String> SkillProficiencies = new List<String>();
         public List<PlayerRace> SubRaces = new List<PlayerRace>();
 
         public PlayerRace()

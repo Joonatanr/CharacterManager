@@ -64,6 +64,9 @@
 	<MaximumAge>750</MaximumAge>
 	<Size>Medium</Size>
 	<BaseSpeed>30</BaseSpeed>
+	<SkillProficiencies>
+		<string>Perception</string>
+	</SkillProficiencies>
 	<SubRaces>
 		<PlayerRace>
 			<RaceName>High Elf</RaceName>
