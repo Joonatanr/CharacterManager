@@ -13,6 +13,7 @@ namespace CharacterManager
     {
         private TextBoxWriter errorReporter;
         private List<PlayerRace> Races;
+        private List<PlayerClass> Classes;
         private Boolean isInitialized = false;
 
         public List<String> getMainRacesList()
@@ -59,6 +60,7 @@ namespace CharacterManager
             if (!this.isInitialized)
             {
                 parseRacesFromXml("Resources/PlayerRaces.xml");
+                parseClassesFromXml("Resources/PlayerClass.xml");
                 this.isInitialized = true;
             }
             return this.isInitialized;
@@ -183,10 +185,26 @@ namespace CharacterManager
                 Races = (List<PlayerRace>)reader.Deserialize(file);
                 file.Close();
 
-                foreach (PlayerRace race in Races)
-                {
+                //foreach (PlayerRace race in Races)
+                //{
                     //logMessage("Parsed : " + race.RaceName + " STR : " + race.BonusAttributes.STR);
-                }
+                //}
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
+        }
+
+        private void parseClassesFromXml(String filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerClass>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                Classes = (List<PlayerClass>)reader.Deserialize(file);
+                file.Close();
             }
             catch (Exception ex)
             {
