@@ -203,6 +203,14 @@ namespace CharacterManager
 
         private void updateBaseAttributeFields()
         {
+            //Update the bonus fields.
+            textBoxStrBonus.Text = "+" + StrBonus.ToString();
+            textBoxIntBonus.Text = "+" + IntBonus.ToString();
+            textBoxWisBonus.Text = "+" + WisBonus.ToString();
+            textBoxConBonus.Text = "+" + ConBonus.ToString();
+            textBoxChaBonus.Text = "+" + ChaBonus.ToString();
+            textBoxDexBonus.Text = "+" + DexBonus.ToString();
+
             textBoxSTRFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownSTR.Value + StrBonus);
             textBoxINTFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownINT.Value + IntBonus);
             textBoxWISFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownWIS.Value + WisBonus);
@@ -271,6 +279,11 @@ namespace CharacterManager
                     updateAllDisplayedData();
                 }
             }
+        }
+
+        private void textBoxCHAFinal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
