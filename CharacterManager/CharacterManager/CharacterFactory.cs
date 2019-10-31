@@ -60,7 +60,7 @@ namespace CharacterManager
             if (!this.isInitialized)
             {
                 parseRacesFromXml("Resources/PlayerRaces.xml");
-                parseClassesFromXml("Resources/PlayerClass.xml");
+                parseClassesFromXml("Resources/PlayerClasses.xml");
                 this.isInitialized = true;
             }
             return this.isInitialized;
