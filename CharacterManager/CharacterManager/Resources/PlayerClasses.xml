@@ -1,4 +1,5 @@
 ﻿<ArrayOfPlayerClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
 	<PlayerClass>
 		<PlayerClassName>Fighter</PlayerClassName>
 		<HitDie>10</HitDie>
@@ -12,7 +13,13 @@
 			<string>Heavy Armor</string>
 			<string>Shields</string>
 		</ArmorProficiencies>
+		<SavingThrowProficiencies>
+			<string>STR</string>
+			<string>CON</string>
+		</SavingThrowProficiencies>
 	</PlayerClass>
+	
+	
 	<PlayerClass>
 		<PlayerClassName>Wizard</PlayerClassName>
 		<HitDie>6</HitDie>
@@ -25,5 +32,9 @@
 		</WeaponProficiencies>
 		<ArmorProficiencies>
 		</ArmorProficiencies>
+		<SavingThrowProficiencies>
+			<string>INT</string>
+			<string>WIS</string>
+		</SavingThrowProficiencies>
 	</PlayerClass>
 </ArrayOfPlayerClass>

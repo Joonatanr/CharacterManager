@@ -37,7 +37,22 @@
             this.comboBoxSubRace = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxCHAFinal = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxWISFinal = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBoxChaBonus = new System.Windows.Forms.TextBox();
+            this.textBoxWisBonus = new System.Windows.Forms.TextBox();
+            this.textBoxCONFinal = new System.Windows.Forms.TextBox();
+            this.textBoxConBonus = new System.Windows.Forms.TextBox();
+            this.textBoxDexBonus = new System.Windows.Forms.TextBox();
+            this.textBoxDEXFinal = new System.Windows.Forms.TextBox();
+            this.textBoxIntBonus = new System.Windows.Forms.TextBox();
+            this.textBoxStrBonus = new System.Windows.Forms.TextBox();
+            this.textBoxINTFinal = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.textBoxSTRFinal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.numericUpDownCHA = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,35 +65,27 @@
             this.numericUpDownINT = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDownSTR = new System.Windows.Forms.NumericUpDown();
-            this.textBoxCHAFinal = new System.Windows.Forms.TextBox();
-            this.textBoxWISFinal = new System.Windows.Forms.TextBox();
-            this.textBoxCONFinal = new System.Windows.Forms.TextBox();
-            this.textBoxDEXFinal = new System.Windows.Forms.TextBox();
-            this.textBoxINTFinal = new System.Windows.Forms.TextBox();
-            this.textBoxSTRFinal = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.richTextBoxProficiencyTest = new System.Windows.Forms.RichTextBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.textBoxStrBonus = new System.Windows.Forms.TextBox();
-            this.textBoxIntBonus = new System.Windows.Forms.TextBox();
-            this.textBoxDexBonus = new System.Windows.Forms.TextBox();
-            this.textBoxConBonus = new System.Windows.Forms.TextBox();
-            this.textBoxWisBonus = new System.Windows.Forms.TextBox();
-            this.textBoxChaBonus = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxSpeed = new System.Windows.Forms.TextBox();
-            this.textBoxHitDie = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxHitPoints = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.textBoxHitDie = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxSpeed = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.richTextBoxProficiencyTest = new System.Windows.Forms.RichTextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
+            this.userControlProficiencyCHA = new CharacterManager.UserControlProficiency();
+            this.userControlProficiencyDEX = new CharacterManager.UserControlProficiency();
+            this.userControlProficiencyWIS = new CharacterManager.UserControlProficiency();
+            this.userControlProficiencyINT = new CharacterManager.UserControlProficiency();
+            this.userControlProficiencyCON = new CharacterManager.UserControlProficiency();
+            this.userControlProficiencySTR = new CharacterManager.UserControlProficiency();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -87,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownINT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSTR)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -201,6 +209,122 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Base attributes(without modifiers)";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(190, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Total";
+            // 
+            // textBoxCHAFinal
+            // 
+            this.textBoxCHAFinal.Location = new System.Drawing.Point(179, 182);
+            this.textBoxCHAFinal.Name = "textBoxCHAFinal";
+            this.textBoxCHAFinal.ReadOnly = true;
+            this.textBoxCHAFinal.Size = new System.Drawing.Size(56, 20);
+            this.textBoxCHAFinal.TabIndex = 23;
+            this.textBoxCHAFinal.TextChanged += new System.EventHandler(this.textBoxCHAFinal_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(134, 18);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(39, 26);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "Racial\r\n bonus";
+            // 
+            // textBoxWISFinal
+            // 
+            this.textBoxWISFinal.Location = new System.Drawing.Point(179, 156);
+            this.textBoxWISFinal.Name = "textBoxWISFinal";
+            this.textBoxWISFinal.ReadOnly = true;
+            this.textBoxWISFinal.Size = new System.Drawing.Size(56, 20);
+            this.textBoxWISFinal.TabIndex = 22;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(59, 29);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(35, 13);
+            this.label18.TabIndex = 18;
+            this.label18.Text = "BASE";
+            // 
+            // textBoxChaBonus
+            // 
+            this.textBoxChaBonus.Location = new System.Drawing.Point(134, 182);
+            this.textBoxChaBonus.Name = "textBoxChaBonus";
+            this.textBoxChaBonus.ReadOnly = true;
+            this.textBoxChaBonus.Size = new System.Drawing.Size(39, 20);
+            this.textBoxChaBonus.TabIndex = 17;
+            // 
+            // textBoxWisBonus
+            // 
+            this.textBoxWisBonus.Location = new System.Drawing.Point(134, 156);
+            this.textBoxWisBonus.Name = "textBoxWisBonus";
+            this.textBoxWisBonus.ReadOnly = true;
+            this.textBoxWisBonus.Size = new System.Drawing.Size(39, 20);
+            this.textBoxWisBonus.TabIndex = 16;
+            // 
+            // textBoxCONFinal
+            // 
+            this.textBoxCONFinal.Location = new System.Drawing.Point(179, 130);
+            this.textBoxCONFinal.Name = "textBoxCONFinal";
+            this.textBoxCONFinal.ReadOnly = true;
+            this.textBoxCONFinal.Size = new System.Drawing.Size(56, 20);
+            this.textBoxCONFinal.TabIndex = 21;
+            // 
+            // textBoxConBonus
+            // 
+            this.textBoxConBonus.Location = new System.Drawing.Point(134, 130);
+            this.textBoxConBonus.Name = "textBoxConBonus";
+            this.textBoxConBonus.ReadOnly = true;
+            this.textBoxConBonus.Size = new System.Drawing.Size(39, 20);
+            this.textBoxConBonus.TabIndex = 15;
+            // 
+            // textBoxDexBonus
+            // 
+            this.textBoxDexBonus.Location = new System.Drawing.Point(134, 104);
+            this.textBoxDexBonus.Name = "textBoxDexBonus";
+            this.textBoxDexBonus.ReadOnly = true;
+            this.textBoxDexBonus.Size = new System.Drawing.Size(39, 20);
+            this.textBoxDexBonus.TabIndex = 14;
+            // 
+            // textBoxDEXFinal
+            // 
+            this.textBoxDEXFinal.Location = new System.Drawing.Point(179, 104);
+            this.textBoxDEXFinal.Name = "textBoxDEXFinal";
+            this.textBoxDEXFinal.ReadOnly = true;
+            this.textBoxDEXFinal.Size = new System.Drawing.Size(56, 20);
+            this.textBoxDEXFinal.TabIndex = 20;
+            // 
+            // textBoxIntBonus
+            // 
+            this.textBoxIntBonus.Location = new System.Drawing.Point(134, 78);
+            this.textBoxIntBonus.Name = "textBoxIntBonus";
+            this.textBoxIntBonus.ReadOnly = true;
+            this.textBoxIntBonus.Size = new System.Drawing.Size(39, 20);
+            this.textBoxIntBonus.TabIndex = 13;
+            // 
+            // textBoxStrBonus
+            // 
+            this.textBoxStrBonus.Location = new System.Drawing.Point(134, 52);
+            this.textBoxStrBonus.Name = "textBoxStrBonus";
+            this.textBoxStrBonus.ReadOnly = true;
+            this.textBoxStrBonus.Size = new System.Drawing.Size(39, 20);
+            this.textBoxStrBonus.TabIndex = 11;
+            // 
+            // textBoxINTFinal
+            // 
+            this.textBoxINTFinal.Location = new System.Drawing.Point(179, 78);
+            this.textBoxINTFinal.Name = "textBoxINTFinal";
+            this.textBoxINTFinal.ReadOnly = true;
+            this.textBoxINTFinal.Size = new System.Drawing.Size(56, 20);
+            this.textBoxINTFinal.TabIndex = 19;
+            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -209,6 +333,14 @@
             this.label16.Size = new System.Drawing.Size(189, 13);
             this.label16.TabIndex = 12;
             this.label16.Text = "Standard values : 15, 14, 13, 12, 10, 8";
+            // 
+            // textBoxSTRFinal
+            // 
+            this.textBoxSTRFinal.Location = new System.Drawing.Point(179, 52);
+            this.textBoxSTRFinal.Name = "textBoxSTRFinal";
+            this.textBoxSTRFinal.ReadOnly = true;
+            this.textBoxSTRFinal.Size = new System.Drawing.Size(56, 20);
+            this.textBoxSTRFinal.TabIndex = 18;
             // 
             // label9
             // 
@@ -348,57 +480,9 @@
             this.numericUpDownSTR.TabIndex = 0;
             this.numericUpDownSTR.ValueChanged += new System.EventHandler(this.numericUpDownSTR_ValueChanged);
             // 
-            // textBoxCHAFinal
-            // 
-            this.textBoxCHAFinal.Location = new System.Drawing.Point(179, 182);
-            this.textBoxCHAFinal.Name = "textBoxCHAFinal";
-            this.textBoxCHAFinal.ReadOnly = true;
-            this.textBoxCHAFinal.Size = new System.Drawing.Size(56, 20);
-            this.textBoxCHAFinal.TabIndex = 23;
-            this.textBoxCHAFinal.TextChanged += new System.EventHandler(this.textBoxCHAFinal_TextChanged);
-            // 
-            // textBoxWISFinal
-            // 
-            this.textBoxWISFinal.Location = new System.Drawing.Point(179, 156);
-            this.textBoxWISFinal.Name = "textBoxWISFinal";
-            this.textBoxWISFinal.ReadOnly = true;
-            this.textBoxWISFinal.Size = new System.Drawing.Size(56, 20);
-            this.textBoxWISFinal.TabIndex = 22;
-            // 
-            // textBoxCONFinal
-            // 
-            this.textBoxCONFinal.Location = new System.Drawing.Point(179, 130);
-            this.textBoxCONFinal.Name = "textBoxCONFinal";
-            this.textBoxCONFinal.ReadOnly = true;
-            this.textBoxCONFinal.Size = new System.Drawing.Size(56, 20);
-            this.textBoxCONFinal.TabIndex = 21;
-            // 
-            // textBoxDEXFinal
-            // 
-            this.textBoxDEXFinal.Location = new System.Drawing.Point(179, 104);
-            this.textBoxDEXFinal.Name = "textBoxDEXFinal";
-            this.textBoxDEXFinal.ReadOnly = true;
-            this.textBoxDEXFinal.Size = new System.Drawing.Size(56, 20);
-            this.textBoxDEXFinal.TabIndex = 20;
-            // 
-            // textBoxINTFinal
-            // 
-            this.textBoxINTFinal.Location = new System.Drawing.Point(179, 78);
-            this.textBoxINTFinal.Name = "textBoxINTFinal";
-            this.textBoxINTFinal.ReadOnly = true;
-            this.textBoxINTFinal.Size = new System.Drawing.Size(56, 20);
-            this.textBoxINTFinal.TabIndex = 19;
-            // 
-            // textBoxSTRFinal
-            // 
-            this.textBoxSTRFinal.Location = new System.Drawing.Point(179, 52);
-            this.textBoxSTRFinal.Name = "textBoxSTRFinal";
-            this.textBoxSTRFinal.ReadOnly = true;
-            this.textBoxSTRFinal.Size = new System.Drawing.Size(56, 20);
-            this.textBoxSTRFinal.TabIndex = 18;
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Controls.Add(this.textBoxHitPoints);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.textBoxHitDie);
@@ -413,6 +497,89 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Player";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.userControlProficiencyCHA);
+            this.groupBox2.Controls.Add(this.userControlProficiencyDEX);
+            this.groupBox2.Controls.Add(this.userControlProficiencyWIS);
+            this.groupBox2.Controls.Add(this.userControlProficiencyINT);
+            this.groupBox2.Controls.Add(this.userControlProficiencyCON);
+            this.groupBox2.Controls.Add(this.userControlProficiencySTR);
+            this.groupBox2.Location = new System.Drawing.Point(13, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(157, 189);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Saving throws";
+            // 
+            // textBoxHitPoints
+            // 
+            this.textBoxHitPoints.Location = new System.Drawing.Point(256, 56);
+            this.textBoxHitPoints.Name = "textBoxHitPoints";
+            this.textBoxHitPoints.ReadOnly = true;
+            this.textBoxHitPoints.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHitPoints.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(196, 59);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "Hit points:";
+            // 
+            // textBoxHitDie
+            // 
+            this.textBoxHitDie.Location = new System.Drawing.Point(256, 30);
+            this.textBoxHitDie.Name = "textBoxHitDie";
+            this.textBoxHitDie.ReadOnly = true;
+            this.textBoxHitDie.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHitDie.TabIndex = 15;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(196, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Hit die:";
+            // 
+            // textBoxSpeed
+            // 
+            this.textBoxSpeed.Location = new System.Drawing.Point(256, 84);
+            this.textBoxSpeed.Name = "textBoxSpeed";
+            this.textBoxSpeed.ReadOnly = true;
+            this.textBoxSpeed.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSpeed.TabIndex = 13;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(196, 87);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Speed:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(7, 256);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(163, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Weapon and armor proficiencies:";
+            // 
+            // richTextBoxProficiencyTest
+            // 
+            this.richTextBoxProficiencyTest.Location = new System.Drawing.Point(6, 278);
+            this.richTextBoxProficiencyTest.Name = "richTextBoxProficiencyTest";
+            this.richTextBoxProficiencyTest.Size = new System.Drawing.Size(294, 162);
+            this.richTextBoxProficiencyTest.TabIndex = 10;
+            this.richTextBoxProficiencyTest.Text = "";
             // 
             // groupBox4
             // 
@@ -441,14 +608,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Input";
             // 
-            // richTextBoxProficiencyTest
-            // 
-            this.richTextBoxProficiencyTest.Location = new System.Drawing.Point(6, 278);
-            this.richTextBoxProficiencyTest.Name = "richTextBoxProficiencyTest";
-            this.richTextBoxProficiencyTest.Size = new System.Drawing.Size(294, 162);
-            this.richTextBoxProficiencyTest.TabIndex = 10;
-            this.richTextBoxProficiencyTest.Text = "";
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label17);
@@ -460,15 +619,6 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Class";
             // 
-            // comboBoxPlayerClasses
-            // 
-            this.comboBoxPlayerClasses.FormattingEnabled = true;
-            this.comboBoxPlayerClasses.Location = new System.Drawing.Point(80, 19);
-            this.comboBoxPlayerClasses.Name = "comboBoxPlayerClasses";
-            this.comboBoxPlayerClasses.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxPlayerClasses.TabIndex = 0;
-            this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -478,140 +628,62 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "Player class";
             // 
-            // textBoxStrBonus
+            // comboBoxPlayerClasses
             // 
-            this.textBoxStrBonus.Location = new System.Drawing.Point(134, 52);
-            this.textBoxStrBonus.Name = "textBoxStrBonus";
-            this.textBoxStrBonus.ReadOnly = true;
-            this.textBoxStrBonus.Size = new System.Drawing.Size(39, 20);
-            this.textBoxStrBonus.TabIndex = 11;
+            this.comboBoxPlayerClasses.FormattingEnabled = true;
+            this.comboBoxPlayerClasses.Location = new System.Drawing.Point(80, 19);
+            this.comboBoxPlayerClasses.Name = "comboBoxPlayerClasses";
+            this.comboBoxPlayerClasses.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPlayerClasses.TabIndex = 0;
+            this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
             // 
-            // textBoxIntBonus
+            // userControlProficiencyCHA
             // 
-            this.textBoxIntBonus.Location = new System.Drawing.Point(134, 78);
-            this.textBoxIntBonus.Name = "textBoxIntBonus";
-            this.textBoxIntBonus.ReadOnly = true;
-            this.textBoxIntBonus.Size = new System.Drawing.Size(39, 20);
-            this.textBoxIntBonus.TabIndex = 13;
+            this.userControlProficiencyCHA.Location = new System.Drawing.Point(3, 157);
+            this.userControlProficiencyCHA.Name = "userControlProficiencyCHA";
+            this.userControlProficiencyCHA.ProficiencyName = "CHA";
+            this.userControlProficiencyCHA.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyCHA.TabIndex = 3;
             // 
-            // textBoxDexBonus
+            // userControlProficiencyDEX
             // 
-            this.textBoxDexBonus.Location = new System.Drawing.Point(134, 104);
-            this.textBoxDexBonus.Name = "textBoxDexBonus";
-            this.textBoxDexBonus.ReadOnly = true;
-            this.textBoxDexBonus.Size = new System.Drawing.Size(39, 20);
-            this.textBoxDexBonus.TabIndex = 14;
+            this.userControlProficiencyDEX.Location = new System.Drawing.Point(3, 73);
+            this.userControlProficiencyDEX.Name = "userControlProficiencyDEX";
+            this.userControlProficiencyDEX.ProficiencyName = "DEX";
+            this.userControlProficiencyDEX.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyDEX.TabIndex = 2;
             // 
-            // textBoxConBonus
+            // userControlProficiencyWIS
             // 
-            this.textBoxConBonus.Location = new System.Drawing.Point(134, 130);
-            this.textBoxConBonus.Name = "textBoxConBonus";
-            this.textBoxConBonus.ReadOnly = true;
-            this.textBoxConBonus.Size = new System.Drawing.Size(39, 20);
-            this.textBoxConBonus.TabIndex = 15;
+            this.userControlProficiencyWIS.Location = new System.Drawing.Point(3, 129);
+            this.userControlProficiencyWIS.Name = "userControlProficiencyWIS";
+            this.userControlProficiencyWIS.ProficiencyName = "WIS";
+            this.userControlProficiencyWIS.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyWIS.TabIndex = 4;
             // 
-            // textBoxWisBonus
+            // userControlProficiencyINT
             // 
-            this.textBoxWisBonus.Location = new System.Drawing.Point(134, 156);
-            this.textBoxWisBonus.Name = "textBoxWisBonus";
-            this.textBoxWisBonus.ReadOnly = true;
-            this.textBoxWisBonus.Size = new System.Drawing.Size(39, 20);
-            this.textBoxWisBonus.TabIndex = 16;
+            this.userControlProficiencyINT.Location = new System.Drawing.Point(3, 45);
+            this.userControlProficiencyINT.Name = "userControlProficiencyINT";
+            this.userControlProficiencyINT.ProficiencyName = "INT";
+            this.userControlProficiencyINT.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyINT.TabIndex = 1;
             // 
-            // textBoxChaBonus
+            // userControlProficiencyCON
             // 
-            this.textBoxChaBonus.Location = new System.Drawing.Point(134, 182);
-            this.textBoxChaBonus.Name = "textBoxChaBonus";
-            this.textBoxChaBonus.ReadOnly = true;
-            this.textBoxChaBonus.Size = new System.Drawing.Size(39, 20);
-            this.textBoxChaBonus.TabIndex = 17;
+            this.userControlProficiencyCON.Location = new System.Drawing.Point(3, 101);
+            this.userControlProficiencyCON.Name = "userControlProficiencyCON";
+            this.userControlProficiencyCON.ProficiencyName = "CON";
+            this.userControlProficiencyCON.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyCON.TabIndex = 5;
             // 
-            // label18
+            // userControlProficiencySTR
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(59, 29);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 13);
-            this.label18.TabIndex = 18;
-            this.label18.Text = "BASE";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(134, 18);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(39, 26);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "Racial\r\n bonus";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(190, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(31, 13);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Total";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 256);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(163, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Weapon and armor proficiencies:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 456);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Speed:";
-            // 
-            // textBoxSpeed
-            // 
-            this.textBoxSpeed.Location = new System.Drawing.Point(70, 453);
-            this.textBoxSpeed.Name = "textBoxSpeed";
-            this.textBoxSpeed.ReadOnly = true;
-            this.textBoxSpeed.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSpeed.TabIndex = 13;
-            // 
-            // textBoxHitDie
-            // 
-            this.textBoxHitDie.Location = new System.Drawing.Point(70, 479);
-            this.textBoxHitDie.Name = "textBoxHitDie";
-            this.textBoxHitDie.ReadOnly = true;
-            this.textBoxHitDie.Size = new System.Drawing.Size(100, 20);
-            this.textBoxHitDie.TabIndex = 15;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 482);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 13);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Hit die:";
-            // 
-            // textBoxHitPoints
-            // 
-            this.textBoxHitPoints.Location = new System.Drawing.Point(70, 505);
-            this.textBoxHitPoints.Name = "textBoxHitPoints";
-            this.textBoxHitPoints.ReadOnly = true;
-            this.textBoxHitPoints.Size = new System.Drawing.Size(100, 20);
-            this.textBoxHitPoints.TabIndex = 17;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(10, 508);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(54, 13);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "Hit points:";
+            this.userControlProficiencySTR.Location = new System.Drawing.Point(3, 17);
+            this.userControlProficiencySTR.Name = "userControlProficiencySTR";
+            this.userControlProficiencySTR.ProficiencyName = "STR";
+            this.userControlProficiencySTR.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencySTR.TabIndex = 0;
             // 
             // CharacterCreatorForm
             // 
@@ -634,6 +706,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSTR)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -697,5 +770,12 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBoxHitDie;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private UserControlProficiency userControlProficiencyCHA;
+        private UserControlProficiency userControlProficiencyDEX;
+        private UserControlProficiency userControlProficiencyWIS;
+        private UserControlProficiency userControlProficiencyINT;
+        private UserControlProficiency userControlProficiencyCON;
+        private UserControlProficiency userControlProficiencySTR;
     }
 }

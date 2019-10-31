@@ -13,12 +13,14 @@ namespace CharacterManager
     public partial class CharacterCreatorForm : Form
     {
         public PlayerCharacter CreatedCharacter { get; set; }
+
         private int StrBonus = 0;
         private int IntBonus = 0;
         private int DexBonus = 0;
         private int ChaBonus = 0;
         private int WisBonus = 0;
         private int ConBonus = 0;
+
         private CharacterFactory myFactory;
 
         private PlayerRace SelectedMainRace;
@@ -264,6 +266,9 @@ namespace CharacterManager
                 int hp = bonus + SelectedClass.HitDie;
                 textBoxHitPoints.Text = hp.ToString();
             }
+
+            //5. Update saving throw values.
+            updateSavingThrowFields();
         }
 
         private void updateBaseAttributeFields()
@@ -282,6 +287,73 @@ namespace CharacterManager
             textBoxCONFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownCON.Value + ConBonus);
             textBoxCHAFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownCHA.Value + ChaBonus);
             textBoxDEXFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownDEX.Value + DexBonus);
+
+            //These also need to be updated here.. 
+            updateSavingThrowFields();
+        }
+
+
+        private int getCurrentAttributeBonus(String attrib)
+        {
+            int res = -1;
+
+            switch (attrib)
+            {
+                case "STR":
+                    res = (int)numericUpDownSTR.Value + StrBonus;
+                    break;
+                case "CHA":
+                    res = (int)numericUpDownCHA.Value + ChaBonus;
+                    break;
+                case "DEX":
+                    res = (int)numericUpDownDEX.Value + DexBonus;
+                    break;
+                case "CON":
+                    res = (int)numericUpDownCON.Value + ConBonus;
+                    break;
+                case "WIS":
+                    res = (int)numericUpDownWIS.Value + WisBonus;
+                    break;
+                case "INT":
+                    res = (int)numericUpDownINT.Value + IntBonus;
+                    break;
+                default:
+                    break;
+            }
+
+            if (res >= 0)
+            {
+                res = CharacterFactory.getAbilityModifierValue(res);
+            }
+
+            return res;
+        }
+
+
+        private void updateSavingThrowFields()
+        {
+            // TODO : Should make the saving throw display into a separate class altogether.
+            userControlProficiencySTR.setValue(getCurrentAttributeBonus("STR"), isCharacterSaveProfIn("STR"), 2);
+            userControlProficiencyINT.setValue(getCurrentAttributeBonus("INT"), isCharacterSaveProfIn("INT"), 2);
+            userControlProficiencyDEX.setValue(getCurrentAttributeBonus("DEX"), isCharacterSaveProfIn("DEX"), 2);
+            userControlProficiencyCON.setValue(getCurrentAttributeBonus("CON"), isCharacterSaveProfIn("CON"), 2);
+            userControlProficiencyWIS.setValue(getCurrentAttributeBonus("WIS"), isCharacterSaveProfIn("WIS"), 2);
+            userControlProficiencyCHA.setValue(getCurrentAttributeBonus("CHA"), isCharacterSaveProfIn("CHA"), 2);
+        }
+
+
+        private bool isCharacterSaveProfIn(String attribute)
+        {
+            bool result = false;
+            if (SelectedClass != null)
+            {
+                if (SelectedClass.SavingThrowProficiencies.Contains(attribute))
+                {
+                    result = true;
+                }
+            }
+
+            return result;
         }
 
         private void numericUpDownSTR_ValueChanged(object sender, EventArgs e)
@@ -367,6 +439,11 @@ namespace CharacterManager
                     updateAllDisplayedData();
                 }
             }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

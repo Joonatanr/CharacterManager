@@ -75,6 +75,12 @@
     <Compile Include="UserControlAttributeDisplay.Designer.cs">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlProficiency.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlProficiency.Designer.cs">
+      <DependentUpon>UserControlProficiency.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CharacterCreatorForm.resx">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlAttributeDisplay.resx">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlProficiency.resx">
+      <DependentUpon>UserControlProficiency.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
