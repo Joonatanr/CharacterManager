@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,12 +28,7 @@ namespace CharacterManager
         private PlayerRace SelectedSubRace;
         private PlayerClass SelectedClass;
 
-        private int numberOfSkillsToChoose = 0;
-        private List<String> AvailableSkillsToChoose = new List<String>();
         private List<PlayerAttribute> myAttributeList = new List<PlayerAttribute>();
-
-
-        List<UserControlProficiency> skillProficiencyControlList = new List<UserControlProficiency>();
 
         public CharacterCreatorForm(CharacterFactory factory)
         {
@@ -56,17 +52,6 @@ namespace CharacterManager
             foreach(String str in ClassNameList)
             {
                 comboBoxPlayerClasses.Items.Add(str);
-            }
-
-            //Lets populate our list so we don't have to do this every time.
-            foreach (Control c in groupBoxSkillProfs.Controls)
-            {
-                if (c is UserControlProficiency)
-                {
-                    UserControlProficiency profControl = (UserControlProficiency)c;
-                    skillProficiencyControlList.Add(profControl);
-                    profControl.ChangeListener = SkillProfCheckedChanged;
-                }
             }
         }
 
@@ -353,6 +338,17 @@ namespace CharacterManager
         }
 
 
+        private void updateSkillProficiencyFields()
+        {
+            userControlSkillProficiencies1.updateSkillProficiencyFields(getCurrentAttributeBonus("STR"),
+                                                     getCurrentAttributeBonus("DEX"),
+                                                     getCurrentAttributeBonus("INT"),
+                                                     getCurrentAttributeBonus("WIS"),
+                                                     getCurrentAttributeBonus("CHA"),
+                                                     getCurrentAttributeBonus("CON"),
+                                                     2);
+        }
+
         private int getCurrentAttributeBonus(String attrib)
         {
             int res = -1;
@@ -402,56 +398,6 @@ namespace CharacterManager
         }
 
 
-        private void updateSkillProficiencyFields()
-        {
-            foreach (UserControlProficiency profControl in skillProficiencyControlList)
-            {
-                String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
-                profControl.setValue(getCurrentAttributeBonus(baseSkill));
-            }
-        }
-
-        private void SkillProfCheckedChanged(String name)
-        {
-            //So we have manually checked a proficiency.
-            //TODO : Implement this.
-            UserControlProficiency selectedControl = null;
-
-            foreach(UserControlProficiency ctrl in skillProficiencyControlList)
-            {
-                if(ctrl.ProficiencyName == name)
-                {
-                    selectedControl = ctrl;
-                    break;
-                }
-            }
-
-            if (selectedControl == null)
-            {
-                //Something went really wrong...
-                return;
-            }
-
-            if (selectedControl.IsProficient())
-            {
-                if (numberOfSkillsToChoose == 0)
-                {
-                    //Reset this control.
-                    selectedControl.setProficiency(false, 2);
-                }
-                else
-                {
-                    numberOfSkillsToChoose--;
-                }
-
-            }
-            else
-            {
-                numberOfSkillsToChoose++;
-            }
-
-            labelNumberOfProficienciesToChoose.Text = numberOfSkillsToChoose.ToString();
-        }
 
 
         private bool isCharacterSaveProfIn(String attribute)
@@ -468,34 +414,10 @@ namespace CharacterManager
             return result;
         }
 
-
-        private UserControlProficiency getSkillProficiencyControlRefByName(String name)
-        {
-            foreach (UserControl c in groupBoxSkillProfs.Controls)
-            {
-                if (c is UserControlProficiency)
-                {
-                    UserControlProficiency res = (UserControlProficiency)c;
-                    if (res.ProficiencyName == name)
-                    {
-                        return res;
-                    }
-                }
-            }
-
-            return null;
-        }
-
         private void resetSkillProficiencies()
         {
             //1. Reset the controls
-            foreach (UserControlProficiency profControl in skillProficiencyControlList)
-            {
-                profControl.setEditable(false);
-                String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
-                profControl.setValueAndProficiency(getCurrentAttributeBonus(baseSkill), false, 0);
-            }
-
+            userControlSkillProficiencies1.resetControls();
 
             List<String> racialProficiencies = new List<string>();
 
@@ -515,32 +437,26 @@ namespace CharacterManager
             //2. Lets get the skill proficiencies from race first.
             foreach (String prof in racialProficiencies)
             {
-                UserControlProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == prof);
-                if (ctrl != null)
-                {
-                    ctrl.setProficiency(true, 2);
-                }
-                else
-                {
+                if (!userControlSkillProficiencies1.setProficientAtSkill(prof))
+                { 
                     MessageBox.Show("Incorrect skill proficiency : " + prof + ", failed to parse");
                 }
             }
 
-
             //3. Set up choosing new skill proficiencies.
             //TODO : This is unfinished.
-            numberOfSkillsToChoose = SelectedClass.NumberOfSkillsToChoose;
-            AvailableSkillsToChoose = SelectedClass.AvailableSkillProficiencies;
+            int numberOfSkillsToChoose = SelectedClass.NumberOfSkillsToChoose;
+            List<string> AvailableSkillsToChoose = new List<string>();
 
-            labelNumberOfProficienciesToChoose.Text = numberOfSkillsToChoose.ToString();
-
-            foreach(UserControlProficiency ctrl in skillProficiencyControlList)
+            foreach (string skill in SelectedClass.AvailableSkillProficiencies)
             {
-                if (AvailableSkillsToChoose.Contains(ctrl.ProficiencyName) && (!racialProficiencies.Contains(ctrl.ProficiencyName)))
+                if (!racialProficiencies.Contains(skill))
                 {
-                    ctrl.setEditable(true);
+                    AvailableSkillsToChoose.Add(skill);
                 }
             }
+
+            userControlSkillProficiencies1.setUpChoiceProficiencies(numberOfSkillsToChoose, AvailableSkillsToChoose);
         }
 
 
