@@ -83,6 +83,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
+            this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAttributeList();
             this.userControlProficiency18 = new CharacterManager.UserControlProficiency();
             this.userControlProficiency15 = new CharacterManager.UserControlProficiency();
             this.userControlProficiency17 = new CharacterManager.UserControlProficiency();
@@ -504,6 +505,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.userControlGenericAttributeList1);
             this.groupBox3.Controls.Add(this.groupBoxSkillProfs);
             this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Controls.Add(this.textBoxHitPoints);
@@ -706,6 +708,13 @@
             this.comboBoxPlayerClasses.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPlayerClasses.TabIndex = 0;
             this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
+            // 
+            // userControlGenericAttributeList1
+            // 
+            this.userControlGenericAttributeList1.Location = new System.Drawing.Point(288, 385);
+            this.userControlGenericAttributeList1.Name = "userControlGenericAttributeList1";
+            this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 363);
+            this.userControlGenericAttributeList1.TabIndex = 20;
             // 
             // userControlProficiency18
             // 
@@ -1038,5 +1047,6 @@
         private UserControlProficiency userControlProficiencyAnimalHandling;
         private System.Windows.Forms.Label labelNumberOfProficienciesToChoose;
         private System.Windows.Forms.Label label15;
+        private UserControls.UserControlGenericAttributeList userControlGenericAttributeList1;
     }
 }
