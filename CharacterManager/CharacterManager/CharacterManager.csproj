@@ -76,6 +76,12 @@
     <Compile Include="UserControls\UserControlAttributeDisplay.Designer.cs">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlGenericAttributeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlGenericAttributeList.Designer.cs">
+      <DependentUpon>UserControlGenericAttributeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlProficiency.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlAttributeDisplay.resx">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlGenericAttributeList.resx">
+      <DependentUpon>UserControlGenericAttributeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlProficiency.resx">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>
