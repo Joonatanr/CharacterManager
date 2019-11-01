@@ -78,6 +78,10 @@ namespace CharacterManager
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> SavingThrowProficiencies = new List<String>();
 
+        public int Level;
+        public int ProficiencyBonus;
+        public int ExperiencePoints;
+
         public String CharacterName
         {
             get
@@ -208,7 +212,47 @@ namespace CharacterManager
             this.SubRace = subrace;
 
             this.MainRaceName = race.RaceName;
-            this.SubRaceName = subrace.RaceName;
+            if (subrace != null)
+            {
+                this.SubRaceName = subrace.RaceName;
+            }
+            else
+            {
+                this.SubRaceName = null;
+            }
+        }
+
+        public int getModifier(string attribute)
+        {
+            switch (attribute)
+            {
+                case ("STR"):
+                    return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.STR);
+                    break;
+                case ("INT"):
+                    return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.INT);
+                    break;
+                case ("DEX"):
+                    return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.DEX);
+                    break;
+                case ("CON"):
+                    return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.CON);
+                    break;
+                case ("WIS"):
+                    return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.WIS);
+                    break;
+                case ("CHA"):
+                    return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.CHA);
+                    break;
+                default:
+                    return 0;
+                    break;
+            }
+        }
+
+        public bool isSavingThrowProficientIn(string attribute)
+        {
+            return (this.SavingThrowProficiencies.Contains(attribute));
         }
     }
 }

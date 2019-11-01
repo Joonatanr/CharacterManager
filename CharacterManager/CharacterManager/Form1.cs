@@ -38,32 +38,43 @@ namespace CharacterManager
         {
             if (this.activeCharacter != null)
             {
+                //1. Update character name and other basic things.
                 this.textBoxName.Text = activeCharacter.CharacterName;
+                this.textBoxClass.Text = activeCharacter.ClassName;
                 
+                if (activeCharacter.SubRaceName == null)
+                {
+                    textBoxRace.Text = activeCharacter.MainRaceName;
+                }
+                else
+                {
+                    textBoxRace.Text = activeCharacter.SubRaceName;
+                }
+
+                this.textBoxClass.Text = activeCharacter.ClassName;
+                this.textBoxXP.Text = activeCharacter.ExperiencePoints.ToString();
+                this.textBoxLevel.Text = activeCharacter.Level.ToString();
+
+
+                //2. Update base attributes
                 this.AttributeDisplaySTR.AttributeValue = activeCharacter.StrengthAttribute;
                 this.AttributeDisplayINT.AttributeValue = activeCharacter.IntAttribute;
                 this.AttributeDisplayDEX.AttributeValue = activeCharacter.DexAttribute;
                 this.AttributeDisplayCON.AttributeValue = activeCharacter.ConAttribute;
                 this.AttributeDisplayWIS.AttributeValue = activeCharacter.WisAttribute;
                 this.AttributeDisplayCHA.AttributeValue = activeCharacter.CharAttribute;
+
+                //3. Update saving throws.
+                userControlSavingThrows1.setValue(activeCharacter.getModifier("STR"), activeCharacter.isSavingThrowProficientIn("STR"), activeCharacter.ProficiencyBonus, "STR");
+                userControlSavingThrows1.setValue(activeCharacter.getModifier("INT"), activeCharacter.isSavingThrowProficientIn("INT"), activeCharacter.ProficiencyBonus, "INT");
+                userControlSavingThrows1.setValue(activeCharacter.getModifier("DEX"), activeCharacter.isSavingThrowProficientIn("DEX"), activeCharacter.ProficiencyBonus, "DEX");
+                userControlSavingThrows1.setValue(activeCharacter.getModifier("CON"), activeCharacter.isSavingThrowProficientIn("CON"), activeCharacter.ProficiencyBonus, "CON");
+                userControlSavingThrows1.setValue(activeCharacter.getModifier("WIS"), activeCharacter.isSavingThrowProficientIn("WIS"), activeCharacter.ProficiencyBonus, "WIS");
+                userControlSavingThrows1.setValue(activeCharacter.getModifier("CHA"), activeCharacter.isSavingThrowProficientIn("CHA"), activeCharacter.ProficiencyBonus, "CHA");
             }
         }
 
         /*************** Button functions *************/
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
         {

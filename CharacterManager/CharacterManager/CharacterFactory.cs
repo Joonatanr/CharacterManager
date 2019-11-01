@@ -191,14 +191,21 @@ namespace CharacterManager
                 return false;
             }
 
-            try
+            if (raw.SubRaceName != null)
             {
-                SubRace = mainRace.SubRaces.First(r => r.RaceName == raw.SubRaceName);
+                try
+                {
+                    SubRace = mainRace.SubRaces.First(r => r.RaceName == raw.SubRaceName);
+                }
+                catch (Exception)
+                {
+                    logError("Unknown subrace : " + raw.SubRaceName);
+                    return false;
+                }
             }
-            catch(Exception)
+            else
             {
-                logError("Unknown subrace : " + raw.SubRaceName);
-                return false;
+                SubRace = null;
             }
 
             raw.setMainAndSubrace(mainRace, SubRace);

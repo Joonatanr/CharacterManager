@@ -88,6 +88,10 @@ namespace CharacterManager
                 CreatedCharacter.ConAttribute = (int)numericUpDownCON.Value + ConBonus;
                 CreatedCharacter.CharAttribute = (int)numericUpDownCHA.Value + ChaBonus;
 
+                CreatedCharacter.Level = 1;
+                CreatedCharacter.ProficiencyBonus = 2;
+                CreatedCharacter.ExperiencePoints = 0;
+
                 //3. Set race and subrace.
                 if (SelectedMainRace == null)
                 {
@@ -96,8 +100,9 @@ namespace CharacterManager
                 }
                 else
                 {
-                    CreatedCharacter.MainRaceName = SelectedMainRace.RaceName;
-                    CreatedCharacter.SubRaceName = SelectedSubRace.RaceName;
+                    //CreatedCharacter.MainRaceName = SelectedMainRace.RaceName;
+                    //CreatedCharacter.SubRaceName = SelectedSubRace.RaceName;
+                    CreatedCharacter.setMainAndSubrace(SelectedMainRace, SelectedSubRace);
                 }
 
                 //4. Set weapon and armor proficiencies.
