@@ -388,12 +388,12 @@ namespace CharacterManager
         private void updateSavingThrowFields()
         {
             // TODO : Should make the saving throw display into a separate class altogether.
-            userControlProficiencySTR.setValueAndProficiency(getCurrentAttributeBonus("STR"), isCharacterSaveProfIn("STR"), 2);
-            userControlProficiencyINT.setValueAndProficiency(getCurrentAttributeBonus("INT"), isCharacterSaveProfIn("INT"), 2);
-            userControlProficiencyDEX.setValueAndProficiency(getCurrentAttributeBonus("DEX"), isCharacterSaveProfIn("DEX"), 2);
-            userControlProficiencyCON.setValueAndProficiency(getCurrentAttributeBonus("CON"), isCharacterSaveProfIn("CON"), 2);
-            userControlProficiencyWIS.setValueAndProficiency(getCurrentAttributeBonus("WIS"), isCharacterSaveProfIn("WIS"), 2);
-            userControlProficiencyCHA.setValueAndProficiency(getCurrentAttributeBonus("CHA"), isCharacterSaveProfIn("CHA"), 2);
+            userControlSavingThrows1.setValue(getCurrentAttributeBonus("STR"), isCharacterSaveProfIn("STR"), 2, "STR");
+            userControlSavingThrows1.setValue(getCurrentAttributeBonus("INT"), isCharacterSaveProfIn("INT"), 2, "INT");
+            userControlSavingThrows1.setValue(getCurrentAttributeBonus("DEX"), isCharacterSaveProfIn("DEX"), 2, "DEX");
+            userControlSavingThrows1.setValue(getCurrentAttributeBonus("CON"), isCharacterSaveProfIn("CON"), 2, "CON");
+            userControlSavingThrows1.setValue(getCurrentAttributeBonus("WIS"), isCharacterSaveProfIn("WIS"), 2, "WIS");
+            userControlSavingThrows1.setValue(getCurrentAttributeBonus("CHA"), isCharacterSaveProfIn("CHA"), 2, "CHA");
         }
 
 

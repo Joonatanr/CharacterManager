@@ -88,6 +88,12 @@
     <Compile Include="UserControls\UserControlProficiency.Designer.cs">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlSavingThrows.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlSavingThrows.Designer.cs">
+      <DependentUpon>UserControlSavingThrows.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CharacterCreatorForm.resx">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlProficiency.resx">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlSavingThrows.resx">
+      <DependentUpon>UserControlSavingThrows.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

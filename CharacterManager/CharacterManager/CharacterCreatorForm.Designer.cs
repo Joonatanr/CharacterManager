@@ -69,7 +69,6 @@
             this.groupBoxSkillProfs = new System.Windows.Forms.GroupBox();
             this.labelNumberOfProficienciesToChoose = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxHitPoints = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxHitDie = new System.Windows.Forms.TextBox();
@@ -102,12 +101,7 @@
             this.userControlProficiencyArcana = new CharacterManager.UserControlProficiency();
             this.userControlProficiencyAnimalHandling = new CharacterManager.UserControlProficiency();
             this.userControlProficiencyAcrobatics = new CharacterManager.UserControlProficiency();
-            this.userControlProficiencyCHA = new CharacterManager.UserControlProficiency();
-            this.userControlProficiencyDEX = new CharacterManager.UserControlProficiency();
-            this.userControlProficiencyWIS = new CharacterManager.UserControlProficiency();
-            this.userControlProficiencyINT = new CharacterManager.UserControlProficiency();
-            this.userControlProficiencyCON = new CharacterManager.UserControlProficiency();
-            this.userControlProficiencySTR = new CharacterManager.UserControlProficiency();
+            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -117,7 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSTR)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBoxSkillProfs.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -505,9 +498,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.userControlSavingThrows1);
             this.groupBox3.Controls.Add(this.userControlGenericAttributeList1);
             this.groupBox3.Controls.Add(this.groupBoxSkillProfs);
-            this.groupBox3.Controls.Add(this.groupBox2);
             this.groupBox3.Controls.Add(this.textBoxHitPoints);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.textBoxHitDie);
@@ -569,21 +562,6 @@
             this.label15.Size = new System.Drawing.Size(94, 13);
             this.label15.TabIndex = 34;
             this.label15.Text = "Number to choose";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.userControlProficiencyCHA);
-            this.groupBox2.Controls.Add(this.userControlProficiencyDEX);
-            this.groupBox2.Controls.Add(this.userControlProficiencyWIS);
-            this.groupBox2.Controls.Add(this.userControlProficiencyINT);
-            this.groupBox2.Controls.Add(this.userControlProficiencyCON);
-            this.groupBox2.Controls.Add(this.userControlProficiencySTR);
-            this.groupBox2.Location = new System.Drawing.Point(13, 16);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(157, 185);
-            this.groupBox2.TabIndex = 18;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Saving throws";
             // 
             // textBoxHitPoints
             // 
@@ -878,59 +856,12 @@
             this.userControlProficiencyAcrobatics.Size = new System.Drawing.Size(257, 26);
             this.userControlProficiencyAcrobatics.TabIndex = 6;
             // 
-            // userControlProficiencyCHA
+            // userControlSavingThrows1
             // 
-            this.userControlProficiencyCHA.Location = new System.Drawing.Point(3, 152);
-            this.userControlProficiencyCHA.Name = "userControlProficiencyCHA";
-            this.userControlProficiencyCHA.ProficiencyBaseSkill = null;
-            this.userControlProficiencyCHA.ProficiencyName = "CHA";
-            this.userControlProficiencyCHA.Size = new System.Drawing.Size(151, 26);
-            this.userControlProficiencyCHA.TabIndex = 3;
-            // 
-            // userControlProficiencyDEX
-            // 
-            this.userControlProficiencyDEX.Location = new System.Drawing.Point(3, 71);
-            this.userControlProficiencyDEX.Name = "userControlProficiencyDEX";
-            this.userControlProficiencyDEX.ProficiencyBaseSkill = null;
-            this.userControlProficiencyDEX.ProficiencyName = "DEX";
-            this.userControlProficiencyDEX.Size = new System.Drawing.Size(151, 26);
-            this.userControlProficiencyDEX.TabIndex = 2;
-            // 
-            // userControlProficiencyWIS
-            // 
-            this.userControlProficiencyWIS.Location = new System.Drawing.Point(3, 125);
-            this.userControlProficiencyWIS.Name = "userControlProficiencyWIS";
-            this.userControlProficiencyWIS.ProficiencyBaseSkill = null;
-            this.userControlProficiencyWIS.ProficiencyName = "WIS";
-            this.userControlProficiencyWIS.Size = new System.Drawing.Size(151, 26);
-            this.userControlProficiencyWIS.TabIndex = 4;
-            // 
-            // userControlProficiencyINT
-            // 
-            this.userControlProficiencyINT.Location = new System.Drawing.Point(3, 44);
-            this.userControlProficiencyINT.Name = "userControlProficiencyINT";
-            this.userControlProficiencyINT.ProficiencyBaseSkill = null;
-            this.userControlProficiencyINT.ProficiencyName = "INT";
-            this.userControlProficiencyINT.Size = new System.Drawing.Size(151, 26);
-            this.userControlProficiencyINT.TabIndex = 1;
-            // 
-            // userControlProficiencyCON
-            // 
-            this.userControlProficiencyCON.Location = new System.Drawing.Point(3, 98);
-            this.userControlProficiencyCON.Name = "userControlProficiencyCON";
-            this.userControlProficiencyCON.ProficiencyBaseSkill = null;
-            this.userControlProficiencyCON.ProficiencyName = "CON";
-            this.userControlProficiencyCON.Size = new System.Drawing.Size(151, 26);
-            this.userControlProficiencyCON.TabIndex = 5;
-            // 
-            // userControlProficiencySTR
-            // 
-            this.userControlProficiencySTR.Location = new System.Drawing.Point(3, 17);
-            this.userControlProficiencySTR.Name = "userControlProficiencySTR";
-            this.userControlProficiencySTR.ProficiencyBaseSkill = null;
-            this.userControlProficiencySTR.ProficiencyName = "STR";
-            this.userControlProficiencySTR.Size = new System.Drawing.Size(151, 26);
-            this.userControlProficiencySTR.TabIndex = 0;
+            this.userControlSavingThrows1.Location = new System.Drawing.Point(10, 12);
+            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
+            this.userControlSavingThrows1.Size = new System.Drawing.Size(166, 193);
+            this.userControlSavingThrows1.TabIndex = 21;
             // 
             // CharacterCreatorForm
             // 
@@ -955,7 +886,6 @@
             this.groupBox3.PerformLayout();
             this.groupBoxSkillProfs.ResumeLayout(false);
             this.groupBoxSkillProfs.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -1019,13 +949,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBoxHitDie;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private UserControlProficiency userControlProficiencyCHA;
-        private UserControlProficiency userControlProficiencyDEX;
-        private UserControlProficiency userControlProficiencyWIS;
-        private UserControlProficiency userControlProficiencyINT;
-        private UserControlProficiency userControlProficiencyCON;
-        private UserControlProficiency userControlProficiencySTR;
         private System.Windows.Forms.GroupBox groupBoxSkillProfs;
         private UserControlProficiency userControlProficiencyAcrobatics;
         private UserControlProficiency userControlProficiency18;
@@ -1048,5 +971,6 @@
         private System.Windows.Forms.Label labelNumberOfProficienciesToChoose;
         private System.Windows.Forms.Label label15;
         private UserControls.UserControlGenericAttributeList userControlGenericAttributeList1;
+        private UserControls.UserControlSavingThrows userControlSavingThrows1;
     }
 }
