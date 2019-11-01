@@ -29,6 +29,8 @@ namespace CharacterManager
 
         private int numberOfSkillsToChoose = 0;
         private List<String> AvailableSkillsToChoose = new List<String>();
+        private List<PlayerAttribute> myAttributeList = new List<PlayerAttribute>();
+
 
         List<UserControlProficiency> skillProficiencyControlList = new List<UserControlProficiency>();
 
@@ -292,6 +294,35 @@ namespace CharacterManager
 
             //6. Update skill proficiency values.
             updateSkillProficiencyFields();
+
+            //7. Update the generic abilities list.
+            updateGenericAbilitiesField();
+        }
+
+        private void updateGenericAbilitiesField()
+        {
+            //Lets just test with the race abilities first.
+            myAttributeList.Clear();
+
+            if (SelectedMainRace == null)
+            {
+                return;
+            }
+
+            foreach (PlayerAttribute attrib in SelectedMainRace.getPlayerAttributes())
+            {
+                myAttributeList.Add(attrib);
+            }
+
+            if (SelectedSubRace != null)
+            {
+                foreach (PlayerAttribute attrib in SelectedSubRace.getPlayerAttributes())
+                {
+                    myAttributeList.Add(attrib);
+                }
+            }
+
+            userControlGenericAttributeList1.setAttributeList(myAttributeList);
         }
 
         private void updateBaseAttributeFields()
@@ -468,9 +499,12 @@ namespace CharacterManager
                 racialProficiencies.Add(prof);
             }
 
-            foreach(String prof in SelectedSubRace.SkillProficiencies)
+            if (SelectedSubRace != null)
             {
-                racialProficiencies.Add(prof);
+                foreach (String prof in SelectedSubRace.SkillProficiencies)
+                {
+                    racialProficiencies.Add(prof);
+                }
             }
 
             //2. Lets get the skill proficiencies from race first.

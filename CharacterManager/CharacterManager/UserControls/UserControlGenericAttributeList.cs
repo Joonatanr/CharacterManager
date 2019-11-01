@@ -13,10 +13,72 @@ namespace CharacterManager.UserControls
     public partial class UserControlGenericAttributeList : UserControl
     {
         private const int lineInterval = 18;
+        private List<PlayerAttribute> listOfAttributes = new List<PlayerAttribute>();
+        private static int buttonNumber = 0;
+
+        protected class InfoButton : Button
+        {
+            private PlayerAttribute attribute;
+
+            public InfoButton(string name, PlayerAttribute attribute)
+            {
+                this.Click += new System.EventHandler(button_Click);
+                this.Name = name;
+                this.Font = new Font("Arial", 7.5f);
+                this.Text = "Info";
+                this.Size = new Size(40, 18);
+                this.TextAlign = ContentAlignment.TopCenter;
+                this.attribute = attribute;
+            }
+
+            private void button_Click(object sender, EventArgs e)
+            {
+                if (attribute != null)
+                {
+                    MessageBox.Show(attribute.Description);
+                }
+                /* Not sure why this is needed, but this makes the button be deselected after it is clicked. */
+                this.Parent.Focus();
+            }
+        }
 
         public UserControlGenericAttributeList()
         {
             InitializeComponent();
+        }
+
+
+        public void setAttributeList(List<PlayerAttribute> target)
+        {
+            listOfAttributes = target;
+            List<Control> myListToRemove = new List<Control>();
+
+            //Lets remove any old buttons.
+            foreach (Control c in panel1.Controls)
+            {
+                if (c is InfoButton)
+                {
+                    myListToRemove.Add(c);
+                }
+            }
+
+            foreach(Control c in myListToRemove)
+            {
+                panel1.Controls.Remove(c);
+            }
+
+            //Lets test adding a button for reach of the attributes.
+            int y = lineInterval;
+            foreach (PlayerAttribute attrib in listOfAttributes)
+            {
+                y += lineInterval;
+                InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib);
+                buttonNumber++;
+                myBtn.Location = new Point(this.panel1.Width - 40, y + 3);
+                panel1.Controls.Add(myBtn);
+            }
+
+            this.Invalidate();
         }
 
         protected override void OnPaint(PaintEventArgs pea)
@@ -69,9 +131,16 @@ namespace CharacterManager.UserControls
             //Lets draw a descriptive text.
             gfx.DrawString("Abilities:", new Font("Arial", 14), new SolidBrush(Color.Black), new Point(1, 1));
 
-            drawTextOnLine(gfx, "Test1", 3);
-            drawTextOnLine(gfx, "Test2", 4);
-            drawTextOnLine(gfx, "Test3", 6);
+            int y = 1;
+            if (listOfAttributes != null)
+            {
+                foreach(PlayerAttribute attrib in listOfAttributes)
+                {
+                    drawTextOnLine(gfx, attrib.AttributeName, y);
+                    y++;
+                }
+            }
+            
         }
 
         private void drawTextOnLine(Graphics gfx, String text, int lineNum)
