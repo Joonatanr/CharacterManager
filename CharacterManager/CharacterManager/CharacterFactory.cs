@@ -14,6 +14,7 @@ namespace CharacterManager
         private TextBoxWriter errorReporter;
         private List<PlayerRace> Races;
         private List<PlayerClass> Classes;
+        private List<PlayerAttribute> AttributesList;
         private Boolean isInitialized = false;
 
         public List<String> getMainRacesList()
@@ -72,6 +73,20 @@ namespace CharacterManager
             {
                 parseRacesFromXml("Resources/PlayerRaces.xml");
                 parseClassesFromXml("Resources/PlayerClasses.xml");
+                parseAttributesFromXml("Resources/PlayerAttributes.xml");
+
+                foreach (PlayerRace race in Races)
+                {
+                    try
+                    {
+                        race.Initialize(this.AttributesList);
+                    }
+                    catch (Exception ex)
+                    {
+                        logError("Failed to initialize race " + race.RaceName + " : " + ex.Message);
+                    }
+                }
+
                 this.isInitialized = true;
             }
             return this.isInitialized;
@@ -221,6 +236,22 @@ namespace CharacterManager
                 StreamReader file = new System.IO.StreamReader(filepath);
 
                 Classes = (List<PlayerClass>)reader.Deserialize(file);
+                file.Close();
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
+        }
+
+        private void parseAttributesFromXml(String filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerAttribute>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                AttributesList = (List<PlayerAttribute>)reader.Deserialize(file);
                 file.Close();
             }
             catch (Exception ex)

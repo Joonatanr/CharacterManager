@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace CharacterManager
 {
@@ -21,7 +22,15 @@ namespace CharacterManager
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> WeaponProficiencies = new List<String>();
         public List<String> SkillProficiencies = new List<String>();
+        public List<String> PlayerAttributes = new List<String>();
+
         public List<PlayerRace> SubRaces = new List<PlayerRace>();
+
+        [XmlIgnore]
+        private List<PlayerAttribute> PlayerAttributeReferences = new List<PlayerAttribute>(); /* This contains a list of references that need to be resolved. */
+
+
+        private bool isInitialized = false;
 
         public PlayerRace()
         {
@@ -31,6 +40,38 @@ namespace CharacterManager
         public PlayerRace(String Name)
         {
             RaceName = Name;
+        }
+
+        public List<PlayerAttribute> getPlayerAttributes()
+        {
+            if (!isInitialized)
+            {
+                throw new Exception("Error : Player attribute list has not been initialized yet");
+            }
+            return PlayerAttributeReferences;
+        }
+
+        public void Initialize(List<PlayerAttribute> listOfAvailableAttributes)
+        {
+            isInitialized = true;
+
+            foreach (String attribStr in PlayerAttributes)
+            {
+                PlayerAttribute attrib = listOfAvailableAttributes.Find(a => a.AttributeName == attribStr);
+                if (attrib != null)
+                {
+                    PlayerAttributeReferences.Add(attrib);
+                }
+                else
+                {
+                    throw new Exception("Error unknown attribute : " + attribStr);
+                }
+            }
+
+            foreach (PlayerRace sub in SubRaces)
+            {
+                sub.Initialize(listOfAvailableAttributes);
+            }
         }
     }
 }

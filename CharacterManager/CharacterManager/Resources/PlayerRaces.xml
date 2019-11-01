@@ -19,6 +19,10 @@
 	<MaximumAge>350</MaximumAge>
 	<Size>Medium</Size>
 	<BaseSpeed>25</BaseSpeed>
+	<PlayerAttributes>
+		<string>Darkvision</string>
+		<string>Dwarven Resilience</string>
+	</PlayerAttributes>
     <SubRaces>
        <PlayerRace>
        <RaceName>Hill Dwarf</RaceName>
@@ -31,7 +35,10 @@
            <WIS>1</WIS>
          </BonusAttributes>
          <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
-       </PlayerRace>
+       <PlayerAttributes>
+			<string>Dwarven Toughness</string>
+	   </PlayerAttributes>
+	   </PlayerRace>
        <PlayerRace>
        <RaceName>Mountain Dwarf</RaceName>
            <BonusAttributes>
@@ -67,6 +74,11 @@
 	<SkillProficiencies>
 		<string>Perception</string>
 	</SkillProficiencies>
+	<PlayerAttributes>
+		<string>Darkvision</string>
+		<string>Fey Ancestry</string>
+		<string>Trance</string>
+	</PlayerAttributes>
 	<SubRaces>
 		<PlayerRace>
 			<RaceName>High Elf</RaceName>
