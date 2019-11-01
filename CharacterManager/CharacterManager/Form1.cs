@@ -54,6 +54,7 @@ namespace CharacterManager
                 this.textBoxClass.Text = activeCharacter.ClassName;
                 this.textBoxXP.Text = activeCharacter.ExperiencePoints.ToString();
                 this.textBoxLevel.Text = activeCharacter.Level.ToString();
+                this.textBoxProfBonus.Text = activeCharacter.ProficiencyBonus.ToString();
 
 
                 //2. Update base attributes

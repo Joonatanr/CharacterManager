@@ -155,6 +155,7 @@
             // 
             this.textBoxProfBonus.Location = new System.Drawing.Point(311, 116);
             this.textBoxProfBonus.Name = "textBoxProfBonus";
+            this.textBoxProfBonus.ReadOnly = true;
             this.textBoxProfBonus.Size = new System.Drawing.Size(32, 20);
             this.textBoxProfBonus.TabIndex = 24;
             // 
