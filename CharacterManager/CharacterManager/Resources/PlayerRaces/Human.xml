@@ -1,0 +1,12 @@
+<PlayerRace>
+<RaceName>Human</RaceName>
+	<BonusAttributes>
+		<STR>1</STR>
+		<DEX>1</DEX>
+		<INT>1</INT>
+		<CHA>1</CHA>
+		<CON>1</CON>
+		<WIS>1</WIS>
+    </BonusAttributes>
+	<NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+</PlayerRace>

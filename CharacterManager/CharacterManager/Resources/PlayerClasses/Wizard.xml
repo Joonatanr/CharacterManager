@@ -1,0 +1,26 @@
+<PlayerClass>
+	<PlayerClassName>Wizard</PlayerClassName>
+	<HitDie>6</HitDie>
+	<WeaponProficiencies>
+		<string>Daggers</string>
+		<string>Darts</string>
+		<string>Slings</string>
+		<string>Quarterstaffs</string>
+		<string>Light Crossbows</string>
+	</WeaponProficiencies>
+	<ArmorProficiencies>
+	</ArmorProficiencies>
+	<SavingThrowProficiencies>
+		<string>INT</string>
+		<string>WIS</string>
+	</SavingThrowProficiencies>
+	<NumberOfSkillsToChoose>2</NumberOfSkillsToChoose>
+	<AvailableSkillProficiencies>
+		<string>Arcana</string>
+		<string>History</string>
+		<string>Insight</string>
+		<string>Investigation</string>
+		<string>Medicine</string>
+		<string>Religion</string>
+	</AvailableSkillProficiencies>
+</PlayerClass>

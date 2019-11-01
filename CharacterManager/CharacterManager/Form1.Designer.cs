@@ -48,6 +48,8 @@
             this.AttributeDisplayINT = new CharacterManager.UserControlAttributeDisplay();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxRace = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.buttonAddXp = new System.Windows.Forms.Button();
             this.textBoxXP = new System.Windows.Forms.TextBox();
             this.textBoxAlignment = new System.Windows.Forms.TextBox();
@@ -62,8 +64,7 @@
             this.toolStripButtonNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
-            this.textBoxRace = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -274,6 +275,24 @@
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
+            // textBoxRace
+            // 
+            this.textBoxRace.Location = new System.Drawing.Point(209, 15);
+            this.textBoxRace.Name = "textBoxRace";
+            this.textBoxRace.ReadOnly = true;
+            this.textBoxRace.Size = new System.Drawing.Size(101, 20);
+            this.textBoxRace.TabIndex = 24;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(162, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 17);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Race";
+            // 
             // buttonAddXp
             // 
             this.buttonAddXp.Location = new System.Drawing.Point(782, 37);
@@ -407,24 +426,6 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
-            // textBoxRace
-            // 
-            this.textBoxRace.Location = new System.Drawing.Point(209, 15);
-            this.textBoxRace.Name = "textBoxRace";
-            this.textBoxRace.ReadOnly = true;
-            this.textBoxRace.Size = new System.Drawing.Size(101, 20);
-            this.textBoxRace.TabIndex = 24;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(162, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 17);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Race";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,6 +490,7 @@
         private UserControls.UserControlSavingThrows userControlSavingThrows1;
         private System.Windows.Forms.TextBox textBoxRace;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

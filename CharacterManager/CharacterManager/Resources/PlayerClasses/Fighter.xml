@@ -1,0 +1,29 @@
+<PlayerClass>
+	<PlayerClassName>Fighter</PlayerClassName>
+	<HitDie>10</HitDie>
+	<WeaponProficiencies>
+		<string>Martial Weapons</string>
+		<string>Simple Weapons</string>
+	</WeaponProficiencies>
+	<ArmorProficiencies>
+		<string>Light Armor</string>
+		<string>Medium Armor</string>
+		<string>Heavy Armor</string>
+		<string>Shields</string>
+	</ArmorProficiencies>
+	<SavingThrowProficiencies>
+		<string>STR</string>
+		<string>CON</string>
+	</SavingThrowProficiencies>
+	<AvailableSkillProficiencies>
+		<string>Acrobatics</string>
+		<string>Animal Handling</string>
+		<string>Athletics</string>
+		<string>Insight</string>
+		<string>History</string>
+		<string>Intimidation</string>
+		<string>Perception</string>
+		<string>Survival</string>
+	</AvailableSkillProficiencies>
+	<NumberOfSkillsToChoose>2</NumberOfSkillsToChoose>
+</PlayerClass>

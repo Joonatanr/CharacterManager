@@ -1,0 +1,58 @@
+<PlayerRace>
+    <RaceName>Dwarf</RaceName>
+    <BonusAttributes>
+      <STR>0</STR>
+      <DEX>0</DEX>
+      <INT>0</INT>
+      <CHA>0</CHA>
+      <CON>2</CON>
+      <WIS>0</WIS>
+    </BonusAttributes>
+    <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+	<WeaponProficiencies>
+		<string>battleaxe</string>
+		<string>handaxe</string>
+		<string>throwing hammer</string>
+		<string>warhammer</string>
+	</WeaponProficiencies>
+	<MaximumAge>350</MaximumAge>
+	<Size>Medium</Size>
+	<BaseSpeed>25</BaseSpeed>
+	<PlayerAttributes>
+		<string>Darkvision</string>
+		<string>Dwarven Resilience</string>
+	</PlayerAttributes>
+    <SubRaces>
+       <PlayerRace>
+       <RaceName>Hill Dwarf</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>1</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+       <PlayerAttributes>
+			<string>Dwarven Toughness</string>
+	   </PlayerAttributes>
+	   </PlayerRace>
+       <PlayerRace>
+       <RaceName>Mountain Dwarf</RaceName>
+           <BonusAttributes>
+           <STR>2</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <ArmorProficiencies>
+			<string>light armor</string>
+			<string>medium armor</string>
+		 </ArmorProficiencies>
+       </PlayerRace>
+    </SubRaces>
+ </PlayerRace>

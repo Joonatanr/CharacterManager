@@ -71,8 +71,8 @@ namespace CharacterManager
         {
             if (!this.isInitialized)
             {
-                parseRacesFromXml("Resources/PlayerRaces.xml");
-                parseClassesFromXml("Resources/PlayerClasses.xml");
+                parseRacesFromXml("Resources/PlayerRaces");
+                parseClassesFromXml("Resources/PlayerClasses");
                 parseAttributesFromXml("Resources/PlayerAttributes.xml");
 
                 foreach (PlayerRace race in Races)
@@ -213,41 +213,48 @@ namespace CharacterManager
             return true;
         }
 
-        private void parseRacesFromXml(String filepath)
+        private void parseRacesFromXml(String filefolder)
         {
-            //Lets just test if we can parse one initially... 
-            try
-            {
-                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerRace>));
-                StreamReader file = new System.IO.StreamReader(filepath);
+            //Lets create a list of existing files.
+            string[] filepaths = Directory.GetFiles(filefolder);
+            Races = new List<PlayerRace>();
 
-                Races = (List<PlayerRace>)reader.Deserialize(file);
-                file.Close();
-
-                //foreach (PlayerRace race in Races)
-                //{
-                    //logMessage("Parsed : " + race.RaceName + " STR : " + race.BonusAttributes.STR);
-                //}
-            }
-            catch (Exception ex)
+            foreach (string filepath in filepaths)
             {
-                logError("Failed to open file : " + ex.Message);
+                try
+                {
+                    XmlSerializer reader = new XmlSerializer(typeof(PlayerRace));
+                    StreamReader file = new System.IO.StreamReader(filepath);
+
+                    Races.Add((PlayerRace)reader.Deserialize(file));
+                    file.Close();
+                }
+                catch (Exception ex)
+                {
+                    logError("Failed to open file : " + ex.Message);
+                }
             }
         }
 
-        private void parseClassesFromXml(String filepath)
+        private void parseClassesFromXml(String filefolder)
         {
-            try
-            {
-                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerClass>));
-                StreamReader file = new System.IO.StreamReader(filepath);
+            string[] filepaths = Directory.GetFiles(filefolder);
 
-                Classes = (List<PlayerClass>)reader.Deserialize(file);
-                file.Close();
-            }
-            catch (Exception ex)
+            Classes = new List<PlayerClass>();
+            foreach (string filepath in filepaths)
             {
-                logError("Failed to open file : " + ex.Message);
+                try
+                {
+                    XmlSerializer reader = new XmlSerializer(typeof(PlayerClass));
+                    StreamReader file = new System.IO.StreamReader(filepath);
+
+                    Classes.Add((PlayerClass)reader.Deserialize(file));
+                    file.Close();
+                }
+                catch (Exception ex)
+                {
+                    logError("Failed to open file : " + ex.Message);
+                }
             }
         }
 

@@ -228,25 +228,18 @@ namespace CharacterManager
             {
                 case ("STR"):
                     return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.STR);
-                    break;
                 case ("INT"):
                     return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.INT);
-                    break;
                 case ("DEX"):
                     return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.DEX);
-                    break;
                 case ("CON"):
                     return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.CON);
-                    break;
                 case ("WIS"):
                     return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.WIS);
-                    break;
                 case ("CHA"):
                     return CharacterFactory.getAbilityModifierValue(this.BaseAttributes.CHA);
-                    break;
                 default:
                     return 0;
-                    break;
             }
         }
 

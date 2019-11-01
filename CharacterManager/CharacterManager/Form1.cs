@@ -97,21 +97,25 @@ namespace CharacterManager
         {
             if (activeCharacter != null)
             {
-                /* Lets test saving the character into an xml format. */
-
+                /* We save the character into an XML format. */
                 XmlSerializer xSubmit = new XmlSerializer(typeof(PlayerCharacter));
+                saveFileDialog1.DefaultExt = ".character";
+                saveFileDialog1.FileName = activeCharacter.CharacterName + ".character";
 
-                using (var sww = new StreamWriter("test.xml"))
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    XmlWriterSettings settings = new XmlWriterSettings();
-                    settings.OmitXmlDeclaration = true;
-                    settings.Indent = true;
-                    settings.NewLineOnAttributes = true;
-
-                    using (XmlWriter writer = XmlWriter.Create(sww, settings))
+                    using (var sww = new StreamWriter(saveFileDialog1.FileName))
                     {
-                        xSubmit.Serialize(writer, activeCharacter);
-                        sww.Flush();
+                        XmlWriterSettings settings = new XmlWriterSettings();
+                        settings.OmitXmlDeclaration = true;
+                        settings.Indent = true;
+                        settings.NewLineOnAttributes = true;
+
+                        using (XmlWriter writer = XmlWriter.Create(sww, settings))
+                        {
+                            xSubmit.Serialize(writer, activeCharacter);
+                            sww.Flush();
+                        }
                     }
                 }
             }

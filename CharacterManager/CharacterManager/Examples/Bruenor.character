@@ -1,0 +1,36 @@
+<PlayerCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SkillProficiencies />
+  <WeaponProficiencies>
+    <string>battleaxe</string>
+    <string>handaxe</string>
+    <string>throwing hammer</string>
+    <string>warhammer</string>
+    <string>Martial Weapons</string>
+    <string>Simple Weapons</string>
+  </WeaponProficiencies>
+  <ArmorProficiencies>
+    <string>Light Armor</string>
+    <string>Medium Armor</string>
+    <string>Heavy Armor</string>
+    <string>Shields</string>
+  </ArmorProficiencies>
+  <SavingThrowProficiencies>
+    <string>STR</string>
+    <string>CON</string>
+  </SavingThrowProficiencies>
+  <Level>1</Level>
+  <ProficiencyBonus>2</ProficiencyBonus>
+  <ExperiencePoints>0</ExperiencePoints>
+  <MainRaceName>Dwarf</MainRaceName>
+  <SubRaceName>Hill Dwarf</SubRaceName>
+  <ClassName>Fighter</ClassName>
+  <BaseAttributes>
+    <STR>15</STR>
+    <DEX>8</DEX>
+    <INT>11</INT>
+    <CHA>10</CHA>
+    <CON>16</CON>
+    <WIS>13</WIS>
+  </BaseAttributes>
+  <CharacterName>Bruenor</CharacterName>
+</PlayerCharacter>
