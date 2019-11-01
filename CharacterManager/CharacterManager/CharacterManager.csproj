@@ -69,16 +69,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserControlAttributeDisplay.cs">
+    <Compile Include="UserControls\UserControlAttributeDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlAttributeDisplay.Designer.cs">
+    <Compile Include="UserControls\UserControlAttributeDisplay.Designer.cs">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlProficiency.cs">
+    <Compile Include="UserControls\UserControlProficiency.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlProficiency.Designer.cs">
+    <Compile Include="UserControls\UserControlProficiency.Designer.cs">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CharacterCreatorForm.resx">
@@ -100,10 +100,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlAttributeDisplay.resx">
+    <EmbeddedResource Include="UserControls\UserControlAttributeDisplay.resx">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlProficiency.resx">
+    <EmbeddedResource Include="UserControls\UserControlProficiency.resx">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
