@@ -52,9 +52,29 @@ namespace CharacterManager
         /*************** Button functions *************/
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButtonNew_Click(object sender, EventArgs e)
+        {
             /* New character creation - TODO, this is only a placeholder. */
             CharacterCreatorForm f2 = new CharacterCreatorForm(this.myFactory);
-            
+
             if (f2.ShowDialog() == DialogResult.OK)
             {
                 activeCharacter = f2.CreatedCharacter;
@@ -62,19 +82,9 @@ namespace CharacterManager
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void toolStripButtonSave_Click(object sender, EventArgs e)
         {
-            /** Load a file. */
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                activeCharacter = myFactory.LoadFromXml(openFileDialog1.FileName);
-                updateCharacterAttributes();
-            }
-        }
-
-        private void buttonSave_Click(object sender, EventArgs e)
-        {
-            if(activeCharacter != null)
+            if (activeCharacter != null)
             {
                 /* Lets test saving the character into an xml format. */
 
@@ -87,12 +97,22 @@ namespace CharacterManager
                     settings.Indent = true;
                     settings.NewLineOnAttributes = true;
 
-                    using(XmlWriter writer = XmlWriter.Create(sww, settings))
+                    using (XmlWriter writer = XmlWriter.Create(sww, settings))
                     {
                         xSubmit.Serialize(writer, activeCharacter);
                         sww.Flush();
                     }
                 }
+            }
+        }
+
+        private void toolStripButtonLoad_Click(object sender, EventArgs e)
+        {
+            /** Load a file. */
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                activeCharacter = myFactory.LoadFromXml(openFileDialog1.FileName);
+                updateCharacterAttributes();
             }
         }
     }
