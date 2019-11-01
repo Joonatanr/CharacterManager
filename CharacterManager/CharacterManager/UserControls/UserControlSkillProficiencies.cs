@@ -25,6 +25,21 @@ namespace CharacterManager.UserControls
         private int currentWisBonus = 0;
         private int currentConBonus = 0;
 
+        public delegate void UpdatedProficiencyValuesListener();
+        public UpdatedProficiencyValuesListener checkedChangedListener = null;
+
+        public Boolean isSetDataVisible
+        {
+            get
+            {
+                return labelNumberOfProficienciesToChoose.Visible;
+            }
+            set
+            {
+                labelNumberOfProficienciesToChoose.Visible = value;
+                label15.Visible = false;
+            }
+        }
 
         public UserControlSkillProficiencies()
         {
@@ -81,6 +96,8 @@ namespace CharacterManager.UserControls
             }
 
             labelNumberOfProficienciesToChoose.Text = numberOfSkillsToChoose.ToString();
+
+            checkedChangedListener?.Invoke();
         }
 
         public void updateSkillProficiencyFields(int strBonus, int dexBonus, int IntBonus, int WisBonus, int ChaBonus, int ConBonus, int profBonus)
@@ -120,6 +137,35 @@ namespace CharacterManager.UserControls
             }
 
             return false;
+        }
+
+        
+        public List<String> getAllSkillProficiencies()
+        {
+            List<String> res = new List<String>();
+
+            foreach(UserControlProficiency prof in skillProficiencyControlList)
+            {
+                if (prof.IsProficient())
+                {
+                    res.Add(prof.ProficiencyName);
+                }
+            }
+
+            return res;
+        }
+        
+
+        //This is the skill bonus that is currently being displayed.
+        public int getTotalSkillBonus(string skill)
+        {
+            UserControlProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == skill);
+            if (ctrl != null)
+            {
+                return ctrl.getTotalProficiencyBonus();
+            }
+
+            return 0;
         }
 
         public void setUpChoiceProficiencies(int numberOfSkillsToChoose, List<string> AvailableSkillsToChoose)

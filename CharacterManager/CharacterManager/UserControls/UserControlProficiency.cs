@@ -62,18 +62,19 @@ namespace CharacterManager
         {
             _baseValue = baseValue;
             _proficiencyBonus = proficiencyBonus;
-            
+            int displayedValue = _baseValue;
+
             if (isProficient)
             {
                 checkBoxProfSTR.Checked = true;
-                _baseValue += proficiencyBonus;
+                displayedValue += proficiencyBonus;
             }
             else
             {
                 checkBoxProfSTR.Checked = false;
             }
 
-            textBoxStrSave.Text = _baseValue.ToString();
+            textBoxStrSave.Text = displayedValue.ToString();
             
         }
 
@@ -106,11 +107,24 @@ namespace CharacterManager
             return this.checkBoxProfSTR.Checked;
         }
 
+
+        public int getTotalProficiencyBonus()
+        {
+            int res = _baseValue;
+            if (IsProficient())
+            {
+                res += _proficiencyBonus;
+            }
+
+            return res;
+        }
+
         private void checkBoxProfSTR_CheckedChanged(object sender, EventArgs e)
         {
             if (this.checkBoxProfSTR.AutoCheck)
             {
                 //Was changed manually.
+                setValue(_baseValue);
                 ChangeListener?.Invoke(ProficiencyName);
             }
         }

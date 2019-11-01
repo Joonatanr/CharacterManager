@@ -180,6 +180,21 @@ namespace CharacterManager
             }
         }
 
+        [XmlIgnore]
+        public int PassivePerception
+        {
+            get
+            {
+                //TODO : Maybe there are some other bonuses to passive perception?
+                int res = getModifier("WIS") + 10;
+                if (isSkillProficientIn("Perception"))
+                {
+                    res += ProficiencyBonus;
+                }
+                return res;
+            }
+        }
+
 
         private String _name;
 
@@ -246,6 +261,19 @@ namespace CharacterManager
         public bool isSavingThrowProficientIn(string attribute)
         {
             return (this.SavingThrowProficiencies.Contains(attribute));
+        }
+
+        public bool isSkillProficientIn(string skill)
+        {
+            foreach(string s in SkillProficiencies)
+            {
+                if(skill == s)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

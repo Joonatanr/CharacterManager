@@ -79,9 +79,11 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
+            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
             this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAttributeList();
-            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
+            this.textBoxPassivePerception = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -477,6 +479,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBoxPassivePerception);
+            this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.userControlSkillProficiencies1);
             this.groupBox3.Controls.Add(this.userControlSavingThrows1);
             this.groupBox3.Controls.Add(this.userControlGenericAttributeList1);
@@ -497,7 +501,7 @@
             // 
             // textBoxHitPoints
             // 
-            this.textBoxHitPoints.Location = new System.Drawing.Point(256, 56);
+            this.textBoxHitPoints.Location = new System.Drawing.Point(300, 59);
             this.textBoxHitPoints.Name = "textBoxHitPoints";
             this.textBoxHitPoints.ReadOnly = true;
             this.textBoxHitPoints.Size = new System.Drawing.Size(100, 20);
@@ -514,7 +518,7 @@
             // 
             // textBoxHitDie
             // 
-            this.textBoxHitDie.Location = new System.Drawing.Point(256, 30);
+            this.textBoxHitDie.Location = new System.Drawing.Point(300, 33);
             this.textBoxHitDie.Name = "textBoxHitDie";
             this.textBoxHitDie.ReadOnly = true;
             this.textBoxHitDie.Size = new System.Drawing.Size(100, 20);
@@ -531,7 +535,7 @@
             // 
             // textBoxSpeed
             // 
-            this.textBoxSpeed.Location = new System.Drawing.Point(256, 84);
+            this.textBoxSpeed.Location = new System.Drawing.Point(300, 85);
             this.textBoxSpeed.Name = "textBoxSpeed";
             this.textBoxSpeed.ReadOnly = true;
             this.textBoxSpeed.Size = new System.Drawing.Size(100, 20);
@@ -619,6 +623,14 @@
             this.comboBoxPlayerClasses.TabIndex = 0;
             this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
             // 
+            // userControlSkillProficiencies1
+            // 
+            this.userControlSkillProficiencies1.isSetDataVisible = true;
+            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(9, 200);
+            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
+            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 549);
+            this.userControlSkillProficiencies1.TabIndex = 22;
+            // 
             // userControlSavingThrows1
             // 
             this.userControlSavingThrows1.Location = new System.Drawing.Point(10, 12);
@@ -633,12 +645,22 @@
             this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 363);
             this.userControlGenericAttributeList1.TabIndex = 20;
             // 
-            // userControlSkillProficiencies1
+            // textBoxPassivePerception
             // 
-            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(9, 200);
-            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
-            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 549);
-            this.userControlSkillProficiencies1.TabIndex = 22;
+            this.textBoxPassivePerception.Location = new System.Drawing.Point(300, 110);
+            this.textBoxPassivePerception.Name = "textBoxPassivePerception";
+            this.textBoxPassivePerception.ReadOnly = true;
+            this.textBoxPassivePerception.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPassivePerception.TabIndex = 24;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(196, 113);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 13);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Passive Perception";
             // 
             // CharacterCreatorForm
             // 
@@ -727,5 +749,7 @@
         private UserControls.UserControlGenericAttributeList userControlGenericAttributeList1;
         private UserControls.UserControlSavingThrows userControlSavingThrows1;
         private UserControls.UserControlSkillProficiencies userControlSkillProficiencies1;
+        private System.Windows.Forms.TextBox textBoxPassivePerception;
+        private System.Windows.Forms.Label label15;
     }
 }

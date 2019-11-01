@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
+            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.textBoxProfBonus = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
@@ -65,6 +65,8 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.textBoxPerception = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -75,16 +77,6 @@
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(12, 802);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1048, 96);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
             // 
             // textBoxName
             // 
@@ -113,11 +105,11 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1048, 759);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1048, 927);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.Location = new System.Drawing.Point(12, 12);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(1048, 784);
+            this.toolStripContainer1.Size = new System.Drawing.Size(1048, 952);
             this.toolStripContainer1.TabIndex = 14;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -133,11 +125,14 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1042, 753);
+            this.tabControl1.Size = new System.Drawing.Size(1042, 921);
             this.tabControl1.TabIndex = 14;
             // 
             // tabPageCharacter
             // 
+            this.tabPageCharacter.Controls.Add(this.textBoxPerception);
+            this.tabPageCharacter.Controls.Add(this.label8);
+            this.tabPageCharacter.Controls.Add(this.userControlSkillProficiencies1);
             this.tabPageCharacter.Controls.Add(this.textBoxProfBonus);
             this.tabPageCharacter.Controls.Add(this.label6);
             this.tabPageCharacter.Controls.Add(this.userControlSavingThrows1);
@@ -146,14 +141,22 @@
             this.tabPageCharacter.Location = new System.Drawing.Point(4, 4);
             this.tabPageCharacter.Name = "tabPageCharacter";
             this.tabPageCharacter.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCharacter.Size = new System.Drawing.Size(1034, 727);
+            this.tabPageCharacter.Size = new System.Drawing.Size(1034, 895);
             this.tabPageCharacter.TabIndex = 0;
             this.tabPageCharacter.Text = "Character";
             this.tabPageCharacter.UseVisualStyleBackColor = true;
             // 
+            // userControlSkillProficiencies1
+            // 
+            this.userControlSkillProficiencies1.isSetDataVisible = false;
+            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(6, 318);
+            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
+            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 529);
+            this.userControlSkillProficiencies1.TabIndex = 25;
+            // 
             // textBoxProfBonus
             // 
-            this.textBoxProfBonus.Location = new System.Drawing.Point(311, 116);
+            this.textBoxProfBonus.Location = new System.Drawing.Point(311, 107);
             this.textBoxProfBonus.Name = "textBoxProfBonus";
             this.textBoxProfBonus.ReadOnly = true;
             this.textBoxProfBonus.Size = new System.Drawing.Size(32, 20);
@@ -163,7 +166,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(188, 116);
+            this.label6.Location = new System.Drawing.Point(188, 107);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 17);
             this.label6.TabIndex = 23;
@@ -171,7 +174,7 @@
             // 
             // userControlSavingThrows1
             // 
-            this.userControlSavingThrows1.Location = new System.Drawing.Point(185, 137);
+            this.userControlSavingThrows1.Location = new System.Drawing.Point(185, 128);
             this.userControlSavingThrows1.Name = "userControlSavingThrows1";
             this.userControlSavingThrows1.Size = new System.Drawing.Size(166, 193);
             this.userControlSavingThrows1.TabIndex = 16;
@@ -184,9 +187,9 @@
             this.groupBox3.Controls.Add(this.AttributeDisplayCON);
             this.groupBox3.Controls.Add(this.AttributeDisplaySTR);
             this.groupBox3.Controls.Add(this.AttributeDisplayINT);
-            this.groupBox3.Location = new System.Drawing.Point(6, 98);
+            this.groupBox3.Location = new System.Drawing.Point(9, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(173, 227);
+            this.groupBox3.Size = new System.Drawing.Size(173, 222);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Base attributes";
@@ -195,7 +198,7 @@
             // 
             this.AttributeDisplayCHA.AttributeName = "CHA";
             this.AttributeDisplayCHA.AttributeValue = 0;
-            this.AttributeDisplayCHA.Location = new System.Drawing.Point(10, 188);
+            this.AttributeDisplayCHA.Location = new System.Drawing.Point(10, 185);
             this.AttributeDisplayCHA.Name = "AttributeDisplayCHA";
             this.AttributeDisplayCHA.Size = new System.Drawing.Size(168, 34);
             this.AttributeDisplayCHA.TabIndex = 13;
@@ -204,7 +207,7 @@
             // 
             this.AttributeDisplayWIS.AttributeName = "WIS";
             this.AttributeDisplayWIS.AttributeValue = 0;
-            this.AttributeDisplayWIS.Location = new System.Drawing.Point(10, 154);
+            this.AttributeDisplayWIS.Location = new System.Drawing.Point(10, 151);
             this.AttributeDisplayWIS.Name = "AttributeDisplayWIS";
             this.AttributeDisplayWIS.Size = new System.Drawing.Size(168, 34);
             this.AttributeDisplayWIS.TabIndex = 12;
@@ -213,7 +216,7 @@
             // 
             this.AttributeDisplayDEX.AttributeName = "DEX";
             this.AttributeDisplayDEX.AttributeValue = 0;
-            this.AttributeDisplayDEX.Location = new System.Drawing.Point(10, 86);
+            this.AttributeDisplayDEX.Location = new System.Drawing.Point(10, 83);
             this.AttributeDisplayDEX.Name = "AttributeDisplayDEX";
             this.AttributeDisplayDEX.Size = new System.Drawing.Size(168, 34);
             this.AttributeDisplayDEX.TabIndex = 10;
@@ -222,7 +225,7 @@
             // 
             this.AttributeDisplayCON.AttributeName = "CON";
             this.AttributeDisplayCON.AttributeValue = 0;
-            this.AttributeDisplayCON.Location = new System.Drawing.Point(10, 120);
+            this.AttributeDisplayCON.Location = new System.Drawing.Point(10, 117);
             this.AttributeDisplayCON.Name = "AttributeDisplayCON";
             this.AttributeDisplayCON.Size = new System.Drawing.Size(168, 34);
             this.AttributeDisplayCON.TabIndex = 11;
@@ -240,7 +243,7 @@
             // 
             this.AttributeDisplayINT.AttributeName = "INT";
             this.AttributeDisplayINT.AttributeValue = 0;
-            this.AttributeDisplayINT.Location = new System.Drawing.Point(10, 52);
+            this.AttributeDisplayINT.Location = new System.Drawing.Point(10, 49);
             this.AttributeDisplayINT.Name = "AttributeDisplayINT";
             this.AttributeDisplayINT.Size = new System.Drawing.Size(168, 34);
             this.AttributeDisplayINT.TabIndex = 9;
@@ -380,7 +383,7 @@
             this.tabPageMagic.Location = new System.Drawing.Point(4, 4);
             this.tabPageMagic.Name = "tabPageMagic";
             this.tabPageMagic.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMagic.Size = new System.Drawing.Size(1034, 727);
+            this.tabPageMagic.Size = new System.Drawing.Size(1034, 870);
             this.tabPageMagic.TabIndex = 1;
             this.tabPageMagic.Text = "Magic";
             this.tabPageMagic.UseVisualStyleBackColor = true;
@@ -427,13 +430,30 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
+            // textBoxPerception
+            // 
+            this.textBoxPerception.Location = new System.Drawing.Point(219, 851);
+            this.textBoxPerception.Name = "textBoxPerception";
+            this.textBoxPerception.ReadOnly = true;
+            this.textBoxPerception.Size = new System.Drawing.Size(61, 20);
+            this.textBoxPerception.TabIndex = 26;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(16, 853);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(190, 15);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Passive Wisdom(Perception)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 910);
+            this.ClientSize = new System.Drawing.Size(1072, 976);
             this.Controls.Add(this.toolStripContainer1);
-            this.Controls.Add(this.richTextBox1);
             this.Name = "Form1";
             this.Text = "Character Manager - 5e";
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
@@ -456,7 +476,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
@@ -492,6 +511,9 @@
         private System.Windows.Forms.TextBox textBoxRace;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private UserControls.UserControlSkillProficiencies userControlSkillProficiencies1;
+        private System.Windows.Forms.TextBox textBoxPerception;
+        private System.Windows.Forms.Label label8;
     }
 }
 

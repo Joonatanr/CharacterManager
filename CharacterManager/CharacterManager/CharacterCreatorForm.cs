@@ -27,6 +27,7 @@ namespace CharacterManager
         private PlayerRace SelectedMainRace;
         private PlayerRace SelectedSubRace;
         private PlayerClass SelectedClass;
+        private int currentPassivePerception = 0;
 
         private List<PlayerAttribute> myAttributeList = new List<PlayerAttribute>();
 
@@ -53,6 +54,8 @@ namespace CharacterManager
             {
                 comboBoxPlayerClasses.Items.Add(str);
             }
+
+            this.userControlSkillProficiencies1.checkedChangedListener = proficienciesChanged;
         }
 
         private bool CreateCharacter()
@@ -96,6 +99,9 @@ namespace CharacterManager
 
                 //5. Set saving throw proficiencies.
                 CreatedCharacter.SavingThrowProficiencies = SelectedClass.SavingThrowProficiencies;
+
+                //6. Set skill proficiencies
+                CreatedCharacter.SkillProficiencies = userControlSkillProficiencies1.getAllSkillProficiencies();
             }
 
             return res;
@@ -287,6 +293,16 @@ namespace CharacterManager
 
             //7. Update the generic abilities list.
             updateGenericAbilitiesField();
+
+            //8. Update the passive perception
+            UpdatePassivePerception();
+        }
+
+
+        private void UpdatePassivePerception()
+        {
+            currentPassivePerception = 10 + userControlSkillProficiencies1.getTotalSkillBonus("Perception");
+            textBoxPassivePerception.Text = currentPassivePerception.ToString();
         }
 
         private void updateGenericAbilitiesField()
@@ -335,6 +351,7 @@ namespace CharacterManager
             //These also need to be updated here.. 
             updateSavingThrowFields();
             updateSkillProficiencyFields();
+            UpdatePassivePerception();
         }
 
 
@@ -545,6 +562,12 @@ namespace CharacterManager
                     resetSkillProficiencies();
                 }
             }
+        }
+
+        //Called when a proficiency value is manually changed.
+        private void proficienciesChanged()
+        {
+            UpdatePassivePerception();
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)

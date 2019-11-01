@@ -54,6 +54,9 @@
             // 
             // groupBoxSkillProfs
             // 
+            this.groupBoxSkillProfs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxSkillProfs.Controls.Add(this.labelNumberOfProficienciesToChoose);
             this.groupBoxSkillProfs.Controls.Add(this.label15);
             this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency18);
@@ -76,7 +79,7 @@
             this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyAcrobatics);
             this.groupBoxSkillProfs.Location = new System.Drawing.Point(3, 3);
             this.groupBoxSkillProfs.Name = "groupBoxSkillProfs";
-            this.groupBoxSkillProfs.Size = new System.Drawing.Size(269, 543);
+            this.groupBoxSkillProfs.Size = new System.Drawing.Size(269, 539);
             this.groupBoxSkillProfs.TabIndex = 20;
             this.groupBoxSkillProfs.TabStop = false;
             this.groupBoxSkillProfs.Text = "Skill Proficiencies";
@@ -84,7 +87,7 @@
             // labelNumberOfProficienciesToChoose
             // 
             this.labelNumberOfProficienciesToChoose.AutoSize = true;
-            this.labelNumberOfProficienciesToChoose.Location = new System.Drawing.Point(113, 522);
+            this.labelNumberOfProficienciesToChoose.Location = new System.Drawing.Point(113, 518);
             this.labelNumberOfProficienciesToChoose.Name = "labelNumberOfProficienciesToChoose";
             this.labelNumberOfProficienciesToChoose.Size = new System.Drawing.Size(13, 13);
             this.labelNumberOfProficienciesToChoose.TabIndex = 35;
@@ -93,7 +96,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 522);
+            this.label15.Location = new System.Drawing.Point(13, 518);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(94, 13);
             this.label15.TabIndex = 34;
@@ -267,7 +270,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBoxSkillProfs);
             this.Name = "UserControlSkillProficiencies";
-            this.Size = new System.Drawing.Size(276, 549);
+            this.Size = new System.Drawing.Size(276, 545);
             this.groupBoxSkillProfs.ResumeLayout(false);
             this.groupBoxSkillProfs.PerformLayout();
             this.ResumeLayout(false);

@@ -15,18 +15,15 @@ namespace CharacterManager
 {
     public partial class Form1 : Form
     {
-        private TextBoxWriter myWriter;
         private PlayerCharacter activeCharacter = null;
         private CharacterFactory myFactory;
 
         public Form1()
         {
             InitializeComponent();
-            myWriter = new TextBoxWriter(this.richTextBox1);
 
-            myWriter.WriteColoredLine("Hello World", ConsoleColor.DarkRed);
             //myFactory = new CharacterFactory();
-            myFactory = new CharacterFactory(myWriter);
+            myFactory = new CharacterFactory();
             myFactory.Initialize();
         }
 
@@ -72,6 +69,23 @@ namespace CharacterManager
                 userControlSavingThrows1.setValue(activeCharacter.getModifier("CON"), activeCharacter.isSavingThrowProficientIn("CON"), activeCharacter.ProficiencyBonus, "CON");
                 userControlSavingThrows1.setValue(activeCharacter.getModifier("WIS"), activeCharacter.isSavingThrowProficientIn("WIS"), activeCharacter.ProficiencyBonus, "WIS");
                 userControlSavingThrows1.setValue(activeCharacter.getModifier("CHA"), activeCharacter.isSavingThrowProficientIn("CHA"), activeCharacter.ProficiencyBonus, "CHA");
+
+                //4. Update skill bonuses.
+                userControlSkillProficiencies1.updateSkillProficiencyFields(activeCharacter.getModifier("STR"),
+                                                                            activeCharacter.getModifier("DEX"),
+                                                                            activeCharacter.getModifier("INT"),
+                                                                            activeCharacter.getModifier("WIS"),
+                                                                            activeCharacter.getModifier("CHA"),
+                                                                            activeCharacter.getModifier("CON"),
+                                                                            activeCharacter.ProficiencyBonus);
+
+                foreach(string skill in activeCharacter.SkillProficiencies)
+                {
+                    userControlSkillProficiencies1.setProficientAtSkill(skill);
+                }
+
+                //5. Update passive perception.
+                textBoxPerception.Text = activeCharacter.PassivePerception.ToString();
             }
         }
 
