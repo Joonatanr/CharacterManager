@@ -1,0 +1,7 @@
+﻿<ArrayOfPlayerArmor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PlayerArmor>
+		<ItemName>TestArmor</ItemName>
+		<Weight>10</Weight>
+		<ArmorClass>14</ArmorClass>
+	</PlayerArmor>
+</ArrayOfPlayerArmor>

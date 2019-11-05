@@ -35,17 +35,11 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
-            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
+            this.textBoxPerception = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.textBoxProfBonus = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.AttributeDisplayCHA = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayWIS = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplaySTR = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayINT = new CharacterManager.UserControlAttributeDisplay();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxRace = new System.Windows.Forms.TextBox();
@@ -65,8 +59,15 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.textBoxPerception = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
+            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
+            this.AttributeDisplayCHA = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayWIS = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplaySTR = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayINT = new CharacterManager.UserControlAttributeDisplay();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -130,6 +131,7 @@
             // 
             // tabPageCharacter
             // 
+            this.tabPageCharacter.Controls.Add(this.richTextBox1);
             this.tabPageCharacter.Controls.Add(this.textBoxPerception);
             this.tabPageCharacter.Controls.Add(this.label8);
             this.tabPageCharacter.Controls.Add(this.userControlSkillProficiencies1);
@@ -146,13 +148,23 @@
             this.tabPageCharacter.Text = "Character";
             this.tabPageCharacter.UseVisualStyleBackColor = true;
             // 
-            // userControlSkillProficiencies1
+            // textBoxPerception
             // 
-            this.userControlSkillProficiencies1.isSetDataVisible = false;
-            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(6, 318);
-            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
-            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 529);
-            this.userControlSkillProficiencies1.TabIndex = 25;
+            this.textBoxPerception.Location = new System.Drawing.Point(219, 851);
+            this.textBoxPerception.Name = "textBoxPerception";
+            this.textBoxPerception.ReadOnly = true;
+            this.textBoxPerception.Size = new System.Drawing.Size(61, 20);
+            this.textBoxPerception.TabIndex = 26;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(16, 853);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(190, 15);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Passive Wisdom(Perception)";
             // 
             // textBoxProfBonus
             // 
@@ -172,13 +184,6 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Proficiency Bonus";
             // 
-            // userControlSavingThrows1
-            // 
-            this.userControlSavingThrows1.Location = new System.Drawing.Point(185, 128);
-            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
-            this.userControlSavingThrows1.Size = new System.Drawing.Size(166, 193);
-            this.userControlSavingThrows1.TabIndex = 16;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.AttributeDisplayCHA);
@@ -193,60 +198,6 @@
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Base attributes";
-            // 
-            // AttributeDisplayCHA
-            // 
-            this.AttributeDisplayCHA.AttributeName = "CHA";
-            this.AttributeDisplayCHA.AttributeValue = 0;
-            this.AttributeDisplayCHA.Location = new System.Drawing.Point(10, 185);
-            this.AttributeDisplayCHA.Name = "AttributeDisplayCHA";
-            this.AttributeDisplayCHA.Size = new System.Drawing.Size(168, 34);
-            this.AttributeDisplayCHA.TabIndex = 13;
-            // 
-            // AttributeDisplayWIS
-            // 
-            this.AttributeDisplayWIS.AttributeName = "WIS";
-            this.AttributeDisplayWIS.AttributeValue = 0;
-            this.AttributeDisplayWIS.Location = new System.Drawing.Point(10, 151);
-            this.AttributeDisplayWIS.Name = "AttributeDisplayWIS";
-            this.AttributeDisplayWIS.Size = new System.Drawing.Size(168, 34);
-            this.AttributeDisplayWIS.TabIndex = 12;
-            // 
-            // AttributeDisplayDEX
-            // 
-            this.AttributeDisplayDEX.AttributeName = "DEX";
-            this.AttributeDisplayDEX.AttributeValue = 0;
-            this.AttributeDisplayDEX.Location = new System.Drawing.Point(10, 83);
-            this.AttributeDisplayDEX.Name = "AttributeDisplayDEX";
-            this.AttributeDisplayDEX.Size = new System.Drawing.Size(168, 34);
-            this.AttributeDisplayDEX.TabIndex = 10;
-            // 
-            // AttributeDisplayCON
-            // 
-            this.AttributeDisplayCON.AttributeName = "CON";
-            this.AttributeDisplayCON.AttributeValue = 0;
-            this.AttributeDisplayCON.Location = new System.Drawing.Point(10, 117);
-            this.AttributeDisplayCON.Name = "AttributeDisplayCON";
-            this.AttributeDisplayCON.Size = new System.Drawing.Size(168, 34);
-            this.AttributeDisplayCON.TabIndex = 11;
-            // 
-            // AttributeDisplaySTR
-            // 
-            this.AttributeDisplaySTR.AttributeName = "STR";
-            this.AttributeDisplaySTR.AttributeValue = 0;
-            this.AttributeDisplaySTR.Location = new System.Drawing.Point(10, 18);
-            this.AttributeDisplaySTR.Name = "AttributeDisplaySTR";
-            this.AttributeDisplaySTR.Size = new System.Drawing.Size(168, 34);
-            this.AttributeDisplaySTR.TabIndex = 8;
-            // 
-            // AttributeDisplayINT
-            // 
-            this.AttributeDisplayINT.AttributeName = "INT";
-            this.AttributeDisplayINT.AttributeValue = 0;
-            this.AttributeDisplayINT.Location = new System.Drawing.Point(10, 49);
-            this.AttributeDisplayINT.Name = "AttributeDisplayINT";
-            this.AttributeDisplayINT.Size = new System.Drawing.Size(168, 34);
-            this.AttributeDisplayINT.TabIndex = 9;
             // 
             // groupBox1
             // 
@@ -383,7 +334,7 @@
             this.tabPageMagic.Location = new System.Drawing.Point(4, 4);
             this.tabPageMagic.Name = "tabPageMagic";
             this.tabPageMagic.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMagic.Size = new System.Drawing.Size(1034, 870);
+            this.tabPageMagic.Size = new System.Drawing.Size(1034, 895);
             this.tabPageMagic.TabIndex = 1;
             this.tabPageMagic.Text = "Magic";
             this.tabPageMagic.UseVisualStyleBackColor = true;
@@ -430,23 +381,82 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
-            // textBoxPerception
+            // userControlSkillProficiencies1
             // 
-            this.textBoxPerception.Location = new System.Drawing.Point(219, 851);
-            this.textBoxPerception.Name = "textBoxPerception";
-            this.textBoxPerception.ReadOnly = true;
-            this.textBoxPerception.Size = new System.Drawing.Size(61, 20);
-            this.textBoxPerception.TabIndex = 26;
+            this.userControlSkillProficiencies1.isSetDataVisible = false;
+            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(6, 318);
+            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
+            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 529);
+            this.userControlSkillProficiencies1.TabIndex = 25;
             // 
-            // label8
+            // userControlSavingThrows1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(16, 853);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(190, 15);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Passive Wisdom(Perception)";
+            this.userControlSavingThrows1.Location = new System.Drawing.Point(185, 128);
+            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
+            this.userControlSavingThrows1.Size = new System.Drawing.Size(166, 193);
+            this.userControlSavingThrows1.TabIndex = 16;
+            // 
+            // AttributeDisplayCHA
+            // 
+            this.AttributeDisplayCHA.AttributeName = "CHA";
+            this.AttributeDisplayCHA.AttributeValue = 0;
+            this.AttributeDisplayCHA.Location = new System.Drawing.Point(10, 185);
+            this.AttributeDisplayCHA.Name = "AttributeDisplayCHA";
+            this.AttributeDisplayCHA.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayCHA.TabIndex = 13;
+            // 
+            // AttributeDisplayWIS
+            // 
+            this.AttributeDisplayWIS.AttributeName = "WIS";
+            this.AttributeDisplayWIS.AttributeValue = 0;
+            this.AttributeDisplayWIS.Location = new System.Drawing.Point(10, 151);
+            this.AttributeDisplayWIS.Name = "AttributeDisplayWIS";
+            this.AttributeDisplayWIS.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayWIS.TabIndex = 12;
+            // 
+            // AttributeDisplayDEX
+            // 
+            this.AttributeDisplayDEX.AttributeName = "DEX";
+            this.AttributeDisplayDEX.AttributeValue = 0;
+            this.AttributeDisplayDEX.Location = new System.Drawing.Point(10, 83);
+            this.AttributeDisplayDEX.Name = "AttributeDisplayDEX";
+            this.AttributeDisplayDEX.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayDEX.TabIndex = 10;
+            // 
+            // AttributeDisplayCON
+            // 
+            this.AttributeDisplayCON.AttributeName = "CON";
+            this.AttributeDisplayCON.AttributeValue = 0;
+            this.AttributeDisplayCON.Location = new System.Drawing.Point(10, 117);
+            this.AttributeDisplayCON.Name = "AttributeDisplayCON";
+            this.AttributeDisplayCON.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayCON.TabIndex = 11;
+            // 
+            // AttributeDisplaySTR
+            // 
+            this.AttributeDisplaySTR.AttributeName = "STR";
+            this.AttributeDisplaySTR.AttributeValue = 0;
+            this.AttributeDisplaySTR.Location = new System.Drawing.Point(10, 18);
+            this.AttributeDisplaySTR.Name = "AttributeDisplaySTR";
+            this.AttributeDisplaySTR.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplaySTR.TabIndex = 8;
+            // 
+            // AttributeDisplayINT
+            // 
+            this.AttributeDisplayINT.AttributeName = "INT";
+            this.AttributeDisplayINT.AttributeValue = 0;
+            this.AttributeDisplayINT.Location = new System.Drawing.Point(10, 49);
+            this.AttributeDisplayINT.Name = "AttributeDisplayINT";
+            this.AttributeDisplayINT.Size = new System.Drawing.Size(168, 34);
+            this.AttributeDisplayINT.TabIndex = 9;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(547, 574);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(469, 297);
+            this.richTextBox1.TabIndex = 27;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
@@ -514,6 +524,7 @@
         private UserControls.UserControlSkillProficiencies userControlSkillProficiencies1;
         private System.Windows.Forms.TextBox textBoxPerception;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

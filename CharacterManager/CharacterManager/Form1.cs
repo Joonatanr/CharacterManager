@@ -23,7 +23,7 @@ namespace CharacterManager
             InitializeComponent();
 
             //myFactory = new CharacterFactory();
-            myFactory = new CharacterFactory();
+            myFactory = new CharacterFactory(new TextBoxWriter(richTextBox1));
             myFactory.Initialize();
         }
 

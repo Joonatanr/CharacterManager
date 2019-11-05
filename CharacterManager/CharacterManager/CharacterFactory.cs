@@ -17,6 +17,9 @@ namespace CharacterManager
         private List<PlayerAttribute> AttributesList;
         private Boolean isInitialized = false;
 
+        private List<Items.PlayerArmor> ArmorList;
+        private List<Items.PlayerWeapon> WeaponList;
+
         public List<String> getMainRacesList()
         {
             List<String> res = new List<string>();
@@ -74,6 +77,8 @@ namespace CharacterManager
                 parseRacesFromXml("Resources/PlayerRaces");
                 parseClassesFromXml("Resources/PlayerClasses");
                 parseAttributesFromXml("Resources/PlayerAttributes.xml");
+                parseArmorFromXml("Resources/PlayerItems/PlayerArmor.xml");
+                parseWeaponsFromXml("Resources/PlayerItems/PlayerWeapon.xml");
 
                 foreach (PlayerRace race in Races)
                 {
@@ -272,6 +277,60 @@ namespace CharacterManager
             {
                 logError("Failed to open file : " + ex.Message);
             }
+        }
+
+        private void parseArmorFromXml(String filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<Items.PlayerArmor>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                ArmorList = (List<Items.PlayerArmor>)reader.Deserialize(file);
+                file.Close();
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
+
+            /*
+            logMessage("Parsed Armor\n");
+            foreach(Items.PlayerArmor armor in ArmorList)
+            { 
+                logMessage(armor.ToString() + Environment.NewLine);
+            }
+            */
+        }
+
+        private void parseWeaponsFromXml(String filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<Items.PlayerWeapon>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                WeaponList = (List<Items.PlayerWeapon>)reader.Deserialize(file);
+                file.Close();
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
+
+            
+            logMessage("Parsed Weapons\n");
+            foreach(Items.PlayerWeapon weapon in WeaponList)
+            {
+                //logMessage(armor.ToString() + Environment.NewLine);
+                logMessage(weapon.ItemName + " : ");
+                logMessage(weapon.Damage.DamageValue + " :->");
+                //logMessage(weapon.rollDamage().ToString());
+                String log;
+                int value = weapon.rollDamage(out log);
+                logMessage("Rolled : " + log + " -> " + value.ToString() + "\n");
+            }
+            
         }
 
         private void logError(String err)
