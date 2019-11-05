@@ -276,14 +276,7 @@ namespace CharacterManager
             textBoxSpeed.Text = getSpeedValue().ToString() + " ft";
 
             //4. Update hit point values.
-            if (SelectedClass != null)
-            {
-                textBoxHitDie.Text = "1d" + SelectedClass.HitDie;
-                int constitution = (int)numericUpDownCON.Value + ConBonus;
-                int bonus = CharacterFactory.getAbilityModifierValue(constitution);
-                int hp = bonus + SelectedClass.HitDie;
-                textBoxHitPoints.Text = hp.ToString();
-            }
+            UpdateHitPoints();
 
             //5. Update saving throw values.
             updateSavingThrowFields();
@@ -296,6 +289,19 @@ namespace CharacterManager
 
             //8. Update the passive perception
             UpdatePassivePerception();
+        }
+
+
+        private void UpdateHitPoints()
+        {
+            if (SelectedClass != null)
+            {
+                textBoxHitDie.Text = "1d" + SelectedClass.HitDie;
+                int constitution = (int)numericUpDownCON.Value + ConBonus;
+                int bonus = CharacterFactory.getAbilityModifierValue(constitution);
+                int hp = bonus + SelectedClass.HitDie;
+                textBoxHitPoints.Text = hp.ToString();
+            }
         }
 
 
@@ -352,6 +358,7 @@ namespace CharacterManager
             updateSavingThrowFields();
             updateSkillProficiencyFields();
             UpdatePassivePerception();
+            UpdateHitPoints();
         }
 
 
