@@ -9,7 +9,20 @@ namespace CharacterManager.Items
     [Serializable]
     public class PlayerArmor : PlayerItem
     {
+        public enum ArmorType
+        {
+            Light,
+            Medium,
+            Heavy
+        }
+
         public int ArmorClass;
+        public ArmorType Type;
+        public Boolean IsShield;
+        public int MinStrength;
+        public Boolean IsStealthDisadvantage;
+        public Boolean IsDexterityModifier;
+        public int MaxDexModifier;
 
         public override string ToString()
         {
