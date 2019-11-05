@@ -23,6 +23,7 @@
 			<NormalRange>20</NormalRange>
 			<LongRange>60</LongRange>
 		</Range>
+		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
 		<ItemName>Greatclub</ItemName>
@@ -33,6 +34,7 @@
 			<DamageValue>1d8</DamageValue>
 			<Type>Bludgeoning</Type>
 		</Damage>
+		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
 		<ItemName>Handaxe</ItemName>
@@ -48,6 +50,7 @@
 			<NormalRange>20</NormalRange>
 			<LongRange>60</LongRange>
 		</Range>
+		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
 		<ItemName>Javelin</ItemName>
@@ -62,6 +65,7 @@
 			<NormalRange>30</NormalRange>
 			<LongRange>120</LongRange>
 		</Range>
+		<Type>Simple</Type>
 	</PlayerWeapon>
 	
 </ArrayOfPlayerWeapon>
