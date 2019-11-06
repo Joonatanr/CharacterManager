@@ -98,6 +98,10 @@ namespace CharacterManager
                     }
                 }
 
+                //7. Update Hit Points.
+                userControlHitPoints1.MaxHitPoints = activeCharacter.MaxHitPoints;
+                userControlHitPoints1.CurrentHitPoints = activeCharacter.CurrentHitPoints;
+
                 textBoxAlignment.Text = AlignmentString;
             }
         }

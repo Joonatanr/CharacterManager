@@ -105,6 +105,7 @@ namespace CharacterManager
 
                 //7. Set Player HitPoints.
                 CreatedCharacter.MaxHitPoints = currentMaxHp;
+                CreatedCharacter.CurrentHitPoints = currentMaxHp;
 
                 //8. Set Player attributes.
                 CreatedCharacter.setCharacterAttributesList(myAttributeList);

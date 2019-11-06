@@ -82,6 +82,12 @@
     <Compile Include="UserControls\AlignmentChoice.Designer.cs">
       <DependentUpon>AlignmentChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl5eBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl5eBase.Designer.cs">
+      <DependentUpon>UserControl5eBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlAttributeDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +99,12 @@
     </Compile>
     <Compile Include="UserControls\UserControlGenericAttributeList.Designer.cs">
       <DependentUpon>UserControlGenericAttributeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlGenericValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlHitPoints.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UserControlProficiency.cs">
       <SubType>UserControl</SubType>
@@ -140,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AlignmentChoice.resx">
       <DependentUpon>AlignmentChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl5eBase.resx">
+      <DependentUpon>UserControl5eBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlAttributeDisplay.resx">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
