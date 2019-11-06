@@ -1,5 +1,8 @@
 <PlayerCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SkillProficiencies />
+  <SkillProficiencies>
+    <string>Perception</string>
+    <string>Athletics</string>
+  </SkillProficiencies>
   <WeaponProficiencies>
     <string>battleaxe</string>
     <string>handaxe</string>
@@ -18,19 +21,33 @@
     <string>STR</string>
     <string>CON</string>
   </SavingThrowProficiencies>
+  <CharacterAttributes>
+    <string>Darkvision</string>
+    <string>Dwarven Resilience</string>
+    <string>Stonecunning</string>
+    <string>Dwarven Toughness</string>
+  </CharacterAttributes>
   <Level>1</Level>
   <ProficiencyBonus>2</ProficiencyBonus>
   <ExperiencePoints>0</ExperiencePoints>
+  <MaxHitPoints>13</MaxHitPoints>
+  <CurrentHitPoints>0</CurrentHitPoints>
+  <Size>
+    <height>0</height>
+    <weight>0</weight>
+    <sizeType>Tiny</sizeType>
+  </Size>
+  <Alignment>LawfulGood</Alignment>
   <MainRaceName>Dwarf</MainRaceName>
   <SubRaceName>Hill Dwarf</SubRaceName>
   <ClassName>Fighter</ClassName>
   <BaseAttributes>
     <STR>15</STR>
-    <DEX>8</DEX>
-    <INT>11</INT>
-    <CHA>10</CHA>
-    <CON>16</CON>
-    <WIS>13</WIS>
+    <DEX>11</DEX>
+    <INT>13</INT>
+    <CHA>11</CHA>
+    <CON>14</CON>
+    <WIS>12</WIS>
   </BaseAttributes>
   <CharacterName>Bruenor</CharacterName>
 </PlayerCharacter>

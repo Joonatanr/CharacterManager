@@ -86,6 +86,19 @@ namespace CharacterManager
 
                 //5. Update passive perception.
                 textBoxPerception.Text = activeCharacter.PassivePerception.ToString();
+
+                //6. Update Player alignment.
+                String AlignmentString = activeCharacter.Alignment.ToString();
+                for(int x = 1; x < AlignmentString.Length; x++)
+                {
+                    if (char.IsUpper(AlignmentString[x]))
+                    {
+                        AlignmentString = AlignmentString.Insert(x, " ");
+                        break;
+                    }
+                }
+
+                textBoxAlignment.Text = AlignmentString;
             }
         }
 

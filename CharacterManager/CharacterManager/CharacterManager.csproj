@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="SpecialAttributes\DwarvenToughness.cs" />
     <Compile Include="SpecialAttributes\SpecialAttribute.cs" />
+    <Compile Include="UserControls\AlignmentChoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AlignmentChoice.Designer.cs">
+      <DependentUpon>AlignmentChoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlAttributeDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     <EmbeddedResource Include="Resources\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AlignmentChoice.resx">
+      <DependentUpon>AlignmentChoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlAttributeDisplay.resx">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>

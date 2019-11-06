@@ -28,7 +28,7 @@ namespace CharacterManager
             LawfulNeutral,
             LawfulEvil,
             NeutralGood,
-            NeutralTrue,
+            TrueNeutral,
             NeutralEvil,
             ChaoticGood,
             ChaoticNeutral,
@@ -62,8 +62,6 @@ namespace CharacterManager
         private CharacterBaseAttributes _baseAttributes;
         private PlayerRace MainRace; //This contains the actual object of the race of the character. 
         private PlayerRace SubRace;  ////This contains the actual object of the subrace of the character. 
-        private PlayerSize Size;
-        private PlayerAlignment Alignment;
 
         /* These are the properties that are to be stored in XML. Actual objects will be loaded through the factory. */
         public String MainRaceName { get; set; }
@@ -84,6 +82,9 @@ namespace CharacterManager
         public int ExperiencePoints;
         public int MaxHitPoints;
         public int CurrentHitPoints;
+
+        public PlayerSize Size;
+        public PlayerAlignment Alignment;
 
         public String CharacterName
         {

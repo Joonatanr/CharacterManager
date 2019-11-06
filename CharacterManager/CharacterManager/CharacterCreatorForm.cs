@@ -108,6 +108,9 @@ namespace CharacterManager
 
                 //8. Set Player attributes.
                 CreatedCharacter.setCharacterAttributesList(myAttributeList);
+
+                //9. Set Player alignment.
+                CreatedCharacter.Alignment = alignmentChoice1.getSelectedAlignment();
             }
             else
             {
