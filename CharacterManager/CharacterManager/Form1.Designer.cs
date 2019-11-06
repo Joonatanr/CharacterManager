@@ -158,7 +158,7 @@
             // 
             // textBoxPerception
             // 
-            this.textBoxPerception.Location = new System.Drawing.Point(557, 628);
+            this.textBoxPerception.Location = new System.Drawing.Point(209, 820);
             this.textBoxPerception.Name = "textBoxPerception";
             this.textBoxPerception.ReadOnly = true;
             this.textBoxPerception.Size = new System.Drawing.Size(61, 20);
@@ -168,7 +168,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(354, 630);
+            this.label8.Location = new System.Drawing.Point(6, 822);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(190, 15);
             this.label8.TabIndex = 25;
@@ -177,14 +177,14 @@
             // userControlSkillProficiencies1
             // 
             this.userControlSkillProficiencies1.isSetDataVisible = false;
-            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(357, 98);
+            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(158, 297);
             this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
-            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 529);
+            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(261, 515);
             this.userControlSkillProficiencies1.TabIndex = 25;
             // 
             // textBoxProfBonus
             // 
-            this.textBoxProfBonus.Location = new System.Drawing.Point(311, 107);
+            this.textBoxProfBonus.Location = new System.Drawing.Point(282, 103);
             this.textBoxProfBonus.Name = "textBoxProfBonus";
             this.textBoxProfBonus.ReadOnly = true;
             this.textBoxProfBonus.Size = new System.Drawing.Size(32, 20);
@@ -194,7 +194,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(188, 107);
+            this.label6.Location = new System.Drawing.Point(159, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 17);
             this.label6.TabIndex = 23;
@@ -202,9 +202,9 @@
             // 
             // userControlSavingThrows1
             // 
-            this.userControlSavingThrows1.Location = new System.Drawing.Point(185, 128);
+            this.userControlSavingThrows1.Location = new System.Drawing.Point(157, 119);
             this.userControlSavingThrows1.Name = "userControlSavingThrows1";
-            this.userControlSavingThrows1.Size = new System.Drawing.Size(166, 193);
+            this.userControlSavingThrows1.Size = new System.Drawing.Size(262, 178);
             this.userControlSavingThrows1.TabIndex = 16;
             // 
             // groupBox3
@@ -215,9 +215,9 @@
             this.groupBox3.Controls.Add(this.AttributeDisplayWIS);
             this.groupBox3.Controls.Add(this.AttributeDisplayDEX);
             this.groupBox3.Controls.Add(this.AttributeDisplayCON);
-            this.groupBox3.Location = new System.Drawing.Point(9, 95);
+            this.groupBox3.Location = new System.Drawing.Point(9, 97);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(140, 582);
+            this.groupBox3.Size = new System.Drawing.Size(140, 715);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Base attributes";
@@ -226,36 +226,36 @@
             // 
             this.AttributeDisplayCHA.AttributeName = "CHARISMA";
             this.AttributeDisplayCHA.AttributeValue = 0;
-            this.AttributeDisplayCHA.Location = new System.Drawing.Point(12, 486);
+            this.AttributeDisplayCHA.Location = new System.Drawing.Point(12, 596);
             this.AttributeDisplayCHA.Name = "AttributeDisplayCHA";
-            this.AttributeDisplayCHA.Size = new System.Drawing.Size(109, 90);
+            this.AttributeDisplayCHA.Size = new System.Drawing.Size(109, 116);
             this.AttributeDisplayCHA.TabIndex = 13;
             // 
             // AttributeDisplayWIS
             // 
             this.AttributeDisplayWIS.AttributeName = "WISDOM";
             this.AttributeDisplayWIS.AttributeValue = 0;
-            this.AttributeDisplayWIS.Location = new System.Drawing.Point(12, 392);
+            this.AttributeDisplayWIS.Location = new System.Drawing.Point(12, 480);
             this.AttributeDisplayWIS.Name = "AttributeDisplayWIS";
-            this.AttributeDisplayWIS.Size = new System.Drawing.Size(109, 90);
+            this.AttributeDisplayWIS.Size = new System.Drawing.Size(109, 116);
             this.AttributeDisplayWIS.TabIndex = 12;
             // 
             // AttributeDisplayDEX
             // 
             this.AttributeDisplayDEX.AttributeName = "DEXTERITY";
             this.AttributeDisplayDEX.AttributeValue = 0;
-            this.AttributeDisplayDEX.Location = new System.Drawing.Point(12, 204);
+            this.AttributeDisplayDEX.Location = new System.Drawing.Point(12, 248);
             this.AttributeDisplayDEX.Name = "AttributeDisplayDEX";
-            this.AttributeDisplayDEX.Size = new System.Drawing.Size(109, 90);
+            this.AttributeDisplayDEX.Size = new System.Drawing.Size(109, 116);
             this.AttributeDisplayDEX.TabIndex = 10;
             // 
             // AttributeDisplayCON
             // 
             this.AttributeDisplayCON.AttributeName = "CONSTITUTION";
             this.AttributeDisplayCON.AttributeValue = 0;
-            this.AttributeDisplayCON.Location = new System.Drawing.Point(12, 298);
+            this.AttributeDisplayCON.Location = new System.Drawing.Point(12, 364);
             this.AttributeDisplayCON.Name = "AttributeDisplayCON";
-            this.AttributeDisplayCON.Size = new System.Drawing.Size(109, 90);
+            this.AttributeDisplayCON.Size = new System.Drawing.Size(109, 116);
             this.AttributeDisplayCON.TabIndex = 11;
             // 
             // AttributeDisplaySTR
@@ -264,16 +264,16 @@
             this.AttributeDisplaySTR.AttributeValue = 0;
             this.AttributeDisplaySTR.Location = new System.Drawing.Point(12, 16);
             this.AttributeDisplaySTR.Name = "AttributeDisplaySTR";
-            this.AttributeDisplaySTR.Size = new System.Drawing.Size(109, 90);
+            this.AttributeDisplaySTR.Size = new System.Drawing.Size(109, 116);
             this.AttributeDisplaySTR.TabIndex = 8;
             // 
             // AttributeDisplayINT
             // 
             this.AttributeDisplayINT.AttributeName = "INTELLIGENCE";
             this.AttributeDisplayINT.AttributeValue = 0;
-            this.AttributeDisplayINT.Location = new System.Drawing.Point(12, 110);
+            this.AttributeDisplayINT.Location = new System.Drawing.Point(12, 132);
             this.AttributeDisplayINT.Name = "AttributeDisplayINT";
-            this.AttributeDisplayINT.Size = new System.Drawing.Size(109, 90);
+            this.AttributeDisplayINT.Size = new System.Drawing.Size(109, 116);
             this.AttributeDisplayINT.TabIndex = 9;
             this.AttributeDisplayINT.Load += new System.EventHandler(this.AttributeDisplayINT_Load);
             // 

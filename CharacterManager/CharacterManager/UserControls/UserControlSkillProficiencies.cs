@@ -215,5 +215,10 @@ namespace CharacterManager.UserControls
 
             return res;
         }
+
+        private void labelNumberOfProficienciesToChoose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

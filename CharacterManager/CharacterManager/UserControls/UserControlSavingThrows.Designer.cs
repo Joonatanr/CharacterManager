@@ -40,6 +40,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.userControlProficiencyCHA);
             this.groupBox2.Controls.Add(this.userControlProficiencyDEX);
             this.groupBox2.Controls.Add(this.userControlProficiencyWIS);
@@ -48,63 +51,75 @@
             this.groupBox2.Controls.Add(this.userControlProficiencySTR);
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(157, 185);
+            this.groupBox2.Size = new System.Drawing.Size(157, 173);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Saving throws";
             // 
             // userControlProficiencyCHA
             // 
-            this.userControlProficiencyCHA.Location = new System.Drawing.Point(3, 152);
+            this.userControlProficiencyCHA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlProficiencyCHA.Location = new System.Drawing.Point(3, 142);
             this.userControlProficiencyCHA.Name = "userControlProficiencyCHA";
             this.userControlProficiencyCHA.ProficiencyBaseSkill = null;
             this.userControlProficiencyCHA.ProficiencyName = "CHA";
-            this.userControlProficiencyCHA.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyCHA.Size = new System.Drawing.Size(151, 20);
             this.userControlProficiencyCHA.TabIndex = 3;
             // 
             // userControlProficiencyDEX
             // 
-            this.userControlProficiencyDEX.Location = new System.Drawing.Point(3, 71);
+            this.userControlProficiencyDEX.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlProficiencyDEX.Location = new System.Drawing.Point(3, 67);
             this.userControlProficiencyDEX.Name = "userControlProficiencyDEX";
             this.userControlProficiencyDEX.ProficiencyBaseSkill = null;
             this.userControlProficiencyDEX.ProficiencyName = "DEX";
-            this.userControlProficiencyDEX.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyDEX.Size = new System.Drawing.Size(151, 20);
             this.userControlProficiencyDEX.TabIndex = 2;
             // 
             // userControlProficiencyWIS
             // 
-            this.userControlProficiencyWIS.Location = new System.Drawing.Point(3, 125);
+            this.userControlProficiencyWIS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlProficiencyWIS.Location = new System.Drawing.Point(3, 117);
             this.userControlProficiencyWIS.Name = "userControlProficiencyWIS";
             this.userControlProficiencyWIS.ProficiencyBaseSkill = null;
             this.userControlProficiencyWIS.ProficiencyName = "WIS";
-            this.userControlProficiencyWIS.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyWIS.Size = new System.Drawing.Size(151, 20);
             this.userControlProficiencyWIS.TabIndex = 4;
             // 
             // userControlProficiencyINT
             // 
-            this.userControlProficiencyINT.Location = new System.Drawing.Point(3, 44);
+            this.userControlProficiencyINT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlProficiencyINT.Location = new System.Drawing.Point(3, 42);
             this.userControlProficiencyINT.Name = "userControlProficiencyINT";
             this.userControlProficiencyINT.ProficiencyBaseSkill = null;
             this.userControlProficiencyINT.ProficiencyName = "INT";
-            this.userControlProficiencyINT.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyINT.Size = new System.Drawing.Size(151, 20);
             this.userControlProficiencyINT.TabIndex = 1;
             // 
             // userControlProficiencyCON
             // 
-            this.userControlProficiencyCON.Location = new System.Drawing.Point(3, 98);
+            this.userControlProficiencyCON.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlProficiencyCON.Location = new System.Drawing.Point(3, 92);
             this.userControlProficiencyCON.Name = "userControlProficiencyCON";
             this.userControlProficiencyCON.ProficiencyBaseSkill = null;
             this.userControlProficiencyCON.ProficiencyName = "CON";
-            this.userControlProficiencyCON.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencyCON.Size = new System.Drawing.Size(151, 20);
             this.userControlProficiencyCON.TabIndex = 5;
             // 
             // userControlProficiencySTR
             // 
+            this.userControlProficiencySTR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlProficiencySTR.Location = new System.Drawing.Point(3, 17);
             this.userControlProficiencySTR.Name = "userControlProficiencySTR";
             this.userControlProficiencySTR.ProficiencyBaseSkill = null;
             this.userControlProficiencySTR.ProficiencyName = "STR";
-            this.userControlProficiencySTR.Size = new System.Drawing.Size(151, 26);
+            this.userControlProficiencySTR.Size = new System.Drawing.Size(151, 20);
             this.userControlProficiencySTR.TabIndex = 0;
             // 
             // UserControlSavingThrows
@@ -113,7 +128,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox2);
             this.Name = "UserControlSavingThrows";
-            this.Size = new System.Drawing.Size(166, 193);
+            this.Size = new System.Drawing.Size(166, 179);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
