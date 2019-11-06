@@ -16,6 +16,8 @@ namespace CharacterManager.UserControls
         private List<PlayerAttribute> listOfAttributes = new List<PlayerAttribute>();
         private static int buttonNumber = 0;
 
+        public Boolean IsBorder { get; set; }
+
         protected class InfoButton : Button
         {
             private PlayerAttribute attribute;
@@ -74,7 +76,7 @@ namespace CharacterManager.UserControls
                 y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib);
                 buttonNumber++;
-                myBtn.Location = new Point(this.panel1.Width - 40, y + 3);
+                myBtn.Location = new Point(this.panel1.Width - 43, y + 3);
                 panel1.Controls.Add(myBtn);
             }
 
@@ -88,44 +90,13 @@ namespace CharacterManager.UserControls
             //Lets use the panel for drawing.
             Graphics gfx = panel1.CreateGraphics();
 
-            //Lets try doing this in quite a simplistic way. Draw circles at the corners first.
-            int diameter = 10;
-            Brush b = new SolidBrush(Color.White);
-
-            Rectangle rect = new Rectangle(1, 1, diameter, diameter);
-            gfx.FillEllipse(b, rect);
-
-            rect = new Rectangle(1, panel1.Size.Height - (2 + diameter), diameter, diameter);
-            gfx.FillEllipse(b, rect);
-
-            rect = new Rectangle(panel1.Size.Width - (2 + diameter), 1, diameter, diameter);
-            gfx.FillEllipse(b, rect);
-
-            rect = new Rectangle(panel1.Size.Width - (2 + diameter), panel1.Size.Height - (2 + diameter), diameter, diameter);
-            gfx.FillEllipse(b, rect);
-
-            //Draw white rectangles to fill..
-            rect = new Rectangle(1 + (diameter / 2), 1, panel1.Size.Width - (diameter + 2), diameter);
-            gfx.FillRectangle(b, rect);
-
-            rect = new Rectangle(1, 1 + (diameter / 2), diameter, panel1.Size.Height - (diameter + 2));
-            gfx.FillRectangle(b, rect);
-
-            rect = new Rectangle(1 + (diameter / 2), panel1.Size.Height - (diameter + 2), panel1.Size.Width - (diameter + 2), diameter);
-            gfx.FillRectangle(b, rect);
-
-            rect = new Rectangle(panel1.Size.Width - (1 + diameter), 1 + (diameter / 2), diameter, panel1.Size.Height - (diameter + 2));
-            gfx.FillRectangle(b, rect);
-
-            rect = new Rectangle(1 + (diameter / 2), 1 + (diameter / 2), panel1.Size.Width - (3 + diameter), panel1.Size.Height - (3 + diameter));
-            gfx.FillRectangle(b, rect);
-
+            drawBackGround(gfx);
             //So lets draw the lines next.
             
             Pen myPen = new Pen(Color.LightGray);
             for (int x = lineInterval + 2; x < panel1.Size.Height; x+=lineInterval)
             {
-                gfx.DrawLine(myPen, new Point(1, x), new Point(panel1.Width - 1, x));
+                gfx.DrawLine(myPen, new Point(2, x), new Point(panel1.Width - 2, x));
             }
 
             //Lets draw a descriptive text.
@@ -141,6 +112,74 @@ namespace CharacterManager.UserControls
                 }
             }
             
+        }
+
+        private void drawBackGround(Graphics gfx)
+        {
+            //Lets try doing this in quite a simplistic way. Draw circles at the corners first.
+            int diameter = 10;
+            Brush b = new SolidBrush(Color.White);
+
+            Rectangle rect = new Rectangle(1, 1, diameter, diameter);
+            gfx.FillEllipse(b, rect);
+            if (IsBorder)
+            {
+                gfx.DrawEllipse(new Pen(Color.Black), rect);
+            }
+
+            rect = new Rectangle(1, panel1.Size.Height - (2 + diameter), diameter, diameter);
+            gfx.FillEllipse(b, rect);
+            if (IsBorder)
+            {
+                gfx.DrawEllipse(new Pen(Color.Black), rect);
+            }
+
+            rect = new Rectangle(panel1.Size.Width - (2 + diameter), 1, diameter, diameter);
+            gfx.FillEllipse(b, rect);
+            if (IsBorder)
+            {
+                gfx.DrawEllipse(new Pen(Color.Black), rect);
+            }
+
+            rect = new Rectangle(panel1.Size.Width - (2 + diameter), panel1.Size.Height - (2 + diameter), diameter, diameter);
+            gfx.FillEllipse(b, rect);
+            if (IsBorder)
+            {
+                gfx.DrawEllipse(new Pen(Color.Black), rect);
+            }
+
+            //Draw white rectangles to fill..
+            rect = new Rectangle(1 + (diameter / 2), 1, panel1.Size.Width - (diameter + 2), diameter);
+            gfx.FillRectangle(b, rect);
+            if (IsBorder)
+            {
+                gfx.DrawLine(new Pen(Color.Black), new Point(rect.Left, rect.Top), new Point(rect.Right, rect.Top));
+            }
+
+            rect = new Rectangle(1, 1 + (diameter / 2), diameter, panel1.Size.Height - (diameter + 2));
+            gfx.FillRectangle(b, rect);
+            if (IsBorder)
+            {
+                gfx.DrawLine(new Pen(Color.Black), new Point(rect.Left, rect.Top), new Point(rect.Left, rect.Bottom));
+            }
+
+            rect = new Rectangle(1 + (diameter / 2), panel1.Size.Height - (diameter + 2), panel1.Size.Width - (diameter + 2), diameter);
+            gfx.FillRectangle(b, rect);
+            if (IsBorder)
+            {
+                gfx.DrawLine(new Pen(Color.Black), new Point(rect.Left, rect.Bottom), new Point(rect.Right, rect.Bottom));
+            }
+
+            rect = new Rectangle(panel1.Size.Width - (1 + diameter), 1 + (diameter / 2), diameter, panel1.Size.Height - (diameter + 2));
+            gfx.FillRectangle(b, rect);
+            if (IsBorder)
+            {
+                gfx.DrawLine(new Pen(Color.Black), new Point(rect.Right, rect.Bottom), new Point(rect.Right, rect.Top));
+            }
+
+            //Draw internal rectangle.
+            rect = new Rectangle(1 + (diameter / 2), 1 + (diameter / 2), panel1.Size.Width - (3 + diameter), panel1.Size.Height - (3 + diameter));
+            gfx.FillRectangle(b, rect);
         }
 
         private void drawTextOnLine(Graphics gfx, String text, int lineNum)

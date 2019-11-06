@@ -66,12 +66,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDownSTR = new System.Windows.Forms.NumericUpDown();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.alignmentChoice1 = new CharacterManager.UserControls.AlignmentChoice();
             this.textBoxPassivePerception = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
-            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
-            this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAttributeList();
             this.textBoxHitPoints = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxHitDie = new System.Windows.Forms.TextBox();
@@ -83,9 +79,13 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.userControlToolProficiencyChoice1 = new CharacterManager.UserControls.UserControlToolProficiencyChoice();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
+            this.userControlToolProficiencyChoice1 = new CharacterManager.UserControls.UserControlToolProficiencyChoice();
+            this.alignmentChoice1 = new CharacterManager.UserControls.AlignmentChoice();
+            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
+            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
+            this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAttributeList();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -502,13 +502,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Player";
             // 
-            // alignmentChoice1
-            // 
-            this.alignmentChoice1.Location = new System.Drawing.Point(372, 9);
-            this.alignmentChoice1.Name = "alignmentChoice1";
-            this.alignmentChoice1.Size = new System.Drawing.Size(171, 172);
-            this.alignmentChoice1.TabIndex = 25;
-            // 
             // textBoxPassivePerception
             // 
             this.textBoxPassivePerception.Location = new System.Drawing.Point(300, 110);
@@ -525,28 +518,6 @@
             this.label15.Size = new System.Drawing.Size(98, 13);
             this.label15.TabIndex = 23;
             this.label15.Text = "Passive Perception";
-            // 
-            // userControlSkillProficiencies1
-            // 
-            this.userControlSkillProficiencies1.isSetDataVisible = true;
-            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(9, 200);
-            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
-            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 549);
-            this.userControlSkillProficiencies1.TabIndex = 22;
-            // 
-            // userControlSavingThrows1
-            // 
-            this.userControlSavingThrows1.Location = new System.Drawing.Point(10, 12);
-            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
-            this.userControlSavingThrows1.Size = new System.Drawing.Size(166, 193);
-            this.userControlSavingThrows1.TabIndex = 21;
-            // 
-            // userControlGenericAttributeList1
-            // 
-            this.userControlGenericAttributeList1.Location = new System.Drawing.Point(288, 385);
-            this.userControlGenericAttributeList1.Name = "userControlGenericAttributeList1";
-            this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 363);
-            this.userControlGenericAttributeList1.TabIndex = 20;
             // 
             // textBoxHitPoints
             // 
@@ -655,13 +626,6 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Class";
             // 
-            // userControlToolProficiencyChoice1
-            // 
-            this.userControlToolProficiencyChoice1.Location = new System.Drawing.Point(9, 46);
-            this.userControlToolProficiencyChoice1.Name = "userControlToolProficiencyChoice1";
-            this.userControlToolProficiencyChoice1.Size = new System.Drawing.Size(241, 94);
-            this.userControlToolProficiencyChoice1.TabIndex = 2;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -679,6 +643,43 @@
             this.comboBoxPlayerClasses.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPlayerClasses.TabIndex = 0;
             this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
+            // 
+            // userControlToolProficiencyChoice1
+            // 
+            this.userControlToolProficiencyChoice1.Location = new System.Drawing.Point(9, 46);
+            this.userControlToolProficiencyChoice1.Name = "userControlToolProficiencyChoice1";
+            this.userControlToolProficiencyChoice1.Size = new System.Drawing.Size(241, 94);
+            this.userControlToolProficiencyChoice1.TabIndex = 2;
+            // 
+            // alignmentChoice1
+            // 
+            this.alignmentChoice1.Location = new System.Drawing.Point(372, 9);
+            this.alignmentChoice1.Name = "alignmentChoice1";
+            this.alignmentChoice1.Size = new System.Drawing.Size(171, 172);
+            this.alignmentChoice1.TabIndex = 25;
+            // 
+            // userControlSkillProficiencies1
+            // 
+            this.userControlSkillProficiencies1.isSetDataVisible = true;
+            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(9, 200);
+            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
+            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 549);
+            this.userControlSkillProficiencies1.TabIndex = 22;
+            // 
+            // userControlSavingThrows1
+            // 
+            this.userControlSavingThrows1.Location = new System.Drawing.Point(10, 12);
+            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
+            this.userControlSavingThrows1.Size = new System.Drawing.Size(166, 193);
+            this.userControlSavingThrows1.TabIndex = 21;
+            // 
+            // userControlGenericAttributeList1
+            // 
+            this.userControlGenericAttributeList1.IsBorder = true;
+            this.userControlGenericAttributeList1.Location = new System.Drawing.Point(288, 385);
+            this.userControlGenericAttributeList1.Name = "userControlGenericAttributeList1";
+            this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 363);
+            this.userControlGenericAttributeList1.TabIndex = 20;
             // 
             // CharacterCreatorForm
             // 
