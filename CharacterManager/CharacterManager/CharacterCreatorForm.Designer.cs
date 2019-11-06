@@ -66,6 +66,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.numericUpDownSTR = new System.Windows.Forms.NumericUpDown();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBoxPassivePerception = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.textBoxHitPoints = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxHitDie = new System.Windows.Forms.TextBox();
@@ -79,11 +81,10 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
+            this.userControlToolProficiencyChoice1 = new CharacterManager.UserControls.UserControlToolProficiencyChoice();
             this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
             this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAttributeList();
-            this.textBoxPassivePerception = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -499,6 +500,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Player";
             // 
+            // textBoxPassivePerception
+            // 
+            this.textBoxPassivePerception.Location = new System.Drawing.Point(300, 110);
+            this.textBoxPassivePerception.Name = "textBoxPassivePerception";
+            this.textBoxPassivePerception.ReadOnly = true;
+            this.textBoxPassivePerception.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPassivePerception.TabIndex = 24;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(196, 113);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(98, 13);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Passive Perception";
+            // 
             // textBoxHitPoints
             // 
             this.textBoxHitPoints.Location = new System.Drawing.Point(300, 59);
@@ -589,18 +607,19 @@
             this.groupBox5.Controls.Add(this.groupBox1);
             this.groupBox5.Location = new System.Drawing.Point(13, 11);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(267, 646);
+            this.groupBox5.Size = new System.Drawing.Size(267, 725);
             this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Input";
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.userControlToolProficiencyChoice1);
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.comboBoxPlayerClasses);
             this.groupBox6.Location = new System.Drawing.Point(5, 363);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(256, 277);
+            this.groupBox6.Size = new System.Drawing.Size(256, 356);
             this.groupBox6.TabIndex = 11;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Class";
@@ -623,6 +642,13 @@
             this.comboBoxPlayerClasses.TabIndex = 0;
             this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
             // 
+            // userControlToolProficiencyChoice1
+            // 
+            this.userControlToolProficiencyChoice1.Location = new System.Drawing.Point(9, 46);
+            this.userControlToolProficiencyChoice1.Name = "userControlToolProficiencyChoice1";
+            this.userControlToolProficiencyChoice1.Size = new System.Drawing.Size(241, 94);
+            this.userControlToolProficiencyChoice1.TabIndex = 2;
+            // 
             // userControlSkillProficiencies1
             // 
             this.userControlSkillProficiencies1.isSetDataVisible = true;
@@ -644,23 +670,6 @@
             this.userControlGenericAttributeList1.Name = "userControlGenericAttributeList1";
             this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 363);
             this.userControlGenericAttributeList1.TabIndex = 20;
-            // 
-            // textBoxPassivePerception
-            // 
-            this.textBoxPassivePerception.Location = new System.Drawing.Point(300, 110);
-            this.textBoxPassivePerception.Name = "textBoxPassivePerception";
-            this.textBoxPassivePerception.ReadOnly = true;
-            this.textBoxPassivePerception.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPassivePerception.TabIndex = 24;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(196, 113);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 13);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Passive Perception";
             // 
             // CharacterCreatorForm
             // 
@@ -751,5 +760,6 @@
         private UserControls.UserControlSkillProficiencies userControlSkillProficiencies1;
         private System.Windows.Forms.TextBox textBoxPassivePerception;
         private System.Windows.Forms.Label label15;
+        private UserControls.UserControlToolProficiencyChoice userControlToolProficiencyChoice1;
     }
 }

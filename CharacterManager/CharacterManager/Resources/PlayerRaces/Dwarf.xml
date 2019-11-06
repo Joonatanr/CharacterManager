@@ -21,7 +21,13 @@
 	<PlayerAttributes>
 		<string>Darkvision</string>
 		<string>Dwarven Resilience</string>
+		<string>Stonecunning</string>
 	</PlayerAttributes>
+	<ToolProficiencies>
+		<string>Smith's Tools</string>
+		<string>Brewer's Supplies</string>
+		<string>Mason's Tools</string>
+	</ToolProficiencies>
     <SubRaces>
        <PlayerRace>
        <RaceName>Hill Dwarf</RaceName>

@@ -325,6 +325,31 @@ namespace CharacterManager
             }
         }
 
+        private void UpdateToolProficiencyChoices()
+        {
+            List<String> myChoices = new List<String>();
+
+            if (SelectedMainRace == null)
+            {
+                return;
+            }
+
+            foreach (string str in SelectedMainRace.ToolProficiencies)
+            {
+                myChoices.Add(str);
+            }
+
+            //Not sure if this part is actually needed...
+            if (SelectedSubRace != null)
+            {
+                foreach(string str in SelectedSubRace.ToolProficiencies)
+                {
+                    myChoices.Add(str);
+                }
+            }
+
+            userControlToolProficiencyChoice1.setChoices(myChoices);
+        }
 
         private void UpdateHitPoints(bool updateValue)
         {
@@ -570,6 +595,7 @@ namespace CharacterManager
                 }
 
                 SelectedMainRace = myFactory.getRaceByName(comboBoxMainRace.SelectedItem.ToString());
+                UpdateToolProficiencyChoices();
                 updateAllDisplayedData();
             }
         }
@@ -583,6 +609,7 @@ namespace CharacterManager
                 if (mainRace != null && selectedItem != null)
                 {
                     SelectedSubRace = myFactory.getSubRaceByName(mainRace, selectedItem);
+                    UpdateToolProficiencyChoices();
                     updateAllDisplayedData();
                 }
             }

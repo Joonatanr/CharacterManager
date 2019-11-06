@@ -106,6 +106,12 @@
     <Compile Include="UserControls\UserControlSkillProficiencies.Designer.cs">
       <DependentUpon>UserControlSkillProficiencies.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlToolProficiencyChoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlToolProficiencyChoice.Designer.cs">
+      <DependentUpon>UserControlToolProficiencyChoice.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CharacterCreatorForm.resx">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlSkillProficiencies.resx">
       <DependentUpon>UserControlSkillProficiencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlToolProficiencyChoice.resx">
+      <DependentUpon>UserControlToolProficiencyChoice.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
