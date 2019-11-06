@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.SpecialAttributes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace CharacterManager
         private List<PlayerRace> Races;
         private List<PlayerClass> Classes;
         private List<PlayerAttribute> AttributesList;
+        private List<CharacterManager.SpecialAttributes.SpecialAttribute> SpecialAttributeList = new List<CharacterManager.SpecialAttributes.SpecialAttribute>();
         private Boolean isInitialized = false;
 
         private List<Items.PlayerArmor> ArmorList;
@@ -74,6 +76,8 @@ namespace CharacterManager
         {
             if (!this.isInitialized)
             {
+                InitializeSpecialAttributes();
+
                 parseRacesFromXml("Resources/PlayerRaces");
                 parseClassesFromXml("Resources/PlayerClasses");
                 parseAttributesFromXml("Resources/PlayerAttributes.xml");
@@ -215,6 +219,22 @@ namespace CharacterManager
 
             raw.setMainAndSubrace(mainRace, SubRace);
 
+            //Lets resolve the character attribute list.
+            List<PlayerAttribute> resultList = new List<PlayerAttribute>();
+            foreach (String attribName in raw.CharacterAttributes)
+            {
+                PlayerAttribute member = AttributesList.Find(attrib => attrib.AttributeName == attribName);
+                if (member != null)
+                {
+                    resultList.Add(member);
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            raw.setCharacterAttributesList(resultList);
+
             return true;
         }
 
@@ -277,6 +297,20 @@ namespace CharacterManager
             {
                 logError("Failed to open file : " + ex.Message);
             }
+
+
+            //Lets resolve the special attributes.
+            for (int i = 0; i < AttributesList.Count; i++)
+            {
+                PlayerAttribute attrib = AttributesList[i];
+                SpecialAttribute specialAttribute = SpecialAttributeList.Find(spec => spec.AttributeName == attrib.AttributeName);
+                if (specialAttribute != null)
+                {
+                    //We found a matching special attribute.
+                    specialAttribute.CopyValuesFromBaseClass(attrib);
+                    AttributesList[i]= specialAttribute; //We basically replace the original prototype with a SpecialAttribute object.
+                }
+            }
         }
 
         private void parseArmorFromXml(String filepath)
@@ -331,6 +365,13 @@ namespace CharacterManager
                 logMessage("Rolled : " + log + " -> " + value.ToString() + "\n");
             }
             
+        }
+
+
+        private void InitializeSpecialAttributes()
+        {
+            //All C# described attributes need to be added here.
+            SpecialAttributeList.Add(new DwarvenToughness());
         }
 
         private void logError(String err)

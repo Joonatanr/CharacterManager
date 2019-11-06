@@ -28,6 +28,7 @@ namespace CharacterManager
         private PlayerRace SelectedSubRace;
         private PlayerClass SelectedClass;
         private int currentPassivePerception = 0;
+        private int currentMaxHp = 0;
 
         private List<PlayerAttribute> myAttributeList = new List<PlayerAttribute>();
 
@@ -58,9 +59,10 @@ namespace CharacterManager
             this.userControlSkillProficiencies1.checkedChangedListener = proficienciesChanged;
         }
 
-        private bool CreateCharacter()
+        private bool CreateCharacter(out String msg)
         {
             bool res = true;
+            msg = "";
 
             if (textBoxCharName.Text != String.Empty && SelectedClass != null && SelectedMainRace != null)
             {
@@ -83,13 +85,11 @@ namespace CharacterManager
                 //3. Set race and subrace.
                 if (SelectedMainRace == null)
                 {
-                    MessageBox.Show("Error : No race is selected.");
-                    res = false;
+                    msg = "Error : No race is selected.";
+                    return false;
                 }
                 else
                 {
-                    //CreatedCharacter.MainRaceName = SelectedMainRace.RaceName;
-                    //CreatedCharacter.SubRaceName = SelectedSubRace.RaceName;
                     CreatedCharacter.setMainAndSubrace(SelectedMainRace, SelectedSubRace);
                 }
 
@@ -102,6 +102,16 @@ namespace CharacterManager
 
                 //6. Set skill proficiencies
                 CreatedCharacter.SkillProficiencies = userControlSkillProficiencies1.getAllSkillProficiencies();
+
+                //7. Set Player HitPoints.
+                CreatedCharacter.MaxHitPoints = currentMaxHp;
+
+                //8. Set Player attributes.
+                CreatedCharacter.setCharacterAttributesList(myAttributeList);
+            }
+            else
+            {
+                res = false;
             }
 
             return res;
@@ -110,13 +120,15 @@ namespace CharacterManager
 
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            if (CreateCharacter())
+            String msg;
+            if (CreateCharacter(out msg))
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
+                MessageBox.Show(msg);
                 handleErrorData();
             }   
         }
@@ -276,7 +288,7 @@ namespace CharacterManager
             textBoxSpeed.Text = getSpeedValue().ToString() + " ft";
 
             //4. Update hit point values.
-            UpdateHitPoints();
+            UpdateHitPoints(true);
 
             //5. Update saving throw values.
             updateSavingThrowFields();
@@ -288,26 +300,54 @@ namespace CharacterManager
             updateGenericAbilitiesField();
 
             //8. Update the passive perception
-            UpdatePassivePerception();
-        }
+            UpdatePassivePerception(true);
+
+            //TODO : Update other issues.
 
 
-        private void UpdateHitPoints()
-        {
-            if (SelectedClass != null)
+            String msg;
+            //Final step, we resolve the special attributes. For this we need to try and create a test character.
+            if (CreateCharacter(out msg) == true && CreatedCharacter != null)
             {
-                textBoxHitDie.Text = "1d" + SelectedClass.HitDie;
-                int constitution = (int)numericUpDownCON.Value + ConBonus;
-                int bonus = CharacterFactory.getAbilityModifierValue(constitution);
-                int hp = bonus + SelectedClass.HitDie;
-                textBoxHitPoints.Text = hp.ToString();
+                foreach (PlayerAttribute attrib in CreatedCharacter.CharacterAttributeObjectList)
+                {
+                    if (attrib is SpecialAttributes.SpecialAttribute)
+                    {
+                        SpecialAttributes.SpecialAttribute spec = (SpecialAttributes.SpecialAttribute)attrib;
+                        spec.updateCharacterDuringCreation(CreatedCharacter);
+                    }    
+                }
+
+                //So now we should have a proper character. But we might have changed some displayed data.
+                /* TODO : A bit of a chicken and egg problem. Basically we should update all field that might be affected by the special abilities.*/
+                currentMaxHp = CreatedCharacter.MaxHitPoints;
+                UpdateHitPoints(false);
             }
         }
 
 
-        private void UpdatePassivePerception()
+        private void UpdateHitPoints(bool updateValue)
         {
-            currentPassivePerception = 10 + userControlSkillProficiencies1.getTotalSkillBonus("Perception");
+            if (updateValue)
+            {
+                if (SelectedClass != null)
+                {
+                    textBoxHitDie.Text = "1d" + SelectedClass.HitDie;
+                    int constitution = (int)numericUpDownCON.Value + ConBonus;
+                    int bonus = CharacterFactory.getAbilityModifierValue(constitution);
+                    currentMaxHp = bonus + SelectedClass.HitDie;
+                }
+            }
+            textBoxHitPoints.Text = currentMaxHp.ToString();
+        }
+
+
+        private void UpdatePassivePerception(bool updateValue)
+        {
+            if (updateValue)
+            {
+                currentPassivePerception = 10 + userControlSkillProficiencies1.getTotalSkillBonus("Perception");
+            }
             textBoxPassivePerception.Text = currentPassivePerception.ToString();
         }
 
@@ -357,8 +397,8 @@ namespace CharacterManager
             //These also need to be updated here.. 
             updateSavingThrowFields();
             updateSkillProficiencyFields();
-            UpdatePassivePerception();
-            UpdateHitPoints();
+            UpdatePassivePerception(true);
+            UpdateHitPoints(true);
         }
 
 
@@ -420,8 +460,6 @@ namespace CharacterManager
             userControlSavingThrows1.setValue(getCurrentAttributeBonus("WIS"), isCharacterSaveProfIn("WIS"), 2, "WIS");
             userControlSavingThrows1.setValue(getCurrentAttributeBonus("CHA"), isCharacterSaveProfIn("CHA"), 2, "CHA");
         }
-
-
 
 
         private bool isCharacterSaveProfIn(String attribute)
@@ -574,7 +612,7 @@ namespace CharacterManager
         //Called when a proficiency value is manually changed.
         private void proficienciesChanged()
         {
-            UpdatePassivePerception();
+            UpdatePassivePerception(true);
         }
 
         private void checkBox5_CheckedChanged(object sender, EventArgs e)

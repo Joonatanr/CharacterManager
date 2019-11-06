@@ -77,10 +77,13 @@ namespace CharacterManager
         public List<String> WeaponProficiencies = new List<String>();
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> SavingThrowProficiencies = new List<String>();
+        public List<String> CharacterAttributes = new List<String>();
 
         public int Level;
         public int ProficiencyBonus;
         public int ExperiencePoints;
+        public int MaxHitPoints;
+        public int CurrentHitPoints;
 
         public String CharacterName
         {
@@ -94,6 +97,9 @@ namespace CharacterManager
                 _name = value;
             }
         }
+
+        [XmlIgnore]
+        public List<PlayerAttribute> CharacterAttributeObjectList = new List<PlayerAttribute>();
 
         [XmlIgnore]
         public int StrengthAttribute
@@ -234,6 +240,17 @@ namespace CharacterManager
             else
             {
                 this.SubRaceName = null;
+            }
+        }
+
+
+        public void setCharacterAttributesList(List<PlayerAttribute> attribList)
+        {
+            CharacterAttributeObjectList = attribList;
+            CharacterAttributes = new List<String>();
+            foreach (PlayerAttribute obj in attribList)
+            {
+                CharacterAttributes.Add(obj.AttributeName);
             }
         }
 

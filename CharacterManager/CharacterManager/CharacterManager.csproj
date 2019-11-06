@@ -74,6 +74,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SpecialAttributes\DwarvenToughness.cs" />
+    <Compile Include="SpecialAttributes\SpecialAttribute.cs" />
     <Compile Include="UserControls\UserControlAttributeDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
