@@ -158,6 +158,11 @@ namespace CharacterManager
                 updateCharacterAttributes();
             }
         }
+
+        private void AttributeDisplayINT_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public static class RichTextBoxExtensions
