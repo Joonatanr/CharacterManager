@@ -24,8 +24,8 @@ namespace CharacterManager
             //myFactory = new CharacterFactory();
             //myFactory = new CharacterFactory(new TextBoxWriter(richTextBox1));
             //myFactory.Initialize();
-            CharacterFactory.Initialize();
             CharacterFactory.setErrorHandler(new TextBoxWriter(richTextBox1));
+            CharacterFactory.Initialize();
         }
 
 

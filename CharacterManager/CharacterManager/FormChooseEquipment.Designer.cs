@@ -32,6 +32,7 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxClass = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // buttonOk
@@ -42,6 +43,7 @@
             this.buttonOk.TabIndex = 0;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // buttonCancel
             // 
@@ -51,6 +53,7 @@
             this.buttonCancel.TabIndex = 1;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // label1
             // 
@@ -69,11 +72,21 @@
             this.textBoxClass.Size = new System.Drawing.Size(100, 20);
             this.textBoxClass.TabIndex = 3;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(16, 45);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(470, 270);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Avilable Equipment";
+            // 
             // FormChooseEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 356);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxClass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
@@ -91,5 +104,6 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxClass;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

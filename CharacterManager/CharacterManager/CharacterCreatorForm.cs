@@ -154,9 +154,12 @@ namespace CharacterManager
         {
             List<String> res = new List<String>();
 
-            foreach (String aProf in SelectedMainRace.ArmorProficiencies)
+            if (SelectedMainRace != null)
             {
-                res.Add(aProf);
+                foreach (String aProf in SelectedMainRace.ArmorProficiencies)
+                {
+                    res.Add(aProf);
+                }
             }
 
             if (SelectedSubRace != null)
@@ -185,9 +188,12 @@ namespace CharacterManager
         {
             List<String> res = new List<String>();
 
-            foreach (String wProf in SelectedMainRace.WeaponProficiencies)
-            {
-                res.Add(wProf);
+            if (SelectedMainRace != null) 
+            { 
+                foreach (String wProf in SelectedMainRace.WeaponProficiencies)
+                {
+                    res.Add(wProf);
+                }
             }
 
             if (SelectedSubRace != null)
@@ -270,9 +276,12 @@ namespace CharacterManager
 
             List<String> wProfList = getAllWeaponProficiencies();
 
-            foreach (String wProf in wProfList)
+            if (wProfList != null)
             {
-                richTextBoxProficiencyTest.AppendText(wProf + "\n");
+                foreach (String wProf in wProfList)
+                {
+                    richTextBoxProficiencyTest.AppendText(wProf + "\n");
+                }
             }
 
 
@@ -509,10 +518,12 @@ namespace CharacterManager
             userControlSkillProficiencies1.resetControls();
 
             List<String> racialProficiencies = new List<string>();
-
-            foreach (String prof in SelectedMainRace.SkillProficiencies)
+            if (SelectedMainRace != null)
             {
-                racialProficiencies.Add(prof);
+                foreach (String prof in SelectedMainRace.SkillProficiencies)
+                {
+                    racialProficiencies.Add(prof);
+                }
             }
 
             if (SelectedSubRace != null)
@@ -647,6 +658,23 @@ namespace CharacterManager
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonChooseEquipment_Click(object sender, EventArgs e)
+        {
+            if (SelectedClass == null)
+            {
+                MessageBox.Show("No class selected");
+                return;
+            }
+            
+            FormChooseEquipment myForm = new FormChooseEquipment();
+            myForm.SelectedClass = SelectedClass;
+            
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                //TODO : Update values.
+            }
         }
     }
 }

@@ -304,6 +304,52 @@ namespace CharacterManager
                     logError("Failed to open file : " + ex.Message);
                 }
             }
+
+            PlayerClass barbClass = Classes.Find(r => r.PlayerClassName == "Barbarian");
+            logMessage("Barbarian has " + barbClass.AvailableEquipment.Count.ToString() + " equipment choices\n");
+
+            foreach(EquipmentChoiceList baseList in barbClass.AvailableEquipment)
+            {
+                if(baseList.optionA.Count > 0)
+                {
+                    logMessage("Option A : ");
+                    foreach(EquipmentChoice choice in baseList.optionA)
+                    {
+                        logMessage(choice.ToString() + ",");
+                    }
+                    logMessage("\n");
+                }
+
+                if (baseList.optionB.Count > 0)
+                {
+                    logMessage("Option B : ");
+                    foreach (EquipmentChoice choice in baseList.optionB)
+                    {
+                        logMessage(choice.ToString() + ",");
+                    }
+                    logMessage("\n");
+                }
+
+                if (baseList.optionC.Count > 0)
+                {
+                    logMessage("Option C : ");
+                    foreach (EquipmentChoice choice in baseList.optionC)
+                    {
+                        logMessage(choice.ToString() + ",");
+                    }
+                    logMessage("\n");
+                }
+
+                if (baseList.optionD.Count > 0)
+                {
+                    logMessage("Option D : ");
+                    foreach (EquipmentChoice choice in baseList.optionD)
+                    {
+                        logMessage(choice.ToString() + ",");
+                    }
+                    logMessage("\n");
+                }
+            }
         }
 
         private static void parseAttributesFromXml(String filepath)
@@ -391,7 +437,7 @@ namespace CharacterManager
                 logError("Failed to open file : " + ex.Message);
             }
 
-            
+            /*
             logMessage("Parsed Weapons\n");
             foreach(Items.PlayerWeapon weapon in WeaponList)
             {
@@ -403,7 +449,7 @@ namespace CharacterManager
                 int value = weapon.rollDamage(out log);
                 logMessage("Rolled : " + log + " -> " + value.ToString() + "\n");
             }
-            
+            */
         }
 
 

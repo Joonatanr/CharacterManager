@@ -10,23 +10,36 @@ namespace CharacterManager
     [Serializable]
     public class EquipmentChoice
     {
+        public string Equipment;
+        public int Quantity = 1;
+
         [XmlIgnore]
         private Items.PlayerItem ChoiceItem;
 
-        [XmlIgnore]
-        private String _equipment;
-
-        public string Equipment { get { return _equipment; }set { _equipment = value; } }
-        public int Quantity = 1;
 
         public EquipmentChoice()
         {
-            _equipment = "UNKNOWN";
+            Equipment = "UNKNOWN";
         }
 
         public Items.PlayerItem getObjectReference()
         {
-            return resolveItemFromString(_equipment);
+            return resolveItemFromString(Equipment);
+        }
+
+        public override string ToString()
+        {
+            String res = "";
+
+            res += this.Equipment;
+            if(Quantity > 1)
+            {
+                res += "(";
+                res += Quantity.ToString();
+                res += ")";
+            }
+
+            return res;
         }
 
         //Basically we try to resolve the item from string.
@@ -69,31 +82,48 @@ namespace CharacterManager
     [Serializable]
     public class EquipmentChoiceList
     {
-        public List<EquipmentChoice> OptionA = null;
-        public List<EquipmentChoice> OptionB = null;
-        public List<EquipmentChoice> OptionC = null;
-        public List<EquipmentChoice> OptionD = null;
+        public List<EquipmentChoice> optionA = null;
+        public List<EquipmentChoice> optionB = null;
+        public List<EquipmentChoice> optionC = null;
+        public List<EquipmentChoice> optionD = null;
+
+        public List<EquipmentChoice> getOptionFromNumber(int nr)
+        {
+            switch (nr)
+            {
+                case 0:
+                    return optionA;
+                case 1:
+                    return optionB;
+                case 2:
+                    return optionC;
+                case 3:
+                    return optionD;
+                default:
+                    return null;
+            }
+        }
 
         public int getNumberOfOptions()
         {
             int numberOfChoices = 4;
 
-            if (OptionA == null)
+            if (optionA == null)
             {
                 numberOfChoices--;
             }
 
-            if (OptionB == null)
+            if (optionB == null)
             {
                 numberOfChoices--;
             }
 
-            if (OptionC == null)
+            if (optionC == null)
             {
                 numberOfChoices--;
             }
 
-            if (OptionD == null)
+            if (optionD == null)
             {
                 numberOfChoices--;
             }
