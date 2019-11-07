@@ -10,8 +10,11 @@ namespace CharacterManager.Items
     {
         public String ItemName;
         public String Description;
-        public int Weight;
+        public float Weight;
         public float Cost; //In Gold, smaller quantities in decimal places.
+        public int Quantity = 1;
+        public Boolean IsAmmo;
+        
 
         public PlayerItem()
         {

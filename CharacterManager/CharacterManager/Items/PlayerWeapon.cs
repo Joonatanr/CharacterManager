@@ -51,6 +51,7 @@ namespace CharacterManager.Items
         public Boolean      IsThrown = false;
         public Boolean      IsTwoHanded = false;
         public Boolean      IsVersatile = false;
+        public Boolean      IsRanged = false; //This applies only to purposefully ranged weapons such as bows and crossbows...
 
         public WeaponType Type;
         public WeaponRange  Range = new WeaponRange(0,0);
@@ -58,6 +59,7 @@ namespace CharacterManager.Items
         public String       SpecialRules;
 
         public WeaponDamage Damage;
+        public WeaponDamage TwoHandedDamage;
 
         public int rollDamage(out String log)
         {

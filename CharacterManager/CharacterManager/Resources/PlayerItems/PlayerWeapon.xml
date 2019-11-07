@@ -1,4 +1,5 @@
 ﻿<ArrayOfPlayerWeapon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- Simple Weapons -->	
 	<PlayerWeapon>
 		<ItemName>Club</ItemName>
 		<Weight>2</Weight>
@@ -67,5 +68,153 @@
 		</Range>
 		<Type>Simple</Type>
 	</PlayerWeapon>
+	<PlayerWeapon>
+		<ItemName>Light Hammer</ItemName>
+		<Cost>0.2</Cost>
+		<Weight>2</Weight>
+		<IsThrown>true</IsThrown>
+		<IsLight>true</IsLight>
+		<Damage>
+			<DamageValue>1d4</DamageValue>
+			<Type>Bludgeoning</Type>
+		</Damage>
+		<Range>
+			<NormalRange>20</NormalRange>
+			<LongRange>60</LongRange>
+		</Range>
+		<Type>Simple</Type>
+	</PlayerWeapon>
+	<PlayerWeapon>
+		<ItemName>Mace</ItemName>
+		<Cost>5</Cost>
+		<Weight>4</Weight>
+		<Damage>
+			<DamageValue>1d6</DamageValue>
+			<Type>Bludgeoning</Type>
+		</Damage>
+		<Type>Simple</Type>
+	</PlayerWeapon>
+	<PlayerWeapon>
+		<ItemName>Quarterstaff</ItemName>
+		<Cost>0.2</Cost>
+		<Weight>4</Weight>
+		<IsVersatile>true</IsVersatile>
+		<Damage>
+			<DamageValue>1d6</DamageValue>
+			<Type>Bludgeoning</Type>
+		</Damage>
+		<TwoHandedDamage>
+			<DamageValue>1d8</DamageValue>
+			<Type>Bludgeoning</Type>
+		</TwoHandedDamage>
+		<Type>Simple</Type>
+	</PlayerWeapon>
+	<PlayerWeapon>
+		<ItemName>Sickle</ItemName>
+		<Cost>1</Cost>
+		<Weight>2</Weight>
+		<IsLight>true</IsLight>
+		<Damage>
+			<DamageValue>1d4</DamageValue>
+			<Type>Slashing</Type>
+		</Damage>
+		<Type>Simple</Type>
+	</PlayerWeapon>
+	<PlayerWeapon>
+		<ItemName>Spear</ItemName>
+		<Cost>1</Cost>
+		<Weight>3</Weight>
+		<IsThrown>true</IsThrown>
+		<IsVersatile>true</IsVersatile>
+		<Damage>
+			<DamageValue>1d6</DamageValue>
+			<Type>Piercing</Type>
+		</Damage>
+		<TwoHandedDamage>
+			<DamageValue>1d8</DamageValue>
+			<Type>Piercing</Type>
+		</TwoHandedDamage>
+		<Range>
+			<NormalRange>20</NormalRange>
+			<LongRange>60</LongRange>
+		</Range>
+		<Type>Simple</Type>
+	</PlayerWeapon>
 	
+<!-- End of Simple Weapons -->	
+
+<!-- Simple Ranged Weapons -->
+	<PlayerWeapon>
+		<ItemName>Crossbow, Light</ItemName>
+		<Cost>25</Cost>
+		<Weight>5</Weight>
+		<IsAmmunition>true</IsAmmunition>
+		<IsLoading>true</IsLoading>
+		<IsTwoHanded>true</IsTwoHanded>
+		<IsRanged>true</IsRanged>
+		<Damage>
+			<DamageValue>1d8</DamageValue>
+			<Type>Piercing</Type>
+		</Damage>
+		<Range>
+			<NormalRange>80</NormalRange>
+			<LongRange>320</LongRange>
+		</Range>
+		<Type>Simple</Type>
+	</PlayerWeapon>
+	
+	<PlayerWeapon>
+		<ItemName>Dart</ItemName>
+		<Cost>0.05</Cost>
+		<Weight>0.4</Weight>
+		<IsAmmunition>true</IsAmmunition>
+		<IsRanged>true</IsRanged>
+		<IsThrown>true</IsThrown>
+		<IsFinesse>true</IsFinesse>
+		<Damage>
+			<DamageValue>1d4</DamageValue>
+			<Type>Piercing</Type>
+		</Damage>
+		<Range>
+			<NormalRange>20</NormalRange>
+			<LongRange>60</LongRange>
+		</Range>
+		<Type>Simple</Type>
+	</PlayerWeapon>
+	
+	<PlayerWeapon>
+		<ItemName>Shortbow</ItemName>
+		<Cost>25</Cost>
+		<Weight>2</Weight>
+		<IsAmmunition>true</IsAmmunition>
+		<IsTwoHanded>true</IsTwoHanded>
+		<IsRanged>true</IsRanged>
+		<Damage>
+			<DamageValue>1d6</DamageValue>
+			<Type>Piercing</Type>
+		</Damage>
+		<Range>
+			<NormalRange>80</NormalRange>
+			<LongRange>320</LongRange>
+		</Range>
+		<Type>Simple</Type>
+	</PlayerWeapon>
+	
+	<PlayerWeapon>
+		<ItemName>Sling</ItemName>
+		<Cost>0.1</Cost>
+		<Weight>0.01</Weight>
+		<IsAmmunition>true</IsAmmunition>
+		<IsRanged>true</IsRanged>
+		<Damage>
+			<DamageValue>1d4</DamageValue>
+			<Type>Bludgeoning</Type>
+		</Damage>
+		<Range>
+			<NormalRange>30</NormalRange>
+			<LongRange>120</LongRange>
+		</Range>
+		<Type>Simple</Type>
+	</PlayerWeapon>
+<!-- End of Simple Ranged Weapons -->	
 </ArrayOfPlayerWeapon>
