@@ -52,6 +52,7 @@ namespace CharacterManager.Items
         public Boolean      IsTwoHanded = false;
         public Boolean      IsVersatile = false;
         public Boolean      IsRanged = false; //This applies only to purposefully ranged weapons such as bows and crossbows...
+        public Boolean      IsReach = false;
 
         public WeaponType Type;
         public WeaponRange  Range = new WeaponRange(0,0);

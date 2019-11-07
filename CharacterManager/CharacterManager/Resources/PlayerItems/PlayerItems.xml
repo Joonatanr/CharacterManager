@@ -1,12 +1,9 @@
 ﻿<ArrayOfPlayerItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<PlayerItem>
-		<ItemName>Arrow</ItemName>
-		<Description>Just for testing.</Description>
+		<ItemName>Arrows</ItemName>
+		<Description>Ammunition for bows and shortbows</Description>
 		<Weight>0.05</Weight>
 		<Cost>0.05</Cost>
 		<IsAmmo>true</IsAmmo>
-	</PlayerItem>
-	
-	
-	
+	</PlayerItem>	
 </ArrayOfPlayerItem>

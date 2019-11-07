@@ -217,4 +217,118 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 <!-- End of Simple Ranged Weapons -->	
+
+
+<!-- Martial Melee Weapons -->
+<PlayerWeapon>
+	<ItemName>Battleaxe</ItemName>
+	<Cost>10</Cost>
+	<Weight>4</Weight>
+	<IsVersatile>true</IsVersatile>
+	<Damage>
+		<DamageValue>1d8</DamageValue>
+		<Type>Slashing</Type>
+	</Damage>
+	<TwoHandedDamage>
+		<DamageValue>1d10</DamageValue>
+		<Type>Slashing</Type>
+	</TwoHandedDamage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Flail</ItemName>
+	<Cost>10</Cost>
+	<Weight>2</Weight>
+	<Damage>
+		<DamageValue>1d8</DamageValue>
+		<Type>Bludgeoning</Type>
+	</Damage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Glaive</ItemName>
+	<Cost>20</Cost>
+	<Weight>6</Weight>
+	<IsHeavy>true</IsHeavy>
+	<IsTwoHanded>true</IsTwoHanded>
+	<IsReach>true</IsReach>
+	<Damage>
+		<DamageValue>1d10</DamageValue>
+		<Type>Slashing</Type>
+	</Damage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Greataxe</ItemName>
+	<Cost>30</Cost>
+	<Weight>7</Weight>
+	<IsHeavy>true</IsHeavy>
+	<IsTwoHanded>true</IsTwoHanded>
+	<Damage>
+		<DamageValue>1d12</DamageValue>
+		<Type>Slashing</Type>
+	</Damage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Greatsword</ItemName>
+	<Cost>50</Cost>
+	<Weight>6</Weight>
+	<IsHeavy>true</IsHeavy>
+	<IsTwoHanded>true</IsTwoHanded>
+	<Damage>
+		<DamageValue>2d6</DamageValue>
+		<Type>Slashing</Type>
+	</Damage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Halberd</ItemName>
+	<Cost>20</Cost>
+	<Weight>6</Weight>
+	<IsHeavy>true</IsHeavy>
+	<IsTwoHanded>true</IsTwoHanded>
+	<IsReach>true</IsReach>
+	<Damage>
+		<DamageValue>1d10</DamageValue>
+		<Type>Slashing</Type>
+	</Damage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Lance</ItemName>
+	<Description>You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted.</Description>
+	<Cost>10</Cost>
+	<Weight>6</Weight>
+	<IsReach>true</IsReach>
+	<Damage>
+		<DamageValue>1d12</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Longsword</ItemName>
+	<Cost>15</Cost>
+	<Weight>3</Weight>
+	<IsVersatile>true</IsVersatile>
+	<Damage>
+		<DamageValue>1d8</DamageValue>
+		<Type>Slashing</Type>
+	</Damage>
+	<TwoHandedDamage>
+		<DamageValue>1d10</DamageValue>
+		<Type>Slashing</Type>
+	</TwoHandedDamage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+<!-- End of Martial Melee Weapons -->		
+
 </ArrayOfPlayerWeapon>
