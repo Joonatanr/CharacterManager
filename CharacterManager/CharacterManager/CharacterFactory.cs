@@ -21,6 +21,7 @@ namespace CharacterManager
 
         private List<Items.PlayerArmor> ArmorList;
         private List<Items.PlayerWeapon> WeaponList;
+        private List<Items.PlayerItem> GenericItemList;
 
         public List<String> getMainRacesList()
         {
@@ -81,6 +82,7 @@ namespace CharacterManager
                 parseRacesFromXml("Resources/PlayerRaces");
                 parseClassesFromXml("Resources/PlayerClasses");
                 parseAttributesFromXml("Resources/PlayerAttributes.xml");
+                parseItemsFromXml("Resources/PlayerItems/PlayerItems.xml");
                 parseArmorFromXml("Resources/PlayerItems/PlayerArmor.xml");
                 parseWeaponsFromXml("Resources/PlayerItems/PlayerWeapon.xml");
 
@@ -100,6 +102,7 @@ namespace CharacterManager
             }
             return this.isInitialized;
         }
+
 
 
         public PlayerRace getRaceByName(String name)
@@ -310,6 +313,22 @@ namespace CharacterManager
                     specialAttribute.CopyValuesFromBaseClass(attrib);
                     AttributesList[i]= specialAttribute; //We basically replace the original prototype with a SpecialAttribute object.
                 }
+            }
+        }
+
+        private void parseItemsFromXml(string filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<Items.PlayerItem>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                GenericItemList = (List<Items.PlayerItem>)reader.Deserialize(file);
+                file.Close();
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
             }
         }
 

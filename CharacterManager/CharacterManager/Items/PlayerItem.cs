@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace CharacterManager.Items
 {
-    public abstract class PlayerItem
+    public class PlayerItem
     {
         public String ItemName;
+        public String Description;
         public int Weight;
         public float Cost; //In Gold, smaller quantities in decimal places.
 

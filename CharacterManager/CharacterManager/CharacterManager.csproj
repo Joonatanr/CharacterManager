@@ -194,6 +194,9 @@
     <Content Include="Resources\PlayerItems\PlayerArmor.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\PlayerItems\PlayerItems.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PlayerItems\PlayerWeapon.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
