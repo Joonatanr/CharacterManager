@@ -81,11 +81,15 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.userControlToolProficiencyChoice1 = new CharacterManager.UserControls.UserControlToolProficiencyChoice();
             this.alignmentChoice1 = new CharacterManager.UserControls.AlignmentChoice();
             this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
             this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAttributeList();
+            this.buttonChooseEquipment = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.richTextBoxEquipmentAndSpells = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -97,6 +101,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxCharName
@@ -108,7 +113,7 @@
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(17, 742);
+            this.buttonOk.Location = new System.Drawing.Point(17, 778);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 1;
@@ -118,7 +123,7 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(98, 742);
+            this.buttonCancel.Location = new System.Drawing.Point(98, 778);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 2;
@@ -609,19 +614,20 @@
             this.groupBox5.Controls.Add(this.groupBox1);
             this.groupBox5.Location = new System.Drawing.Point(13, 11);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(267, 725);
+            this.groupBox5.Size = new System.Drawing.Size(267, 754);
             this.groupBox5.TabIndex = 10;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Input";
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.groupBox2);
             this.groupBox6.Controls.Add(this.userControlToolProficiencyChoice1);
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.comboBoxPlayerClasses);
             this.groupBox6.Location = new System.Drawing.Point(5, 363);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(256, 356);
+            this.groupBox6.Size = new System.Drawing.Size(256, 385);
             this.groupBox6.TabIndex = 11;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Class";
@@ -643,6 +649,18 @@
             this.comboBoxPlayerClasses.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPlayerClasses.TabIndex = 0;
             this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.richTextBoxEquipmentAndSpells);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.buttonChooseEquipment);
+            this.groupBox2.Location = new System.Drawing.Point(9, 146);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(241, 233);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Equipment and Spells";
             // 
             // userControlToolProficiencyChoice1
             // 
@@ -681,11 +699,37 @@
             this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 363);
             this.userControlGenericAttributeList1.TabIndex = 20;
             // 
+            // buttonChooseEquipment
+            // 
+            this.buttonChooseEquipment.Location = new System.Drawing.Point(10, 19);
+            this.buttonChooseEquipment.Name = "buttonChooseEquipment";
+            this.buttonChooseEquipment.Size = new System.Drawing.Size(109, 21);
+            this.buttonChooseEquipment.TabIndex = 0;
+            this.buttonChooseEquipment.Text = "Choose Equipment";
+            this.buttonChooseEquipment.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(125, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 21);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Choose Spells";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxEquipmentAndSpells
+            // 
+            this.richTextBoxEquipmentAndSpells.Location = new System.Drawing.Point(6, 46);
+            this.richTextBoxEquipmentAndSpells.Name = "richTextBoxEquipmentAndSpells";
+            this.richTextBoxEquipmentAndSpells.Size = new System.Drawing.Size(229, 181);
+            this.richTextBoxEquipmentAndSpells.TabIndex = 2;
+            this.richTextBoxEquipmentAndSpells.Text = "";
+            // 
             // CharacterCreatorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 777);
+            this.ClientSize = new System.Drawing.Size(847, 813);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.buttonCancel);
@@ -708,6 +752,7 @@
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -772,5 +817,9 @@
         private System.Windows.Forms.Label label15;
         private UserControls.UserControlToolProficiencyChoice userControlToolProficiencyChoice1;
         private UserControls.AlignmentChoice alignmentChoice1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonChooseEquipment;
+        private System.Windows.Forms.RichTextBox richTextBoxEquipmentAndSpells;
     }
 }

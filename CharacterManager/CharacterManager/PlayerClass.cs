@@ -17,6 +17,7 @@ namespace CharacterManager
         public List<String> SavingThrowProficiencies = new List<String>();
         public List<String> AvailableSkillProficiencies = new List<String>();
         public int NumberOfSkillsToChoose;
+        public List<EquipmentChoiceList> AvailableEquipment = new List<EquipmentChoiceList>();
 
         public PlayerClass()
         {

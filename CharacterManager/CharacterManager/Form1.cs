@@ -16,15 +16,16 @@ namespace CharacterManager
     public partial class Form1 : Form
     {
         private PlayerCharacter activeCharacter = null;
-        private CharacterFactory myFactory;
 
         public Form1()
         {
             InitializeComponent();
 
             //myFactory = new CharacterFactory();
-            myFactory = new CharacterFactory(new TextBoxWriter(richTextBox1));
-            myFactory.Initialize();
+            //myFactory = new CharacterFactory(new TextBoxWriter(richTextBox1));
+            //myFactory.Initialize();
+            CharacterFactory.Initialize();
+            CharacterFactory.setErrorHandler(new TextBoxWriter(richTextBox1));
         }
 
 
@@ -116,7 +117,7 @@ namespace CharacterManager
         private void toolStripButtonNew_Click(object sender, EventArgs e)
         {
             /* New character creation - TODO, this is only a placeholder. */
-            CharacterCreatorForm f2 = new CharacterCreatorForm(this.myFactory);
+            CharacterCreatorForm f2 = new CharacterCreatorForm();
 
             if (f2.ShowDialog() == DialogResult.OK)
             {
@@ -158,7 +159,7 @@ namespace CharacterManager
             /** Load a file. */
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                activeCharacter = myFactory.LoadFromXml(openFileDialog1.FileName);
+                activeCharacter = CharacterFactory.LoadFromXml(openFileDialog1.FileName);
                 updateCharacterAttributes();
             }
         }

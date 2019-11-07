@@ -26,4 +26,83 @@
 		<string>Survival</string>
 	</AvailableSkillProficiencies>
 	<NumberOfSkillsToChoose>2</NumberOfSkillsToChoose>
+	
+	<AvailableEquipment>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Chainmail</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Leather</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>Longbow</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>Arrows</Equipment>
+					<Quantity>20</Quantity>
+				</EquipmentChoice>
+			</optionB>
+		</EquipmentChoiceList>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>AnyMartial</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>Shield</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>				
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>AnyMartial</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>AnyMartial</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+		</EquipmentChoiceList>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Crossbow, Light</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>Bolts</Equipment>
+					<Quantity>20</Quantity>
+				</EquipmentChoice>				
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Handaxe</Equipment>
+					<Quantity>2</Quantity>
+				</EquipmentChoice>
+			</optionB>
+		</EquipmentChoiceList>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Dungeoneer's pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>		
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Explorer's pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+		</EquipmentChoiceList>
+	</AvailableEquipment>
 </PlayerClass>

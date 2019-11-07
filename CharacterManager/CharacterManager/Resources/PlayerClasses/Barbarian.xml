@@ -1,0 +1,68 @@
+<PlayerClass>
+	<PlayerClassName>Barbarian</PlayerClassName>
+	<HitDie>12</HitDie>
+	<WeaponProficiencies>
+		<string>Martial Weapons</string>
+		<string>Simple Weapons</string>
+	</WeaponProficiencies>
+	<ArmorProficiencies>
+		<string>Light Armor</string>
+		<string>Medium Armor</string>
+		<string>Shields</string>
+	</ArmorProficiencies>
+	<SavingThrowProficiencies>
+		<string>STR</string>
+		<string>CON</string>
+	</SavingThrowProficiencies>
+	<AvailableSkillProficiencies>
+		<string>Animal Handling</string>
+		<string>Athletics</string>
+		<string>Intimidation</string>
+		<string>Nature</string>
+		<string>Perception</string>
+		<string>Survival</string>
+	</AvailableSkillProficiencies>
+	<NumberOfSkillsToChoose>2</NumberOfSkillsToChoose>
+	<AvailableEquipment>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Greataxe</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>AnyMartialMelee</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+		</EquipmentChoiceList>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Handaxe</Equipment>
+					<Quantity>2</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>AnySimple</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+		</EquipmentChoiceList>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Explorer's Pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>Javelin</Equipment>
+					<Quantity>4</Quantity>
+				</EquipmentChoice>
+			</optionA>
+		</EquipmentChoiceList>
+	</AvailableEquipment>
+</PlayerClass>

@@ -10,20 +10,20 @@ using System.Xml.Serialization;
 
 namespace CharacterManager
 {
-    public class CharacterFactory
+    public static class CharacterFactory
     {
-        private TextBoxWriter errorReporter;
-        private List<PlayerRace> Races;
-        private List<PlayerClass> Classes;
-        private List<PlayerAttribute> AttributesList;
-        private List<CharacterManager.SpecialAttributes.SpecialAttribute> SpecialAttributeList = new List<CharacterManager.SpecialAttributes.SpecialAttribute>();
-        private Boolean isInitialized = false;
+        private static TextBoxWriter errorReporter;
+        private static List<PlayerRace> Races;
+        private static List<PlayerClass> Classes;
+        private static List<PlayerAttribute> AttributesList;
+        private static List<CharacterManager.SpecialAttributes.SpecialAttribute> SpecialAttributeList = new List<CharacterManager.SpecialAttributes.SpecialAttribute>();
+        private static Boolean isInitialized = false;
 
-        private List<Items.PlayerArmor> ArmorList;
-        private List<Items.PlayerWeapon> WeaponList;
-        private List<Items.PlayerItem> GenericItemList;
+        private static List<Items.PlayerArmor> ArmorList;
+        private static List<Items.PlayerWeapon> WeaponList;
+        private static List<Items.PlayerItem> GenericItemList;
 
-        public List<String> getMainRacesList()
+        public static List<String> getMainRacesList()
         {
             List<String> res = new List<string>();
             foreach(PlayerRace race in Races)
@@ -34,7 +34,7 @@ namespace CharacterManager
             return res;
         }
 
-        public List<String> getSubRaceList(String mainRaceName)
+        public static List<String> getSubRaceList(String mainRaceName)
         {
             List<String> res = new List<string>();
 
@@ -50,7 +50,7 @@ namespace CharacterManager
             return res;
         }
 
-        public List<String> getClassList()
+        public static List<String> getClassList()
         {
             List<String> res = new List<String>();
             foreach(PlayerClass c in Classes)
@@ -61,21 +61,14 @@ namespace CharacterManager
             return res;
         }
 
-        /* Initializes the factory and loads all the necessary resources. */
-        public CharacterFactory()
+        public static void setErrorHandler(TextBoxWriter errHandler)
         {
-            //Base constructor. Add extra things here.
-            Races = new List<PlayerRace>();
+            errorReporter = errHandler;
         }
 
-        public CharacterFactory(TextBoxWriter errHandler) : this()
+        public static Boolean Initialize()
         {
-            this.errorReporter = errHandler;
-        }
-
-        public Boolean Initialize()
-        {
-            if (!this.isInitialized)
+            if (!isInitialized)
             {
                 InitializeSpecialAttributes();
 
@@ -90,7 +83,7 @@ namespace CharacterManager
                 {
                     try
                     {
-                        race.Initialize(this.AttributesList);
+                        race.Initialize(AttributesList);
                     }
                     catch (Exception ex)
                     {
@@ -98,19 +91,22 @@ namespace CharacterManager
                     }
                 }
 
-                this.isInitialized = true;
+                //Add reference to the Equipment choices.
+                //EquipmentChoice.InitializeEquipmentChoices(this);
+
+                isInitialized = true;
             }
-            return this.isInitialized;
+            return isInitialized;
         }
 
 
 
-        public PlayerRace getRaceByName(String name)
+        public static PlayerRace getRaceByName(String name)
         {
             return Races.Find(r => r.RaceName == name);
         }
 
-        public PlayerRace getSubRaceByName(String main, String sub)
+        public static PlayerRace getSubRaceByName(String main, String sub)
         {
             PlayerRace _mainRace = Races.Find(r => r.RaceName == main);
 
@@ -124,16 +120,40 @@ namespace CharacterManager
             }
         }
 
-        public PlayerClass getPlayerClassByName(String name)
+        public static PlayerClass getPlayerClassByName(String name)
         {
             PlayerClass res = Classes.Find(c => c.PlayerClassName == name);
 
             return res;
         }
 
-        public PlayerCharacter LoadFromXml(String filename)
+        public static Items.PlayerItem getPlayerItemByName(String name)
         {
-            if (!this.isInitialized)
+            Items.PlayerItem res = null;
+
+            if (!isInitialized)
+            {
+                throw new Exception("Error : Character Factory not initialized.");
+            }
+
+            res = WeaponList.Find(w => w.ItemName == name);
+
+            if (res == null)
+            {
+                res = ArmorList.Find(a => a.ItemName == name);
+            }
+
+            if (res == null)
+            {
+                res = GenericItemList.Find(i => i.ItemName == name);
+            }
+
+            return res;
+        }
+
+        public static PlayerCharacter LoadFromXml(String filename)
+        {
+            if (!isInitialized)
             {
                 logError("Error : CharacterFactory not initialized");
                 return null;
@@ -187,7 +207,7 @@ namespace CharacterManager
             return txt;
         }
 
-        private Boolean resolveCharacterData(PlayerCharacter raw)
+        private static Boolean resolveCharacterData(PlayerCharacter raw)
         {
             PlayerRace mainRace;
             PlayerRace SubRace;
@@ -241,7 +261,7 @@ namespace CharacterManager
             return true;
         }
 
-        private void parseRacesFromXml(String filefolder)
+        private static void parseRacesFromXml(String filefolder)
         {
             //Lets create a list of existing files.
             string[] filepaths = Directory.GetFiles(filefolder);
@@ -264,7 +284,7 @@ namespace CharacterManager
             }
         }
 
-        private void parseClassesFromXml(String filefolder)
+        private static void parseClassesFromXml(String filefolder)
         {
             string[] filepaths = Directory.GetFiles(filefolder);
 
@@ -286,7 +306,7 @@ namespace CharacterManager
             }
         }
 
-        private void parseAttributesFromXml(String filepath)
+        private static void parseAttributesFromXml(String filepath)
         {
             try
             {
@@ -316,7 +336,7 @@ namespace CharacterManager
             }
         }
 
-        private void parseItemsFromXml(string filepath)
+        private static void parseItemsFromXml(string filepath)
         {
             try
             {
@@ -332,7 +352,7 @@ namespace CharacterManager
             }
         }
 
-        private void parseArmorFromXml(String filepath)
+        private static void parseArmorFromXml(String filepath)
         {
             try
             {
@@ -356,7 +376,7 @@ namespace CharacterManager
             */
         }
 
-        private void parseWeaponsFromXml(String filepath)
+        private static void parseWeaponsFromXml(String filepath)
         {
             try
             {
@@ -387,13 +407,13 @@ namespace CharacterManager
         }
 
 
-        private void InitializeSpecialAttributes()
+        private static void InitializeSpecialAttributes()
         {
             //All C# described attributes need to be added here.
             SpecialAttributeList.Add(new DwarvenToughness());
         }
 
-        private void logError(String err)
+        private static void logError(String err)
         {
             if (errorReporter != null)
             {
@@ -401,7 +421,7 @@ namespace CharacterManager
             }
         }
 
-        private void logMessage(String message)
+        private static void logMessage(String message)
         {
             if (errorReporter != null)
             {

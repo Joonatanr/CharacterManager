@@ -22,7 +22,6 @@ namespace CharacterManager
         private int WisBonus = 0;
         private int ConBonus = 0;
 
-        private CharacterFactory myFactory;
 
         private PlayerRace SelectedMainRace;
         private PlayerRace SelectedSubRace;
@@ -32,24 +31,23 @@ namespace CharacterManager
 
         private List<PlayerAttribute> myAttributeList = new List<PlayerAttribute>();
 
-        public CharacterCreatorForm(CharacterFactory factory)
+        public CharacterCreatorForm()
         {
             InitializeComponent();
-            myFactory = factory;
 
-            if (myFactory.Initialize() == false)
+            if (CharacterFactory.Initialize() == false)
             {
                 throw new Exception("Error : Failed to initialize Character Factory");
             }
 
-            List<String> mainRaceNameList = myFactory.getMainRacesList();
+            List<String> mainRaceNameList = CharacterFactory.getMainRacesList();
 
             foreach(String str in mainRaceNameList)
             {
                 comboBoxMainRace.Items.Add(str);
             }
 
-            List<String> ClassNameList = myFactory.getClassList();
+            List<String> ClassNameList = CharacterFactory.getClassList();
 
             foreach(String str in ClassNameList)
             {
@@ -591,14 +589,14 @@ namespace CharacterManager
                 comboBoxSubRace.Text = "";
                 SelectedSubRace = null;
 
-                List<String> subRaceNames = myFactory.getSubRaceList(selectedItem);
+                List<String> subRaceNames = CharacterFactory.getSubRaceList(selectedItem);
 
                 foreach (String str in subRaceNames)
                 {
                     comboBoxSubRace.Items.Add(str);
                 }
 
-                SelectedMainRace = myFactory.getRaceByName(comboBoxMainRace.SelectedItem.ToString());
+                SelectedMainRace = CharacterFactory.getRaceByName(comboBoxMainRace.SelectedItem.ToString());
                 UpdateToolProficiencyChoices();
                 updateAllDisplayedData();
             }
@@ -612,7 +610,7 @@ namespace CharacterManager
                 String mainRace = comboBoxMainRace.SelectedItem.ToString();
                 if (mainRace != null && selectedItem != null)
                 {
-                    SelectedSubRace = myFactory.getSubRaceByName(mainRace, selectedItem);
+                    SelectedSubRace = CharacterFactory.getSubRaceByName(mainRace, selectedItem);
                     UpdateToolProficiencyChoices();
                     updateAllDisplayedData();
                 }
@@ -632,7 +630,7 @@ namespace CharacterManager
 
                 if (selectedItem != null)
                 {
-                    SelectedClass = myFactory.getPlayerClassByName(selectedItem);
+                    SelectedClass = CharacterFactory.getPlayerClassByName(selectedItem);
                     updateAllDisplayedData();
                     /* There is a difference between resetting and updating these values. Update should be done elsewhere... */
                     resetSkillProficiencies();

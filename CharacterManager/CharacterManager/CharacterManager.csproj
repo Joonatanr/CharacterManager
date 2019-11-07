@@ -54,11 +54,18 @@
     </Compile>
     <Compile Include="CharacterFactory.cs" />
     <Compile Include="DieRoll.cs" />
+    <Compile Include="EquipmentChoice.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChooseEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChooseEquipment.Designer.cs">
+      <DependentUpon>FormChooseEquipment.cs</DependentUpon>
     </Compile>
     <Compile Include="Items\PlayerArmor.cs" />
     <Compile Include="Items\PlayerItem.cs" />
@@ -136,6 +143,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChooseEquipment.resx">
+      <DependentUpon>FormChooseEquipment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -189,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\PlayerAttributes.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PlayerClasses\Barbarian.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PlayerItems\PlayerArmor.xml">
