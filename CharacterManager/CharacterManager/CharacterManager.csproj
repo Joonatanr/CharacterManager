@@ -76,6 +76,7 @@
     <Compile Include="PlayerRace.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Items\ItemContainer.cs" />
     <Compile Include="Resources\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
