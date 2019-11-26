@@ -1,4 +1,5 @@
 ﻿<ArrayOfPlayerItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!-- Ammunition -->
 	<PlayerItem>
 		<ItemName>Arrows</ItemName>
 		<Description>Ammunition for bows and shortbows</Description>
@@ -6,4 +7,92 @@
 		<Cost>0.05</Cost>
 		<IsAmmo>true</IsAmmo>
 	</PlayerItem>	
+	<PlayerItem>
+		<ItemName>Bolts</ItemName>
+		<Description>Ammunition for crossbows</Description>
+		<Weight>0.075</Weight>
+		<Cost>0.05</Cost>
+		<IsAmmo>true</IsAmmo>
+	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Blowgun Needles</ItemName>
+		<Description>Ammunition for blowguns</Description>
+		<Weight>0.05</Weight>
+		<Cost>0.05</Cost>
+		<IsAmmo>true</IsAmmo>
+	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Sling Bullets</ItemName>
+		<Description>Ammunition for slings</Description>
+		<Weight>0.05</Weight>
+		<Cost>0.002</Cost>
+		<IsAmmo>true</IsAmmo>
+	</PlayerItem>
+	
+
+
+<!-- Generic Items -->
+	<PlayerItem>
+		<ItemName>Abacus</ItemName>
+		<Description>Simple tool for calculations.</Description>
+		<Weight>2</Weight>
+		<Cost>2</Cost>
+	</PlayerItem>
+	<PlayerItem>	
+		<ItemName>Acid</ItemName>
+		<Description>As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage. </Description>
+		<Weight>1</Weight>
+		<Cost>25.0</Cost>
+	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Alchemist’s Fire</ItemName>
+		<Description>This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames. </Description>
+		<Weight>1</Weight>
+		<Cost>50.0</Cost>
+	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Antitoxin</ItemName>
+		<Description> A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs. </Description>
+		<Weight>1</Weight>
+		<Cost>50.0</Cost>
+	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Arcane Focus</ItemName>
+		<Description>  An arcane focus is a special item— an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or som e similar item— designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus. </Description>
+		<Weight>1</Weight>
+		<Cost>10.0</Cost>
+	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Backpack</ItemName>
+		<Description>Used to carry equipment</Description>
+		<Weight>5</Weight>
+		<Cost>2</Cost>
+	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Ball Bearings</ItemName>
+		<Description>  As an action, you can spill these tiny metal balls from their pouch to cover a level area 10 feet square. A creature moving across the covered area must succeed on a DC 10 Dexterity saving throw or fall prone. A creature moving through the area at half speed doesn’t need to make the saving throw. 1000 in one bag  </Description>
+		<Weight>2</Weight>
+		<Cost>1.0</Cost>
+	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Block and Tackle</ItemName>
+		<Description>A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift. </Description>
+		<Weight>5</Weight>
+		<Cost>1</Cost>
+	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Caltrops</ItemName>
+		<Description> As an action, you can spread a single bag of caltrops to cover a 5-foot-square area. Any creature that enters the area must succeed on a DC 15 Dexterity saving throw or stop moving and take 1 piercing damage. Until the creature regains at least 1 hit point, its walking speed is reduced by 10 feet. A creature moving through the area at half speed doesn’t need to make the saving throw. (20 in bag) </Description>
+		<Weight>2</Weight>
+		<Cost>1</Cost>
+	</PlayerItem>
+	
+<!-- Packs : TODO SHOULD MAKE THESE INTO A SEPARATE CLASS IN THE FUTURE. -->
+	<PlayerItem>
+		<ItemName>Burglar's Pack</ItemName>
+		<Description> Includes a backpack, a bag of 1,000 ball bearings, 10 feet of string, a bell, 5 candles, a crowbar, a hammer, 10 pitons, a hooded lantern, 2 flasks of oil, 5 days rations, a tinderbox, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
+		<Weight>5</Weight>
+		<Cost>16.0</Cost>
+	</PlayerItem>
+	
 </ArrayOfPlayerItem>
