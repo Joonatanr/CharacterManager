@@ -207,6 +207,167 @@
 		<Cost>0.01</Cost>
 	</PlayerItem>
 	
+<!-- Tool kits -->
+	<PlayerItem>
+		<ItemName>Artisan's Tools</ItemName>
+		<Description>These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan’s tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan’s tools requires a separate proficiency. </Description>
+		<Weight>1</Weight>
+		<Cost>10</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Alchemist’s Supplies</ItemName>
+		<Description></Description>
+		<Weight>8</Weight>
+		<Cost>50</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Brewer’s Supplies</ItemName>
+		<Description></Description>
+		<Weight>9</Weight>
+		<Cost>20</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Calligrapher’s Supplies</ItemName>
+		<Description></Description>
+		<Weight>5</Weight>
+		<Cost>10</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Carpenter’s Tools</ItemName>
+		<Description></Description>
+		<Weight>6</Weight>
+		<Cost>8</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Cartographer’s Tools</ItemName>
+		<Description></Description>
+		<Weight>6</Weight>
+		<Cost>15</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Cobbler’s Tools</ItemName>
+		<Description></Description>
+		<Weight>5</Weight>
+		<Cost>5</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Cook's Utensils</ItemName>
+		<Description></Description>
+		<Weight>8</Weight>
+		<Cost>1</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Glassblower's Tools</ItemName>
+		<Description></Description>
+		<Weight>5</Weight>
+		<Cost>30</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Jeweler's Tools</ItemName>
+		<Description></Description>
+		<Weight>2</Weight>
+		<Cost>25</Cost>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Leatherworker's Tools</ItemName>
+		<Description></Description>
+		<Cost>5</Cost>
+		<Weight>5</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Mason's Tools</ItemName>
+		<Description></Description>
+		<Cost>10</Cost>
+		<Weight>8</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Painter's Supplies</ItemName>
+		<Description></Description>
+		<Cost>10</Cost>
+		<Weight>5</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Potter's Tools</ItemName>
+		<Description></Description>
+		<Cost>10</Cost>
+		<Weight>3</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Smith's Tools</ItemName>
+		<Description></Description>
+		<Cost>20</Cost>
+		<Weight>8</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Tinker's Tools</ItemName>
+		<Description></Description>
+		<Cost>50</Cost>
+		<Weight>10</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+
+	<PlayerItem>
+		<ItemName>Weaver's Tools</ItemName>
+		<Description></Description>
+		<Cost>1</Cost>
+		<Weight>5</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+
+	<PlayerItem>
+		<ItemName>Woodcarver's Tools</ItemName>
+		<Description></Description>
+		<Cost>1</Cost>
+		<Weight>5</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+
+	<PlayerItem>
+		<ItemName>Disguise Kit</ItemName>
+		<Description>This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.</Description>
+		<Cost>25</Cost>
+		<Weight>3</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
+	<PlayerItem>
+		<ItemName>Forgery Kit</ItemName>
+		<Description>This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document.</Description>
+		<Cost>15</Cost>
+		<Weight>5</Weight>
+		<IsTool>true</IsTool>
+	</PlayerItem>
+	
 <!-- Packs and containers -->
 	<PlayerItem xsi:type="ItemContainer">
 		<ItemName>Burglar's Pack</ItemName>
@@ -363,6 +524,43 @@
 			<ContainerContent>
 				<Name>Rope</Name>
 				<Quantity>50</Quantity>
+			</ContainerContent>
+		</ContainedItems>
+	</PlayerItem>
+	
+	<PlayerItem xsi:type="ItemContainer">
+		<ItemName>Entertainer's Pack</ItemName>
+		<Description> Includes a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit.</Description>
+		<Weight>1</Weight>
+		<Cost>12</Cost>
+		<ContainedItems>
+			<ContainerContent>
+				<Name>Backpack</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Bedroll</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Costume</Name>
+				<Quantity>2</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Candle</Name>
+				<Quantity>5</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Rations</Name>
+				<Quantity>5</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Waterskin</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Disguise Kit</Name>
+				<Quantity>1</Quantity>
 			</ContainerContent>
 		</ContainedItems>
 	</PlayerItem>

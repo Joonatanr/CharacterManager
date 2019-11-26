@@ -329,6 +329,231 @@
 	</TwoHandedDamage>
 	<Type>Martial</Type>
 </PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Maul</ItemName>
+	<Cost>10</Cost>
+	<Weight>10</Weight>
+	<Damage>
+		<DamageValue>2d6</DamageValue>
+		<Type>Bludgeoning</Type>
+	</Damage>
+	<IsTwoHanded>true</IsTwoHanded>
+	<IsHeavy>true</IsHeavy>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Morningstar</ItemName>
+	<Cost>15</Cost>
+	<Weight>10</Weight>
+	<Damage>
+		<DamageValue>1d8</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Pike</ItemName>
+	<Cost>5</Cost>
+	<Weight>18</Weight>
+	<Damage>
+		<DamageValue>1d10</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<IsHeavy>true</IsHeavy>
+	<IsReach>true</IsReach>
+	<IsTwoHanded>true</IsTwoHanded>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Rapier</ItemName>
+	<Cost>25</Cost>
+	<Weight>2</Weight>
+	<Damage>
+		<DamageValue>1d8</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<IsFinesse>true</IsFinesse>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Scimitar</ItemName>
+	<Cost>25</Cost>
+	<Weight>3</Weight>
+	<Damage>
+		<DamageValue>1d6</DamageValue>
+		<Type>Slashing</Type>
+	</Damage>
+	<IsFinesse>true</IsFinesse>
+	<IsLight>true</IsLight>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Shortsword</ItemName>
+	<Cost>10</Cost>
+	<Weight>2</Weight>
+	<Damage>
+		<DamageValue>1d6</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<IsFinesse>true</IsFinesse>
+	<IsLight>true</IsLight>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Trident</ItemName>
+	<Cost>5</Cost>
+	<Weight>4</Weight>
+	<Damage>
+		<DamageValue>1d6</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<TwoHandedDamage>
+		<DamageValue>1d8</DamageValue>
+		<Type>Piercing</Type>
+	</TwoHandedDamage>
+	<IsThrown>true</IsThrown>
+	<IsVersatile>true</IsVersatile>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>War Pick</ItemName>
+	<Cost>5</Cost>
+	<Weight>2</Weight>
+	<Damage>
+		<DamageValue>1d8</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Warhammer</ItemName>
+	<Cost>15</Cost>
+	<Weight>2</Weight>
+	<Damage>
+		<DamageValue>1d8</DamageValue>
+		<Type>Bludgeoning</Type>
+	</Damage>
+	<TwoHandedDamage>
+		<DamageValue>1d10</DamageValue>
+		<Type>Bludgeoning</Type>
+	</TwoHandedDamage>
+	<Type>Martial</Type>
+	<IsVersatile>true</IsVersatile>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Whip</ItemName>
+	<Cost>2</Cost>
+	<Weight>1</Weight>
+	<Damage>
+		<DamageValue>1d4</DamageValue>
+		<Type>Slashing</Type>
+	</Damage>
+	<IsFinesse>true</IsFinesse>
+	<IsReach>true</IsReach>
+	<Type>Martial</Type>
+</PlayerWeapon>
 <!-- End of Martial Melee Weapons -->		
+
+<!-- Martial Ranged Weapons -->
+<PlayerWeapon>
+	<ItemName>Blowgun</ItemName>
+	<Cost>10</Cost>
+	<Weight>1</Weight>
+	<IsAmmunition>true</IsAmmunition>
+	<IsLoading>true</IsLoading>
+	<IsRanged>true</IsRanged>
+	<Damage>
+		<DamageValue>1</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<Range>
+		<NormalRange>25</NormalRange>
+		<LongRange>100</LongRange>
+	</Range>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Crossbow, Hand</ItemName>
+	<Cost>75</Cost>
+	<Weight>3</Weight>
+	<IsAmmunition>true</IsAmmunition>
+	<IsLoading>true</IsLoading>
+	<IsRanged>true</IsRanged>
+	<IsLight>true</IsLight>
+	<Damage>
+		<DamageValue>1d6</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<Range>
+		<NormalRange>30</NormalRange>
+		<LongRange>120</LongRange>
+	</Range>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Crossbow, Heavy</ItemName>
+	<Cost>50</Cost>
+	<Weight>18</Weight>
+	<IsAmmunition>true</IsAmmunition>
+	<IsLoading>true</IsLoading>
+	<IsRanged>true</IsRanged>
+	<IsHeavy>true</IsHeavy>
+	<IsTwoHanded>true</IsTwoHanded>
+	<Damage>
+		<DamageValue>1d10</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<Range>
+		<NormalRange>100</NormalRange>
+		<LongRange>400</LongRange>
+	</Range>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Longbow</ItemName>
+	<Cost>50</Cost>
+	<Weight>2</Weight>
+	<IsAmmunition>true</IsAmmunition>
+	<IsRanged>true</IsRanged>
+	<IsTwoHanded>true</IsTwoHanded>
+	<Damage>
+		<DamageValue>1d8</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<Range>
+		<NormalRange>150</NormalRange>
+		<LongRange>600</LongRange>
+	</Range>
+	<Type>Martial</Type>
+</PlayerWeapon>
+
+<PlayerWeapon>
+	<ItemName>Net</ItemName>
+	<Cost>1</Cost>
+	<Weight>3</Weight>
+	<IsRanged>true</IsRanged>
+	<IsThrown>true</IsThrown>
+	<Damage>
+		<DamageValue>0</DamageValue>
+		<Type>Piercing</Type>
+	</Damage>
+	<Range>
+		<NormalRange>5</NormalRange>
+		<LongRange>15</LongRange>
+	</Range>
+	<Type>Martial</Type>
+</PlayerWeapon>
 
 </ArrayOfPlayerWeapon>

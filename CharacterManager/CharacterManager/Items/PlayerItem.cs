@@ -17,6 +17,8 @@ namespace CharacterManager.Items
         public float Cost; //In Gold, smaller quantities in decimal places.
         public int Quantity = 1;
         public Boolean IsAmmo;
+        public Boolean IsTool;
+        public String ToolType;
         
 
         public PlayerItem()
