@@ -30,6 +30,7 @@ namespace CharacterManager
         private int currentMaxHp = 0;
 
         private List<PlayerAttribute> myAttributeList = new List<PlayerAttribute>();
+        private List<Items.PlayerItem> myItemList = new List<Items.PlayerItem>();
 
         public CharacterCreatorForm()
         {
@@ -497,6 +498,68 @@ namespace CharacterManager
             userControlSavingThrows1.setValue(getCurrentAttributeBonus("CHA"), isCharacterSaveProfIn("CHA"), 2, "CHA");
         }
 
+        private void updateEquipmentList()
+        {
+            richTextBoxEquipmentAndSpells.Clear();
+
+            /* TODO : Consider making these lists global? */
+            List<Items.PlayerWeapon> weaponList = new List<Items.PlayerWeapon>();
+            List<Items.PlayerArmor> armorList = new List<Items.PlayerArmor>();
+            List<Items.PlayerItem> equipmentList = new List<Items.PlayerItem>();
+
+
+            foreach (Items.PlayerItem item in myItemList)
+            {
+                if (item is Items.PlayerWeapon)
+                {
+                    weaponList.Add((Items.PlayerWeapon)item);
+                }
+                else if(item is Items.PlayerArmor)
+                {
+                    armorList.Add((Items.PlayerArmor)item);
+                }
+                else
+                {
+                    equipmentList.Add(item);
+                }
+            }
+
+            /* 1. Add weapons */
+            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Bold);
+            richTextBoxEquipmentAndSpells.AppendText("Weapons:\n");
+            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Regular);
+
+            foreach (Items.PlayerWeapon w in weaponList)
+            {
+                richTextBoxEquipmentAndSpells.AppendText(w.ItemName + "\n");
+            }
+            richTextBoxEquipmentAndSpells.AppendText("\n");
+
+            /* 2. Add armor */
+            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Bold);
+            richTextBoxEquipmentAndSpells.AppendText("Armor:\n");
+            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Regular);
+
+            foreach (Items.PlayerArmor a in armorList)
+            {
+                richTextBoxEquipmentAndSpells.AppendText(a.ItemName + "\n");
+            }
+            richTextBoxEquipmentAndSpells.AppendText("\n");
+
+            /* 3. Add other items */
+            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Bold);
+            richTextBoxEquipmentAndSpells.AppendText("Equipment:\n");
+            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Regular);
+
+            foreach(Items.PlayerItem i in equipmentList)
+            {
+                richTextBoxEquipmentAndSpells.AppendText(i.ItemName + "\n");
+            }
+
+            /* 4. Add tools */
+            /* TODO */
+        }
+
 
         private bool isCharacterSaveProfIn(String attribute)
         {
@@ -673,7 +736,9 @@ namespace CharacterManager
             
             if (myForm.ShowDialog() == DialogResult.OK)
             {
-                //TODO : Update values.
+                myItemList = myForm.SelectedItems;
+                
+                /* Add the items to display. */
             }
         }
     }

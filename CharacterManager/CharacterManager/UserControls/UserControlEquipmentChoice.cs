@@ -19,11 +19,35 @@ namespace CharacterManager.UserControls
 
         private const int RadioButtonInterval = 20;
 
+
+        private struct ChoiceControlPair
+        {
+            public List<EquipmentChoice> equipment;
+            public RadioButton btn;
+        }
+
+        private List<ChoiceControlPair> myControlList = new List<ChoiceControlPair>();
+
         public UserControlEquipmentChoice()
         {
             InitializeComponent();
         }
         
+
+        public List<EquipmentChoice> getSelectedEquipmentList()
+        {
+            foreach (ChoiceControlPair pair in myControlList)
+            {
+                if (pair.btn.Checked)
+                {
+                    return pair.equipment;
+                }
+            }
+
+            /* Return null if nothing is selected.*/
+            return null;
+        }
+
         private void updateControlFields()
         {
             int numberOfChoices = _eqChoice.getNumberOfOptions();
@@ -33,6 +57,7 @@ namespace CharacterManager.UserControls
 
             groupBox1.Controls.Clear();
 
+            /* Populate the radio button controls. */
             for (int x = 0; x < numberOfChoices; x++)
             {
                 List<EquipmentChoice> obj;
@@ -41,8 +66,9 @@ namespace CharacterManager.UserControls
                 if (obj.Count > 0)
                 {
                     RadioButton myButton = new RadioButton();
+                    myButton.Size = new Size(140, 30);
+                    yloc = ((groupBox1.Height / 2) - (myButton.Height / 2)) + 2;
                     myButton.Location = new Point(xloc, yloc);
-                    myButton.Size = new Size(140, 40);
 
                     String descriptions = "";
 
@@ -56,6 +82,12 @@ namespace CharacterManager.UserControls
                     myButton.Text = descriptions;
                     groupBox1.Controls.Add(myButton);
                     xloc += (RadioButtonInterval + myButton.Width);
+
+                    ChoiceControlPair pair;
+                    pair.btn = myButton;
+                    pair.equipment = obj;
+
+                    myControlList.Add(pair);
                 }
             }
         }
