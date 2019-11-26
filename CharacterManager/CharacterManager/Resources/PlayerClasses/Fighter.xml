@@ -93,13 +93,13 @@
 		<EquipmentChoiceList>
 			<optionA>
 				<EquipmentChoice>
-					<Equipment>Dungeoneer's pack</Equipment>
+					<Equipment>Dungeoneer's Pack</Equipment>
 					<Quantity>1</Quantity>
 				</EquipmentChoice>		
 			</optionA>
 			<optionB>
 				<EquipmentChoice>
-					<Equipment>Explorer's pack</Equipment>
+					<Equipment>Explorer's Pack</Equipment>
 					<Quantity>1</Quantity>
 				</EquipmentChoice>
 			</optionB>

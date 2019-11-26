@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace CharacterManager.Items
 {
+    [XmlRoot("PlayerItem")]
     [Serializable]
     public class ItemContainer : Items.PlayerItem
     {
         [Serializable]
+   
         public class ContainerContent
         {
             public String Name;

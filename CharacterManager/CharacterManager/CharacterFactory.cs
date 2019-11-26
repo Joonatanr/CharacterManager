@@ -1,4 +1,5 @@
-﻿using CharacterManager.SpecialAttributes;
+﻿using CharacterManager.Items;
+using CharacterManager.SpecialAttributes;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -386,10 +387,16 @@ namespace CharacterManager
         {
             try
             {
-                XmlSerializer reader = new XmlSerializer(typeof(List<Items.PlayerItem>));
+                XmlSerializer reader = new XmlSerializer(typeof(List<Items.PlayerItem>), new Type[] { typeof(ItemContainer) });
                 StreamReader file = new System.IO.StreamReader(filepath);
 
                 GenericItemList = (List<Items.PlayerItem>)reader.Deserialize(file);
+
+                foreach (Items.PlayerItem item in GenericItemList)
+                {
+                    logMessage("Parsed item ->" + item.ItemName + "\n");
+                }
+
                 file.Close();
             }
             catch (Exception ex)

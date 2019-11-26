@@ -200,9 +200,15 @@
 		<Weight>1</Weight>
 		<Cost>10</Cost>
 	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Torch</ItemName>
+		<Description>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</Description>
+		<Weight>1</Weight>
+		<Cost>0.01</Cost>
+	</PlayerItem>
 	
 <!-- Packs and containers -->
-	<ItemContainer>
+	<PlayerItem xsi:type="ItemContainer">
 		<ItemName>Burglar's Pack</ItemName>
 		<Description>Includes a backpack, a bag of 1,000 ball bearings, 10 feet of string, a bell, 5 candles, a crowbar, a hammer, 10 pitons, a hooded lantern, 2 flasks of oil, 5 days rations, a tinderbox, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
 		<Weight>5</Weight>
@@ -265,9 +271,103 @@
 				<Quantity>1</Quantity>
 			</ContainerContent>
 		</ContainedItems>
-	</ItemContainer>
+	</PlayerItem>
 	
-	<ItemContainer>
+	<PlayerItem xsi:type="ItemContainer">
+		<ItemName>Diplomat's Pack</ItemName>
+		<Description>Includes a chest, 2 cases for maps and scrolls, a set of fine clothes, a bottle of ink, an ink pen, a lamp, 2 flasks of oil, 5 sheets of paper, a vial of perfume, sealing wax, and soap. </Description>
+		<Weight>1</Weight>
+		<Cost>39</Cost>
+		<ContainedItems>
+			<ContainerContent>
+				<Name>Chest</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Case, Map or Scroll</Name>
+				<Quantity>2</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Set of Fine Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Bottle of Ink</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Ink Pen</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Lamp</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Oil Flask</Name>
+				<Quantity>2</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Sheet of Paper</Name>
+				<Quantity>5</Quantity>
+			</ContainerContent>			
+			<ContainerContent>
+				<Name>Vial of Perfume</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Sealing Wax</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Soap</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</ContainedItems>
+	</PlayerItem>
+	
+	<PlayerItem xsi:type="ItemContainer">
+		<ItemName>Dungeoneer's Pack</ItemName>
+		<Description>Includes a backpack, a crowbar, a hammer, 10 pitons, 10 torches, a tinderbox, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it</Description>
+		<Weight>1</Weight>
+		<Cost>12</Cost>
+		<ContainedItems>
+			<ContainerContent>
+				<Name>Backpack</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Crowbar</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Hammer</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Pitons</Name>
+				<Quantity>10</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Torch</Name>
+				<Quantity>10</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Rations</Name>
+				<Quantity>10</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Waterskin</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Rope</Name>
+				<Quantity>50</Quantity>
+			</ContainerContent>
+		</ContainedItems>
+	</PlayerItem>
+	
+	<PlayerItem xsi:type="ItemContainer">
 		<ItemName>Case, Crossbow Bolt</ItemName>
 		<Description>This wooden case can hold up to twenty crossbow bolts. </Description>
 		<Weight>10</Weight>
@@ -278,6 +378,19 @@
 				<Quantity>20</Quantity>
 			</ContainerContent>
 		</ContainedItems>
-	</ItemContainer>
+	</PlayerItem>
+	
+	<PlayerItem xsi:type="ItemContainer">
+		<ItemName>Case, Map or Scroll</ItemName>
+		<Description>This cylindrical leather case can hold up to ten rolled-up sheets of paper or five rolled-up sheets of parchment.</Description>
+		<Weight>1</Weight>
+		<Cost>1</Cost>
+		<ContainedItems>
+			<ContainerContent>
+				<Name>Sheet of Paper</Name>
+				<Quantity>10</Quantity>
+			</ContainerContent>
+		</ContainedItems>
+	</PlayerItem>
 	
 </ArrayOfPlayerItem>

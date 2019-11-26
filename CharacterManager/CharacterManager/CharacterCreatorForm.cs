@@ -737,8 +737,9 @@ namespace CharacterManager
             if (myForm.ShowDialog() == DialogResult.OK)
             {
                 myItemList = myForm.SelectedItems;
-                
+
                 /* Add the items to display. */
+                updateEquipmentList();
             }
         }
     }
