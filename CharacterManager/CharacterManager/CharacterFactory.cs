@@ -23,6 +23,7 @@ namespace CharacterManager
         private static List<Items.PlayerArmor> ArmorList;
         private static List<Items.PlayerWeapon> WeaponList;
         private static List<Items.PlayerItem> GenericItemList;
+        private static List<Items.PlayerToolKit> ToolKitItemList;
 
         public static List<String> getMainRacesList()
         {
@@ -79,6 +80,7 @@ namespace CharacterManager
                 parseItemsFromXml("Resources/PlayerItems/PlayerItems.xml");
                 parseArmorFromXml("Resources/PlayerItems/PlayerArmor.xml");
                 parseWeaponsFromXml("Resources/PlayerItems/PlayerWeapon.xml");
+                parseToolkitsFromXml("Resources/PlayerItems/PlayerTools.xml");
 
                 foreach (PlayerRace race in Races)
                 {
@@ -147,6 +149,11 @@ namespace CharacterManager
             if (res == null)
             {
                 res = GenericItemList.Find(i => i.ItemName == name);
+            }
+
+            if (res == null)
+            {
+                res = ToolKitItemList.Find(t => t.ItemName == name);
             }
 
             return res;
@@ -419,14 +426,6 @@ namespace CharacterManager
             {
                 logError("Failed to open file : " + ex.Message);
             }
-
-            /*
-            logMessage("Parsed Armor\n");
-            foreach(Items.PlayerArmor armor in ArmorList)
-            { 
-                logMessage(armor.ToString() + Environment.NewLine);
-            }
-            */
         }
 
         private static void parseWeaponsFromXml(String filepath)
@@ -443,20 +442,22 @@ namespace CharacterManager
             {
                 logError("Failed to open file : " + ex.Message);
             }
+        }
 
-            /*
-            logMessage("Parsed Weapons\n");
-            foreach(Items.PlayerWeapon weapon in WeaponList)
+        private static void parseToolkitsFromXml(String filepath)
+        {
+            try
             {
-                //logMessage(armor.ToString() + Environment.NewLine);
-                logMessage(weapon.ItemName + " : ");
-                logMessage(weapon.Damage.DamageValue + " :->");
-                //logMessage(weapon.rollDamage().ToString());
-                String log;
-                int value = weapon.rollDamage(out log);
-                logMessage("Rolled : " + log + " -> " + value.ToString() + "\n");
+                XmlSerializer reader = new XmlSerializer(typeof(List<Items.PlayerToolKit>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                ToolKitItemList = (List<Items.PlayerToolKit>)reader.Deserialize(file);
+                file.Close();
             }
-            */
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
         }
 
 

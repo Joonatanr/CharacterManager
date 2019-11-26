@@ -1,0 +1,211 @@
+﻿<ArrayOfPlayerToolKit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PlayerToolKit>
+		<ItemName>Alchemist’s Supplies</ItemName>
+		<Description></Description>
+		<Weight>8</Weight>
+		<Cost>50</Cost>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Brewer’s Supplies</ItemName>
+		<Description></Description>
+		<Weight>9</Weight>
+		<Cost>20</Cost>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Calligrapher’s Supplies</ItemName>
+		<Description></Description>
+		<Weight>5</Weight>
+		<Cost>10</Cost>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Carpenter’s Tools</ItemName>
+		<Description></Description>
+		<Weight>6</Weight>
+		<Cost>8</Cost>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Cartographer’s Tools</ItemName>
+		<Description></Description>
+		<Weight>6</Weight>
+		<Cost>15</Cost>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Cobbler’s Tools</ItemName>
+		<Description></Description>
+		<Weight>5</Weight>
+		<Cost>5</Cost>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Cook's Utensils</ItemName>
+		<Description></Description>
+		<Weight>8</Weight>
+		<Cost>1</Cost>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Glassblower's Tools</ItemName>
+		<Description></Description>
+		<Weight>5</Weight>
+		<Cost>30</Cost>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Jeweler's Tools</ItemName>
+		<Description></Description>
+		<Weight>2</Weight>
+		<Cost>25</Cost>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Leatherworker's Tools</ItemName>
+		<Description></Description>
+		<Cost>5</Cost>
+		<Weight>5</Weight>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Mason's Tools</ItemName>
+		<Description></Description>
+		<Cost>10</Cost>
+		<Weight>8</Weight>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Painter's Supplies</ItemName>
+		<Description></Description>
+		<Cost>10</Cost>
+		<Weight>5</Weight>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Potter's Tools</ItemName>
+		<Description></Description>
+		<Cost>10</Cost>
+		<Weight>3</Weight>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Smith's Tools</ItemName>
+		<Description></Description>
+		<Cost>20</Cost>
+		<Weight>8</Weight>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Tinker's Tools</ItemName>
+		<Description></Description>
+		<Cost>50</Cost>
+		<Weight>10</Weight>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+
+	<PlayerToolKit>
+		<ItemName>Weaver's Tools</ItemName>
+		<Description></Description>
+		<Cost>1</Cost>
+		<Weight>5</Weight>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+
+	<PlayerToolKit>
+		<ItemName>Woodcarver's Tools</ItemName>
+		<Description></Description>
+		<Cost>1</Cost>
+		<Weight>5</Weight>
+		<ToolType>TYPE_ARTISAN</ToolType>
+	</PlayerToolKit>
+
+	<PlayerToolKit>
+		<ItemName>Disguise Kit</ItemName>
+		<Description>This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.</Description>
+		<Cost>25</Cost>
+		<Weight>3</Weight>
+		<ToolType>TYPE_GENERIC</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Forgery Kit</ItemName>
+		<Description>This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document.</Description>
+		<Cost>15</Cost>
+		<Weight>5</Weight>
+		<ToolType>TYPE_GENERIC</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Dice Set</ItemName>
+		<Description></Description>
+		<Cost>0.1</Cost>
+		<Weight>0</Weight>
+		<ToolType>TYPE_GAMING</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Dragonchess Set</ItemName>
+		<Description></Description>
+		<Cost>1</Cost>
+		<Weight>0.5</Weight>
+		<ToolType>TYPE_GAMING</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Playing Card Set</ItemName>
+		<Description></Description>
+		<Cost>0.5</Cost>
+		<Weight>0</Weight>
+		<ToolType>TYPE_GAMING</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Three-Dragon Ante Set</ItemName>
+		<Description></Description>
+		<Cost>1</Cost>
+		<Weight>0</Weight>
+		<ToolType>TYPE_GAMING</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Herbalism Kit</ItemName>
+		<Description>This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing. </Description>
+		<Weight>3</Weight>
+		<Cost>5</Cost>
+		<ToolType>TYPE_GENERIC</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Bagpipes</ItemName>
+		<Description></Description>
+		<Weight>5</Weight>
+		<Cost>30</Cost>
+		<ToolType>TYPE_MUSICAL</ToolType>
+	</PlayerToolKit>
+	
+	<PlayerToolKit>
+		<ItemName>Drum</ItemName>
+		<Description></Description>
+		<Weight>3</Weight>
+		<Cost>6</Cost>
+		<ToolType>TYPE_MUSICAL</ToolType>
+	</PlayerToolKit>
+	
+</ArrayOfPlayerToolKit>
+	
