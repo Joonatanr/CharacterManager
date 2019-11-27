@@ -111,6 +111,11 @@ namespace CharacterManager
 
                 //9. Set Player alignment.
                 CreatedCharacter.Alignment = alignmentChoice1.getSelectedAlignment();
+
+                //10. Set Player Equipment.
+                CreatedCharacter.CharacterWeapons = userControlGenericEquipmentList1.getWeaponList();
+                CreatedCharacter.CharacterArmors = userControlGenericEquipmentList1.getArmorList();
+                CreatedCharacter.CharacterGeneralEquipment = userControlGenericEquipmentList1.getAllGeneralEquipment();
             }
             else
             {

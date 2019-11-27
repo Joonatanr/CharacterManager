@@ -74,7 +74,6 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -140,7 +139,6 @@
             // tabPageCharacter
             // 
             this.tabPageCharacter.BackColor = System.Drawing.Color.White;
-            this.tabPageCharacter.Controls.Add(this.button1);
             this.tabPageCharacter.Controls.Add(this.userControlGenericAbilitiesList1);
             this.tabPageCharacter.Controls.Add(this.groupBox4);
             this.tabPageCharacter.Controls.Add(this.richTextBox1);
@@ -175,7 +173,7 @@
             this.groupBox4.Controls.Add(this.userControlHitPoints1);
             this.groupBox4.Location = new System.Drawing.Point(425, 122);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(261, 175);
+            this.groupBox4.Size = new System.Drawing.Size(261, 172);
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             // 
@@ -529,16 +527,6 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(707, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -613,7 +601,6 @@
         private UserControls.UserControlGenericValue userControlSpeed;
         private UserControls.UserControlGenericValue userControlInitiative;
         private UserControls.UserControlGenericAbilitiesList userControlGenericAbilitiesList1;
-        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -76,6 +77,10 @@ namespace CharacterManager
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> SavingThrowProficiencies = new List<String>();
         public List<String> CharacterAbilities = new List<String>();
+
+        public List<PlayerWeapon> CharacterWeapons = new List<PlayerWeapon>();
+        public List<PlayerArmor> CharacterArmors = new List<PlayerArmor>();
+        public List<PlayerItem> CharacterGeneralEquipment = new List<PlayerItem>();
 
         public int Level;
         public int ProficiencyBonus;

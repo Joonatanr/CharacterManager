@@ -11,11 +11,8 @@ namespace CharacterManager.UserControls
 {
     class UserControlGenericEquipmentList : UserControlGenericListBase
     {
-        private List<PlayerItem> allItemsList = new List<PlayerItem>();
-
         /* This one might be updated separately... */
         private List<PlayerToolKit> toolList = new List<PlayerToolKit>();
-
         private List<PlayerWeapon> wList = new List<PlayerWeapon>();
         private List<PlayerArmor> aList = new List<PlayerArmor>();
         private List<PlayerItem> eList = new List<PlayerItem>();
@@ -23,21 +20,57 @@ namespace CharacterManager.UserControls
         /* Updates all items. */
         public void setEquipmentList(List<PlayerItem> equipment)
         {
-            allItemsList = equipment;
-            updateLists();
+            updateLists(equipment);
             updateInfoButtons();
-            //TODO : Add info buttons.
-
 
             this.Invalidate();
         }
 
+        /* TODO : Returns all items regardless of type. */
+        public List<PlayerItem> getEquipmentList()
+        {
+            List<PlayerItem> res = new List<PlayerItem>();
+
+            /* TODO : This is a bit of a mess, maybe we should keep all items separately??? */
+
+            return res;
+        }
+
+        public List<PlayerWeapon> getWeaponList()
+        {
+            return wList;
+        }
+
+        public List<PlayerArmor> getArmorList()
+        {
+            return aList;
+        }
+
+        public List<PlayerItem> getAllGeneralEquipment()
+        {
+            /* We return everything that is not a weapon or an armor. */
+            List<PlayerItem> res = new List<PlayerItem>();
+
+            foreach (PlayerToolKit tool in toolList)
+            {
+                res.Add(tool);
+            }
+
+            foreach (PlayerItem equipment in eList)
+            {
+                res.Add(equipment);
+            }
+
+            return res;
+        }
+
         /* Separate function for updating the toolkit list. These can change independetly of the rest of the equipment. */
+        /* TODO : We may need to handle this in a different manner... */
         public void setToolkitList(List<PlayerToolKit> toolsets)
         {
             this.toolList = toolsets;
 
-            updateLists();
+            toolList = toolsets;
             updateInfoButtons();
             this.Invalidate();
         }
@@ -109,7 +142,7 @@ namespace CharacterManager.UserControls
         }
 
 
-        private void updateLists()
+        private void updateLists(List<PlayerItem> allItemsList)
         {
             wList = new List<PlayerWeapon>();
             aList = new List<PlayerArmor>();
@@ -148,11 +181,6 @@ namespace CharacterManager.UserControls
             
             //Lets draw a descriptive text.
             gfx.DrawString("Items:", font, new SolidBrush(Color.Black), new Point(1, 1));
-
-            if (allItemsList == null)
-            {
-                return;
-            }
 
             y++;
             drawTextOnLine(gfx, "Weapons", y, FontStyle.Bold);

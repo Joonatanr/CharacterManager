@@ -172,11 +172,6 @@ namespace CharacterManager
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button1.Parent.Refresh();
-        }
     }
 
     public static class RichTextBoxExtensions
