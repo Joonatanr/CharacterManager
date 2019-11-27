@@ -262,7 +262,7 @@ namespace CharacterManager
 
             //Lets resolve the character attribute list.
             List<PlayerAbility> resultList = new List<PlayerAbility>();
-            foreach (String attribName in raw.CharacterAttributes)
+            foreach (String attribName in raw.CharacterAbilities)
             {
                 PlayerAbility member = AttributesList.Find(attrib => attrib.AttributeName == attribName);
                 if (member != null)
@@ -274,7 +274,7 @@ namespace CharacterManager
                     return false;
                 }
             }
-            raw.setCharacterAttributesList(resultList);
+            raw.setCharacterAbilitiesList(resultList);
 
             return true;
         }

@@ -1,33 +1,33 @@
-﻿<ArrayOfPlayerAttribute xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+﻿<ArrayOfPlayerAbility xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	
-	<PlayerAttribute>
+	<PlayerAbility>
 		<AttributeName>Darkvision</AttributeName>
 		<Description>You can see in dim light within 60 feet as if it were bright light and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</Description>
-	</PlayerAttribute>
+	</PlayerAbility>
 	
-	<PlayerAttribute>
+	<PlayerAbility>
 		<AttributeName>Dwarven Resilience</AttributeName>
 		<Description>You have advantage on saving throws against poison, and you have resistance against poison damage.</Description>
-	</PlayerAttribute>
+	</PlayerAbility>
 	
-	<PlayerAttribute>
+	<PlayerAbility>
 		<AttributeName>Dwarven Toughness</AttributeName>
 		<Description>Your hit point maximum increased by 1, and it increases by 1 every time you gain a level.</Description>
-	</PlayerAttribute>
+	</PlayerAbility>
 	
-	<PlayerAttribute>
+	<PlayerAbility>
 		<AttributeName>Stonecunning</AttributeName>
 		<Description> Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</Description>
-	</PlayerAttribute>
+	</PlayerAbility>
 	
-	<PlayerAttribute>
+	<PlayerAbility>
 		<AttributeName>Fey Ancestry</AttributeName>
 		<Description>You have advantage on saving throws against being charmed, and magic can’t put you to sleep.</Description>
-	</PlayerAttribute>
+	</PlayerAbility>
 	
-	<PlayerAttribute>
+	<PlayerAbility>
 		<AttributeName>Trance</AttributeName>
 		<Description> Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have becom e reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep. </Description>
-	</PlayerAttribute>
+	</PlayerAbility>
 	
-</ArrayOfPlayerAttribute>
+</ArrayOfPlayerAbility>

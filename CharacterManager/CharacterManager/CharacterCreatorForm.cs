@@ -107,7 +107,7 @@ namespace CharacterManager
                 CreatedCharacter.CurrentHitPoints = currentMaxHp;
 
                 //8. Set Player attributes.
-                CreatedCharacter.setCharacterAttributesList(myAttributeList);
+                CreatedCharacter.setCharacterAbilitiesList(myAttributeList);
 
                 //9. Set Player alignment.
                 CreatedCharacter.Alignment = alignmentChoice1.getSelectedAlignment();
@@ -321,7 +321,7 @@ namespace CharacterManager
             //Final step, we resolve the special attributes. For this we need to try and create a test character.
             if (CreateCharacter(out msg) == true && CreatedCharacter != null)
             {
-                foreach (PlayerAbility attrib in CreatedCharacter.CharacterAttributeObjectList)
+                foreach (PlayerAbility attrib in CreatedCharacter.CharacterAbilitiesObjectList)
                 {
                     if (attrib is SpecialAttributes.SpecialAttribute)
                     {

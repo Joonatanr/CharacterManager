@@ -35,12 +35,25 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.userControlSpeed = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlInitiative = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlArmorClass = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlHitPoints1 = new CharacterManager.UserControls.UserControlHitPoints();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBoxPerception = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.textBoxProfBonus = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.AttributeDisplayCHA = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplaySTR = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayINT = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayWIS = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxRace = new System.Windows.Forms.TextBox();
@@ -60,29 +73,17 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.userControlArmorClass = new CharacterManager.UserControls.UserControlGenericValue();
-            this.userControlHitPoints1 = new CharacterManager.UserControls.UserControlHitPoints();
-            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
-            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
-            this.AttributeDisplayCHA = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplaySTR = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayINT = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayWIS = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
-            this.userControlInitiative = new CharacterManager.UserControls.UserControlGenericValue();
-            this.userControlSpeed = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlGenericAbilitiesList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageCharacter.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxName
@@ -137,6 +138,7 @@
             // 
             // tabPageCharacter
             // 
+            this.tabPageCharacter.Controls.Add(this.userControlGenericAbilitiesList1);
             this.tabPageCharacter.Controls.Add(this.groupBox4);
             this.tabPageCharacter.Controls.Add(this.richTextBox1);
             this.tabPageCharacter.Controls.Add(this.textBoxPerception);
@@ -154,6 +156,57 @@
             this.tabPageCharacter.TabIndex = 0;
             this.tabPageCharacter.Text = "Character";
             this.tabPageCharacter.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.userControlSpeed);
+            this.groupBox4.Controls.Add(this.userControlInitiative);
+            this.groupBox4.Controls.Add(this.userControlArmorClass);
+            this.groupBox4.Controls.Add(this.userControlHitPoints1);
+            this.groupBox4.Location = new System.Drawing.Point(425, 122);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(261, 175);
+            this.groupBox4.TabIndex = 29;
+            this.groupBox4.TabStop = false;
+            // 
+            // userControlSpeed
+            // 
+            this.userControlSpeed.IsBorder = true;
+            this.userControlSpeed.Label = "Speed";
+            this.userControlSpeed.Location = new System.Drawing.Point(176, 19);
+            this.userControlSpeed.Name = "userControlSpeed";
+            this.userControlSpeed.Size = new System.Drawing.Size(80, 58);
+            this.userControlSpeed.TabIndex = 31;
+            this.userControlSpeed.Value = 0;
+            // 
+            // userControlInitiative
+            // 
+            this.userControlInitiative.IsBorder = true;
+            this.userControlInitiative.Label = "Initiative";
+            this.userControlInitiative.Location = new System.Drawing.Point(91, 19);
+            this.userControlInitiative.Name = "userControlInitiative";
+            this.userControlInitiative.Size = new System.Drawing.Size(80, 58);
+            this.userControlInitiative.TabIndex = 30;
+            this.userControlInitiative.Value = 0;
+            // 
+            // userControlArmorClass
+            // 
+            this.userControlArmorClass.IsBorder = true;
+            this.userControlArmorClass.Label = "Armor Class";
+            this.userControlArmorClass.Location = new System.Drawing.Point(6, 19);
+            this.userControlArmorClass.Name = "userControlArmorClass";
+            this.userControlArmorClass.Size = new System.Drawing.Size(80, 58);
+            this.userControlArmorClass.TabIndex = 29;
+            this.userControlArmorClass.Value = 0;
+            // 
+            // userControlHitPoints1
+            // 
+            this.userControlHitPoints1.CurrentHitPoints = 10;
+            this.userControlHitPoints1.IsBorder = true;
+            this.userControlHitPoints1.Location = new System.Drawing.Point(53, 83);
+            this.userControlHitPoints1.Name = "userControlHitPoints1";
+            this.userControlHitPoints1.Size = new System.Drawing.Size(156, 68);
+            this.userControlHitPoints1.TabIndex = 28;
             // 
             // richTextBox1
             // 
@@ -181,6 +234,14 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Passive Wisdom(Perception)";
             // 
+            // userControlSkillProficiencies1
+            // 
+            this.userControlSkillProficiencies1.isSetDataVisible = false;
+            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(158, 297);
+            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
+            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(261, 515);
+            this.userControlSkillProficiencies1.TabIndex = 25;
+            // 
             // textBoxProfBonus
             // 
             this.textBoxProfBonus.Location = new System.Drawing.Point(282, 103);
@@ -199,6 +260,13 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Proficiency Bonus";
             // 
+            // userControlSavingThrows1
+            // 
+            this.userControlSavingThrows1.Location = new System.Drawing.Point(157, 119);
+            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
+            this.userControlSavingThrows1.Size = new System.Drawing.Size(262, 178);
+            this.userControlSavingThrows1.TabIndex = 16;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.AttributeDisplayCHA);
@@ -213,6 +281,61 @@
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Base attributes";
+            // 
+            // AttributeDisplayCHA
+            // 
+            this.AttributeDisplayCHA.AttributeName = "CHARISMA";
+            this.AttributeDisplayCHA.AttributeValue = 0;
+            this.AttributeDisplayCHA.Location = new System.Drawing.Point(12, 596);
+            this.AttributeDisplayCHA.Name = "AttributeDisplayCHA";
+            this.AttributeDisplayCHA.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayCHA.TabIndex = 13;
+            // 
+            // AttributeDisplaySTR
+            // 
+            this.AttributeDisplaySTR.AttributeName = "STRENGTH";
+            this.AttributeDisplaySTR.AttributeValue = 0;
+            this.AttributeDisplaySTR.Location = new System.Drawing.Point(12, 16);
+            this.AttributeDisplaySTR.Name = "AttributeDisplaySTR";
+            this.AttributeDisplaySTR.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplaySTR.TabIndex = 8;
+            // 
+            // AttributeDisplayINT
+            // 
+            this.AttributeDisplayINT.AttributeName = "INTELLIGENCE";
+            this.AttributeDisplayINT.AttributeValue = 0;
+            this.AttributeDisplayINT.Location = new System.Drawing.Point(12, 132);
+            this.AttributeDisplayINT.Name = "AttributeDisplayINT";
+            this.AttributeDisplayINT.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayINT.TabIndex = 9;
+            this.AttributeDisplayINT.Load += new System.EventHandler(this.AttributeDisplayINT_Load);
+            // 
+            // AttributeDisplayWIS
+            // 
+            this.AttributeDisplayWIS.AttributeName = "WISDOM";
+            this.AttributeDisplayWIS.AttributeValue = 0;
+            this.AttributeDisplayWIS.Location = new System.Drawing.Point(12, 480);
+            this.AttributeDisplayWIS.Name = "AttributeDisplayWIS";
+            this.AttributeDisplayWIS.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayWIS.TabIndex = 12;
+            // 
+            // AttributeDisplayDEX
+            // 
+            this.AttributeDisplayDEX.AttributeName = "DEXTERITY";
+            this.AttributeDisplayDEX.AttributeValue = 0;
+            this.AttributeDisplayDEX.Location = new System.Drawing.Point(12, 248);
+            this.AttributeDisplayDEX.Name = "AttributeDisplayDEX";
+            this.AttributeDisplayDEX.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayDEX.TabIndex = 10;
+            // 
+            // AttributeDisplayCON
+            // 
+            this.AttributeDisplayCON.AttributeName = "CONSTITUTION";
+            this.AttributeDisplayCON.AttributeValue = 0;
+            this.AttributeDisplayCON.Location = new System.Drawing.Point(12, 364);
+            this.AttributeDisplayCON.Name = "AttributeDisplayCON";
+            this.AttributeDisplayCON.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayCON.TabIndex = 11;
             // 
             // groupBox1
             // 
@@ -396,126 +519,13 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
-            // groupBox4
+            // userControlGenericAbilitiesList1
             // 
-            this.groupBox4.Controls.Add(this.userControlSpeed);
-            this.groupBox4.Controls.Add(this.userControlInitiative);
-            this.groupBox4.Controls.Add(this.userControlArmorClass);
-            this.groupBox4.Controls.Add(this.userControlHitPoints1);
-            this.groupBox4.Location = new System.Drawing.Point(504, 229);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(261, 195);
-            this.groupBox4.TabIndex = 29;
-            this.groupBox4.TabStop = false;
-            // 
-            // userControlArmorClass
-            // 
-            this.userControlArmorClass.IsBorder = true;
-            this.userControlArmorClass.Label = "Armor Class";
-            this.userControlArmorClass.Location = new System.Drawing.Point(6, 19);
-            this.userControlArmorClass.Name = "userControlArmorClass";
-            this.userControlArmorClass.Size = new System.Drawing.Size(80, 58);
-            this.userControlArmorClass.TabIndex = 29;
-            this.userControlArmorClass.Value = 0;
-            // 
-            // userControlHitPoints1
-            // 
-            this.userControlHitPoints1.CurrentHitPoints = 10;
-            this.userControlHitPoints1.IsBorder = true;
-            this.userControlHitPoints1.Location = new System.Drawing.Point(52, 116);
-            this.userControlHitPoints1.Name = "userControlHitPoints1";
-            this.userControlHitPoints1.Size = new System.Drawing.Size(156, 68);
-            this.userControlHitPoints1.TabIndex = 28;
-            // 
-            // userControlSkillProficiencies1
-            // 
-            this.userControlSkillProficiencies1.isSetDataVisible = false;
-            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(158, 297);
-            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
-            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(261, 515);
-            this.userControlSkillProficiencies1.TabIndex = 25;
-            // 
-            // userControlSavingThrows1
-            // 
-            this.userControlSavingThrows1.Location = new System.Drawing.Point(157, 119);
-            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
-            this.userControlSavingThrows1.Size = new System.Drawing.Size(262, 178);
-            this.userControlSavingThrows1.TabIndex = 16;
-            // 
-            // AttributeDisplayCHA
-            // 
-            this.AttributeDisplayCHA.AttributeName = "CHARISMA";
-            this.AttributeDisplayCHA.AttributeValue = 0;
-            this.AttributeDisplayCHA.Location = new System.Drawing.Point(12, 596);
-            this.AttributeDisplayCHA.Name = "AttributeDisplayCHA";
-            this.AttributeDisplayCHA.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayCHA.TabIndex = 13;
-            // 
-            // AttributeDisplaySTR
-            // 
-            this.AttributeDisplaySTR.AttributeName = "STRENGTH";
-            this.AttributeDisplaySTR.AttributeValue = 0;
-            this.AttributeDisplaySTR.Location = new System.Drawing.Point(12, 16);
-            this.AttributeDisplaySTR.Name = "AttributeDisplaySTR";
-            this.AttributeDisplaySTR.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplaySTR.TabIndex = 8;
-            // 
-            // AttributeDisplayINT
-            // 
-            this.AttributeDisplayINT.AttributeName = "INTELLIGENCE";
-            this.AttributeDisplayINT.AttributeValue = 0;
-            this.AttributeDisplayINT.Location = new System.Drawing.Point(12, 132);
-            this.AttributeDisplayINT.Name = "AttributeDisplayINT";
-            this.AttributeDisplayINT.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayINT.TabIndex = 9;
-            this.AttributeDisplayINT.Load += new System.EventHandler(this.AttributeDisplayINT_Load);
-            // 
-            // AttributeDisplayWIS
-            // 
-            this.AttributeDisplayWIS.AttributeName = "WISDOM";
-            this.AttributeDisplayWIS.AttributeValue = 0;
-            this.AttributeDisplayWIS.Location = new System.Drawing.Point(12, 480);
-            this.AttributeDisplayWIS.Name = "AttributeDisplayWIS";
-            this.AttributeDisplayWIS.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayWIS.TabIndex = 12;
-            // 
-            // AttributeDisplayDEX
-            // 
-            this.AttributeDisplayDEX.AttributeName = "DEXTERITY";
-            this.AttributeDisplayDEX.AttributeValue = 0;
-            this.AttributeDisplayDEX.Location = new System.Drawing.Point(12, 248);
-            this.AttributeDisplayDEX.Name = "AttributeDisplayDEX";
-            this.AttributeDisplayDEX.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayDEX.TabIndex = 10;
-            // 
-            // AttributeDisplayCON
-            // 
-            this.AttributeDisplayCON.AttributeName = "CONSTITUTION";
-            this.AttributeDisplayCON.AttributeValue = 0;
-            this.AttributeDisplayCON.Location = new System.Drawing.Point(12, 364);
-            this.AttributeDisplayCON.Name = "AttributeDisplayCON";
-            this.AttributeDisplayCON.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayCON.TabIndex = 11;
-            // 
-            // userControlInitiative
-            // 
-            this.userControlInitiative.IsBorder = true;
-            this.userControlInitiative.Label = "Initiative";
-            this.userControlInitiative.Location = new System.Drawing.Point(91, 19);
-            this.userControlInitiative.Name = "userControlInitiative";
-            this.userControlInitiative.Size = new System.Drawing.Size(80, 58);
-            this.userControlInitiative.TabIndex = 30;
-            this.userControlInitiative.Value = 0;
-            // 
-            // userControlSpeed
-            // 
-            this.userControlSpeed.IsBorder = true;
-            this.userControlSpeed.Label = "Speed";
-            this.userControlSpeed.Location = new System.Drawing.Point(176, 19);
-            this.userControlSpeed.Name = "userControlSpeed";
-            this.userControlSpeed.Size = new System.Drawing.Size(80, 58);
-            this.userControlSpeed.TabIndex = 31;
-            this.userControlSpeed.Value = 0;
+            this.userControlGenericAbilitiesList1.IsBorder = true;
+            this.userControlGenericAbilitiesList1.Location = new System.Drawing.Point(760, 297);
+            this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
+            this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(256, 409);
+            this.userControlGenericAbilitiesList1.TabIndex = 30;
             // 
             // Form1
             // 
@@ -533,6 +543,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageCharacter.ResumeLayout(false);
             this.tabPageCharacter.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -540,7 +551,6 @@
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -590,6 +600,7 @@
         private UserControls.UserControlGenericValue userControlArmorClass;
         private UserControls.UserControlGenericValue userControlSpeed;
         private UserControls.UserControlGenericValue userControlInitiative;
+        private UserControls.UserControlGenericAbilitiesList userControlGenericAbilitiesList1;
     }
 }
 

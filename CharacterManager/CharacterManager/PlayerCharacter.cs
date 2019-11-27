@@ -75,7 +75,7 @@ namespace CharacterManager
         public List<String> WeaponProficiencies = new List<String>();
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> SavingThrowProficiencies = new List<String>();
-        public List<String> CharacterAttributes = new List<String>();
+        public List<String> CharacterAbilities = new List<String>();
 
         public int Level;
         public int ProficiencyBonus;
@@ -100,7 +100,7 @@ namespace CharacterManager
         }
 
         [XmlIgnore]
-        public List<PlayerAbility> CharacterAttributeObjectList = new List<PlayerAbility>();
+        public List<PlayerAbility> CharacterAbilitiesObjectList = new List<PlayerAbility>();
 
         [XmlIgnore]
         public int StrengthAttribute
@@ -245,13 +245,13 @@ namespace CharacterManager
         }
 
 
-        public void setCharacterAttributesList(List<PlayerAbility> attribList)
+        public void setCharacterAbilitiesList(List<PlayerAbility> abilityList)
         {
-            CharacterAttributeObjectList = attribList;
-            CharacterAttributes = new List<String>();
-            foreach (PlayerAbility obj in attribList)
+            CharacterAbilitiesObjectList = abilityList;
+            CharacterAbilities = new List<String>();
+            foreach (PlayerAbility obj in abilityList)
             {
-                CharacterAttributes.Add(obj.AttributeName);
+                CharacterAbilities.Add(obj.AttributeName);
             }
         }
 
