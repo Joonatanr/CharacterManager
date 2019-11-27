@@ -61,12 +61,25 @@ namespace CharacterManager.Items
 
         public WeaponDamage Damage;
         public WeaponDamage TwoHandedDamage;
+        public Boolean      IsEquipped = false;
 
         public int rollDamage(out String log)
         {
             DieRollValue value = new DieRollValue(Damage.DamageValue);
             return value.RollValue(out log);
-        } 
- 
+        }
+
+        public override string getExtendedDescription()
+        {
+            String res = ItemName + ":\n";
+            res += "Base damage : " + Damage.DamageValue + " " + Damage.Type + " damage\n";
+
+            return res;
+        }
+
+        public PlayerWeapon Clone()
+        {
+            return (PlayerWeapon)this.MemberwiseClone();
+        }
     }
 }

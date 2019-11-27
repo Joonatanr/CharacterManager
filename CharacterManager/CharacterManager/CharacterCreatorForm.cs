@@ -1,4 +1,5 @@
-﻿using CharacterManager.UserControls;
+﻿using CharacterManager.Items;
+using CharacterManager.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -113,8 +114,58 @@ namespace CharacterManager
                 CreatedCharacter.Alignment = alignmentChoice1.getSelectedAlignment();
 
                 //10. Set Player Equipment.
-                CreatedCharacter.CharacterWeapons = userControlGenericEquipmentList1.getWeaponList();
-                CreatedCharacter.CharacterArmors = userControlGenericEquipmentList1.getArmorList();
+
+                /* Note that each armor or weapon can be separate, so we only use quantity 1 here. */
+                /* 10.1 -> Add Weapons*/
+                List<PlayerWeapon> wList = userControlGenericEquipmentList1.getWeaponList();
+                List<PlayerWeapon> duplicatesList = new List<PlayerWeapon>();
+
+                foreach(PlayerWeapon w in wList)
+                {
+                    if (w.Quantity > 1)
+                    {
+                        int total = w.Quantity;
+                        for (int x = total; x > 1; x--)
+                        {
+                            PlayerWeapon duplicate = w.Clone();
+                            duplicate.Quantity = 1;
+                            duplicatesList.Add(duplicate);
+                            w.Quantity--;
+                        }                        
+                    }
+                }
+
+                foreach(PlayerWeapon w in duplicatesList)
+                {
+                    wList.Add(w);
+                }
+                CreatedCharacter.CharacterWeapons = wList;
+
+                /*10.2 -> Add Armor*/
+                List<PlayerArmor> aList = userControlGenericEquipmentList1.getArmorList();
+                List<PlayerArmor> duplicateArmorList = new List<PlayerArmor>();
+
+                foreach (PlayerArmor a in aList)
+                {
+                    if (a.Quantity > 1)
+                    {
+                        int total = a.Quantity;
+                        for (int x = total; x > 1; x--)
+                        {
+                            PlayerArmor duplicate = a.Clone();
+                            duplicate.Quantity = 1;
+                            duplicateArmorList.Add(duplicate);
+                            a.Quantity--;
+                        }
+                    }
+                }
+
+                foreach (PlayerArmor a in duplicateArmorList)
+                {
+                    aList.Add(a);
+                }
+
+                /* 10.3 Add generic Equipment and tools. */
                 CreatedCharacter.CharacterGeneralEquipment = userControlGenericEquipmentList1.getAllGeneralEquipment();
             }
             else

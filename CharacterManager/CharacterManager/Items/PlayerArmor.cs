@@ -28,5 +28,10 @@ namespace CharacterManager.Items
         {
             return "Name : " + this.ItemName + "AC : " + this.ArmorClass.ToString();
         }
+
+        public PlayerArmor Clone()
+        {
+            return (PlayerArmor)this.MemberwiseClone();
+        }
     }
 }

@@ -160,6 +160,9 @@
     <Compile Include="UserControls\UserControlToolProficiencyChoice.Designer.cs">
       <DependentUpon>UserControlToolProficiencyChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlWeaponsHandler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="CharacterCreatorForm.resx">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
     </EmbeddedResource>

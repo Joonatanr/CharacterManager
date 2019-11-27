@@ -22,5 +22,10 @@ namespace CharacterManager.Items
         {
             this.ItemName = "UNKNOWN";
         }
+
+        public virtual String getExtendedDescription()
+        {
+            return Description;
+        }
     }
 }

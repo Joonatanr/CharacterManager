@@ -108,6 +108,9 @@ namespace CharacterManager
 
                 //9. Update character abilities.
                 userControlGenericAbilitiesList1.setAttributeList(activeCharacter.CharacterAbilitiesObjectList);
+
+                //10. Update weapons.
+                userControlWeaponsHandler1.setWeaponList(activeCharacter.CharacterWeapons);
             }
         }
 
