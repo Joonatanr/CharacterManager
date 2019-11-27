@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 namespace CharacterManager
 {
     [Serializable]
-    public class PlayerAttribute
+    public class PlayerAbility
     {
 
         public string Description;
         public string AttributeName;
 
-        public PlayerAttribute()
+        public PlayerAbility()
         {
             AttributeName = "UNKNOWN";
             Description = "<BLANK>";
         }
 
-        public PlayerAttribute(String name)
+        public PlayerAbility(String name)
         {
             AttributeName = name;
         }

@@ -29,7 +29,7 @@ namespace CharacterManager
         private int currentPassivePerception = 0;
         private int currentMaxHp = 0;
 
-        private List<PlayerAttribute> myAttributeList = new List<PlayerAttribute>();
+        private List<PlayerAbility> myAttributeList = new List<PlayerAbility>();
         private List<Items.PlayerItem> myItemList = new List<Items.PlayerItem>();
 
         public CharacterCreatorForm()
@@ -321,7 +321,7 @@ namespace CharacterManager
             //Final step, we resolve the special attributes. For this we need to try and create a test character.
             if (CreateCharacter(out msg) == true && CreatedCharacter != null)
             {
-                foreach (PlayerAttribute attrib in CreatedCharacter.CharacterAttributeObjectList)
+                foreach (PlayerAbility attrib in CreatedCharacter.CharacterAttributeObjectList)
                 {
                     if (attrib is SpecialAttributes.SpecialAttribute)
                     {
@@ -398,14 +398,14 @@ namespace CharacterManager
                 return;
             }
 
-            foreach (PlayerAttribute attrib in SelectedMainRace.getPlayerAttributes())
+            foreach (PlayerAbility attrib in SelectedMainRace.getPlayerAttributes())
             {
                 myAttributeList.Add(attrib);
             }
 
             if (SelectedSubRace != null)
             {
-                foreach (PlayerAttribute attrib in SelectedSubRace.getPlayerAttributes())
+                foreach (PlayerAbility attrib in SelectedSubRace.getPlayerAttributes())
                 {
                     myAttributeList.Add(attrib);
                 }

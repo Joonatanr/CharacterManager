@@ -12,14 +12,14 @@ namespace CharacterManager.UserControls
 {
     public partial class UserControlGenericAbilitiesList : UserControlGenericListBase
     {
-        private List<PlayerAttribute> listOfAttributes = new List<PlayerAttribute>();
+        private List<PlayerAbility> listOfAttributes = new List<PlayerAbility>();
 
         public UserControlGenericAbilitiesList() : base()
         {
             InitializeComponent();
         }
 
-        public void setAttributeList(List<PlayerAttribute> target)
+        public void setAttributeList(List<PlayerAbility> target)
         {
             listOfAttributes = target;
             List<Control> myListToRemove = new List<Control>();
@@ -40,7 +40,7 @@ namespace CharacterManager.UserControls
 
             //Lets test adding a button for reach of the attributes.
             int y = lineInterval;
-            foreach (PlayerAttribute attrib in listOfAttributes)
+            foreach (PlayerAbility attrib in listOfAttributes)
             {
                 y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib.Description);
@@ -61,7 +61,7 @@ namespace CharacterManager.UserControls
             int y = 1;
             if (listOfAttributes != null)
             {
-                foreach (PlayerAttribute attrib in listOfAttributes)
+                foreach (PlayerAbility attrib in listOfAttributes)
                 {
                     drawTextOnLine(gfx, attrib.AttributeName, y);
                     y++;

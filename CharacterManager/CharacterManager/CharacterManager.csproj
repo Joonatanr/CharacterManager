@@ -71,7 +71,7 @@
     <Compile Include="Items\PlayerItem.cs" />
     <Compile Include="Items\PlayerToolKit.cs" />
     <Compile Include="Items\PlayerWeapon.cs" />
-    <Compile Include="PlayerAttribute.cs" />
+    <Compile Include="PlayerAbility.cs" />
     <Compile Include="PlayerCharacter.cs" />
     <Compile Include="PlayerClass.cs" />
     <Compile Include="PlayerRace.cs" />

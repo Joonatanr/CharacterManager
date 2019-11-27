@@ -100,7 +100,7 @@ namespace CharacterManager
         }
 
         [XmlIgnore]
-        public List<PlayerAttribute> CharacterAttributeObjectList = new List<PlayerAttribute>();
+        public List<PlayerAbility> CharacterAttributeObjectList = new List<PlayerAbility>();
 
         [XmlIgnore]
         public int StrengthAttribute
@@ -245,11 +245,11 @@ namespace CharacterManager
         }
 
 
-        public void setCharacterAttributesList(List<PlayerAttribute> attribList)
+        public void setCharacterAttributesList(List<PlayerAbility> attribList)
         {
             CharacterAttributeObjectList = attribList;
             CharacterAttributes = new List<String>();
-            foreach (PlayerAttribute obj in attribList)
+            foreach (PlayerAbility obj in attribList)
             {
                 CharacterAttributes.Add(obj.AttributeName);
             }

@@ -29,7 +29,7 @@ namespace CharacterManager
         public List<PlayerRace> SubRaces = new List<PlayerRace>();
 
         [XmlIgnore]
-        private List<PlayerAttribute> PlayerAttributeReferences = new List<PlayerAttribute>(); /* This contains a list of references that need to be resolved. */
+        private List<PlayerAbility> PlayerAttributeReferences = new List<PlayerAbility>(); /* This contains a list of references that need to be resolved. */
 
 
         private bool isInitialized = false;
@@ -44,7 +44,7 @@ namespace CharacterManager
             RaceName = Name;
         }
 
-        public List<PlayerAttribute> getPlayerAttributes()
+        public List<PlayerAbility> getPlayerAttributes()
         {
             if (!isInitialized)
             {
@@ -53,13 +53,13 @@ namespace CharacterManager
             return PlayerAttributeReferences;
         }
 
-        public void Initialize(List<PlayerAttribute> listOfAvailableAttributes)
+        public void Initialize(List<PlayerAbility> listOfAvailableAttributes)
         {
             isInitialized = true;
 
             foreach (String attribStr in PlayerAttributes)
             {
-                PlayerAttribute attrib = listOfAvailableAttributes.Find(a => a.AttributeName == attribStr);
+                PlayerAbility attrib = listOfAvailableAttributes.Find(a => a.AttributeName == attribStr);
                 if (attrib != null)
                 {
                     PlayerAttributeReferences.Add(attrib);

@@ -16,7 +16,7 @@ namespace CharacterManager
         private static TextBoxWriter errorReporter;
         private static List<PlayerRace> Races;
         private static List<PlayerClass> Classes;
-        private static List<PlayerAttribute> AttributesList;
+        private static List<PlayerAbility> AttributesList;
         private static List<CharacterManager.SpecialAttributes.SpecialAttribute> SpecialAttributeList = new List<CharacterManager.SpecialAttributes.SpecialAttribute>();
         private static Boolean isInitialized = false;
 
@@ -261,10 +261,10 @@ namespace CharacterManager
             raw.setMainAndSubrace(mainRace, SubRace);
 
             //Lets resolve the character attribute list.
-            List<PlayerAttribute> resultList = new List<PlayerAttribute>();
+            List<PlayerAbility> resultList = new List<PlayerAbility>();
             foreach (String attribName in raw.CharacterAttributes)
             {
-                PlayerAttribute member = AttributesList.Find(attrib => attrib.AttributeName == attribName);
+                PlayerAbility member = AttributesList.Find(attrib => attrib.AttributeName == attribName);
                 if (member != null)
                 {
                     resultList.Add(member);
@@ -374,10 +374,10 @@ namespace CharacterManager
         {
             try
             {
-                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerAttribute>));
+                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerAbility>));
                 StreamReader file = new System.IO.StreamReader(filepath);
 
-                AttributesList = (List<PlayerAttribute>)reader.Deserialize(file);
+                AttributesList = (List<PlayerAbility>)reader.Deserialize(file);
                 file.Close();
             }
             catch (Exception ex)
@@ -389,7 +389,7 @@ namespace CharacterManager
             //Lets resolve the special attributes.
             for (int i = 0; i < AttributesList.Count; i++)
             {
-                PlayerAttribute attrib = AttributesList[i];
+                PlayerAbility attrib = AttributesList[i];
                 SpecialAttribute specialAttribute = SpecialAttributeList.Find(spec => spec.AttributeName == attrib.AttributeName);
                 if (specialAttribute != null)
                 {
