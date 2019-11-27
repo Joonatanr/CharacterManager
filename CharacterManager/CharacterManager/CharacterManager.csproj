@@ -109,6 +109,12 @@
     <Compile Include="UserControls\UserControlEquipmentChoice.Designer.cs">
       <DependentUpon>UserControlEquipmentChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlEquipmentChoiceSingle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlEquipmentChoiceSingle.Designer.cs">
+      <DependentUpon>UserControlEquipmentChoiceSingle.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlGenericAttributeList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlEquipmentChoice.resx">
       <DependentUpon>UserControlEquipmentChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlEquipmentChoiceSingle.resx">
+      <DependentUpon>UserControlEquipmentChoiceSingle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlGenericAttributeList.resx">
       <DependentUpon>UserControlGenericAttributeList.cs</DependentUpon>

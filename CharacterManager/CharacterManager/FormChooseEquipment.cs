@@ -1,4 +1,5 @@
-﻿using CharacterManager.UserControls;
+﻿using CharacterManager.Items;
+using CharacterManager.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,44 +47,31 @@ namespace CharacterManager
         private void buttonOk_Click(object sender, EventArgs e)
         {
             /* Comprise a list of chosen equipment. */
-            List<EquipmentChoice> myChoiceList = new List<EquipmentChoice>();
             SelectedItems = new List<Items.PlayerItem>();
 
             /* Check which items were selected. */
             foreach (UserControlEquipmentChoice eqChoice in myControls)
             {
-                myChoiceList = eqChoice.getSelectedEquipmentList();
+                List<PlayerItem> myItemList = null;
 
-                if (myChoiceList == null)
+                try
+                {
+                    myItemList = eqChoice.getSelectedEquipmentList();
+                }
+                catch (UserControlEquipmentChoiceSingle.EquipmentNotSelectedException)
+                {
+                    myItemList = null;
+                }
+
+                if (myItemList == null)
                 {
                     MessageBox.Show("Not all selections have been made");
                     return;
                 }
 
-                foreach(EquipmentChoice choice in myChoiceList)
+                foreach (PlayerItem item in myItemList)
                 {
-                    Items.PlayerItem item = choice.getObjectReference();
-                    item.Quantity = choice.Quantity;
-
-                    if (item == null)
-                    {
-                        MessageBox.Show("Error finding reference for" + choice.Equipment);
-                    }
-                    else
-                    {
-                        if (item.ItemName == "AnyMartialMelee")
-                        {
-                            /* TODO : Handle special case. */
-                        }
-                        else if (item.ItemName == "AnyMartial")
-                        {
-                            /* TODO : Handle special case. */
-                        }
-                        else
-                        {
-                            SelectedItems.Add(item);
-                        }
-                    }
+                    SelectedItems.Add(item);
                 }
             }
 

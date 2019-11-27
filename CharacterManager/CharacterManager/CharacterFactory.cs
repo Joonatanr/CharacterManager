@@ -215,6 +215,16 @@ namespace CharacterManager
             return txt;
         }
 
+        public static List<PlayerWeapon> getAllWeapons()
+        {
+            return WeaponList;
+        }
+
+        public static List<PlayerArmor> getAllArmor()
+        {
+            return ArmorList;
+        }
+
         private static Boolean resolveCharacterData(PlayerCharacter raw)
         {
             PlayerRace mainRace;

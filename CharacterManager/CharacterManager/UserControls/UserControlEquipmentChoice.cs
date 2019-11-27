@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CharacterManager;
+using CharacterManager.Items;
 
 namespace CharacterManager.UserControls
 {
@@ -17,12 +18,13 @@ namespace CharacterManager.UserControls
         private EquipmentChoiceList _eqChoice = null;
         public EquipmentChoiceList EqChoice { get { return _eqChoice; } set { _eqChoice = value; updateControlFields(); } }
 
-        private const int RadioButtonInterval = 20;
+        private const int RadioButtonInterval = 240;
 
 
         private struct ChoiceControlPair
         {
-            public List<EquipmentChoice> equipment;
+            //public List<EquipmentChoice> equipment;
+            public List<UserControlEquipmentChoiceSingle> equipmentControls;
             public RadioButton btn;
         }
 
@@ -34,13 +36,19 @@ namespace CharacterManager.UserControls
         }
         
 
-        public List<EquipmentChoice> getSelectedEquipmentList()
+        /* TODO : What if some selections are incomplete? Handle that case. */
+        public List<PlayerItem> getSelectedEquipmentList()
         {
             foreach (ChoiceControlPair pair in myControlList)
             {
                 if (pair.btn.Checked)
                 {
-                    return pair.equipment;
+                    List<PlayerItem> res = new List<PlayerItem>();
+                    foreach (UserControlEquipmentChoiceSingle single in pair.equipmentControls)
+                    {
+                        res.Add(single.getSelectedItem());
+                    }
+                    return res;
                 }
             }
 
@@ -66,26 +74,32 @@ namespace CharacterManager.UserControls
                 if (obj.Count > 0)
                 {
                     RadioButton myButton = new RadioButton();
-                    myButton.Size = new Size(140, 30);
-                    yloc = ((groupBox1.Height / 2) - (myButton.Height / 2)) + 2;
+                    myButton.Size = new Size(20, 20);
+                    yloc = 10;
                     myButton.Location = new Point(xloc, yloc);
 
-                    String descriptions = "";
+                    yloc = 30;
 
+                    List<UserControlEquipmentChoiceSingle> singleControlList = new List<UserControlEquipmentChoiceSingle>();
                     foreach (EquipmentChoice choice in obj)
                     {
-                        descriptions += choice.ToString() + "\n";
+                        UserControlEquipmentChoiceSingle singleControl = new UserControlEquipmentChoiceSingle();
+                        singleControl.Choice = choice;
+                        singleControl.Location = new Point(xloc, yloc);
+                        groupBox1.Controls.Add(singleControl);
+                        singleControlList.Add(singleControl);
+
+                        yloc += singleControl.Height;
+                        yloc += 1;
                     }
 
-                    //MessageBox.Show(descriptions);
 
-                    myButton.Text = descriptions;
                     groupBox1.Controls.Add(myButton);
                     xloc += (RadioButtonInterval + myButton.Width);
 
                     ChoiceControlPair pair;
                     pair.btn = myButton;
-                    pair.equipment = obj;
+                    pair.equipmentControls = singleControlList;
 
                     myControlList.Add(pair);
                 }

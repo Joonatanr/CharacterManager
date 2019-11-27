@@ -38,7 +38,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Location = new System.Drawing.Point(3, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(420, 43);
+            this.groupBox1.Size = new System.Drawing.Size(598, 126);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -48,7 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "UserControlEquipmentChoice";
-            this.Size = new System.Drawing.Size(423, 49);
+            this.Size = new System.Drawing.Size(601, 132);
             this.ResumeLayout(false);
 
         }
