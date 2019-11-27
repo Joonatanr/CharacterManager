@@ -16,17 +16,38 @@ namespace CharacterManager.UserControls
         {
             public PlayerWeapon weapon;
             public InfoButton infoBtn;
+            public Button EquipButton;
 
             public WeaponControlData(PlayerWeapon w)
             {
                 weapon = w;
                 infoBtn = new InfoButton("Button " + buttonNumber++, w.getExtendedDescription());
+                EquipButton = new Button();
+                EquipButton.Size = new Size(50, 18);
+                EquipButton.Text = "Equip";
+                EquipButton.Font = new Font("Arial", 7.5f);
+                EquipButton.TextAlign = ContentAlignment.MiddleCenter;
+                EquipButton.Click += new System.EventHandler(EquipButton_Click);
+            }
+
+            private void EquipButton_Click(object sender, EventArgs e)
+            {
+                /* TODO : This is a placeholder. */
+                if (weapon.IsEquipped)
+                {
+                    EquipButton.Text = "Equip";
+                    weapon.IsEquipped = false;
+                }
+                else
+                {
+                    weapon.IsEquipped = true;
+                    EquipButton.Text = "Unequip";
+                }
             }
         }
 
         private List<PlayerWeapon> weaponList = new List<PlayerWeapon>();
         private List<WeaponControlData> mainList = new List<WeaponControlData>();
-
 
         public void setWeaponList(List<PlayerWeapon> wList)
         {
@@ -65,8 +86,9 @@ namespace CharacterManager.UserControls
                 myData.infoBtn.Location = new Point(this.Width - 43, y + 3);
                 this.Controls.Add(myData.infoBtn);
 
-                /* 2. TODO */
-
+                /* 2. Set up the Equip button. */
+                myData.EquipButton.Location = new Point((myData.infoBtn.Left - 1) - myData.EquipButton.Width, y + 3);
+                this.Controls.Add(myData.EquipButton);
 
                 /* Finish up.. */
                 y += lineInterval;
