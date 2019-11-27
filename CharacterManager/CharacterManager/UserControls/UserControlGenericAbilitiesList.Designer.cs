@@ -1,6 +1,6 @@
 ﻿namespace CharacterManager.UserControls
 {
-    partial class UserControlGenericAttributeList
+    partial class UserControlGenericAbilitiesList
     {
         /// <summary> 
         /// Required designer variable.

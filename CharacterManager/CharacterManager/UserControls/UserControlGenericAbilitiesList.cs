@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace CharacterManager.UserControls
 {
-    public partial class UserControlGenericAttributeList : UserControlGenericListBase
+    public partial class UserControlGenericAbilitiesList : UserControlGenericListBase
     {
         private List<PlayerAttribute> listOfAttributes = new List<PlayerAttribute>();
 
-        public UserControlGenericAttributeList() : base()
+        public UserControlGenericAbilitiesList() : base()
         {
             InitializeComponent();
         }

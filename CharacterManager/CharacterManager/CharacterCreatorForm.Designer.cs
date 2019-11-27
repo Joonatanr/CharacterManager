@@ -71,7 +71,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
-            this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAttributeList();
+            this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
             this.textBoxHitPoints = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxHitDie = new System.Windows.Forms.TextBox();
@@ -811,7 +811,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBoxHitDie;
         private System.Windows.Forms.Label label13;
-        private UserControls.UserControlGenericAttributeList userControlGenericAttributeList1;
+        private UserControls.UserControlGenericAbilitiesList userControlGenericAttributeList1;
         private UserControls.UserControlSavingThrows userControlSavingThrows1;
         private UserControls.UserControlSkillProficiencies userControlSkillProficiencies1;
         private System.Windows.Forms.TextBox textBoxPassivePerception;
