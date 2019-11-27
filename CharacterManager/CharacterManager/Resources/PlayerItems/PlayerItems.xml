@@ -206,6 +206,12 @@
 		<Weight>1</Weight>
 		<Cost>0.01</Cost>
 	</PlayerItem>
+	<PlayerItem>
+		<ItemName>Mess Kit</ItemName>
+		<Description>This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl.</Description>
+		<Weight>1</Weight>
+		<Cost>0.2</Cost>
+	</PlayerItem>
 	
 <!-- Packs and containers -->
 	<PlayerItem xsi:type="ItemContainer">
@@ -399,6 +405,84 @@
 			</ContainerContent>
 			<ContainerContent>
 				<Name>Disguise Kit</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</ContainedItems>
+	</PlayerItem>
+	
+	<PlayerItem xsi:type="ItemContainer">
+		<ItemName>Explorer's Pack</ItemName>
+		<Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
+		<Weight>10</Weight>
+		<Cost>10</Cost>
+		<ContainedItems>
+			<ContainerContent>
+				<Name>Backpack</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Bedroll</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Mess Kit</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Tinderbox</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Torch</Name>
+				<Quantity>10</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Rations</Name>
+				<Quantity>10</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Waterskin</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Rope</Name>
+				<Quantity>50</Quantity>
+			</ContainerContent>
+		</ContainedItems>
+	</PlayerItem>
+	
+	<PlayerItem xsi:type="ItemContainer">
+		<ItemName>Scholar's Pack</ItemName>
+		<Description>Includes a backpack, a book of lore, a bottle of ink, an ink pen, 10 sheets of parchment, a little bag of sand, and a small knife.</Description>
+		<Weight>10</Weight>
+		<Cost>40</Cost>
+		<ContainedItems>
+			<ContainerContent>
+				<Name>Backpack</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Book of Lore</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Bottle of Ink</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Ink Pen</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Parchment</Name>
+				<Quantity>10</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Little Bag of Sand</Name>
+				<Quantity>10</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Small Knife</Name>
 				<Quantity>1</Quantity>
 			</ContainerContent>
 		</ContainedItems>
