@@ -14,6 +14,7 @@ namespace CharacterManager.UserControls
     {
         public Boolean IsBorder { get; set; }
         protected const int lineInterval = 18; /* TODO : Make this into public property and test. */
+        protected static int buttonNumber = 0;
 
         protected class InfoButton : Button
         {

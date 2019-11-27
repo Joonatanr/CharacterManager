@@ -13,7 +13,6 @@ namespace CharacterManager.UserControls
     public partial class UserControlGenericAttributeList : UserControlGenericListBase
     {
         private List<PlayerAttribute> listOfAttributes = new List<PlayerAttribute>();
-        private static int buttonNumber = 0;
 
         public UserControlGenericAttributeList() : base()
         {
