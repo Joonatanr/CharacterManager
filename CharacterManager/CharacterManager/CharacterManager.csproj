@@ -115,6 +115,9 @@
     <Compile Include="UserControls\UserControlGenericAttributeList.Designer.cs">
       <DependentUpon>UserControlGenericAttributeList.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlGenericEquipmentList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\UserControlGenericListBase.cs">
       <SubType>UserControl</SubType>
     </Compile>

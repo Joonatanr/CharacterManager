@@ -63,6 +63,7 @@ namespace CharacterManager
                 foreach(EquipmentChoice choice in myChoiceList)
                 {
                     Items.PlayerItem item = choice.getObjectReference();
+                    item.Quantity = choice.Quantity;
 
                     if (item == null)
                     {

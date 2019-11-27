@@ -71,7 +71,12 @@ namespace CharacterManager.UserControls
 
         protected void drawTextOnLine(Graphics gfx, String text, int lineNum)
         {
-            Font f = new Font("Arial", 12);
+            drawTextOnLine(gfx, text, lineNum, FontStyle.Regular);
+        }
+
+        protected void drawTextOnLine(Graphics gfx, String text, int lineNum, FontStyle style)
+        {
+            Font f = new Font("Arial", 12, style);
             Point sPoint = new Point(1, (lineInterval * (lineNum + 1)) + 3);
             gfx.DrawString(text, f, new SolidBrush(Color.Black), sPoint);
         }

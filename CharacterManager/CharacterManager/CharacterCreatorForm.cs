@@ -500,7 +500,7 @@ namespace CharacterManager
 
         private void updateEquipmentList()
         {
-            richTextBoxEquipmentAndSpells.Clear();
+            //richTextBoxEquipmentAndSpells.Clear();
 
             /* TODO : Consider making these lists global? */
             List<Items.PlayerWeapon> weaponList = new List<Items.PlayerWeapon>();
@@ -524,37 +524,7 @@ namespace CharacterManager
                 }
             }
 
-            /* 1. Add weapons */
-            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Bold);
-            richTextBoxEquipmentAndSpells.AppendText("Weapons:\n");
-            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Regular);
-
-            foreach (Items.PlayerWeapon w in weaponList)
-            {
-                richTextBoxEquipmentAndSpells.AppendText(w.ItemName + "\n");
-            }
-            richTextBoxEquipmentAndSpells.AppendText("\n");
-
-            /* 2. Add armor */
-            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Bold);
-            richTextBoxEquipmentAndSpells.AppendText("Armor:\n");
-            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Regular);
-
-            foreach (Items.PlayerArmor a in armorList)
-            {
-                richTextBoxEquipmentAndSpells.AppendText(a.ItemName + "\n");
-            }
-            richTextBoxEquipmentAndSpells.AppendText("\n");
-
-            /* 3. Add other items */
-            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Bold);
-            richTextBoxEquipmentAndSpells.AppendText("Equipment:\n");
-            richTextBoxEquipmentAndSpells.SelectionFont = new Font(richTextBoxEquipmentAndSpells.Font, FontStyle.Regular);
-
-            foreach(Items.PlayerItem i in equipmentList)
-            {
-                richTextBoxEquipmentAndSpells.AppendText(i.ItemName + "\n");
-            }
+            userControlGenericEquipmentList1.setEquipmentList(myItemList);
 
             /* 4. Add tools */
             /* TODO */
