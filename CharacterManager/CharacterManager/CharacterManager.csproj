@@ -115,11 +115,11 @@
     <Compile Include="UserControls\UserControlEquipmentChoiceSingle.Designer.cs">
       <DependentUpon>UserControlEquipmentChoiceSingle.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlGenericAttributeList.cs">
+    <Compile Include="UserControls\UserControlGenericAbilitiesList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlGenericAttributeList.Designer.cs">
-      <DependentUpon>UserControlGenericAttributeList.cs</DependentUpon>
+    <Compile Include="UserControls\UserControlGenericAbilitiesList.Designer.cs">
+      <DependentUpon>UserControlGenericAbilitiesList.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlGenericEquipmentList.cs">
       <SubType>UserControl</SubType>
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="UserControls\UserControlEquipmentChoiceSingle.resx">
       <DependentUpon>UserControlEquipmentChoiceSingle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlGenericAttributeList.resx">
-      <DependentUpon>UserControlGenericAttributeList.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UserControlGenericAbilitiesList.resx">
+      <DependentUpon>UserControlGenericAbilitiesList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlGenericListBase.resx">
       <DependentUpon>UserControlGenericListBase.cs</DependentUpon>
