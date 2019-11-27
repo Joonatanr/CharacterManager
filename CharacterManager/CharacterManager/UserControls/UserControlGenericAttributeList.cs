@@ -20,9 +20,10 @@ namespace CharacterManager.UserControls
 
         protected class InfoButton : Button
         {
-            private PlayerAttribute attribute;
+            //private PlayerAttribute attribute;
+            private String infoString;
 
-            public InfoButton(string name, PlayerAttribute attribute)
+            public InfoButton(string name, string info)
             {
                 this.Click += new System.EventHandler(button_Click);
                 this.Name = name;
@@ -30,14 +31,14 @@ namespace CharacterManager.UserControls
                 this.Text = "Info";
                 this.Size = new Size(40, 18);
                 this.TextAlign = ContentAlignment.TopCenter;
-                this.attribute = attribute;
+                this.infoString = info;
             }
 
             private void button_Click(object sender, EventArgs e)
             {
-                if (attribute != null)
+                if (infoString != null)
                 {
-                    MessageBox.Show(attribute.Description);
+                    MessageBox.Show(infoString);
                 }
                 /* Not sure why this is needed, but this makes the button be deselected after it is clicked. */
                 this.Parent.Focus();
@@ -74,7 +75,7 @@ namespace CharacterManager.UserControls
             foreach (PlayerAttribute attrib in listOfAttributes)
             {
                 y += lineInterval;
-                InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib);
+                InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib.Description);
                 buttonNumber++;
                 myBtn.Location = new Point(this.panel1.Width - 43, y + 3);
                 panel1.Controls.Add(myBtn);
@@ -99,19 +100,25 @@ namespace CharacterManager.UserControls
                 gfx.DrawLine(myPen, new Point(2, x), new Point(panel1.Width - 2, x));
             }
 
+            Font myFont = new Font("Arial", 14);
+
+            drawData(gfx, myFont);    
+        }
+
+        protected void drawData(Graphics gfx, Font font)
+        {
             //Lets draw a descriptive text.
-            gfx.DrawString("Abilities:", new Font("Arial", 14), new SolidBrush(Color.Black), new Point(1, 1));
+            gfx.DrawString("Abilities:", font, new SolidBrush(Color.Black), new Point(1, 1));
 
             int y = 1;
             if (listOfAttributes != null)
             {
-                foreach(PlayerAttribute attrib in listOfAttributes)
+                foreach (PlayerAttribute attrib in listOfAttributes)
                 {
                     drawTextOnLine(gfx, attrib.AttributeName, y);
                     y++;
                 }
             }
-            
         }
 
         private void drawBackGround(Graphics gfx)
@@ -182,7 +189,7 @@ namespace CharacterManager.UserControls
             gfx.FillRectangle(b, rect);
         }
 
-        private void drawTextOnLine(Graphics gfx, String text, int lineNum)
+        protected void drawTextOnLine(Graphics gfx, String text, int lineNum)
         {
             Font f = new Font("Arial", 12);
             Point sPoint = new Point(1, (lineInterval * (lineNum + 1)) + 3 );

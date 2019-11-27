@@ -68,7 +68,6 @@ namespace CharacterManager
             drawBackGround(gfx);
 
             //Draw the number and the modifier.
-
             FontFamily fontFamily = new FontFamily("Arial");
             Font font = new Font(
                fontFamily,
@@ -76,7 +75,6 @@ namespace CharacterManager
                FontStyle.Bold,
                GraphicsUnit.Pixel);
 
-            //gfx.DrawString(_attributeValue.ToString(), font, new SolidBrush(Color.Black), new PointF(panel1.Left, panel1.Top));
             StringFormat format = new StringFormat(StringFormatFlags.NoClip);
             format.Alignment = StringAlignment.Center;
             format.LineAlignment = StringAlignment.Center;
