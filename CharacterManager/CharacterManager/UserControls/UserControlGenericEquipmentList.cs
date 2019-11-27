@@ -47,7 +47,7 @@ namespace CharacterManager.UserControls
             /* TODO : This obviously isn't a very good solution, but maybe it will be OK??? */
             //Lets remove any old buttons.
             List<Control> myListToRemove = new List<Control>();
-            foreach (Control c in panel1.Controls)
+            foreach (Control c in this.Controls)
             {
                 if (c is InfoButton)
                 {
@@ -57,7 +57,7 @@ namespace CharacterManager.UserControls
 
             foreach (Control c in myListToRemove)
             {
-                panel1.Controls.Remove(c);
+                this.Controls.Remove(c);
             }
 
             //Lets test adding a button for each piece of equipment.
@@ -70,8 +70,8 @@ namespace CharacterManager.UserControls
                 y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), w.Description); /* TODO : Most weapons do not have descriptions, need extended description to detail damage, etc. */
                 buttonNumber++;
-                myBtn.Location = new Point(this.panel1.Width - 43, y + 3);
-                panel1.Controls.Add(myBtn);
+                myBtn.Location = new Point(this.Width - 43, y + 3);
+                this.Controls.Add(myBtn);
             }
 
             y += lineInterval * 2;
@@ -81,8 +81,8 @@ namespace CharacterManager.UserControls
                 y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), a.Description); /* TODO : Most weapons do not have descriptions, need extended description to detail damage, etc. */
                 buttonNumber++;
-                myBtn.Location = new Point(this.panel1.Width - 43, y + 3);
-                panel1.Controls.Add(myBtn);
+                myBtn.Location = new Point(this.Width - 43, y + 3);
+                this.Controls.Add(myBtn);
             }
 
             y += lineInterval * 2;
@@ -92,8 +92,8 @@ namespace CharacterManager.UserControls
                 y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), e.Description); /* TODO : Most weapons do not have descriptions, need extended description to detail damage, etc. */
                 buttonNumber++;
-                myBtn.Location = new Point(this.panel1.Width - 43, y + 3);
-                panel1.Controls.Add(myBtn);
+                myBtn.Location = new Point(this.Width - 43, y + 3);
+                this.Controls.Add(myBtn);
             }
 
             y += lineInterval * 2;
@@ -103,8 +103,8 @@ namespace CharacterManager.UserControls
                 y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), t.Description); /* TODO : Most weapons do not have descriptions, need extended description to detail damage, etc. */
                 buttonNumber++;
-                myBtn.Location = new Point(this.panel1.Width - 43, y + 3);
-                panel1.Controls.Add(myBtn);
+                myBtn.Location = new Point(this.Width - 43, y + 3);
+                this.Controls.Add(myBtn);
             }
         }
 

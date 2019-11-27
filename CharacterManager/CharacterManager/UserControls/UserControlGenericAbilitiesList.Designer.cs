@@ -30,10 +30,6 @@
         {
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.Size = new System.Drawing.Size(250, 403);
-            // 
             // UserControlGenericAttributeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

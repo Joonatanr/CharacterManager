@@ -64,7 +64,7 @@ namespace CharacterManager
         {
             base.OnPaint(e);
 
-            Graphics gfx = panel1.CreateGraphics();
+            Graphics gfx = e.Graphics;
             drawBackGround(gfx);
 
             //Draw the number and the modifier.
@@ -79,7 +79,7 @@ namespace CharacterManager
             format.Alignment = StringAlignment.Center;
             format.LineAlignment = StringAlignment.Center;
 
-            gfx.DrawString(_attributeValue.ToString(), font, new SolidBrush(Color.Black), panel1.ClientRectangle, format);
+            gfx.DrawString(_attributeValue.ToString(), font, new SolidBrush(Color.Black), this.ClientRectangle, format);
 
             font = new Font(
                 fontFamily,
@@ -105,7 +105,7 @@ namespace CharacterManager
             int ellipseWidth = 32;
             int ellipseHeight = 24;
             int BottomEmptyHeight = ellipseHeight / 2;
-            int mainHeight = panel1.Height - BottomEmptyHeight;
+            int mainHeight = this.Height - BottomEmptyHeight;
 
             Rectangle rect = new Rectangle(1, 1, diameter, diameter);
             gfx.FillEllipse(b, rect);
@@ -121,14 +121,14 @@ namespace CharacterManager
                 gfx.DrawEllipse(new Pen(Color.Black), rect);
             }
 
-            rect = new Rectangle(panel1.Size.Width - (2 + diameter), 1, diameter, diameter);
+            rect = new Rectangle(this.Size.Width - (2 + diameter), 1, diameter, diameter);
             gfx.FillEllipse(b, rect);
             if (IsBorder)
             {
                 gfx.DrawEllipse(new Pen(Color.Black), rect);
             }
 
-            rect = new Rectangle(panel1.Size.Width - (2 + diameter), mainHeight - (2 + diameter), diameter, diameter);
+            rect = new Rectangle(this.Size.Width - (2 + diameter), mainHeight - (2 + diameter), diameter, diameter);
             gfx.FillEllipse(b, rect);
             if (IsBorder)
             {
@@ -136,7 +136,7 @@ namespace CharacterManager
             }
 
             //Draw white rectangles to fill..
-            rect = new Rectangle(1 + (diameter / 2), 1, panel1.Size.Width - (diameter + 2), diameter);
+            rect = new Rectangle(1 + (diameter / 2), 1, this.Size.Width - (diameter + 2), diameter);
             gfx.FillRectangle(b, rect);
             if (IsBorder)
             {
@@ -150,14 +150,14 @@ namespace CharacterManager
                 gfx.DrawLine(new Pen(Color.Black), new Point(rect.Left, rect.Top), new Point(rect.Left, rect.Bottom));
             }
 
-            rect = new Rectangle(1 + (diameter / 2), mainHeight - (diameter + 2), panel1.Size.Width - (diameter + 2), diameter);
+            rect = new Rectangle(1 + (diameter / 2), mainHeight - (diameter + 2), this.Size.Width - (diameter + 2), diameter);
             gfx.FillRectangle(b, rect);
             if (IsBorder)
             {
                 gfx.DrawLine(new Pen(Color.Black), new Point(rect.Left, rect.Bottom), new Point(rect.Right, rect.Bottom));
             }
 
-            rect = new Rectangle(panel1.Size.Width - (1 + diameter), 1 + (diameter / 2), diameter, mainHeight - (diameter + 2));
+            rect = new Rectangle(this.Size.Width - (1 + diameter), 1 + (diameter / 2), diameter, mainHeight - (diameter + 2));
             gfx.FillRectangle(b, rect);
             if (IsBorder)
             {
@@ -165,15 +165,15 @@ namespace CharacterManager
             }
 
             //Draw internal rectangle.
-            rect = new Rectangle(1 + (diameter / 2), 1 + (diameter / 2), panel1.Size.Width - (3 + diameter), mainHeight - (3 + diameter));
+            rect = new Rectangle(1 + (diameter / 2), 1 + (diameter / 2), this.Size.Width - (3 + diameter), mainHeight - (3 + diameter));
             gfx.FillRectangle(b, rect);
 
 
 
             //Lets draw the circle below.
 
-            int EllipseLeft = (panel1.Width / 2) - (ellipseWidth / 2);
-            int EllipseTop = panel1.Height - (ellipseHeight + 1);
+            int EllipseLeft = (this.Width / 2) - (ellipseWidth / 2);
+            int EllipseTop = this.Height - (ellipseHeight + 1);
         
             EllipseRectangle = new RectangleF(new PointF(EllipseLeft, EllipseTop),new SizeF(ellipseWidth, ellipseHeight ));
             gfx.FillEllipse(new SolidBrush(Color.White), EllipseRectangle);
@@ -189,9 +189,9 @@ namespace CharacterManager
         {
             //Lets center out label...
             Size s = label2.Size;
-            int x = (panel1.Width / 2) - (label2.Width / 2);
+            int x = (this.Width / 2) - (label2.Width / 2);
             x++;
-            //int y = (panel1.Height / 2) - (label2.Height / 2);
+            //int y = (this.Height / 2) - (label2.Height / 2);
             int y = 5;
 
             label2.Location = new Point(x, y);

@@ -54,15 +54,15 @@ namespace CharacterManager.UserControls
             base.OnPaint(pea);
 
             //Lets use the panel for drawing.
-            Graphics gfx = panel1.CreateGraphics();
+            Graphics gfx = pea.Graphics;
 
             drawBackGround(gfx);
             //So lets draw the lines next.
 
             Pen myPen = new Pen(Color.LightGray);
-            for (int x = lineInterval + 2; x < panel1.Size.Height; x += lineInterval)
+            for (int x = lineInterval + 2; x < this.Size.Height; x += lineInterval)
             {
-                gfx.DrawLine(myPen, new Point(2, x), new Point(panel1.Width - 2, x));
+                gfx.DrawLine(myPen, new Point(2, x), new Point(this.Width - 2, x));
             }
 
             Font myFont = new Font("Arial", 14);
@@ -100,21 +100,21 @@ namespace CharacterManager.UserControls
                 gfx.DrawEllipse(new Pen(Color.Black), rect);
             }
 
-            rect = new Rectangle(1, panel1.Size.Height - (2 + diameter), diameter, diameter);
+            rect = new Rectangle(1, this.Size.Height - (2 + diameter), diameter, diameter);
             gfx.FillEllipse(b, rect);
             if (IsBorder)
             {
                 gfx.DrawEllipse(new Pen(Color.Black), rect);
             }
 
-            rect = new Rectangle(panel1.Size.Width - (2 + diameter), 1, diameter, diameter);
+            rect = new Rectangle(this.Size.Width - (2 + diameter), 1, diameter, diameter);
             gfx.FillEllipse(b, rect);
             if (IsBorder)
             {
                 gfx.DrawEllipse(new Pen(Color.Black), rect);
             }
 
-            rect = new Rectangle(panel1.Size.Width - (2 + diameter), panel1.Size.Height - (2 + diameter), diameter, diameter);
+            rect = new Rectangle(this.Size.Width - (2 + diameter), this.Size.Height - (2 + diameter), diameter, diameter);
             gfx.FillEllipse(b, rect);
             if (IsBorder)
             {
@@ -122,28 +122,28 @@ namespace CharacterManager.UserControls
             }
 
             //Draw white rectangles to fill..
-            rect = new Rectangle(1 + (diameter / 2), 1, panel1.Size.Width - (diameter + 2), diameter);
+            rect = new Rectangle(1 + (diameter / 2), 1, this.Size.Width - (diameter + 2), diameter);
             gfx.FillRectangle(b, rect);
             if (IsBorder)
             {
                 gfx.DrawLine(new Pen(Color.Black), new Point(rect.Left, rect.Top), new Point(rect.Right, rect.Top));
             }
 
-            rect = new Rectangle(1, 1 + (diameter / 2), diameter, panel1.Size.Height - (diameter + 2));
+            rect = new Rectangle(1, 1 + (diameter / 2), diameter, this.Size.Height - (diameter + 2));
             gfx.FillRectangle(b, rect);
             if (IsBorder)
             {
                 gfx.DrawLine(new Pen(Color.Black), new Point(rect.Left, rect.Top), new Point(rect.Left, rect.Bottom));
             }
 
-            rect = new Rectangle(1 + (diameter / 2), panel1.Size.Height - (diameter + 2), panel1.Size.Width - (diameter + 2), diameter);
+            rect = new Rectangle(1 + (diameter / 2), this.Size.Height - (diameter + 2), this.Size.Width - (diameter + 2), diameter);
             gfx.FillRectangle(b, rect);
             if (IsBorder)
             {
                 gfx.DrawLine(new Pen(Color.Black), new Point(rect.Left, rect.Bottom), new Point(rect.Right, rect.Bottom));
             }
 
-            rect = new Rectangle(panel1.Size.Width - (1 + diameter), 1 + (diameter / 2), diameter, panel1.Size.Height - (diameter + 2));
+            rect = new Rectangle(this.Size.Width - (1 + diameter), 1 + (diameter / 2), diameter, this.Size.Height - (diameter + 2));
             gfx.FillRectangle(b, rect);
             if (IsBorder)
             {
@@ -151,7 +151,7 @@ namespace CharacterManager.UserControls
             }
 
             //Draw internal rectangle.
-            rect = new Rectangle(1 + (diameter / 2), 1 + (diameter / 2), panel1.Size.Width - (3 + diameter), panel1.Size.Height - (3 + diameter));
+            rect = new Rectangle(1 + (diameter / 2), 1 + (diameter / 2), this.Size.Width - (3 + diameter), this.Size.Height - (3 + diameter));
             gfx.FillRectangle(b, rect);
         }
     }

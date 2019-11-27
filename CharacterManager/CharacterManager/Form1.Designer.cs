@@ -35,6 +35,7 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
+            this.userControlGenericAbilitiesList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.userControlSpeed = new CharacterManager.UserControls.UserControlGenericValue();
             this.userControlInitiative = new CharacterManager.UserControls.UserControlGenericValue();
@@ -73,7 +74,7 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.userControlGenericAbilitiesList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -138,6 +139,8 @@
             // 
             // tabPageCharacter
             // 
+            this.tabPageCharacter.BackColor = System.Drawing.Color.White;
+            this.tabPageCharacter.Controls.Add(this.button1);
             this.tabPageCharacter.Controls.Add(this.userControlGenericAbilitiesList1);
             this.tabPageCharacter.Controls.Add(this.groupBox4);
             this.tabPageCharacter.Controls.Add(this.richTextBox1);
@@ -155,7 +158,14 @@
             this.tabPageCharacter.Size = new System.Drawing.Size(1034, 895);
             this.tabPageCharacter.TabIndex = 0;
             this.tabPageCharacter.Text = "Character";
-            this.tabPageCharacter.UseVisualStyleBackColor = true;
+            // 
+            // userControlGenericAbilitiesList1
+            // 
+            this.userControlGenericAbilitiesList1.IsBorder = true;
+            this.userControlGenericAbilitiesList1.Location = new System.Drawing.Point(760, 297);
+            this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
+            this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(256, 409);
+            this.userControlGenericAbilitiesList1.TabIndex = 30;
             // 
             // groupBox4
             // 
@@ -519,13 +529,15 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
-            // userControlGenericAbilitiesList1
+            // button1
             // 
-            this.userControlGenericAbilitiesList1.IsBorder = true;
-            this.userControlGenericAbilitiesList1.Location = new System.Drawing.Point(760, 297);
-            this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
-            this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(256, 409);
-            this.userControlGenericAbilitiesList1.TabIndex = 30;
+            this.button1.Location = new System.Drawing.Point(707, 141);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -601,6 +613,7 @@
         private UserControls.UserControlGenericValue userControlSpeed;
         private UserControls.UserControlGenericValue userControlInitiative;
         private UserControls.UserControlGenericAbilitiesList userControlGenericAbilitiesList1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
