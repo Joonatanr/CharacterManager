@@ -115,6 +115,12 @@
     <Compile Include="UserControls\UserControlGenericAttributeList.Designer.cs">
       <DependentUpon>UserControlGenericAttributeList.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlGenericListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlGenericListBase.Designer.cs">
+      <DependentUpon>UserControlGenericListBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlGenericValue.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlGenericAttributeList.resx">
       <DependentUpon>UserControlGenericAttributeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlGenericListBase.resx">
+      <DependentUpon>UserControlGenericListBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlProficiency.resx">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>

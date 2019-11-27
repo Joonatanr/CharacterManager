@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CharacterManager.UserControls
 {
-    public partial class UserControlGenericAttributeList : UserControl
+    public partial class UserControlGenericAttributeList : UserControlGenericListBase
     {
         private const int lineInterval = 18;
         private List<PlayerAttribute> listOfAttributes = new List<PlayerAttribute>();
@@ -45,7 +45,7 @@ namespace CharacterManager.UserControls
             }
         }
 
-        public UserControlGenericAttributeList()
+        public UserControlGenericAttributeList() : base()
         {
             InitializeComponent();
         }
