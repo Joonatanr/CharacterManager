@@ -1,0 +1,78 @@
+<ArrayOfCharacterBackGround xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CharacterBackGround>
+		<BackGroundName>Acolyte</BackGroundName>
+		<Description>You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. You are not necessarily a cleric - performing sacred rites is not the same thing as channeling divine power. </Description>
+		<SkillProficiencies>
+			<string>Insight</string>
+			<string>Religion</string>
+		</SkillProficiencies>
+		<CustomLanguages>2</CustomLanguages>
+		<Equipment>
+			<ContainerContent>
+				<Name>Holy Symbol</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Prayer Book</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Stick of Incence</Name>
+				<Quantity>5</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Vestments</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Common Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</Equipment>
+		<Gold>15</Gold>
+		<Features>
+			<BackGroundFeature>
+				<Name>Shelter of the Faithful</Name>
+				<Description>As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle. You might also have ties to a specific temple dedicated to your chosen deity or pantheon, and you have a residence there.  This could be the temple where you used to serve, if you remain on good terms with it, or a temple where you have found a new home. While near your temple, you can call upon the priests for assistance, provided the assistance you ask for is not hazardous and you remain in good standing with your temple.
+				</Description>				
+			</BackGroundFeature>
+		</Features>
+	</CharacterBackGround>
+	
+	<CharacterBackGround>
+		<BackGroundName>Charlatan</BackGroundName>
+		<Description>You have always had a way with people. You know what makes them tick, you can tease out their hearts' desires after a few minutes of conversation, and with a few leading questions you can read them like they were children's books. It’s a useful talent, and one that you’re perfectly willing to use for your advantage. You know what people want and you deliver, or rather, you promise to deliver. Common sense should steer people away from things that sound too good to be true, but common sense seems to be in short supply when you’re around. The bottle of pink-colored liquid will surely cure that unseemly rash, this ointment—nothing more than a bit of fat with a sprinkle of silver dust—can restore youth and vigor, and there’s a bridge in the city that just happens to be for sale. These marvels sound implausible, but you make them sound like the real deal.
+		</Description>
+		<SkillProficiencies>
+			<string>Deception</string>
+			<string>Sleight Of Hand</string>
+		</SkillProficiencies>
+		<ToolProficiencies>
+			<string>Disguise Kit</string>
+			<string>Forgery Kit</string>
+		</ToolProficiencies>
+		<Equipment>
+			<ContainerContent>
+				<Name>Fine Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Disguise Kit</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Tools of the Con of Your Choice</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</Equipment>
+		<Gold>15</Gold>
+		<Features>
+			<BackGroundFeature>
+				<Name>False Identity</Name>
+				<Description>You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy. \n
+				</Description>				
+			</BackGroundFeature>
+		</Features>
+	</CharacterBackGround>
+	
+</ArrayOfCharacterBackGround>

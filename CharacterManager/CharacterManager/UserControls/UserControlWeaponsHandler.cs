@@ -25,7 +25,6 @@ namespace CharacterManager.UserControls
                 EquipButton.Size = new Size(50, 16);
                 EquipButton.ButtonText = "Equip";
                 EquipButton.Font = new Font("Arial", 8.0f);
-                //EquipButton.TextAlign = ContentAlignment.MiddleCenter;
                 EquipButton.Click += new System.EventHandler(EquipButton_Click);
             }
 

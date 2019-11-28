@@ -18,6 +18,8 @@ namespace CharacterManager
         private static List<PlayerClass> Classes;
         private static List<PlayerAbility> AttributesList;
         private static List<CharacterManager.SpecialAttributes.SpecialAttribute> SpecialAttributeList = new List<CharacterManager.SpecialAttributes.SpecialAttribute>();
+        private static List<CharacterBackGround> CharacterBackGroundList;
+
         private static Boolean isInitialized = false;
 
         private static List<Items.PlayerArmor> ArmorList;
@@ -77,6 +79,7 @@ namespace CharacterManager
                 parseRacesFromXml("Resources/PlayerRaces");
                 parseClassesFromXml("Resources/PlayerClasses");
                 parseAttributesFromXml("Resources/PlayerAttributes.xml");
+                parseBackGroundsFromXml("Resources/PlayerBackgrounds.xml");
                 parseItemsFromXml("Resources/PlayerItems/PlayerItems.xml");
                 parseArmorFromXml("Resources/PlayerItems/PlayerArmor.xml");
                 parseWeaponsFromXml("Resources/PlayerItems/PlayerWeapon.xml");
@@ -213,6 +216,11 @@ namespace CharacterManager
 
             txt += modifier + ")";
             return txt;
+        }
+
+        public static List<CharacterBackGround> getAllBackGrounds()
+        {
+            return CharacterBackGroundList;
         }
 
         public static List<PlayerWeapon> getAllWeapons()
@@ -470,6 +478,21 @@ namespace CharacterManager
             }
         }
 
+        private static void parseBackGroundsFromXml(String filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<CharacterBackGround>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                CharacterBackGroundList = (List<CharacterBackGround>)reader.Deserialize(file);
+                file.Close();
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
+        }
 
         private static void InitializeSpecialAttributes()
         {

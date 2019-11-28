@@ -769,5 +769,15 @@ namespace CharacterManager
                 updateEquipmentList();
             }
         }
+
+        private void buttonChooseBackGround_Click(object sender, EventArgs e)
+        {
+            FormChooseBackGround myForm = new FormChooseBackGround();
+
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                /* TODO */
+            }
+        }
     }
 }
