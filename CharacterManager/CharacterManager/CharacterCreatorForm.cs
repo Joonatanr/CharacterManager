@@ -164,6 +164,7 @@ namespace CharacterManager
                 {
                     aList.Add(a);
                 }
+                CreatedCharacter.CharacterArmors = aList;
 
                 /* 10.3 Add generic Equipment and tools. */
                 CreatedCharacter.CharacterGeneralEquipment = userControlGenericEquipmentList1.getAllGeneralEquipment();

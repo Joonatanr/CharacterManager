@@ -9,23 +9,25 @@ using System.Windows.Forms;
 
 namespace CharacterManager.UserControls
 {
-    public class UserControlWeaponsHandler : UserControlGenericListBase
+    class UserControlArmorHandler : UserControlGenericListBase
     {
-        private class WeaponControlData
+        private class ArmorControlData
         {
-            public PlayerWeapon weapon;
+            public PlayerArmor armor;
             public InfoButton infoBtn;
             public CustomButton EquipButton;
 
-            public WeaponControlData(PlayerWeapon w)
+            public delegate void ArmorEquippedChangedHandler(PlayerArmor armor, Boolean updateOthers);
+            public ArmorEquippedChangedHandler EquippedChangedHandler;
+
+            public ArmorControlData(PlayerArmor a)
             {
-                weapon = w;
-                infoBtn = new InfoButton("Button " + buttonNumber++, w.getExtendedDescription());
+                armor = a;
+                infoBtn = new InfoButton("Button " + buttonNumber++, a.getExtendedDescription());
                 EquipButton = new CustomButton();
                 EquipButton.Size = new Size(50, 16);
                 EquipButton.ButtonText = "Equip";
                 EquipButton.Font = new Font("Arial", 8.0f);
-                //EquipButton.TextAlign = ContentAlignment.MiddleCenter;
                 EquipButton.Click += new System.EventHandler(EquipButton_Click);
             }
 
@@ -34,9 +36,9 @@ namespace CharacterManager.UserControls
             {
                 if (isEquipped)
                 {
+                    EquipButton.ButtonText = "Unequip";
                     EquipButton.BackGroundColor = Color.LightGreen;
                     EquipButton.HoverColor = Color.Green;
-                    EquipButton.ButtonText = "Unequip";
                 }
                 else
                 {
@@ -48,31 +50,41 @@ namespace CharacterManager.UserControls
 
             private void EquipButton_Click(object sender, EventArgs e)
             {
-                /* TODO : This is a placeholder. */
-                if (weapon.IsEquipped)
+                if (armor.IsEquipped)
                 {
                     setEquipped(false);
-                    weapon.IsEquipped = false;
+                    armor.IsEquipped = false;
+                    EquippedChangedHandler?.Invoke(armor, false);
+                    
                 }
                 else
                 {
                     setEquipped(true);
-                    weapon.IsEquipped = true;
+                    armor.IsEquipped = true;
+                    EquippedChangedHandler?.Invoke(armor, true);
                 }
             }
         }
 
-        private List<PlayerWeapon> weaponList = new List<PlayerWeapon>();
-        private List<WeaponControlData> mainList = new List<WeaponControlData>();
 
-        public void setWeaponList(List<PlayerWeapon> wList)
+        private List<PlayerArmor> armorList = new List<PlayerArmor>();
+        private List<ArmorControlData> mainList = new List<ArmorControlData>();
+
+        public delegate void ArmorEquipChangedHandler();
+        public ArmorEquipChangedHandler ArmorEquipChanged;
+
+        public UserControlArmorHandler() : base()
         {
-            this.weaponList = wList;
-            /* TODO : Infobuttons, equip and attack buttons. */
+            
+        }
+
+        public void setArmorList(List<PlayerArmor> aList)
+        {
+            armorList = aList;
             setupButtons();
             this.Invalidate();
         }
-
+    
 
         public void setupButtons()
         {
@@ -93,10 +105,10 @@ namespace CharacterManager.UserControls
 
 
             int y = lineInterval;
-            mainList = new List<WeaponControlData>();
-            foreach (PlayerWeapon w in weaponList)
+            mainList = new List<ArmorControlData>();
+            foreach (PlayerArmor a in armorList)
             {
-                WeaponControlData myData = new WeaponControlData(w);
+                ArmorControlData myData = new ArmorControlData(a);
 
                 /* 1. Set up the info button. */
                 myData.infoBtn.Location = new Point(this.Width - 43, y + 3);
@@ -104,7 +116,8 @@ namespace CharacterManager.UserControls
 
                 /* 2. Set up the Equip button. */
                 myData.EquipButton.Location = new Point((myData.infoBtn.Left - 1) - myData.EquipButton.Width, y + 3);
-                myData.setEquipped(w.IsEquipped);
+                myData.setEquipped(a.IsEquipped);
+                myData.EquippedChangedHandler = ArmorEquippedChanged;
                 this.Controls.Add(myData.EquipButton);
 
                 /* Finish up.. */
@@ -113,17 +126,40 @@ namespace CharacterManager.UserControls
             }
         }
 
+        private void ArmorEquippedChanged(PlayerArmor armor, Boolean updateOthers)
+        {
+            if (updateOthers)
+            {
+                if (armor.IsShield)
+                {
+                    /* I guess we might have 2 shields as well?? */
+                }
+                else
+                {
+                    foreach (ArmorControlData cData in mainList)
+                    {
+                        if ((cData.armor != armor) && (!cData.armor.IsShield))
+                        {
+                            cData.setEquipped(false);
+                        }
+                    }
+                }
+            }
+
+            ArmorEquipChanged?.Invoke();
+        }
+
         protected override void drawData(Graphics gfx, Font font)
         {
             int y = -1;
 
             //Lets draw a descriptive text.
-            drawTextOnLine(gfx, "Weapons:", y, FontStyle.Bold);
+            drawTextOnLine(gfx, "Armor:", y, FontStyle.Bold);
             y++;
 
-            foreach (PlayerWeapon w in weaponList)
+            foreach (PlayerArmor a in armorList)
             {
-                drawTextOnLine(gfx, w.ItemName, y);
+                drawTextOnLine(gfx, a.ItemName, y);
                 y++;
             }
         }

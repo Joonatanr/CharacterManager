@@ -298,5 +298,75 @@ namespace CharacterManager
 
             return false;
         }
+
+        public int getCurrentArmorClass()
+        {
+            Boolean isArmorWorn = false;
+            Boolean isShieldWorn = false;
+            PlayerArmor wornArmor = null;
+
+            foreach (PlayerArmor armor in CharacterArmors)
+            {
+                if (armor.IsEquipped)
+                {
+                    if (armor.IsShield)
+                    {
+                        if (isShieldWorn)
+                        {
+                            /* We are trying to use more than 1 shield??? Something has gone wrong. */
+                        }
+                        else
+                        {
+                            isShieldWorn = true;
+                        }
+                    }
+                    else
+                    {
+                        if (isArmorWorn)
+                        {
+                            /* We are trying to wear two armors??? Something has gone wrong. */
+                        }
+                        else
+                        {
+                            wornArmor = armor;
+                        }
+                        isArmorWorn = true;
+                    }
+                }
+            }
+
+
+            int ac = 0;
+
+            if (!isArmorWorn)
+            {
+                /* Unarmed is quite simple. */
+                ac = getModifier("DEX") + 10;
+            }
+            else
+            {
+                /* We are wearing armor. */
+                ac = wornArmor.ArmorClass;
+
+                if (wornArmor.IsDexterityModifier)
+                {
+                    int dexBonus = getModifier("DEX");
+
+                    if (wornArmor.MaxDexModifier > 0)
+                    {
+                        dexBonus = Math.Min(dexBonus, wornArmor.MaxDexModifier);
+                    }
+                    ac += dexBonus;
+                }
+
+            }
+
+            if (isShieldWorn)
+            {
+                ac += 2;
+            }
+
+            return ac;
+        }
     }
 }

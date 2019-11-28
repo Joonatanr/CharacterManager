@@ -23,6 +23,7 @@ namespace CharacterManager.Items
         public Boolean IsStealthDisadvantage;
         public Boolean IsDexterityModifier;
         public int MaxDexModifier;
+        public Boolean IsEquipped = false;
 
         public override string ToString()
         {

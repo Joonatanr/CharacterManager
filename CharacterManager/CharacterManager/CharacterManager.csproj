@@ -103,6 +103,9 @@
     <Compile Include="UserControls\UserControl5eBase.Designer.cs">
       <DependentUpon>UserControl5eBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlArmorHandler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\UserControlAttributeDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>

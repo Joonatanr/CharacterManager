@@ -111,8 +111,20 @@ namespace CharacterManager
 
                 //10. Update weapons.
                 userControlWeaponsHandler1.setWeaponList(activeCharacter.CharacterWeapons);
+
+                //11. Update armors.
+                userControlArmorHandler1.setArmorList(activeCharacter.CharacterArmors);
+                userControlArmorHandler1.ArmorEquipChanged = updateArmorClass;
+                updateArmorClass();
             }
         }
+
+        private void updateArmorClass()
+        {
+            int ac = activeCharacter.getCurrentArmorClass();
+            userControlArmorClass.Value = ac;
+        }
+
 
         /*************** Button functions *************/
 
