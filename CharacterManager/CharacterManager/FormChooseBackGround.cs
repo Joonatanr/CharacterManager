@@ -45,11 +45,52 @@ namespace CharacterManager
 
             if(_selectedBackGround != null)
             {
-                richTextBox1.Clear();
-                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
-                richTextBox1.AppendText("Description : \n");
-                richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
-                richTextBox1.AppendText(_selectedBackGround.Description);
+                richTextBoxDescription.Clear();
+                richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
+                richTextBoxDescription.AppendText("Description : \n");
+                richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Regular);
+                richTextBoxDescription.AppendText(_selectedBackGround.Description);
+
+                richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
+                richTextBoxDescription.AppendText("\n\nSkill Proficiencies:\n");
+                richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Regular);
+
+                foreach(String proficiency in _selectedBackGround.SkillProficiencies)
+                {
+                    richTextBoxDescription.AppendText(proficiency + "\n");
+                }
+
+                if(_selectedBackGround.CustomLanguages > 0)
+                {
+                    richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
+                    richTextBoxDescription.AppendText("\n\nLanguages:\n");
+                    richTextBoxDescription.AppendText("Choose " + _selectedBackGround.CustomLanguages.ToString() + " languages of your choice.");
+                }
+
+
+
+                richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
+                richTextBoxDescription.AppendText("\n\nEquipment:\n");
+                richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Regular);
+
+                foreach (Items.ItemContainer.ContainerContent con in _selectedBackGround.Equipment)
+                {
+                    richTextBoxDescription.AppendText(con.ToString() + "\n");
+                }
+
+                richTextBoxDescription.AppendText("\n\n");
+
+                if (_selectedBackGround.Features.Count > 0)
+                {
+
+                    foreach (CharacterBackGround.BackGroundFeature feature in _selectedBackGround.Features)
+                    {
+                        richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
+                        richTextBoxDescription.AppendText("\nFeature:");
+                        richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Regular);
+                        richTextBoxDescription.AppendText(feature.ToString() + "\n\n");
+                    }
+                }
             }
         }
     }

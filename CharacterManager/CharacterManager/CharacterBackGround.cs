@@ -15,6 +15,14 @@ namespace CharacterManager
         {
             public String Name;
             public String Description;
+
+            public override string ToString()
+            {
+                String res;
+                res = Name + "\n" + Description;
+
+                return res;
+            }
         }
 
         public String BackGroundName;
@@ -28,7 +36,7 @@ namespace CharacterManager
 
         public CharacterBackGround()
         {
-            
+            this.BackGroundName = "UNKNOWN";
         }
     }
 }

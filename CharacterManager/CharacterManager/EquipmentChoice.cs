@@ -13,9 +13,6 @@ namespace CharacterManager
         public string Equipment;
         public int Quantity = 1;
 
-        [XmlIgnore]
-        private Items.PlayerItem ChoiceItem;
-
 
         public EquipmentChoice()
         {

@@ -17,6 +17,16 @@ namespace CharacterManager.Items
         {
             public String Name;
             public int Quantity = 1;
+
+            public override string ToString()
+            {
+                String res = Name;
+                if(Quantity > 1)
+                {
+                    res += "(" + Quantity.ToString() + ")";
+                }
+                return res;
+            }
         }
 
         public List<ContainerContent> ContainedItems = new List<ContainerContent>();
