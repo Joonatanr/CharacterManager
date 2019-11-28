@@ -16,17 +16,17 @@ namespace CharacterManager.UserControls
         {
             public PlayerWeapon weapon;
             public InfoButton infoBtn;
-            public Button EquipButton;
+            public CustomButton EquipButton;
 
             public WeaponControlData(PlayerWeapon w)
             {
                 weapon = w;
                 infoBtn = new InfoButton("Button " + buttonNumber++, w.getExtendedDescription());
-                EquipButton = new Button();
-                EquipButton.Size = new Size(50, 18);
-                EquipButton.Text = "Equip";
-                EquipButton.Font = new Font("Arial", 7.5f);
-                EquipButton.TextAlign = ContentAlignment.MiddleCenter;
+                EquipButton = new CustomButton();
+                EquipButton.Size = new Size(50, 16);
+                EquipButton.ButtonText = "Equip";
+                EquipButton.Font = new Font("Arial", 8.0f);
+                //EquipButton.TextAlign = ContentAlignment.MiddleCenter;
                 EquipButton.Click += new System.EventHandler(EquipButton_Click);
             }
 
@@ -35,13 +35,17 @@ namespace CharacterManager.UserControls
                 /* TODO : This is a placeholder. */
                 if (weapon.IsEquipped)
                 {
-                    EquipButton.Text = "Equip";
+                    EquipButton.ButtonText = "Equip";
+                    EquipButton.BackGroundColor = Color.LightGray;
+                    EquipButton.HoverColor = Color.DarkGray;
                     weapon.IsEquipped = false;
                 }
                 else
                 {
                     weapon.IsEquipped = true;
-                    EquipButton.Text = "Unequip";
+                    EquipButton.BackGroundColor = Color.LightGreen;
+                    EquipButton.HoverColor = Color.Green;
+                    EquipButton.ButtonText = "Unequip";
                 }
             }
         }

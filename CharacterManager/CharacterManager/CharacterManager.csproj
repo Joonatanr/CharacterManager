@@ -91,6 +91,12 @@
     <Compile Include="UserControls\AlignmentChoice.Designer.cs">
       <DependentUpon>AlignmentChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CustomButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CustomButton.Designer.cs">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl5eBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AlignmentChoice.resx">
       <DependentUpon>AlignmentChoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CustomButton.resx">
+      <DependentUpon>CustomButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl5eBase.resx">
       <DependentUpon>UserControl5eBase.cs</DependentUpon>
