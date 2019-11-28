@@ -84,7 +84,7 @@
 		</SkillProficiencies>
 		<ToolProficiencies>
 			<string>Thieves' Tools</string>
-			<string>One type of gaming set</string>
+			<string>AnyGaming</string>
 		</ToolProficiencies>
 		<Equipment>
 			<ContainerContent>
@@ -114,11 +114,11 @@
 		</SkillProficiencies>
 		<ToolProficiencies>
 			<string>Disguise Kit</string>
-			<string>One type of musical instrument</string>
+			<string>AnyMusical</string>
 		</ToolProficiencies>
 		<Equipment>
 			<ContainerContent>
-				<Name>Musical Instrument of your Choice</Name>
+				<Name>AnyMusical</Name>
 				<Quantity>1</Quantity>
 			</ContainerContent>
 			<ContainerContent>
@@ -143,7 +143,7 @@
 			<string>Survival</string>
 		</SkillProficiencies>
 		<ToolProficiencies>
-			<string>One type of Artisan's Tools</string>
+			<string>AnyArtisan</string>
 			<string>Land Vehicles</string>
 		</ToolProficiencies>
 		<Equipment>

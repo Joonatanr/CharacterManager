@@ -121,6 +121,51 @@ namespace CharacterManager.UserControls
                 displayedText = "Any Simple Weapon";
                 isMultipleChoice = true;
             }
+            else if (_equipment.ItemName == "AnyArtisans")
+            {
+                List<PlayerToolKit> tools = CharacterFactory.getAllToolSets();
+
+                foreach (PlayerToolKit tool in tools)
+                {
+                    if (tool.ToolType == PlayerToolKit.PlayerToolType.TYPE_ARTISAN)
+                    {
+                        multipleChoiceItems.Add(tool);
+                    }
+                }
+
+                displayedText = "Any Artisan's Tool";
+                isMultipleChoice = true;
+            }
+            else if(_equipment.ItemName == "AnyMusical")
+            {
+                List<PlayerToolKit> tools = CharacterFactory.getAllToolSets();
+
+                foreach (PlayerToolKit tool in tools)
+                {
+                    if (tool.ToolType == PlayerToolKit.PlayerToolType.TYPE_MUSICAL)
+                    {
+                        multipleChoiceItems.Add(tool);
+                    }
+                }
+
+                displayedText = "Any musical instrument";
+                isMultipleChoice = true;
+            }
+            else if(_equipment.ItemName == "AnyGaming")
+            {
+                List<PlayerToolKit> tools = CharacterFactory.getAllToolSets();
+
+                foreach (PlayerToolKit tool in tools)
+                {
+                    if (tool.ToolType == PlayerToolKit.PlayerToolType.TYPE_GAMING)
+                    {
+                        multipleChoiceItems.Add(tool);
+                    }
+                }
+
+                displayedText = "Any gaming set";
+                isMultipleChoice = true;
+            }
             else
             {
                 isMultipleChoice = false;

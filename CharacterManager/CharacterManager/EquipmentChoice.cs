@@ -21,7 +21,7 @@ namespace CharacterManager
 
         public Items.PlayerItem getObjectReference()
         {
-            return resolveItemFromString(Equipment);
+            return CharacterFactory.resolveItemFromString(Equipment);
         }
 
         public override string ToString()
@@ -35,42 +35,6 @@ namespace CharacterManager
                 res += Quantity.ToString();
                 res += ")";
             }
-
-            return res;
-        }
-
-        //Basically we try to resolve the item from string.
-        private Items.PlayerItem resolveItemFromString(string str)
-        {
-            //Formats:
-            //Greataxe
-            //AnyMartial
-            //AnySimple
-
-            Items.PlayerItem res = null;
-
-            if (str == "AnyMartialMelee")
-            {
-                res = new Items.PlayerWeapon();
-                res.ItemName = "AnyMartialMelee"; //Special case.
-                return res;
-            }
-
-            if (str == "AnyMartial")
-            {
-                res = new Items.PlayerWeapon();
-                res.ItemName = "AnyMartial"; //Special case.
-                return res;
-            }
-
-            if (str == "AnySimple")
-            {
-                res = new Items.PlayerWeapon();
-                res.ItemName = "AnySimple"; //Special case.
-                return res;
-            }
-
-            res = CharacterFactory.getPlayerItemByName(str);
 
             return res;
         }

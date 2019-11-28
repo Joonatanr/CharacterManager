@@ -233,6 +233,66 @@ namespace CharacterManager
             return ArmorList;
         }
 
+        public static List<PlayerItem> getAllGenericItems()
+        {
+            return GenericItemList;
+        }
+
+        public static List<PlayerToolKit> getAllToolSets()
+        {
+            return ToolKitItemList;
+        }
+
+        //Basically we try to resolve the item from string.
+        public static Items.PlayerItem resolveItemFromString(string str)
+        {
+            Items.PlayerItem res = null;
+
+            if (str == "AnyMartialMelee")
+            {
+                res = new Items.PlayerWeapon();
+                res.ItemName = "AnyMartialMelee"; //Special case.
+                return res;
+            }
+
+            if (str == "AnyMartial")
+            {
+                res = new Items.PlayerWeapon();
+                res.ItemName = "AnyMartial"; //Special case.
+                return res;
+            }
+
+            if (str == "AnySimple")
+            {
+                res = new Items.PlayerWeapon();
+                res.ItemName = "AnySimple"; //Special case.
+                return res;
+            }
+
+            if (str == "AnyArtisans")
+            {
+                res = new Items.PlayerItem();
+                res.ItemName = "AnyArtisans";
+                return res;
+            }
+            if (str == "AnyMusical")
+            {
+                res = new Items.PlayerItem();
+                res.ItemName = "AnyMusical";
+                return res;
+            }
+            if (str == "AnyGaming")
+            {
+                res = new Items.PlayerItem();
+                res.ItemName = "AnyArtisans";
+                return res;
+            }
+
+            res = CharacterFactory.getPlayerItemByName(str);
+
+            return res;
+        }
+
         private static Boolean resolveCharacterData(PlayerCharacter raw)
         {
             PlayerRace mainRace;
