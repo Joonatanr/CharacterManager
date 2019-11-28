@@ -92,10 +92,7 @@ namespace CharacterManager.UserControls
             List<Control> myListToRemove = new List<Control>();
             foreach (Control c in this.Controls)
             {
-                if (c is InfoButton)
-                {
-                    myListToRemove.Add(c);
-                }
+                myListToRemove.Add(c);
             }
 
             foreach (Control c in myListToRemove)
