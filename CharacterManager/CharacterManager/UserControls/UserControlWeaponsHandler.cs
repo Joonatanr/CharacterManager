@@ -30,22 +30,35 @@ namespace CharacterManager.UserControls
                 EquipButton.Click += new System.EventHandler(EquipButton_Click);
             }
 
+
+            public void setEquipped(Boolean isEquipped)
+            {
+                if (isEquipped)
+                {
+                    EquipButton.BackGroundColor = Color.LightGreen;
+                    EquipButton.HoverColor = Color.Green;
+                    EquipButton.ButtonText = "Unequip";
+                }
+                else
+                {
+                    EquipButton.ButtonText = "Equip";
+                    EquipButton.BackGroundColor = Color.LightGray;
+                    EquipButton.HoverColor = Color.DarkGray;
+                }
+            }
+
             private void EquipButton_Click(object sender, EventArgs e)
             {
                 /* TODO : This is a placeholder. */
                 if (weapon.IsEquipped)
                 {
-                    EquipButton.ButtonText = "Equip";
-                    EquipButton.BackGroundColor = Color.LightGray;
-                    EquipButton.HoverColor = Color.DarkGray;
+                    setEquipped(false);
                     weapon.IsEquipped = false;
                 }
                 else
                 {
+                    setEquipped(true);
                     weapon.IsEquipped = true;
-                    EquipButton.BackGroundColor = Color.LightGreen;
-                    EquipButton.HoverColor = Color.Green;
-                    EquipButton.ButtonText = "Unequip";
                 }
             }
         }
@@ -92,6 +105,7 @@ namespace CharacterManager.UserControls
 
                 /* 2. Set up the Equip button. */
                 myData.EquipButton.Location = new Point((myData.infoBtn.Left - 1) - myData.EquipButton.Width, y + 3);
+                myData.setEquipped(w.IsEquipped);
                 this.Controls.Add(myData.EquipButton);
 
                 /* Finish up.. */

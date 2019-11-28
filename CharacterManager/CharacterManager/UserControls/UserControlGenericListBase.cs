@@ -16,7 +16,7 @@ namespace CharacterManager.UserControls
         protected const int lineInterval = 18; /* TODO : Make this into public property and test. */
         protected static int buttonNumber = 0;
 
-        protected class InfoButton : Button
+        protected class InfoButton : CustomButton
         {
             //private PlayerAttribute attribute;
             private String infoString;
@@ -25,10 +25,10 @@ namespace CharacterManager.UserControls
             {
                 this.Click += new System.EventHandler(button_Click);
                 this.Name = name;
-                this.Font = new Font("Arial", 7.5f);
-                this.Text = "Info";
-                this.Size = new Size(40, 18);
-                this.TextAlign = ContentAlignment.TopCenter;
+                this.Font = new Font("Arial", 8.0f);
+                this.ButtonText = "Info";
+                this.Size = new Size(40, 17);
+                //this.TextAlign = ContentAlignment.TopCenter;
                 this.infoString = info;
             }
 

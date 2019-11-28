@@ -12,7 +12,21 @@ namespace CharacterManager.UserControls
 {
     public partial class CustomButton : UserControl
     {
-        public Color BackGroundColor { get { return _defaultBackGroundColor; } set { _defaultBackGroundColor = value; this.Invalidate(); } } 
+        public Color BackGroundColor { get
+            {
+                return _defaultBackGroundColor;
+            }
+            set
+            {
+                _defaultBackGroundColor = value;
+                if (!isMouseInControl)
+                {
+                    _backgroundColor = _defaultBackGroundColor;
+                }
+                this.Invalidate();
+            }
+        }
+        
         public Color BorderColor { get; set; } = Color.DarkGray;
         public Color ClickColor { get; set; } = Color.Crimson; /* TODO : Change default to something more neutral. */
         public Color HoverColor { get; set; } = Color.DarkGray;
