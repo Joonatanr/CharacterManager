@@ -244,7 +244,9 @@ namespace CharacterManager
         }
 
         //Basically we try to resolve the item from string.
-        public static Items.PlayerItem resolveItemFromString(string str)
+        /* The idea for this function is that a string might contain some special 
+         magic words that indicate a choice between multiple items. */
+        public static Items.PlayerItem resolveItemChoiceFromString(string str)
         {
             Items.PlayerItem res = null;
 
@@ -252,6 +254,7 @@ namespace CharacterManager
             {
                 res = new Items.PlayerWeapon();
                 res.ItemName = "AnyMartialMelee"; //Special case.
+                res.IsMultipleChoice = true;
                 return res;
             }
 
@@ -259,6 +262,7 @@ namespace CharacterManager
             {
                 res = new Items.PlayerWeapon();
                 res.ItemName = "AnyMartial"; //Special case.
+                res.IsMultipleChoice = true;
                 return res;
             }
 
@@ -266,6 +270,7 @@ namespace CharacterManager
             {
                 res = new Items.PlayerWeapon();
                 res.ItemName = "AnySimple"; //Special case.
+                res.IsMultipleChoice = true;
                 return res;
             }
 
@@ -273,18 +278,21 @@ namespace CharacterManager
             {
                 res = new Items.PlayerItem();
                 res.ItemName = "AnyArtisans";
+                res.IsMultipleChoice = true;
                 return res;
             }
             if (str == "AnyMusical")
             {
                 res = new Items.PlayerItem();
                 res.ItemName = "AnyMusical";
+                res.IsMultipleChoice = true;
                 return res;
             }
             if (str == "AnyGaming")
             {
                 res = new Items.PlayerItem();
                 res.ItemName = "AnyArtisans";
+                res.IsMultipleChoice = true;
                 return res;
             }
 

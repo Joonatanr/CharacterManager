@@ -34,10 +34,11 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(140, 3);
+            this.comboBox1.Location = new System.Drawing.Point(162, 3);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(88, 21);
+            this.comboBox1.Size = new System.Drawing.Size(99, 21);
             this.comboBox1.TabIndex = 0;
             // 
             // label1
@@ -57,7 +58,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Name = "UserControlEquipmentChoiceSingle";
-            this.Size = new System.Drawing.Size(231, 27);
+            this.Size = new System.Drawing.Size(264, 27);
             this.ResumeLayout(false);
             this.PerformLayout();
 

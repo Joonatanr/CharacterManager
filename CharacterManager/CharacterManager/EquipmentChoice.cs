@@ -21,7 +21,16 @@ namespace CharacterManager
 
         public Items.PlayerItem getObjectReference()
         {
-            return CharacterFactory.resolveItemFromString(Equipment);
+            Items.PlayerItem res = CharacterFactory.resolveItemChoiceFromString(Equipment);
+            if (res == null)
+            {
+                /* We are dealing with a custom object, but that is actually OK. */
+                res = new Items.PlayerItem();
+                res.ItemName = Equipment;
+                res.Quantity = Quantity;
+            }
+
+            return res;
         }
 
         public override string ToString()

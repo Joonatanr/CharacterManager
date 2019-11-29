@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace CharacterManager
     {
         private List<CharacterBackGround> mainList;
         private CharacterBackGround _selectedBackGround = null;
-
+        private List<UserControlEquipmentChoiceSingle> myOptionsList;
         public FormChooseBackGround()
         {
             InitializeComponent();
@@ -38,6 +39,23 @@ namespace CharacterManager
             this.Close();
         }
 
+        private void updateOptions()
+        {
+            groupBoxOptions.Controls.Clear();
+            int yloc = 20;
+            int xloc = 10;
+
+
+            foreach(UserControlEquipmentChoiceSingle c in myOptionsList)
+            {
+                c.Location = new Point(xloc, yloc);
+                c.Width = 300;
+                groupBoxOptions.Controls.Add(c);
+                yloc += c.Height;
+                yloc += 2;
+            }
+        }
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             String selectedItem = comboBox1.SelectedItem.ToString();
@@ -45,6 +63,8 @@ namespace CharacterManager
 
             if(_selectedBackGround != null)
             {
+                myOptionsList = new List<UserControlEquipmentChoiceSingle>();
+
                 richTextBoxDescription.Clear();
                 richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
                 richTextBoxDescription.AppendText("Description : \n");
@@ -75,7 +95,21 @@ namespace CharacterManager
 
                 foreach (Items.ItemContainer.ContainerContent con in _selectedBackGround.Equipment)
                 {
-                    richTextBoxDescription.AppendText(con.ToString() + "\n");
+                    //richTextBoxDescription.AppendText(con.ToString() + "\n");
+
+                    /* We might have multiple options. */
+                    UserControlEquipmentChoiceSingle choiceControl = new UserControlEquipmentChoiceSingle();
+                    EquipmentChoice choiceObject = new EquipmentChoice();
+                    choiceObject.Equipment = con.Name;
+                    choiceObject.Quantity = con.Quantity;
+                    choiceControl.Choice = choiceObject;
+
+                    richTextBoxDescription.AppendText(choiceObject.getObjectReference().ToString() + "\n"); 
+                    if (choiceControl.isMultipleChoice)
+                    {
+                        myOptionsList.Add(choiceControl);
+                    }
+
                 }
 
                 richTextBoxDescription.AppendText("\n\n");
@@ -91,6 +125,8 @@ namespace CharacterManager
                         richTextBoxDescription.AppendText(feature.ToString() + "\n\n");
                     }
                 }
+
+                updateOptions();
             }
         }
     }

@@ -15,7 +15,7 @@ namespace CharacterManager.UserControls
     {
         private EquipmentChoice _choice;
         private PlayerItem _equipment;
-        private Boolean isMultipleChoice = false;
+        public Boolean isMultipleChoice = false;
 
         public class EquipmentNotSelectedException : Exception
         {

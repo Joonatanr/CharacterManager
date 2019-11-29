@@ -143,12 +143,12 @@
 			<string>Survival</string>
 		</SkillProficiencies>
 		<ToolProficiencies>
-			<string>AnyArtisan</string>
+			<string>AnyArtisanProficiency</string>
 			<string>Land Vehicles</string>
 		</ToolProficiencies>
 		<Equipment>
 			<ContainerContent>
-				<Name>A set of artisan's tools</Name>
+				<Name>AnyArtisans</Name>
 				<Quantity>1</Quantity>
 			</ContainerContent>
 			<ContainerContent>
