@@ -197,7 +197,7 @@
             this.userControlSpeed.Name = "userControlSpeed";
             this.userControlSpeed.Size = new System.Drawing.Size(80, 58);
             this.userControlSpeed.TabIndex = 31;
-            this.userControlSpeed.Value = 0;
+            this.userControlSpeed.Value = 0.ToString();
             // 
             // userControlInitiative
             // 
@@ -207,7 +207,7 @@
             this.userControlInitiative.Name = "userControlInitiative";
             this.userControlInitiative.Size = new System.Drawing.Size(80, 58);
             this.userControlInitiative.TabIndex = 30;
-            this.userControlInitiative.Value = 0;
+            this.userControlInitiative.Value = 0.ToString();
             // 
             // userControlArmorClass
             // 
@@ -217,7 +217,7 @@
             this.userControlArmorClass.Name = "userControlArmorClass";
             this.userControlArmorClass.Size = new System.Drawing.Size(80, 58);
             this.userControlArmorClass.TabIndex = 29;
-            this.userControlArmorClass.Value = 0;
+            this.userControlArmorClass.Value = 0.ToString();
             // 
             // userControlHitPoints1
             // 

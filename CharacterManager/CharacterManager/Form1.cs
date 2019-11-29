@@ -116,13 +116,29 @@ namespace CharacterManager
                 userControlArmorHandler1.setArmorList(activeCharacter.CharacterArmors);
                 userControlArmorHandler1.ArmorEquipChanged = updateArmorClass;
                 updateArmorClass();
+
+                //12. Update initiative bonus.
+                updateInitiativeBonus();
+            }
+        }
+
+        private void updateInitiativeBonus()
+        {
+            int bonus = activeCharacter.getModifier("DEX");
+            if (bonus >= 0)
+            {
+                userControlInitiative.Value = "+" + bonus.ToString();
+            }
+            else
+            {
+                userControlInitiative.Value = bonus.ToString();
             }
         }
 
         private void updateArmorClass()
         {
             int ac = activeCharacter.getCurrentArmorClass();
-            userControlArmorClass.Value = ac;
+            userControlArmorClass.Value = ac.ToString();
         }
 
 

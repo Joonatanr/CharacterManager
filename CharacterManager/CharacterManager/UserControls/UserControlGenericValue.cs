@@ -9,10 +9,10 @@ namespace CharacterManager.UserControls
 {
     class UserControlGenericValue : UserControl5eBase
     {
-        private int _value;
+        private string _value;
         private string _label;
 
-        public int Value { get { return _value; } set { _value = value; this.Invalidate(); } }
+        public String Value { get { return _value; } set { _value = value; this.Invalidate(); } }
         public string Label { get { return _label; } set { _label = value; this.Invalidate(); } }
 
         protected override void drawData(Graphics gfx)
@@ -29,7 +29,7 @@ namespace CharacterManager.UserControls
             format.Alignment = StringAlignment.Center;
             format.LineAlignment = StringAlignment.Center;
 
-            gfx.DrawString(_value.ToString(), font, new SolidBrush(Color.Black), new Rectangle(0, 5, Width, Height - 5), format);
+            gfx.DrawString(_value, font, new SolidBrush(Color.Black), new Rectangle(0, 5, Width, Height - 5), format);
 
             drawLabel(gfx, _label);
 
