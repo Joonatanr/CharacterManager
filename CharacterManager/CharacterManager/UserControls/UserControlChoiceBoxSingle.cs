@@ -46,4 +46,30 @@ namespace CharacterManager.UserControls
             }
         }
     }
+
+    public class UserControlLanguageChoice : UserControlChoiceBoxSingle
+    {
+        private List<Language> allLanguages;
+        
+        public UserControlLanguageChoice() : base()
+        {
+            allLanguages = CharacterFactory.getAllLanguages();
+            comboBox1.Items.Clear();
+            comboBox1.Visible = true;
+
+            this.label1.Text = "Choose Language";
+
+            foreach (Language lang in allLanguages)
+            {
+                comboBox1.Items.Add(lang.LanguageName);
+            }
+        }
+
+        public Language getSelectedLanguage()
+        {
+            String langString = comboBox1.SelectedItem.ToString();
+
+            return (allLanguages.Find(l => l.LanguageName == langString));
+        }
+    }
 }

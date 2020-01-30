@@ -220,6 +220,11 @@ namespace CharacterManager
             return txt;
         }
 
+        public static List<Language> getAllLanguages()
+        {
+            return LanguageList;
+        }
+
         public static List<CharacterBackGround> getAllBackGrounds()
         {
             return CharacterBackGroundList;

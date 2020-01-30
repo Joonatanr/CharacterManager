@@ -88,7 +88,8 @@ namespace CharacterManager
 
                     for (int x = 0; x < _selectedBackGround.CustomLanguages; x++)
                     {
-                        /* TODO */
+                        UserControlLanguageChoice languageChoice = new UserControlLanguageChoice();
+                        myOptionsList.Add(languageChoice);
                     }
                 }
 
