@@ -85,6 +85,11 @@ namespace CharacterManager
                     richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
                     richTextBoxDescription.AppendText("\n\nLanguages:\n");
                     richTextBoxDescription.AppendText("Choose " + _selectedBackGround.CustomLanguages.ToString() + " languages of your choice.");
+
+                    for (int x = 0; x < _selectedBackGround.CustomLanguages; x++)
+                    {
+                        /* TODO */
+                    }
                 }
 
 
