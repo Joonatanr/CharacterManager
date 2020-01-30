@@ -53,6 +53,9 @@ namespace CharacterManager.UserControls
         {
             base.OnPaint(pea);
 
+            pea.Graphics.TranslateTransform(this.AutoScrollPosition.X,
+                                this.AutoScrollPosition.Y);
+
             //Lets use the panel for drawing.
             Graphics gfx = pea.Graphics;
 
