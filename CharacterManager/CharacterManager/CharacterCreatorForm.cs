@@ -758,6 +758,10 @@ namespace CharacterManager
                     updateAllDisplayedData();
                     /* There is a difference between resetting and updating these values. Update should be done elsewhere... */
                     resetSkillProficiencies();
+
+                    /* Reset all equipment choices. */
+                    myChooseEquipmentForm = new FormChooseEquipment();
+                    updateEquipmentList();
                 }
             }
         }
