@@ -15,7 +15,7 @@ namespace CharacterManager
     {
         private List<CharacterBackGround> mainList;
         private CharacterBackGround _selectedBackGround = null;
-        private List<UserControlEquipmentChoiceSingle> myOptionsList;
+        private List<UserControlChoiceBoxSingle> myOptionsList;
         public FormChooseBackGround()
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace CharacterManager
             int xloc = 10;
 
 
-            foreach(UserControlEquipmentChoiceSingle c in myOptionsList)
+            foreach(UserControlChoiceBoxSingle c in myOptionsList)
             {
                 c.Location = new Point(xloc, yloc);
                 c.Width = 300;
@@ -63,7 +63,7 @@ namespace CharacterManager
 
             if(_selectedBackGround != null)
             {
-                myOptionsList = new List<UserControlEquipmentChoiceSingle>();
+                myOptionsList = new List<UserControlChoiceBoxSingle>();
 
                 richTextBoxDescription.Clear();
                 richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
@@ -103,7 +103,7 @@ namespace CharacterManager
                     //richTextBoxDescription.AppendText(con.ToString() + "\n");
 
                     /* We might have multiple options. */
-                    UserControlEquipmentChoiceSingle choiceControl = new UserControlEquipmentChoiceSingle();
+                    UserControlChoiceBoxSingle choiceControl = new UserControlChoiceBoxSingle();
                     EquipmentChoice choiceObject = new EquipmentChoice();
                     choiceObject.Equipment = con.Name;
                     choiceObject.Quantity = con.Quantity;

@@ -1,6 +1,6 @@
 ﻿namespace CharacterManager.UserControls
 {
-    partial class UserControlEquipmentChoiceSingle
+    partial class UserControlChoiceBoxSingle
     {
         /// <summary> 
         /// Required designer variable.

@@ -11,7 +11,7 @@ using CharacterManager.Items;
 
 namespace CharacterManager.UserControls
 {
-    public partial class UserControlEquipmentChoiceSingle : UserControl
+    public partial class UserControlChoiceBoxSingle : UserControl
     {
         private EquipmentChoice _choice;
         private PlayerItem _equipment;
@@ -32,7 +32,7 @@ namespace CharacterManager.UserControls
             }
         }
 
-        public UserControlEquipmentChoiceSingle()
+        public UserControlChoiceBoxSingle()
         {
             InitializeComponent();
             comboBox1.Visible = false;

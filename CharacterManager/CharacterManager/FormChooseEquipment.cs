@@ -58,7 +58,7 @@ namespace CharacterManager
                 {
                     myItemList = eqChoice.getSelectedEquipmentList();
                 }
-                catch (UserControlEquipmentChoiceSingle.EquipmentNotSelectedException)
+                catch (UserControlChoiceBoxSingle.EquipmentNotSelectedException)
                 {
                     myItemList = null;
                 }

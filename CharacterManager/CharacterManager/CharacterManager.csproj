@@ -127,11 +127,11 @@
     <Compile Include="UserControls\UserControlEquipmentChoice.Designer.cs">
       <DependentUpon>UserControlEquipmentChoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlEquipmentChoiceSingle.cs">
+    <Compile Include="UserControls\UserControlChoiceBoxSingle.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlEquipmentChoiceSingle.Designer.cs">
-      <DependentUpon>UserControlEquipmentChoiceSingle.cs</DependentUpon>
+    <Compile Include="UserControls\UserControlChoiceBoxSingle.Designer.cs">
+      <DependentUpon>UserControlChoiceBoxSingle.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlGenericAbilitiesList.cs">
       <SubType>UserControl</SubType>
@@ -222,8 +222,8 @@
     <EmbeddedResource Include="UserControls\UserControlEquipmentChoice.resx">
       <DependentUpon>UserControlEquipmentChoice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlEquipmentChoiceSingle.resx">
-      <DependentUpon>UserControlEquipmentChoiceSingle.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UserControlChoiceBoxSingle.resx">
+      <DependentUpon>UserControlChoiceBoxSingle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlGenericAbilitiesList.resx">
       <DependentUpon>UserControlGenericAbilitiesList.cs</DependentUpon>
