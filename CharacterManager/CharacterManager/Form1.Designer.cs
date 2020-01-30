@@ -35,6 +35,7 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
+            this.userControlArmorHandler1 = new CharacterManager.UserControls.UserControlArmorHandler();
             this.userControlWeaponsHandler1 = new CharacterManager.UserControls.UserControlWeaponsHandler();
             this.userControlGenericAbilitiesList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -75,7 +76,6 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.userControlArmorHandler1 = new CharacterManager.UserControls.UserControlArmorHandler();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -161,6 +161,14 @@
             this.tabPageCharacter.TabIndex = 0;
             this.tabPageCharacter.Text = "Character";
             // 
+            // userControlArmorHandler1
+            // 
+            this.userControlArmorHandler1.IsBorder = true;
+            this.userControlArmorHandler1.Location = new System.Drawing.Point(425, 476);
+            this.userControlArmorHandler1.Name = "userControlArmorHandler1";
+            this.userControlArmorHandler1.Size = new System.Drawing.Size(261, 128);
+            this.userControlArmorHandler1.TabIndex = 32;
+            // 
             // userControlWeaponsHandler1
             // 
             this.userControlWeaponsHandler1.IsBorder = true;
@@ -197,7 +205,7 @@
             this.userControlSpeed.Name = "userControlSpeed";
             this.userControlSpeed.Size = new System.Drawing.Size(80, 58);
             this.userControlSpeed.TabIndex = 31;
-            this.userControlSpeed.Value = 0.ToString();
+            this.userControlSpeed.Value = "0";
             // 
             // userControlInitiative
             // 
@@ -207,7 +215,7 @@
             this.userControlInitiative.Name = "userControlInitiative";
             this.userControlInitiative.Size = new System.Drawing.Size(80, 58);
             this.userControlInitiative.TabIndex = 30;
-            this.userControlInitiative.Value = 0.ToString();
+            this.userControlInitiative.Value = "0";
             // 
             // userControlArmorClass
             // 
@@ -217,7 +225,7 @@
             this.userControlArmorClass.Name = "userControlArmorClass";
             this.userControlArmorClass.Size = new System.Drawing.Size(80, 58);
             this.userControlArmorClass.TabIndex = 29;
-            this.userControlArmorClass.Value = 0.ToString();
+            this.userControlArmorClass.Value = "0";
             // 
             // userControlHitPoints1
             // 
@@ -539,14 +547,6 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
-            // userControlArmorHandler1
-            // 
-            this.userControlArmorHandler1.IsBorder = true;
-            this.userControlArmorHandler1.Location = new System.Drawing.Point(425, 476);
-            this.userControlArmorHandler1.Name = "userControlArmorHandler1";
-            this.userControlArmorHandler1.Size = new System.Drawing.Size(261, 128);
-            this.userControlArmorHandler1.TabIndex = 32;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -555,6 +555,7 @@
             this.Controls.Add(this.toolStripContainer1);
             this.Name = "Form1";
             this.Text = "Character Manager - 5e";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();

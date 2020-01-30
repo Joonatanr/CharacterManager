@@ -199,6 +199,11 @@ namespace CharacterManager
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //MessageBox.Show("There are lines : " + userControlWeaponsHandler1.originalNumberOfLines);
+        }
     }
 
     public static class RichTextBoxExtensions

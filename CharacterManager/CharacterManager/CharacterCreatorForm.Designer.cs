@@ -88,13 +88,13 @@
             this.buttonChooseEquipment = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.userControlGenericEquipmentList1 = new CharacterManager.UserControls.UserControlGenericEquipmentList();
             this.alignmentChoice1 = new CharacterManager.UserControls.AlignmentChoice();
             this.userControlToolProficiencyChoice1 = new CharacterManager.UserControls.UserControlToolProficiencyChoice();
             this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
             this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -730,14 +730,22 @@
             this.comboBoxPlayerClasses.TabIndex = 0;
             this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.userControlGenericEquipmentList1);
+            this.panel1.Location = new System.Drawing.Point(4, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(229, 310);
+            this.panel1.TabIndex = 3;
+            // 
             // userControlGenericEquipmentList1
             // 
-            this.userControlGenericEquipmentList1.AutoScroll = true;
             this.userControlGenericEquipmentList1.AutoScrollMinSize = new System.Drawing.Size(228, 300);
             this.userControlGenericEquipmentList1.IsBorder = true;
             this.userControlGenericEquipmentList1.Location = new System.Drawing.Point(1, 3);
             this.userControlGenericEquipmentList1.Name = "userControlGenericEquipmentList1";
-            this.userControlGenericEquipmentList1.Size = new System.Drawing.Size(228, 300);
+            this.userControlGenericEquipmentList1.Size = new System.Drawing.Size(228, 307);
             this.userControlGenericEquipmentList1.TabIndex = 2;
             // 
             // alignmentChoice1
@@ -778,14 +786,6 @@
             this.userControlGenericAttributeList1.Name = "userControlGenericAttributeList1";
             this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 433);
             this.userControlGenericAttributeList1.TabIndex = 20;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.userControlGenericEquipmentList1);
-            this.panel1.Location = new System.Drawing.Point(4, 46);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 310);
-            this.panel1.TabIndex = 3;
             // 
             // CharacterCreatorForm
             // 

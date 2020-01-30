@@ -16,6 +16,9 @@ namespace CharacterManager.UserControls
         protected const int lineInterval = 18; /* TODO : Make this into public property and test. */
         protected static int buttonNumber = 0;
 
+        protected int originalHeight;
+        protected int maxLine;
+
         protected class InfoButton : CustomButton
         {
             //private PlayerAttribute attribute;
@@ -47,6 +50,7 @@ namespace CharacterManager.UserControls
         public UserControlGenericListBase()
         {
             InitializeComponent();
+            originalHeight = this.Height;
         }
 
         protected override void OnPaint(PaintEventArgs pea)
@@ -58,6 +62,8 @@ namespace CharacterManager.UserControls
 
             //Lets use the panel for drawing.
             Graphics gfx = pea.Graphics;
+
+            maxLine = 0;
 
             drawBackGround(gfx);
             //So lets draw the lines next.
@@ -71,6 +77,12 @@ namespace CharacterManager.UserControls
             Font myFont = new Font("Arial", 14);
 
             drawData(gfx, myFont);
+
+            /* A crude automatic resizing mechanism... */
+            if (getNumberOfLines(this.Height) < maxLine) 
+            {
+                this.Height = ((maxLine + 1) * lineInterval) + 4;
+            }
         }
 
         protected void drawTextOnLine(Graphics gfx, String text, int lineNum)
@@ -83,12 +95,20 @@ namespace CharacterManager.UserControls
             Font f = new Font("Arial", 12, style);
             Point sPoint = new Point(1, (lineInterval * (lineNum + 1)) + 3);
             gfx.DrawString(text, f, new SolidBrush(Color.Black), sPoint);
+
+            maxLine = Math.Max(maxLine, lineNum + 2);
         }
 
         protected virtual void drawData(Graphics gfx, Font font)
         {
             /* No data to draw in base class. */
         }
+
+        private int getNumberOfLines(int height)
+        {
+            return height / (lineInterval);
+        }
+
 
         private void drawBackGround(Graphics gfx)
         {
