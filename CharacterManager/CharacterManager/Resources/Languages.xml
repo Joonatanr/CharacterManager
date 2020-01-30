@@ -1,0 +1,91 @@
+<ArrayOfLanguage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Language>
+		<LanguageName>Common</LanguageName>
+		<TypicalSpeakers>Humans</TypicalSpeakers>
+		<Script>Common</Script>
+	</Language>
+	<Language>
+		<LanguageName>Dwarvish</LanguageName>
+		<TypicalSpeakers>Dwarves</TypicalSpeakers>
+		<Script>Dwarvish</Script>
+	</Language>
+	<Language>
+		<LanguageName>Elvish</LanguageName>
+		<TypicalSpeakers>Elves</TypicalSpeakers>
+		<Script>Elvish</Script>
+	</Language>
+	<Language>
+		<LanguageName>Giant</LanguageName>
+		<TypicalSpeakers>Ogres, Giants</TypicalSpeakers>
+		<Script>Dwarvish</Script>
+	</Language>
+	<Language>
+		<LanguageName>Gnomish</LanguageName>
+		<TypicalSpeakers>Gnomes</TypicalSpeakers>
+		<Script>Dwarvish</Script>
+	</Language>
+	<Language>
+		<LanguageName>Goblin</LanguageName>
+		<TypicalSpeakers>Goblinoids</TypicalSpeakers>
+		<Script>Dwarvish</Script>
+	</Language>
+	<Language>
+		<LanguageName>Halfling</LanguageName>
+		<TypicalSpeakers>Halflings</TypicalSpeakers>
+		<Script>Common</Script>
+	</Language>
+	<Language>
+		<LanguageName>Orcish</LanguageName>
+		<TypicalSpeakers>Orcs</TypicalSpeakers>
+		<Script>Dwarvish</Script>
+	</Language>
+	
+	<Language>
+		<LanguageName>Abyssal</LanguageName>
+		<TypicalSpeakers>Demons</TypicalSpeakers>
+		<Script>Infernal</Script>
+		<IsExotic>true</IsExotic>
+	</Language>
+	<Language>
+		<LanguageName>Celestial</LanguageName>
+		<TypicalSpeakers>Celestials</TypicalSpeakers>
+		<Script>Celestial</Script>
+		<IsExotic>true</IsExotic>
+	</Language>
+	<Language>
+		<LanguageName>Draconic</LanguageName>
+		<TypicalSpeakers>Dragons, Dragonborn</TypicalSpeakers>
+		<Script>Draconic</Script>
+		<IsExotic>true</IsExotic>
+	</Language>
+	<Language>
+		<LanguageName>Deep Speech</LanguageName>
+		<TypicalSpeakers>Mindflayers, Beholders</TypicalSpeakers>
+		<Script>None</Script>
+		<IsExotic>true</IsExotic>
+	</Language>
+		<Language>
+		<LanguageName>Infernal</LanguageName>
+		<TypicalSpeakers>Devils</TypicalSpeakers>
+		<Script>Infernal</Script>
+		<IsExotic>true</IsExotic>
+	</Language>
+		<Language>
+		<LanguageName>Primordial</LanguageName>
+		<TypicalSpeakers>Elementals</TypicalSpeakers>
+		<Script>Dwarvish</Script>
+		<IsExotic>true</IsExotic>
+	</Language>
+	<Language>
+		<LanguageName>Sylvan</LanguageName>
+		<TypicalSpeakers>Fey Creatures</TypicalSpeakers>
+		<Script>Elvish</Script>
+		<IsExotic>true</IsExotic>
+	</Language>
+	<Language>
+		<LanguageName>Undercommon</LanguageName>
+		<TypicalSpeakers>Underdark traders</TypicalSpeakers>
+		<Script>Elvish</Script>
+		<IsExotic>true</IsExotic>
+	</Language>
+</ArrayOfLanguage>

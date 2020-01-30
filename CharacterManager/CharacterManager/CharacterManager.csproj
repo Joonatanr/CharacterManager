@@ -78,6 +78,7 @@
     <Compile Include="Items\PlayerItem.cs" />
     <Compile Include="Items\PlayerToolKit.cs" />
     <Compile Include="Items\PlayerWeapon.cs" />
+    <Compile Include="Language.cs" />
     <Compile Include="PlayerAbility.cs" />
     <Compile Include="PlayerCharacter.cs" />
     <Compile Include="PlayerClass.cs" />
@@ -256,6 +257,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Languages.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PlayerAttributes.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -26,6 +26,7 @@ namespace CharacterManager
         private static List<Items.PlayerWeapon> WeaponList;
         private static List<Items.PlayerItem> GenericItemList;
         private static List<Items.PlayerToolKit> ToolKitItemList;
+        private static List<Language> LanguageList;
 
         public static List<String> getMainRacesList()
         {
@@ -84,6 +85,7 @@ namespace CharacterManager
                 parseArmorFromXml("Resources/PlayerItems/PlayerArmor.xml");
                 parseWeaponsFromXml("Resources/PlayerItems/PlayerWeapon.xml");
                 parseToolkitsFromXml("Resources/PlayerItems/PlayerTools.xml");
+                parseLanguagesFromXml("Resources/Languages.xml");
 
                 foreach (PlayerRace race in Races)
                 {
@@ -495,6 +497,22 @@ namespace CharacterManager
                 StreamReader file = new System.IO.StreamReader(filepath);
 
                 ToolKitItemList = (List<Items.PlayerToolKit>)reader.Deserialize(file);
+                file.Close();
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
+        }
+
+        private static void parseLanguagesFromXml(String filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<Language>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                LanguageList = (List<Language>)reader.Deserialize(file);
                 file.Close();
             }
             catch (Exception ex)
