@@ -133,6 +133,9 @@
     <Compile Include="UserControls\UserControlChoiceBoxSingle.Designer.cs">
       <DependentUpon>UserControlChoiceBoxSingle.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlEquipmentChoiceSingle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\UserControlGenericAbilitiesList.cs">
       <SubType>UserControl</SubType>
     </Compile>

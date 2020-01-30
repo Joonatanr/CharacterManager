@@ -103,7 +103,7 @@ namespace CharacterManager
                     //richTextBoxDescription.AppendText(con.ToString() + "\n");
 
                     /* We might have multiple options. */
-                    UserControlChoiceBoxSingle choiceControl = new UserControlChoiceBoxSingle();
+                    UserControlEquipmentChoiceSingle choiceControl = new UserControlEquipmentChoiceSingle();
                     EquipmentChoice choiceObject = new EquipmentChoice();
                     choiceObject.Equipment = con.Name;
                     choiceObject.Quantity = con.Quantity;

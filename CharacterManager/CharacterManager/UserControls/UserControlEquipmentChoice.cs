@@ -24,7 +24,7 @@ namespace CharacterManager.UserControls
         private struct ChoiceControlPair
         {
             //public List<EquipmentChoice> equipment;
-            public List<UserControlChoiceBoxSingle> equipmentControls;
+            public List<UserControlEquipmentChoiceSingle> equipmentControls;
             public RadioButton btn;
         }
 
@@ -44,7 +44,7 @@ namespace CharacterManager.UserControls
                 if (pair.btn.Checked)
                 {
                     List<PlayerItem> res = new List<PlayerItem>();
-                    foreach (UserControlChoiceBoxSingle single in pair.equipmentControls)
+                    foreach (UserControlEquipmentChoiceSingle single in pair.equipmentControls)
                     {
                         res.Add(single.getSelectedItem());
                     }
@@ -80,10 +80,10 @@ namespace CharacterManager.UserControls
 
                     yloc = 30;
 
-                    List<UserControlChoiceBoxSingle> singleControlList = new List<UserControlChoiceBoxSingle>();
+                    List<UserControlEquipmentChoiceSingle> singleControlList = new List<UserControlEquipmentChoiceSingle>();
                     foreach (EquipmentChoice choice in obj)
                     {
-                        UserControlChoiceBoxSingle singleControl = new UserControlChoiceBoxSingle();
+                        UserControlEquipmentChoiceSingle singleControl = new UserControlEquipmentChoiceSingle();
                         singleControl.Choice = choice;
                         singleControl.Location = new Point(xloc, yloc);
                         groupBox1.Controls.Add(singleControl);
