@@ -1,6 +1,7 @@
 ﻿using CharacterManager.Items;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,15 +41,29 @@ namespace CharacterManager.UserControls
             }
 
 
-            int y = lineInterval;
-
-
+            int y = 0;
             buttonList = new List<InfoButton>();
+            
+            foreach (PlayerItem i in GeneralEquipmentList)
+            {
+                InfoButton eqButton = new InfoButton(i.ItemName, i.Description);
+                AddButtonOnLine(eqButton, y);
+                y++;
+            }
+        }
+
+        protected override void drawData(Graphics gfx, Font font)
+        {
+            int y = -1;
+
+            //Lets draw a descriptive text.
+            drawTextOnLine(gfx, "Inventory:", y, FontStyle.Bold);
+            y++;
 
             foreach (PlayerItem i in GeneralEquipmentList)
             {
-                //InfoButton eqButton = new InfoButton(i.ItemName, i.Description);
-                /* TODO */
+                drawTextOnLine(gfx, i.ItemName, y);
+                y++;
             }
         }
     }

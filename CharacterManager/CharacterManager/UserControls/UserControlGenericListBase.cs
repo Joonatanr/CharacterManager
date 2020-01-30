@@ -101,7 +101,7 @@ namespace CharacterManager.UserControls
 
         protected void AddButtonOnLine(InfoButton btn, int lineNum)
         {
-            int y = lineInterval * 2;
+            int y = lineInterval;
             y += lineNum * lineInterval;          
   
             btn.Location = new Point(this.Width - 43, y + 3);

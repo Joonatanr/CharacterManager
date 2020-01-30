@@ -94,7 +94,7 @@ namespace CharacterManager.UserControls
             }
 
             //Lets test adding a button for each piece of equipment.
-            int y = 1;
+            int y = 2;
 
             foreach (PlayerWeapon w in wList)
             {

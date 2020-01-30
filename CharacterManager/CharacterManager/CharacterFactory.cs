@@ -449,10 +449,10 @@ namespace CharacterManager
 
                 GenericItemList = (List<Items.PlayerItem>)reader.Deserialize(file);
 
-                foreach (Items.PlayerItem item in GenericItemList)
-                {
-                    logMessage("Parsed item ->" + item.ItemName + "\n");
-                }
+                //foreach (Items.PlayerItem item in GenericItemList)
+                //{
+                //    logMessage("Parsed item ->" + item.ItemName + "\n");
+                //}
 
                 file.Close();
             }

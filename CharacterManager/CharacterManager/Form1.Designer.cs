@@ -76,6 +76,7 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.userControlEquipmentHandler1 = new CharacterManager.UserControls.UserControlEquipmentHandler();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -141,6 +142,7 @@
             // tabPageCharacter
             // 
             this.tabPageCharacter.BackColor = System.Drawing.Color.White;
+            this.tabPageCharacter.Controls.Add(this.userControlEquipmentHandler1);
             this.tabPageCharacter.Controls.Add(this.userControlArmorHandler1);
             this.tabPageCharacter.Controls.Add(this.userControlWeaponsHandler1);
             this.tabPageCharacter.Controls.Add(this.userControlGenericAbilitiesList1);
@@ -547,6 +549,14 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
+            // userControlEquipmentHandler1
+            // 
+            this.userControlEquipmentHandler1.IsBorder = true;
+            this.userControlEquipmentHandler1.Location = new System.Drawing.Point(425, 610);
+            this.userControlEquipmentHandler1.Name = "userControlEquipmentHandler1";
+            this.userControlEquipmentHandler1.Size = new System.Drawing.Size(261, 279);
+            this.userControlEquipmentHandler1.TabIndex = 33;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,6 +634,7 @@
         private UserControls.UserControlGenericAbilitiesList userControlGenericAbilitiesList1;
         private UserControls.UserControlWeaponsHandler userControlWeaponsHandler1;
         private UserControls.UserControlArmorHandler userControlArmorHandler1;
+        private UserControls.UserControlEquipmentHandler userControlEquipmentHandler1;
     }
 }
 

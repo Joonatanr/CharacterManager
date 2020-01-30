@@ -113,7 +113,10 @@ namespace CharacterManager
                 userControlArmorHandler1.ArmorEquipChanged = updateArmorClass;
                 updateArmorClass();
 
-                //12. Update initiative bonus.
+                //12. Update general inventory.
+                userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
+
+                //13. Update initiative bonus.
                 updateInitiativeBonus();
             }
         }
