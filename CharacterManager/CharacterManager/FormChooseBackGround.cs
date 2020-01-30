@@ -1,4 +1,5 @@
-﻿using CharacterManager.UserControls;
+﻿using CharacterManager.Items;
+using CharacterManager.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,9 @@ namespace CharacterManager
     {
         private List<CharacterBackGround> mainList;
         private CharacterBackGround _selectedBackGround = null;
-        private List<UserControlChoiceBoxSingle> myOptionsList;
+        private List<UserControlChoiceBoxSingle> myOptionsList = new List<UserControlChoiceBoxSingle>();
+        private List<PlayerItem> mySelectedItems = new List<PlayerItem>();
+
         public FormChooseBackGround()
         {
             InitializeComponent();
@@ -25,6 +28,27 @@ namespace CharacterManager
             {
                 comboBox1.Items.Add(bg.BackGroundName);
             }
+        }
+
+        public List<PlayerItem> getAllBackGroundEquipment()
+        {
+            List<PlayerItem> res = new List<PlayerItem>();
+            foreach(PlayerItem item in mySelectedItems)
+            {
+                res.Add(item);
+            }
+
+            /* Now come the multiple choice parts for equipment. */
+            foreach(UserControlChoiceBoxSingle single in myOptionsList)
+            {
+                if (single is UserControlEquipmentChoiceSingle)
+                {
+                    res.Add(((UserControlEquipmentChoiceSingle)single).getSelectedItem());
+                }
+            }
+
+
+            return res;
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -64,6 +88,7 @@ namespace CharacterManager
             if(_selectedBackGround != null)
             {
                 myOptionsList = new List<UserControlChoiceBoxSingle>();
+                mySelectedItems = new List<PlayerItem>();
 
                 richTextBoxDescription.Clear();
                 richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
@@ -114,6 +139,11 @@ namespace CharacterManager
                     if (choiceControl.isMultipleChoice)
                     {
                         myOptionsList.Add(choiceControl);
+                    }
+                    else
+                    {
+                        /* We can simply add this to the list. */
+                        mySelectedItems.Add(choiceControl.getSelectedItem());
                     }
 
                 }

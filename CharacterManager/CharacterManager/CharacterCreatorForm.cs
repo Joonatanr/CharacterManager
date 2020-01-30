@@ -33,6 +33,12 @@ namespace CharacterManager
         private List<PlayerAbility> myAttributeList = new List<PlayerAbility>();
         private List<Items.PlayerItem> myItemList = new List<Items.PlayerItem>();
 
+
+        /* Subforms */
+        FormChooseBackGround myChooseBackGroundForm = new FormChooseBackGround();
+        FormChooseEquipment myChooseEquipmentForm = new FormChooseEquipment();
+
+
         public CharacterCreatorForm()
         {
             InitializeComponent();
@@ -565,6 +571,23 @@ namespace CharacterManager
             List<Items.PlayerItem> equipmentList = new List<Items.PlayerItem>();
 
 
+            /* 1. Get all equipment from the equipment selection form. */
+            myItemList = new List<PlayerItem>();
+
+            foreach(PlayerItem item in myChooseEquipmentForm.SelectedItems)
+            {
+                myItemList.Add(item);
+            }
+
+            /* 2. Get all the equipment from the background selection form. */
+            /* TODO */
+            List<PlayerItem> characterBackGroundItems = myChooseBackGroundForm.getAllBackGroundEquipment();
+            foreach(PlayerItem item in characterBackGroundItems)
+            {
+                myItemList.Add(item);
+            }
+
+            /* Display weapons, armor and generic equipment separately. */
             foreach (Items.PlayerItem item in myItemList)
             {
                 if (item is Items.PlayerWeapon)
@@ -757,13 +780,18 @@ namespace CharacterManager
                 MessageBox.Show("No class selected");
                 return;
             }
-            
-            FormChooseEquipment myForm = new FormChooseEquipment();
-            myForm.SelectedClass = SelectedClass;
-            
-            if (myForm.ShowDialog() == DialogResult.OK)
+
+            //FormChooseEquipment myForm = new FormChooseEquipment();
+            if (myChooseEquipmentForm.SelectedClass != SelectedClass)
             {
-                myItemList = myForm.SelectedItems;
+                /* We reset the data in this case. */
+                myChooseEquipmentForm = new FormChooseEquipment();
+                myChooseEquipmentForm.SelectedClass = SelectedClass;
+            }
+            
+            if (myChooseEquipmentForm.ShowDialog() == DialogResult.OK)
+            {
+                //myItemList = myChooseEquipmentForm.SelectedItems;
 
                 /* Add the items to display. */
                 updateEquipmentList();
@@ -771,12 +799,12 @@ namespace CharacterManager
         }
 
         private void buttonChooseBackGround_Click(object sender, EventArgs e)
-        {
-            FormChooseBackGround myForm = new FormChooseBackGround();
-
-            if (myForm.ShowDialog() == DialogResult.OK)
+        { 
+            if (myChooseBackGroundForm.ShowDialog() == DialogResult.OK)
             {
-                /* TODO */
+                updateEquipmentList();
+
+                /* TODO : Should also update the known languages, and well display them somewhere... */
             }
         }
 
