@@ -39,14 +39,13 @@ namespace CharacterManager.UserControls
             }
 
             //Lets test adding a button for reach of the attributes.
-            int y = lineInterval;
+            int y = 1;
             foreach (PlayerAbility attrib in listOfAttributes)
             {
-                y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib.Description);
                 buttonNumber++;
-                myBtn.Location = new Point(this.Width - 43, y + 3);
-                this.Controls.Add(myBtn);
+                AddButtonOnLine(myBtn, y);
+                y++;
             }
 
             this.Invalidate();
