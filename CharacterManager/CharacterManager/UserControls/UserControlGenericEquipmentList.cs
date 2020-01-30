@@ -94,50 +94,44 @@ namespace CharacterManager.UserControls
             }
 
             //Lets test adding a button for each piece of equipment.
-            int y = lineInterval * 2;
-
-
+            int y = 1;
 
             foreach (PlayerWeapon w in wList)
             {
-                y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), w.getExtendedDescription());
                 buttonNumber++;
-                myBtn.Location = new Point(this.Width - 43, y + 3);
-                this.Controls.Add(myBtn);
+                AddButtonOnLine(myBtn, y);
+                y++;
             }
 
-            y += lineInterval * 2;
+            y += 2;
 
             foreach (PlayerArmor a in aList)
             {
-                y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), a.getExtendedDescription()); 
                 buttonNumber++;
-                myBtn.Location = new Point(this.Width - 43, y + 3);
-                this.Controls.Add(myBtn);
+                AddButtonOnLine(myBtn, y);
+                y++;
             }
 
-            y += lineInterval * 2;
+            y += 2;
 
             foreach (PlayerItem e in eList)
-            {
-                y += lineInterval;
+            {                
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), e.getExtendedDescription()); 
                 buttonNumber++;
-                myBtn.Location = new Point(this.Width - 43, y + 3);
-                this.Controls.Add(myBtn);
+                AddButtonOnLine(myBtn, y);
+                y++;
             }
 
-            y += lineInterval * 2;
+            y += 2;
 
             foreach (PlayerToolKit t in toolList)
             {
-                y += lineInterval;
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), t.getExtendedDescription()); 
                 buttonNumber++;
-                myBtn.Location = new Point(this.Width - 43, y + 3);
-                this.Controls.Add(myBtn);
+                AddButtonOnLine(myBtn, y);
+                y++;
             }
         }
 

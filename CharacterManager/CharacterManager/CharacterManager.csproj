@@ -136,6 +136,9 @@
     <Compile Include="UserControls\UserControlEquipmentChoiceSingle.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserControls\UserControlEquipmentHandler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\UserControlGenericAbilitiesList.cs">
       <SubType>UserControl</SubType>
     </Compile>

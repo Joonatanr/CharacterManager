@@ -180,7 +180,7 @@
             // userControlGenericAbilitiesList1
             // 
             this.userControlGenericAbilitiesList1.IsBorder = true;
-            this.userControlGenericAbilitiesList1.Location = new System.Drawing.Point(760, 297);
+            this.userControlGenericAbilitiesList1.Location = new System.Drawing.Point(748, 119);
             this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
             this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(256, 409);
             this.userControlGenericAbilitiesList1.TabIndex = 30;
@@ -238,9 +238,9 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(547, 729);
+            this.richTextBox1.Location = new System.Drawing.Point(748, 729);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(469, 142);
+            this.richTextBox1.Size = new System.Drawing.Size(268, 142);
             this.richTextBox1.TabIndex = 27;
             this.richTextBox1.Text = "";
             // 

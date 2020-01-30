@@ -99,6 +99,16 @@ namespace CharacterManager.UserControls
             maxLine = Math.Max(maxLine, lineNum + 2);
         }
 
+        protected void AddButtonOnLine(InfoButton btn, int lineNum)
+        {
+            int y = lineInterval * 2;
+            y += lineNum * lineInterval;          
+  
+            btn.Location = new Point(this.Width - 43, y + 3);
+            this.Controls.Add(btn);
+        }
+
+
         protected virtual void drawData(Graphics gfx, Font font)
         {
             /* No data to draw in base class. */
