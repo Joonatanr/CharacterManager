@@ -383,6 +383,7 @@ namespace CharacterManager
             string[] filepaths = Directory.GetFiles(filefolder);
 
             Classes = new List<PlayerClass>();
+            PlayerClass curr;
             foreach (string filepath in filepaths)
             {
                 try
@@ -390,7 +391,8 @@ namespace CharacterManager
                     XmlSerializer reader = new XmlSerializer(typeof(PlayerClass));
                     StreamReader file = new System.IO.StreamReader(filepath);
 
-                    Classes.Add((PlayerClass)reader.Deserialize(file));
+                    curr = ((PlayerClass)reader.Deserialize(file));
+                    Classes.Add(curr);
                     file.Close();
                 }
                 catch (Exception ex)
@@ -399,51 +401,6 @@ namespace CharacterManager
                 }
             }
 
-            PlayerClass barbClass = Classes.Find(r => r.PlayerClassName == "Barbarian");
-            logMessage("Barbarian has " + barbClass.AvailableEquipment.Count.ToString() + " equipment choices\n");
-
-            foreach(EquipmentChoiceList baseList in barbClass.AvailableEquipment)
-            {
-                if(baseList.optionA.Count > 0)
-                {
-                    logMessage("Option A : ");
-                    foreach(EquipmentChoice choice in baseList.optionA)
-                    {
-                        logMessage(choice.ToString() + ",");
-                    }
-                    logMessage("\n");
-                }
-
-                if (baseList.optionB.Count > 0)
-                {
-                    logMessage("Option B : ");
-                    foreach (EquipmentChoice choice in baseList.optionB)
-                    {
-                        logMessage(choice.ToString() + ",");
-                    }
-                    logMessage("\n");
-                }
-
-                if (baseList.optionC.Count > 0)
-                {
-                    logMessage("Option C : ");
-                    foreach (EquipmentChoice choice in baseList.optionC)
-                    {
-                        logMessage(choice.ToString() + ",");
-                    }
-                    logMessage("\n");
-                }
-
-                if (baseList.optionD.Count > 0)
-                {
-                    logMessage("Option D : ");
-                    foreach (EquipmentChoice choice in baseList.optionD)
-                    {
-                        logMessage(choice.ToString() + ",");
-                    }
-                    logMessage("\n");
-                }
-            }
         }
 
         private static void parseAttributesFromXml(String filepath)

@@ -81,6 +81,7 @@
     <Compile Include="PlayerAbility.cs" />
     <Compile Include="PlayerCharacter.cs" />
     <Compile Include="PlayerClass.cs" />
+    <Compile Include="PlayerClassAbility.cs" />
     <Compile Include="PlayerRace.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

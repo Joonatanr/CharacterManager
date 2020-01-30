@@ -105,4 +105,17 @@
 			</optionB>
 		</EquipmentChoiceList>
 	</AvailableEquipment>
+	
+	<AvailableClassAbilities>
+		<Description>
+			You adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.
+		</Description>
+		<AvailableChoices>
+			<string>FightingStyleArchery</string>
+			<string>FightingStyleDefense</string>
+			<string>FightingStyleGreatWeapon</string>
+			<string>FightingStyleProtection</string>
+			<string>FightingStyleTwoWeapon</string>
+		</AvailableChoices>
+	</AvailableClassAbilities>
 </PlayerClass>

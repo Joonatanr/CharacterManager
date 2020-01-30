@@ -83,6 +83,9 @@
             this.richTextBoxProficiencyTest = new System.Windows.Forms.RichTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.textBoxBackGround = new System.Windows.Forms.TextBox();
+            this.buttonChooseBackGround = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.userControlGenericEquipmentList1 = new CharacterManager.UserControls.UserControlGenericEquipmentList();
@@ -90,9 +93,7 @@
             this.buttonChooseEquipment = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.buttonChooseBackGround = new System.Windows.Forms.Button();
-            this.textBoxBackGround = new System.Windows.Forms.TextBox();
+            this.buttonChooseClassFeatures = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCHA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWIS)).BeginInit();
@@ -103,9 +104,9 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxCharName
@@ -662,8 +663,39 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Input";
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.textBoxBackGround);
+            this.groupBox7.Controls.Add(this.buttonChooseBackGround);
+            this.groupBox7.Location = new System.Drawing.Point(5, 356);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(256, 50);
+            this.groupBox7.TabIndex = 12;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Character Background";
+            // 
+            // textBoxBackGround
+            // 
+            this.textBoxBackGround.Location = new System.Drawing.Point(150, 19);
+            this.textBoxBackGround.Name = "textBoxBackGround";
+            this.textBoxBackGround.ReadOnly = true;
+            this.textBoxBackGround.Size = new System.Drawing.Size(100, 20);
+            this.textBoxBackGround.TabIndex = 1;
+            this.textBoxBackGround.Text = "None";
+            // 
+            // buttonChooseBackGround
+            // 
+            this.buttonChooseBackGround.Location = new System.Drawing.Point(14, 18);
+            this.buttonChooseBackGround.Name = "buttonChooseBackGround";
+            this.buttonChooseBackGround.Size = new System.Drawing.Size(130, 22);
+            this.buttonChooseBackGround.TabIndex = 0;
+            this.buttonChooseBackGround.Text = "Choose Background";
+            this.buttonChooseBackGround.UseVisualStyleBackColor = true;
+            this.buttonChooseBackGround.Click += new System.EventHandler(this.buttonChooseBackGround_Click);
+            // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.buttonChooseClassFeatures);
             this.groupBox6.Controls.Add(this.groupBox2);
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.comboBoxPlayerClasses);
@@ -679,9 +711,9 @@
             this.groupBox2.Controls.Add(this.userControlGenericEquipmentList1);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.buttonChooseEquipment);
-            this.groupBox2.Location = new System.Drawing.Point(9, 43);
+            this.groupBox2.Location = new System.Drawing.Point(9, 76);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(241, 395);
+            this.groupBox2.Size = new System.Drawing.Size(241, 362);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Equipment and Spells";
@@ -691,7 +723,7 @@
             this.userControlGenericEquipmentList1.IsBorder = true;
             this.userControlGenericEquipmentList1.Location = new System.Drawing.Point(6, 46);
             this.userControlGenericEquipmentList1.Name = "userControlGenericEquipmentList1";
-            this.userControlGenericEquipmentList1.Size = new System.Drawing.Size(228, 343);
+            this.userControlGenericEquipmentList1.Size = new System.Drawing.Size(228, 300);
             this.userControlGenericEquipmentList1.TabIndex = 2;
             // 
             // button1
@@ -727,39 +759,19 @@
             this.comboBoxPlayerClasses.FormattingEnabled = true;
             this.comboBoxPlayerClasses.Location = new System.Drawing.Point(80, 19);
             this.comboBoxPlayerClasses.Name = "comboBoxPlayerClasses";
-            this.comboBoxPlayerClasses.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPlayerClasses.Size = new System.Drawing.Size(163, 21);
             this.comboBoxPlayerClasses.TabIndex = 0;
             this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
             // 
-            // groupBox7
+            // buttonChooseClassFeatures
             // 
-            this.groupBox7.Controls.Add(this.textBoxBackGround);
-            this.groupBox7.Controls.Add(this.buttonChooseBackGround);
-            this.groupBox7.Location = new System.Drawing.Point(5, 356);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(256, 50);
-            this.groupBox7.TabIndex = 12;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Character Background";
-            // 
-            // buttonChooseBackGround
-            // 
-            this.buttonChooseBackGround.Location = new System.Drawing.Point(14, 18);
-            this.buttonChooseBackGround.Name = "buttonChooseBackGround";
-            this.buttonChooseBackGround.Size = new System.Drawing.Size(130, 22);
-            this.buttonChooseBackGround.TabIndex = 0;
-            this.buttonChooseBackGround.Text = "Choose Background";
-            this.buttonChooseBackGround.UseVisualStyleBackColor = true;
-            this.buttonChooseBackGround.Click += new System.EventHandler(this.buttonChooseBackGround_Click);
-            // 
-            // textBoxBackGround
-            // 
-            this.textBoxBackGround.Location = new System.Drawing.Point(150, 19);
-            this.textBoxBackGround.Name = "textBoxBackGround";
-            this.textBoxBackGround.ReadOnly = true;
-            this.textBoxBackGround.Size = new System.Drawing.Size(100, 20);
-            this.textBoxBackGround.TabIndex = 1;
-            this.textBoxBackGround.Text = "None";
+            this.buttonChooseClassFeatures.Location = new System.Drawing.Point(19, 47);
+            this.buttonChooseClassFeatures.Name = "buttonChooseClassFeatures";
+            this.buttonChooseClassFeatures.Size = new System.Drawing.Size(224, 23);
+            this.buttonChooseClassFeatures.TabIndex = 4;
+            this.buttonChooseClassFeatures.Text = "Choose Class Features";
+            this.buttonChooseClassFeatures.UseVisualStyleBackColor = true;
+            this.buttonChooseClassFeatures.Click += new System.EventHandler(this.buttonChooseClassFeatures_Click);
             // 
             // CharacterCreatorForm
             // 
@@ -786,11 +798,11 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -862,5 +874,6 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textBoxBackGround;
         private System.Windows.Forms.Button buttonChooseBackGround;
+        private System.Windows.Forms.Button buttonChooseClassFeatures;
     }
 }

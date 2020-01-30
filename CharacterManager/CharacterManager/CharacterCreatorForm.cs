@@ -779,5 +779,10 @@ namespace CharacterManager
                 /* TODO */
             }
         }
+
+        private void buttonChooseClassFeatures_Click(object sender, EventArgs e)
+        {
+            /* TODO */
+        }
     }
 }
