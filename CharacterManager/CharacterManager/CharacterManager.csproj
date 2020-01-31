@@ -53,6 +53,12 @@
     <Compile Include="CharacterCreator\CharacterCreatorForm.Designer.cs">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterCreator\FormChooseClassFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterCreator\FormChooseClassFeatures.Designer.cs">
+      <DependentUpon>FormChooseClassFeatures.cs</DependentUpon>
+    </Compile>
     <Compile Include="CharacterFactory.cs" />
     <Compile Include="DieRoll.cs" />
     <Compile Include="EquipmentChoice.cs" />
@@ -189,6 +195,9 @@
     </Compile>
     <EmbeddedResource Include="CharacterCreator\CharacterCreatorForm.resx">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterCreator\FormChooseClassFeatures.resx">
+      <DependentUpon>FormChooseClassFeatures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

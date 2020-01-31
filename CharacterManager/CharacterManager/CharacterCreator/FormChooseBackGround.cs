@@ -19,6 +19,8 @@ namespace CharacterManager
         private List<UserControlChoiceBoxSingle> myOptionsList = new List<UserControlChoiceBoxSingle>();
         private List<PlayerItem> mySelectedItems = new List<PlayerItem>();
 
+        public CharacterBackGround SelectedBackGround { get { return _selectedBackGround; } }
+
         public FormChooseBackGround()
         {
             InitializeComponent();

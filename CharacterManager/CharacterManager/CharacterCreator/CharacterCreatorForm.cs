@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CharacterManager
+namespace CharacterManager.CharacterCreator
 {
     public partial class CharacterCreatorForm : Form
     {
@@ -37,7 +37,7 @@ namespace CharacterManager
         /* Subforms */
         FormChooseBackGround myChooseBackGroundForm = new FormChooseBackGround();
         FormChooseEquipment myChooseEquipmentForm = new FormChooseEquipment();
-
+        FormChooseClassFeatures myChooseClassFeaturesForm = new FormChooseClassFeatures();
 
         public CharacterCreatorForm()
         {
@@ -808,6 +808,14 @@ namespace CharacterManager
             {
                 updateEquipmentList();
 
+                if (myChooseBackGroundForm.SelectedBackGround != null) 
+                {
+                    textBoxBackGround.Text = myChooseBackGroundForm.SelectedBackGround.BackGroundName;
+                }
+                else
+                {
+                    textBoxBackGround.Text = "None";
+                }
                 /* TODO : Should also update the known languages, and well display them somewhere... */
             }
         }
@@ -815,6 +823,10 @@ namespace CharacterManager
         private void buttonChooseClassFeatures_Click(object sender, EventArgs e)
         {
             /* TODO */
+            if (myChooseClassFeaturesForm.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

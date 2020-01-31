@@ -1,4 +1,4 @@
-﻿namespace CharacterManager
+﻿namespace CharacterManager.CharacterCreator
 {
     partial class CharacterCreatorForm
     {
