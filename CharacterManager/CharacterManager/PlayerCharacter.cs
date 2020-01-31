@@ -92,6 +92,16 @@ namespace CharacterManager
         public PlayerSize Size;
         public PlayerAlignment Alignment;
 
+        [XmlIgnore]
+        public int AcBonus = 0; /* Current bonus to AC from abilities and magical effects etc. */
+
+        /* TODO : These could be made into properties with proper getters. */
+        [XmlIgnore]
+        public Boolean isArmorWorn = false;
+
+        [XmlIgnore]
+        public Boolean isShieldWorn = false;
+
         public String CharacterName
         {
             get
@@ -211,6 +221,12 @@ namespace CharacterManager
 
         private String _name;
 
+
+        /*** Lets test with some events here. ***/
+        public delegate void PlayerEvent(PlayerCharacter c);
+
+        public event PlayerEvent ArmorDonned;
+
         public PlayerCharacter()
         {
             this._name = "UNKNOWN";
@@ -258,6 +274,7 @@ namespace CharacterManager
             foreach (PlayerAbility obj in abilityList)
             {
                 CharacterAbilities.Add(obj.AttributeName);
+                obj.InitializeSubscriptions(this);
             }
         }
 
@@ -302,9 +319,10 @@ namespace CharacterManager
 
         public int getCurrentArmorClass()
         {
-            Boolean isArmorWorn = false;
-            Boolean isShieldWorn = false;
+            isArmorWorn = false;
+            isShieldWorn = false;
             PlayerArmor wornArmor = null;
+            AcBonus = 0;
 
             foreach (PlayerArmor armor in CharacterArmors)
             {
@@ -366,6 +384,11 @@ namespace CharacterManager
             {
                 ac += 2;
             }
+
+            /* Fire the event. */
+            ArmorDonned?.Invoke(this);
+
+            ac += AcBonus;
 
             return ac;
         }

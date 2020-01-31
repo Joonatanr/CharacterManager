@@ -32,5 +32,10 @@ namespace CharacterManager
         {
             return CharacterFactory.getPlayerAbilityFromString(s);
         }
+
+        public virtual void InitializeSubscriptions(PlayerCharacter c)
+        {
+            /* TODO - This will be overwritten by special abilities. */
+        }
     }
 }

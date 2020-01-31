@@ -42,6 +42,19 @@ namespace CharacterManager
             this.Description = "While you are wearing armor, you gain a +1 bonus to AC.";
         }
 
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.ArmorDonned += UpdateArmorBonus;
+        }
+
+        private void UpdateArmorBonus(PlayerCharacter c)
+        {
+            if (c.isArmorWorn)
+            {
+                c.AcBonus++;
+            }
+        }
+
         public override void updateCharacterDuringCreation(PlayerCharacter character)
         {
             //throw new NotImplementedException();
