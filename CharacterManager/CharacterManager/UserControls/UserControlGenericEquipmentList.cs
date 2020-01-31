@@ -124,8 +124,6 @@ namespace CharacterManager.UserControls
                 y++;
             }
 
-            y += 2;
-
             foreach (PlayerToolKit t in toolList)
             {
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), t.getExtendedDescription()); 
@@ -141,6 +139,7 @@ namespace CharacterManager.UserControls
             wList = new List<PlayerWeapon>();
             aList = new List<PlayerArmor>();
             eList = new List<PlayerItem>();
+            toolList = new List<PlayerToolKit>();
 
             if (allItemsList == null)
             {

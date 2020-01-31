@@ -49,6 +49,20 @@ namespace CharacterManager
                 }
             }
 
+            return res;
+        }
+
+        public List<string> getAllSkillProficiencies()
+        {
+            List<string> res = new List<string>();
+            
+            if (_selectedBackGround != null)
+            {
+                foreach (string prof in _selectedBackGround.SkillProficiencies)
+                {
+                    res.Add(prof);
+                }
+            }
 
             return res;
         }

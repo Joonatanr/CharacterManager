@@ -193,7 +193,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Bagpipes</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>5</Weight>
 		<Cost>30</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>
@@ -201,7 +201,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Drum</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>3</Weight>
 		<Cost>6</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>
@@ -209,7 +209,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Dulcimer</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>10</Weight>
 		<Cost>25</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>
@@ -217,7 +217,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Flute</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>1</Weight>
 		<Cost>2</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>
@@ -225,7 +225,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Lute</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>2</Weight>
 		<Cost>35</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>
@@ -233,7 +233,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Lyre</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>2</Weight>
 		<Cost>30</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>
@@ -241,7 +241,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Horn</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>2</Weight>
 		<Cost>3</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>
@@ -249,7 +249,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Pan Flute</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>2</Weight>
 		<Cost>12</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>
@@ -257,7 +257,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Shawn</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>1</Weight>
 		<Cost>2</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>
@@ -265,7 +265,7 @@
 	
 	<PlayerToolKit>
 		<ItemName>Viol</ItemName>
-		<Description></Description>
+		<Description>Musical Instrument</Description>
 		<Weight>1</Weight>
 		<Cost>30</Cost>
 		<ToolType>TYPE_MUSICAL</ToolType>

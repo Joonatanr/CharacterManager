@@ -502,6 +502,7 @@ namespace CharacterManager.CharacterCreator
         }
 
 
+        /* TODO : Rename this to prevent confusion. */
         private void updateSkillProficiencyFields()
         {
             userControlSkillProficiencies1.updateSkillProficiencyFields(getCurrentAttributeBonus("STR"),
@@ -625,7 +626,7 @@ namespace CharacterManager.CharacterCreator
             return result;
         }
 
-        private void resetSkillProficiencies()
+        private void updateSkillProficiencies()
         {
             //1. Reset the controls
             userControlSkillProficiencies1.resetControls();
@@ -656,20 +657,37 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
-            //3. Set up choosing new skill proficiencies.
-            //TODO : This is unfinished.
-            int numberOfSkillsToChoose = SelectedClass.NumberOfSkillsToChoose;
-            List<string> AvailableSkillsToChoose = new List<string>();
-
-            foreach (string skill in SelectedClass.AvailableSkillProficiencies)
+            //3. Lets get the skill proficiencies from background.
+            if (myChooseBackGroundForm != null)
             {
-                if (!racialProficiencies.Contains(skill))
+                List<string> bgSkillProfs = myChooseBackGroundForm.getAllSkillProficiencies();
+
+                foreach(String prof in bgSkillProfs)
                 {
-                    AvailableSkillsToChoose.Add(skill);
+                    if (!userControlSkillProficiencies1.setProficientAtSkill(prof))
+                    {
+                        MessageBox.Show("Incorrect skill proficiency : " + prof + ", failed to parse");
+                    }
                 }
             }
 
-            userControlSkillProficiencies1.setUpChoiceProficiencies(numberOfSkillsToChoose, AvailableSkillsToChoose);
+            //4. Set up choosing new skill proficiencies.
+            //TODO : This is unfinished.
+            if (SelectedClass != null)
+            {
+                int numberOfSkillsToChoose = SelectedClass.NumberOfSkillsToChoose;
+                List<string> AvailableSkillsToChoose = new List<string>();
+
+                foreach (string skill in SelectedClass.AvailableSkillProficiencies)
+                {
+                    if (!racialProficiencies.Contains(skill))
+                    {
+                        AvailableSkillsToChoose.Add(skill);
+                    }
+                }
+
+                userControlSkillProficiencies1.setUpChoiceProficiencies(numberOfSkillsToChoose, AvailableSkillsToChoose);
+            }
         }
 
 
@@ -757,7 +775,7 @@ namespace CharacterManager.CharacterCreator
                     SelectedClass = CharacterFactory.getPlayerClassByName(selectedItem);
                     updateAllDisplayedData();
                     /* There is a difference between resetting and updating these values. Update should be done elsewhere... */
-                    resetSkillProficiencies();
+                    updateSkillProficiencies();
 
                     /* Reset all equipment choices. */
                     myChooseEquipmentForm = new FormChooseEquipment();
@@ -807,6 +825,7 @@ namespace CharacterManager.CharacterCreator
             if (myChooseBackGroundForm.ShowDialog() == DialogResult.OK)
             {
                 updateEquipmentList();
+                updateSkillProficiencies();
 
                 if (myChooseBackGroundForm.SelectedBackGround != null) 
                 {
