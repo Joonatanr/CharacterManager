@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace CharacterManager
 {
@@ -12,6 +13,9 @@ namespace CharacterManager
 
         public string Description;
         public string AttributeName;
+
+        [XmlIgnore]
+        public virtual string DisplayedName { get { return AttributeName; } } /* This should be used instead of the AttributeName*/
 
         public PlayerAbility()
         {

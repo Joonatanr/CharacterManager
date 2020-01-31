@@ -62,7 +62,7 @@ namespace CharacterManager.UserControls
             {
                 foreach (PlayerAbility attrib in listOfAttributes)
                 {
-                    drawTextOnLine(gfx, attrib.AttributeName, y);
+                    drawTextOnLine(gfx, attrib.DisplayedName, y);
                     y++;
                 }
             }

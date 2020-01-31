@@ -59,7 +59,7 @@ namespace CharacterManager.CharacterCreator
                 /* This is a multiple choice ability. */
                 foreach (PlayerClassAbility ability in _abilitiesList)
                 {
-                    comboBoxAbilitySelect.Items.Add(ability.Title);
+                    comboBoxAbilitySelect.Items.Add(ability.DisplayedName);
                 }
 
 
@@ -79,7 +79,7 @@ namespace CharacterManager.CharacterCreator
         {
             string abilityName = comboBoxAbilitySelect.SelectedItem.ToString();
 
-            selectedAbility = _abilitiesList.Find(t => t.Title == abilityName);
+            selectedAbility = _abilitiesList.Find(t => t.DisplayedName == abilityName);
             if (selectedAbility != null)
             {
                 richTextBoxAbilitySub.Text = selectedAbility.Description;
