@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CharacterManager
 {
@@ -11,30 +12,49 @@ namespace CharacterManager
     {
         public abstract String Title { get; }
 
-        public static PlayerClassAbility resolveFromString(String s)
+        public static PlayerClassAbility resolveFromString(String s, String Description)
         {
             object raw;
             try
             {
-                Type t = Type.GetType(s);
-                raw = Activator.CreateInstance(t);
-            }
-            catch (Exception)
-            {
-                return null;
-            }
+                Type t = Type.GetType("CharacterManager." + s);
+                if (t == null)
+                {
+                    return new GenericClassAbility(s, Description);
+                }
 
-            if (raw is PlayerClassAbility)
-            {
-                return (PlayerClassAbility)raw;
+                /* Lets try to actually create the instance of this particular class. */
+                raw = Activator.CreateInstance(t);
+
+                /* If this is not true, then something has gone really wrong. */
+                if (raw is PlayerClassAbility)
+                {
+                    return (PlayerClassAbility)raw;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message); /* TODO : Remove this. */
+                /* It seems we do not have a corresponding type. Return generic instead. */
                 return null;
             }
         }
     }
 
+    public class GenericClassAbility : PlayerClassAbility
+    {
+        public override string Title { get { return AttributeName; } }
+        
+        public GenericClassAbility(String name, String Description)
+        {
+            this.AttributeName = name;
+            this.Description = Description;
+        }
+    }
 
     /******* Fighter class abilities. ********/
 

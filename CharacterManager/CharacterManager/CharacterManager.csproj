@@ -59,6 +59,12 @@
     <Compile Include="CharacterCreator\FormChooseClassFeatures.Designer.cs">
       <DependentUpon>FormChooseClassFeatures.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterCreator\UserControlClassFeature.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CharacterCreator\UserControlClassFeature.Designer.cs">
+      <DependentUpon>UserControlClassFeature.cs</DependentUpon>
+    </Compile>
     <Compile Include="CharacterFactory.cs" />
     <Compile Include="DieRoll.cs" />
     <Compile Include="EquipmentChoice.cs" />
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterCreator\FormChooseClassFeatures.resx">
       <DependentUpon>FormChooseClassFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterCreator\UserControlClassFeature.resx">
+      <DependentUpon>UserControlClassFeature.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

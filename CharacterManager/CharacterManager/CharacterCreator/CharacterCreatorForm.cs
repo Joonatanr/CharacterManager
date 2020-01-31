@@ -844,6 +844,14 @@ namespace CharacterManager.CharacterCreator
         private void buttonChooseClassFeatures_Click(object sender, EventArgs e)
         {
             /* TODO */
+            if (SelectedClass == null)
+            {
+                MessageBox.Show("No class selected");
+                return;
+            }
+
+            myChooseClassFeaturesForm.setSelectedClass(SelectedClass);
+
             if (myChooseClassFeaturesForm.ShowDialog() == DialogResult.OK)
             {
 

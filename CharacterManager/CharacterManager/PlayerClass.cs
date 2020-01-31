@@ -21,7 +21,8 @@ namespace CharacterManager
         public List<EquipmentChoiceList> AvailableEquipment = new List<EquipmentChoiceList>();
 
         /* TODO : This probably needs to be able to support multiple choices etc... Lets make a simple test for now. */
-        public PlayerClassAbilityChoice AvailableClassAbilities;
+        /* Also note that for the time being this is only for level1, so we really need to expand this quite  alot. */
+        public List<PlayerClassAbilityChoice> AvailableClassAbilities;
 
         public PlayerClass()
         {
@@ -32,8 +33,16 @@ namespace CharacterManager
     [Serializable]
     public class PlayerClassAbilityChoice
     {
+        [Serializable]
+        public struct PlayerClassAbilityDescription
+        {
+            public string AbilityName;
+            public string AbilityDescription;
+        };
+        
         public string Description;
-        public List<String> AvailableChoices { get; }
+        public string ClassAbilityName;
+        public List<PlayerClassAbilityDescription> AvailableChoices { get; set; }
 
         /* This part is basically defined in C#, so no way to really parse. */
         [XmlIgnore]
@@ -64,10 +73,10 @@ namespace CharacterManager
             {
                 if (AvailableChoices.Count != 0)
                 {
-                    foreach (string choice in AvailableChoices) 
+                    foreach (PlayerClassAbilityDescription choice in AvailableChoices) 
                     {
-                        PlayerClassAbility ability = PlayerClassAbility.resolveFromString(choice);
-                        if(ability != null)
+                        PlayerClassAbility ability = PlayerClassAbility.resolveFromString(choice.AbilityName, choice.AbilityDescription);
+                        if (ability != null)
                         {
                             resolvedAbilities.Add(ability);
                         }

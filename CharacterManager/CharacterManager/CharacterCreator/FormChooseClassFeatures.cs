@@ -12,9 +12,32 @@ namespace CharacterManager.CharacterCreator
 {
     public partial class FormChooseClassFeatures : Form
     {
+        private PlayerClass _selectedClass = null;
+        
         public FormChooseClassFeatures()
         {
             InitializeComponent();
+        }
+
+        public void setSelectedClass(PlayerClass c)
+        {
+            _selectedClass = c;
+
+            groupBox1.Controls.Clear();
+
+            int yloc = 15;
+
+            foreach (PlayerClassAbilityChoice choice in _selectedClass.AvailableClassAbilities)
+            {
+                /* Lets create a user control for each.*/
+                UserControlClassFeature ctrl = new UserControlClassFeature();
+                ctrl.AbilityChoice = choice;
+                ctrl.Location = new Point(5, yloc);
+                groupBox1.Controls.Add(ctrl);
+
+                yloc += ctrl.Height;
+                yloc += 5;
+            }
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
