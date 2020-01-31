@@ -313,8 +313,171 @@
 		<Gold>10</Gold>
 		<Features>
 			<BackGroundFeature>
-				<Name>Position of Privilege</Name>
-				<Description>Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.</Description>				
+				<Name>Wanderer</Name>
+				<Description>You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth.</Description>				
+			</BackGroundFeature>
+		</Features>
+	</CharacterBackGround>
+	
+	<CharacterBackGround>
+		<BackGroundName>Sage</BackGroundName>
+		<Description>You spent years learning the lore o f the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.</Description>
+		<SkillProficiencies>
+			<string>Arcana</string>
+			<string>History</string>
+		</SkillProficiencies>
+		<CustomLanguages>2</CustomLanguages>
+		<Equipment>
+			<ContainerContent>
+				<Name>A bottle of Ink</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Quill</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Small knife</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Letter</Name>
+				<Quantity>1</Quantity>
+				<Description>A letter from a dead colleague posing a question you have not yet been able to answer.</Description>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Common Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</Equipment>
+		<Gold>10</Gold>
+		<Features>
+			<BackGroundFeature>
+				<Name>Researcher</Name>
+				<Description>When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign.</Description>				
+			</BackGroundFeature>
+		</Features>
+	</CharacterBackGround>
+	
+	<CharacterBackGround>
+		<BackGroundName>Sailor</BackGroundName>
+		<Description>You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the bottomless depths. Your first love is the distant line of the horizon, but the time has come to try your hand at something new.</Description>
+		<SkillProficiencies>
+			<string>Athletics</string>
+			<string>Perception</string>
+		</SkillProficiencies>
+		<ToolProficiencies>
+			<string>Navigator's Tools</string>
+			<string>Water Vehicles</string>
+		</ToolProficiencies>
+		<Equipment>
+			<ContainerContent>
+				<Name>Club</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Silk Rope</Name>
+				<Quantity>50</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Lucky Charm</Name>
+				<Quantity>1</Quantity>
+				<Description>A lucky charm, such as a rabbit foot or a small stone with a hole in the center</Description>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Common Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</Equipment>
+		<Gold>10</Gold>
+		<Features>
+			<BackGroundFeature>
+				<Name>Ship's Passage</Name>
+				<Description>When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with (perhaps one captained by a former crewmate). Because you’re calling in a favor, you can’t be certain o f a schedule or route that will meet your every need. Your Dungeon Master will determine how long it takes to get where you need to go. In return for your free passage, you and your companions are expected to assist the crew during the voyage.</Description>				
+			</BackGroundFeature>
+		</Features>
+	</CharacterBackGround>
+	
+	<CharacterBackGround>
+		<BackGroundName>Soldier</BackGroundName>
+		<Description>War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war.</Description>
+		<SkillProficiencies>
+			<string>Athletics</string>
+			<string>Intimidation</string>
+		</SkillProficiencies>
+		<ToolProficiencies>
+			<string>AnyGaming</string>
+			<string>Land Vehicles</string>
+		</ToolProficiencies>
+		<Equipment>
+			<ContainerContent>
+				<Name>Trophy</Name>
+				<Quantity>1</Quantity>
+				<Description>A trophy taken from a fallen enemy, such as a dagger, broken blade or piece of a banner.</Description>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Insignia of Rank</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Set of Dice</Name>
+				<Quantity>1</Quantity>
+				<Description>A set of bone dice</Description>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Common Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</Equipment>
+		<Gold>10</Gold>
+		<Features>
+			<BackGroundFeature>
+				<Name>Military Rank</Name>
+				<Description>You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are o f a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized.</Description>				
+			</BackGroundFeature>
+		</Features>
+	</CharacterBackGround>
+	
+	<CharacterBackGround>
+		<BackGroundName>Urchin</BackGroundName>
+		<Description>You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or to provide for you, so you learned to provide for yourself. You fought fiercely over food and kept a constant watch out for other desperate souls w ho might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the advantage of medicine or a place to recuperate. You’ve survived despite all odds, and did so through cunning, strength, speed, or some combination of each. You begin your adventuring career with enough money to live modestly but securely for at least ten days. How did you come by that money? What allowed you to break free of your desperate circumstances and embark on a better life?</Description>
+		<SkillProficiencies>
+			<string>Sleight of Hand</string>
+			<string>Stealth</string>
+		</SkillProficiencies>
+		<ToolProficiencies>
+			<string>Disguise Kit</string>
+			<string>Thieves' Tools</string>
+		</ToolProficiencies>
+		<Equipment>
+			<ContainerContent>
+				<Name>A small knife</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Map</Name>
+				<Quantity>1</Quantity>
+				<Description>Map of the City you grew up in</Description>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>A pet mouse</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Token</Name>
+				<Quantity>1</Quantity>
+				<Description>A token to remember your parents by</Description>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Common Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</Equipment>
+		<Gold>10</Gold>
+		<Features>
+			<BackGroundFeature>
+				<Name>City Secrets</Name>
+				<Description>You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow.</Description>				
 			</BackGroundFeature>
 		</Features>
 	</CharacterBackGround>
