@@ -32,21 +32,14 @@ namespace CharacterManager
 
     [Serializable]
     public class PlayerClassAbilityChoice
-    {
-        [Serializable]
-        public struct PlayerClassAbilityDescription
-        {
-            public string AbilityName;
-            public string Description;
-        };
-        
+    {   
         public string Description;
         public string ClassAbilityName;
-        public List<PlayerClassAbilityDescription> AvailableChoices { get; set; }
+        public List<string> AvailableChoices { get; set; }
 
         /* This part is basically defined in C#, so no way to really parse. */
         [XmlIgnore]
-        private List<PlayerClassAbility> resolvedAbilities;
+        private List<PlayerAbility> resolvedAbilities;
 
         private Boolean isListResolved = false;
 
@@ -55,7 +48,7 @@ namespace CharacterManager
             this.Description = "UNKNOWN";
         }
 
-        public List<PlayerClassAbility> getAllClassAbilityChoices()
+        public List<PlayerAbility> getAllClassAbilityChoices()
         {
             if (isListResolved == false)
             {
@@ -68,14 +61,14 @@ namespace CharacterManager
 
         private void resolveAbilities()
         {
-            resolvedAbilities = new List<PlayerClassAbility>();
+            resolvedAbilities = new List<PlayerAbility>();
             if (AvailableChoices != null)
             {
                 if (AvailableChoices.Count != 0)
                 {
-                    foreach (PlayerClassAbilityDescription choice in AvailableChoices) 
+                    foreach (string choice in AvailableChoices) 
                     {
-                        PlayerClassAbility ability = PlayerClassAbility.resolveFromString(choice.AbilityName, choice.Description);
+                        PlayerAbility ability = PlayerAbility.resolveFromString(choice);
                         if (ability != null)
                         {
                             resolvedAbilities.Add(ability);

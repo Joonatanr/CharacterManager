@@ -111,30 +111,12 @@
 			<ClassAbilityName>Fighting Style</ClassAbilityName>
 			<Description>You adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</Description>
 			<AvailableChoices>
-				<PlayerClassAbilityDescription>
-					<AbilityName>FightingStyleArchery</AbilityName>
-					<Description>You gain a +2 bonus to attack rolls you make with ranged weapons.</Description>
-				</PlayerClassAbilityDescription>
-				<PlayerClassAbilityDescription>
-					<AbilityName>FightingStyleDefense</AbilityName>
-					<Description>While you are wearing armor, you gain a +1 bonus to AC.</Description>
-				</PlayerClassAbilityDescription>
-				<PlayerClassAbilityDescription>
-					<AbilityName>FightingStyleDueling</AbilityName>
-					<Description>When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</Description>
-				</PlayerClassAbilityDescription>
-				<PlayerClassAbilityDescription>
-					<AbilityName>FightingStyleGreatWeapon</AbilityName>
-					<Description>When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.</Description>
-				</PlayerClassAbilityDescription>
-				<PlayerClassAbilityDescription>
-					<AbilityName>FightingStyleProtection</AbilityName>
-					<Description>When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be w ielding a shield.</Description>
-				</PlayerClassAbilityDescription>
-				<PlayerClassAbilityDescription>
-					<AbilityName>FightingStyleTwoWeapon</AbilityName>
-					<Description>When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.</Description>
-				</PlayerClassAbilityDescription>	
+				<string>Archery Fighting Style</string>
+				<string>Defense Fighting Style</string>
+				<string>Dueling Fighting Style</string>
+				<string>Great Weapon Fighting Style</string>
+				<string>Protection Fighting Style</string>
+				<string>Two-Weapon Fighting Style</string>	
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
 		
@@ -142,10 +124,7 @@
 			<ClassAbilityName>Second Wind</ClassAbilityName>
 			<Description>You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d 10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.</Description>
 			<AvailableChoices>
-				<PlayerClassAbilityDescription>
-					<AbilityName>Second Wind</AbilityName>
-					<Description>You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d 10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.</Description>
-				</PlayerClassAbilityDescription>
+					<string>Second Wind</string>
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilities>

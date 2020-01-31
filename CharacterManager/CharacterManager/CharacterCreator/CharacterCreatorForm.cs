@@ -482,8 +482,8 @@ namespace CharacterManager.CharacterCreator
                 if (myChooseClassFeaturesForm != null)
                 {
                     /* TODO */
-                    List<PlayerClassAbility> classAbilities = myChooseClassFeaturesForm.getAllSelectedAbilities();
-                    foreach(PlayerClassAbility ability in classAbilities)
+                    List<PlayerAbility> classAbilities = myChooseClassFeaturesForm.getAllSelectedAbilities();
+                    foreach(PlayerAbility ability in classAbilities)
                     {
                         myAttributeList.Add(ability);
                     }

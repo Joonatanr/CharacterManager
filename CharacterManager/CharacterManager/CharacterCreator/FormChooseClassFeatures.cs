@@ -40,16 +40,16 @@ namespace CharacterManager.CharacterCreator
             }
         }
 
-        public List<PlayerClassAbility> getAllSelectedAbilities()
+        public List<PlayerAbility> getAllSelectedAbilities()
         {
-            List<PlayerClassAbility> res = new List<PlayerClassAbility>();
+            List<PlayerAbility> res = new List<PlayerAbility>();
             
             foreach(Control c in groupBox1.Controls)
             {
                 if (c is UserControlClassFeature)
                 {
                     UserControlClassFeature cast = (UserControlClassFeature)c;
-                    PlayerClassAbility ability = cast.getSelectedAbility();
+                    PlayerAbility ability = cast.getSelectedAbility();
                     if (ability != null)
                     {
                         res.Add(ability);

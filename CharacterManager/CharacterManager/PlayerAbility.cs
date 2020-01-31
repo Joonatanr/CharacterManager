@@ -28,5 +28,9 @@ namespace CharacterManager
             AttributeName = name;
         }
 
+        internal static PlayerAbility resolveFromString(string s)
+        {
+            return CharacterFactory.getPlayerAbilityFromString(s);
+        }
     }
 }

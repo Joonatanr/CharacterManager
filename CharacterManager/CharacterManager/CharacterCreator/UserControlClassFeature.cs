@@ -27,15 +27,15 @@ namespace CharacterManager.CharacterCreator
         }
 
         private PlayerClassAbilityChoice _abilityChoice;
-        private List<PlayerClassAbility> _abilitiesList;
-        private PlayerClassAbility selectedAbility;
+        private List<PlayerAbility> _abilitiesList;
+        private PlayerAbility selectedAbility;
 
         public UserControlClassFeature()
         {
             InitializeComponent();
         }
 
-        public PlayerClassAbility getSelectedAbility()
+        public PlayerAbility getSelectedAbility()
         {
             return selectedAbility;
         }
@@ -57,7 +57,7 @@ namespace CharacterManager.CharacterCreator
                 richTextBoxAbilitySub.Clear();
 
                 /* This is a multiple choice ability. */
-                foreach (PlayerClassAbility ability in _abilitiesList)
+                foreach (PlayerAbility ability in _abilitiesList)
                 {
                     comboBoxAbilitySelect.Items.Add(ability.DisplayedName);
                 }

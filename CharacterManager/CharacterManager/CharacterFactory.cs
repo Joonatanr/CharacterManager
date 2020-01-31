@@ -220,6 +220,12 @@ namespace CharacterManager
             return txt;
         }
 
+        public static PlayerAbility getPlayerAbilityFromString(string s)
+        {
+            PlayerAbility res = AttributesList.Find(a => a.AttributeName == s);
+            return res;
+        }
+
         public static List<Language> getAllLanguages()
         {
             return LanguageList;
@@ -546,6 +552,15 @@ namespace CharacterManager
         {
             //All C# described attributes need to be added here.
             SpecialAttributeList.Add(new DwarvenToughness());
+
+
+            //Lets add all the special attributes from class abilities here. Not sure if we need a separate structure though..
+            SpecialAttributeList.Add(new FightingStyleArchery());
+            SpecialAttributeList.Add(new FightingStyleDefense());
+            SpecialAttributeList.Add(new FightingStyleDueling());
+            SpecialAttributeList.Add(new FightingStyleGreatWeapon());
+            SpecialAttributeList.Add(new FightingStyleProtection());
+            SpecialAttributeList.Add(new FightingStyleTwoWeapon());
         }
 
         private static void logError(String err)
