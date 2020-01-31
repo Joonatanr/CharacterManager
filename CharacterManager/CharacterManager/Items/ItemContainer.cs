@@ -16,6 +16,7 @@ namespace CharacterManager.Items
         public class ContainerContent
         {
             public String Name;
+            public String Description;
             public int Quantity = 1;
 
             public override string ToString()
@@ -50,7 +51,14 @@ namespace CharacterManager.Items
                     PlayerItem custom = new PlayerItem();
                     custom.ItemName = content.Name;
                     custom.Quantity = content.Quantity;
-                    custom.Description = "N/A";
+                    if (content.Description == null)
+                    {
+                        custom.Description = "N/A";
+                    }
+                    else
+                    {
+                        custom.Description = content.Description;
+                    }
                     res.Add(custom);
                 }
             }

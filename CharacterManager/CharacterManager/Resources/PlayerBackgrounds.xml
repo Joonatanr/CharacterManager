@@ -122,7 +122,8 @@
 				<Quantity>1</Quantity>
 			</ContainerContent>
 			<ContainerContent>
-				<Name>the favor of an admirer (love letter, lock of hair, or trinket)</Name>
+				<Name>Favor</Name>
+				<Description>A favor from an admirer (love letter, lock of hair, or trinket)</Description>
 				<Quantity>1</Quantity>
 			</ContainerContent>
 		</Equipment>
@@ -207,5 +208,115 @@
 		</Features>
 	</CharacterBackGround>
 	
+	<CharacterBackGround>
+		<BackGroundName>Hermit</BackGroundName>
+		<Description>You lived in seclusion—either in a sheltered community such as a monastery, or entirely a lone—for a formative part of your life. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for.</Description>
+		<SkillProficiencies>
+			<string>Medicine</string>
+			<string>Religion</string>
+		</SkillProficiencies>
+		<ToolProficiencies>
+			<string>Herbalism Kit</string>
+		</ToolProficiencies>
+		<CustomLanguages>1</CustomLanguages>
+		<Equipment>
+			<ContainerContent>
+				<Name>Scroll case</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Winter blanket</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Common Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Herbalism Kit</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</Equipment>
+		<Gold>5</Gold>
+		<Features>
+			<BackGroundFeature>
+				<Name>Discovery</Name>
+				<Description>The quiet seclusion o f your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. It might be information that would be damaging to the people who or consigned you to exile, and hence the reason for your return to society. Work with your DM to determine the details of your discovery and its impact on the campaign.</Description>				
+			</BackGroundFeature>
+		</Features>
+	</CharacterBackGround>
+	
+	<CharacterBackGround>
+		<BackGroundName>Noble</BackGroundName>
+		<Description>You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them.</Description>
+		<SkillProficiencies>
+			<string>History</string>
+			<string>Persuasion</string>
+		</SkillProficiencies>
+		<ToolProficiencies>
+			<string>AnyGaming</string>
+		</ToolProficiencies>
+		<CustomLanguages>1</CustomLanguages>
+		<Equipment>
+			<ContainerContent>
+				<Name>Fine Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Signet Ring</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Scroll of Pedigree</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</Equipment>
+		<Gold>25</Gold>
+		<Features>
+			<BackGroundFeature>
+				<Name>Position of Privilege</Name>
+				<Description>Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.</Description>				
+			</BackGroundFeature>
+		</Features>
+	</CharacterBackGround>
+	
+	<CharacterBackGround>
+		<BackGroundName>Outlander</BackGroundName>
+		<Description>You grew up in the wilds, far from civilization and the comforts of town and technology. You’ve witnessed the migration of herds larger than forests, survived weather more extreme than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder. Even in places where you don’t know the specific features of the terrain, you know the ways of the wild.</Description>
+		<SkillProficiencies>
+			<string>Athletics</string>
+			<string>Survival</string>
+		</SkillProficiencies>
+		<ToolProficiencies>
+			<string>AnyMusical</string>
+		</ToolProficiencies>
+		<CustomLanguages>1</CustomLanguages>
+		<Equipment>
+			<ContainerContent>
+				<Name>Quarterstaff</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Hunting Trap</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Trophy</Name>
+				<Quantity>1</Quantity>
+				<Description>A trophy from an animal you killed</Description>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Traveller's Clothes</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</Equipment>
+		<Gold>10</Gold>
+		<Features>
+			<BackGroundFeature>
+				<Name>Position of Privilege</Name>
+				<Description>Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.</Description>				
+			</BackGroundFeature>
+		</Features>
+	</CharacterBackGround>
 	
 </ArrayOfCharacterBackGround>

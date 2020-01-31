@@ -142,13 +142,12 @@ namespace CharacterManager
 
                 foreach (Items.ItemContainer.ContainerContent con in _selectedBackGround.Equipment)
                 {
-                    //richTextBoxDescription.AppendText(con.ToString() + "\n");
-
                     /* We might have multiple options. */
                     UserControlEquipmentChoiceSingle choiceControl = new UserControlEquipmentChoiceSingle();
                     EquipmentChoice choiceObject = new EquipmentChoice();
                     choiceObject.Equipment = con.Name;
                     choiceObject.Quantity = con.Quantity;
+                    choiceObject.Description = con.Description;
                     choiceControl.Choice = choiceObject;
 
                     richTextBoxDescription.AppendText(choiceObject.getObjectReference().ToString() + "\n"); 
