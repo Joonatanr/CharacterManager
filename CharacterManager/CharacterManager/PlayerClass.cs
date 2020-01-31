@@ -37,7 +37,7 @@ namespace CharacterManager
         public struct PlayerClassAbilityDescription
         {
             public string AbilityName;
-            public string AbilityDescription;
+            public string Description;
         };
         
         public string Description;
@@ -75,7 +75,7 @@ namespace CharacterManager
                 {
                     foreach (PlayerClassAbilityDescription choice in AvailableChoices) 
                     {
-                        PlayerClassAbility ability = PlayerClassAbility.resolveFromString(choice.AbilityName, choice.AbilityDescription);
+                        PlayerClassAbility ability = PlayerClassAbility.resolveFromString(choice.AbilityName, choice.Description);
                         if (ability != null)
                         {
                             resolvedAbilities.Add(ability);

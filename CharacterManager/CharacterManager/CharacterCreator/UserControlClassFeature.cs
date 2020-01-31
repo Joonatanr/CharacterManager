@@ -35,6 +35,11 @@ namespace CharacterManager.CharacterCreator
             InitializeComponent();
         }
 
+        public PlayerClassAbility getSelectedAbility()
+        {
+            return selectedAbility;
+        }
+
         private void updateAbilityChoice()
         {
             /* First create an object list. */

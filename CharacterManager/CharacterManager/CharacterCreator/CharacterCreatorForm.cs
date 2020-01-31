@@ -453,7 +453,7 @@ namespace CharacterManager.CharacterCreator
 
         private void updateGenericAbilitiesField()
         {
-            //Lets just test with the race abilities first.
+            /*1. Add main race abilities. */
             myAttributeList.Clear();
 
             if (SelectedMainRace == null)
@@ -466,11 +466,27 @@ namespace CharacterManager.CharacterCreator
                 myAttributeList.Add(attrib);
             }
 
+            /* 2. Add subrace abilities. */
             if (SelectedSubRace != null)
             {
                 foreach (PlayerAbility attrib in SelectedSubRace.getPlayerAttributes())
                 {
                     myAttributeList.Add(attrib);
+                }
+            }
+
+
+            /* 3. Add class based abilities. */
+            if (SelectedClass != null)
+            {
+                if (myChooseClassFeaturesForm != null)
+                {
+                    /* TODO */
+                    List<PlayerClassAbility> classAbilities = myChooseClassFeaturesForm.getAllSelectedAbilities();
+                    foreach(PlayerClassAbility ability in classAbilities)
+                    {
+                        myAttributeList.Add(ability);
+                    }
                 }
             }
 
@@ -854,7 +870,7 @@ namespace CharacterManager.CharacterCreator
 
             if (myChooseClassFeaturesForm.ShowDialog() == DialogResult.OK)
             {
-
+                updateGenericAbilitiesField();
             }
         }
     }

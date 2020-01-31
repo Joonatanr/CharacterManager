@@ -40,6 +40,27 @@ namespace CharacterManager.CharacterCreator
             }
         }
 
+        public List<PlayerClassAbility> getAllSelectedAbilities()
+        {
+            List<PlayerClassAbility> res = new List<PlayerClassAbility>();
+            
+            foreach(Control c in groupBox1.Controls)
+            {
+                if (c is UserControlClassFeature)
+                {
+                    UserControlClassFeature cast = (UserControlClassFeature)c;
+                    PlayerClassAbility ability = cast.getSelectedAbility();
+                    if (ability != null)
+                    {
+                        res.Add(ability);
+                    }
+                }
+            }
+
+            return res;
+        }
+
+
         private void buttonOK_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
