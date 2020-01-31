@@ -9,6 +9,7 @@ namespace CharacterManager.Items
 {
     [Serializable]
     [XmlInclude(typeof(ItemContainer))]
+    [XmlInclude(typeof(PlayerToolKit))]
     public class PlayerItem
     {
         public String ItemName;
