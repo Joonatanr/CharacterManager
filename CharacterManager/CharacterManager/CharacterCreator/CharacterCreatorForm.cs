@@ -632,6 +632,8 @@ namespace CharacterManager.CharacterCreator
             userControlSkillProficiencies1.resetControls();
 
             List<String> racialProficiencies = new List<string>();
+            List<string> bgSkillProfs = myChooseBackGroundForm.getAllSkillProficiencies();
+
             if (SelectedMainRace != null)
             {
                 foreach (String prof in SelectedMainRace.SkillProficiencies)
@@ -660,7 +662,7 @@ namespace CharacterManager.CharacterCreator
             //3. Lets get the skill proficiencies from background.
             if (myChooseBackGroundForm != null)
             {
-                List<string> bgSkillProfs = myChooseBackGroundForm.getAllSkillProficiencies();
+               
 
                 foreach(String prof in bgSkillProfs)
                 {
@@ -680,7 +682,7 @@ namespace CharacterManager.CharacterCreator
 
                 foreach (string skill in SelectedClass.AvailableSkillProficiencies)
                 {
-                    if (!racialProficiencies.Contains(skill))
+                    if (!racialProficiencies.Contains(skill) && !bgSkillProfs.Contains(skill))
                     {
                         AvailableSkillsToChoose.Add(skill);
                     }

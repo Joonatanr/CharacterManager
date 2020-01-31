@@ -78,20 +78,37 @@ namespace CharacterManager.UserControls
             }
 
             if (selectedControl.IsProficient())
-            {
+            { 
+                numberOfSkillsToChoose--;
+
                 if (numberOfSkillsToChoose == 0)
                 {
-                    //Reset this control.
-                    selectedControl.setProficiency(false, 2);
+                    /* Make all choices that are NOT selected uneditable. */
+                    foreach(UserControlProficiency ctrl in skillProficiencyControlList)
+                    {
+                        if (AvailableSkillsToChoose.Contains(ctrl.ProficiencyName))
+                        {
+                            if (!ctrl.IsProficient()) 
+                            {
+                                ctrl.setEditable(false);
+                            }
+                        }
+                    }
                 }
-                else
-                {
-                    numberOfSkillsToChoose--;
-                }
-
             }
             else
             {
+                if (numberOfSkillsToChoose == 0)
+                {
+                    /* Make all the choices editable. */
+                    foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+                    {
+                        if (AvailableSkillsToChoose.Contains(ctrl.ProficiencyName))
+                        {
+                            ctrl.setEditable(true);
+                        }
+                    }
+                }
                 numberOfSkillsToChoose++;
             }
 
