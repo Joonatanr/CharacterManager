@@ -47,10 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterBackGround.cs" />
-    <Compile Include="CharacterCreatorForm.cs">
+    <Compile Include="CharacterCreator\CharacterCreatorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CharacterCreatorForm.Designer.cs">
+    <Compile Include="CharacterCreator\CharacterCreatorForm.Designer.cs">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CharacterFactory.cs" />
@@ -62,16 +62,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChooseBackGround.cs">
+    <Compile Include="CharacterCreator\FormChooseBackGround.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChooseBackGround.Designer.cs">
+    <Compile Include="CharacterCreator\FormChooseBackGround.Designer.cs">
       <DependentUpon>FormChooseBackGround.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChooseEquipment.cs">
+    <Compile Include="CharacterCreator\FormChooseEquipment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChooseEquipment.Designer.cs">
+    <Compile Include="CharacterCreator\FormChooseEquipment.Designer.cs">
       <DependentUpon>FormChooseEquipment.cs</DependentUpon>
     </Compile>
     <Compile Include="Items\PlayerArmor.cs" />
@@ -187,16 +187,16 @@
     <Compile Include="UserControls\UserControlWeaponsHandler.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <EmbeddedResource Include="CharacterCreatorForm.resx">
+    <EmbeddedResource Include="CharacterCreator\CharacterCreatorForm.resx">
       <DependentUpon>CharacterCreatorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChooseBackGround.resx">
+    <EmbeddedResource Include="CharacterCreator\FormChooseBackGround.resx">
       <DependentUpon>FormChooseBackGround.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChooseEquipment.resx">
+    <EmbeddedResource Include="CharacterCreator\FormChooseEquipment.resx">
       <DependentUpon>FormChooseEquipment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
