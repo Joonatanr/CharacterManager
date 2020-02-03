@@ -62,6 +62,7 @@ namespace CharacterManager.Items
         public WeaponDamage Damage;
         public WeaponDamage TwoHandedDamage;
         public Boolean      IsEquipped = false;
+        public Boolean IsEquippedTwoHanded = false;
 
         public int rollDamage(out String log)
         {
@@ -75,6 +76,28 @@ namespace CharacterManager.Items
             res += "Base damage : " + Damage.DamageValue + " " + Damage.Type + " damage\n";
 
             return res;
+        }
+
+        public void setEquipped(Boolean IsEquipped, Boolean isTwoHanded)
+        {
+            if (IsEquipped)
+            {
+                if (this.IsTwoHanded)
+                {
+                    /* We don't really have any other options in this case. */
+                    this.IsEquippedTwoHanded = true;
+                }
+                else
+                {
+                    this.IsEquippedTwoHanded = isTwoHanded;
+                }
+                this.IsEquipped = true;
+            }
+            else
+            {
+                this.IsEquipped = false;
+                this.IsEquippedTwoHanded = false;
+            }
         }
 
         public PlayerWeapon Clone()

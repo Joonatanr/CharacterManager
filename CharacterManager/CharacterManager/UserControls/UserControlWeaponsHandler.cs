@@ -22,20 +22,29 @@ namespace CharacterManager.UserControls
                 weapon = w;
                 infoBtn = new InfoButton("Button " + buttonNumber++, w.getExtendedDescription());
                 EquipButton = new CustomButton();
-                EquipButton.Size = new Size(50, 16);
+                EquipButton.Size = new Size(70, 16);
                 EquipButton.ButtonText = "Equip";
                 EquipButton.Font = new Font("Arial", 8.0f);
                 EquipButton.Click += new System.EventHandler(EquipButton_Click);
             }
 
 
-            public void setEquipped(Boolean isEquipped)
+            public void setEquipped(Boolean isEquipped, Boolean isTwoHanded)
             {
                 if (isEquipped)
                 {
-                    EquipButton.BackGroundColor = Color.LightGreen;
-                    EquipButton.HoverColor = Color.Green;
-                    EquipButton.ButtonText = "Unequip";
+                    if (isTwoHanded)
+                    {
+                        EquipButton.BackGroundColor = Color.LightYellow;
+                        EquipButton.HoverColor = Color.Orange;
+                        EquipButton.ButtonText = "Equipped 2H";
+                    }
+                    else
+                    {
+                        EquipButton.BackGroundColor = Color.LightGreen;
+                        EquipButton.HoverColor = Color.Green;
+                        EquipButton.ButtonText = "Equipped";
+                    }
                 }
                 else
                 {
@@ -48,15 +57,36 @@ namespace CharacterManager.UserControls
             private void EquipButton_Click(object sender, EventArgs e)
             {
                 /* TODO : This is a placeholder. */
-                if (weapon.IsEquipped)
+                if (weapon.IsVersatile)
                 {
-                    setEquipped(false);
-                    weapon.IsEquipped = false;
+                    if (weapon.IsEquipped && !weapon.IsEquippedTwoHanded)
+                    {
+                        setEquipped(true, true);
+                        weapon.setEquipped(true, true);
+                    }
+                    else if (weapon.IsEquipped && weapon.IsEquippedTwoHanded)
+                    {
+                        setEquipped(false, false);
+                        weapon.setEquipped(false, false);
+                    }
+                    else
+                    {
+                        setEquipped(true, false);
+                        weapon.setEquipped(true, false);
+                    }
                 }
                 else
                 {
-                    setEquipped(true);
-                    weapon.IsEquipped = true;
+                    if (weapon.IsEquipped)
+                    {
+                        setEquipped(false, weapon.IsTwoHanded);
+                        weapon.setEquipped(false, false);
+                    }
+                    else
+                    {
+                        setEquipped(true, weapon.IsTwoHanded);
+                        weapon.setEquipped(true, false);
+                    }
                 }
             }
         }
@@ -100,7 +130,7 @@ namespace CharacterManager.UserControls
 
                 /* 2. Set up the Equip button. */
                 myData.EquipButton.Location = new Point((myData.infoBtn.Left - 1) - myData.EquipButton.Width, y + 3);
-                myData.setEquipped(w.IsEquipped);
+                myData.setEquipped(w.IsEquipped, w.IsEquippedTwoHanded);
                 this.Controls.Add(myData.EquipButton);
 
                 /* Finish up.. */
