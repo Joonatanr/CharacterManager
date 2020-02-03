@@ -378,24 +378,17 @@ namespace CharacterManager.CharacterCreator
             UpdatePassivePerception(true);
 
             //TODO : Update other issues.
-
-
             String msg;
             //Final step, we resolve the special attributes. For this we need to try and create a test character.
             if (CreateCharacter(out msg) == true && CreatedCharacter != null)
             {
-                foreach (PlayerAbility attrib in CreatedCharacter.CharacterAbilitiesObjectList)
-                {
-                    if (attrib is SpecialAttributes.SpecialAttribute)
-                    {
-                        SpecialAttributes.SpecialAttribute spec = (SpecialAttributes.SpecialAttribute)attrib;
-                        spec.updateCharacterDuringCreation(CreatedCharacter);
-                    }    
-                }
+                CreatedCharacter.finalizeCharacterCreation();
 
                 //So now we should have a proper character. But we might have changed some displayed data.
                 /* TODO : A bit of a chicken and egg problem. Basically we should update all field that might be affected by the special abilities.*/
                 currentMaxHp = CreatedCharacter.MaxHitPoints;
+                
+                /* These might have been changed by special attributes. TODO : Probably there are other special attributes to take into account.. */
                 UpdateHitPoints(false);
             }
         }
@@ -509,14 +502,7 @@ namespace CharacterManager.CharacterCreator
             textBoxCONFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownCON.Value + ConBonus);
             textBoxCHAFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownCHA.Value + ChaBonus);
             textBoxDEXFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownDEX.Value + DexBonus);
-
-            //These also need to be updated here.. 
-            updateSavingThrowFields();
-            updateSkillProficiencyFields();
-            UpdatePassivePerception(true);
-            UpdateHitPoints(true);
         }
-
 
         /* TODO : Rename this to prevent confusion. */
         private void updateSkillProficiencyFields()
@@ -711,32 +697,32 @@ namespace CharacterManager.CharacterCreator
 
         private void numericUpDownSTR_ValueChanged(object sender, EventArgs e)
         {
-            updateBaseAttributeFields();
+            updateAllDisplayedData();
         }
 
         private void numericUpDownINT_ValueChanged(object sender, EventArgs e)
         {
-            updateBaseAttributeFields();
+            updateAllDisplayedData();
         }
 
         private void numericUpDownDEX_ValueChanged(object sender, EventArgs e)
         {
-            updateBaseAttributeFields();
+            updateAllDisplayedData();
         }
 
         private void numericUpDownCON_ValueChanged(object sender, EventArgs e)
         {
-            updateBaseAttributeFields();
+            updateAllDisplayedData();
         }
 
         private void numericUpDownWIS_ValueChanged(object sender, EventArgs e)
         {
-            updateBaseAttributeFields();
+            updateAllDisplayedData();
         }
 
         private void numericUpDownCHA_ValueChanged(object sender, EventArgs e)
         {
-            updateBaseAttributeFields();
+            updateAllDisplayedData();
         }
 
         private void comboBoxMainRace_SelectedIndexChanged(object sender, EventArgs e)

@@ -14,12 +14,17 @@ namespace CharacterManager.SpecialAttributes
             this.AttributeName = "Dwarven Toughness";
         }
 
-        /* TODO : We should really change this into a subscription based system. */
-        public override void updateCharacterDuringCreation(PlayerCharacter character)
+        public override void InitializeSubscriptions(PlayerCharacter c)
         {
-            character.MaxHitPoints++;
+            c.CharacterCreated += setHitPoints;
         }
 
+        private void setHitPoints(PlayerCharacter c)
+        {
+            c.MaxHitPoints++;
+        }
+
+        /* TODO : We should really change this into a subscription based system */
         public override void updateCharacterDuringLevelUp(PlayerCharacter character)
         {
             character.MaxHitPoints++;

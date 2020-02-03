@@ -226,6 +226,7 @@ namespace CharacterManager
         public delegate void PlayerEvent(PlayerCharacter c);
 
         public event PlayerEvent ArmorDonned;
+        public event PlayerEvent CharacterCreated;
 
         public PlayerCharacter()
         {
@@ -248,6 +249,12 @@ namespace CharacterManager
         {
             this._name = name;
             this._baseAttributes = attrib;
+        }
+
+        public void finalizeCharacterCreation()
+        {
+            /* Should be called only when creating a new character. */
+            CharacterCreated?.Invoke(this);
         }
 
         public void setMainAndSubrace(PlayerRace race, PlayerRace subrace)
