@@ -11,12 +11,6 @@ namespace CharacterManager.SpecialAttributes
 
     public abstract class SpecialAttribute : PlayerAbility
     {
-        //Called during the creation of a character.
-        //public abstract void updateCharacterDuringCreation(PlayerCharacter character);
-
-        //Called when a character is levelled up.
-        public abstract void updateCharacterDuringLevelUp(PlayerCharacter character);
-
         public void CopyValuesFromBaseClass(PlayerAbility baseObj)
         {
             this.Description = baseObj.Description;

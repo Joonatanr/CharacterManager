@@ -227,6 +227,7 @@ namespace CharacterManager
 
         public event PlayerEvent ArmorDonned;
         public event PlayerEvent CharacterCreated;
+        public event PlayerEvent CharacterLevelup;
 
         public PlayerCharacter()
         {

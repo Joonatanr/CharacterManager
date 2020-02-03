@@ -17,17 +17,12 @@ namespace CharacterManager.SpecialAttributes
         public override void InitializeSubscriptions(PlayerCharacter c)
         {
             c.CharacterCreated += setHitPoints;
+            c.CharacterCreated += setHitPoints;
         }
 
         private void setHitPoints(PlayerCharacter c)
         {
             c.MaxHitPoints++;
-        }
-
-        /* TODO : We should really change this into a subscription based system */
-        public override void updateCharacterDuringLevelUp(PlayerCharacter character)
-        {
-            character.MaxHitPoints++;
         }
     } 
 }
