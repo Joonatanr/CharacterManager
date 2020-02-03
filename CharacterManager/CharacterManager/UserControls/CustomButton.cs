@@ -105,7 +105,7 @@ namespace CharacterManager.UserControls
         protected override void OnMouseClick(MouseEventArgs e)
         {
             base.OnMouseClick(e);
-            Click(this, new EventArgs());
+            Click?.Invoke(this, new EventArgs());
         }
     }
 }

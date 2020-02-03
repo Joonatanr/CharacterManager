@@ -15,6 +15,7 @@ namespace CharacterManager.UserControls
         {
             public PlayerWeapon weapon;
             public InfoButton infoBtn;
+            public CustomButton AttackBtn;
             public CustomButton EquipButton;
 
             public WeaponControlData(PlayerWeapon w)
@@ -26,6 +27,11 @@ namespace CharacterManager.UserControls
                 EquipButton.ButtonText = "Equip";
                 EquipButton.Font = new Font("Arial", 8.0f);
                 EquipButton.Click += new System.EventHandler(EquipButton_Click);
+
+                /* TODO : Set up attack button. */
+                AttackBtn = new CustomButton();
+                AttackBtn.Size = new Size(40, 17);
+                AttackBtn.ButtonText = "Attack";
             }
 
 
@@ -124,11 +130,16 @@ namespace CharacterManager.UserControls
             {
                 WeaponControlData myData = new WeaponControlData(w);
 
-                /* 1. Set up the info button. */
-                myData.infoBtn.Location = new Point(this.Width - 43, y + 3);
+                /* 1. Set up the attack button. */
+                myData.AttackBtn.Location = new Point(this.Width - 43, y + 3);
+                this.Controls.Add(myData.AttackBtn);
+
+
+                /* 2. Set up the info button. */
+                myData.infoBtn.Location = new Point((myData.AttackBtn.Left - 1) - myData.AttackBtn.Width, y + 3);
                 this.Controls.Add(myData.infoBtn);
 
-                /* 2. Set up the Equip button. */
+                /* 3. Set up the Equip button. */
                 myData.EquipButton.Location = new Point((myData.infoBtn.Left - 1) - myData.EquipButton.Width, y + 3);
                 myData.setEquipped(w.IsEquipped, w.IsEquippedTwoHanded);
                 this.Controls.Add(myData.EquipButton);

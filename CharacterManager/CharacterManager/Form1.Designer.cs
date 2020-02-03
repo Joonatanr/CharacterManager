@@ -35,6 +35,7 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
+            this.userControlEquipmentHandler1 = new CharacterManager.UserControls.UserControlEquipmentHandler();
             this.userControlArmorHandler1 = new CharacterManager.UserControls.UserControlArmorHandler();
             this.userControlWeaponsHandler1 = new CharacterManager.UserControls.UserControlWeaponsHandler();
             this.userControlGenericAbilitiesList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
@@ -76,7 +77,6 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.userControlEquipmentHandler1 = new CharacterManager.UserControls.UserControlEquipmentHandler();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -163,12 +163,20 @@
             this.tabPageCharacter.TabIndex = 0;
             this.tabPageCharacter.Text = "Character";
             // 
+            // userControlEquipmentHandler1
+            // 
+            this.userControlEquipmentHandler1.IsBorder = true;
+            this.userControlEquipmentHandler1.Location = new System.Drawing.Point(425, 610);
+            this.userControlEquipmentHandler1.Name = "userControlEquipmentHandler1";
+            this.userControlEquipmentHandler1.Size = new System.Drawing.Size(289, 279);
+            this.userControlEquipmentHandler1.TabIndex = 33;
+            // 
             // userControlArmorHandler1
             // 
             this.userControlArmorHandler1.IsBorder = true;
             this.userControlArmorHandler1.Location = new System.Drawing.Point(425, 476);
             this.userControlArmorHandler1.Name = "userControlArmorHandler1";
-            this.userControlArmorHandler1.Size = new System.Drawing.Size(261, 128);
+            this.userControlArmorHandler1.Size = new System.Drawing.Size(289, 128);
             this.userControlArmorHandler1.TabIndex = 32;
             // 
             // userControlWeaponsHandler1
@@ -176,7 +184,7 @@
             this.userControlWeaponsHandler1.IsBorder = true;
             this.userControlWeaponsHandler1.Location = new System.Drawing.Point(425, 300);
             this.userControlWeaponsHandler1.Name = "userControlWeaponsHandler1";
-            this.userControlWeaponsHandler1.Size = new System.Drawing.Size(261, 174);
+            this.userControlWeaponsHandler1.Size = new System.Drawing.Size(289, 174);
             this.userControlWeaponsHandler1.TabIndex = 31;
             // 
             // userControlGenericAbilitiesList1
@@ -195,7 +203,7 @@
             this.groupBox4.Controls.Add(this.userControlHitPoints1);
             this.groupBox4.Location = new System.Drawing.Point(425, 122);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(261, 172);
+            this.groupBox4.Size = new System.Drawing.Size(289, 172);
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             // 
@@ -203,7 +211,7 @@
             // 
             this.userControlSpeed.IsBorder = true;
             this.userControlSpeed.Label = "Speed";
-            this.userControlSpeed.Location = new System.Drawing.Point(176, 19);
+            this.userControlSpeed.Location = new System.Drawing.Point(184, 19);
             this.userControlSpeed.Name = "userControlSpeed";
             this.userControlSpeed.Size = new System.Drawing.Size(80, 58);
             this.userControlSpeed.TabIndex = 31;
@@ -213,7 +221,7 @@
             // 
             this.userControlInitiative.IsBorder = true;
             this.userControlInitiative.Label = "Initiative";
-            this.userControlInitiative.Location = new System.Drawing.Point(91, 19);
+            this.userControlInitiative.Location = new System.Drawing.Point(99, 19);
             this.userControlInitiative.Name = "userControlInitiative";
             this.userControlInitiative.Size = new System.Drawing.Size(80, 58);
             this.userControlInitiative.TabIndex = 30;
@@ -223,7 +231,7 @@
             // 
             this.userControlArmorClass.IsBorder = true;
             this.userControlArmorClass.Label = "Armor Class";
-            this.userControlArmorClass.Location = new System.Drawing.Point(6, 19);
+            this.userControlArmorClass.Location = new System.Drawing.Point(14, 19);
             this.userControlArmorClass.Name = "userControlArmorClass";
             this.userControlArmorClass.Size = new System.Drawing.Size(80, 58);
             this.userControlArmorClass.TabIndex = 29;
@@ -233,7 +241,7 @@
             // 
             this.userControlHitPoints1.CurrentHitPoints = 10;
             this.userControlHitPoints1.IsBorder = true;
-            this.userControlHitPoints1.Location = new System.Drawing.Point(53, 83);
+            this.userControlHitPoints1.Location = new System.Drawing.Point(68, 83);
             this.userControlHitPoints1.Name = "userControlHitPoints1";
             this.userControlHitPoints1.Size = new System.Drawing.Size(156, 68);
             this.userControlHitPoints1.TabIndex = 28;
@@ -548,14 +556,6 @@
             this.toolStripButtonLoad.Size = new System.Drawing.Size(37, 22);
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
-            // 
-            // userControlEquipmentHandler1
-            // 
-            this.userControlEquipmentHandler1.IsBorder = true;
-            this.userControlEquipmentHandler1.Location = new System.Drawing.Point(425, 610);
-            this.userControlEquipmentHandler1.Name = "userControlEquipmentHandler1";
-            this.userControlEquipmentHandler1.Size = new System.Drawing.Size(261, 279);
-            this.userControlEquipmentHandler1.TabIndex = 33;
             // 
             // Form1
             // 
