@@ -67,6 +67,23 @@ namespace CharacterManager
             public SizeDescriptor sizeType;
         }
 
+        [Serializable]
+        public class PlayerAbilityDescriptor
+        {
+            public string AbilityName;
+            public int RemainingCharges = 0;
+
+            public PlayerAbilityDescriptor()
+            {
+                AbilityName = "UNKNOWN";
+            }
+            
+            public PlayerAbilityDescriptor(String name)
+            {
+                AbilityName = name;
+            }
+        }
+
         public static readonly String[] CharacterSkillProficiencies = new String[]
         {
             "Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation",
@@ -91,7 +108,7 @@ namespace CharacterManager
         public List<String> WeaponProficiencies = new List<String>();
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> SavingThrowProficiencies = new List<String>();
-        public List<String> CharacterAbilities = new List<String>();
+        public List<PlayerAbilityDescriptor> CharacterAbilities = new List<PlayerAbilityDescriptor>();
 
         public List<PlayerWeapon> CharacterWeapons = new List<PlayerWeapon>();
         public List<PlayerArmor> CharacterArmors = new List<PlayerArmor>();
@@ -383,16 +400,25 @@ namespace CharacterManager
             return result;
         }
 
-        public void setCharacterAbilitiesList(List<PlayerAbility> abilityList)
+        public void setCharacterAbilitiesList(List<PlayerAbility> abilityList, Boolean overwriteDescriptors)
         {
             CharacterAbilitiesObjectList = abilityList;
-            CharacterAbilities = new List<String>();
+            if (overwriteDescriptors)
+            {
+                CharacterAbilities = new List<PlayerAbilityDescriptor>();
+            }
             foreach (PlayerAbility obj in abilityList)
             {
-                CharacterAbilities.Add(obj.AttributeName);
+                if (overwriteDescriptors)
+                {
+                    PlayerAbilityDescriptor desc = new PlayerAbilityDescriptor(obj.AttributeName);
+                    desc.RemainingCharges = obj.MaximumCharges; /* Assume we start at full in this case. */
+                    CharacterAbilities.Add(desc);
+                }
                 obj.InitializeSubscriptions(this);
             }
         }
+
 
         public int getModifier(string attribute)
         {

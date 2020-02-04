@@ -12,7 +12,54 @@ namespace CharacterManager.UserControls
 {
     public partial class UserControlGenericAbilitiesList : UserControlGenericListBase
     {
+        private class AttributeControlData
+        {
+            public PlayerAbility Attribute;
+            public InfoButton ButtonInfo;
+            public CustomButton UseButton;
+
+            /* TODO */
+            public UserControlSpellSlotIndicator [] slotArray;
+
+            private int numberOfSpellSlots;
+
+            public AttributeControlData(PlayerAbility _attribute)
+            {
+                Attribute = _attribute;
+            }
+
+            public void setUseButton(CustomButton btn)
+            {
+                this.UseButton = btn;
+                btn.Click += Use_Click;
+            }
+
+            private void Btn_Click(object sender, EventArgs e)
+            {
+                throw new NotImplementedException();
+            }
+
+            public void setSpellSlots(UserControlSpellSlotIndicator[] slots, int cnt) 
+            {
+                numberOfSpellSlots = cnt;
+
+                slotArray = new UserControlSpellSlotIndicator[cnt];
+                
+                for (int x = 0; x < cnt; x++)
+                {
+                    slotArray[x] = slots[x];    
+                }
+            }
+
+            private void Use_Click(object sender, EventArgs e)
+            {
+                /* TODO */
+            }
+        }
+
         private List<PlayerAbility> listOfAttributes = new List<PlayerAbility>();
+        private List<AttributeControlData> listOfAttributeControls = new List<AttributeControlData>();
+
 
         public Boolean IsSlotsVisible { get; set; } = false;
 
@@ -24,30 +71,33 @@ namespace CharacterManager.UserControls
         public void setAttributeList(List<PlayerAbility> target)
         {
             listOfAttributes = target;
+            listOfAttributeControls = new List<AttributeControlData>();
+
             List<Control> myListToRemove = new List<Control>();
 
             //Lets remove any old buttons.
             foreach (Control c in this.Controls)
             {
-                if (c is InfoButton)
-                {
-                    myListToRemove.Add(c);
-                }
+                myListToRemove.Add(c);
             }
 
-            foreach(Control c in myListToRemove)
+            foreach (Control c in myListToRemove)
             {
                 this.Controls.Remove(c);
             }
+
+
 
             //Lets test adding a button for reach of the attributes.
             int y = 1;
             foreach (PlayerAbility attrib in listOfAttributes)
             {
+                AttributeControlData cData = new AttributeControlData(attrib);
+                
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib.Description);
                 buttonNumber++;
                 AddButtonOnLine(myBtn, y, 0);
-
+                cData.ButtonInfo = myBtn;
 
                 /* TODO : This part is unfinished and mostly a placeholder. */
                 if (IsSlotsVisible) 
@@ -59,14 +109,23 @@ namespace CharacterManager.UserControls
                         useButton.Size = new Size(30, 17);
                         useButton.ButtonText = "Use";
                         AddButtonOnLine(useButton, y, myBtn.Width + 1);
-                        
+
+                        cData.setUseButton(useButton);
+
+                        UserControlSpellSlotIndicator [] arr = new UserControlSpellSlotIndicator[attrib.MaximumCharges];
+
                         for (int x = 0; x < attrib.MaximumCharges; x++)
                         {
                             UserControlSpellSlotIndicator slotIndicator = new UserControlSpellSlotIndicator();
                             AddSpellSlotOnLine(slotIndicator, y, useButton.Left - (((x + 1) * slotIndicator.Width) + 6));
+                            arr[x] = slotIndicator;
                         }
+
+                        cData.setSpellSlots(arr, attrib.MaximumCharges);
                     }
                 }
+
+                listOfAttributeControls.Add(cData);
 
                 y++;
             }

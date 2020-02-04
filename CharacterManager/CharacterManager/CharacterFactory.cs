@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
+using static CharacterManager.PlayerCharacter;
 
 namespace CharacterManager
 {
@@ -351,9 +352,9 @@ namespace CharacterManager
 
             //Lets resolve the character attribute list.
             List<PlayerAbility> resultList = new List<PlayerAbility>();
-            foreach (String attribName in raw.CharacterAbilities)
+            foreach (PlayerAbilityDescriptor attribDesc in raw.CharacterAbilities)
             {
-                PlayerAbility member = AttributesList.Find(attrib => attrib.AttributeName == attribName);
+                PlayerAbility member = AttributesList.Find(attrib => attrib.AttributeName == attribDesc.AbilityName);
                 if (member != null)
                 {
                     resultList.Add(member);
@@ -363,7 +364,7 @@ namespace CharacterManager
                     return false;
                 }
             }
-            raw.setCharacterAbilitiesList(resultList);
+            raw.setCharacterAbilitiesList(resultList, false);
 
             return true;
         }
