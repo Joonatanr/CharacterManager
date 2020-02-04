@@ -208,6 +208,12 @@ namespace CharacterManager
         {
             //MessageBox.Show("There are lines : " + userControlWeaponsHandler1.originalNumberOfLines);
         }
+
+        private void userControlWeaponsHandler1_WeaponAttackEvent(Items.PlayerWeapon w)
+        {
+            /* TODO : This is a placeholder. */
+            MessageBox.Show("Attack made with : " + w.ItemName);
+        }
     }
 
     public static class RichTextBoxExtensions

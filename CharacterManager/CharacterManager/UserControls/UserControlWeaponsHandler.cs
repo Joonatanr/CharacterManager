@@ -18,6 +18,9 @@ namespace CharacterManager.UserControls
             public CustomButton AttackBtn;
             public CustomButton EquipButton;
 
+            public delegate void WeaponAtckButtonClickedHandler(PlayerWeapon w);
+            public event WeaponAtckButtonClickedHandler WeaponAttackClicked;
+
             public WeaponControlData(PlayerWeapon w)
             {
                 weapon = w;
@@ -32,6 +35,7 @@ namespace CharacterManager.UserControls
                 AttackBtn = new CustomButton();
                 AttackBtn.Size = new Size(40, 17);
                 AttackBtn.ButtonText = "Attack";
+                AttackBtn.Click += new System.EventHandler(AttackBtn_Click);
             }
 
 
@@ -58,6 +62,11 @@ namespace CharacterManager.UserControls
                     EquipButton.BackGroundColor = Color.LightGray;
                     EquipButton.HoverColor = Color.DarkGray;
                 }
+            }
+
+            private void AttackBtn_Click(object sender, EventArgs e)
+            {
+                WeaponAttackClicked?.Invoke(weapon);
             }
 
             private void EquipButton_Click(object sender, EventArgs e)
@@ -100,6 +109,10 @@ namespace CharacterManager.UserControls
         private List<PlayerWeapon> weaponList = new List<PlayerWeapon>();
         private List<WeaponControlData> mainList = new List<WeaponControlData>();
 
+        public delegate void weaponAttackHandler(PlayerWeapon w);
+        public event weaponAttackHandler WeaponAttackEvent;
+
+
         public void setWeaponList(List<PlayerWeapon> wList)
         {
             this.weaponList = wList;
@@ -132,6 +145,7 @@ namespace CharacterManager.UserControls
 
                 /* 1. Set up the attack button. */
                 myData.AttackBtn.Location = new Point(this.Width - 43, y + 3);
+                myData.WeaponAttackClicked += HandleAttack;
                 this.Controls.Add(myData.AttackBtn);
 
 
@@ -148,6 +162,12 @@ namespace CharacterManager.UserControls
                 y += lineInterval;
                 mainList.Add(myData);
             }
+        }
+
+        private void HandleAttack(PlayerWeapon w)
+        {
+            /* Pass the event outside of the control. */
+            WeaponAttackEvent?.Invoke(w);
         }
 
         protected override void drawData(Graphics gfx, Font font)

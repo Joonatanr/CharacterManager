@@ -186,6 +186,7 @@
             this.userControlWeaponsHandler1.Name = "userControlWeaponsHandler1";
             this.userControlWeaponsHandler1.Size = new System.Drawing.Size(289, 174);
             this.userControlWeaponsHandler1.TabIndex = 31;
+            this.userControlWeaponsHandler1.WeaponAttackEvent += new CharacterManager.UserControls.UserControlWeaponsHandler.weaponAttackHandler(this.userControlWeaponsHandler1_WeaponAttackEvent);
             // 
             // userControlGenericAbilitiesList1
             // 
