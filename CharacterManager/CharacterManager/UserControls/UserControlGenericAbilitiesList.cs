@@ -18,6 +18,9 @@ namespace CharacterManager.UserControls
             public InfoButton ButtonInfo;
             public CustomButton UseButton;
 
+            public delegate Boolean UseAbilityButtonHandler(PlayerAbility ability);
+            public UseAbilityButtonHandler UseAbilityButtonClicked;
+
             /* TODO */
             public UserControlSpellSlotIndicator [] slotArray;
 
@@ -78,8 +81,14 @@ namespace CharacterManager.UserControls
             {
                 if (Attribute.RemainingCharges > 0)
                 {
-                    Attribute.RemainingCharges--;
-                    setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+                    if (UseAbilityButtonClicked != null)
+                    {
+                        if (UseAbilityButtonClicked.Invoke(Attribute))
+                        {
+                            Attribute.RemainingCharges--;
+                            setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+                        }
+                    }
                 }
                 else
                 {
@@ -93,6 +102,9 @@ namespace CharacterManager.UserControls
 
 
         public Boolean IsSlotsVisible { get; set; } = false;
+
+        public delegate Boolean PlayerAbilityUseHandler(PlayerAbility ability);
+        public event PlayerAbilityUseHandler PlayerAbilityUsed;
 
         public UserControlGenericAbilitiesList() : base()
         {
@@ -142,6 +154,7 @@ namespace CharacterManager.UserControls
                         AddButtonOnLine(useButton, y, myBtn.Width + 1);
 
                         cData.setUseButton(useButton);
+                        cData.UseAbilityButtonClicked = handleUseAbilityButton;
 
                         UserControlSpellSlotIndicator [] arr = new UserControlSpellSlotIndicator[attrib.MaximumCharges];
 
@@ -164,6 +177,17 @@ namespace CharacterManager.UserControls
             this.Invalidate();
         }
 
+        private Boolean handleUseAbilityButton(PlayerAbility ability)
+        {
+            if (PlayerAbilityUsed == null)
+            {
+                return false;
+            }
+            else
+            {
+               return PlayerAbilityUsed.Invoke(ability);
+            }
+        }
 
         protected override void drawData(Graphics gfx, Font font)
         {

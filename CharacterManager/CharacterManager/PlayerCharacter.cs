@@ -280,6 +280,7 @@ namespace CharacterManager
         public event PlayerEvent CharacterLevelup;
 
         public event PlayerEvent CharacterHPChanged;
+        public event PlayerEvent CharacterAbilityStatsUpdated;
 
         public PlayerCharacter()
         {
