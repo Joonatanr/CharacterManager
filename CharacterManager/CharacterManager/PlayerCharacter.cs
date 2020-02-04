@@ -22,6 +22,20 @@ namespace CharacterManager
             public int WIS;
         }
 
+
+        /* All bonuses that are determined by special abilities should be defined here. */
+        public class CharacterBonusValues
+        {
+            public int AcBonus = 0; /* Current bonus to AC from abilities and magical effects etc. */
+            public int AttackRollBonus = 0;
+            public string AttackNoteString = "";
+
+            public CharacterBonusValues()
+            {
+                
+            }
+        }
+
         /* TODO : Maybe this can be done differently... */
         public enum PlayerAlignment
         {
@@ -93,7 +107,7 @@ namespace CharacterManager
         public PlayerAlignment Alignment;
 
         [XmlIgnore]
-        public int AcBonus = 0; /* Current bonus to AC from abilities and magical effects etc. */
+        public CharacterBonusValues BonusValues = new CharacterBonusValues();
 
         /* TODO : These could be made into properties with proper getters. */
         [XmlIgnore]
@@ -224,8 +238,11 @@ namespace CharacterManager
 
         /*** Lets test with some events here. ***/
         public delegate void PlayerEvent(PlayerCharacter c);
+        public delegate void PlayerAttackEvent(PlayerCharacter c, PlayerWeapon w);
 
         public event PlayerEvent ArmorDonned;
+        public event PlayerAttackEvent AttackRoll;
+
         public event PlayerEvent CharacterCreated;
         public event PlayerEvent CharacterLevelup;
 
@@ -278,6 +295,10 @@ namespace CharacterManager
         public String MakeWeaponAttack(PlayerWeapon w)
         {
             String res = "";
+            BonusValues.AttackRollBonus = 0;
+            BonusValues.AttackNoteString = "";
+
+            AttackRoll?.Invoke(this, w);
 
             if (!w.IsEquipped)
             {
@@ -285,7 +306,7 @@ namespace CharacterManager
             }
             else
             {
-                int hitBonus = getHitBonus(w);
+                int hitBonus = getHitBonus(w) + BonusValues.AttackRollBonus;
                 if (hitBonus < 0)
                 {
                     res += "1d20 " + hitBonus.ToString();
@@ -321,7 +342,10 @@ namespace CharacterManager
                     }
                 }
 
-
+                if (BonusValues.AttackNoteString.Length > 0)
+                {
+                    res += "\n" + BonusValues.AttackNoteString;
+                }
                 /*TODO : Ranged weapons will probably be more complicated... */
                 /*TODO : Should also consider thrown weapons. --- We really need a form for this. */
                 /*TODO : Take ammo into account. */
@@ -414,7 +438,7 @@ namespace CharacterManager
             isArmorWorn = false;
             isShieldWorn = false;
             PlayerArmor wornArmor = null;
-            AcBonus = 0;
+            BonusValues.AcBonus = 0;
 
             foreach (PlayerArmor armor in CharacterArmors)
             {
@@ -480,7 +504,7 @@ namespace CharacterManager
             /* Fire the event. */
             ArmorDonned?.Invoke(this);
 
-            ac += AcBonus;
+            ac += BonusValues.AcBonus;
 
             return ac;
         }

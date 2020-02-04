@@ -1,4 +1,5 @@
-﻿using CharacterManager.SpecialAttributes;
+﻿using CharacterManager.Items;
+using CharacterManager.SpecialAttributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,18 @@ namespace CharacterManager
             this.Description = "You gain a +2 bonus to attack rolls you make with ranged weapons.";
         }
 
-        /* TODO : Create mechanics for actually taking this ability into account. */
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += CalculateAttackBonus;
+        }
+
+        private void CalculateAttackBonus(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (w.IsRanged)
+            {
+                c.BonusValues.AttackRollBonus += 2;
+            }
+        }
     }
 
     public class FightingStyleDefense : SpecialAttribute
@@ -41,11 +53,9 @@ namespace CharacterManager
         {
             if (c.isArmorWorn)
             {
-                c.AcBonus++;
+                c.BonusValues.AcBonus++;
             }
         }
-
-        /* TODO : Create mechanics for actually taking this ability into account. */
     }
 
     public class FightingStyleGreatWeapon : SpecialAttribute
@@ -59,7 +69,18 @@ namespace CharacterManager
                 "The weapon must have the two-handed or versatile property for you to gain this benefit.";
         }
 
-        /* TODO : Create mechanics for actually taking this ability into account. */
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += AddAttackNote;
+        }
+
+        private void AddAttackNote(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (w.IsEquippedTwoHanded && !w.IsRanged)
+            {
+                c.BonusValues.AttackNoteString = "Great Weapon Fighting : When you roll a 1 or 2 on a damage die you can reroll the die once.";
+            }
+        }
     }
 
     public class FightingStyleDueling : SpecialAttribute
@@ -69,11 +90,31 @@ namespace CharacterManager
         public FightingStyleDueling()
         {
             this.AttributeName = "Dueling Fighting Style";
-            this.Description = "When you are wielding a melee w eapon in one hand and no other w eapons, you gain a +2 bonus to damage rolls " +
+            this.Description = "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls " +
                 "with that weapon.";
         }
 
-        /* TODO : Create mechanics for actually taking this ability into account. */
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += AddAttackBonus;
+        }
+
+        private void AddAttackBonus(PlayerCharacter c, PlayerWeapon w)
+        {
+            Boolean isOnlyOneEquipped = true;
+            foreach(PlayerWeapon weapon in c.CharacterWeapons)
+            {
+                if (weapon.IsEquipped && weapon != w)
+                {
+                    isOnlyOneEquipped = false;
+                }
+            }
+
+            if (isOnlyOneEquipped && (w.IsEquippedTwoHanded == false))
+            {
+                c.BonusValues.AttackRollBonus += 2;
+            }
+        }
     }
 
     public class FightingStyleProtection : SpecialAttribute
@@ -85,8 +126,6 @@ namespace CharacterManager
             this.AttributeName = "Protection Fighting Style";
             this.Description = "When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.";
         }
-
-        /* TODO : Create mechanics for actually taking this ability into account. */
     }
 
     public class FightingStyleTwoWeapon : SpecialAttribute
@@ -99,6 +138,6 @@ namespace CharacterManager
             this.Description = "When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.";
         }
 
-        /* TODO : Create mechanics for actually taking this ability into account. */
+        /* TODO : Create mechanics for actually taking this ability into account. - This will need two weapon wielding to be implemented first. */
     }
 }
