@@ -99,12 +99,22 @@ namespace CharacterManager.UserControls
             maxLine = Math.Max(maxLine, lineNum + 2);
         }
 
-        protected void AddButtonOnLine(InfoButton btn, int lineNum)
+        protected void AddSpellSlotOnLine(UserControlSpellSlotIndicator slot, int lineNum, int xloc)
+        {
+            int y = lineInterval;
+            y += lineNum * lineInterval;
+
+            slot.Location = new Point(xloc, y + 4);
+            this.Controls.Add(slot);
+        }
+
+
+        protected void AddButtonOnLine(CustomButton btn, int lineNum, int xOffset)
         {
             int y = lineInterval;
             y += lineNum * lineInterval;          
   
-            btn.Location = new Point(this.Width - 43, y + 3);
+            btn.Location = new Point((this.Width - (3 + btn.Width)) - xOffset, y + 3);
             this.Controls.Add(btn);
         }
 

@@ -14,6 +14,8 @@ namespace CharacterManager.UserControls
     {
         private List<PlayerAbility> listOfAttributes = new List<PlayerAbility>();
 
+        public Boolean IsSlotsVisible { get; set; } = false;
+
         public UserControlGenericAbilitiesList() : base()
         {
             InitializeComponent();
@@ -44,7 +46,28 @@ namespace CharacterManager.UserControls
             {
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib.Description);
                 buttonNumber++;
-                AddButtonOnLine(myBtn, y);
+                AddButtonOnLine(myBtn, y, 0);
+
+
+                /* TODO : This part is unfinished and mostly a placeholder. */
+                if (IsSlotsVisible) 
+                {
+                    if (attrib.MaximumCharges > 0)
+                    {
+                        /* Lets add the use button. */
+                        CustomButton useButton = new CustomButton();
+                        useButton.Size = new Size(30, 17);
+                        useButton.ButtonText = "Use";
+                        AddButtonOnLine(useButton, y, myBtn.Width + 1);
+                        
+                        for (int x = 0; x < attrib.MaximumCharges; x++)
+                        {
+                            UserControlSpellSlotIndicator slotIndicator = new UserControlSpellSlotIndicator();
+                            AddSpellSlotOnLine(slotIndicator, y, useButton.Left - (((x + 1) * slotIndicator.Width) + 6));
+                        }
+                    }
+                }
+
                 y++;
             }
 

@@ -47,7 +47,7 @@ namespace CharacterManager.UserControls
             foreach (PlayerItem i in GeneralEquipmentList)
             {
                 InfoButton eqButton = new InfoButton(i.ItemName, i.Description);
-                AddButtonOnLine(eqButton, y);
+                AddButtonOnLine(eqButton, y, 0);
                 y++;
             }
         }

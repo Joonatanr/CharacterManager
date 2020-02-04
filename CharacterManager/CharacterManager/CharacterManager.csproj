@@ -190,6 +190,12 @@
     <Compile Include="UserControls\UserControlSkillProficiencies.Designer.cs">
       <DependentUpon>UserControlSkillProficiencies.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlSpellSlotIndicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlSpellSlotIndicator.Designer.cs">
+      <DependentUpon>UserControlSpellSlotIndicator.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlToolProficiencyChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlSkillProficiencies.resx">
       <DependentUpon>UserControlSkillProficiencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlSpellSlotIndicator.resx">
+      <DependentUpon>UserControlSpellSlotIndicator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlToolProficiencyChoice.resx">
       <DependentUpon>UserControlToolProficiencyChoice.cs</DependentUpon>

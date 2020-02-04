@@ -13,6 +13,7 @@ namespace CharacterManager
 
         public string Description;
         public string AttributeName;
+        public int MaximumCharges = 0; /* Maximum uses 0 indicates a passive ability. */ /* TODO : Should take levels etc. into account. */
 
         [XmlIgnore]
         public virtual string DisplayedName { get { return AttributeName; } } /* This should be used instead of the AttributeName*/

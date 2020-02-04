@@ -100,7 +100,7 @@ namespace CharacterManager.UserControls
             {
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), w.getExtendedDescription());
                 buttonNumber++;
-                AddButtonOnLine(myBtn, y);
+                AddButtonOnLine(myBtn, y, 0);
                 y++;
             }
 
@@ -110,7 +110,7 @@ namespace CharacterManager.UserControls
             {
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), a.getExtendedDescription()); 
                 buttonNumber++;
-                AddButtonOnLine(myBtn, y);
+                AddButtonOnLine(myBtn, y, 0);
                 y++;
             }
 
@@ -120,7 +120,7 @@ namespace CharacterManager.UserControls
             {                
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), e.getExtendedDescription()); 
                 buttonNumber++;
-                AddButtonOnLine(myBtn, y);
+                AddButtonOnLine(myBtn, y, 0);
                 y++;
             }
 
@@ -128,7 +128,7 @@ namespace CharacterManager.UserControls
             {
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), t.getExtendedDescription()); 
                 buttonNumber++;
-                AddButtonOnLine(myBtn, y);
+                AddButtonOnLine(myBtn, y, 0);
                 y++;
             }
         }
