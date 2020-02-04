@@ -212,7 +212,12 @@ namespace CharacterManager
         private void userControlWeaponsHandler1_WeaponAttackEvent(Items.PlayerWeapon w)
         {
             /* TODO : This is a placeholder. */
-            MessageBox.Show("Attack made with : " + w.ItemName);
+            //MessageBox.Show("Attack made with : " + w.ItemName);
+            if (activeCharacter != null)
+            {
+                /* TODO : We should probably have a separate form for making a weapon attack... */
+                MessageBox.Show(activeCharacter.MakeWeaponAttack(w));
+            }
         }
     }
 

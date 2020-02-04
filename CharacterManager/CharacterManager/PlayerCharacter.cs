@@ -275,6 +275,86 @@ namespace CharacterManager
         }
 
 
+        public String MakeWeaponAttack(PlayerWeapon w)
+        {
+            String res = "";
+
+            if (!w.IsEquipped)
+            {
+                res = "Weapon not equipped.";
+            }
+            else
+            {
+                if (!w.IsRanged)
+                {
+                    /* Lets just try something for testing now for melee weapons. */
+                    int attackBonus = this.getModifier("STR");
+                    if (isProficientWithWeapon(w))
+                    {
+                        attackBonus += ProficiencyBonus;
+                    }
+
+                    res += "1d20 +" + attackBonus.ToString() + " to hit, damage: ";
+
+                    if (w.IsVersatile)
+                    {
+                        if (w.IsEquippedTwoHanded)
+                        {
+                            res += w.TwoHandedDamage.DamageValue + " + ";
+                        }
+                        else
+                        {
+                            res += w.Damage.DamageValue + " + ";
+                        }
+                    }
+                    else
+                    {
+                        res += w.Damage.DamageValue + " + ";
+                    }
+                    int damageBonus = this.getModifier("STR");
+
+                    res += damageBonus.ToString();
+                }
+                else
+                {
+                    /*TODO : Ranged weapons will probably be more complicated... */
+                    /*TODO : Should also consider thrown weapons. --- We really need a form for this. */
+                    /*TODO : Take ammo into account. */
+                }
+            }
+
+            return res;
+        }
+
+        public Boolean isProficientWithWeapon(PlayerWeapon w)
+        {
+            Boolean result = false;
+
+            if (WeaponProficiencies.Contains("Martial Weapons"))
+            {
+                if (w.Type == PlayerWeapon.WeaponType.Martial)
+                {
+                    return true;
+                }
+            }
+
+            if (WeaponProficiencies.Contains("Simple Weapons"))
+            {
+                if (w.Type == PlayerWeapon.WeaponType.Simple)
+                {
+                    return true;
+                }
+            }
+
+
+            if (WeaponProficiencies.Contains(w.ItemName))
+            {
+                return true;
+            }
+
+            return result;
+        }
+
         public void setCharacterAbilitiesList(List<PlayerAbility> abilityList)
         {
             CharacterAbilitiesObjectList = abilityList;
