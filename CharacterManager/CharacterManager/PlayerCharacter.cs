@@ -121,7 +121,7 @@ namespace CharacterManager
         public int ProficiencyBonus;
         public int ExperiencePoints;
         public int MaxHitPoints;
-        public int CurrentHitPoints;
+        private int _CurrentHitPoints;
 
         public PlayerSize Size;
         public PlayerAlignment Alignment;
@@ -252,6 +252,19 @@ namespace CharacterManager
             }
         }
 
+        public int CurrentHitPoints
+        {
+            get
+            {
+                return _CurrentHitPoints;
+            }
+            set
+            {
+                _CurrentHitPoints = value;
+                CharacterHPChanged?.Invoke(this);
+            }
+        }
+
 
         private String _name;
 
@@ -265,6 +278,8 @@ namespace CharacterManager
 
         public event PlayerEvent CharacterCreated;
         public event PlayerEvent CharacterLevelup;
+
+        public event PlayerEvent CharacterHPChanged;
 
         public PlayerCharacter()
         {

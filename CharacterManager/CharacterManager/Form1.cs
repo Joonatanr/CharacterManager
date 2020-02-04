@@ -151,6 +151,22 @@ namespace CharacterManager
             userControlArmorClass.Value = ac.ToString();
         }
 
+        private void LoadCharacter(PlayerCharacter c)
+        {
+            activeCharacter = c;
+            c.CharacterHPChanged += characterHpChangedListener;
+            updateCharacterAttributes();
+
+            /* Set up listener functions */
+            /* TODO */
+        }
+
+        /*********************** Listener functions ***********************/
+        /* TODO : We should move everything that's possible to this logic here. */
+        private void characterHpChangedListener(PlayerCharacter c)
+        {
+            UpdateHitPoints();
+        }
 
         /*************** Button functions *************/
 
@@ -166,8 +182,9 @@ namespace CharacterManager
 
             if (f2.ShowDialog() == DialogResult.OK)
             {
-                activeCharacter = f2.CreatedCharacter;
-                updateCharacterAttributes();
+                LoadCharacter(f2.CreatedCharacter);
+                
+
             }
         }
 
@@ -206,8 +223,8 @@ namespace CharacterManager
             /** Load a file. */
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                activeCharacter = CharacterFactory.LoadFromXml(openFileDialog1.FileName);
-                updateCharacterAttributes();
+                PlayerCharacter loadedCharacter = CharacterFactory.LoadFromXml(openFileDialog1.FileName);
+                LoadCharacter(loadedCharacter);
             }
         }
 
@@ -238,8 +255,8 @@ namespace CharacterManager
         {
             /* TODO */
             activeCharacter.PerformLongRest();
+            /* TODO : Maybe we can do this with a listener function? */
             UpdateCharacterAbilities();
-            UpdateHitPoints();
         }
 
         private void buttonShortRest_Click(object sender, EventArgs e)
@@ -263,8 +280,6 @@ namespace CharacterManager
                     activeCharacter.CurrentHitPoints = 0;
                     /* TODO : Might have to handle PC death at this point, but maybe it's actually not necessary. */
                 }
-
-                UpdateHitPoints();
             }
         }
 
@@ -284,8 +299,6 @@ namespace CharacterManager
                 {
                     activeCharacter.CurrentHitPoints = activeCharacter.MaxHitPoints;
                 }
-
-                UpdateHitPoints();
             }
         }
     }
