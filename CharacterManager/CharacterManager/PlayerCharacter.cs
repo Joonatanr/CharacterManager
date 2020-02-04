@@ -389,6 +389,18 @@ namespace CharacterManager
             return res;
         }
 
+        internal void PerformLongRest()
+        {
+            /* 1. Heal */
+            CurrentHitPoints = MaxHitPoints;
+
+            /* 2. Recharge lost abilities. */
+            foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
+            {
+                ability.RemainingCharges = ability.MaximumCharges;
+            }
+        }
+
         public Boolean isProficientWithWeapon(PlayerWeapon w)
         {
             Boolean result = false;

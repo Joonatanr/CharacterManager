@@ -97,14 +97,13 @@ namespace CharacterManager
                 }
 
                 //7. Update Hit Points.
-                userControlHitPoints1.MaxHitPoints = activeCharacter.MaxHitPoints;
-                userControlHitPoints1.CurrentHitPoints = activeCharacter.CurrentHitPoints;
+                UpdateHitPoints();
 
                 //8. Update character alignment.
                 textBoxAlignment.Text = AlignmentString;
 
                 //9. Update character abilities.
-                userControlGenericAbilitiesList1.setAttributeList(activeCharacter.CharacterAbilitiesObjectList);
+                UpdateCharacterAbilities();
 
                 //10. Update weapons.
                 userControlWeaponsHandler1.setWeaponList(activeCharacter.CharacterWeapons);
@@ -120,6 +119,17 @@ namespace CharacterManager
                 //13. Update initiative bonus.
                 updateInitiativeBonus();
             }
+        }
+
+        private void UpdateHitPoints()
+        {
+            userControlHitPoints1.MaxHitPoints = activeCharacter.MaxHitPoints;
+            userControlHitPoints1.CurrentHitPoints = activeCharacter.CurrentHitPoints;
+        }
+
+        private void UpdateCharacterAbilities()
+        {
+            userControlGenericAbilitiesList1.setAttributeList(activeCharacter.CharacterAbilitiesObjectList);
         }
 
         private void updateInitiativeBonus()
@@ -221,6 +231,61 @@ namespace CharacterManager
                 MessageBox.Show(activeCharacter.MakeWeaponAttack(w));
                 //userControlEquipmentHandler1.Update();
                 userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
+            }
+        }
+
+        private void buttonLongRest_Click(object sender, EventArgs e)
+        {
+            /* TODO */
+            activeCharacter.PerformLongRest();
+            UpdateCharacterAbilities();
+            UpdateHitPoints();
+        }
+
+        private void buttonShortRest_Click(object sender, EventArgs e)
+        {
+            /* TODO */
+        }
+
+        private void buttonRegisterDamage_Click(object sender, EventArgs e)
+        {
+            if (activeCharacter == null)
+            {
+                return;
+            }
+
+            FormDamageRegister myForm = new FormDamageRegister();
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                activeCharacter.CurrentHitPoints -= myForm.Damage;
+                if (activeCharacter.CurrentHitPoints < 0)
+                {
+                    activeCharacter.CurrentHitPoints = 0;
+                    /* TODO : Might have to handle PC death at this point, but maybe it's actually not necessary. */
+                }
+
+                UpdateHitPoints();
+            }
+        }
+
+        private void buttonHeal_Click(object sender, EventArgs e)
+        {
+            if (activeCharacter == null)
+            {
+                return;
+            }
+
+            FormDamageRegister myForm = new FormDamageRegister();
+            myForm.LabelString = "Heal Amount:";
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                activeCharacter.CurrentHitPoints += myForm.Damage;
+                if (activeCharacter.CurrentHitPoints > activeCharacter.MaxHitPoints)
+                {
+                    activeCharacter.CurrentHitPoints = activeCharacter.MaxHitPoints;
+                }
+
+                UpdateHitPoints();
             }
         }
     }

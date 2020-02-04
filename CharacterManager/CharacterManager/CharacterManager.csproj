@@ -86,6 +86,12 @@
     <Compile Include="CharacterCreator\FormChooseEquipment.Designer.cs">
       <DependentUpon>FormChooseEquipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDamageRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDamageRegister.Designer.cs">
+      <DependentUpon>FormDamageRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items\PlayerArmor.cs" />
     <Compile Include="Items\PlayerItem.cs" />
     <Compile Include="Items\PlayerToolKit.cs" />
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterCreator\FormChooseEquipment.resx">
       <DependentUpon>FormChooseEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDamageRegister.resx">
+      <DependentUpon>FormDamageRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
