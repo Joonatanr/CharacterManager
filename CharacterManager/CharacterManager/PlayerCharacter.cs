@@ -285,42 +285,36 @@ namespace CharacterManager
             }
             else
             {
-                if (!w.IsRanged)
+                int hitBonus = getHitBonus(w);
+                if (hitBonus < 0)
                 {
-                    /* Lets just try something for testing now for melee weapons. */
-                    int attackBonus = this.getModifier("STR");
-                    if (isProficientWithWeapon(w))
-                    {
-                        attackBonus += ProficiencyBonus;
-                    }
-
-                    res += "1d20 +" + attackBonus.ToString() + " to hit, damage: ";
-
-                    if (w.IsVersatile)
-                    {
-                        if (w.IsEquippedTwoHanded)
-                        {
-                            res += w.TwoHandedDamage.DamageValue + " + ";
-                        }
-                        else
-                        {
-                            res += w.Damage.DamageValue + " + ";
-                        }
-                    }
-                    else
-                    {
-                        res += w.Damage.DamageValue + " + ";
-                    }
-                    int damageBonus = this.getModifier("STR");
-
-                    res += damageBonus.ToString();
+                    res += "1d20 " + hitBonus.ToString();
                 }
                 else
                 {
-                    /*TODO : Ranged weapons will probably be more complicated... */
-                    /*TODO : Should also consider thrown weapons. --- We really need a form for this. */
-                    /*TODO : Take ammo into account. */
+                    res += "1d20 + " + hitBonus.ToString();
                 }
+
+                res += ", damage : " + getBaseDamage(w);
+                res += " + ";
+
+                int damageBonus = getDamageBonus(w);
+                res += damageBonus.ToString();
+
+                if (w.IsRanged)
+                {
+                    res += "\n";
+                    res += "Range : " + w.Range.NormalRange.ToString() + "/" + w.Range.LongRange.ToString();
+                }
+                else
+                {
+                    res += "\n";
+                    res += "Reach : " + w.Reach.ToString() + "ft";
+                }
+
+                /*TODO : Ranged weapons will probably be more complicated... */
+                /*TODO : Should also consider thrown weapons. --- We really need a form for this. */
+                /*TODO : Take ammo into account. */
             }
 
             return res;
@@ -480,5 +474,66 @@ namespace CharacterManager
 
             return ac;
         }
+
+
+        /*************************** Private functions **************************/
+        private int getHitBonus(PlayerWeapon w)
+        {
+            int res;
+
+            if (w.IsRanged)
+            {
+                res = this.getModifier("DEX");
+            }
+            else
+            {
+                res = this.getModifier("STR");
+            }
+
+            /* Handle the proficiency bonus here. */
+            if (isProficientWithWeapon(w))
+            {
+                res += ProficiencyBonus;
+            }
+
+            /* TODO : Check for additional effects... */
+
+            return res;
+        }
+
+        private String getBaseDamage(PlayerWeapon w)
+        {
+            String res = "";
+            
+            if (w.IsVersatile && w.IsEquippedTwoHanded)
+            {
+                res += w.TwoHandedDamage.DamageValue;
+            }
+            else
+            {
+                res += w.Damage.DamageValue;
+            }
+
+            return res;
+        }
+
+
+        private int getDamageBonus(PlayerWeapon w)
+        {
+            int res = 0;
+
+            if (w.IsRanged)
+            {
+                res = this.getModifier("DEX");    
+            }
+            else
+            {
+                res = this.getModifier("STR");
+            }
+
+            /* TODO : Check for additional effects. */
+            return res;
+        }
+
     }
 }
