@@ -15,6 +15,7 @@ namespace CharacterManager.SpecialAttributes
         {
             this.Description = baseObj.Description;
             this.MaximumCharges = baseObj.MaximumCharges;
+            this.IsToggle = baseObj.IsToggle;
         }
     }
 }
