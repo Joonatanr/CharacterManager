@@ -140,4 +140,29 @@ namespace CharacterManager
 
         /* TODO : Create mechanics for actually taking this ability into account. - This will need two weapon wielding to be implemented first. */
     }
+
+    public class SecondWindAbility : SpecialAttribute
+    {
+        public SecondWindAbility()
+        {
+            this.AttributeName = "Second Wind";
+        }
+
+        public override bool UseAbility(PlayerCharacter c)
+        {
+            /* TODO : We probably need another form type for dierolls, etc... Good enough for now.. */
+            FormDamageRegister myForm = new FormDamageRegister();
+            myForm.LabelString = "Restore 1d10 + your fighter level,\n enter die roll value:";
+
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                c.CurrentHitPoints += c.Level + myForm.Damage;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
 }

@@ -13,7 +13,21 @@ namespace CharacterManager
     public partial class FormDamageRegister : Form
     {
         public int Damage;
-        public String LabelString { get { return label1.Text; } set { label1.Text = value; } }
+        public String LabelString
+        { 
+            get 
+            { 
+                return label1.Text; 
+            } 
+            set 
+            { 
+                label1.Text = value;
+                if(this.Width < label1.Width)
+                {
+                    this.Width = label1.Width + label1.Left + 10;
+                }
+            } 
+        }
 
         public FormDamageRegister()
         {

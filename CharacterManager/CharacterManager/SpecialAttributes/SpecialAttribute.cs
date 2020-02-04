@@ -14,6 +14,7 @@ namespace CharacterManager.SpecialAttributes
         public void CopyValuesFromBaseClass(PlayerAbility baseObj)
         {
             this.Description = baseObj.Description;
+            this.MaximumCharges = baseObj.MaximumCharges;
         }
     }
 }

@@ -564,6 +564,7 @@ namespace CharacterManager
             SpecialAttributeList.Add(new FightingStyleGreatWeapon());
             SpecialAttributeList.Add(new FightingStyleProtection());
             SpecialAttributeList.Add(new FightingStyleTwoWeapon());
+            SpecialAttributeList.Add(new SecondWindAbility());
         }
 
         private static void logError(String err)
