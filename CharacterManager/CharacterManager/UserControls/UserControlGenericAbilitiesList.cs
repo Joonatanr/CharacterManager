@@ -49,11 +49,42 @@ namespace CharacterManager.UserControls
                 {
                     slotArray[x] = slots[x];    
                 }
+
+                setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+            }
+
+            private void setNumberOfSpellSlotsActive(int cnt)
+            {
+                if (cnt > numberOfSpellSlots)
+                {
+                    /* Should not really happen. */
+                    cnt = numberOfSpellSlots;
+                }
+
+                for (int x = 0; x < numberOfSpellSlots; x++)
+                {
+                    if (x < cnt)
+                    {
+                        slotArray[x].IsActive = true;
+                    }
+                    else
+                    {
+                        slotArray[x].IsActive = false;
+                    }
+                }
             }
 
             private void Use_Click(object sender, EventArgs e)
             {
-                /* TODO */
+                if (Attribute.RemainingCharges > 0)
+                {
+                    Attribute.RemainingCharges--;
+                    setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+                }
+                else
+                {
+                    MessageBox.Show("No uses of ability remaining");
+                }
             }
         }
 

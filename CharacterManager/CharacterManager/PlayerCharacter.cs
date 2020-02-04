@@ -73,6 +73,9 @@ namespace CharacterManager
             public string AbilityName;
             public int RemainingCharges = 0;
 
+            [XmlIgnore]
+            public PlayerAbility ConnectedObject = null;
+
             public PlayerAbilityDescriptor()
             {
                 AbilityName = "UNKNOWN";
@@ -292,6 +295,21 @@ namespace CharacterManager
             CharacterCreated?.Invoke(this);
         }
 
+        internal void PrepareDataForSaving()
+        {
+            /* This is necessary because we use descriptors not raw objects to save ability data. */
+            /* Lets create whole new descriptors here.  */
+            CharacterAbilities = new List<PlayerCharacter.PlayerAbilityDescriptor>();
+            foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
+            {
+                PlayerCharacter.PlayerAbilityDescriptor desc = new PlayerCharacter.PlayerAbilityDescriptor();
+                desc.AbilityName = ability.AttributeName;
+                desc.RemainingCharges = ability.RemainingCharges;
+
+                CharacterAbilities.Add(desc);
+            }
+        }
+
         public void setMainAndSubrace(PlayerRace race, PlayerRace subrace)
         {
             this.MainRace = race;
@@ -412,6 +430,7 @@ namespace CharacterManager
                 if (overwriteDescriptors)
                 {
                     PlayerAbilityDescriptor desc = new PlayerAbilityDescriptor(obj.AttributeName);
+                    desc.ConnectedObject = obj;
                     desc.RemainingCharges = obj.MaximumCharges; /* Assume we start at full in this case. */
                     CharacterAbilities.Add(desc);
                 }

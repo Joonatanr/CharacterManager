@@ -188,9 +188,9 @@ namespace CharacterManager
                 logError("Failed to open file : " + ex.Message);
            }
            
-            if(res != null)
+            if (res != null)
             {
-                if(resolveCharacterData(res) == false)
+                if (resolveCharacterData(res) == false)
                 {
                     logError("Failed to resolve character data correctly");
                 }
@@ -357,6 +357,8 @@ namespace CharacterManager
                 PlayerAbility member = AttributesList.Find(attrib => attrib.AttributeName == attribDesc.AbilityName);
                 if (member != null)
                 {
+                    attribDesc.ConnectedObject = member;
+                    member.RemainingCharges = attribDesc.RemainingCharges; /* TODO : This information also needs to be passed the other way back. */
                     resultList.Add(member);
                 }
                 else

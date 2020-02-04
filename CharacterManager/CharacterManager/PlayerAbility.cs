@@ -18,6 +18,9 @@ namespace CharacterManager
         [XmlIgnore]
         public virtual string DisplayedName { get { return AttributeName; } } /* This should be used instead of the AttributeName*/
 
+        [XmlIgnore]
+        public int RemainingCharges = 0;
+
         public PlayerAbility()
         {
             AttributeName = "UNKNOWN";

@@ -165,6 +165,8 @@ namespace CharacterManager
         {
             if (activeCharacter != null)
             {
+                activeCharacter.PrepareDataForSaving();
+
                 /* We save the character into an XML format. */
                 XmlSerializer xSubmit = new XmlSerializer(typeof(PlayerCharacter));
                 saveFileDialog1.DefaultExt = ".character";
