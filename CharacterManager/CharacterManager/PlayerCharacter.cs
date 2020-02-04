@@ -295,11 +295,12 @@ namespace CharacterManager
                     res += "1d20 + " + hitBonus.ToString();
                 }
 
-                res += ", damage : " + getBaseDamage(w);
+                res += " : " + getBaseDamage(w);
                 res += " + ";
 
                 int damageBonus = getDamageBonus(w);
                 res += damageBonus.ToString();
+                res += " " + w.Damage.Type + " damage";
 
                 if (w.IsRanged)
                 {
@@ -311,6 +312,15 @@ namespace CharacterManager
                     res += "\n";
                     res += "Reach : " + w.Reach.ToString() + "ft";
                 }
+
+                if (w.IsAmmunition)
+                {
+                    if (!isRangedAmmoOk(w))
+                    {
+                        res = "No ammunition";
+                    }
+                }
+
 
                 /*TODO : Ranged weapons will probably be more complicated... */
                 /*TODO : Should also consider thrown weapons. --- We really need a form for this. */
@@ -532,6 +542,42 @@ namespace CharacterManager
             }
 
             /* TODO : Check for additional effects. */
+            return res;
+        }
+
+        private Boolean isRangedAmmoOk(PlayerWeapon w)
+        {
+            /* Check if we have ammo and reduce it as applicable. */
+            Boolean res = true;
+            if (w.IsAmmunition)
+            {
+                if (w.AmmoType != "")
+                {
+                    PlayerItem ammoItem = CharacterGeneralEquipment.Find(i => i.ItemName == w.AmmoType);
+
+                    if (ammoItem == null)
+                    {
+                        return false;
+                    }
+
+                    if (ammoItem.Quantity == 0)
+                    {
+                        /* Something has gone wrong.. */
+                        CharacterGeneralEquipment.Remove(ammoItem);
+                        res = false;
+                    }
+                    else
+                    {
+                        ammoItem.Quantity--;
+                        if(ammoItem.Quantity == 0)
+                        {
+                            CharacterGeneralEquipment.Remove(ammoItem);
+                        }
+                    }
+                }
+            }
+
+
             return res;
         }
 

@@ -27,6 +27,18 @@ namespace CharacterManager.Items
             this.ItemName = "UNKNOWN";
         }
 
+
+        public virtual String getDisplayedName()
+        {
+            String res = ItemName;
+            if(this.Quantity > 1)
+            {
+                res += "(" + Quantity.ToString() + ")";
+            }
+
+            return res;
+        }
+
         public override string ToString()
         {
             String res;

@@ -161,6 +161,7 @@
 			<LongRange>320</LongRange>
 		</Range>
 		<Type>Simple</Type>
+		<AmmoType>Bolts</AmmoType>
 	</PlayerWeapon>
 	
 	<PlayerWeapon>
@@ -198,6 +199,7 @@
 			<LongRange>320</LongRange>
 		</Range>
 		<Type>Simple</Type>
+		<AmmoType>Arrows</AmmoType>
 	</PlayerWeapon>
 	
 	<PlayerWeapon>
@@ -215,6 +217,7 @@
 			<LongRange>120</LongRange>
 		</Range>
 		<Type>Simple</Type>
+		<AmmoType>Sling Bullets</AmmoType>
 	</PlayerWeapon>
 <!-- End of Simple Ranged Weapons -->	
 
@@ -480,6 +483,7 @@
 		<LongRange>100</LongRange>
 	</Range>
 	<Type>Martial</Type>
+	<AmmoType>Blowgun Needles</AmmoType>
 </PlayerWeapon>
 
 <PlayerWeapon>
@@ -499,6 +503,7 @@
 		<LongRange>120</LongRange>
 	</Range>
 	<Type>Martial</Type>
+	<AmmoType>Bolts</AmmoType>
 </PlayerWeapon>
 
 <PlayerWeapon>
@@ -519,6 +524,7 @@
 		<LongRange>400</LongRange>
 	</Range>
 	<Type>Martial</Type>
+	<AmmoType>Bolts</AmmoType>
 </PlayerWeapon>
 
 <PlayerWeapon>
@@ -537,6 +543,7 @@
 		<LongRange>600</LongRange>
 	</Range>
 	<Type>Martial</Type>
+	<AmmoType>Arrows</AmmoType>
 </PlayerWeapon>
 
 <PlayerWeapon>

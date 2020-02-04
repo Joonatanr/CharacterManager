@@ -118,6 +118,7 @@ namespace CharacterManager.UserControls
             this.weaponList = wList;
             /* TODO : Infobuttons, equip and attack buttons. */
             setupButtons();
+            this.DoubleBuffered = true;
             this.Invalidate();
         }
 

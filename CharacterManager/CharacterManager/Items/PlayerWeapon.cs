@@ -63,6 +63,7 @@ namespace CharacterManager.Items
         public WeaponDamage TwoHandedDamage;
         public Boolean      IsEquipped = false;
         public Boolean IsEquippedTwoHanded = false;
+        public String AmmoType = "";
 
         public int rollDamage(out String log)
         {

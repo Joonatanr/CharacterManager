@@ -217,6 +217,8 @@ namespace CharacterManager
             {
                 /* TODO : We should probably have a separate form for making a weapon attack... */
                 MessageBox.Show(activeCharacter.MakeWeaponAttack(w));
+                //userControlEquipmentHandler1.Update();
+                userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
             }
         }
     }

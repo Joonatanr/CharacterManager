@@ -62,7 +62,7 @@ namespace CharacterManager.UserControls
 
             foreach (PlayerItem i in GeneralEquipmentList)
             {
-                drawTextOnLine(gfx, i.ItemName, y);
+                drawTextOnLine(gfx, i.getDisplayedName(), y);
                 y++;
             }
         }
