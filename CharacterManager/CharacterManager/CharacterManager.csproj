@@ -112,6 +112,7 @@
     <Compile Include="SpecialAttributes\DwarvenToughness.cs" />
     <Compile Include="SpecialAttributes\PlayerClassAbility.cs" />
     <Compile Include="SpecialAttributes\SpecialAttribute.cs" />
+    <Compile Include="SpecialAttributes\SpellcastingAbility.cs" />
     <Compile Include="Spells\PlayerSpell.cs" />
     <Compile Include="UserControls\AlignmentChoice.cs">
       <SubType>UserControl</SubType>
