@@ -565,6 +565,10 @@ namespace CharacterManager
             SpecialAttributeList.Add(new FightingStyleProtection());
             SpecialAttributeList.Add(new FightingStyleTwoWeapon());
             SpecialAttributeList.Add(new SecondWindAbility());
+
+            SpecialAttributeList.Add(new RageAbility());
+            SpecialAttributeList.Add(new UnarmoredDefenseAbility());
+
         }
 
         private static void logError(String err)

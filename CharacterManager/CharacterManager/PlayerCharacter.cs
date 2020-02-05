@@ -28,6 +28,7 @@ namespace CharacterManager
         {
             public int AcBonus = 0; /* Current bonus to AC from abilities and magical effects etc. */
             public int AttackRollBonus = 0;
+            public int AttackDamageBonus = 0;
             public string AttackNoteString = "";
 
             public CharacterBonusValues()
@@ -347,6 +348,7 @@ namespace CharacterManager
         {
             String res = "";
             BonusValues.AttackRollBonus = 0;
+            BonusValues.AttackDamageBonus = 0;
             BonusValues.AttackNoteString = "";
 
             AttackRoll?.Invoke(this, w);
@@ -371,6 +373,7 @@ namespace CharacterManager
                 res += " + ";
 
                 int damageBonus = getDamageBonus(w);
+                damageBonus += BonusValues.AttackDamageBonus;
                 res += damageBonus.ToString();
                 res += " " + w.Damage.Type + " damage";
 

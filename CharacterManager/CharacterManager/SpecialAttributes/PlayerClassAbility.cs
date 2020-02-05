@@ -165,4 +165,67 @@ namespace CharacterManager
             }
         }
     }
+
+
+    /*********************************************************************************************/
+
+    /******* Barbarian class abilities. ********/
+    public class RageAbility : SpecialAttribute
+    {
+        public RageAbility()
+        {
+            this.AttributeName = "Rage";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += C_AttackRoll;
+        }
+
+        private void C_AttackRoll(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (this.IsActive)
+            {
+                int bonus = 2;
+                if (c.Level >= 9 && c.Level < 16) 
+                {
+                    bonus = 3;
+                }
+                else if(c.Level >= 16)
+                {
+                    bonus = 4;
+                }
+
+                if (!w.IsRanged)
+                {
+                    c.BonusValues.AttackDamageBonus += bonus;
+                }
+            }
+        }
+
+        /* TODO : Take into account resistance to bludgeoning, piercing and slashing damage. */
+    }
+
+
+    public class UnarmoredDefenseAbility : SpecialAttribute
+    {
+        public UnarmoredDefenseAbility()
+        {
+            this.AttributeName = "Unarmored Defense";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.ArmorDonned += C_ArmorDonned;
+        }
+
+        private void C_ArmorDonned(PlayerCharacter c)
+        {
+            if (!c.isArmorWorn)
+            {
+                c.BonusValues.AcBonus += c.getModifier("CON");
+            }
+        }
+    }
+
 }
