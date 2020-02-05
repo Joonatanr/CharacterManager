@@ -85,6 +85,11 @@
 					<string>Arcane Recovery</string>
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
-	</AvailableClassAbilities>	
+	</AvailableClassAbilities>
+	
+	<SpellCasting>
+		<Description>As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power. See chapter 10 for the general rules of spellcasting and chapter 11 for the w izard spell list.</Description>
+		<SpellCastingAttribute>INT</SpellCastingAttribute>
+	</SpellCasting>	
 	
 </PlayerClass>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.SpecialAttributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace CharacterManager
         public int NumberOfSkillsToChoose;
         public List<EquipmentChoiceList> AvailableEquipment = new List<EquipmentChoiceList>();
 
+        public SpellcastingAbility SpellCasting = null;
         public List<String> AvailableSpells = new List<String>();
 
         /* TODO : This probably needs to be able to support multiple choices etc... Lets make a simple test for now. */
