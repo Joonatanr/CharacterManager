@@ -85,6 +85,14 @@ namespace CharacterManager.UserControls
             }
         }
 
+        /* TODO : Test this. */
+        protected void drawRectangleOnLine(Graphics gfx, int lineNum, Color rectColor)
+        {
+            Point sPoint = new Point(1, (lineInterval * (lineNum + 1)) + 3);
+            Rectangle rect = new Rectangle(sPoint, new Size(this.Width - 1, lineInterval));
+            gfx.FillRectangle(new SolidBrush(rectColor), rect);
+        }
+
         protected void drawTextOnLine(Graphics gfx, String text, int lineNum)
         {
             drawTextOnLine(gfx, text, lineNum, FontStyle.Regular);

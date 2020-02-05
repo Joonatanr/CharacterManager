@@ -79,14 +79,31 @@ namespace CharacterManager.UserControls
 
             private void Use_Click(object sender, EventArgs e)
             {
-                if (Attribute.RemainingCharges > 0)
+                if (Attribute.RemainingCharges > 0 ||(Attribute.IsToggle && Attribute.IsActive))
                 {
                     if (UseAbilityButtonClicked != null)
                     {
                         if (UseAbilityButtonClicked.Invoke(Attribute))
                         {
-                            Attribute.RemainingCharges--;
-                            setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+                            if (Attribute.IsToggle)
+                            {
+                                if (Attribute.IsActive)
+                                {
+                                    this.UseButton.ButtonText = "Disable";
+                                    Attribute.RemainingCharges--;
+                                    setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+                                }
+                                else
+                                {
+                                    this.UseButton.ButtonText = "Activate";
+                                }
+                                UseButton.Parent.Invalidate();
+                            }
+                            else
+                            {
+                                Attribute.RemainingCharges--;
+                                setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+                            }
                         }
                     }
                 }
@@ -130,7 +147,6 @@ namespace CharacterManager.UserControls
             }
 
 
-
             //Lets test adding a button for reach of the attributes.
             int y = 1;
             foreach (PlayerAbility attrib in listOfAttributes)
@@ -138,6 +154,7 @@ namespace CharacterManager.UserControls
                 AttributeControlData cData = new AttributeControlData(attrib);
                 
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib.Description);
+                myBtn.Width = 35;
                 buttonNumber++;
                 AddButtonOnLine(myBtn, y, 0);
                 cData.ButtonInfo = myBtn;
@@ -149,8 +166,15 @@ namespace CharacterManager.UserControls
                     {
                         /* Lets add the use button. */
                         CustomButton useButton = new CustomButton();
-                        useButton.Size = new Size(30, 17);
-                        useButton.ButtonText = "Use";
+                        useButton.Size = new Size(45, 17);
+                        if (attrib.IsToggle) 
+                        {
+                            useButton.ButtonText = "Activate";
+                        }
+                        else
+                        {
+                            useButton.ButtonText = "Use";
+                        }
                         AddButtonOnLine(useButton, y, myBtn.Width + 1);
 
                         cData.setUseButton(useButton);
@@ -199,6 +223,14 @@ namespace CharacterManager.UserControls
             {
                 foreach (PlayerAbility attrib in listOfAttributes)
                 {
+                    if (attrib.IsToggle)
+                    {
+                        if (attrib.IsActive)
+                        {
+                            drawRectangleOnLine(gfx, y, Color.Orange);
+                        }
+                    }
+                    
                     drawTextOnLine(gfx, attrib.DisplayedName, y);
                     y++;
                 }

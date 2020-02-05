@@ -31,6 +31,7 @@ namespace CharacterManager.UserControls
 
             /* Fixed size for this control. */
             this.Size = new Size(15, 15);
+            this.BackColor = Color.Transparent;
         }
 
         private void UserControlSpellSlotIndicator_Paint(object sender, PaintEventArgs e)

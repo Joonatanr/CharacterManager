@@ -44,6 +44,18 @@ namespace CharacterManager
         public virtual Boolean UseAbility(PlayerCharacter c)
         {
             /* This will be overwritten by special abilities. */
+            if (this.IsToggle)
+            {
+                if (this.IsActive)
+                {
+                    this.IsActive = false;
+                }
+                else
+                {
+                    this.IsActive = true;
+                }
+            }
+
             return true;
         }
 
