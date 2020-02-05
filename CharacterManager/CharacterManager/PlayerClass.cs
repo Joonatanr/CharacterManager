@@ -20,6 +20,8 @@ namespace CharacterManager
         public int NumberOfSkillsToChoose;
         public List<EquipmentChoiceList> AvailableEquipment = new List<EquipmentChoiceList>();
 
+        public List<String> AvailableSpells = new List<String>();
+
         /* TODO : This probably needs to be able to support multiple choices etc... Lets make a simple test for now. */
         /* Also note that for the time being this is only for level1, so we really need to expand this quite  alot. */
         public List<PlayerClassAbilityChoice> AvailableClassAbilities;

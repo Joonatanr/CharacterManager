@@ -15,6 +15,14 @@ namespace CharacterManager.Spells
         public String Description;
         public int SpellLevel;
 
+        public Boolean IsVerbalComponent = false;
+        public Boolean IsSomaticComponent = false;
+        public Boolean IsMaterialComponent = false;
+
+        public Boolean IsConcentration;
+
+        public int MaterialCost = 0;
+
         public PlayerSpell()
         {
             this.SpellName = "UNKNOWN";

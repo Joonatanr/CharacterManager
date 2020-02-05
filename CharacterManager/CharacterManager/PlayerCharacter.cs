@@ -73,6 +73,7 @@ namespace CharacterManager
         {
             public string AbilityName;
             public int RemainingCharges = 0;
+            public Boolean IsActive = false;
 
             [XmlIgnore]
             public PlayerAbility ConnectedObject = null;
@@ -322,6 +323,7 @@ namespace CharacterManager
                 PlayerCharacter.PlayerAbilityDescriptor desc = new PlayerCharacter.PlayerAbilityDescriptor();
                 desc.AbilityName = ability.AttributeName;
                 desc.RemainingCharges = ability.RemainingCharges;
+                desc.IsActive = ability.IsActive;
 
                 CharacterAbilities.Add(desc);
             }
@@ -463,6 +465,7 @@ namespace CharacterManager
                     PlayerAbilityDescriptor desc = new PlayerAbilityDescriptor(obj.AttributeName);
                     desc.ConnectedObject = obj;
                     desc.RemainingCharges = obj.MaximumCharges; /* Assume we start at full in this case. */
+                    desc.IsActive = obj.IsActive;
                     CharacterAbilities.Add(desc);
                 }
                 obj.InitializeSubscriptions(this);

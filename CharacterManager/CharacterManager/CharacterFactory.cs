@@ -363,6 +363,7 @@ namespace CharacterManager
                 {
                     attribDesc.ConnectedObject = member;
                     member.RemainingCharges = attribDesc.RemainingCharges; /* TODO : This information also needs to be passed the other way back. */
+                    member.IsActive = attribDesc.IsActive;
                     resultList.Add(member);
                 }
                 else

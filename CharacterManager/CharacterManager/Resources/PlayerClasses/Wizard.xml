@@ -23,4 +23,58 @@
 		<string>Medicine</string>
 		<string>Religion</string>
 	</AvailableSkillProficiencies>
+	
+	<AvailableEquipment>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Quarterstaff</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Dagger</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+		</EquipmentChoiceList>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Component Pouch</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>			
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Arcane Focus</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+		</EquipmentChoiceList>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Scholar's Pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>			
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Explorer's Pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+		</EquipmentChoiceList>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Spellbook</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>		
+			</optionA>
+		</EquipmentChoiceList>
+	</AvailableEquipment>
+	
 </PlayerClass>

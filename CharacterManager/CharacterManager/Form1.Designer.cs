@@ -37,15 +37,31 @@
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
             this.buttonShortRest = new System.Windows.Forms.Button();
             this.buttonLongRest = new System.Windows.Forms.Button();
+            this.userControlEquipmentHandler1 = new CharacterManager.UserControls.UserControlEquipmentHandler();
+            this.userControlArmorHandler1 = new CharacterManager.UserControls.UserControlArmorHandler();
+            this.userControlWeaponsHandler1 = new CharacterManager.UserControls.UserControlWeaponsHandler();
+            this.userControlGenericAbilitiesList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.buttonHeal = new System.Windows.Forms.Button();
             this.buttonRegisterDamage = new System.Windows.Forms.Button();
+            this.userControlSpeed = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlInitiative = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlArmorClass = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlHitPoints1 = new CharacterManager.UserControls.UserControlHitPoints();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBoxPerception = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.textBoxProfBonus = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.AttributeDisplayCHA = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplaySTR = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayINT = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayWIS = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
+            this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxRace = new System.Windows.Forms.TextBox();
@@ -65,22 +81,6 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.userControlEquipmentHandler1 = new CharacterManager.UserControls.UserControlEquipmentHandler();
-            this.userControlArmorHandler1 = new CharacterManager.UserControls.UserControlArmorHandler();
-            this.userControlWeaponsHandler1 = new CharacterManager.UserControls.UserControlWeaponsHandler();
-            this.userControlGenericAbilitiesList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
-            this.userControlSpeed = new CharacterManager.UserControls.UserControlGenericValue();
-            this.userControlInitiative = new CharacterManager.UserControls.UserControlGenericValue();
-            this.userControlArmorClass = new CharacterManager.UserControls.UserControlGenericValue();
-            this.userControlHitPoints1 = new CharacterManager.UserControls.UserControlHitPoints();
-            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
-            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
-            this.AttributeDisplayCHA = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplaySTR = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayINT = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayWIS = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
-            this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -120,6 +120,7 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tabControl1);
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.groupBox1);
             this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1048, 927);
             this.toolStripContainer1.ContentPanel.Load += new System.EventHandler(this.toolStripContainer1_ContentPanel_Load);
             this.toolStripContainer1.Location = new System.Drawing.Point(12, 12);
@@ -137,10 +138,10 @@
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tabControl1.Controls.Add(this.tabPageCharacter);
             this.tabControl1.Controls.Add(this.tabPageMagic);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Location = new System.Drawing.Point(3, 94);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1042, 921);
+            this.tabControl1.Size = new System.Drawing.Size(1042, 830);
             this.tabControl1.TabIndex = 14;
             // 
             // tabPageCharacter
@@ -161,18 +162,17 @@
             this.tabPageCharacter.Controls.Add(this.label6);
             this.tabPageCharacter.Controls.Add(this.userControlSavingThrows1);
             this.tabPageCharacter.Controls.Add(this.groupBox3);
-            this.tabPageCharacter.Controls.Add(this.groupBox1);
             this.tabPageCharacter.Location = new System.Drawing.Point(4, 4);
             this.tabPageCharacter.Name = "tabPageCharacter";
             this.tabPageCharacter.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCharacter.Size = new System.Drawing.Size(1034, 895);
+            this.tabPageCharacter.Size = new System.Drawing.Size(1034, 804);
             this.tabPageCharacter.TabIndex = 0;
             this.tabPageCharacter.Text = "Character";
             // 
             // buttonShortRest
             // 
             this.buttonShortRest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonShortRest.Location = new System.Drawing.Point(734, 599);
+            this.buttonShortRest.Location = new System.Drawing.Point(734, 494);
             this.buttonShortRest.Name = "buttonShortRest";
             this.buttonShortRest.Size = new System.Drawing.Size(100, 39);
             this.buttonShortRest.TabIndex = 35;
@@ -183,13 +183,48 @@
             // buttonLongRest
             // 
             this.buttonLongRest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonLongRest.Location = new System.Drawing.Point(734, 554);
+            this.buttonLongRest.Location = new System.Drawing.Point(734, 449);
             this.buttonLongRest.Name = "buttonLongRest";
             this.buttonLongRest.Size = new System.Drawing.Size(100, 39);
             this.buttonLongRest.TabIndex = 34;
             this.buttonLongRest.Text = "Long Rest";
             this.buttonLongRest.UseVisualStyleBackColor = true;
             this.buttonLongRest.Click += new System.EventHandler(this.buttonLongRest_Click);
+            // 
+            // userControlEquipmentHandler1
+            // 
+            this.userControlEquipmentHandler1.IsBorder = true;
+            this.userControlEquipmentHandler1.Location = new System.Drawing.Point(417, 519);
+            this.userControlEquipmentHandler1.Name = "userControlEquipmentHandler1";
+            this.userControlEquipmentHandler1.Size = new System.Drawing.Size(311, 279);
+            this.userControlEquipmentHandler1.TabIndex = 33;
+            // 
+            // userControlArmorHandler1
+            // 
+            this.userControlArmorHandler1.IsBorder = true;
+            this.userControlArmorHandler1.Location = new System.Drawing.Point(417, 387);
+            this.userControlArmorHandler1.Name = "userControlArmorHandler1";
+            this.userControlArmorHandler1.Size = new System.Drawing.Size(311, 128);
+            this.userControlArmorHandler1.TabIndex = 32;
+            // 
+            // userControlWeaponsHandler1
+            // 
+            this.userControlWeaponsHandler1.IsBorder = true;
+            this.userControlWeaponsHandler1.Location = new System.Drawing.Point(417, 207);
+            this.userControlWeaponsHandler1.Name = "userControlWeaponsHandler1";
+            this.userControlWeaponsHandler1.Size = new System.Drawing.Size(311, 174);
+            this.userControlWeaponsHandler1.TabIndex = 31;
+            this.userControlWeaponsHandler1.WeaponAttackEvent += new CharacterManager.UserControls.UserControlWeaponsHandler.weaponAttackHandler(this.userControlWeaponsHandler1_WeaponAttackEvent);
+            // 
+            // userControlGenericAbilitiesList1
+            // 
+            this.userControlGenericAbilitiesList1.IsBorder = true;
+            this.userControlGenericAbilitiesList1.IsSlotsVisible = true;
+            this.userControlGenericAbilitiesList1.Location = new System.Drawing.Point(734, 29);
+            this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
+            this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(288, 409);
+            this.userControlGenericAbilitiesList1.TabIndex = 30;
+            this.userControlGenericAbilitiesList1.PlayerAbilityUsed += new CharacterManager.UserControls.UserControlGenericAbilitiesList.PlayerAbilityUseHandler(this.userControlGenericAbilitiesList1_PlayerAbilityUsed);
             // 
             // groupBox4
             // 
@@ -199,9 +234,9 @@
             this.groupBox4.Controls.Add(this.userControlInitiative);
             this.groupBox4.Controls.Add(this.userControlArmorClass);
             this.groupBox4.Controls.Add(this.userControlHitPoints1);
-            this.groupBox4.Location = new System.Drawing.Point(425, 122);
+            this.groupBox4.Location = new System.Drawing.Point(417, 29);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(289, 172);
+            this.groupBox4.Size = new System.Drawing.Size(311, 172);
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             // 
@@ -227,9 +262,48 @@
             this.buttonRegisterDamage.UseVisualStyleBackColor = true;
             this.buttonRegisterDamage.Click += new System.EventHandler(this.buttonRegisterDamage_Click);
             // 
+            // userControlSpeed
+            // 
+            this.userControlSpeed.IsBorder = true;
+            this.userControlSpeed.Label = "Speed";
+            this.userControlSpeed.Location = new System.Drawing.Point(184, 19);
+            this.userControlSpeed.Name = "userControlSpeed";
+            this.userControlSpeed.Size = new System.Drawing.Size(80, 58);
+            this.userControlSpeed.TabIndex = 31;
+            this.userControlSpeed.Value = "0";
+            // 
+            // userControlInitiative
+            // 
+            this.userControlInitiative.IsBorder = true;
+            this.userControlInitiative.Label = "Initiative";
+            this.userControlInitiative.Location = new System.Drawing.Point(99, 19);
+            this.userControlInitiative.Name = "userControlInitiative";
+            this.userControlInitiative.Size = new System.Drawing.Size(80, 58);
+            this.userControlInitiative.TabIndex = 30;
+            this.userControlInitiative.Value = "0";
+            // 
+            // userControlArmorClass
+            // 
+            this.userControlArmorClass.IsBorder = true;
+            this.userControlArmorClass.Label = "Armor Class";
+            this.userControlArmorClass.Location = new System.Drawing.Point(14, 19);
+            this.userControlArmorClass.Name = "userControlArmorClass";
+            this.userControlArmorClass.Size = new System.Drawing.Size(80, 58);
+            this.userControlArmorClass.TabIndex = 29;
+            this.userControlArmorClass.Value = "0";
+            // 
+            // userControlHitPoints1
+            // 
+            this.userControlHitPoints1.CurrentHitPoints = 10;
+            this.userControlHitPoints1.IsBorder = true;
+            this.userControlHitPoints1.Location = new System.Drawing.Point(14, 83);
+            this.userControlHitPoints1.Name = "userControlHitPoints1";
+            this.userControlHitPoints1.Size = new System.Drawing.Size(156, 83);
+            this.userControlHitPoints1.TabIndex = 28;
+            // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(748, 729);
+            this.richTextBox1.Location = new System.Drawing.Point(742, 633);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(268, 142);
             this.richTextBox1.TabIndex = 27;
@@ -237,7 +311,7 @@
             // 
             // textBoxPerception
             // 
-            this.textBoxPerception.Location = new System.Drawing.Point(209, 820);
+            this.textBoxPerception.Location = new System.Drawing.Point(216, 722);
             this.textBoxPerception.Name = "textBoxPerception";
             this.textBoxPerception.ReadOnly = true;
             this.textBoxPerception.Size = new System.Drawing.Size(61, 20);
@@ -247,15 +321,23 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(6, 822);
+            this.label8.Location = new System.Drawing.Point(13, 724);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(190, 15);
             this.label8.TabIndex = 25;
             this.label8.Text = "Passive Wisdom(Perception)";
             // 
+            // userControlSkillProficiencies1
+            // 
+            this.userControlSkillProficiencies1.isSetDataVisible = false;
+            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(153, 201);
+            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
+            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(261, 515);
+            this.userControlSkillProficiencies1.TabIndex = 25;
+            // 
             // textBoxProfBonus
             // 
-            this.textBoxProfBonus.Location = new System.Drawing.Point(282, 103);
+            this.textBoxProfBonus.Location = new System.Drawing.Point(279, 10);
             this.textBoxProfBonus.Name = "textBoxProfBonus";
             this.textBoxProfBonus.ReadOnly = true;
             this.textBoxProfBonus.Size = new System.Drawing.Size(32, 20);
@@ -265,11 +347,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(159, 103);
+            this.label6.Location = new System.Drawing.Point(156, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 17);
             this.label6.TabIndex = 23;
             this.label6.Text = "Proficiency Bonus";
+            // 
+            // userControlSavingThrows1
+            // 
+            this.userControlSavingThrows1.Location = new System.Drawing.Point(154, 26);
+            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
+            this.userControlSavingThrows1.Size = new System.Drawing.Size(262, 178);
+            this.userControlSavingThrows1.TabIndex = 16;
             // 
             // groupBox3
             // 
@@ -279,19 +368,74 @@
             this.groupBox3.Controls.Add(this.AttributeDisplayWIS);
             this.groupBox3.Controls.Add(this.AttributeDisplayDEX);
             this.groupBox3.Controls.Add(this.AttributeDisplayCON);
-            this.groupBox3.Location = new System.Drawing.Point(9, 97);
+            this.groupBox3.Location = new System.Drawing.Point(9, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(140, 715);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Base attributes";
             // 
+            // AttributeDisplayCHA
+            // 
+            this.AttributeDisplayCHA.AttributeName = "CHARISMA";
+            this.AttributeDisplayCHA.AttributeValue = 0;
+            this.AttributeDisplayCHA.Location = new System.Drawing.Point(12, 596);
+            this.AttributeDisplayCHA.Name = "AttributeDisplayCHA";
+            this.AttributeDisplayCHA.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayCHA.TabIndex = 13;
+            // 
+            // AttributeDisplaySTR
+            // 
+            this.AttributeDisplaySTR.AttributeName = "STRENGTH";
+            this.AttributeDisplaySTR.AttributeValue = 0;
+            this.AttributeDisplaySTR.Location = new System.Drawing.Point(12, 16);
+            this.AttributeDisplaySTR.Name = "AttributeDisplaySTR";
+            this.AttributeDisplaySTR.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplaySTR.TabIndex = 8;
+            // 
+            // AttributeDisplayINT
+            // 
+            this.AttributeDisplayINT.AttributeName = "INTELLIGENCE";
+            this.AttributeDisplayINT.AttributeValue = 0;
+            this.AttributeDisplayINT.Location = new System.Drawing.Point(12, 132);
+            this.AttributeDisplayINT.Name = "AttributeDisplayINT";
+            this.AttributeDisplayINT.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayINT.TabIndex = 9;
+            this.AttributeDisplayINT.Load += new System.EventHandler(this.AttributeDisplayINT_Load);
+            // 
+            // AttributeDisplayWIS
+            // 
+            this.AttributeDisplayWIS.AttributeName = "WISDOM";
+            this.AttributeDisplayWIS.AttributeValue = 0;
+            this.AttributeDisplayWIS.Location = new System.Drawing.Point(12, 480);
+            this.AttributeDisplayWIS.Name = "AttributeDisplayWIS";
+            this.AttributeDisplayWIS.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayWIS.TabIndex = 12;
+            // 
+            // AttributeDisplayDEX
+            // 
+            this.AttributeDisplayDEX.AttributeName = "DEXTERITY";
+            this.AttributeDisplayDEX.AttributeValue = 0;
+            this.AttributeDisplayDEX.Location = new System.Drawing.Point(12, 248);
+            this.AttributeDisplayDEX.Name = "AttributeDisplayDEX";
+            this.AttributeDisplayDEX.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayDEX.TabIndex = 10;
+            // 
+            // AttributeDisplayCON
+            // 
+            this.AttributeDisplayCON.AttributeName = "CONSTITUTION";
+            this.AttributeDisplayCON.AttributeValue = 0;
+            this.AttributeDisplayCON.Location = new System.Drawing.Point(12, 364);
+            this.AttributeDisplayCON.Name = "AttributeDisplayCON";
+            this.AttributeDisplayCON.Size = new System.Drawing.Size(109, 116);
+            this.AttributeDisplayCON.TabIndex = 11;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBoxName);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(7, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1022, 86);
             this.groupBox1.TabIndex = 14;
@@ -467,150 +611,6 @@
             this.toolStripButtonLoad.Size = new System.Drawing.Size(37, 22);
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
-            // 
-            // userControlEquipmentHandler1
-            // 
-            this.userControlEquipmentHandler1.IsBorder = true;
-            this.userControlEquipmentHandler1.Location = new System.Drawing.Point(425, 610);
-            this.userControlEquipmentHandler1.Name = "userControlEquipmentHandler1";
-            this.userControlEquipmentHandler1.Size = new System.Drawing.Size(289, 279);
-            this.userControlEquipmentHandler1.TabIndex = 33;
-            // 
-            // userControlArmorHandler1
-            // 
-            this.userControlArmorHandler1.IsBorder = true;
-            this.userControlArmorHandler1.Location = new System.Drawing.Point(425, 476);
-            this.userControlArmorHandler1.Name = "userControlArmorHandler1";
-            this.userControlArmorHandler1.Size = new System.Drawing.Size(289, 128);
-            this.userControlArmorHandler1.TabIndex = 32;
-            // 
-            // userControlWeaponsHandler1
-            // 
-            this.userControlWeaponsHandler1.IsBorder = true;
-            this.userControlWeaponsHandler1.Location = new System.Drawing.Point(425, 300);
-            this.userControlWeaponsHandler1.Name = "userControlWeaponsHandler1";
-            this.userControlWeaponsHandler1.Size = new System.Drawing.Size(289, 174);
-            this.userControlWeaponsHandler1.TabIndex = 31;
-            this.userControlWeaponsHandler1.WeaponAttackEvent += new CharacterManager.UserControls.UserControlWeaponsHandler.weaponAttackHandler(this.userControlWeaponsHandler1_WeaponAttackEvent);
-            // 
-            // userControlGenericAbilitiesList1
-            // 
-            this.userControlGenericAbilitiesList1.IsBorder = true;
-            this.userControlGenericAbilitiesList1.IsSlotsVisible = true;
-            this.userControlGenericAbilitiesList1.Location = new System.Drawing.Point(734, 128);
-            this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
-            this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(288, 409);
-            this.userControlGenericAbilitiesList1.TabIndex = 30;
-            this.userControlGenericAbilitiesList1.PlayerAbilityUsed += new CharacterManager.UserControls.UserControlGenericAbilitiesList.PlayerAbilityUseHandler(this.userControlGenericAbilitiesList1_PlayerAbilityUsed);
-            // 
-            // userControlSpeed
-            // 
-            this.userControlSpeed.IsBorder = true;
-            this.userControlSpeed.Label = "Speed";
-            this.userControlSpeed.Location = new System.Drawing.Point(184, 19);
-            this.userControlSpeed.Name = "userControlSpeed";
-            this.userControlSpeed.Size = new System.Drawing.Size(80, 58);
-            this.userControlSpeed.TabIndex = 31;
-            this.userControlSpeed.Value = "0";
-            // 
-            // userControlInitiative
-            // 
-            this.userControlInitiative.IsBorder = true;
-            this.userControlInitiative.Label = "Initiative";
-            this.userControlInitiative.Location = new System.Drawing.Point(99, 19);
-            this.userControlInitiative.Name = "userControlInitiative";
-            this.userControlInitiative.Size = new System.Drawing.Size(80, 58);
-            this.userControlInitiative.TabIndex = 30;
-            this.userControlInitiative.Value = "0";
-            // 
-            // userControlArmorClass
-            // 
-            this.userControlArmorClass.IsBorder = true;
-            this.userControlArmorClass.Label = "Armor Class";
-            this.userControlArmorClass.Location = new System.Drawing.Point(14, 19);
-            this.userControlArmorClass.Name = "userControlArmorClass";
-            this.userControlArmorClass.Size = new System.Drawing.Size(80, 58);
-            this.userControlArmorClass.TabIndex = 29;
-            this.userControlArmorClass.Value = "0";
-            // 
-            // userControlHitPoints1
-            // 
-            this.userControlHitPoints1.CurrentHitPoints = 10;
-            this.userControlHitPoints1.IsBorder = true;
-            this.userControlHitPoints1.Location = new System.Drawing.Point(14, 83);
-            this.userControlHitPoints1.Name = "userControlHitPoints1";
-            this.userControlHitPoints1.Size = new System.Drawing.Size(156, 83);
-            this.userControlHitPoints1.TabIndex = 28;
-            // 
-            // userControlSkillProficiencies1
-            // 
-            this.userControlSkillProficiencies1.isSetDataVisible = false;
-            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(158, 297);
-            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
-            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(261, 515);
-            this.userControlSkillProficiencies1.TabIndex = 25;
-            // 
-            // userControlSavingThrows1
-            // 
-            this.userControlSavingThrows1.Location = new System.Drawing.Point(157, 119);
-            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
-            this.userControlSavingThrows1.Size = new System.Drawing.Size(262, 178);
-            this.userControlSavingThrows1.TabIndex = 16;
-            // 
-            // AttributeDisplayCHA
-            // 
-            this.AttributeDisplayCHA.AttributeName = "CHARISMA";
-            this.AttributeDisplayCHA.AttributeValue = 0;
-            this.AttributeDisplayCHA.Location = new System.Drawing.Point(12, 596);
-            this.AttributeDisplayCHA.Name = "AttributeDisplayCHA";
-            this.AttributeDisplayCHA.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayCHA.TabIndex = 13;
-            // 
-            // AttributeDisplaySTR
-            // 
-            this.AttributeDisplaySTR.AttributeName = "STRENGTH";
-            this.AttributeDisplaySTR.AttributeValue = 0;
-            this.AttributeDisplaySTR.Location = new System.Drawing.Point(12, 16);
-            this.AttributeDisplaySTR.Name = "AttributeDisplaySTR";
-            this.AttributeDisplaySTR.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplaySTR.TabIndex = 8;
-            // 
-            // AttributeDisplayINT
-            // 
-            this.AttributeDisplayINT.AttributeName = "INTELLIGENCE";
-            this.AttributeDisplayINT.AttributeValue = 0;
-            this.AttributeDisplayINT.Location = new System.Drawing.Point(12, 132);
-            this.AttributeDisplayINT.Name = "AttributeDisplayINT";
-            this.AttributeDisplayINT.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayINT.TabIndex = 9;
-            this.AttributeDisplayINT.Load += new System.EventHandler(this.AttributeDisplayINT_Load);
-            // 
-            // AttributeDisplayWIS
-            // 
-            this.AttributeDisplayWIS.AttributeName = "WISDOM";
-            this.AttributeDisplayWIS.AttributeValue = 0;
-            this.AttributeDisplayWIS.Location = new System.Drawing.Point(12, 480);
-            this.AttributeDisplayWIS.Name = "AttributeDisplayWIS";
-            this.AttributeDisplayWIS.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayWIS.TabIndex = 12;
-            // 
-            // AttributeDisplayDEX
-            // 
-            this.AttributeDisplayDEX.AttributeName = "DEXTERITY";
-            this.AttributeDisplayDEX.AttributeValue = 0;
-            this.AttributeDisplayDEX.Location = new System.Drawing.Point(12, 248);
-            this.AttributeDisplayDEX.Name = "AttributeDisplayDEX";
-            this.AttributeDisplayDEX.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayDEX.TabIndex = 10;
-            // 
-            // AttributeDisplayCON
-            // 
-            this.AttributeDisplayCON.AttributeName = "CONSTITUTION";
-            this.AttributeDisplayCON.AttributeValue = 0;
-            this.AttributeDisplayCON.Location = new System.Drawing.Point(12, 364);
-            this.AttributeDisplayCON.Name = "AttributeDisplayCON";
-            this.AttributeDisplayCON.Size = new System.Drawing.Size(109, 116);
-            this.AttributeDisplayCON.TabIndex = 11;
             // 
             // Form1
             // 
