@@ -27,7 +27,28 @@ namespace CharacterManager.CharacterCreator
 
             int yloc = 15;
 
+            List<PlayerClassAbilityChoice> choicesList = new List<PlayerClassAbilityChoice>();
+
             foreach (PlayerClassAbilityChoice choice in _selectedClass.AvailableClassAbilities)
+            {
+                choicesList.Add(choice);
+            }
+
+            /* We want to display the spellcasting ability as a player ability in the form. */
+            if (c.SpellCasting != null)
+            {
+                /* We also want to add this to the list, although it is defined separately. */
+                PlayerClassAbilityChoice spellCastingChoice = new PlayerClassAbilityChoice();
+                spellCastingChoice.ClassAbilityName = "Spellcasting";
+                spellCastingChoice.Description = c.SpellCasting.Description;
+                List<String> stringObj = new List<String>();
+                stringObj.Add("Spellcasting");
+                spellCastingChoice.AvailableChoices = stringObj;
+                choicesList.Add(spellCastingChoice);
+            }
+
+
+            foreach (PlayerClassAbilityChoice choice in choicesList)
             {
                 /* Lets create a user control for each.*/
                 UserControlClassFeature ctrl = new UserControlClassFeature();

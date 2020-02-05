@@ -77,6 +77,12 @@ namespace CharacterManager
                         {
                             resolvedAbilities.Add(ability);
                         }
+                        else
+                        {
+                            PlayerAbility obj = new PlayerAbility(choice);
+                            obj.Description = this.Description;
+                            resolvedAbilities.Add(obj);
+                        }
                     }
                 }
             }
