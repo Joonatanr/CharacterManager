@@ -34,4 +34,117 @@ air. Until the end of your next turn, you have resistance
 against bludgeoning, piercing, and slashing damage
 dealt by weapon attacks.</Description>
 	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>Chill Touch</SpellName>
+		<School>Necromancy</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellLevel>0</SpellLevel>
+		<SpellRange>120</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>1</SpellDuration>
+		
+		<Description>You create a ghostly, skeletal hand in the space of a
+creature within range. Make a ranged spell attack
+against the creature to assail it with the chill of the
+grave. On a hit, the target takes 1d8 necrotic damage,
+and it can’t regain hit points until the start of your next
+turn. Until then, the hand clings to the target.
+If you hit an undead target, it also has disadvantage on
+attack rolls against you until the end of your next turn.
+This spell’s damage increases by 1d8 when you reach
+5th level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>Dancing Lights</SpellName>
+		<School>Evocation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellLevel>0</SpellLevel>
+		<SpellRange>120</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<SpellDuration>10</SpellDuration>
+		<IsConcentration>true</IsConcentration>
+		
+		<Description>You create up to four torch-sized lights within range,
+making them appear as torches, lanterns, or glowing
+orbs that hover in the air for the duration. You can
+also combine the four lights into one glowing vaguely
+humanoid form of Medium size. Whichever form you
+choose, each light sheds dim light in a 10-foot radius.
+As a bonus action on your turn, you can move the
+lights up to 60 feet to a new spot within range. A light
+must be within 20 feet of another light created by this
+spell, and a light winks out if it exceeds the spell’s range.</Description>
+	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>Fire Bolt</SpellName>
+		<School>Evocation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellLevel>0</SpellLevel>
+		<SpellRange>120</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>0</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		
+		<Description>You hurl a mote of fire at a creature or object within
+range. Make a ranged spell attack against the
+target. On a hit, the target takes 1d10 fire damage. A
+flammable object hit by this spell ignites if it isn't being
+worn or carried. This spell’s damage increases by 1d10 when you reach
+5th level (2d10), 11th level (3d10), and 17th level (4d10).</Description>
+	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>Friends</SpellName>
+		<School>Enchantment</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellLevel>0</SpellLevel>
+		<SpellRange>0</SpellRange>
+		<IsVerbalComponent>false</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>10</SpellDuration>
+		<IsConcentration>true</IsConcentration>
+		
+		<Description>For the duration, you have advantage on all Charisma
+checks directed at one creature o f your choice that isn’t
+hostile toward you. When the spell ends, the creature
+realizes that you used magic to influence its mood
+and becomes hostile toward you. A creature prone
+to violence might attack you. Another creature might
+seek retribution in other ways (at the DM’s discretion),
+depending on the nature o f your interaction with it.</Description>
+	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>Light</SpellName>
+		<School>Evocation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellLevel>0</SpellLevel>
+		<SpellRange>0</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>false</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<SpellDuration>100</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		
+		<Description>You touch one object that is no larger than 10 feet in any
+dimension. Until the spell ends, the object sheds bright
+light in a 20-foot radius and dim light for an additional
+20 feet. The light can be colored as you like. Completely
+covering the object with something opaque blocks the
+light. The spell ends if you cast it again or dismiss it
+as an action. If you target an object held or worn by a hostile
+creature, that creature must succeed on a Dexterity
+saving throw to avoid the spell.</Description>
+	</PlayerSpell>
+	
 </ArrayOfPlayerSpell>
