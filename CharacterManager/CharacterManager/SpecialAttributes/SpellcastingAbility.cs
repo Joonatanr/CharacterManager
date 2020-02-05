@@ -11,6 +11,8 @@ namespace CharacterManager.SpecialAttributes
     {
         /* This is basically a container class for the spellcasting ability of a PC. */
         public string SpellCastingAttribute; /* STR, WIS, DEX, CON, CHA or INT */
+        public int NumberOfInitialCantrips = 0;
+        public int NumberOfInitialLev1Spells = 0;
 
         public SpellcastingAbility()
         {

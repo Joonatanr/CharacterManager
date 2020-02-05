@@ -11,6 +11,47 @@ namespace CharacterManager
     [Serializable]
     public class PlayerClass
     {
+        [Serializable]
+        public class SpellSlots_T
+        {
+            public int NumberOfLev1SpellSlots = 0;
+            public int NumberOfLev2SpellSlots = 0;
+            public int NumberOfLev3SpellSlots = 0;
+            public int NumberOfLev4SpellSlots = 0;
+            public int NumberOfLev5SpellSlots = 0;
+            public int NumberOfLev6SpellSlots = 0;
+            public int NumberOfLev7SpellSlots = 0;
+            public int NumberOfLev8SpellSlots = 0;
+            public int NumberOfLev9SpellSlots = 0;
+
+            public int getNumberOfSlotsPerLevel(int level)
+            {
+                switch (level)
+                {
+                    case 1:
+                        return NumberOfLev1SpellSlots;
+                    case 2 :
+                        return NumberOfLev2SpellSlots;
+                    case 3:
+                        return NumberOfLev3SpellSlots;
+                    case 4:
+                        return NumberOfLev4SpellSlots;
+                    case 5:
+                        return NumberOfLev5SpellSlots;
+                    case 6:
+                        return NumberOfLev6SpellSlots;
+                    case 7:
+                        return NumberOfLev7SpellSlots;
+                    case 8:
+                        return NumberOfLev8SpellSlots;
+                    case 9:
+                        return NumberOfLev9SpellSlots;
+                    default:
+                        return 0;
+                }
+            }
+        }
+        
         public String PlayerClassName;
         public int HitDie;
 
@@ -23,6 +64,7 @@ namespace CharacterManager
 
         public SpellcastingAbility SpellCasting = null;
         public List<String> AvailableSpells = new List<String>();
+        public SpellSlots_T [] SpellslotPerLevel = new SpellSlots_T[20];
 
         /* TODO : This probably needs to be able to support multiple choices etc... Lets make a simple test for now. */
         /* Also note that for the time being this is only for level1, so we really need to expand this quite  alot. */

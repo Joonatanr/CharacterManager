@@ -147,4 +147,54 @@ creature, that creature must succeed on a Dexterity
 saving throw to avoid the spell.</Description>
 	</PlayerSpell>
 	
+	<PlayerSpell>
+		<SpellName>Mage Hand</SpellName>
+		<School>Conjuration</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellLevel>0</SpellLevel>
+		<SpellRange>30</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>10</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		
+		<Description>A spectral, floating hand appears at a point you choose
+within range. The hand lasts for the duration or until
+you dismiss it as an action. The hand vanishes if it is
+ever more than 30 feet away from you or if you cast
+this spell again. You can use your action to control the hand. You can
+use the hand to manipulate an object, open an unlocked
+door or container, stow or retrieve an item from an open
+container, or pour the contents out o f a vial. You can
+move the hand up to 30 feet each time you use it.
+The hand can’t attack, activate magic items, or carry
+more than 10 pounds.</Description>
+	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>Mending</SpellName>
+		<School>Transmutation</School>
+		<CastingTime>CASTING_TIME_PERIOD</CastingTime>
+		<CastingTimePeriod>10</CastingTimePeriod>
+		<SpellLevel>0</SpellLevel>
+		<SpellRange>0</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<SpellDuration>0</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		
+		<Description>This spell repairs a single break or tear in an object
+you touch, such as a broken chain link, two halves of
+a broken key, a torn cloak, or a leaking wineskin. As
+long as the break or tear is no larger than 1 foot in
+any dimension, you mend it. leaving no trace of the
+former damage. This spell can physically repair a magic item
+or construct, but the spell can’t restore magic to
+such an object.</Description>
+	</PlayerSpell>
+	
+	
+	
 </ArrayOfPlayerSpell>

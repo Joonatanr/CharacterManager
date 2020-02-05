@@ -27,6 +27,7 @@ namespace CharacterManager.Spells
         public int SpellDuration; /* In turns, 0 means instantaneous effect. */
 
         public CastingTimeEnum CastingTime;
+        public int CastingTimePeriod; /* In number of turns, so 1 minute is 10 turns. */
         public Boolean IsVerbalComponent = false;
         public Boolean IsSomaticComponent = false;
         public Boolean IsMaterialComponent = false;

@@ -91,7 +91,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.userControlGenericEquipmentList1 = new CharacterManager.UserControls.UserControlGenericEquipmentList();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonChooseSpells = new System.Windows.Forms.Button();
             this.buttonChooseEquipment = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
@@ -596,6 +596,7 @@
             this.userControlGenericAttributeList1.AutoScroll = true;
             this.userControlGenericAttributeList1.AutoScrollMinSize = new System.Drawing.Size(256, 433);
             this.userControlGenericAttributeList1.IsBorder = true;
+            this.userControlGenericAttributeList1.IsSlotsVisible = false;
             this.userControlGenericAttributeList1.Location = new System.Drawing.Point(288, 385);
             this.userControlGenericAttributeList1.Name = "userControlGenericAttributeList1";
             this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 433);
@@ -753,7 +754,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.panel1);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.buttonChooseSpells);
             this.groupBox2.Controls.Add(this.buttonChooseEquipment);
             this.groupBox2.Location = new System.Drawing.Point(9, 76);
             this.groupBox2.Name = "groupBox2";
@@ -781,14 +782,15 @@
             this.userControlGenericEquipmentList1.Size = new System.Drawing.Size(228, 307);
             this.userControlGenericEquipmentList1.TabIndex = 2;
             // 
-            // button1
+            // buttonChooseSpells
             // 
-            this.button1.Location = new System.Drawing.Point(125, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 21);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Choose Spells";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonChooseSpells.Location = new System.Drawing.Point(125, 19);
+            this.buttonChooseSpells.Name = "buttonChooseSpells";
+            this.buttonChooseSpells.Size = new System.Drawing.Size(109, 21);
+            this.buttonChooseSpells.TabIndex = 1;
+            this.buttonChooseSpells.Text = "Choose Spells";
+            this.buttonChooseSpells.UseVisualStyleBackColor = true;
+            this.buttonChooseSpells.Click += new System.EventHandler(this.buttonChooseSpells_Click);
             // 
             // buttonChooseEquipment
             // 
@@ -914,7 +916,7 @@
         private UserControls.UserControlToolProficiencyChoice userControlToolProficiencyChoice1;
         private UserControls.AlignmentChoice alignmentChoice1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonChooseSpells;
         private System.Windows.Forms.Button buttonChooseEquipment;
         private UserControls.UserControlGenericEquipmentList userControlGenericEquipmentList1;
         private System.Windows.Forms.GroupBox groupBox7;

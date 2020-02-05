@@ -38,6 +38,7 @@ namespace CharacterManager.CharacterCreator
         FormChooseBackGround myChooseBackGroundForm = new FormChooseBackGround();
         FormChooseEquipment myChooseEquipmentForm = new FormChooseEquipment();
         FormChooseClassFeatures myChooseClassFeaturesForm = new FormChooseClassFeatures();
+        FormChooseSpells myChooseSpellsForm = new FormChooseSpells();
 
         public CharacterCreatorForm()
         {
@@ -858,6 +859,27 @@ namespace CharacterManager.CharacterCreator
             {
                 updateGenericAbilitiesField();
             }
+        }
+
+        private void buttonChooseSpells_Click(object sender, EventArgs e)
+        {
+            if (SelectedClass == null)
+            {
+                MessageBox.Show("No class selected");
+                return;
+            }
+
+            if (SelectedClass.SpellCasting == null)
+            {
+                MessageBox.Show("No spellcasting for this class");
+                return;
+            }
+
+            if (myChooseSpellsForm.ShowDialog() == DialogResult.OK)
+            {
+                /* TODO */
+            }
+
         }
     }
 }
