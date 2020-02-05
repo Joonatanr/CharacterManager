@@ -112,6 +112,7 @@
     <Compile Include="SpecialAttributes\DwarvenToughness.cs" />
     <Compile Include="SpecialAttributes\PlayerClassAbility.cs" />
     <Compile Include="SpecialAttributes\SpecialAttribute.cs" />
+    <Compile Include="Spells\PlayerSpell.cs" />
     <Compile Include="UserControls\AlignmentChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -321,6 +322,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PlayerItems\PlayerWeapon.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PlayerSpells.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\PlayerClasses\Fighter.xml">

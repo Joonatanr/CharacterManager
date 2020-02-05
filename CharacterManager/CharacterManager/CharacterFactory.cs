@@ -1,5 +1,6 @@
 ﻿using CharacterManager.Items;
 using CharacterManager.SpecialAttributes;
+using CharacterManager.Spells;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,6 +20,8 @@ namespace CharacterManager
         private static List<PlayerClass> Classes;
         private static List<PlayerAbility> AttributesList;
         private static List<CharacterManager.SpecialAttributes.SpecialAttribute> SpecialAttributeList = new List<CharacterManager.SpecialAttributes.SpecialAttribute>();
+        private static List<Spells.PlayerSpell> SpellList = new List<Spells.PlayerSpell>();
+        
         private static List<CharacterBackGround> CharacterBackGroundList;
 
         private static Boolean isInitialized = false;
@@ -87,6 +90,7 @@ namespace CharacterManager
                 parseWeaponsFromXml("Resources/PlayerItems/PlayerWeapon.xml");
                 parseToolkitsFromXml("Resources/PlayerItems/PlayerTools.xml");
                 parseLanguagesFromXml("Resources/Languages.xml");
+                parseSpellsFromXml("Resources/PlayerSpells.xml");
 
                 foreach (PlayerRace race in Races)
                 {
@@ -527,6 +531,22 @@ namespace CharacterManager
                 StreamReader file = new System.IO.StreamReader(filepath);
 
                 LanguageList = (List<Language>)reader.Deserialize(file);
+                file.Close();
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
+        }
+
+        private static void parseSpellsFromXml(String filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerSpell>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                SpellList = (List<PlayerSpell>)reader.Deserialize(file);
                 file.Close();
             }
             catch (Exception ex)
