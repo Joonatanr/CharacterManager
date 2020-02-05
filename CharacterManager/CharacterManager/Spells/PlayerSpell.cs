@@ -11,15 +11,29 @@ namespace CharacterManager.Spells
     [Serializable]
     public class PlayerSpell
     {
+        
+        public enum CastingTimeEnum
+        {
+            CASTING_TIME_ACTION,
+            CASTING_TIME_BONUS_ACTION,
+            CASTING_TIME_PERIOD
+        }
+        
         public String SpellName;
         public String Description;
+        public String School;
         public int SpellLevel;
+        public int SpellRange;
+        public int SpellDuration; /* In turns, 0 means instantaneous effect. */
 
+        public CastingTimeEnum CastingTime;
         public Boolean IsVerbalComponent = false;
         public Boolean IsSomaticComponent = false;
         public Boolean IsMaterialComponent = false;
 
         public Boolean IsConcentration;
+       
+
 
         public int MaterialCost = 0;
 

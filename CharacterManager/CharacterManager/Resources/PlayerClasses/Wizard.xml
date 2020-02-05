@@ -92,4 +92,30 @@
 		<SpellCastingAttribute>INT</SpellCastingAttribute>
 	</SpellCasting>	
 	
+	<AvailableSpells>
+		<!-- Cantrips -->
+		<string>Acid Splash</string>
+		<string>Blade Ward</string>
+		<string>Chill Touch</string>
+		<string>Dancing Lights</string>
+		<string>Fire Bolt</string>
+		<string>Friends</string>
+		<string>Light</string>
+		<string>Mage Hand</string>
+		<string>Mending</string>
+		<string>Message</string>
+		<string>Minor Illusion</string>
+		<string>Poison Spray</string>
+		<string>Presdigitation</string>
+		<string>Ray of Frost</string>
+		<string>Shocking Grasp</string>
+		<string>True Strike</string>
+		<!-- Level 1 Spells -->
+		<string>Alarm</string>
+		<string>Burning Hands</string>
+		<string>Charm Person</string>
+		<string>Chromatic Orb</string>
+		<!-- Level 2 Spells -->
+	</AvailableSpells>
+	
 </PlayerClass>
