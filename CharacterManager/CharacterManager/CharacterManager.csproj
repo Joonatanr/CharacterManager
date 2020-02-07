@@ -120,6 +120,12 @@
     <Compile Include="SpecialAttributes\SpecialAttribute.cs" />
     <Compile Include="SpecialAttributes\SpellcastingAbility.cs" />
     <Compile Include="Spells\PlayerSpell.cs" />
+    <Compile Include="Spells\Spellcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spells\Spellcard.Designer.cs">
+      <DependentUpon>Spellcard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AlignmentChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -257,6 +263,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Spells\Spellcard.resx">
+      <DependentUpon>Spellcard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AlignmentChoice.resx">
       <DependentUpon>AlignmentChoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -312,6 +321,9 @@
   <ItemGroup>
     <Content Include="Resources\Languages.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\old-paper-texture.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PlayerAttributes.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

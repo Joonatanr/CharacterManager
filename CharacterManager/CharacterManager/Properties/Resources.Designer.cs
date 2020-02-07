@@ -19,7 +19,7 @@ namespace CharacterManager.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -143,7 +143,8 @@ namespace CharacterManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;RaceName&gt;Human&lt;/RaceName&gt;
+        ///   Looks up a localized string similar to &lt;PlayerRace&gt;
+        ///&lt;RaceName&gt;Human&lt;/RaceName&gt;
         ///	&lt;BonusAttributes&gt;
         ///		&lt;STR&gt;1&lt;/STR&gt;
         ///		&lt;DEX&gt;1&lt;/DEX&gt;
@@ -158,6 +159,16 @@ namespace CharacterManager.Properties {
         internal static string Human {
             get {
                 return ResourceManager.GetString("Human", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap old_paper_texture {
+            get {
+                object obj = ResourceManager.GetObject("old-paper-texture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
