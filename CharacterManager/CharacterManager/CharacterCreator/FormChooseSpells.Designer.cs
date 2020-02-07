@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.labelNumberOfCantripsToChoose = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,11 +71,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 9);
+            this.label1.Location = new System.Drawing.Point(22, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Cantrips";
+            this.label1.Text = "Cantrips:";
             // 
             // label2
             // 
@@ -96,12 +97,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(324, 257);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
+            // 
+            // labelNumberOfCantripsToChoose
+            // 
+            this.labelNumberOfCantripsToChoose.AutoSize = true;
+            this.labelNumberOfCantripsToChoose.Location = new System.Drawing.Point(73, 9);
+            this.labelNumberOfCantripsToChoose.Name = "labelNumberOfCantripsToChoose";
+            this.labelNumberOfCantripsToChoose.Size = new System.Drawing.Size(13, 13);
+            this.labelNumberOfCantripsToChoose.TabIndex = 7;
+            this.labelNumberOfCantripsToChoose.Text = "0";
             // 
             // FormChooseSpells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 539);
+            this.Controls.Add(this.labelNumberOfCantripsToChoose);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -124,5 +136,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label labelNumberOfCantripsToChoose;
     }
 }

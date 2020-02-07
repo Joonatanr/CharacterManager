@@ -210,6 +210,9 @@
     <Compile Include="UserControls\UserControlSkillProficiencies.Designer.cs">
       <DependentUpon>UserControlSkillProficiencies.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlSpellHandler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\UserControlSpellSlotIndicator.cs">
       <SubType>UserControl</SubType>
     </Compile>

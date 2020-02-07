@@ -17,6 +17,9 @@ namespace CharacterManager.CharacterCreator
         private List<PlayerSpell> _mySpellList = new List<PlayerSpell>();   /* Level 1 spells go here, no higher level spells right now... This is probably major TODO. */
         private PlayerClass _selectedClass;
 
+        private int NumberOfCantripsToChoose = 0;
+        private int NumberOfSpellsToChoose = 0;
+
         public FormChooseSpells()
         {
             InitializeComponent();
@@ -28,6 +31,9 @@ namespace CharacterManager.CharacterCreator
             if (_selectedClass != c)
             {
                 _selectedClass = c;
+                NumberOfCantripsToChoose = c.SpellCasting.NumberOfInitialCantrips;
+                NumberOfSpellsToChoose = c.SpellCasting.NumberOfInitialLev1Spells;
+                updateNumberOfChoices();
                 setSpellChoices(c.GetAvailableSpells());
             }
         }
@@ -56,6 +62,11 @@ namespace CharacterManager.CharacterCreator
             updateVisualControlData();
         }
 
+        private void updateNumberOfChoices()
+        {
+            labelNumberOfCantripsToChoose.Text = NumberOfCantripsToChoose.ToString();
+        }
+
         private void updateVisualControlData()
         {
             //checkedListBoxCantrips.Items.Clear();
@@ -74,6 +85,7 @@ namespace CharacterManager.CharacterCreator
             dgvCmb.Name = "Chk";
             dgvCmb.HeaderText = "Chosen";
             dgvCmb.FillWeight = 20;
+            
 
 
             DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
@@ -115,6 +127,48 @@ namespace CharacterManager.CharacterCreator
             Spellcard myCard = new Spellcard();
             myCard.setSpell(selectedSpell);
             myCard.ShowDialog();
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            /* Note to self -> datagridview is a horrible control... */
+            /* hmm.... Doing this with datagridview is quite tricky apparently, but we can manage. */
+            if(e.ColumnIndex != 1)
+            {
+                return;
+            }
+            
+            int totalNumberOfCantripsSelected = 0;
+
+            foreach(DataGridViewRow row in dataGridView1.Rows)
+            {
+                DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells["Chk"];
+                if (cell.Selected)
+                {
+                    totalNumberOfCantripsSelected++;
+                }
+            }
+
+            if (totalNumberOfCantripsSelected >= NumberOfCantripsToChoose)
+            {
+                /* Lets just try locking all the rows up for now just to see if this approach even works. */
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+
+                    DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells["Chk"];
+                    if ((bool)cell.Value == false)
+                    {
+                        row.ReadOnly = true;
+                    }
+                }
+            }
+            else
+            {
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    row.ReadOnly = false;
+                }
+            }
         }
     }
 }
