@@ -1,4 +1,5 @@
 ﻿using CharacterManager.SpecialAttributes;
+using CharacterManager.Spells;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,7 +52,7 @@ namespace CharacterManager
                 }
             }
         }
-        
+
         public String PlayerClassName;
         public int HitDie;
 
@@ -73,6 +74,17 @@ namespace CharacterManager
         public PlayerClass()
         {
             PlayerClassName = "UNKNOWN";
+        }
+
+        public List<PlayerSpell> GetAvailableSpells()
+        {
+            List<PlayerSpell> res = new List<PlayerSpell>();
+            foreach(string s in AvailableSpells)
+            {
+                res.Add(PlayerSpell.resolveFromString(s));
+            }
+
+            return res;
         }
     }
 

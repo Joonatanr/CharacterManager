@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.Spells;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,57 @@ namespace CharacterManager.CharacterCreator
 {
     public partial class FormChooseSpells : Form
     {
+        private List<PlayerSpell> _myCantripList = new List<PlayerSpell>(); /* Cantrips go here. */
+        private List<PlayerSpell> _mySpellList = new List<PlayerSpell>();   /* Level 1 spells go here, no higher level spells right now... This is probably major TODO. */
+        private PlayerClass _selectedClass;
+
         public FormChooseSpells()
         {
             InitializeComponent();
+        }
+
+        public void setSpellChoices(PlayerClass c)
+        {
+            //setSpellChoices(c.AvailableSpells);
+            if (_selectedClass != c)
+            {
+                _selectedClass = c;
+                setSpellChoices(c.GetAvailableSpells());
+            }
+        }
+
+        public void setSpellChoices(List<PlayerSpell> spells)
+        {
+            _myCantripList = new List<PlayerSpell>();
+            _mySpellList = new List<PlayerSpell>();
+            
+            foreach(PlayerSpell spell in spells)
+            {
+                if (spell.SpellLevel == 0)
+                {
+                    _myCantripList.Add(spell);
+                }
+                else if(spell.SpellLevel == 1)
+                {
+                    _mySpellList.Add(spell);
+                }
+                else
+                {
+                    /* TODO For the future. */
+                }
+            }
+
+            updateVisualControlData();
+        }
+
+        private void updateVisualControlData()
+        {
+            checkedListBoxCantrips.Items.Clear();
+            foreach(PlayerSpell s in _myCantripList)
+            {
+                checkedListBoxCantrips.Items.Add(s);
+            }
+            checkedListBoxCantrips.DisplayMember = "DisplayedName";
         }
 
         private void buttonOK_Click(object sender, EventArgs e)

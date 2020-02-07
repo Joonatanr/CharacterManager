@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace CharacterManager.Spells
 {
@@ -34,7 +35,14 @@ namespace CharacterManager.Spells
 
         public Boolean IsConcentration;
        
-
+        [XmlIgnore]
+        public string DisplayedName
+        {
+            get
+            {
+                return SpellName;
+            }
+        }
 
         public int MaterialCost = 0;
 
@@ -42,6 +50,22 @@ namespace CharacterManager.Spells
         {
             this.SpellName = "UNKNOWN";
             this.SpellLevel = 0;
+        }
+
+        public static PlayerSpell resolveFromString(string str)
+        {
+            /* Return a playerspell object from a string. */
+            PlayerSpell res = CharacterFactory.getPlayerSpellFromString(str);
+            
+            if (res == null)
+            {
+                /* This should normally not happen. */
+                res = new PlayerSpell();
+                res.SpellName = str;
+                res.SpellLevel = 1;
+            }
+
+            return res;
         }
     }
 }

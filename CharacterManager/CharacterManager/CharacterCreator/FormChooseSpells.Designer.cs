@@ -30,6 +30,7 @@
         {
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.checkedListBoxCantrips = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -52,11 +53,20 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBoxCantrips.FormattingEnabled = true;
+            this.checkedListBoxCantrips.Location = new System.Drawing.Point(25, 25);
+            this.checkedListBoxCantrips.Name = "checkedListBox1";
+            this.checkedListBoxCantrips.Size = new System.Drawing.Size(257, 244);
+            this.checkedListBoxCantrips.TabIndex = 2;
+            // 
             // FormChooseSpells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(590, 482);
+            this.Controls.Add(this.checkedListBoxCantrips);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Name = "FormChooseSpells";
@@ -69,5 +79,6 @@
 
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.CheckedListBox checkedListBoxCantrips;
     }
 }

@@ -875,6 +875,7 @@ namespace CharacterManager.CharacterCreator
                 return;
             }
 
+            myChooseSpellsForm.setSpellChoices(SelectedClass);
             if (myChooseSpellsForm.ShowDialog() == DialogResult.OK)
             {
                 /* TODO */

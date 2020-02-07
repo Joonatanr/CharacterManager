@@ -43,6 +43,12 @@ namespace CharacterManager
             return res;
         }
 
+        public static PlayerSpell getPlayerSpellFromString(string str)
+        {
+            PlayerSpell res = SpellList.Find(s => s.SpellName == str);
+            return res;
+        }
+
         public static List<String> getSubRaceList(String mainRaceName)
         {
             List<String> res = new List<string>();
