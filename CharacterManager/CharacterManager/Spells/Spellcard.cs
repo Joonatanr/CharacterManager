@@ -40,6 +40,13 @@ namespace CharacterManager.Spells
             UpdateVisualComponents();
         }
 
+        public static void ShowSpellCard(PlayerSpell spell)
+        {
+            Spellcard card = new Spellcard();
+            card.setSpell(spell);
+            card.ShowDialog();
+        }
+
         private void UpdateVisualComponents()
         {
             /* 1. Update spell name. */

@@ -143,7 +143,7 @@ namespace CharacterManager.CharacterCreator
             foreach(DataGridViewRow row in dataGridView1.Rows)
             {
                 DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells["Chk"];
-                if (cell.Selected)
+                if (cell.Value == cell.TrueValue)
                 {
                     totalNumberOfCantripsSelected++;
                 }
@@ -156,7 +156,7 @@ namespace CharacterManager.CharacterCreator
                 {
 
                     DataGridViewCheckBoxCell cell = (DataGridViewCheckBoxCell)row.Cells["Chk"];
-                    if ((bool)cell.Value == false)
+                    if (cell.Value != cell.TrueValue)
                     {
                         row.ReadOnly = true;
                     }
@@ -168,6 +168,15 @@ namespace CharacterManager.CharacterCreator
                 {
                     row.ReadOnly = false;
                 }
+            }
+        }
+
+        private void checkedListBoxLevel1Spells_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            /* This seems to work surprisingly well compared to all the datagridview madness. */
+            if (checkedListBoxLevel1Spells.SelectedItem != null)
+            {
+                Spellcard.ShowSpellCard((PlayerSpell)checkedListBoxLevel1Spells.SelectedItem);
             }
         }
     }

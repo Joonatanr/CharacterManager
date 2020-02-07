@@ -67,6 +67,7 @@
             this.checkedListBoxLevel1Spells.Name = "checkedListBoxLevel1Spells";
             this.checkedListBoxLevel1Spells.Size = new System.Drawing.Size(324, 169);
             this.checkedListBoxLevel1Spells.TabIndex = 3;
+            this.checkedListBoxLevel1Spells.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.checkedListBoxLevel1Spells_MouseDoubleClick);
             // 
             // label1
             // 
