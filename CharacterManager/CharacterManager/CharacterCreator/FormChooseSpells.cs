@@ -70,6 +70,7 @@ namespace CharacterManager.CharacterCreator
         private void updateVisualControlData()
         {
             /* TODO */
+            userControlSpellChoice1.SpellList = _myCantripList;
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
