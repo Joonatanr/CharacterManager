@@ -30,14 +30,10 @@ namespace CharacterManager.UserControls
             }
         }
 
-        public List<PlayerSpell> SpellList
+        public void setSpellList(List<PlayerSpell> spells)
         {
-            get { return mySpellList; }
-            set
-            {
-                mySpellList = value;
-                UpdateValues();
-            }
+            mySpellList = spells;
+            UpdateValues();
         }
 
         protected override void drawData(Graphics gfx, Font font)

@@ -90,7 +90,7 @@
             this.userControlSpellChoice1.IsBorder = false;
             this.userControlSpellChoice1.Location = new System.Drawing.Point(12, 25);
             this.userControlSpellChoice1.Name = "userControlSpellChoice1";
-            this.userControlSpellChoice1.Size = new System.Drawing.Size(262, 277);
+            this.userControlSpellChoice1.Size = new System.Drawing.Size(262, 228);
             this.userControlSpellChoice1.TabIndex = 8;
             // 
             // FormChooseSpells
