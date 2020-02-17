@@ -1,6 +1,4 @@
-﻿using CharacterManager.Items;
-using CharacterManager.UserControls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CharacterManager.Items;
+using CharacterManager.UserControls;
 
 namespace CharacterManager.CharacterCreator
 {
@@ -49,27 +49,27 @@ namespace CharacterManager.CharacterCreator
                 throw new Exception("Error : Failed to initialize Character Factory");
             }
 
-            List<String> mainRaceNameList = CharacterFactory.getMainRacesList();
+            List<string> mainRaceNameList = CharacterFactory.getMainRacesList();
 
-            foreach(String str in mainRaceNameList)
+            foreach (string str in mainRaceNameList)
             {
-                comboBoxMainRace.Items.Add(str);
+                this.comboBoxMainRace.Items.Add(str);
             }
 
-            List<String> ClassNameList = CharacterFactory.getClassList();
+            List<String> classNameList = CharacterFactory.getClassList();
 
-            foreach(String str in ClassNameList)
+            foreach (string str in classNameList)
             {
-                comboBoxPlayerClasses.Items.Add(str);
+                this.comboBoxPlayerClasses.Items.Add(str);
             }
 
-            this.userControlSkillProficiencies1.checkedChangedListener = proficienciesChanged;
+            this.userControlSkillProficiencies1.checkedChangedListener = this.proficienciesChanged;
         }
 
         private bool CreateCharacter(out String msg)
         {
             bool res = true;
-            msg = "";
+            msg = String.Empty;
 
             if (textBoxCharName.Text != String.Empty && SelectedClass != null && SelectedMainRace != null)
             {
@@ -681,17 +681,17 @@ namespace CharacterManager.CharacterCreator
             if (SelectedClass != null)
             {
                 int numberOfSkillsToChoose = SelectedClass.NumberOfSkillsToChoose;
-                List<string> AvailableSkillsToChoose = new List<string>();
+                List<string> availableSkillsToChoose = new List<string>();
 
                 foreach (string skill in SelectedClass.AvailableSkillProficiencies)
                 {
                     if (!racialProficiencies.Contains(skill) && !bgSkillProfs.Contains(skill))
                     {
-                        AvailableSkillsToChoose.Add(skill);
+                        availableSkillsToChoose.Add(skill);
                     }
                 }
 
-                userControlSkillProficiencies1.setUpChoiceProficiencies(numberOfSkillsToChoose, AvailableSkillsToChoose);
+                userControlSkillProficiencies1.setUpChoiceProficiencies(numberOfSkillsToChoose, availableSkillsToChoose);
             }
         }
 
@@ -733,7 +733,7 @@ namespace CharacterManager.CharacterCreator
                 String selectedItem = comboBoxMainRace.SelectedItem.ToString();
                 comboBoxSubRace.Items.Clear();
                 comboBoxSubRace.SelectedIndex = -1;
-                comboBoxSubRace.Text = "";
+                comboBoxSubRace.Text = String.Empty;
                 SelectedSubRace = null;
 
                 List<String> subRaceNames = CharacterFactory.getSubRaceList(selectedItem);

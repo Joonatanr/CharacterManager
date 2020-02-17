@@ -37,7 +37,7 @@ namespace CharacterManager
 
         public override string ToString()
         {
-            String res = "";
+            String res = String.Empty;
 
             res += this.Equipment;
             if(Quantity > 1)

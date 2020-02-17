@@ -13,6 +13,12 @@ namespace CharacterManager
     public partial class FormDamageRegister : Form
     {
         public int Damage;
+
+        public FormDamageRegister()
+        {
+            this.InitializeComponent();
+        }
+
         public String LabelString
         { 
             get 
@@ -21,17 +27,12 @@ namespace CharacterManager
             } 
             set 
             { 
-                label1.Text = value;
-                if(this.Width < label1.Width)
+                this.label1.Text = value;
+                if (this.Width < this.label1.Width)
                 {
-                    this.Width = label1.Width + label1.Left + 10;
+                    this.Width = this.label1.Width + this.label1.Left + 10;
                 }
             } 
-        }
-
-        public FormDamageRegister()
-        {
-            InitializeComponent();
         }
 
         private void buttonOK_Click(object sender, EventArgs e)

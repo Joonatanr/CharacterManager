@@ -1,11 +1,11 @@
-﻿using CharacterManager.Spells;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CharacterManager.Spells;
 
 namespace CharacterManager.UserControls
 {
@@ -90,17 +90,17 @@ namespace CharacterManager.UserControls
         public bool removeSpellFromList(PlayerSpell spell)
         {
             bool res;
-            PlayerSpell ToRemove = mySpellList.Find(s => s.SpellName == spell.SpellName);
+            PlayerSpell toRemove = mySpellList.Find(s => s.SpellName == spell.SpellName);
             
             
-            if (ToRemove == null)
+            if (toRemove == null)
             {
                 /* Spell does not exist soo nothing to remove? */
                 res = false;
             }
             else
             {
-                mySpellList.Remove(ToRemove);
+                mySpellList.Remove(toRemove);
                 UpdateValues();
                 res = true;
             }

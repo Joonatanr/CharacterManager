@@ -49,7 +49,7 @@ namespace CharacterManager
         public override int getValue(out String log)
         {
             int sum = 0;
-            String logres = "";
+            String logres = String.Empty;
 
             for (int x = 0; x < numberOfDice; x++)
             {
@@ -104,14 +104,14 @@ namespace CharacterManager
 
         public int RollValue(out String log)
         {
-            log = "";
-            if (myComponents == null)
+            log = String.Empty;
+            if (this.myComponents == null)
             {
                 log = "ERROR";
                 return 0;
             }
 
-            if (myComponents.Count == 0)
+            if (this.myComponents.Count == 0)
             {
                 log = "ERROR";
                 return 0;
@@ -130,7 +130,7 @@ namespace CharacterManager
         private List<DieRollComponent> parseText(String text)
         {
             //Lets do this simply. Pattern is something like 2d10 + 4
-            text = text.Replace(" ", "");
+            text = text.Replace(" ", string.Empty);
 
             /* Lets try a simple hack here...*/
             for (int x = 0; x < text.Length; x++)
@@ -142,7 +142,7 @@ namespace CharacterManager
                 }
             }
 
-            String[] components = text.Split('+');
+            string[] components = text.Split('+');
             List<DieRollComponent> res = new List<DieRollComponent>();
 
             foreach (String component in components)

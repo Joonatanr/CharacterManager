@@ -1,10 +1,10 @@
-﻿using CharacterManager.Items;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using CharacterManager.Items;
 
 namespace CharacterManager
 {
@@ -29,7 +29,7 @@ namespace CharacterManager
             public int AcBonus = 0; /* Current bonus to AC from abilities and magical effects etc. */
             public int AttackRollBonus = 0;
             public int AttackDamageBonus = 0;
-            public string AttackNoteString = "";
+            public string AttackNoteString = string.Empty;
 
             public CharacterBonusValues()
             {
@@ -48,7 +48,7 @@ namespace CharacterManager
             NeutralEvil,
             ChaoticGood,
             ChaoticNeutral,
-            ChaoticEvil
+            ChaoticEvil,
         }
 
         public struct PlayerSize
@@ -60,7 +60,7 @@ namespace CharacterManager
                 Medium,
                 Large,
                 Huge,
-                Gargantuan
+                Gargantuan,
             }
 
             public int height;
@@ -92,7 +92,7 @@ namespace CharacterManager
         public static readonly String[] CharacterSkillProficiencies = new String[]
         {
             "Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation",
-            "Medicine","Nature","Perception","Performance","Persuasion","Religion","Sleight Of Hand","Stealth","Survival"
+            "Medicine","Nature","Perception","Performance","Persuasion","Religion","Sleight Of Hand","Stealth","Survival",
         };
         
 

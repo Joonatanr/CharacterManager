@@ -17,7 +17,7 @@ namespace CharacterManager.Spells
         {
             CASTING_TIME_ACTION,
             CASTING_TIME_BONUS_ACTION,
-            CASTING_TIME_PERIOD
+            CASTING_TIME_PERIOD,
         }
         
         public String SpellName;

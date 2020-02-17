@@ -25,7 +25,7 @@ namespace CharacterManager.Spells
             "6th level",
             "7th level",
             "8th level",
-            "9th level"
+            "9th level",
         };
 
 
@@ -173,9 +173,9 @@ namespace CharacterManager.Spells
             get
             {
                 //This makes the control's background transparent
-                CreateParams CP = base.CreateParams;
-                CP.ExStyle |= 0x20;
-                return CP;
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x20;
+                return cp;
             }
         }
     }

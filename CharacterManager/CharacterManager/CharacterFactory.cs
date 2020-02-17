@@ -1,7 +1,4 @@
-﻿using CharacterManager.Items;
-using CharacterManager.SpecialAttributes;
-using CharacterManager.Spells;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
+using CharacterManager.Items;
+using CharacterManager.SpecialAttributes;
+using CharacterManager.Spells;
 using static CharacterManager.PlayerCharacter;
 
 namespace CharacterManager
@@ -127,15 +127,15 @@ namespace CharacterManager
 
         public static PlayerRace getSubRaceByName(String main, String sub)
         {
-            PlayerRace _mainRace = Races.Find(r => r.RaceName == main);
+            PlayerRace mainRace = Races.Find(r => r.RaceName == main);
 
-            if(_mainRace == null)
+            if(mainRace == null)
             {
                 return null;
             }
             else
             {
-                return _mainRace.SubRaces.Find(s => s.RaceName == sub);
+                return mainRace.SubRaces.Find(s => s.RaceName == sub);
             }
         }
 
@@ -328,7 +328,7 @@ namespace CharacterManager
         private static Boolean resolveCharacterData(PlayerCharacter raw)
         {
             PlayerRace mainRace;
-            PlayerRace SubRace;
+            PlayerRace subRace;
 
             //Lets check the race first.
             try
@@ -345,7 +345,7 @@ namespace CharacterManager
             {
                 try
                 {
-                    SubRace = mainRace.SubRaces.First(r => r.RaceName == raw.SubRaceName);
+                    subRace = mainRace.SubRaces.First(r => r.RaceName == raw.SubRaceName);
                 }
                 catch (Exception)
                 {
@@ -355,10 +355,10 @@ namespace CharacterManager
             }
             else
             {
-                SubRace = null;
+                subRace = null;
             }
 
-            raw.setMainAndSubrace(mainRace, SubRace);
+            raw.setMainAndSubrace(mainRace, subRace);
 
             //Lets resolve the character attribute list.
             List<PlayerAbility> resultList = new List<PlayerAbility>();

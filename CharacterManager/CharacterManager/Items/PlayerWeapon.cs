@@ -27,14 +27,14 @@ namespace CharacterManager.Items
         public enum WeaponType
         {
             Simple,
-            Martial
+            Martial,
         };
 
         public enum DamageType
         {
             Bludgeoning,
             Piercing,
-            Slashing
+            Slashing,
         };
 
         public struct WeaponDamage
@@ -63,7 +63,7 @@ namespace CharacterManager.Items
         public WeaponDamage TwoHandedDamage;
         public Boolean      IsEquipped = false;
         public Boolean IsEquippedTwoHanded = false;
-        public String AmmoType = "";
+        public String AmmoType = string.Empty;
 
         public int rollDamage(out String log)
         {

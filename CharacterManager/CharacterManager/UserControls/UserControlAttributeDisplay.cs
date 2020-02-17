@@ -104,8 +104,8 @@ namespace CharacterManager
 
             int ellipseWidth = 32;
             int ellipseHeight = 24;
-            int BottomEmptyHeight = ellipseHeight / 2;
-            int mainHeight = this.Height - BottomEmptyHeight;
+            int bottomEmptyHeight = ellipseHeight / 2;
+            int mainHeight = this.Height - bottomEmptyHeight;
 
             Rectangle rect = new Rectangle(1, 1, diameter, diameter);
             gfx.FillEllipse(b, rect);
@@ -164,18 +164,16 @@ namespace CharacterManager
                 gfx.DrawLine(new Pen(Color.Black), new Point(rect.Right, rect.Bottom), new Point(rect.Right, rect.Top));
             }
 
-            //Draw internal rectangle.
+            // Draw internal rectangle.
             rect = new Rectangle(1 + (diameter / 2), 1 + (diameter / 2), this.Size.Width - (3 + diameter), mainHeight - (3 + diameter));
             gfx.FillRectangle(b, rect);
 
+            // Lets draw the circle below.
 
-
-            //Lets draw the circle below.
-
-            int EllipseLeft = (this.Width / 2) - (ellipseWidth / 2);
-            int EllipseTop = this.Height - (ellipseHeight + 1);
+            int ellipseLeft = (this.Width / 2) - (ellipseWidth / 2);
+            int ellipseTop = this.Height - (ellipseHeight + 1);
         
-            EllipseRectangle = new RectangleF(new PointF(EllipseLeft, EllipseTop),new SizeF(ellipseWidth, ellipseHeight ));
+            this.EllipseRectangle = new RectangleF(new PointF(ellipseLeft, ellipseTop),new SizeF(ellipseWidth, ellipseHeight ));
             gfx.FillEllipse(new SolidBrush(Color.White), EllipseRectangle);
             gfx.DrawEllipse(new Pen(Color.Black), EllipseRectangle);
         }

@@ -14,7 +14,7 @@ namespace CharacterManager.Items
             TYPE_GENERIC,
             TYPE_ARTISAN,
             TYPE_GAMING,
-            TYPE_MUSICAL
+            TYPE_MUSICAL,
         }
 
         public PlayerToolType ToolType = PlayerToolType.TYPE_GENERIC;

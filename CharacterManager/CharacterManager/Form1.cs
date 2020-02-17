@@ -86,12 +86,12 @@ namespace CharacterManager
                 textBoxPerception.Text = activeCharacter.PassivePerception.ToString();
 
                 //6. Update Player alignment.
-                String AlignmentString = activeCharacter.Alignment.ToString();
-                for(int x = 1; x < AlignmentString.Length; x++)
+                String alignmentString = activeCharacter.Alignment.ToString();
+                for(int x = 1; x < alignmentString.Length; x++)
                 {
-                    if (char.IsUpper(AlignmentString[x]))
+                    if (char.IsUpper(alignmentString[x]))
                     {
-                        AlignmentString = AlignmentString.Insert(x, " ");
+                        alignmentString = alignmentString.Insert(x, " ");
                         break;
                     }
                 }
@@ -100,7 +100,7 @@ namespace CharacterManager
                 UpdateHitPoints();
 
                 //8. Update character alignment.
-                textBoxAlignment.Text = AlignmentString;
+                textBoxAlignment.Text = alignmentString;
 
                 //9. Update character abilities.
                 UpdateCharacterAbilities();

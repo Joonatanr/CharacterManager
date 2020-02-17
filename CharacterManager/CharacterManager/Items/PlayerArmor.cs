@@ -13,7 +13,7 @@ namespace CharacterManager.Items
         {
             Light,
             Medium,
-            Heavy
+            Heavy,
         }
 
         public int ArmorClass;
