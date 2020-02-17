@@ -30,13 +30,10 @@
         {
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.checkedListBoxLevel1Spells = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelNumberOfCantripsToChoose = new System.Windows.Forms.Label();
             this.userControlSpellChoice1 = new CharacterManager.UserControls.UserControlSpellChoice();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -61,15 +58,6 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // checkedListBoxLevel1Spells
-            // 
-            this.checkedListBoxLevel1Spells.FormattingEnabled = true;
-            this.checkedListBoxLevel1Spells.Location = new System.Drawing.Point(25, 321);
-            this.checkedListBoxLevel1Spells.Name = "checkedListBoxLevel1Spells";
-            this.checkedListBoxLevel1Spells.Size = new System.Drawing.Size(324, 169);
-            this.checkedListBoxLevel1Spells.TabIndex = 3;
-            this.checkedListBoxLevel1Spells.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.checkedListBoxLevel1Spells_MouseDoubleClick);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -88,19 +76,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Level1 Spells";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(324, 257);
-            this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
-            // 
             // labelNumberOfCantripsToChoose
             // 
             this.labelNumberOfCantripsToChoose.AutoSize = true;
@@ -113,9 +88,9 @@
             // userControlSpellChoice1
             // 
             this.userControlSpellChoice1.IsBorder = false;
-            this.userControlSpellChoice1.Location = new System.Drawing.Point(365, 25);
+            this.userControlSpellChoice1.Location = new System.Drawing.Point(12, 25);
             this.userControlSpellChoice1.Name = "userControlSpellChoice1";
-            this.userControlSpellChoice1.Size = new System.Drawing.Size(253, 257);
+            this.userControlSpellChoice1.Size = new System.Drawing.Size(262, 277);
             this.userControlSpellChoice1.TabIndex = 8;
             // 
             // FormChooseSpells
@@ -125,15 +100,12 @@
             this.ClientSize = new System.Drawing.Size(663, 539);
             this.Controls.Add(this.userControlSpellChoice1);
             this.Controls.Add(this.labelNumberOfCantripsToChoose);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkedListBoxLevel1Spells);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Name = "FormChooseSpells";
             this.Text = "FormChooseSpells";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,10 +115,8 @@
 
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.CheckedListBox checkedListBoxLevel1Spells;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelNumberOfCantripsToChoose;
         private UserControls.UserControlSpellChoice userControlSpellChoice1;
     }
