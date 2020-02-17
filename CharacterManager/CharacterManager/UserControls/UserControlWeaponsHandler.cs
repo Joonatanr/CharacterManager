@@ -173,7 +173,7 @@ namespace CharacterManager.UserControls
 
         protected override void drawData(Graphics gfx, Font font)
         {
-            int y = -1;
+            int y = 0;
 
             //Lets draw a descriptive text.
             drawTextOnLine(gfx, "Weapons:", y, FontStyle.Bold);

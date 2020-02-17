@@ -170,7 +170,7 @@ namespace CharacterManager.UserControls
 
         protected override void drawData(Graphics gfx, Font font)
         {
-            int y = 0;
+            int y = 1;
             
             //Lets draw a descriptive text.
             gfx.DrawString("Items:", font, new SolidBrush(Color.Black), new Point(1, 1));

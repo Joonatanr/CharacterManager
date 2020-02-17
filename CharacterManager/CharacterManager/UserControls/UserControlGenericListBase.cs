@@ -95,14 +95,33 @@ namespace CharacterManager.UserControls
 
         protected void drawTextOnLine(Graphics gfx, String text, int lineNum)
         {
-            drawTextOnLine(gfx, text, lineNum, FontStyle.Regular);
+            Font f = new Font("Arial", 12, FontStyle.Regular);
+            drawTextOnLine(gfx, text, lineNum, f);
         }
 
         protected void drawTextOnLine(Graphics gfx, String text, int lineNum, FontStyle style)
         {
             Font f = new Font("Arial", 12, style);
-            Point sPoint = new Point(1, (lineInterval * (lineNum + 1)) + 3);
+            Point sPoint = new Point(1, (lineInterval * (lineNum)) + 3);
             gfx.DrawString(text, f, new SolidBrush(Color.Black), sPoint);
+
+            maxLine = Math.Max(maxLine, lineNum + 2);
+        }
+
+        protected void drawTextOnLine(Graphics gfx, String text, int lineNum, Font font)
+        {
+            int margin;
+            if (font.Height > (lineInterval - 3))
+            {
+                margin = 1;
+            }
+            else
+            {
+                margin = 3;
+            }
+            
+            Point sPoint = new Point(1, (lineInterval * (lineNum)) + margin);
+            gfx.DrawString(text, font, new SolidBrush(Color.Black), sPoint);
 
             maxLine = Math.Max(maxLine, lineNum + 2);
         }

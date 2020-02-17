@@ -216,9 +216,10 @@ namespace CharacterManager.UserControls
         protected override void drawData(Graphics gfx, Font font)
         {
             //Lets draw a descriptive text.
-            gfx.DrawString("Abilities:", font, new SolidBrush(Color.Black), new Point(1, 1));
+            //gfx.DrawString("Abilities:", font, new SolidBrush(Color.Black), new Point(1, 1));
+            drawTextOnLine(gfx, "Abilities:", 0, font);
 
-            int y = 1;
+            int y = 2;
             if (listOfAttributes != null)
             {
                 foreach (PlayerAbility attrib in listOfAttributes)
