@@ -71,6 +71,7 @@ namespace CharacterManager.CharacterCreator
         {
             /* TODO */
             userControlSpellChoice1.setSpellList(_myCantripList);
+            userControlSpellChoice2.setSpellList(_mySpellList);
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -83,6 +84,21 @@ namespace CharacterManager.CharacterCreator
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void userControlSpellChoice1_SpellSelectionChanged(PlayerSpell Spell, bool isChosen)
+        {
+            /* TODO : This is a placeholder. */
+            if (isChosen)
+            {
+                NumberOfCantripsToChoose--;
+            }
+            else
+            {
+                NumberOfCantripsToChoose++;
+            }
+
+            labelNumberOfCantripsToChoose.Text = NumberOfCantripsToChoose.ToString();
         }
     }
 }

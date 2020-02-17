@@ -126,6 +126,15 @@ namespace CharacterManager.UserControls
             maxLine = Math.Max(maxLine, lineNum + 2);
         }
 
+        protected void AddControlOnLine(Control c, int lineNum, int xOffset)
+        {
+            int y = lineInterval;
+            y += lineNum * lineInterval;
+
+            c.Location = new Point((this.Width - (3 + c.Width)) - xOffset, y + 3);
+            this.Controls.Add(c);
+        }
+
         protected void AddSpellSlotOnLine(UserControlSpellSlotIndicator slot, int lineNum, int xloc)
         {
             int y = lineInterval;
