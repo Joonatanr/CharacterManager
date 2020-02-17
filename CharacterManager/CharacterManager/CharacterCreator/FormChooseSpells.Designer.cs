@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labelNumberOfCantripsToChoose = new System.Windows.Forms.Label();
+            this.userControlSpellChoice1 = new CharacterManager.UserControls.UserControlSpellChoice();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,11 +110,20 @@
             this.labelNumberOfCantripsToChoose.TabIndex = 7;
             this.labelNumberOfCantripsToChoose.Text = "0";
             // 
+            // userControlSpellChoice1
+            // 
+            this.userControlSpellChoice1.IsBorder = false;
+            this.userControlSpellChoice1.Location = new System.Drawing.Point(365, 25);
+            this.userControlSpellChoice1.Name = "userControlSpellChoice1";
+            this.userControlSpellChoice1.Size = new System.Drawing.Size(253, 257);
+            this.userControlSpellChoice1.TabIndex = 8;
+            // 
             // FormChooseSpells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 539);
+            this.Controls.Add(this.userControlSpellChoice1);
             this.Controls.Add(this.labelNumberOfCantripsToChoose);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -138,5 +148,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelNumberOfCantripsToChoose;
+        private UserControls.UserControlSpellChoice userControlSpellChoice1;
     }
 }
