@@ -76,6 +76,163 @@ against poison damage.
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
+<!-- Dragonborn attributes abilities -->
+<!-- Black Dragon -->
+<!-- Copper Dragon -->
+	<PlayerAbility>
+		<AttributeName>Acid Breath</AttributeName>
+		<Description>You can use your action to exhale
+acid. Each creature in a 5 by 30ft line must make DEX saving throw. The DC for this saving throw equals 8 +
+your Constitution modifier + your proficiency bonus. A
+creature takes 2d6 damage on a failed save, and half
+as much damage on a successful one. The damage
+increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+at 16th level. After you use your breath weapon, you can’t use it
+again until you complete a short or long rest.
+		</Description>
+		<MaximumCharges>1</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Acid Resistance</AttributeName>
+		<Description>Your draconic ancestry gives you resistance to acid damage.
+		</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	<!-- Blue Dragon -->
+	<!-- Bronze Dragon -->
+	
+	<PlayerAbility>
+		<AttributeName>Lightning Breath</AttributeName>
+		<Description>You can use your action to exhale
+lightning. Each creature in a 5 by 30ft line must make a DEX saving throw. 
+The DC for this saving throw equals 8 +
+your Constitution modifier + your proficiency bonus. A
+creature takes 2d6 damage on a failed save, and half
+as much damage on a successful one. The damage
+increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+at 16th level. After you use your breath weapon, you can’t use it
+again until you complete a short or long rest.
+		</Description>
+		<MaximumCharges>1</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Lightning Resistance</AttributeName>
+		<Description>Your draconic ancestry gives you resistance to lightning damage.
+		</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	<!-- Brass Dragon -->
+	<PlayerAbility>
+		<AttributeName>Fire Breath(Brass)</AttributeName>
+		<Description>You can use your action to exhale
+fire. Each creature in a 5 by 30ft line must make a DEX saving throw. 
+The DC for this saving throw equals 8 +
+your Constitution modifier + your proficiency bonus. A
+creature takes 2d6 damage on a failed save, and half
+as much damage on a successful one. The damage
+increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+at 16th level. After you use your breath weapon, you can’t use it
+again until you complete a short or long rest.
+		</Description>
+		<MaximumCharges>1</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Fire Resistance</AttributeName>
+		<Description>Your draconic ancestry gives you resistance to fire damage.
+		</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>	
+	
+	<!-- Gold Dragon -->
+	
+	<PlayerAbility>
+		<AttributeName>Fire Breath(Gold)</AttributeName>
+		<Description>You can use your acGon to exhale
+fire. Each creature in a 15ft cone must make a DEX saving throw. 
+The DC for this saving throw equals 8 +
+your Constitution modifier + your proficiency bonus. A
+creature takes 2d6 damage on a failed save, and half
+as much damage on a successful one. The damage
+increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+at 16th level. After you use your breath weapon, you can’t use it
+again until you complete a short or long rest.
+		</Description>
+		<MaximumCharges>1</MaximumCharges>
+	</PlayerAbility>
+	
+	<!-- Green Dragon -->
+	
+	<PlayerAbility>
+		<AttributeName>Poison Breath</AttributeName>
+		<Description>You can use your action to exhale
+poison. Each creature in a 15ft cone must make a CON saving throw. 
+The DC for this saving throw equals 8 +
+your Constitution modifier + your proficiency bonus. A
+creature takes 2d6 damage on a failed save, and half
+as much damage on a successful one. The damage
+increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+at 16th level. After you use your breath weapon, you can’t use it
+again until you complete a short or long rest.
+		</Description>
+		<MaximumCharges>1</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Poison Resistance</AttributeName>
+		<Description>Your draconic ancestry gives you resistance to poison damage.
+		</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>	
+	
+	<!-- Red Dragon -->
+	
+	<PlayerAbility>
+		<AttributeName>Fire Breath(Red)</AttributeName>
+		<Description>You can use your action to exhale
+fire. Each creature in a 15ft cone must make a DEX saving throw. 
+The DC for this saving throw equals 8 +
+your Constitution modifier + your proficiency bonus. A
+creature takes 2d6 damage on a failed save, and half
+as much damage on a successful one. The damage
+increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+at 16th level. After you use your breath weapon, you can’t use it
+again until you complete a short or long rest.
+		</Description>
+		<MaximumCharges>1</MaximumCharges>
+	</PlayerAbility>
+	
+	<!-- Silver Dragon -->
+	
+	<PlayerAbility>
+		<AttributeName>Cold Breath</AttributeName>
+		<Description>You can use your action to exhale
+cold air. Each creature in a 15ft cone must make a CON saving throw. 
+The DC for this saving throw equals 8 +
+your Constitution modifier + your proficiency bonus. A
+creature takes 2d6 damage on a failed save, and half
+as much damage on a successful one. The damage
+increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6
+at 16th level. After you use your breath weapon, you can’t use it
+again until you complete a short or long rest.
+		</Description>
+		<MaximumCharges>1</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Cold Resistance</AttributeName>
+		<Description>Your draconic ancestry gives you resistance to cold damage.
+		</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	
+	<!-- White Dragon -->
+	
 <!-- Fighter class abilities -->
 	<PlayerAbility>
 		<AttributeName>Archery Fighting Style</AttributeName>

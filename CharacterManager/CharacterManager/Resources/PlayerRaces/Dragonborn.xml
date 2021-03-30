@@ -1,0 +1,188 @@
+<PlayerRace>
+    <RaceName>Dragonborn</RaceName>
+    <BonusAttributes>
+      <STR>2</STR>
+      <DEX>0</DEX>
+      <INT>0</INT>
+      <CHA>1</CHA>
+      <CON>0</CON>
+      <WIS>0</WIS>
+    </BonusAttributes>
+    <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+	
+	<MaximumAge>80</MaximumAge>
+	<Size>Medium</Size>
+	<BaseSpeed>30</BaseSpeed>
+	
+    <SubRaces>
+       <PlayerRace>
+		<RaceName>Black Dragon Ancestry</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		<PlayerAttributes>
+			<string>Acid Breath</string>
+			<string>Acid Resistance</string>
+		</PlayerAttributes>
+	   </PlayerRace>
+	   
+       <PlayerRace>
+		<RaceName>Blue Dragon Ancestry</RaceName>
+		<BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+        </BonusAttributes>
+        <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		<PlayerAttributes>
+			<string>Lightning Breath</string>
+			<string>Lightning Resistance</string>
+		</PlayerAttributes>
+       </PlayerRace>
+	   
+	<PlayerRace>
+		<RaceName>Brass Dragon Ancestry</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <PlayerAttributes>
+			<string>Fire Breath(Brass)</string>
+			<string>Fire Resistance</string>
+		</PlayerAttributes>
+	</PlayerRace>
+	   
+	<PlayerRace>
+       <RaceName>Bronze Dragon Ancestry</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <PlayerAttributes>
+			<string>Lightning Breath</string>
+			<string>Lightning Resistance</string>
+	   </PlayerAttributes>
+       </PlayerRace>
+	   
+	  <PlayerRace>
+       <RaceName>Copper Dragon Ancestry</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <PlayerAttributes>
+			<string>Acid Breath</string>
+			<string>Acid Resistance</string>
+	   </PlayerAttributes>
+       </PlayerRace>
+	   
+	   <PlayerRace>
+		<RaceName>Gold Dragon Ancestry</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <PlayerAttributes>
+			<string>Fire Breath(Gold)</string>
+			<string>Fire Resistance</string>
+		</PlayerAttributes>
+       </PlayerRace>
+	   
+	   <PlayerRace>
+		<RaceName>Green Dragon Ancestry</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <PlayerAttributes>
+			<string>Poison Breath</string>
+			<string>Poison Resistance</string>
+		</PlayerAttributes>
+       </PlayerRace>
+	   
+	   <PlayerRace>
+		<RaceName>Red Dragon Ancestry</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <PlayerAttributes>
+			<string>Fire Breath(Red)</string>
+			<string>Fire Resistance</string>
+		</PlayerAttributes>
+       </PlayerRace>
+	   
+	   <PlayerRace>
+		<RaceName>Silver Dragon Ancestry</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <PlayerAttributes>
+			<string>Cold Breath</string>
+			<string>Cold Resistance</string>
+		</PlayerAttributes>
+       </PlayerRace>
+	   
+	   <PlayerRace>
+		<RaceName>Cold Dragon Ancestry</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <PlayerAttributes>
+			<string>Cold Breath</string>
+			<string>Cold Resistance</string>
+		</PlayerAttributes>
+       </PlayerRace>
+    </SubRaces>
+ </PlayerRace>
