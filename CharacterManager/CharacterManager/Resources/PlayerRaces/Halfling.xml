@@ -1,0 +1,55 @@
+<PlayerRace>
+<RaceName>Halfling</RaceName>
+	<BonusAttributes>
+		<STR>0</STR>
+		<DEX>2</DEX>
+		<INT>0</INT>
+		<CHA>0</CHA>
+		<CON>0</CON>
+		<WIS>0</WIS>
+    </BonusAttributes>
+	<NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+	<MaximumAge>150</MaximumAge>
+	<Size>Small</Size>
+	<BaseSpeed>25</BaseSpeed>
+		<PlayerAttributes>
+		<string>Lucky</string>
+		<string>Brave</string>
+		<string>Halfling Nimbleness</string>
+	</PlayerAttributes>
+	
+	<SubRaces>
+       <PlayerRace>
+       <RaceName>Lightfoot</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>1</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+       <PlayerAttributes>
+			<string>Naturally Stealthy</string>
+	   </PlayerAttributes>
+	   </PlayerRace>
+       <PlayerRace>
+       <RaceName>Stout</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>1</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+       </PlayerRace>
+	   
+	   <PlayerAttributes>
+			<string>Stout Resilience</string>
+	   </PlayerAttributes>
+    </SubRaces>
+	
+</PlayerRace>
