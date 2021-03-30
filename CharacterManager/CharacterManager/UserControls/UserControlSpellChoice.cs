@@ -108,6 +108,17 @@ namespace CharacterManager.UserControls
             return res;
         }
 
+        public void setSelectionsLocked(Boolean isLock)
+        {
+            foreach (SpellHandleControl control in myControlList)
+            {
+                if (!control.chkBox.Checked)
+                {
+                    control.chkBox.Enabled = !isLock;
+                }   
+            }
+        }
+
 
         protected override void drawData(Graphics gfx, Font font)
         {

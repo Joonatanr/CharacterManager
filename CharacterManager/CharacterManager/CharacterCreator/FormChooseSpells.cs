@@ -92,10 +92,21 @@ namespace CharacterManager.CharacterCreator
             if (isChosen)
             {
                 NumberOfCantripsToChoose--;
+
+                if (NumberOfCantripsToChoose == 0)
+                {
+                    //We lock the ability to choose more cantrips...
+                    userControlSpellChoice1.setSelectionsLocked(true);
+                }
             }
             else
             {
                 NumberOfCantripsToChoose++;
+                if (NumberOfCantripsToChoose == 1)
+                {
+                    //We unlock the ability to choose more cantrips.
+                    userControlSpellChoice1.setSelectionsLocked(false);
+                }
             }
 
             labelNumberOfCantripsToChoose.Text = NumberOfCantripsToChoose.ToString();
