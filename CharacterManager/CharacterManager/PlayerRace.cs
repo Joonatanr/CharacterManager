@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.Spells;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,7 @@ namespace CharacterManager
         public List<String> WeaponProficiencies = new List<String>();
         public List<String> SkillProficiencies = new List<String>();
         public List<String> ToolProficiencies = new List<String>();
-
+        public List<String> Spells = new List<String>(); //These are spells and cantrips that are provided solely by the player race.
         public List<String> PlayerAttributes = new List<String>();
 
         public List<PlayerRace> SubRaces = new List<PlayerRace>();
@@ -31,6 +32,8 @@ namespace CharacterManager
         [XmlIgnore]
         private List<PlayerAbility> PlayerAttributeReferences = new List<PlayerAbility>(); /* This contains a list of references that need to be resolved. */
 
+        [XmlIgnore]
+        private List<PlayerSpell> PlayerSpellReferences = new List<PlayerSpell>(); /* This contains a list of spell references that need to be resolved. */
 
         private bool isInitialized = false;
 
@@ -53,7 +56,16 @@ namespace CharacterManager
             return PlayerAttributeReferences;
         }
 
-        public void Initialize(List<PlayerAbility> listOfAvailableAttributes)
+        public List<PlayerSpell> getPlayerSpells()
+        {
+            if (!isInitialized)
+            {
+                throw new Exception("Error : Player spell list has not been initialized yet");
+            }
+            return PlayerSpellReferences;
+        }
+
+        public void Initialize(List<PlayerAbility> listOfAvailableAttributes, List<PlayerSpell> listOfAvailableSpells)
         {
             isInitialized = true;
 
@@ -70,9 +82,22 @@ namespace CharacterManager
                 }
             }
 
+            foreach(String spellStr in Spells)
+            {
+                PlayerSpell pSpell = listOfAvailableSpells.Find(s => s.SpellName == spellStr);
+                if (pSpell != null)
+                {
+                    PlayerSpellReferences.Add(pSpell);
+                }
+                else
+                {
+                    throw new Exception("Error unknown spell : " + spellStr);
+                }
+            }
+
             foreach (PlayerRace sub in SubRaces)
             {
-                sub.Initialize(listOfAvailableAttributes);
+                sub.Initialize(listOfAvailableAttributes, listOfAvailableSpells);
             }
         }
     }

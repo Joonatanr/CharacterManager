@@ -102,7 +102,7 @@ namespace CharacterManager
                 {
                     try
                     {
-                        race.Initialize(AttributesList);
+                        race.Initialize(AttributesList, SpellList);
                     }
                     catch (Exception ex)
                     {

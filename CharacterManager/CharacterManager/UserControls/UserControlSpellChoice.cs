@@ -15,16 +15,35 @@ namespace CharacterManager.UserControls
         {
             public PlayerSpell Spell;
             public CustomButton InfoBtn;
+            
             private CheckBox _chkBox;
 
             public delegate void SpellCheckedChangedListener(PlayerSpell spell, bool isChecked);
             public event SpellCheckedChangedListener SpellCheckedChanged;
 
-            public CheckBox chkBox { get { return _chkBox; } set { _chkBox = value; _chkBox.CheckedChanged += _chkBox_CheckedChanged; } }
+            public Boolean isChecked { get { return _chkBox.Checked; } }
+            public Boolean isEnabled { get { return _chkBox.Enabled; } set { if (!IsLocked) { _chkBox.Enabled = value; } } }
+            public Boolean IsLocked { get { return _isLocked;  } set { _isLocked = value; if (_isLocked) { _chkBox.Checked = true; _chkBox.Enabled = false; } } }
+
+            private Boolean _isLocked = false; //If this is true, then this Spell is always chosen as it derives from race or subrace etc...
 
             private void _chkBox_CheckedChanged(object sender, EventArgs e)
             {
                 SpellCheckedChanged?.Invoke(Spell, _chkBox.Checked);
+            }
+
+            public void setCheckBox(CheckBox box)
+            {
+                _chkBox = box;
+                if (IsLocked)
+                {
+                    _chkBox.Checked = true;
+                    _chkBox.Enabled = false;
+                }
+                else
+                {
+                    _chkBox.CheckedChanged += new EventHandler(_chkBox_CheckedChanged);
+                }
             }
 
             public SpellHandleControl(PlayerSpell s, CustomButton btn)
@@ -43,6 +62,7 @@ namespace CharacterManager.UserControls
         }
 
         private List<PlayerSpell> mySpellList = new List<PlayerSpell>();
+        private List<PlayerSpell> myLockedSpellList = new List<PlayerSpell>(); /* These are spells that are already chosen because they come from racial abilities etc... */
         private List<SpellHandleControl> myControlList = new List<SpellHandleControl>();
 
         /* Properties */
@@ -66,25 +86,12 @@ namespace CharacterManager.UserControls
             UpdateValues();
         }
 
-        /* TODO : Use this. */
-        public bool addSpellToList(PlayerSpell spell)
+        
+        /* We add a fixed spell to the list that is always selected. */
+        public void setFixedSpellListList(List<PlayerSpell> spellList)
         {
-            bool res;
-
-            if (mySpellList.Find(s => s.SpellName == spell.SpellName) == null)
-            {
-                /* Spell does not exist already. */
-                mySpellList.Add(spell);
-                UpdateValues();
-                res = true;
-            }
-            else
-            {
-                /* Spell exists, cannot add twice. */
-                res = false;
-            }
-
-            return res;
+            myLockedSpellList = spellList;
+            UpdateValues();
         }
 
         public bool removeSpellFromList(PlayerSpell spell)
@@ -112,9 +119,9 @@ namespace CharacterManager.UserControls
         {
             foreach (SpellHandleControl control in myControlList)
             {
-                if (!control.chkBox.Checked)
+                if (!control.isChecked)
                 {
-                    control.chkBox.Enabled = !isLock;
+                    control.isEnabled = !isLock;
                 }   
             }
         }
@@ -177,7 +184,10 @@ namespace CharacterManager.UserControls
 
             int y = 0;
 
-            foreach (PlayerSpell s in mySpellList)
+            List<PlayerSpell> combinedSpellList = mySpellList.Union(myLockedSpellList).ToList(); /* TODO : Use this list. */
+
+
+            foreach (PlayerSpell s in combinedSpellList)
             {
                 CustomButton iBtn = new CustomButton();
                 iBtn.Size = new Size(40, 18);
@@ -191,8 +201,18 @@ namespace CharacterManager.UserControls
                 {
                     CheckBox myCheckBox = new CheckBox();
                     myCheckBox.Size = new Size(16, 16);
-                    ctrl.chkBox = myCheckBox;
-                    ctrl.SpellCheckedChanged += Ctrl_SpellCheckedChanged;
+                    ctrl.setCheckBox(myCheckBox);
+                    
+                    if (myLockedSpellList.Find(lockedSpell => lockedSpell.SpellName == s.SpellName) != null)
+                    {
+                        //Spell is already learned because of racial attributes or otherwise.
+                        ctrl.IsLocked = true;
+                    }
+                    else
+                    {
+                        //We only add the external listener if this control is going to be modified by the user.
+                        ctrl.SpellCheckedChanged += Ctrl_SpellCheckedChanged;
+                    }
                     AddControlOnLine(myCheckBox, y, 3 + iBtn.Width);
                 }
 

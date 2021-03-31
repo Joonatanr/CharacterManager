@@ -15,6 +15,10 @@ namespace CharacterManager.CharacterCreator
     {
         private List<PlayerSpell> _myCantripList = new List<PlayerSpell>(); /* Cantrips go here. */
         private List<PlayerSpell> _mySpellList = new List<PlayerSpell>();   /* Level 1 spells go here, no higher level spells right now... This is probably major TODO. */
+
+        private List<PlayerSpell> _myLockedCantripList = new List<PlayerSpell>(); //These are cantrips that are derived from race or background etc.
+        private List<PlayerSpell> _myLockedSpellList = new List<PlayerSpell>();
+        
         private PlayerClass _selectedClass;
 
         private int NumberOfCantripsToChoose = 0;
@@ -60,6 +64,32 @@ namespace CharacterManager.CharacterCreator
             }
 
             updateVisualControlData();
+        }
+
+
+        public void setFixedSpells(List<PlayerSpell> spells)
+        {
+            _myLockedCantripList = new List<PlayerSpell>();
+            _myLockedSpellList = new List<PlayerSpell>();
+
+            foreach (PlayerSpell spell in spells)
+            {
+                if (spell.SpellLevel == 0)
+                {
+                    _myLockedCantripList.Add(spell);
+                }
+                else if (spell.SpellLevel == 1)
+                {
+                    _myLockedSpellList.Add(spell);
+                }
+                else
+                {
+                    /* TODO For the future. */
+                }
+            }
+
+            userControlSpellChoice1.setFixedSpellListList(_myLockedCantripList);
+            userControlSpellChoice2.setFixedSpellListList(_myLockedSpellList);
         }
 
         private void updateNumberOfChoices()

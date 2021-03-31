@@ -55,6 +55,9 @@
 				<string>longbow</string>
 			</WeaponProficiencies>
 			<BaseSpeed>35</BaseSpeed>
+			<PlayerAttributes>
+				<string>Mask of the Wild</string>
+			</PlayerAttributes>
 		</PlayerRace>
 		<PlayerRace>
 			<RaceName>Drow</RaceName>
@@ -71,6 +74,14 @@
 				<string>shortsword</string>
 				<string>light crossbow</string>
 			</WeaponProficiencies>
+			<PlayerAttributes>
+				<string>Superior Darkvision</string>
+				<string>Sunlight Sensitivity</string>
+				<string>Drow Magic</string>
+			</PlayerAttributes>
+			<Spells>
+				<string>Dancing Lights</string>
+			</Spells>
 		</PlayerRace>
 	</SubRaces>
  </PlayerRace>

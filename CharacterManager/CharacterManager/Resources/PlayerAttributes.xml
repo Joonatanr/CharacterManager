@@ -24,6 +24,8 @@
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
+<!-- Elves -->
+	
 	<PlayerAbility>
 		<AttributeName>Fey Ancestry</AttributeName>
 		<Description>You have advantage on saving throws against being charmed, and magic can’t put you to sleep.</Description>
@@ -36,6 +38,44 @@
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<AttributeName>Mask of the Wild</AttributeName>
+		<Description>You can attempt to hide even when 
+you are only lightly obscured by foliage, heavy rain, 
+falling snow, mist, and other natural phenomena.
+</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Superior Darkvision</AttributeName>
+		<Description>Your darkvision has a 
+radius of 120 feet.</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+		
+	<PlayerAbility>
+		<AttributeName>Sunlight Sensitivity</AttributeName>
+		<Description>You have disadvantage on attack 
+rolls and on Wisdom (Perception) checks that rely on 
+sight when you, the target of your attack, or whatever 
+you are trying to perceive is in direct sunlight.
+</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+		
+	<PlayerAbility>
+		<AttributeName>Drow Magic</AttributeName>
+		<Description>You know the dancing lights cantrip. 
+When you reach 3rd level, you can cast the faerie fire
+spell once per day. When you reach 5th level, you can 
+also cast the darkness spell once per day. Charisma is 
+your spellcasting ability for these spells.
+		</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+<!-- Halflings -->
 	<PlayerAbility>
 		<AttributeName>Lucky</AttributeName>
 		<Description>When you roll a 1 on an attack roll, ability check, or saving throw, 

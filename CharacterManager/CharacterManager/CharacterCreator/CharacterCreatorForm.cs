@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CharacterManager.Items;
+using CharacterManager.Spells;
 using CharacterManager.UserControls;
 
 namespace CharacterManager.CharacterCreator
@@ -685,6 +686,23 @@ namespace CharacterManager.CharacterCreator
             return result;
         }
 
+        private void updateFixedSpells()
+        {
+            List<PlayerSpell> fixedPlayerSpells = new List<PlayerSpell>();
+            
+            if (SelectedMainRace != null)
+            {
+                fixedPlayerSpells = fixedPlayerSpells.Union(SelectedMainRace.getPlayerSpells()).ToList();
+            }
+
+            if (SelectedSubRace != null)
+            {
+                fixedPlayerSpells = fixedPlayerSpells.Union(SelectedSubRace.getPlayerSpells()).ToList();
+            }
+
+            myChooseSpellsForm.setFixedSpells(fixedPlayerSpells);
+        }
+
         private void updateSkillProficiencies()
         {
             //1. Reset the controls
@@ -827,6 +845,7 @@ namespace CharacterManager.CharacterCreator
                 UpdateToolProficiencyChoices();
                 updateCustomRacialBonusAttributes();
                 updateSkillProficiencies();
+                updateFixedSpells();
                 updateAllDisplayedData();
             }
         }
@@ -841,6 +860,7 @@ namespace CharacterManager.CharacterCreator
                 {
                     SelectedSubRace = CharacterFactory.getSubRaceByName(mainRace, selectedItem);
                     UpdateToolProficiencyChoices();
+                    updateFixedSpells();
                     updateAllDisplayedData();
                 }
             }
