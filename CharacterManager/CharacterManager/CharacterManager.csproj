@@ -367,6 +367,9 @@
     <Content Include="Resources\PlayerRaces\Half-Elf.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\PlayerRaces\Half-Orc.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PlayerRaces\Halfling.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

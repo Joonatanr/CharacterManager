@@ -1,0 +1,24 @@
+<PlayerRace>
+    <RaceName>Half-Orc</RaceName>
+    <BonusAttributes>
+      <STR>2</STR>
+      <DEX>0</DEX>
+      <INT>0</INT>
+      <CHA>0</CHA>
+      <CON>1</CON>
+      <WIS>0</WIS>
+    </BonusAttributes>
+    <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+	<NumberOfGenericSkillProficiencies>0</NumberOfGenericSkillProficiencies>
+	<MaximumAge>75</MaximumAge>
+	<Size>Medium</Size>
+	<BaseSpeed>30</BaseSpeed>
+	<PlayerAttributes>
+		<string>Darkvision</string>
+		<string>Menacing</string>
+		<string>Relentless Endurance</string>
+	</PlayerAttributes>
+	<SkillProficiencies>
+		<string>Intimidation</string>
+	</SkillProficiencies>
+ </PlayerRace>

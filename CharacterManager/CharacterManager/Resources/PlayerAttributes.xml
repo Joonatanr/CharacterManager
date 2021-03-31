@@ -301,6 +301,29 @@ when it is closed.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<AttributeName>Menacing</AttributeName>
+		<Description>You gain proficiency in the Intimidation skill.</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Relentless Endurance</AttributeName>
+		<Description>When you are reduced to 
+0 hit points but not killed outright, you can drop to 1 hit 
+point instead. You can’t use this feature again until you 
+finish a long rest.</Description>
+		<MaximumCharges>1</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Savage Attacks</AttributeName>
+		<Description>When you score a critical hit with 
+a melee weapon attack, you can roll one of the weapon’s 
+damage dice one additional time and add it to the extra 
+damage of the critical hit.</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
 	
 <!-- Fighter class abilities -->
 	<PlayerAbility>
