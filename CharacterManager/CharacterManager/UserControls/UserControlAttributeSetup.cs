@@ -27,6 +27,19 @@ namespace CharacterManager.UserControls
             InitializeComponent();
         }
 
+        public void setCustomBonusVisible(Boolean isVisible)
+        {
+            checkBoxExtraBonus.Checked = false; // If we are changing this, then by default should not be checked in any case.
+            if (isVisible)
+            {
+                checkBoxExtraBonus.Visible = true;
+            }
+            else
+            {
+                checkBoxExtraBonus.Visible = false;
+            }
+        }
+
         private void updateFinalValue()
         {
             textBoxAttributeFinal.Text = TotalAttributeValue.ToString();

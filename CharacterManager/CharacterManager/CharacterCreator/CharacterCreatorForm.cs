@@ -22,6 +22,9 @@ namespace CharacterManager.CharacterCreator
         private int currentPassivePerception = 0;
         private int currentMaxHp = 0;
 
+        private int currentExtraAttributes = 0;
+        private int maxExtraAttributes = 0;
+
         private List<PlayerAbility> myAttributeList = new List<PlayerAbility>();
         private List<Items.PlayerItem> myItemList = new List<Items.PlayerItem>();
 
@@ -295,6 +298,88 @@ namespace CharacterManager.CharacterCreator
             }
 
             return res;
+        }
+
+        private void updateCustomRacialBonusAttributes()
+        {
+            //Extra attribute points might be spent for half-elves and potentially other races. 
+            maxExtraAttributes = SelectedMainRace.NumberOfGenericBonusAttributes;
+            if (SelectedSubRace != null)
+            {
+                maxExtraAttributes += SelectedSubRace.NumberOfGenericBonusAttributes;
+            }
+            currentExtraAttributes = maxExtraAttributes;
+            labelCustomRacialAttributeBonus.Text = currentExtraAttributes.ToString();
+
+            if (maxExtraAttributes > 0)
+            {
+                labelExtraBonus.Visible = true;
+                
+                //Current rule is that only the attributes that have not already been increased by racial bonus can be increased in this way.
+                if (SelectedMainRace.BonusAttributes.STR == 0 && ((SelectedSubRace?.BonusAttributes.STR == 0) || SelectedSubRace == null))
+                {
+                    userControlAttributeSetupSTR.setCustomBonusVisible(true);
+                }
+                else
+                {
+                    userControlAttributeSetupSTR.setCustomBonusVisible(false);
+                }
+
+                if (SelectedMainRace.BonusAttributes.DEX == 0 && ((SelectedSubRace?.BonusAttributes.DEX == 0) || SelectedSubRace == null))
+                {
+                    userControlAttributeSetupDEX.setCustomBonusVisible(true);
+                }
+                else
+                {
+                    userControlAttributeSetupDEX.setCustomBonusVisible(false);
+                }
+
+                if (SelectedMainRace.BonusAttributes.CON == 0 && ((SelectedSubRace?.BonusAttributes.CON == 0) || SelectedSubRace == null))
+                {
+                    userControlAttributeSetupCON.setCustomBonusVisible(true);
+                }
+                else
+                {
+                    userControlAttributeSetupCON.setCustomBonusVisible(false);
+                }
+
+                if (SelectedMainRace.BonusAttributes.INT == 0 && ((SelectedSubRace?.BonusAttributes.INT == 0) || SelectedSubRace == null))
+                {
+                    userControlAttributeSetupINT.setCustomBonusVisible(true);
+                }
+                else
+                {
+                    userControlAttributeSetupINT.setCustomBonusVisible(false);
+                }
+
+                if (SelectedMainRace.BonusAttributes.WIS == 0 && ((SelectedSubRace?.BonusAttributes.WIS == 0) || SelectedSubRace == null))
+                {
+                    userControlAttributeSetupWIS.setCustomBonusVisible(true);
+                }
+                else
+                {
+                    userControlAttributeSetupWIS.setCustomBonusVisible(false);
+                }
+
+                if (SelectedMainRace.BonusAttributes.CHA == 0 && ((SelectedSubRace?.BonusAttributes.CHA == 0) || SelectedSubRace == null))
+                {
+                    userControlAttributeSetupCHA.setCustomBonusVisible(true);
+                }
+                else
+                {
+                    userControlAttributeSetupCHA.setCustomBonusVisible(false);
+                }
+            }
+            else
+            {
+                labelExtraBonus.Visible = false;
+                userControlAttributeSetupSTR.setCustomBonusVisible(false);
+                userControlAttributeSetupDEX.setCustomBonusVisible(false);
+                userControlAttributeSetupINT.setCustomBonusVisible(false);
+                userControlAttributeSetupCON.setCustomBonusVisible(false);
+                userControlAttributeSetupWIS.setCustomBonusVisible(false);
+                userControlAttributeSetupCHA.setCustomBonusVisible(false);
+            }
         }
 
         private void updateAllDisplayedData()
@@ -672,26 +757,6 @@ namespace CharacterManager.CharacterCreator
             updateAllDisplayedData();
         }
 
-        private void numericUpDownDEX_ValueChanged(object sender, EventArgs e)
-        {
-            updateAllDisplayedData();
-        }
-
-        private void numericUpDownCON_ValueChanged(object sender, EventArgs e)
-        {
-            updateAllDisplayedData();
-        }
-
-        private void numericUpDownWIS_ValueChanged(object sender, EventArgs e)
-        {
-            updateAllDisplayedData();
-        }
-
-        private void numericUpDownCHA_ValueChanged(object sender, EventArgs e)
-        {
-            updateAllDisplayedData();
-        }
-
         private void comboBoxMainRace_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxMainRace.Items.Count > 0)
@@ -711,6 +776,7 @@ namespace CharacterManager.CharacterCreator
 
                 SelectedMainRace = CharacterFactory.getRaceByName(comboBoxMainRace.SelectedItem.ToString());
                 UpdateToolProficiencyChoices();
+                updateCustomRacialBonusAttributes();
                 updateAllDisplayedData();
             }
         }

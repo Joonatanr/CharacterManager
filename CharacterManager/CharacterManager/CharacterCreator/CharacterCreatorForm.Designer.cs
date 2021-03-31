@@ -67,7 +67,12 @@
             this.buttonChooseEquipment = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
+            this.labelExtraBonus = new System.Windows.Forms.Label();
             this.userControlGenericEquipmentList1 = new CharacterManager.UserControls.UserControlGenericEquipmentList();
+            this.userControlAttributeSetupCHA = new CharacterManager.UserControls.UserControlAttributeSetup();
+            this.userControlAttributeSetupWIS = new CharacterManager.UserControls.UserControlAttributeSetup();
+            this.userControlAttributeSetupCON = new CharacterManager.UserControls.UserControlAttributeSetup();
+            this.userControlAttributeSetupDEX = new CharacterManager.UserControls.UserControlAttributeSetup();
             this.userControlAttributeSetupINT = new CharacterManager.UserControls.UserControlAttributeSetup();
             this.userControlAttributeSetupSTR = new CharacterManager.UserControls.UserControlAttributeSetup();
             this.alignmentChoice1 = new CharacterManager.UserControls.AlignmentChoice();
@@ -75,10 +80,6 @@
             this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
             this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
-            this.userControlAttributeSetupDEX = new CharacterManager.UserControls.UserControlAttributeSetup();
-            this.userControlAttributeSetupCON = new CharacterManager.UserControls.UserControlAttributeSetup();
-            this.userControlAttributeSetupWIS = new CharacterManager.UserControls.UserControlAttributeSetup();
-            this.userControlAttributeSetupCHA = new CharacterManager.UserControls.UserControlAttributeSetup();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -163,6 +164,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelExtraBonus);
             this.groupBox1.Controls.Add(this.userControlAttributeSetupCHA);
             this.groupBox1.Controls.Add(this.userControlAttributeSetupWIS);
             this.groupBox1.Controls.Add(this.userControlAttributeSetupCON);
@@ -180,7 +182,7 @@
             this.groupBox1.Size = new System.Drawing.Size(256, 238);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Base attributes(without modifiers)";
+            this.groupBox1.Text = "Base attributes";
             // 
             // labelCustomRacialAttributeBonus
             // 
@@ -203,11 +205,11 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(95, 22);
+            this.label20.Location = new System.Drawing.Point(107, 12);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(70, 13);
+            this.label20.Size = new System.Drawing.Size(40, 26);
             this.label20.TabIndex = 26;
-            this.label20.Text = "Racial Bonus";
+            this.label20.Text = "Racial \r\nBonus";
             // 
             // label10
             // 
@@ -221,7 +223,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(49, 22);
+            this.label18.Location = new System.Drawing.Point(53, 21);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(35, 13);
             this.label18.TabIndex = 18;
@@ -485,6 +487,16 @@
             this.comboBoxPlayerClasses.TabIndex = 0;
             this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
             // 
+            // labelExtraBonus
+            // 
+            this.labelExtraBonus.AutoSize = true;
+            this.labelExtraBonus.Location = new System.Drawing.Point(151, 12);
+            this.labelExtraBonus.Name = "labelExtraBonus";
+            this.labelExtraBonus.Size = new System.Drawing.Size(37, 26);
+            this.labelExtraBonus.TabIndex = 35;
+            this.labelExtraBonus.Text = "Extra\r\nBonus";
+            this.labelExtraBonus.Visible = false;
+            // 
             // userControlGenericEquipmentList1
             // 
             this.userControlGenericEquipmentList1.AutoScroll = true;
@@ -494,6 +506,46 @@
             this.userControlGenericEquipmentList1.Name = "userControlGenericEquipmentList1";
             this.userControlGenericEquipmentList1.Size = new System.Drawing.Size(228, 307);
             this.userControlGenericEquipmentList1.TabIndex = 2;
+            // 
+            // userControlAttributeSetupCHA
+            // 
+            this.userControlAttributeSetupCHA.AttributeBonus = 0;
+            this.userControlAttributeSetupCHA.AttributeName = "CHA";
+            this.userControlAttributeSetupCHA.Location = new System.Drawing.Point(6, 167);
+            this.userControlAttributeSetupCHA.Name = "userControlAttributeSetupCHA";
+            this.userControlAttributeSetupCHA.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupCHA.TabIndex = 34;
+            this.userControlAttributeSetupCHA.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
+            // 
+            // userControlAttributeSetupWIS
+            // 
+            this.userControlAttributeSetupWIS.AttributeBonus = 0;
+            this.userControlAttributeSetupWIS.AttributeName = "WIS";
+            this.userControlAttributeSetupWIS.Location = new System.Drawing.Point(6, 141);
+            this.userControlAttributeSetupWIS.Name = "userControlAttributeSetupWIS";
+            this.userControlAttributeSetupWIS.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupWIS.TabIndex = 33;
+            this.userControlAttributeSetupWIS.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
+            // 
+            // userControlAttributeSetupCON
+            // 
+            this.userControlAttributeSetupCON.AttributeBonus = 0;
+            this.userControlAttributeSetupCON.AttributeName = "CON";
+            this.userControlAttributeSetupCON.Location = new System.Drawing.Point(6, 115);
+            this.userControlAttributeSetupCON.Name = "userControlAttributeSetupCON";
+            this.userControlAttributeSetupCON.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupCON.TabIndex = 32;
+            this.userControlAttributeSetupCON.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
+            // 
+            // userControlAttributeSetupDEX
+            // 
+            this.userControlAttributeSetupDEX.AttributeBonus = 0;
+            this.userControlAttributeSetupDEX.AttributeName = "DEX";
+            this.userControlAttributeSetupDEX.Location = new System.Drawing.Point(6, 89);
+            this.userControlAttributeSetupDEX.Name = "userControlAttributeSetupDEX";
+            this.userControlAttributeSetupDEX.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupDEX.TabIndex = 31;
+            this.userControlAttributeSetupDEX.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
             // 
             // userControlAttributeSetupINT
             // 
@@ -554,46 +606,6 @@
             this.userControlGenericAttributeList1.Name = "userControlGenericAttributeList1";
             this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 433);
             this.userControlGenericAttributeList1.TabIndex = 20;
-            // 
-            // userControlAttributeSetupDEX
-            // 
-            this.userControlAttributeSetupDEX.AttributeBonus = 0;
-            this.userControlAttributeSetupDEX.AttributeName = "DEX";
-            this.userControlAttributeSetupDEX.Location = new System.Drawing.Point(6, 88);
-            this.userControlAttributeSetupDEX.Name = "userControlAttributeSetupDEX";
-            this.userControlAttributeSetupDEX.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupDEX.TabIndex = 31;
-            this.userControlAttributeSetupDEX.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
-            // 
-            // userControlAttributeSetupCON
-            // 
-            this.userControlAttributeSetupCON.AttributeBonus = 0;
-            this.userControlAttributeSetupCON.AttributeName = "CON";
-            this.userControlAttributeSetupCON.Location = new System.Drawing.Point(6, 115);
-            this.userControlAttributeSetupCON.Name = "userControlAttributeSetupCON";
-            this.userControlAttributeSetupCON.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupCON.TabIndex = 32;
-            this.userControlAttributeSetupCON.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
-            // 
-            // userControlAttributeSetupWIS
-            // 
-            this.userControlAttributeSetupWIS.AttributeBonus = 0;
-            this.userControlAttributeSetupWIS.AttributeName = "WIS";
-            this.userControlAttributeSetupWIS.Location = new System.Drawing.Point(6, 141);
-            this.userControlAttributeSetupWIS.Name = "userControlAttributeSetupWIS";
-            this.userControlAttributeSetupWIS.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupWIS.TabIndex = 33;
-            this.userControlAttributeSetupWIS.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
-            // 
-            // userControlAttributeSetupCHA
-            // 
-            this.userControlAttributeSetupCHA.AttributeBonus = 0;
-            this.userControlAttributeSetupCHA.AttributeName = "CHA";
-            this.userControlAttributeSetupCHA.Location = new System.Drawing.Point(6, 172);
-            this.userControlAttributeSetupCHA.Name = "userControlAttributeSetupCHA";
-            this.userControlAttributeSetupCHA.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupCHA.TabIndex = 34;
-            this.userControlAttributeSetupCHA.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
             // 
             // CharacterCreatorForm
             // 
@@ -677,5 +689,6 @@
         private UserControls.UserControlAttributeSetup userControlAttributeSetupCHA;
         private UserControls.UserControlAttributeSetup userControlAttributeSetupWIS;
         private UserControls.UserControlAttributeSetup userControlAttributeSetupCON;
+        private System.Windows.Forms.Label labelExtraBonus;
     }
 }
