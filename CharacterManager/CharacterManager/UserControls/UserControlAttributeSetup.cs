@@ -59,6 +59,16 @@ namespace CharacterManager.UserControls
             updateFinalValue();
         }
 
+        public Boolean isCustomBonusSelected()
+        {
+            return checkBoxExtraBonus.Checked;
+        }
+
+        public void setCustomBonusLock(Boolean isLocked)
+        {
+            checkBoxExtraBonus.Enabled = !isLocked;
+        }
+
         private void updateFinalValue()
         {
             textBoxAttributeFinal.Text = TotalAttributeValue.ToString();

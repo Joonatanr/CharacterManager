@@ -754,6 +754,44 @@ namespace CharacterManager.CharacterCreator
 
         private void baseAttribute_ValueChanged(object sender, EventArgs e)
         {
+            //Lets first handle the extra racial bonus attributes
+            if (maxExtraAttributes > 0)
+            {
+                int usedExtraAttributes = 0;
+                if (userControlAttributeSetupSTR.isCustomBonusSelected()) { usedExtraAttributes++; }
+                if (userControlAttributeSetupDEX.isCustomBonusSelected()) { usedExtraAttributes++; }
+                if (userControlAttributeSetupCON.isCustomBonusSelected()) { usedExtraAttributes++; }
+                if (userControlAttributeSetupCHA.isCustomBonusSelected()) { usedExtraAttributes++; }
+                if (userControlAttributeSetupWIS.isCustomBonusSelected()) { usedExtraAttributes++; }
+                if (userControlAttributeSetupINT.isCustomBonusSelected()) { usedExtraAttributes++; }
+
+                currentExtraAttributes = maxExtraAttributes - usedExtraAttributes;
+
+                if (currentExtraAttributes == 0)
+                {
+                    //Lock the checkboxes.
+                    if (!userControlAttributeSetupSTR.isCustomBonusSelected()) { userControlAttributeSetupSTR.setCustomBonusLock(true); }
+                    if (!userControlAttributeSetupDEX.isCustomBonusSelected()) { userControlAttributeSetupDEX.setCustomBonusLock(true); }
+                    if (!userControlAttributeSetupCON.isCustomBonusSelected()) { userControlAttributeSetupCON.setCustomBonusLock(true); }
+                    if (!userControlAttributeSetupINT.isCustomBonusSelected()) { userControlAttributeSetupINT.setCustomBonusLock(true); }
+                    if (!userControlAttributeSetupWIS.isCustomBonusSelected()) { userControlAttributeSetupWIS.setCustomBonusLock(true); }
+                    if (!userControlAttributeSetupCHA.isCustomBonusSelected()) { userControlAttributeSetupCHA.setCustomBonusLock(true); }
+                }
+                else
+                {
+                    //Unlock the checkboxes.
+                    userControlAttributeSetupSTR.setCustomBonusLock(false); 
+                    userControlAttributeSetupDEX.setCustomBonusLock(false); 
+                    userControlAttributeSetupCON.setCustomBonusLock(false); 
+                    userControlAttributeSetupINT.setCustomBonusLock(false); 
+                    userControlAttributeSetupWIS.setCustomBonusLock(false); 
+                    userControlAttributeSetupCHA.setCustomBonusLock(false); 
+                }
+
+                labelCustomRacialAttributeBonus.Text = currentExtraAttributes.ToString();
+                
+            }
+            
             updateAllDisplayedData();
         }
 
