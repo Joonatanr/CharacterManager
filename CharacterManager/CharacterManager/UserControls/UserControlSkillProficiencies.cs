@@ -13,9 +13,14 @@ namespace CharacterManager.UserControls
     public partial class UserControlSkillProficiencies : UserControl
     {
         private List<UserControlProficiency> skillProficiencyControlList = new List<UserControlProficiency>();
-        private int numberOfSkillsToChoose = 0;
-        private int numberOfSkillsToChooseAny = 0; //The number of skills proficiencies that can be any skill. This is rarely used, mostly only half-elves have this feature.
+        private int numberOfSkillsToChooseMax = 0;
+        private int numberOfSkillsToChooseAnyMax = 0; //The number of skills proficiencies that can be any skill. This is rarely used, mostly only half-elves have this feature.
+
+        private int numberOfSkillsToChooseRemaining = 0;
+        private int numberOfSkillsToChooseAnyRemaining = 0;
+        
         private List<String> AvailableSkillsToChooseList = new List<String>();
+        private List<String> LockedSkillProficiencies = new List<String>(); //These proficiencies come from either background or directly from race so they cannot be deselected.
 
         private int currentProfBonus = 2;
 
@@ -78,21 +83,44 @@ namespace CharacterManager.UserControls
                 return;
             }
 
+
             if (selectedControl.IsProficient())
             {
-                if (AvailableSkillsToChooseList.Contains(selectedControl.ProficiencyName))
+                //The user has added a proficiency.
+                //Since we have two types of proficiencies that we can use, the extra and the class proficiencies then we have to decide which one was used.
+                //Lets first prefer using the class proficiency.
+                if (AvailableSkillsToChooseList.Contains(selectedControl.ProficiencyName) && (numberOfSkillsToChooseRemaining > 0))
                 {
-                    numberOfSkillsToChoose--;
+                    //We deduct one class proficiency...
+                    numberOfSkillsToChooseRemaining--;
+
+                    if (numberOfSkillsToChooseRemaining == 0 && (numberOfSkillsToChooseAnyRemaining == 0))
+                    {
+                        /* Make all choices that are NOT selected uneditable. */
+                        foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+                        {
+                            if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName))
+                            {
+                                if (!ctrl.IsProficient())
+                                {
+                                    ctrl.setEditable(false);
+                                }
+                            }
+                        }
+                    }
                 }
                 else
                 {
-                    numberOfSkillsToChooseAny--;
-                    if (numberOfSkillsToChooseAny == 0)
+                    //We deduct one extra (generic) proficiency...
+                    numberOfSkillsToChooseAnyRemaining--;
+
+                    if (numberOfSkillsToChooseAnyRemaining == 0)
                     {
                         //No more wildcards left...
                         foreach (UserControlProficiency ctrl in skillProficiencyControlList)
                         {
-                            if (!AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) && !ctrl.IsProficient())
+                            //This should not affect any controls that can still be chosen with a class-derived proficiency, or those from background etc...
+                            if ((!AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || numberOfSkillsToChooseRemaining == 0) && !ctrl.IsProficient())
                             {
                                 ctrl.setEditable(false);
                             }
@@ -100,39 +128,53 @@ namespace CharacterManager.UserControls
                     }
                 }
 
-                if (numberOfSkillsToChoose == 0 && (numberOfSkillsToChooseAny == 0))
-                {
-                    /* Make all choices that are NOT selected uneditable. */
-                    foreach(UserControlProficiency ctrl in skillProficiencyControlList)
-                    {
-                        if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName))
-                        {
-                            if (!ctrl.IsProficient()) 
-                            {
-                                ctrl.setEditable(false);
-                            }
-                        }
-                    }
-                }
             }
             else
             {
+                //The user has removed a proficiency.
+                //We have to decide which proficiency to refund, one derived from class or one wildcard.
+                //By default we prefer refunding a class proficiency.
+                /* TODO */
 
-                if (AvailableSkillsToChooseList.Contains(selectedControl.ProficiencyName))
+                //First lets check if there have been any extras provided in the first place
+                if (numberOfSkillsToChooseAnyMax == 0)
                 {
-                    numberOfSkillsToChoose++;
+                    //This is the easy version, we just refund one class proficiency.
+                    numberOfSkillsToChooseRemaining++;
                 }
                 else
                 {
-                    numberOfSkillsToChooseAny++;
+                    if (!AvailableSkillsToChooseList.Contains(selectedControl.ProficiencyName))
+                    {
+                        //Also easy -> Since this proficiency has been selected with a wildcard proficiency, then no other choice, but to return that.
+                        numberOfSkillsToChooseAnyRemaining++;
+                    }
+                    else
+                    {
+                        //We prefer giving back a class proficiency.
+                        //However we have to check if there are any remaining to refund.
+                        if (numberOfSkillsToChooseRemaining < numberOfSkillsToChooseMax)
+                        {
+                            //Refund a class proficiency
+                            numberOfSkillsToChooseRemaining++;
+                        }
+                        else
+                        {
+                            //Refund a wildcard
+                            numberOfSkillsToChooseAnyRemaining++;
+                        }
+                    }
                 }
 
-                /* Make all the choices editable. */
+                //Finally we update the controls based on what options we have left.
                 foreach (UserControlProficiency ctrl in skillProficiencyControlList)
                 {
-                    if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || (numberOfSkillsToChooseAny > 0))
+                    if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || (numberOfSkillsToChooseAnyRemaining > 0))
                     {
-                        ctrl.setEditable(true);
+                        if (!LockedSkillProficiencies.Contains(ctrl.ProficiencyName))
+                        {
+                            ctrl.setEditable(true);
+                        }
                     }
                 }
             }
@@ -167,6 +209,7 @@ namespace CharacterManager.UserControls
                 String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
                 profControl.setValueAndProficiency(getCurrentAttributeBonus(baseSkill), false, currentProfBonus);
             }
+            LockedSkillProficiencies = new List<string>();
         }
 
         public bool setProficientAtSkill(string skill)
@@ -175,6 +218,7 @@ namespace CharacterManager.UserControls
             if (ctrl != null)
             {
                 ctrl.setProficiency(true, 2);
+                LockedSkillProficiencies.Add(skill); //This should not be deselectable by the user.
                 return true;
             }
 
@@ -212,33 +256,35 @@ namespace CharacterManager.UserControls
 
         public void setUpChoiceProficiencies(int numberOfSkillsToChoose, List<string> AvailableSkillsToChoose, int numberOfAnySkills)
         {
-            this.numberOfSkillsToChoose = numberOfSkillsToChoose;
+            this.numberOfSkillsToChooseMax = numberOfSkillsToChoose;
+            this.numberOfSkillsToChooseAnyMax = numberOfAnySkills;
+            this.numberOfSkillsToChooseRemaining = numberOfSkillsToChoose;
+            this.numberOfSkillsToChooseAnyRemaining = numberOfAnySkills;
+
             this.AvailableSkillsToChooseList = AvailableSkillsToChoose;
-            this.numberOfSkillsToChooseAny = numberOfAnySkills;
 
-            updateSelectionData();
-        }
 
-        private void updateSelectionData()
-        {
             updateLabelData();
 
             /* TODO : Might need to be in separate function. */
             foreach (UserControlProficiency ctrl in skillProficiencyControlList)
             {
-                if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || (numberOfSkillsToChooseAny > 0))
+                if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || (numberOfSkillsToChooseAnyMax > 0))
                 {
-                    ctrl.setEditable(true);
+                    if (!LockedSkillProficiencies.Contains(ctrl.ProficiencyName))
+                    {
+                        ctrl.setEditable(true);
+                    }
                 }
             }
         }
 
         private void updateLabelData()
         {
-            string profDescription = (numberOfSkillsToChoose + numberOfSkillsToChooseAny).ToString();
-            if (numberOfSkillsToChooseAny > 0)
+            string profDescription = (numberOfSkillsToChooseRemaining + numberOfSkillsToChooseAnyRemaining).ToString();
+            if (numberOfSkillsToChooseAnyRemaining > 0)
             {
-                profDescription += " (" + numberOfSkillsToChooseAny.ToString() + " can be ANY)";
+                profDescription += " (" + numberOfSkillsToChooseAnyRemaining.ToString() + " can be ANY)";
             }
 
             labelNumberOfProficienciesToChoose.Text = profDescription;

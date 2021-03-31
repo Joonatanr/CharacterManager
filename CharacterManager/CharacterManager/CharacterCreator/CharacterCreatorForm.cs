@@ -733,7 +733,6 @@ namespace CharacterManager.CharacterCreator
             }
 
             //4. Set up choosing new skill proficiencies.
-            //TODO : This is unfinished.
             if (SelectedClass != null)
             {
                 int numberOfSkillsToChoose = SelectedClass.NumberOfSkillsToChoose;
@@ -827,6 +826,7 @@ namespace CharacterManager.CharacterCreator
                 SelectedMainRace = CharacterFactory.getRaceByName(comboBoxMainRace.SelectedItem.ToString());
                 UpdateToolProficiencyChoices();
                 updateCustomRacialBonusAttributes();
+                updateSkillProficiencies();
                 updateAllDisplayedData();
             }
         }
