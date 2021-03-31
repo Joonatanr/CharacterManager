@@ -10,10 +10,10 @@ namespace CharacterManager
     [Serializable]
     public class PlayerRace
     {
-        /* Lets test some very basic stuff first. */
         public String RaceName { get; set; }
         public PlayerCharacter.CharacterBaseAttributes BonusAttributes { get; set; }
-        public int NumberOfGenericBonusAttributes { get; set; } //Basically the number of "add N to attributes of your choice. "
+        public int NumberOfGenericBonusAttributes { get; set; } = 0;    //Basically the number of "add N to attributes of your choice. "
+        public int NumberOfGenericSkillProficiencies { get; set; } = 0; //Similarly, the number of "add N to skill proficiencies of your choice. "
         public int MaximumAge { get; set; }
 
         public PlayerCharacter.PlayerSize.SizeDescriptor Size { get; set; }

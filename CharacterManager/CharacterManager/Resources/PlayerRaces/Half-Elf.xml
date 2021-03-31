@@ -1,0 +1,20 @@
+<PlayerRace>
+    <RaceName>Half-Elf</RaceName>
+    <BonusAttributes>
+      <STR>0</STR>
+      <DEX>0</DEX>
+      <INT>0</INT>
+      <CHA>2</CHA>
+      <CON>0</CON>
+      <WIS>0</WIS>
+    </BonusAttributes>
+    <NumberOfGenericBonusAttributes>2</NumberOfGenericBonusAttributes>
+	<NumberOfGenericSkillProficiencies>2</NumberOfGenericSkillProficiencies>
+	<MaximumAge>200</MaximumAge>
+	<Size>Medium</Size>
+	<BaseSpeed>30</BaseSpeed>
+	<PlayerAttributes>
+		<string>Darkvision</string>
+		<string>Fey Ancestry</string>
+	</PlayerAttributes>
+ </PlayerRace>

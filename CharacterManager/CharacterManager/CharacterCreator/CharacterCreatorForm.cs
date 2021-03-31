@@ -16,14 +16,6 @@ namespace CharacterManager.CharacterCreator
     {
         public PlayerCharacter CreatedCharacter { get; set; }
 
-        private int StrBonus = 0;
-        private int IntBonus = 0;
-        private int DexBonus = 0;
-        private int ChaBonus = 0;
-        private int WisBonus = 0;
-        private int ConBonus = 0;
-
-
         private PlayerRace SelectedMainRace;
         private PlayerRace SelectedSubRace;
         private PlayerClass SelectedClass;
@@ -78,12 +70,12 @@ namespace CharacterManager.CharacterCreator
                 CreatedCharacter.ClassName = SelectedClass.PlayerClassName;
 
                 //2. Set base attributes.
-                CreatedCharacter.StrengthAttribute = (int)numericUpDownSTR.Value + StrBonus;
-                CreatedCharacter.WisAttribute = (int)numericUpDownWIS.Value + WisBonus;
-                CreatedCharacter.IntAttribute = (int)numericUpDownINT.Value + IntBonus;
-                CreatedCharacter.DexAttribute = (int)numericUpDownDEX.Value + DexBonus;
-                CreatedCharacter.ConAttribute = (int)numericUpDownCON.Value + ConBonus;
-                CreatedCharacter.CharAttribute = (int)numericUpDownCHA.Value + ChaBonus;
+                CreatedCharacter.StrengthAttribute = userControlAttributeSetupSTR.TotalAttributeValue;
+                CreatedCharacter.WisAttribute = userControlAttributeSetupWIS.TotalAttributeValue;
+                CreatedCharacter.IntAttribute = userControlAttributeSetupINT.TotalAttributeValue;
+                CreatedCharacter.DexAttribute = userControlAttributeSetupDEX.TotalAttributeValue;
+                CreatedCharacter.ConAttribute = userControlAttributeSetupCON.TotalAttributeValue;
+                CreatedCharacter.CharAttribute = userControlAttributeSetupCHA.TotalAttributeValue;
 
                 CreatedCharacter.Level = 1;
                 CreatedCharacter.ProficiencyBonus = 2;
@@ -311,26 +303,23 @@ namespace CharacterManager.CharacterCreator
             //1. Lets begin with the selected race and subrace
             if (SelectedMainRace != null)
             {
-                StrBonus = SelectedMainRace.BonusAttributes.STR;
-                IntBonus = SelectedMainRace.BonusAttributes.INT;
-                WisBonus = SelectedMainRace.BonusAttributes.WIS;
-                ConBonus = SelectedMainRace.BonusAttributes.CON;
-                ChaBonus = SelectedMainRace.BonusAttributes.CHA;
-                DexBonus = SelectedMainRace.BonusAttributes.DEX;
+                userControlAttributeSetupSTR.AttributeBonus = SelectedMainRace.BonusAttributes.STR;
+                userControlAttributeSetupINT.AttributeBonus = SelectedMainRace.BonusAttributes.INT;
+                userControlAttributeSetupWIS.AttributeBonus = SelectedMainRace.BonusAttributes.WIS;
+                userControlAttributeSetupCON.AttributeBonus = SelectedMainRace.BonusAttributes.CON;
+                userControlAttributeSetupCHA.AttributeBonus = SelectedMainRace.BonusAttributes.CHA;
+                userControlAttributeSetupDEX.AttributeBonus = SelectedMainRace.BonusAttributes.DEX;
             }
 
             if (SelectedSubRace != null)
             {
-                StrBonus += SelectedSubRace.BonusAttributes.STR;
-                IntBonus += SelectedSubRace.BonusAttributes.INT;
-                WisBonus += SelectedSubRace.BonusAttributes.WIS;
-                ConBonus += SelectedSubRace.BonusAttributes.CON;
-                ChaBonus += SelectedSubRace.BonusAttributes.CHA;
-                DexBonus += SelectedSubRace.BonusAttributes.DEX;
+                userControlAttributeSetupSTR.AttributeBonus += SelectedSubRace.BonusAttributes.STR;
+                userControlAttributeSetupINT.AttributeBonus += SelectedSubRace.BonusAttributes.INT;
+                userControlAttributeSetupINT.AttributeBonus += SelectedSubRace.BonusAttributes.WIS;
+                userControlAttributeSetupINT.AttributeBonus += SelectedSubRace.BonusAttributes.CON;
+                userControlAttributeSetupINT.AttributeBonus += SelectedSubRace.BonusAttributes.CHA;
+                userControlAttributeSetupINT.AttributeBonus += SelectedSubRace.BonusAttributes.DEX;
             }
-
-            updateBaseAttributeFields();
-            //TODO : We want to show where the bonuses come from.
 
             //2. Lets next try showing weapon and armor proficiencies...
             //TODO : This is just a test, we really should make the proficiency and attribute displays into a separate class.
@@ -427,7 +416,7 @@ namespace CharacterManager.CharacterCreator
                 if (SelectedClass != null)
                 {
                     textBoxHitDie.Text = "1d" + SelectedClass.HitDie;
-                    int constitution = (int)numericUpDownCON.Value + ConBonus;
+                    int constitution = userControlAttributeSetupCON.TotalAttributeValue;
                     int bonus = CharacterFactory.getAbilityModifierValue(constitution);
                     currentMaxHp = bonus + SelectedClass.HitDie;
                 }
@@ -487,24 +476,6 @@ namespace CharacterManager.CharacterCreator
             userControlGenericAttributeList1.setAttributeList(myAttributeList);
         }
 
-        private void updateBaseAttributeFields()
-        {
-            //Update the bonus fields.
-            textBoxStrBonus.Text = "+" + StrBonus.ToString();
-            textBoxIntBonus.Text = "+" + IntBonus.ToString();
-            textBoxWisBonus.Text = "+" + WisBonus.ToString();
-            textBoxConBonus.Text = "+" + ConBonus.ToString();
-            textBoxChaBonus.Text = "+" + ChaBonus.ToString();
-            textBoxDexBonus.Text = "+" + DexBonus.ToString();
-
-            textBoxSTRFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownSTR.Value + StrBonus);
-            textBoxINTFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownINT.Value + IntBonus);
-            textBoxWISFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownWIS.Value + WisBonus);
-            textBoxCONFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownCON.Value + ConBonus);
-            textBoxCHAFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownCHA.Value + ChaBonus);
-            textBoxDEXFinal.Text = CharacterFactory.getAbilityWithModifierString(numericUpDownDEX.Value + DexBonus);
-        }
-
         /* TODO : Rename this to prevent confusion. */
         private void updateSkillProficiencyFields()
         {
@@ -524,22 +495,22 @@ namespace CharacterManager.CharacterCreator
             switch (attrib)
             {
                 case "STR":
-                    res = (int)numericUpDownSTR.Value + StrBonus;
+                    res = userControlAttributeSetupSTR.TotalAttributeValue;
                     break;
                 case "CHA":
-                    res = (int)numericUpDownCHA.Value + ChaBonus;
+                    res = userControlAttributeSetupCHA.TotalAttributeValue;
                     break;
                 case "DEX":
-                    res = (int)numericUpDownDEX.Value + DexBonus;
+                    res = userControlAttributeSetupDEX.TotalAttributeValue;
                     break;
                 case "CON":
-                    res = (int)numericUpDownCON.Value + ConBonus;
+                    res = userControlAttributeSetupCON.TotalAttributeValue;
                     break;
                 case "WIS":
-                    res = (int)numericUpDownWIS.Value + WisBonus;
+                    res = userControlAttributeSetupWIS.TotalAttributeValue;
                     break;
                 case "INT":
-                    res = (int)numericUpDownINT.Value + IntBonus;
+                    res = userControlAttributeSetupINT.TotalAttributeValue;
                     break;
                 default:
                     break;
@@ -696,12 +667,7 @@ namespace CharacterManager.CharacterCreator
         }
 
 
-        private void numericUpDownSTR_ValueChanged(object sender, EventArgs e)
-        {
-            updateAllDisplayedData();
-        }
-
-        private void numericUpDownINT_ValueChanged(object sender, EventArgs e)
+        private void baseAttribute_ValueChanged(object sender, EventArgs e)
         {
             updateAllDisplayedData();
         }

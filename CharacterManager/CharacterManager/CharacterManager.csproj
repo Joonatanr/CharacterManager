@@ -153,6 +153,12 @@
     <Compile Include="UserControls\UserControlAttributeDisplay.Designer.cs">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlAttributeSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlAttributeSetup.Designer.cs">
+      <DependentUpon>UserControlAttributeSetup.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlEquipmentChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     <EmbeddedResource Include="UserControls\UserControlAttributeDisplay.resx">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlAttributeSetup.resx">
+      <DependentUpon>UserControlAttributeSetup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlEquipmentChoice.resx">
       <DependentUpon>UserControlEquipmentChoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +362,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PlayerRaces\Gnome.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\PlayerRaces\Half-Elf.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\PlayerRaces\Halfling.xml">
