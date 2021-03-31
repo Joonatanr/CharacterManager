@@ -737,6 +737,18 @@ namespace CharacterManager.CharacterCreator
             if (SelectedClass != null)
             {
                 int numberOfSkillsToChoose = SelectedClass.NumberOfSkillsToChoose;
+                int numberOfSkillsToChooseAny = 0; 
+                
+                if( SelectedMainRace != null)
+                {
+                    numberOfSkillsToChooseAny += SelectedMainRace.NumberOfGenericSkillProficiencies;
+                }
+
+                if (SelectedSubRace != null)
+                {
+                    numberOfSkillsToChooseAny += SelectedSubRace.NumberOfGenericSkillProficiencies;
+                }
+
                 List<string> availableSkillsToChoose = new List<string>();
 
                 foreach (string skill in SelectedClass.AvailableSkillProficiencies)
@@ -747,7 +759,7 @@ namespace CharacterManager.CharacterCreator
                     }
                 }
 
-                userControlSkillProficiencies1.setUpChoiceProficiencies(numberOfSkillsToChoose, availableSkillsToChoose);
+                userControlSkillProficiencies1.setUpChoiceProficiencies(numberOfSkillsToChoose, availableSkillsToChoose, numberOfSkillsToChooseAny);
             }
         }
 

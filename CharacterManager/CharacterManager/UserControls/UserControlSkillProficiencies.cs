@@ -14,7 +14,8 @@ namespace CharacterManager.UserControls
     {
         private List<UserControlProficiency> skillProficiencyControlList = new List<UserControlProficiency>();
         private int numberOfSkillsToChoose = 0;
-        private List<String> AvailableSkillsToChoose = new List<String>();
+        private int numberOfSkillsToChooseAny = 0; //The number of skills proficiencies that can be any skill. This is rarely used, mostly only half-elves have this feature.
+        private List<String> AvailableSkillsToChooseList = new List<String>();
 
         private int currentProfBonus = 2;
 
@@ -78,15 +79,33 @@ namespace CharacterManager.UserControls
             }
 
             if (selectedControl.IsProficient())
-            { 
-                numberOfSkillsToChoose--;
+            {
+                if (AvailableSkillsToChooseList.Contains(selectedControl.ProficiencyName))
+                {
+                    numberOfSkillsToChoose--;
+                }
+                else
+                {
+                    numberOfSkillsToChooseAny--;
+                    if (numberOfSkillsToChooseAny == 0)
+                    {
+                        //No more wildcards left...
+                        foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+                        {
+                            if (!AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) && !ctrl.IsProficient())
+                            {
+                                ctrl.setEditable(false);
+                            }
+                        }
+                    }
+                }
 
-                if (numberOfSkillsToChoose == 0)
+                if (numberOfSkillsToChoose == 0 && (numberOfSkillsToChooseAny == 0))
                 {
                     /* Make all choices that are NOT selected uneditable. */
                     foreach(UserControlProficiency ctrl in skillProficiencyControlList)
                     {
-                        if (AvailableSkillsToChoose.Contains(ctrl.ProficiencyName))
+                        if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName))
                         {
                             if (!ctrl.IsProficient()) 
                             {
@@ -98,21 +117,27 @@ namespace CharacterManager.UserControls
             }
             else
             {
-                if (numberOfSkillsToChoose == 0)
+
+                if (AvailableSkillsToChooseList.Contains(selectedControl.ProficiencyName))
                 {
-                    /* Make all the choices editable. */
-                    foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+                    numberOfSkillsToChoose++;
+                }
+                else
+                {
+                    numberOfSkillsToChooseAny++;
+                }
+
+                /* Make all the choices editable. */
+                foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+                {
+                    if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || (numberOfSkillsToChooseAny > 0))
                     {
-                        if (AvailableSkillsToChoose.Contains(ctrl.ProficiencyName))
-                        {
-                            ctrl.setEditable(true);
-                        }
+                        ctrl.setEditable(true);
                     }
                 }
-                numberOfSkillsToChoose++;
             }
 
-            labelNumberOfProficienciesToChoose.Text = numberOfSkillsToChoose.ToString();
+            updateLabelData();
 
             checkedChangedListener?.Invoke();
         }
@@ -185,22 +210,39 @@ namespace CharacterManager.UserControls
             return 0;
         }
 
-        public void setUpChoiceProficiencies(int numberOfSkillsToChoose, List<string> AvailableSkillsToChoose)
+        public void setUpChoiceProficiencies(int numberOfSkillsToChoose, List<string> AvailableSkillsToChoose, int numberOfAnySkills)
         {
-            labelNumberOfProficienciesToChoose.Text = numberOfSkillsToChoose.ToString();
-
             this.numberOfSkillsToChoose = numberOfSkillsToChoose;
-            this.AvailableSkillsToChoose = AvailableSkillsToChoose;
+            this.AvailableSkillsToChooseList = AvailableSkillsToChoose;
+            this.numberOfSkillsToChooseAny = numberOfAnySkills;
 
+            updateSelectionData();
+        }
+
+        private void updateSelectionData()
+        {
+            updateLabelData();
+
+            /* TODO : Might need to be in separate function. */
             foreach (UserControlProficiency ctrl in skillProficiencyControlList)
             {
-                if (AvailableSkillsToChoose.Contains(ctrl.ProficiencyName))
+                if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || (numberOfSkillsToChooseAny > 0))
                 {
                     ctrl.setEditable(true);
                 }
             }
         }
 
+        private void updateLabelData()
+        {
+            string profDescription = (numberOfSkillsToChoose + numberOfSkillsToChooseAny).ToString();
+            if (numberOfSkillsToChooseAny > 0)
+            {
+                profDescription += " (" + numberOfSkillsToChooseAny.ToString() + " can be ANY)";
+            }
+
+            labelNumberOfProficienciesToChoose.Text = profDescription;
+        }
 
         private int getCurrentAttributeBonus(String attrib)
         {
