@@ -1,0 +1,56 @@
+<PlayerRace>
+    <RaceName>Gnome</RaceName>
+    <BonusAttributes>
+      <STR>0</STR>
+      <DEX>0</DEX>
+      <INT>2</INT>
+      <CHA>0</CHA>
+      <CON>0</CON>
+      <WIS>0</WIS>
+    </BonusAttributes>
+    <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+	<MaximumAge>500</MaximumAge>
+	<Size>Small</Size>
+	<BaseSpeed>25</BaseSpeed>
+	<PlayerAttributes>
+		<string>Darkvision</string>
+		<string>Gnome Cunning</string>
+	</PlayerAttributes>
+    <SubRaces>
+       <PlayerRace>
+       <RaceName>Forest Gnome</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>1</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>0</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+       <PlayerAttributes>
+			<string>Speak with Small Beasts</string>
+			<string>Natural Illusionist</string>
+	   </PlayerAttributes>
+	   </PlayerRace>
+       <PlayerRace>
+		<RaceName>Rock Gnome</RaceName>
+           <BonusAttributes>
+           <STR>0</STR>
+           <DEX>0</DEX>
+           <INT>0</INT>
+           <CHA>0</CHA>
+           <CON>1</CON>
+           <WIS>0</WIS>
+         </BonusAttributes>
+         <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+		 <PlayerAttributes>
+			<string>Artificer's Lore</string>
+			<string>Tinker</string>
+		</PlayerAttributes>
+		<ToolProficiencies>
+			<string>Tinker's Tools</string>
+		</ToolProficiencies>
+       </PlayerRace>
+    </SubRaces>
+ </PlayerRace>

@@ -352,6 +352,9 @@
     <Content Include="Resources\PlayerRaces\Dragonborn.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\PlayerRaces\Gnome.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\PlayerRaces\Halfling.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

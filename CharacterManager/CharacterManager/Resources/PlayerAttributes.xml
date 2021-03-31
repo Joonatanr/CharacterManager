@@ -232,6 +232,75 @@ again until you complete a short or long rest.
 	
 	
 	<!-- White Dragon -->
+
+<!-- Gnome abilities -->
+	<PlayerAbility>
+		<AttributeName>Gnome Cunning</AttributeName>
+		<Description>You have advantage on all Intelligence, Wisdom , and Charisma saving throws against magic.</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Speak with Small Beasts</AttributeName>
+		<Description>Through sounds and 
+gestures, you can communicate simple ideas with Small 
+or smaller beasts. Forest gnomes love animals and often 
+keep squirrels, badgers, rabbits, moles, woodpeckers, 
+and other creatures as beloved pets.
+		</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Natural Illusionist</AttributeName>
+		<Description> You know the minor illusion cantrip. Intelligence is your spellcasting ability for it.</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Artificer's Lore</AttributeName>
+		<Description> Whenever you make an Intelligence 
+(History) check related to magic items, alchemical 
+objects, or technological devices, you can add twice your 
+proficiency bonus, instead of any proficiency bonus you 
+normally apply</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Tinker</AttributeName>
+		<Description>You have proficiency with artisan’s tools 
+(tinker’s tools). Using those tools, you can spend 1 
+hour and 10 gp worth of materials to construct a Tiny 
+clockwork device (AC 5, 1 hp). The device ceases 
+to function after 24 hours (unless you spend 1 hour 
+repairing it to keep the device functioning), or when 
+you use your action to dismantle it; at that time, you can 
+reclaim the materials used to create it. You can have up 
+to three such devices active at a time.
+When you create a device, choose one of the 
+following options:
+
+1. Clockwork Toy. This toy is a clockw ork animal, monster, 
+or person, such as a frog, mouse, bird, dragon, or 
+soldier. W hen placed on the ground, the toy m oves 
+5 feet across the ground on each of your turns in a 
+random direction. It makes noises as appropriate 
+to the creature it represents.
+
+2. Fire Starter. The device produces a miniature 
+flame, which you can use to light a candle, 
+torch, or campfire. Using the device 
+requires your action.
+
+3. Music Box. W hen opened, this music box 
+plays a single song at a moderate volume.
+The box stops playing when it 
+reaches the son g’s end or 
+when it is closed.</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
 	
 <!-- Fighter class abilities -->
 	<PlayerAbility>
