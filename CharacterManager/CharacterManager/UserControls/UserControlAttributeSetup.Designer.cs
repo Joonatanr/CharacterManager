@@ -91,6 +91,7 @@ namespace CharacterManager.UserControls
             this.checkBoxExtraBonus.TabIndex = 23;
             this.checkBoxExtraBonus.UseVisualStyleBackColor = true;
             this.checkBoxExtraBonus.Visible = false;
+            this.checkBoxExtraBonus.CheckedChanged += new System.EventHandler(this.checkBoxExtraBonus_CheckedChanged);
             // 
             // UserControlAttributeSetup
             // 

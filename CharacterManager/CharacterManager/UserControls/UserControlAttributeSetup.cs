@@ -12,7 +12,24 @@ namespace CharacterManager.UserControls
 {   
     public partial class UserControlAttributeSetup : UserControl
     {
-        public int TotalAttributeValue { get { return Math.Min((int)numericUpDownBaseValue.Value + _attributeBonus, 20); } }
+        public int TotalAttributeValue { get { return Math.Min((int)numericUpDownBaseValue.Value + TotalRacialBonus, 20); } }
+
+        //Takes in the racial extra value.
+        public int TotalRacialBonus 
+        { 
+            get
+            {
+                int res = _attributeBonus;
+                if (checkBoxExtraBonus.Visible)
+                {
+                    if (checkBoxExtraBonus.Checked)
+                    {
+                        res++;
+                    }
+                }
+                return res;
+            } 
+        }
 
         private int _attributeBonus = 0;
         public int AttributeBonus { get { return _attributeBonus; } set { _attributeBonus = value; updateBonusValue(); updateFinalValue(); } }
@@ -38,6 +55,8 @@ namespace CharacterManager.UserControls
             {
                 checkBoxExtraBonus.Visible = false;
             }
+            updateBonusValue();
+            updateFinalValue();
         }
 
         private void updateFinalValue()
@@ -47,13 +66,13 @@ namespace CharacterManager.UserControls
 
         private void updateBonusValue()
         {
-            if (_attributeBonus >= 0)
+            if (TotalRacialBonus >= 0)
             {
-                textBoxRacialBonus.Text = "+" + _attributeBonus.ToString();
+                textBoxRacialBonus.Text = "+" + TotalRacialBonus.ToString();
             }
             else
             {
-                textBoxRacialBonus.Text = _attributeBonus.ToString();
+                textBoxRacialBonus.Text = TotalRacialBonus.ToString();
             }
         }
 
@@ -61,6 +80,16 @@ namespace CharacterManager.UserControls
         {
             ValueChanged?.Invoke(this, EventArgs.Empty);
             updateFinalValue();
+        }
+
+        private void checkBoxExtraBonus_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxExtraBonus.Visible)
+            {
+                ValueChanged?.Invoke(this, EventArgs.Empty);
+                updateBonusValue();
+                updateFinalValue();
+            }
         }
     }
 }
