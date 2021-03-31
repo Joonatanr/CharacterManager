@@ -1,0 +1,21 @@
+<PlayerRace>
+    <RaceName>Tiefling</RaceName>
+    <BonusAttributes>
+      <STR>0</STR>
+      <DEX>0</DEX>
+      <INT>1</INT>
+      <CHA>2</CHA>
+      <CON>0</CON>
+      <WIS>0</WIS>
+    </BonusAttributes>
+    <NumberOfGenericBonusAttributes>0</NumberOfGenericBonusAttributes>
+	<NumberOfGenericSkillProficiencies>0</NumberOfGenericSkillProficiencies>
+	<MaximumAge>120</MaximumAge>
+	<Size>Medium</Size>
+	<BaseSpeed>30</BaseSpeed>
+	<PlayerAttributes>
+		<string>Darkvision</string>
+		<string>Hellish Resistance</string>
+		<string>Infernal Legacy</string>
+	</PlayerAttributes>
+ </PlayerRace>

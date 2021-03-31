@@ -325,6 +325,23 @@ damage of the critical hit.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<AttributeName>Hellish Resistance</AttributeName>
+		<Description> You have resistance to fire damage</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Infernal Legacy</AttributeName>
+		<Description>You know the thaumaturgy cantrip. 
+Once you reach 3rd level, you can cast the hellish
+rebuke spell once per day as a 2nd-level spell. O nce you 
+reach 5th level, you can also cast the darkness spell 
+once per day. Charisma is your spellcasting ability for 
+these spells.</Description>
+		<MaximumCharges>1</MaximumCharges>
+	</PlayerAbility>
+	
 <!-- Fighter class abilities -->
 	<PlayerAbility>
 		<AttributeName>Archery Fighting Style</AttributeName>
