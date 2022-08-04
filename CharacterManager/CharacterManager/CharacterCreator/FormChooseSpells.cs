@@ -158,5 +158,10 @@ namespace CharacterManager.CharacterCreator
         {
             updateSelectedSpellData();
         }
+
+        private void FormChooseSpells_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
