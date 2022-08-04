@@ -195,6 +195,88 @@ or construct, but the spell can’t restore magic to
 such an object.</Description>
 	</PlayerSpell>
 	
+	<PlayerSpell>
+		<SpellName>Message</SpellName>
+		<School>Transmutation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellLevel>0</SpellLevel>
+		<SpellRange>120</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<SpellDuration>1</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		<Description>You point your finger toward a creature within range
+and whisper a message. The target (and only the target)
+hears the message and can reply in a whisper that only
+you can hear.
+You can cast this spell through solid objects if you
+are familiar with the target and know it is beyond
+the barrier. Magical silence. 1 foot of stone, 1 inch of
+com m on metal, a thin sheet of lead, or 3 feet of w ood
+blocks the spell. The spell doesn’t have to follow a
+straight line and can travel freely around corners or
+through openings.</Description>
+	</PlayerSpell>
 	
+	<PlayerSpell>
+		<SpellName>Minor Illusion</SpellName>
+		<School>Illusion</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellLevel>0</SpellLevel>
+		<SpellRange>30</SpellRange>
+		<IsVerbalComponent>false</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<SpellDuration>10</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		<Description>
+		You create a sound or an image of an object within
+range that lasts for the duration. The illusion also ends if
+you dismiss it as an action or cast this spell again.
+If you create a sound, its volume can range from a
+whisper to a scream . It can be your voice, someone
+else’s voice, a lion’s roar, a beating of drums, or any
+other sound you choose. The sound continues unabated
+throughout the duration, or you can make discrete
+sounds at different times before the spell ends.
+If you create an image of an object—such as a chair,
+muddy footprints, or a small chest—it must be no larger
+than a 5-foot cube. The image can’t create sound, light,
+smell, or any other sensory effect. Physical interaction
+with the image reveals it to be an illusion, because
+things can pass through it.
+If a creature uses its action to examine the sound or
+image, the creature can determine that it is an illusion
+with a successful Intelligence (Investigation) check
+against your spell save DC. If a creature discerns the
+illusion for what it is, the illusion becomes faint to
+the creature
+		</Description>
+	</PlayerSpell>
 	
+	<PlayerSpell>
+		<SpellName>Poison Spray</SpellName>
+		<SpellLevel>0</SpellLevel>
+	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>Presdigitation</SpellName>
+		<SpellLevel>0</SpellLevel>
+	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>Ray of Frost</SpellName>
+		<SpellLevel>0</SpellLevel>
+	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>Shocking Grasp</SpellName>
+		<SpellLevel>0</SpellLevel>
+	</PlayerSpell>
+	
+	<PlayerSpell>
+		<SpellName>True Strike</SpellName>
+		<SpellLevel>0</SpellLevel>
+	</PlayerSpell>
 </ArrayOfPlayerSpell>
