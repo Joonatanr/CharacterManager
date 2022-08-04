@@ -32,6 +32,7 @@ namespace CharacterManager.Spells
         public Spellcard()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
         
         public void setSpell(PlayerSpell spell)

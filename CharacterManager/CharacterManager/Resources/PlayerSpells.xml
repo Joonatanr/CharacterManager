@@ -230,8 +230,7 @@ through openings.</Description>
 		<IsMaterialComponent>true</IsMaterialComponent>
 		<SpellDuration>10</SpellDuration>
 		<IsConcentration>false</IsConcentration>
-		<Description>
-		You create a sound or an image of an object within
+		<Description>You create a sound or an image of an object within
 range that lasts for the duration. The illusion also ends if
 you dismiss it as an action or cast this spell again.
 If you create a sound, its volume can range from a
@@ -257,26 +256,120 @@ the creature
 	
 	<PlayerSpell>
 		<SpellName>Poison Spray</SpellName>
+		<School>Conjuration</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
 		<SpellLevel>0</SpellLevel>
+		<SpellRange>10</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>1</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		<Description>You extend your hand toward a creature you can see
+within range and project a puff of noxious gas from your
+palm. The creature must succeed on a Constitution
+saving throw or take 1d12 poison damage.
+This spell’s damage increases by 1d12 when you reach
+5th level (2d12), 11th level (3d12), and 17th level (4d12).
+		</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Presdigitation</SpellName>
+		<School>Transmutation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
 		<SpellLevel>0</SpellLevel>
+		<SpellRange>10</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>600</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		<Description>This spell is a minor magical trick that novice
+spellcasters use for practice. You create one of the
+following magical effects within range:
+• You create an instantaneous, harm less sensory effect,
+such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor.
+
+• You instantaneously light or snuff out a candle, a
+torch, or a small campfire.
+
+• You instantaneously clean or soil an object no larger
+than 1 cubic foot.
+
+• You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour.
+
+• You make a color, a small mark, or a sym bol appear
+on an object or a surface for 1 hour.
+
+• You create a nonmagical trinket or an illusory im age
+that can fit in your hand and that lasts until the end of
+your next turn.
+
+If you cast this spell multiple times, you can have up to
+three of its non-instantaneous effects active at a time,
+and you can dismiss such an effect as an action
+		</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Ray of Frost</SpellName>
+		<School>Evocation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
 		<SpellLevel>0</SpellLevel>
+		<SpellRange>60</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>1</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		<Description>A frigid beam of blue-white light streaks toward a
+creature within range. Make a ranged spell attack
+against the target. On a hit, it takes 1d8 cold damage,
+and its speed is reduced by 10 feet until the start of
+your next turn.
+The spell’s damage increases by 1d8 when you reach
+5th level (2d8), 11th level (3d8), and 17th level (4d8).
+		</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Shocking Grasp</SpellName>
+		<School>Evocation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
 		<SpellLevel>0</SpellLevel>
+		<SpellRange>0</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>1</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		<Description>Lightning springs from your hand to deliver a shock to
+a creature you try to touch. Make a melee spell attack
+against the target. You have advantage on the attack roll
+if the target is wearing arm or made of metal. On a hit,
+the target takes 1d8 lightning damage, and it can’t take
+reactions until the start of its next turn.
+The spell’s damage increases by 1d8 when you reach
+5th level (2d8), 11th level (3d8), and 17th level (4d8).
+		</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>True Strike</SpellName>
+		<School>Divination</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
 		<SpellLevel>0</SpellLevel>
+		<SpellRange>30</SpellRange>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>1</SpellDuration>
+		<IsConcentration>true</IsConcentration>
+		<Description>You extend your hand and point a finger at a target in
+range. Your magic grants you a brief insight into the target’s defenses. 
+On your next turn, you gain advantage on your first attack roll against the target, provided that
+this spell hasn’t ended.
+		</Description>
 	</PlayerSpell>
 </ArrayOfPlayerSpell>

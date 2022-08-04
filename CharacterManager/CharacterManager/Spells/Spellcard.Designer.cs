@@ -46,7 +46,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(573, 423);
+            this.button1.Location = new System.Drawing.Point(588, 448);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -176,12 +176,15 @@
             // 
             // richtTextBoxDescription
             // 
+            this.richtTextBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richtTextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richtTextBoxDescription.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
             this.richtTextBoxDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richtTextBoxDescription.Location = new System.Drawing.Point(17, 162);
+            this.richtTextBoxDescription.Location = new System.Drawing.Point(17, 169);
             this.richtTextBoxDescription.Name = "richtTextBoxDescription";
-            this.richtTextBoxDescription.Size = new System.Drawing.Size(631, 255);
+            this.richtTextBoxDescription.Size = new System.Drawing.Size(646, 273);
             this.richtTextBoxDescription.TabIndex = 11;
             this.richtTextBoxDescription.Text = resources.GetString("richtTextBoxDescription.Text");
             // 
@@ -190,17 +193,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CharacterManager.Properties.Resources.old_paper_texture;
-            this.ClientSize = new System.Drawing.Size(660, 458);
+            this.ClientSize = new System.Drawing.Size(675, 483);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.richtTextBoxDescription);
             this.Controls.Add(this.labelDuration);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.labelComponents);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.labelRange);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.labelCastingTime);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.labelSpellType);
             this.Controls.Add(this.labelSpellName);
             this.Controls.Add(this.button1);
