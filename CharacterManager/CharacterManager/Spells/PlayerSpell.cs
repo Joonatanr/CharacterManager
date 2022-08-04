@@ -19,13 +19,35 @@ namespace CharacterManager.Spells
             CASTING_TIME_BONUS_ACTION,
             CASTING_TIME_PERIOD,
         }
+
+        public enum AreaOfEffectType
+        {
+            AOE_TYPE_NONE,
+            AOE_TYPE_CONE,
+            AOE_TYPE_SPHERE,
+            AOE_TYPE_CUBE,
+            AOE_TYPE_LINE
+        }
         
+        public enum SpellRangeType
+        {
+            RANGE_TYPE_SELF,
+            RANGE_TYPE_TOUCH,
+            RANGE_TYPE_RANGED,
+            RANGE_TYPE_NONE
+        }
+
+
         public String SpellName;
         public String Description;
+        public String AtHigherLevels;
         public String School;
         public int SpellLevel;
         public int SpellRange;
         public int SpellDuration; /* In turns, 0 means instantaneous effect. */
+        public int AoeSize = 0;
+        public AreaOfEffectType AoeType = AreaOfEffectType.AOE_TYPE_NONE;
+        public SpellRangeType RangeType = SpellRangeType.RANGE_TYPE_NONE;
 
         public CastingTimeEnum CastingTime;
         public int CastingTimePeriod; /* In number of turns, so 1 minute is 10 turns. */

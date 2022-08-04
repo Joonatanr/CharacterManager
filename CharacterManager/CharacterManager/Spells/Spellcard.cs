@@ -48,12 +48,13 @@ namespace CharacterManager.Spells
             card.ShowDialog();
         }
 
-        private void UpdateVisualComponents()
+        private void updateSpellName()
         {
-            /* 1. Update spell name. */
             labelSpellName.Text = mySpell.DisplayedName;
+        }
 
-            /* 2. Update spell type description. */
+        private void updateSpellTypeDescription()
+        {
             String txt;
             if (mySpell.SpellLevel <= 9)
             {
@@ -66,8 +67,10 @@ namespace CharacterManager.Spells
 
             txt += " " + mySpell.School;
             labelSpellType.Text = txt;
+        }
 
-            /*3. Update casting time. */
+        private void updateCastingTime()
+        {
             switch (mySpell.CastingTime)
             {
                 case PlayerSpell.CastingTimeEnum.CASTING_TIME_ACTION:
@@ -83,18 +86,54 @@ namespace CharacterManager.Spells
                         periodTxt = "Concentration, ";
                     }
                     periodTxt += getDurationString(mySpell.CastingTimePeriod);
-                    labelCastingTime.Text = periodTxt; 
+                    labelCastingTime.Text = periodTxt;
                     break;
                 default:
                     labelCastingTime.Text = "UNKNOWN";
                     break;
             }
+        }
 
-            /*4. Update Range */
-            labelRange.Text = mySpell.SpellRange.ToString() + " feet";
+        private void updateRange()
+        {
+            if (mySpell.SpellRange == 0) 
+            {
+                if(mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_SELF)
+                {
+                    string txt = "Self";
+                    
+                    if (mySpell.AoeType == PlayerSpell.AreaOfEffectType.AOE_TYPE_CONE)
+                    {
+                        txt += "(" + mySpell.AoeSize.ToString() + "-ft cone)";
+                    }
+                    else if(mySpell.AoeType == PlayerSpell.AreaOfEffectType.AOE_TYPE_SPHERE)
+                    {
+                        txt += "(" + mySpell.AoeSize.ToString() + "-ft sphere)";
+                    }
+                    else if (mySpell.AoeType == PlayerSpell.AreaOfEffectType.AOE_TYPE_CUBE)
+                    {
+                        txt += "(" + mySpell.AoeSize.ToString() + "-ft cube)";
+                    }
 
+                    labelRange.Text = txt;
+                }
+                else if(mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_TOUCH)
+                {
+                    labelRange.Text = "Touch";
+                }
+                else
+                {
+                    labelRange.Text = mySpell.SpellRange.ToString() + " feet";
+                }
+            }
+            else
+            {
+                labelRange.Text = mySpell.SpellRange.ToString() + " feet";
+            }
+        }
 
-            /*5. Update Components. */
+        private void updateComponents()
+        {
             String compString = "";
             if (mySpell.IsVerbalComponent)
             {
@@ -111,27 +150,62 @@ namespace CharacterManager.Spells
                 compString += " M";
             }
             labelComponents.Text = compString;
+        }
 
-            /*6. Update duration. */
+        private void updateDuration()
+        {
             String durString;
 
-            if(mySpell.SpellDuration > 0)
+            if (mySpell.SpellDuration > 0)
             {
                 durString = getDurationString(mySpell.SpellDuration);
             }
-            else 
+            else
             {
                 durString = "Instantaneous";
             }
 
             labelDuration.Text = durString;
+        }
+
+        private void updateDescription()
+        {
+            richtTextBoxDescription.Text = mySpell.Description;
+            richtTextBoxDescription.AppendText("\r\n\r\n");
+            if (!string.IsNullOrEmpty(mySpell.AtHigherLevels)) 
+            {
+                string str = "At higher Levels:";
+                string str1 = Environment.NewLine + mySpell.AtHigherLevels;
+                int length = richtTextBoxDescription.Text.Length;
+                richtTextBoxDescription.AppendText((Convert.ToString((str + str1) + "\r") + "\n"));
+                richtTextBoxDescription.Select(length, str.Length);
+                richtTextBoxDescription.SelectionFont = new Font(richtTextBoxDescription.Font, FontStyle.Bold);
+            }
+        }
+
+        private void UpdateVisualComponents()
+        {
+            /* 1. Update spell name. */
+            updateSpellName();
+
+            /* 2. Update spell type description. */
+            updateSpellTypeDescription();
+
+            /*3. Update casting time. */
+            updateCastingTime();
+
+            /*4. Update Range */
+            updateRange();
+
+
+            /*5. Update Components. */
+            updateComponents();
+
+            /*6. Update duration. */
+            updateDuration();
 
             /*7. Update description. */
-            richtTextBoxDescription.Text = mySpell.Description;
-
-
-            /* TODO : Separate AT Higher Levels text. - This should be done before we add a lot of spells, etc. */
-
+            updateDescription();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -142,7 +216,7 @@ namespace CharacterManager.Spells
         private String getDurationString(int turns)
         {
             String res = "";
-            if(turns <= 10)
+            if(turns < 10)
             {
                 /* Not sure if this actually happens. */
                 res = turns.ToString() + " turns";
@@ -150,7 +224,14 @@ namespace CharacterManager.Spells
             else if(turns < 600)
             {
                 int minutes = turns / 10;
-                res = minutes.ToString() + " minutes";
+                if (minutes > 1)
+                {
+                    res = minutes.ToString() + " minutes";
+                }
+                else
+                {
+                    res = "1 minute";
+                }
             }
             else
             {

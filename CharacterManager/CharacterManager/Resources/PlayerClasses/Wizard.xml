@@ -268,7 +268,32 @@
 		<string>Burning Hands</string>
 		<string>Charm Person</string>
 		<string>Chromatic Orb</string>
+		<string>Color Spray</string>
+		<string>Comprehend Languages</string>
+		<string>Detect Magic</string>
+		<string>Disguise Self</string>
+		<string>Expeditious Retreat</string>
+		<string>False Life</string>
+		<string>Feather Fall</string>
+		<string>Find Familiar</string>
+		<string>Fog Cloud</string>
+		<string>Grease</string>
+		<string>Identify</string>
+		<string>Illusory Script</string>
+		<string>Jump</string>
+		<string>Longstrider</string>
+		<string>Mage Armor</string>
+		<string>Magic Missile</string>
+		<string>Protection from Evil and Good</string>
+		<string>Ray of Sickness</string>
+		<string>Shield</string>
+		<string>Silent Image</string>
+		<string>Sleep</string>
+		<string>Tasha’s Hideous Laughter</string>
+		<string>Tenser’s Floating Disk</string>
+		<string>Thunderwave</string>
+		<string>Unseen Servant</string>
+		<string>Witch Bolt</string>
 		<!-- Level 2 Spells -->
 	</AvailableSpells>
-	
 </PlayerClass>
