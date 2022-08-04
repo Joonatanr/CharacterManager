@@ -94,7 +94,8 @@ namespace CharacterManager.CharacterCreator
 
         private void updateNumberOfChoices()
         {
-            labelNumberOfCantripsToChoose.Text = NumberOfCantripsToChoose.ToString();
+            userControlSpellChoice1.MaximumAvailableChoices = NumberOfCantripsToChoose;
+            userControlSpellChoice2.MaximumAvailableChoices = NumberOfSpellsToChoose;
         }
 
         private void updateVisualControlData()
@@ -116,9 +117,10 @@ namespace CharacterManager.CharacterCreator
             this.Close();
         }
 
+
         private void userControlSpellChoice1_SpellSelectionChanged(PlayerSpell Spell, bool isChosen)
         {
-            /* TODO : This is a placeholder. */
+            /*
             if (isChosen)
             {
                 NumberOfCantripsToChoose--;
@@ -140,6 +142,12 @@ namespace CharacterManager.CharacterCreator
             }
 
             labelNumberOfCantripsToChoose.Text = NumberOfCantripsToChoose.ToString();
+            */
+        }
+
+        private void userControlSpellChoice2_SpellSelectionChanged(PlayerSpell Spell, bool isChosen)
+        {
+
         }
     }
 }

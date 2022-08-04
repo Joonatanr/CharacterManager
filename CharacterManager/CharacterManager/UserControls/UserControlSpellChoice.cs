@@ -76,6 +76,10 @@ namespace CharacterManager.UserControls
         public bool IsMultipleLevel { get; set; } = false;
         public bool IsCheckBoxed { get; set; } = false;
 
+        public bool IsAvailabilityCount { get; set; } = true;
+        
+        public int MaximumAvailableChoices { get; set; } = 0;
+        
         /* Delegates. */
         public delegate void SpellChoiceChangedListener(PlayerSpell Spell, bool isChosen);
         public event SpellChoiceChangedListener SpellSelectionChanged;
@@ -175,6 +179,12 @@ namespace CharacterManager.UserControls
                     y++;
                 }
             }
+
+            if (IsAvailabilityCount)
+            {
+                int lastLine = getNumberOfLines() - 2;
+                drawTextOnLine(gfx, "Available : " + MaximumAvailableChoices.ToString(), lastLine);
+            }
         }
 
         private void UpdateValues()
@@ -222,7 +232,29 @@ namespace CharacterManager.UserControls
 
         private void Ctrl_SpellCheckedChanged(PlayerSpell spell, bool isChecked)
         {
-            if(SpellSelectionChanged != null)
+            if (isChecked)
+            {
+                MaximumAvailableChoices--;
+
+                if (MaximumAvailableChoices == 0)
+                {
+                    //We lock the ability to choose more cantrips...
+                    setSelectionsLocked(true);
+                }
+            }
+            else
+            {
+                MaximumAvailableChoices++;
+                if (MaximumAvailableChoices == 1)
+                {
+                    //We unlock the ability to choose more cantrips.
+                    setSelectionsLocked(false);
+                }
+            }
+
+            this.Invalidate();
+
+            if (SpellSelectionChanged != null)
             {
                 SpellSelectionChanged(spell, isChecked);
             }

@@ -50,6 +50,7 @@ namespace CharacterManager.UserControls
         public UserControlGenericListBase()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             originalHeight = this.Height;
         }
 
@@ -79,7 +80,7 @@ namespace CharacterManager.UserControls
             drawData(gfx, myFont);
 
             /* A crude automatic resizing mechanism... */
-            if (getNumberOfLines(this.Height) < maxLine) 
+            if (getNumberOfLines() < maxLine) 
             {
                 this.Height = ((maxLine + 1) * lineInterval) + 4;
             }
@@ -160,9 +161,9 @@ namespace CharacterManager.UserControls
             /* No data to draw in base class. */
         }
 
-        private int getNumberOfLines(int height)
+        protected int getNumberOfLines()
         {
-            return height / (lineInterval);
+            return this.Height / (lineInterval);
         }
 
 
