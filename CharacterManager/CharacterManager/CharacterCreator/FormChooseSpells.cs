@@ -31,7 +31,6 @@ namespace CharacterManager.CharacterCreator
 
         public void setSpellChoices(PlayerClass c)
         {
-            //setSpellChoices(c.AvailableSpells);
             if (_selectedClass != c)
             {
                 _selectedClass = c;
@@ -92,6 +91,19 @@ namespace CharacterManager.CharacterCreator
             userControlSpellChoice2.setFixedSpellListList(_myLockedSpellList);
         }
 
+        public List<PlayerSpell> getChosenPlayerSpells()
+        {
+            List<PlayerSpell> res = new List<PlayerSpell>();
+
+            List<PlayerSpell> cantrips = userControlSpellChoice1.getSelectedSpells();
+            List<PlayerSpell> level1spells = userControlSpellChoice2.getSelectedSpells();
+
+            res.AddRange(cantrips);
+            res.AddRange(level1spells);
+
+            return res;
+        }
+
         private void updateNumberOfChoices()
         {
             userControlSpellChoice1.MaximumAvailableChoices = NumberOfCantripsToChoose;
@@ -100,13 +112,32 @@ namespace CharacterManager.CharacterCreator
 
         private void updateVisualControlData()
         {
-            /* TODO */
             userControlSpellChoice1.setSpellList(_myCantripList);
             userControlSpellChoice2.setSpellList(_mySpellList);
+
+            updateSelectedSpellData();
         }
+
+        private void updateSelectedSpellData()
+        {
+            List<PlayerSpell> cantrips = userControlSpellChoice1.getSelectedSpells();
+            List<PlayerSpell> level1spells = userControlSpellChoice2.getSelectedSpells();
+
+            List<PlayerSpell> selectedSpells = new List<PlayerSpell>();
+            selectedSpells.AddRange(cantrips);
+            selectedSpells.AddRange(level1spells);
+
+            userControlChosenSpells.setSpellList(selectedSpells);
+        }
+
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
+            if (userControlSpellChoice1.MaximumAvailableChoices > 0 || userControlSpellChoice2.MaximumAvailableChoices > 0)
+            {
+                MessageBox.Show("Not all spells have been selected!");
+            }
+            
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -120,34 +151,12 @@ namespace CharacterManager.CharacterCreator
 
         private void userControlSpellChoice1_SpellSelectionChanged(PlayerSpell Spell, bool isChosen)
         {
-            /*
-            if (isChosen)
-            {
-                NumberOfCantripsToChoose--;
-
-                if (NumberOfCantripsToChoose == 0)
-                {
-                    //We lock the ability to choose more cantrips...
-                    userControlSpellChoice1.setSelectionsLocked(true);
-                }
-            }
-            else
-            {
-                NumberOfCantripsToChoose++;
-                if (NumberOfCantripsToChoose == 1)
-                {
-                    //We unlock the ability to choose more cantrips.
-                    userControlSpellChoice1.setSelectionsLocked(false);
-                }
-            }
-
-            labelNumberOfCantripsToChoose.Text = NumberOfCantripsToChoose.ToString();
-            */
+            updateSelectedSpellData();
         }
 
         private void userControlSpellChoice2_SpellSelectionChanged(PlayerSpell Spell, bool isChosen)
         {
-
+            updateSelectedSpellData();
         }
     }
 }

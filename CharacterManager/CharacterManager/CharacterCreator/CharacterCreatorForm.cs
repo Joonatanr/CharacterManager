@@ -171,6 +171,10 @@ namespace CharacterManager.CharacterCreator
 
                 /* 10.3 Add generic Equipment and tools. */
                 CreatedCharacter.CharacterGeneralEquipment = userControlGenericEquipmentList1.getAllGeneralEquipment();
+
+                /* 11 Add spells */
+                CreatedCharacter.CharacterSpells = myChooseSpellsForm.getChosenPlayerSpells();
+
             }
             else
             {

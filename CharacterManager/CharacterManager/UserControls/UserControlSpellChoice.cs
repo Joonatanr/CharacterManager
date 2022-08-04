@@ -65,6 +65,9 @@ namespace CharacterManager.UserControls
         private List<PlayerSpell> myLockedSpellList = new List<PlayerSpell>(); /* These are spells that are already chosen because they come from racial abilities etc... */
         private List<SpellHandleControl> myControlList = new List<SpellHandleControl>();
 
+        /* This dictionary should contain the line number for each spell... Needed to sync visual data. Might not be the perfect solution, but maybe this will work. */
+        private Dictionary<PlayerSpell, int> mySpellDictionary = new Dictionary<PlayerSpell, int>();
+
         /* Properties */
         private String _titleString = "Spells:";
         public String TitleString
@@ -75,9 +78,7 @@ namespace CharacterManager.UserControls
 
         public bool IsMultipleLevel { get; set; } = false;
         public bool IsCheckBoxed { get; set; } = false;
-
         public bool IsAvailabilityCount { get; set; } = true;
-        
         public int MaximumAvailableChoices { get; set; } = 0;
         
         /* Delegates. */
@@ -119,6 +120,21 @@ namespace CharacterManager.UserControls
             return res;
         }
 
+        public List<PlayerSpell> getSelectedSpells()
+        {
+            List<PlayerSpell> selectedSpells = new List<PlayerSpell>();
+            
+            foreach(SpellHandleControl ctrl in myControlList)
+            {
+                if (ctrl.isChecked)
+                {
+                    selectedSpells.Add(ctrl.Spell);
+                }
+            }
+
+            return selectedSpells;
+        }
+
         public void setSelectionsLocked(Boolean isLock)
         {
             foreach (SpellHandleControl control in myControlList)
@@ -133,50 +149,40 @@ namespace CharacterManager.UserControls
 
         protected override void drawData(Graphics gfx, Font font)
         {
+            drawTextOnLine(gfx, _titleString, 0, FontStyle.Bold);
+
             if (IsMultipleLevel) 
             {
-                drawTextOnLine(gfx, _titleString, 0, FontStyle.Bold);
                 /* TODO : Functionality first, then another look at the fonts. */
-                drawTextOnLine(gfx, "Cantrips:", 1, FontStyle.Bold);
-
-                int y = 2;
-
-                foreach(SpellHandleControl ctrl in myControlList)
+                drawTextOnLine(gfx, "Cantrips:", 2, FontStyle.Bold);
+                foreach (PlayerSpell sp in mySpellDictionary.Keys)
                 {
-                    if (ctrl.Spell.SpellLevel == 0)
-                    {
-                        drawTextOnLine(gfx, ctrl.Spell.DisplayedName, y);
-                        y++;
-                    }
+                    drawTextOnLine(gfx, sp.DisplayedName, mySpellDictionary[sp]);
                 }
 
                 for (int level = 1; level <= 9; level++)
                 {
-                    if (myControlList.Find(c => c.Spell.SpellLevel == level) != null)
-                    {
-                        y++;
-                        drawTextOnLine(gfx, "Level " + level.ToString() + " spells", y, FontStyle.Bold);
-                        y++;
+                    List<SpellHandleControl> spellControlsOfLevel = myControlList.FindAll(c => c.Spell.SpellLevel == level);
 
-                        foreach (SpellHandleControl ctrl in myControlList)
+                    if (spellControlsOfLevel.Count > 0)
+                    {
+                        int topIndex = 99999;
+                        foreach (SpellHandleControl ctrl in spellControlsOfLevel)
                         {
-                            if (ctrl.Spell.SpellLevel == level)
-                            {
-                                drawTextOnLine(gfx, ctrl.Spell.SpellName, y);
-                                y++;
-                            }
+                            topIndex = Math.Min(topIndex, mySpellDictionary[ctrl.Spell]);
                         }
+
+                        topIndex--;
+
+                        drawTextOnLine(gfx, "Level " + level.ToString() + " spells", topIndex, FontStyle.Bold);
                     }
                 }
             }
             else
             {
-                drawTextOnLine(gfx, _titleString, 0, FontStyle.Bold);
-                int y = 1;
-                foreach (SpellHandleControl ctrl in myControlList)
+                foreach (PlayerSpell sp in mySpellDictionary.Keys)
                 {
-                    drawTextOnLine(gfx, ctrl.Spell.DisplayedName, y);
-                    y++;
+                    drawTextOnLine(gfx, sp.DisplayedName, mySpellDictionary[sp]);
                 }
             }
 
@@ -192,12 +198,49 @@ namespace CharacterManager.UserControls
             this.Controls.Clear(); /* Remove any existing controls. */
             myControlList = new List<SpellHandleControl>();
 
-            int y = 0;
+            int y;
+
+            if (IsMultipleLevel)
+            {
+                y = 2;
+            }
+            else 
+            {
+                y = 1;
+             };
 
             List<PlayerSpell> combinedSpellList = mySpellList.Union(myLockedSpellList).ToList(); /* TODO : Use this list. */
+            mySpellDictionary = new Dictionary<PlayerSpell, int>();
 
+            if (IsMultipleLevel)
+            {
+                for (int level = 0; level <= 9; level++)
+                {
+                    if (combinedSpellList.Find(c => c.SpellLevel == level) != null)
+                    {
+                        y++;
 
-            foreach (PlayerSpell s in combinedSpellList)
+                        foreach (PlayerSpell spell in combinedSpellList)
+                        {
+                            if (spell.SpellLevel == level)
+                            {
+                                mySpellDictionary.Add(spell, y);
+                                y++;
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (PlayerSpell s in combinedSpellList)
+                {
+                    mySpellDictionary.Add(s, y);
+                    y++;
+                }
+            }
+
+            foreach (PlayerSpell s in mySpellDictionary.Keys)
             {
                 CustomButton iBtn = new CustomButton();
                 iBtn.Size = new Size(40, 18);
@@ -205,7 +248,7 @@ namespace CharacterManager.UserControls
                 SpellHandleControl ctrl = new SpellHandleControl(s, iBtn);
                 myControlList.Add(ctrl);
 
-                AddButtonOnLine(iBtn, y, 3);
+                AddButtonOnLine(iBtn, mySpellDictionary[s] - 1, 3); /*TODO : Looks like adding controls begins with line index 1, but text uses index 0... <sigh>*/
 
                 if (IsCheckBoxed)
                 {
@@ -223,11 +266,11 @@ namespace CharacterManager.UserControls
                         //We only add the external listener if this control is going to be modified by the user.
                         ctrl.SpellCheckedChanged += Ctrl_SpellCheckedChanged;
                     }
-                    AddControlOnLine(myCheckBox, y, 3 + iBtn.Width);
+                    AddControlOnLine(myCheckBox, mySpellDictionary[s] - 1, 3 + iBtn.Width);
                 }
-
-                y++;
             }
+
+            this.Invalidate();
         }
 
         private void Ctrl_SpellCheckedChanged(PlayerSpell spell, bool isChecked)

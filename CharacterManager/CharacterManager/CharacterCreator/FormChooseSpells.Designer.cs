@@ -63,10 +63,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlChosenSpells.AutoSize = true;
+            this.userControlChosenSpells.IsAvailabilityCount = false;
             this.userControlChosenSpells.IsBorder = true;
             this.userControlChosenSpells.IsCheckBoxed = false;
-            this.userControlChosenSpells.IsMultipleLevel = false;
+            this.userControlChosenSpells.IsMultipleLevel = true;
             this.userControlChosenSpells.Location = new System.Drawing.Point(392, 25);
+            this.userControlChosenSpells.MaximumAvailableChoices = 0;
             this.userControlChosenSpells.MinimumSize = new System.Drawing.Size(429, 585);
             this.userControlChosenSpells.Name = "userControlChosenSpells";
             this.userControlChosenSpells.Size = new System.Drawing.Size(430, 585);
@@ -78,10 +80,12 @@
             this.userControlSpellChoice2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.userControlSpellChoice2.AutoSize = true;
+            this.userControlSpellChoice2.IsAvailabilityCount = true;
             this.userControlSpellChoice2.IsBorder = true;
             this.userControlSpellChoice2.IsCheckBoxed = true;
             this.userControlSpellChoice2.IsMultipleLevel = false;
             this.userControlSpellChoice2.Location = new System.Drawing.Point(12, 321);
+            this.userControlSpellChoice2.MaximumAvailableChoices = 0;
             this.userControlSpellChoice2.MinimumSize = new System.Drawing.Size(346, 277);
             this.userControlSpellChoice2.Name = "userControlSpellChoice2";
             this.userControlSpellChoice2.Size = new System.Drawing.Size(346, 289);
@@ -91,10 +95,12 @@
             // 
             // userControlSpellChoice1
             // 
+            this.userControlSpellChoice1.IsAvailabilityCount = true;
             this.userControlSpellChoice1.IsBorder = true;
             this.userControlSpellChoice1.IsCheckBoxed = true;
             this.userControlSpellChoice1.IsMultipleLevel = false;
             this.userControlSpellChoice1.Location = new System.Drawing.Point(12, 25);
+            this.userControlSpellChoice1.MaximumAvailableChoices = 0;
             this.userControlSpellChoice1.Name = "userControlSpellChoice1";
             this.userControlSpellChoice1.Size = new System.Drawing.Size(346, 290);
             this.userControlSpellChoice1.TabIndex = 8;

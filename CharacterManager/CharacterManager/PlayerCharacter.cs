@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using CharacterManager.Items;
+using CharacterManager.Spells;
 
 namespace CharacterManager
 {
@@ -118,6 +119,8 @@ namespace CharacterManager
         public List<PlayerWeapon> CharacterWeapons = new List<PlayerWeapon>();
         public List<PlayerArmor> CharacterArmors = new List<PlayerArmor>();
         public List<PlayerItem> CharacterGeneralEquipment = new List<PlayerItem>();
+
+        public List<PlayerSpell> CharacterSpells = new List<PlayerSpell>();
 
         public int Level;
         public int ProficiencyBonus;
