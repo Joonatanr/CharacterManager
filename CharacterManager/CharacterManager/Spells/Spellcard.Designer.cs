@@ -40,7 +40,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.labelDuration = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.richtTextBoxDescription = new CharacterManager.Spells.CustomRTB();
+            this.richTextBoxDescription = new CharacterManager.Spells.CustomRTB();
             this.SuspendLayout();
             // 
             // button1
@@ -174,19 +174,19 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Duration:";
             // 
-            // richtTextBoxDescription
+            // richTextBoxDescription
             // 
-            this.richtTextBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.richTextBoxDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richtTextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richtTextBoxDescription.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.richtTextBoxDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richtTextBoxDescription.Location = new System.Drawing.Point(17, 169);
-            this.richtTextBoxDescription.Name = "richtTextBoxDescription";
-            this.richtTextBoxDescription.Size = new System.Drawing.Size(646, 273);
-            this.richtTextBoxDescription.TabIndex = 11;
-            this.richtTextBoxDescription.Text = resources.GetString("richtTextBoxDescription.Text");
+            this.richTextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBoxDescription.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.richTextBoxDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBoxDescription.Location = new System.Drawing.Point(17, 169);
+            this.richTextBoxDescription.Name = "richTextBoxDescription";
+            this.richTextBoxDescription.Size = new System.Drawing.Size(646, 273);
+            this.richTextBoxDescription.TabIndex = 11;
+            this.richTextBoxDescription.Text = resources.GetString("richTextBoxDescription.Text");
             // 
             // Spellcard
             // 
@@ -197,7 +197,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.richtTextBoxDescription);
+            this.Controls.Add(this.richTextBoxDescription);
             this.Controls.Add(this.labelDuration);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.labelComponents);
@@ -227,6 +227,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelDuration;
         private System.Windows.Forms.Label label10;
-        private CustomRTB richtTextBoxDescription;
+        private CustomRTB richTextBoxDescription;
     }
 }

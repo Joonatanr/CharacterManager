@@ -81,10 +81,6 @@ namespace CharacterManager.Spells
                     break;
                 case PlayerSpell.CastingTimeEnum.CASTING_TIME_PERIOD:
                     String periodTxt = "";
-                    if (mySpell.IsConcentration)
-                    {
-                        periodTxt = "Concentration, ";
-                    }
                     periodTxt += getDurationString(mySpell.CastingTimePeriod);
                     labelCastingTime.Text = periodTxt;
                     break;
@@ -158,6 +154,10 @@ namespace CharacterManager.Spells
 
             if (mySpell.SpellDuration > 0)
             {
+                if (mySpell.IsConcentration)
+                {
+                    durString = "Concentration, ";
+                }
                 durString = getDurationString(mySpell.SpellDuration);
             }
             else
@@ -170,16 +170,16 @@ namespace CharacterManager.Spells
 
         private void updateDescription()
         {
-            richtTextBoxDescription.Text = mySpell.Description;
-            richtTextBoxDescription.AppendText("\r\n\r\n");
+            richTextBoxDescription.Text = mySpell.Description;
+            richTextBoxDescription.AppendText("\r\n\r\n");
             if (!string.IsNullOrEmpty(mySpell.AtHigherLevels)) 
             {
                 string str = "At higher Levels:";
                 string str1 = Environment.NewLine + mySpell.AtHigherLevels;
-                int length = richtTextBoxDescription.Text.Length;
-                richtTextBoxDescription.AppendText((Convert.ToString((str + str1) + "\r") + "\n"));
-                richtTextBoxDescription.Select(length, str.Length);
-                richtTextBoxDescription.SelectionFont = new Font(richtTextBoxDescription.Font, FontStyle.Bold);
+                int length = richTextBoxDescription.Text.Length;
+                richTextBoxDescription.AppendText((Convert.ToString((str + str1) + "\r") + "\n"));
+                richTextBoxDescription.Select(length, str.Length);
+                richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
             }
         }
 
@@ -196,7 +196,6 @@ namespace CharacterManager.Spells
 
             /*4. Update Range */
             updateRange();
-
 
             /*5. Update Components. */
             updateComponents();
