@@ -234,5 +234,10 @@ namespace CharacterManager.UserControls
             rect = new Rectangle(1 + (diameter / 2), 1 + (diameter / 2), this.Size.Width - (3 + diameter), this.Size.Height - (3 + diameter));
             gfx.FillRectangle(b, rect);
         }
+
+        private void UserControlGenericListBase_SizeChanged(object sender, EventArgs e)
+        {
+            this.Invalidate();
+        }
     }
 }

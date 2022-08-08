@@ -120,7 +120,7 @@ namespace CharacterManager.UserControls
 
         private void UserControl5eBase_SizeChanged(object sender, EventArgs e)
         {
-
+            this.Invalidate();
         }
     }
 }

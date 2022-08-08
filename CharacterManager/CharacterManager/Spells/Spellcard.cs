@@ -145,6 +145,14 @@ namespace CharacterManager.Spells
             {
                 compString += " M";
             }
+
+            if(mySpell.IsMaterialComponent && !string.IsNullOrEmpty(mySpell.MaterialComponent))
+            {
+                compString += " (";
+                compString += mySpell.MaterialComponent;
+                compString += ")";
+            }
+
             labelComponents.Text = compString;
         }
 

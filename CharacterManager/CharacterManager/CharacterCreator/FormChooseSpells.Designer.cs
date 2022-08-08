@@ -30,12 +30,12 @@
         {
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.userControlChosenSpells = new CharacterManager.UserControls.UserControlSpellChoice();
-            this.userControlSpellChoice2 = new CharacterManager.UserControls.UserControlSpellChoice();
-            this.userControlSpellChoice1 = new CharacterManager.UserControls.UserControlSpellChoice();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.userControlSpellChoice2 = new CharacterManager.UserControls.UserControlSpellChoice();
+            this.userControlChosenSpells = new CharacterManager.UserControls.UserControlSpellChoice();
+            this.userControlSpellChoice1 = new CharacterManager.UserControls.UserControlSpellChoice();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -63,29 +63,40 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // userControlChosenSpells
+            // panel1
             // 
-            this.userControlChosenSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.userControlSpellChoice1);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(374, 315);
+            this.panel1.TabIndex = 13;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlChosenSpells.AutoSize = true;
-            this.userControlChosenSpells.IsAvailabilityCount = false;
-            this.userControlChosenSpells.IsBorder = true;
-            this.userControlChosenSpells.IsCheckBoxed = false;
-            this.userControlChosenSpells.IsMultipleLevel = true;
-            this.userControlChosenSpells.Location = new System.Drawing.Point(5, 10);
-            this.userControlChosenSpells.MaximumAvailableChoices = 0;
-            this.userControlChosenSpells.MinimumSize = new System.Drawing.Size(429, 585);
-            this.userControlChosenSpells.Name = "userControlChosenSpells";
-            this.userControlChosenSpells.Size = new System.Drawing.Size(429, 631);
-            this.userControlChosenSpells.TabIndex = 12;
-            this.userControlChosenSpells.TitleString = "Chosen Spells:";
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.userControlChosenSpells);
+            this.panel2.Location = new System.Drawing.Point(392, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(443, 644);
+            this.panel2.TabIndex = 14;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.AutoScroll = true;
+            this.panel3.Controls.Add(this.userControlSpellChoice2);
+            this.panel3.Location = new System.Drawing.Point(12, 333);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(374, 323);
+            this.panel3.TabIndex = 15;
             // 
             // userControlSpellChoice2
             // 
-            this.userControlSpellChoice2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.userControlSpellChoice2.AutoSize = true;
             this.userControlSpellChoice2.IsAvailabilityCount = true;
             this.userControlSpellChoice2.IsBorder = true;
             this.userControlSpellChoice2.IsCheckBoxed = true;
@@ -98,6 +109,23 @@
             this.userControlSpellChoice2.TabIndex = 9;
             this.userControlSpellChoice2.TitleString = "Level 1 Spells";
             this.userControlSpellChoice2.SpellSelectionChanged += new CharacterManager.UserControls.UserControlSpellChoice.SpellChoiceChangedListener(this.userControlSpellChoice2_SpellSelectionChanged);
+            // 
+            // userControlChosenSpells
+            // 
+            this.userControlChosenSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlChosenSpells.IsAvailabilityCount = false;
+            this.userControlChosenSpells.IsBorder = true;
+            this.userControlChosenSpells.IsCheckBoxed = false;
+            this.userControlChosenSpells.IsMultipleLevel = true;
+            this.userControlChosenSpells.Location = new System.Drawing.Point(3, 3);
+            this.userControlChosenSpells.MaximumAvailableChoices = 0;
+            this.userControlChosenSpells.MinimumSize = new System.Drawing.Size(429, 585);
+            this.userControlChosenSpells.Name = "userControlChosenSpells";
+            this.userControlChosenSpells.Size = new System.Drawing.Size(437, 638);
+            this.userControlChosenSpells.TabIndex = 12;
+            this.userControlChosenSpells.TitleString = "Chosen Spells:";
             // 
             // userControlSpellChoice1
             // 
@@ -112,33 +140,6 @@
             this.userControlSpellChoice1.TabIndex = 8;
             this.userControlSpellChoice1.TitleString = "Cantrips:";
             this.userControlSpellChoice1.SpellSelectionChanged += new CharacterManager.UserControls.UserControlSpellChoice.SpellChoiceChangedListener(this.userControlSpellChoice1_SpellSelectionChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.userControlSpellChoice1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 315);
-            this.panel1.TabIndex = 13;
-            // 
-            // panel2
-            // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.userControlChosenSpells);
-            this.panel2.Location = new System.Drawing.Point(392, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(443, 644);
-            this.panel2.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.userControlSpellChoice2);
-            this.panel3.Location = new System.Drawing.Point(12, 333);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(374, 323);
-            this.panel3.TabIndex = 15;
             // 
             // FormChooseSpells
             // 
@@ -156,9 +157,7 @@
             this.Load += new System.EventHandler(this.FormChooseSpells_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -56,6 +56,8 @@ namespace CharacterManager.Spells
         public Boolean IsMaterialComponent = false;
 
         public Boolean IsConcentration;
+
+        public String MaterialComponent = "";
        
         [XmlIgnore]
         public string DisplayedName

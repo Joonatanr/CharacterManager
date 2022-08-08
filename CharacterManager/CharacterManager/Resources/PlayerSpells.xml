@@ -432,12 +432,53 @@ the damage increases by 1d6 for each slot level above 1st.</AtHigherLevels>
 	
 	<PlayerSpell>
 		<SpellName>Charm Person</SpellName>
+		<School>Enchantment</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>30</SpellRange>
+		<RangeType>RANGE_TYPE_RANGED</RangeType>
 		<SpellLevel>1</SpellLevel>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<SpellDuration>600</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		<Description>You attempt to charm a humanoid you can see within
+range. It must make a Wisdom saving throw, and does
+so with advantage if you or your companions are fighting
+it. If it fails the saving throw, it is charmed by you until
+the spell ends or until you or your companions do
+anything harmful to it. The charmed creature regards
+you as a friendly acquaintance. When the spell ends, the
+creature knows it was charmed by you.</Description>
+		<AtHigherLevels>When you cast this spell using
+a spell slot of 2nd level or higher, you can target one
+additional creature for each slot level above 1st. The
+creatures must be within 30 feet of each other when
+you target them.</AtHigherLevels>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Chromatic Orb</SpellName>
+		<School>Evocation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>90</SpellRange>
+		<RangeType>RANGE_TYPE_RANGED</RangeType>
 		<SpellLevel>1</SpellLevel>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>a diamond worth at least 50 gp</MaterialComponent>
+		<SpellDuration>1</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		<Description>You hurl a 4-inch-diameter sphere of energy at a
+creature that you can see within range. You choose
+acid, cold, fire, lightning, poison, or thunder for the type
+of orb you create, and then make a ranged spell attack
+against the target. If the attack hits, the creature takes
+3d8 damage of the type you chose.</Description>
+		<AtHigherLevels>When you cast this spell using a
+spell slot of 2nd level or higher, the damage increases by
+1d8 for each slot level above 1st.</AtHigherLevels>
 	</PlayerSpell>
 	
 	<PlayerSpell>
