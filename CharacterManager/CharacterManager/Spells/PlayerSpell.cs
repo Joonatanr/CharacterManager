@@ -56,6 +56,7 @@ namespace CharacterManager.Spells
         public Boolean IsMaterialComponent = false;
 
         public Boolean IsConcentration;
+        public Boolean IsRitual = false;
 
         public String MaterialComponent = "";
        

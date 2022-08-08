@@ -483,17 +483,78 @@ spell slot of 2nd level or higher, the damage increases by
 	
 	<PlayerSpell>
 		<SpellName>Color Spray</SpellName>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>0</SpellRange>
+		<RangeType>RANGE_TYPE_SELF</RangeType>
+		<AoeType>AOE_TYPE_CONE</AoeType>
+		<AoeSize>15</AoeSize>
+		<School>Illusion</School>
 		<SpellLevel>1</SpellLevel>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>a pinch of powder or sand that is colored red, yellow, and blue</MaterialComponent>
+		<SpellDuration>1</SpellDuration>
+		<IsConcentration>false</IsConcentration>
+		<Description>A dazzling array of flashing, colored light springs from your hand. Roll 6 d10; 
+the total is how many hit points of creatures this spell can effect. Creatures 
+in a 15-foot cone originating from you are affected in ascending order of 
+their current hit points (ignoring unconscious creatures and creatures that can’t see).
+Starting with the creature that has the lowest current hit points, each creature 
+affected by this spell is blinded until the spell ends. Subtract each 
+creature’s hit points from the total before moving on to the creature with
+the next lowest hit points. A creature’s hit points must be equal to or 
+less than the remaining total for that creature to be affected.</Description>
+		<AtHigherLevels>When you cast this spell using a
+spell slot of 2nd level or higher, roll an additional 2d10
+for each slot level above 1st</AtHigherLevels>		
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Comprehend Languages</SpellName>
+		<School>Divination</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>0</SpellRange>
+		<RangeType>RANGE_TYPE_SELF</RangeType>
 		<SpellLevel>1</SpellLevel>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>a pinch of soot and salt</MaterialComponent>
+		<IsConcentration>false</IsConcentration>
+		<SpellDuration>600</SpellDuration>
+		<IsRitual>true</IsRitual>
+		<Description>For the duration, you understand the literal meaning of
+any spoken language that you hear. You also understand
+any written language that you see, but you must be
+touching the surface on which the words are written. 
+It takes about 1 minute to read one page of text. This spell doesn’t 
+decode secret m essages in a text or a glyph, such as an arcane sigil, 
+that isn’t part of a written language</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Detect Magic</SpellName>
+		<School>Divination</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>0</SpellRange>
+		<RangeType>RANGE_TYPE_SELF</RangeType>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<IsConcentration>true</IsConcentration>
+		<SpellDuration>100</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>true</IsRitual>
+		<Description>For the duration, you sense the presence of magic
+within 30 feet of you. If you sense magic in this way, you
+can use your action to see a faint aura around any visible
+creature or object in the area that bears magic, and you
+learn its school of magic, if any.
+
+The spell can penetrate most barriers, but it is blocked
+by 1 foot of stone, 1 inch of common metal, a thin sheet
+of lead, or 3 feet of wood or dirt.</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>

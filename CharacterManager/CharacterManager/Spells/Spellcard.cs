@@ -66,6 +66,12 @@ namespace CharacterManager.Spells
             }
 
             txt += " " + mySpell.School;
+
+            if (mySpell.IsRitual)
+            {
+                txt += " (ritual)";
+            }
+
             labelSpellType.Text = txt;
         }
 
@@ -162,11 +168,11 @@ namespace CharacterManager.Spells
 
             if (mySpell.SpellDuration > 0)
             {
+                durString = getDurationString(mySpell.SpellDuration);
                 if (mySpell.IsConcentration)
                 {
-                    durString = "Concentration, ";
-                }
-                durString = getDurationString(mySpell.SpellDuration);
+                    durString = "Concentration, up to " + durString;
+                }     
             }
             else
             {
