@@ -115,12 +115,22 @@ namespace CharacterManager
         public List<String> ArmorProficiencies = new List<String>();
         public List<String> SavingThrowProficiencies = new List<String>();
         public List<PlayerAbilityDescriptor> CharacterAbilities = new List<PlayerAbilityDescriptor>();
+        
+        /// <summary>
+        /// Contains a list of currently known spells
+        /// </summary>
+        public List<String> CharacterSpells = new List<String>();
+        /// <summary>
+        /// Contains a list of currently prepared spells. 
+        /// </summary>
+        public List<String> PreparedSpells = new List<String>();
 
         public List<PlayerWeapon> CharacterWeapons = new List<PlayerWeapon>();
         public List<PlayerArmor> CharacterArmors = new List<PlayerArmor>();
         public List<PlayerItem> CharacterGeneralEquipment = new List<PlayerItem>();
 
-        public List<PlayerSpell> CharacterSpells = new List<PlayerSpell>();
+
+        
 
         public int Level;
         public int ProficiencyBonus;

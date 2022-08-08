@@ -173,7 +173,16 @@ namespace CharacterManager.CharacterCreator
                 CreatedCharacter.CharacterGeneralEquipment = userControlGenericEquipmentList1.getAllGeneralEquipment();
 
                 /* 11 Add spells */
-                CreatedCharacter.CharacterSpells = myChooseSpellsForm.getChosenPlayerSpells();
+                /* TODO : If a class knows all available spells, then we should add all of these. */
+                List<PlayerSpell> chosenSpells = myChooseSpellsForm.getChosenPlayerSpells();
+                List<String> chosenSpellNames = new List<String>();
+
+                foreach(PlayerSpell sp in chosenSpells)
+                {
+                    chosenSpellNames.Add(sp.SpellName);
+                }
+
+                CreatedCharacter.CharacterSpells = chosenSpellNames;
 
             }
             else
