@@ -90,6 +90,9 @@ namespace CharacterManager.Spells
                     periodTxt += getDurationString(mySpell.CastingTimePeriod);
                     labelCastingTime.Text = periodTxt;
                     break;
+                case PlayerSpell.CastingTimeEnum.CASTING_TIME_REACTION:
+                    labelCastingTime.Text = "Reaction";
+                    break;
                 default:
                     labelCastingTime.Text = "UNKNOWN";
                     break;
