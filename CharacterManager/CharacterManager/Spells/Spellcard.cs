@@ -147,12 +147,12 @@ namespace CharacterManager.Spells
 
             if (mySpell.IsSomaticComponent)
             {
-                compString += " S";
+                compString += "S ";
             }
 
             if (mySpell.IsMaterialComponent)
             {
-                compString += " M";
+                compString += "M ";
             }
 
             if(mySpell.IsMaterialComponent && !string.IsNullOrEmpty(mySpell.MaterialComponent))
@@ -249,10 +249,15 @@ namespace CharacterManager.Spells
                     res = "1 minute";
                 }
             }
-            else
+            else if(turns <= 14400)
             {
                 int hours = turns / 600;
                 res = hours.ToString() + " hours";
+            }
+            else
+            {
+                int days = turns / 14400;
+                res = days.ToString() + " days";
             }
 
             return res;

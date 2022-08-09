@@ -27,7 +27,8 @@ namespace CharacterManager.Spells
             AOE_TYPE_CONE,
             AOE_TYPE_SPHERE,
             AOE_TYPE_CUBE,
-            AOE_TYPE_LINE
+            AOE_TYPE_LINE,
+            AOE_TYPE_SQUARE,
         }
         
         public enum SpellRangeType

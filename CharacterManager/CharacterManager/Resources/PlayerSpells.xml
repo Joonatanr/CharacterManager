@@ -697,47 +697,226 @@ it. If the spell requires an attack roll, you use your attack modifier for the r
 
 	<PlayerSpell>
 		<SpellName>Fog Cloud</SpellName>
+		<School>Conjuration</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>120</SpellRange>
+		<RangeType>RANGE_TYPE_RANGED</RangeType>
+		<AoeType>AOE_TYPE_SPHERE</AoeType>
+		<AoeSize>20</AoeSize>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<IsConcentration>true</IsConcentration>
+		<SpellDuration>600</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>false</IsRitual>
+		<Description>You create a 20-foot-radius sphere of fog centered on a
+point within range. The sphere spreads around corners,
+and its area is heavily obscured. It lasts for the duration
+or until a wind of moderate or greater speed (at least 10
+miles per hour) disperses it</Description>
+		<AtHigherLevels>When you cast this spell using a
+spell slot of 2nd level or higher, the radius of the fog
+increases by 20 feet for each slot level above 1st.</AtHigherLevels>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Grease</SpellName>
+		<School>Conjuration</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>60</SpellRange>
+		<RangeType>RANGE_TYPE_RANGED</RangeType>
+		<AoeType>AOE_TYPE_SQUARE</AoeType>
+		<AoeSize>10</AoeSize>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>a bit of pork rind or butter</MaterialComponent>
+		<IsConcentration>true</IsConcentration>
+		<SpellDuration>10</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>false</IsRitual>
+		<Description>Slick grease covers the ground in a 10-foot square
+centered on a point within range and turns it into
+difficult terrain for the duration.
+When the grease appears, each creature standing in
+its area must succeed on a Dexterity saving throw or fall
+prone. A creature that enters the area or ends its turn
+there must also succeed on a Dexterity saving throw
+or fall prone.</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Identify</SpellName>
+		<School>Divination</School>
+		<CastingTime>CASTING_TIME_PERIOD</CastingTime>
+		<CastingTimePeriod>10</CastingTimePeriod>
+		<SpellRange>0</SpellRange>
+		<RangeType>RANGE_TYPE_TOUCH</RangeType>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>a pearl worth at least 100 gp and an owl feather</MaterialComponent>
+		<IsConcentration>false</IsConcentration>
+		<SpellDuration>0</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>false</IsRitual>
+		<Description>You choose one object that you must touch throughout
+the casting of the spell. If it is a magic item or som e
+other magic-imbued object, you learn its properties
+and how to use them, whether it requires attunement
+to use, and how many charges it has, if any. You learn
+whether any spells are affecting the item and what they
+are. If the item was created by a spell, you learn which
+spell created it.
+
+If you instead touch a creature throughout the casting,
+you learn what spells, if any, are currently affecting it.</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Illusory Script</SpellName>
+		<School>Illusion</School>
+		<CastingTime>CASTING_TIME_PERIOD</CastingTime>
+		<CastingTimePeriod>10</CastingTimePeriod>
+		<SpellRange>0</SpellRange>
+		<RangeType>RANGE_TYPE_TOUCH</RangeType>
+		<IsVerbalComponent>false</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>a lead-based ink worth at least 10gp, which the spell consumes</MaterialComponent>
+		<IsConcentration>false</IsConcentration>
+		<SpellDuration>144000</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>false</IsRitual>
+		<Description>You write on parchment, paper, or some other suitable
+writing material and imbue it with a potent illusion that
+lasts for the duration.
+
+To you and any creatures you designate when you
+cast the spell, the writing appears normal, written in
+your hand, and conveys whatever meaning you intended
+when you wrote the text. To all others, the writing
+appears as if it were written in an unknown or magical
+script that is unintelligible. Alternatively, you can cause
+the writing to appear to be an entirely different message,
+written in a different hand and language, though the
+language must be one you know. 
+
+Should the spell be dispelled, the original script and
+the illusion both disappear.
+
+A creature with truesight can read the hidden message.</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Jump</SpellName>
+		<School>Transmutation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>0</SpellRange>
+		<RangeType>RANGE_TYPE_TOUCH</RangeType>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>a grasshopper’s hind leg</MaterialComponent>
+		<IsConcentration>false</IsConcentration>
+		<SpellDuration>10</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>false</IsRitual>
+		<Description>You touch a creature. The creature’s jump distance is
+tripled until the spell ends.</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Longstrider</SpellName>
+		<School>Transmutation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>0</SpellRange>
+		<RangeType>RANGE_TYPE_TOUCH</RangeType>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>a pinch of dirt</MaterialComponent>
+		<IsConcentration>false</IsConcentration>
+		<SpellDuration>600</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>false</IsRitual>
+		<Description>You touch a creature. The target’s speed increases by 10
+feet until the spell ends.</Description>
+		<AtHigherLevels>When you cast this spell using
+a spell slot of 2nd level or higher, you can target one
+additional creature for each slot level above 1st.</AtHigherLevels>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Mage Armor</SpellName>
+		<School>Abjuration</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>0</SpellRange>
+		<RangeType>RANGE_TYPE_TOUCH</RangeType>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>a piece of cured leather</MaterialComponent>
+		<IsConcentration>false</IsConcentration>
+		<SpellDuration>4800</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>false</IsRitual>
+		<Description>You touch a willing creature who isn’t wearing armor,
+and a protective magical force surrounds it until the
+spell ends. The target’s base AC becom es 13 + its
+Dexterity modifier. The spell ends if the target dons
+armor or if you dismiss the spell as an action.</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Magic Missile</SpellName>
+		<School>Evocation</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>120</SpellRange>
+		<RangeType>RANGE_TYPE_RANGED</RangeType>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>false</IsMaterialComponent>
+		<IsConcentration>false</IsConcentration>
+		<SpellDuration>1</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>false</IsRitual>
+		<Description>You create three glowing darts of magical force. Each
+dart hits a creature of your choice that you can see
+within range. A dart deals 1d4 + 1 force damage to its
+target. The darts all strike simultaneously, and you can
+direct them to hit one creature or several.</Description>
+		<AtHigherLevels>When you cast this spell using a
+spell slot of 2nd level or higher, the spell creates one
+more dart for each slot level above 1st.</AtHigherLevels>
 	</PlayerSpell>
 	
 	<PlayerSpell>
 		<SpellName>Protection from Evil and Good</SpellName>
+		<School>Abjuration</School>
+		<CastingTime>CASTING_TIME_ACTION</CastingTime>
+		<SpellRange>0</SpellRange>
+		<RangeType>RANGE_TYPE_TOUCH</RangeType>
+		<IsVerbalComponent>true</IsVerbalComponent>
+		<IsSomaticComponent>true</IsSomaticComponent>
+		<IsMaterialComponent>true</IsMaterialComponent>
+		<MaterialComponent>holy water or powdered silver and iron, which the spell consumes</MaterialComponent>
+		<IsConcentration>true</IsConcentration>
+		<SpellDuration>100</SpellDuration>
 		<SpellLevel>1</SpellLevel>
+		<IsRitual>false</IsRitual>
+		<Description>Until the spell ends, one willing creature you
+touch is protected against certain types of
+creatures: aberrations, celestials, elementals, fey,
+fiends, and undead.
+The protection grants several benefits. Creatures of
+those types have disadvantage on attack rolls against
+the target. The target also can’t be charmed, frightened,
+or possessed by them. If the target is already charmed,
+frightened, or possessed by such a creature, the target
+has advantage on any new saving throw against the
+relevant effect.</Description>
 	</PlayerSpell>
 	
 	<PlayerSpell>
