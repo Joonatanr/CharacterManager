@@ -15,6 +15,9 @@ namespace CharacterManager.UserControls
         private Boolean isActive = true; /* Usually when a slot is added then in the beginning it is active and available. */
         private Boolean isMouseSelecting = false;
 
+        public delegate void SpellSlotCheckedChanged();
+
+        public event SpellSlotCheckedChanged SpellSlotCheckedChangedByUser;
 
         public Boolean IsActive
         {
@@ -78,6 +81,10 @@ namespace CharacterManager.UserControls
         private void UserControlSpellSlotIndicator_MouseClick(object sender, MouseEventArgs e)
         {
             IsActive = !isActive;
+            if (SpellSlotCheckedChangedByUser!= null)
+            {
+                SpellSlotCheckedChangedByUser.Invoke();
+            }
         }
 
         private void UserControlSpellSlotIndicator_MouseEnter(object sender, EventArgs e)
