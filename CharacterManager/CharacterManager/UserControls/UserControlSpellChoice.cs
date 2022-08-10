@@ -21,7 +21,7 @@ namespace CharacterManager.UserControls
             public delegate void SpellCheckedChangedListener(PlayerSpell spell, bool isChecked);
             public event SpellCheckedChangedListener SpellCheckedChanged;
 
-            public Boolean isChecked { get { return _chkBox.Checked; } }
+            public Boolean isChecked { get { return _chkBox.Checked; } set { _chkBox.Checked = value; } }
             public Boolean isEnabled { get { return _chkBox.Enabled; } set { if (!IsLocked) { _chkBox.Enabled = value; } } }
             public Boolean IsLocked { get { return _isLocked;  } set { _isLocked = value; if (_isLocked) { _chkBox.Checked = true; _chkBox.Enabled = false; } } }
 
@@ -97,6 +97,18 @@ namespace CharacterManager.UserControls
         {
             myLockedSpellList = spellList;
             UpdateValues();
+        }
+
+        public void setSpellSelection(string spell, bool isSelected)
+        {
+            foreach(SpellHandleControl ctrl in myControlList)
+            {
+                if (ctrl.Spell.SpellName == spell)
+                {
+                    ctrl.isChecked = isSelected;
+                    break;
+                }
+            }
         }
 
         public bool removeSpellFromList(PlayerSpell spell)
@@ -286,7 +298,7 @@ namespace CharacterManager.UserControls
 
                 if (MaximumAvailableChoices == 0)
                 {
-                    //We lock the ability to choose more cantrips...
+                    //We lock the ability to choose more spells...
                     setSelectionsLocked(true);
                 }
             }
@@ -295,7 +307,7 @@ namespace CharacterManager.UserControls
                 MaximumAvailableChoices++;
                 if (MaximumAvailableChoices == 1)
                 {
-                    //We unlock the ability to choose more cantrips.
+                    //We unlock the ability to choose more spells.
                     setSelectionsLocked(false);
                 }
             }

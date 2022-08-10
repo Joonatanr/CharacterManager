@@ -2,11 +2,11 @@
 	<PlayerClassName>Wizard</PlayerClassName>
 	<HitDie>6</HitDie>
 	<WeaponProficiencies>
-		<string>Daggers</string>
-		<string>Darts</string>
-		<string>Slings</string>
-		<string>Quarterstaffs</string>
-		<string>Light Crossbows</string>
+		<string>Dagger</string>
+		<string>Dart</string>
+		<string>Sling</string>
+		<string>Quarterstaff</string>
+		<string>Light Crossbow</string>
 	</WeaponProficiencies>
 	<ArmorProficiencies>
 	</ArmorProficiencies>
@@ -92,6 +92,7 @@
 		<SpellCastingAttribute>INT</SpellCastingAttribute>
 		<NumberOfInitialCantrips>3</NumberOfInitialCantrips>
 		<NumberOfInitialLev1Spells>6</NumberOfInitialLev1Spells>
+		<SpellPreparation>PREPARATION_FULL</SpellPreparation>
 	</SpellCasting>	
 	
 	<SpellSlotsPerLevel>

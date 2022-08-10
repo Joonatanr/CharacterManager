@@ -957,7 +957,7 @@ spell slot of 2nd level or higher, the damage increases by
 		<SpellDuration>1</SpellDuration>
 		<SpellLevel>1</SpellLevel>
 		<IsRitual>false</IsRitual>
-		<Description>An invisible barrier of m agical force appears and
+		<Description>An invisible barrier of magical force appears and
 protects you. Until the start of your next turn, you have a
 +5 bonus to AC, including against the triggering attack,
 and you take no damage from magic missile.

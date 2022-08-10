@@ -30,21 +30,22 @@ namespace CharacterManager.UserControls
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.userControlSpellcastingAbility = new CharacterManager.UserControls.UserControlGenericValue();
-            this.userControlSpellsaveDc = new CharacterManager.UserControls.UserControlGenericValue();
-            this.userControlSpellAttackBonus = new CharacterManager.UserControls.UserControlGenericValue();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.userControlCantripList = new CharacterManager.UserControls.UserControlSpellChoice();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.userControlKnownSpells = new CharacterManager.UserControls.UserControlSpellChoice();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.userControlPreparedSpells = new CharacterManager.UserControls.UserControlSpellChoice();
+            this.userControlKnownSpells = new CharacterManager.UserControls.UserControlSpellChoice();
+            this.userControlCantripList = new CharacterManager.UserControls.UserControlSpellChoice();
+            this.userControlMaxPreparedSpells = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlSpellAttackBonus = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlSpellsaveDc = new CharacterManager.UserControls.UserControlGenericValue();
+            this.userControlSpellcastingAbility = new CharacterManager.UserControls.UserControlGenericValue();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -64,10 +65,39 @@ namespace CharacterManager.UserControls
             this.groupBox1.Text = "SpellCasting";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.Controls.Add(this.userControlPreparedSpells);
+            this.panel3.Location = new System.Drawing.Point(558, 119);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(296, 601);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.Controls.Add(this.userControlKnownSpells);
+            this.panel2.Location = new System.Drawing.Point(256, 119);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(296, 601);
+            this.panel2.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.userControlCantripList);
+            this.panel1.Location = new System.Drawing.Point(6, 119);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(247, 230);
+            this.panel1.TabIndex = 1;
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.userControlMaxPreparedSpells);
             this.groupBox2.Controls.Add(this.userControlSpellAttackBonus);
             this.groupBox2.Controls.Add(this.userControlSpellsaveDc);
             this.groupBox2.Controls.Add(this.userControlSpellcastingAbility);
@@ -77,43 +107,38 @@ namespace CharacterManager.UserControls
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
-            // userControlSpellcastingAbility
+            // userControlPreparedSpells
             // 
-            this.userControlSpellcastingAbility.IsBorder = true;
-            this.userControlSpellcastingAbility.Label = "Spellcasting Ability";
-            this.userControlSpellcastingAbility.Location = new System.Drawing.Point(6, 10);
-            this.userControlSpellcastingAbility.Name = "userControlSpellcastingAbility";
-            this.userControlSpellcastingAbility.Size = new System.Drawing.Size(128, 78);
-            this.userControlSpellcastingAbility.TabIndex = 1;
-            this.userControlSpellcastingAbility.Value = "INT";
+            this.userControlPreparedSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlPreparedSpells.IsAvailabilityCount = false;
+            this.userControlPreparedSpells.IsBorder = true;
+            this.userControlPreparedSpells.IsCheckBoxed = false;
+            this.userControlPreparedSpells.IsMultipleLevel = false;
+            this.userControlPreparedSpells.Location = new System.Drawing.Point(3, 3);
+            this.userControlPreparedSpells.MaximumAvailableChoices = 0;
+            this.userControlPreparedSpells.Name = "userControlPreparedSpells";
+            this.userControlPreparedSpells.Size = new System.Drawing.Size(293, 595);
+            this.userControlPreparedSpells.TabIndex = 1;
+            this.userControlPreparedSpells.TitleString = "Prepared Spells";
             // 
-            // userControlSpellsaveDc
+            // userControlKnownSpells
             // 
-            this.userControlSpellsaveDc.IsBorder = true;
-            this.userControlSpellsaveDc.Label = "Spell DC";
-            this.userControlSpellsaveDc.Location = new System.Drawing.Point(140, 10);
-            this.userControlSpellsaveDc.Name = "userControlSpellsaveDc";
-            this.userControlSpellsaveDc.Size = new System.Drawing.Size(128, 78);
-            this.userControlSpellsaveDc.TabIndex = 2;
-            this.userControlSpellsaveDc.Value = "8";
-            // 
-            // userControlSpellAttackBonus
-            // 
-            this.userControlSpellAttackBonus.IsBorder = true;
-            this.userControlSpellAttackBonus.Label = "Spell Attack Bonus";
-            this.userControlSpellAttackBonus.Location = new System.Drawing.Point(274, 10);
-            this.userControlSpellAttackBonus.Name = "userControlSpellAttackBonus";
-            this.userControlSpellAttackBonus.Size = new System.Drawing.Size(128, 78);
-            this.userControlSpellAttackBonus.TabIndex = 3;
-            this.userControlSpellAttackBonus.Value = "+0";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.userControlCantripList);
-            this.panel1.Location = new System.Drawing.Point(6, 119);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 192);
-            this.panel1.TabIndex = 1;
+            this.userControlKnownSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlKnownSpells.IsAvailabilityCount = true;
+            this.userControlKnownSpells.IsBorder = true;
+            this.userControlKnownSpells.IsCheckBoxed = true;
+            this.userControlKnownSpells.IsMultipleLevel = true;
+            this.userControlKnownSpells.Location = new System.Drawing.Point(3, 3);
+            this.userControlKnownSpells.MaximumAvailableChoices = 0;
+            this.userControlKnownSpells.Name = "userControlKnownSpells";
+            this.userControlKnownSpells.Size = new System.Drawing.Size(290, 595);
+            this.userControlKnownSpells.TabIndex = 0;
+            this.userControlKnownSpells.TitleString = "Known Spells";
+            this.userControlKnownSpells.SpellSelectionChanged += new CharacterManager.UserControls.UserControlSpellChoice.SpellChoiceChangedListener(this.userControlKnownSpells_SpellSelectionChanged);
             // 
             // userControlCantripList
             // 
@@ -127,57 +152,50 @@ namespace CharacterManager.UserControls
             this.userControlCantripList.Location = new System.Drawing.Point(5, 3);
             this.userControlCantripList.MaximumAvailableChoices = 0;
             this.userControlCantripList.Name = "userControlCantripList";
-            this.userControlCantripList.Size = new System.Drawing.Size(239, 186);
+            this.userControlCantripList.Size = new System.Drawing.Size(239, 224);
             this.userControlCantripList.TabIndex = 0;
             this.userControlCantripList.TitleString = "Cantrips";
             // 
-            // panel2
+            // userControlMaxPreparedSpells
             // 
-            this.panel2.Controls.Add(this.userControlKnownSpells);
-            this.panel2.Location = new System.Drawing.Point(256, 119);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(296, 528);
-            this.panel2.TabIndex = 2;
+            this.userControlMaxPreparedSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlMaxPreparedSpells.IsBorder = true;
+            this.userControlMaxPreparedSpells.Label = "Maximum Prepared Spells";
+            this.userControlMaxPreparedSpells.Location = new System.Drawing.Point(681, 10);
+            this.userControlMaxPreparedSpells.Name = "userControlMaxPreparedSpells";
+            this.userControlMaxPreparedSpells.Size = new System.Drawing.Size(161, 78);
+            this.userControlMaxPreparedSpells.TabIndex = 4;
+            this.userControlMaxPreparedSpells.Value = "0";
             // 
-            // panel3
+            // userControlSpellAttackBonus
             // 
-            this.panel3.Controls.Add(this.userControlPreparedSpells);
-            this.panel3.Location = new System.Drawing.Point(558, 119);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(296, 528);
-            this.panel3.TabIndex = 3;
+            this.userControlSpellAttackBonus.IsBorder = true;
+            this.userControlSpellAttackBonus.Label = "Spell Attack Bonus";
+            this.userControlSpellAttackBonus.Location = new System.Drawing.Point(274, 10);
+            this.userControlSpellAttackBonus.Name = "userControlSpellAttackBonus";
+            this.userControlSpellAttackBonus.Size = new System.Drawing.Size(128, 78);
+            this.userControlSpellAttackBonus.TabIndex = 3;
+            this.userControlSpellAttackBonus.Value = "+0";
             // 
-            // userControlKnownSpells
+            // userControlSpellsaveDc
             // 
-            this.userControlKnownSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlKnownSpells.IsAvailabilityCount = false;
-            this.userControlKnownSpells.IsBorder = true;
-            this.userControlKnownSpells.IsCheckBoxed = true;
-            this.userControlKnownSpells.IsMultipleLevel = true;
-            this.userControlKnownSpells.Location = new System.Drawing.Point(3, 3);
-            this.userControlKnownSpells.MaximumAvailableChoices = 0;
-            this.userControlKnownSpells.Name = "userControlKnownSpells";
-            this.userControlKnownSpells.Size = new System.Drawing.Size(290, 522);
-            this.userControlKnownSpells.TabIndex = 0;
-            this.userControlKnownSpells.TitleString = "Known Spells";
+            this.userControlSpellsaveDc.IsBorder = true;
+            this.userControlSpellsaveDc.Label = "Spell DC";
+            this.userControlSpellsaveDc.Location = new System.Drawing.Point(140, 10);
+            this.userControlSpellsaveDc.Name = "userControlSpellsaveDc";
+            this.userControlSpellsaveDc.Size = new System.Drawing.Size(128, 78);
+            this.userControlSpellsaveDc.TabIndex = 2;
+            this.userControlSpellsaveDc.Value = "8";
             // 
-            // userControlPreparedSpells
+            // userControlSpellcastingAbility
             // 
-            this.userControlPreparedSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlPreparedSpells.IsAvailabilityCount = true;
-            this.userControlPreparedSpells.IsBorder = true;
-            this.userControlPreparedSpells.IsCheckBoxed = true;
-            this.userControlPreparedSpells.IsMultipleLevel = false;
-            this.userControlPreparedSpells.Location = new System.Drawing.Point(3, 3);
-            this.userControlPreparedSpells.MaximumAvailableChoices = 0;
-            this.userControlPreparedSpells.Name = "userControlPreparedSpells";
-            this.userControlPreparedSpells.Size = new System.Drawing.Size(293, 522);
-            this.userControlPreparedSpells.TabIndex = 1;
-            this.userControlPreparedSpells.TitleString = "Prepared Spells";
+            this.userControlSpellcastingAbility.IsBorder = true;
+            this.userControlSpellcastingAbility.Label = "Spellcasting Ability";
+            this.userControlSpellcastingAbility.Location = new System.Drawing.Point(6, 10);
+            this.userControlSpellcastingAbility.Name = "userControlSpellcastingAbility";
+            this.userControlSpellcastingAbility.Size = new System.Drawing.Size(128, 78);
+            this.userControlSpellcastingAbility.TabIndex = 1;
+            this.userControlSpellcastingAbility.Value = "INT";
             // 
             // UserControlMagicHandler
             // 
@@ -188,10 +206,10 @@ namespace CharacterManager.UserControls
             this.Size = new System.Drawing.Size(866, 732);
             this.Load += new System.EventHandler(this.UserControlMagicHandler_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -209,5 +227,6 @@ namespace CharacterManager.UserControls
         private System.Windows.Forms.Panel panel2;
         private UserControlSpellChoice userControlKnownSpells;
         private UserControlSpellChoice userControlPreparedSpells;
+        private UserControlGenericValue userControlMaxPreparedSpells;
     }
 }

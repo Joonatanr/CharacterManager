@@ -15,6 +15,7 @@ namespace CharacterManager.Spells
         public int SpellSaveDC;
         public int SpellAttackBonus;
         public int MaxNumberOfPreparedSpells;
+        public int SpellAbilityModifier;
 
         /// <summary>
         /// TODO

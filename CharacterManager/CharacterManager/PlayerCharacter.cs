@@ -476,6 +476,8 @@ namespace CharacterManager
                 this.CharacterSpellCasting.SpellAttackBonus = modifier + this.ProficiencyBonus;
                 this.CharacterSpellCasting.SpellSaveDC = modifier + this.ProficiencyBonus + 8;
                 this.CharacterSpellCasting.SpellCastingAbility = spellcastingAttribute;
+                this.CharacterSpellCasting.MaxNumberOfPreparedSpells = this.GetPlayerClass().SpellCasting.GetMaximumNumberOfPreparedSpells(modifier, this.Level);
+                this.CharacterSpellCasting.SpellAbilityModifier = modifier;
             }
         }
 

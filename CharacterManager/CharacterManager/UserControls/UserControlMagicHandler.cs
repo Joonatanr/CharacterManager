@@ -15,7 +15,6 @@ namespace CharacterManager.UserControls
     {
         private CharacterSpellcastingStatus myStat;
         private List<PlayerSpell> myKnownSpells = new List<PlayerSpell>();
-        private List<PlayerSpell> myPreparedSpells = new List<PlayerSpell>();
         private List<PlayerSpell> myKnownCantrips = new List<PlayerSpell>();
         
         public UserControlMagicHandler()
@@ -27,7 +26,6 @@ namespace CharacterManager.UserControls
         {
             myStat = stat;
 
-            myPreparedSpells = new List<PlayerSpell>();
             myKnownSpells = new List<PlayerSpell>();
             myKnownCantrips = new List<PlayerSpell>();
 
@@ -51,7 +49,17 @@ namespace CharacterManager.UserControls
 
             userControlCantripList.setSpellList(myKnownCantrips);
             userControlKnownSpells.setSpellList(myKnownSpells);
-            userControlSpellcastingAbility.Value = myStat.SpellCastingAbility;
+
+            string abilityString = myStat.SpellCastingAbility + "(";
+
+            if (myStat.SpellAbilityModifier > 0)
+            {
+                abilityString += "+";
+            }
+            abilityString += myStat.SpellAbilityModifier.ToString();
+            abilityString += ")";
+
+            userControlSpellcastingAbility.Value = abilityString;
 
             string atckBonus = "";
             if(myStat.SpellAttackBonus >= 0) 
@@ -62,6 +70,28 @@ namespace CharacterManager.UserControls
             atckBonus+= myStat.SpellAttackBonus.ToString();
             userControlSpellAttackBonus.Value = atckBonus;
             userControlSpellsaveDc.Value = myStat.SpellSaveDC.ToString();
+
+            /* Simplistic approach first, TODO */
+            int maxPreparedSpells = myStat.MaxNumberOfPreparedSpells;
+            if (maxPreparedSpells > 0)
+            {
+                userControlMaxPreparedSpells.Value = myStat.MaxNumberOfPreparedSpells.ToString();
+                userControlKnownSpells.MaximumAvailableChoices = myStat.MaxNumberOfPreparedSpells;
+
+                if (myStat.PreparedSpells != null)
+                {
+                    foreach (string sp in myStat.PreparedSpells)
+                    {
+                        /* We must programmatically set the selected spells... */
+                        userControlKnownSpells.setSpellSelection(sp, true);
+                    }
+                }
+            }
+            else
+            {
+                userControlMaxPreparedSpells.Value = "N/A";
+                /* TODO : Should somehow hide or disable the user control for preparing spells. */
+            }
         }
 
         private void userControlSpellChoice1_Load(object sender, EventArgs e)
@@ -77,6 +107,25 @@ namespace CharacterManager.UserControls
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void userControlKnownSpells_SpellSelectionChanged(PlayerSpell Spell, bool isChosen)
+        {
+            List<PlayerSpell> preparedSpells = userControlKnownSpells.getSelectedSpells();
+            myStat.PreparedSpells = getSpellNamesFromList(preparedSpells);
+            userControlPreparedSpells.setSpellList(preparedSpells);
+        }
+
+        private static List<string> getSpellNamesFromList(List<PlayerSpell> spells)
+        {
+            List<String> res = new List<string>();
+
+            foreach(PlayerSpell sp in spells)
+            {
+                res.Add(sp.SpellName);
+            }
+
+            return res;
         }
     }
 }
