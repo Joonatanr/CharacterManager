@@ -232,6 +232,18 @@
     <Compile Include="UserControls\UserControlSpellSlotIndicator.Designer.cs">
       <DependentUpon>UserControlSpellSlotIndicator.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlSpellSlotRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlSpellSlotRow.Designer.cs">
+      <DependentUpon>UserControlSpellSlotRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlSpellSlotsArea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlSpellSlotsArea.Designer.cs">
+      <DependentUpon>UserControlSpellSlotsArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlToolProficiencyChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -323,6 +335,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlSpellSlotIndicator.resx">
       <DependentUpon>UserControlSpellSlotIndicator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlSpellSlotRow.resx">
+      <DependentUpon>UserControlSpellSlotRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlSpellSlotsArea.resx">
+      <DependentUpon>UserControlSpellSlotsArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlToolProficiencyChoice.resx">
       <DependentUpon>UserControlToolProficiencyChoice.cs</DependentUpon>

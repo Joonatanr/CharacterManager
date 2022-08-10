@@ -1,6 +1,7 @@
-﻿namespace CharacterManager.UserControls
+﻿
+namespace CharacterManager.UserControls
 {
-    partial class UserControlSpellSlotIndicator
+    partial class UserControlSpellSlotRow
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,23 +29,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // UserControlSpellSlotIndicator
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Level 1";
+            // 
+            // UserControlSpellSlotRow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControlSpellSlotIndicator";
-            this.Size = new System.Drawing.Size(24, 25);
-            this.Load += new System.EventHandler(this.UserControlSpellSlotIndicator_Load);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.UserControlSpellSlotIndicator_Paint);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UserControlSpellSlotIndicator_MouseClick);
-            this.MouseEnter += new System.EventHandler(this.UserControlSpellSlotIndicator_MouseEnter);
-            this.MouseLeave += new System.EventHandler(this.UserControlSpellSlotIndicator_MouseLeave);
+            this.Controls.Add(this.label1);
+            this.Name = "UserControlSpellSlotRow";
+            this.Size = new System.Drawing.Size(150, 34);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

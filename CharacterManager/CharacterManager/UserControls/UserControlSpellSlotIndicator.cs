@@ -12,7 +12,9 @@ namespace CharacterManager.UserControls
 {
     public partial class UserControlSpellSlotIndicator : UserControl
     {
-        private Boolean isActive;
+        private Boolean isActive = true; /* Usually when a slot is added then in the beginning it is active and available. */
+        private Boolean isMouseSelecting = false;
+
 
         public Boolean IsActive
         {
@@ -44,14 +46,50 @@ namespace CharacterManager.UserControls
 
             Rectangle contentRect = new Rectangle(new Point(2,2), new Size(this.Width - 5, this.Height - 5));
 
-            if (isActive)
+            if (!isMouseSelecting)
             {
-                gfx.FillEllipse(new SolidBrush(Color.Green), contentRect);
+                if (isActive)
+                {
+                    gfx.FillEllipse(new SolidBrush(Color.Green), contentRect);
+                }
+                else
+                {
+                    gfx.FillEllipse(new SolidBrush(Color.DarkRed), contentRect);
+                }
             }
             else
             {
-                gfx.FillEllipse(new SolidBrush(Color.Red), contentRect);
+                if (isActive)
+                {
+                    gfx.FillEllipse(new SolidBrush(Color.LightGreen), contentRect);
+                }
+                else
+                {
+                    gfx.FillEllipse(new SolidBrush(Color.Red), contentRect);
+                }
             }
+        }
+
+        private void UserControlSpellSlotIndicator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserControlSpellSlotIndicator_MouseClick(object sender, MouseEventArgs e)
+        {
+            IsActive = !isActive;
+        }
+
+        private void UserControlSpellSlotIndicator_MouseEnter(object sender, EventArgs e)
+        {
+            isMouseSelecting = true;
+            this.Invalidate();
+        }
+
+        private void UserControlSpellSlotIndicator_MouseLeave(object sender, EventArgs e)
+        {
+            isMouseSelecting = false;
+            this.Invalidate();
         }
     }
 }
