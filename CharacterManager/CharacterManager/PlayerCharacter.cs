@@ -265,6 +265,8 @@ namespace CharacterManager
             }
         }
 
+
+
         [XmlIgnore]
         public int PassivePerception
         {
@@ -414,7 +416,7 @@ namespace CharacterManager
                     res += "1d20 + " + hitBonus.ToString();
                 }
 
-                res += " : " + getBaseDamage(w);
+                res += " : " + w.getBaseDamage();
                 res += " + ";
 
                 int damageBonus = getDamageBonus(w);
@@ -462,6 +464,18 @@ namespace CharacterManager
             foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
             {
                 ability.RemainingCharges = ability.MaximumCharges;
+            }
+        }
+
+        internal void UpdateSpellModifiers()
+        {
+            if (this.IsCharacterSpellCasting())
+            {
+                string spellcastingAttribute = this.GetPlayerClass().SpellCasting.SpellCastingAttribute;
+                int modifier = getModifier(spellcastingAttribute);
+                this.CharacterSpellCasting.SpellAttackBonus = modifier + this.ProficiencyBonus;
+                this.CharacterSpellCasting.SpellSaveDC = modifier + this.ProficiencyBonus + 8;
+                this.CharacterSpellCasting.SpellCastingAbility = spellcastingAttribute;
             }
         }
 
@@ -660,22 +674,6 @@ namespace CharacterManager
             }
 
             /* TODO : Check for additional effects... */
-
-            return res;
-        }
-
-        private String getBaseDamage(PlayerWeapon w)
-        {
-            String res = "";
-            
-            if (w.IsVersatile && w.IsEquippedTwoHanded)
-            {
-                res += w.TwoHandedDamage.DamageValue;
-            }
-            else
-            {
-                res += w.Damage.DamageValue;
-            }
 
             return res;
         }

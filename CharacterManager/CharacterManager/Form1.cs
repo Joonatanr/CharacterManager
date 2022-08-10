@@ -123,6 +123,7 @@ namespace CharacterManager
                 if (activeCharacter.IsCharacterSpellCasting())
                 {
                     userControlMagicHandler1.Visible = true;
+                    this.activeCharacter.UpdateSpellModifiers();
                     userControlMagicHandler1.setCharSpellcastingStatus(this.activeCharacter.CharacterSpellCasting);
                 }
                 else

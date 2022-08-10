@@ -63,6 +63,7 @@
             this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
             this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
             this.tabPageMagic = new System.Windows.Forms.TabPage();
+            this.userControlMagicHandler1 = new CharacterManager.UserControls.UserControlMagicHandler();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxRace = new System.Windows.Forms.TextBox();
@@ -81,7 +82,6 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.userControlMagicHandler1 = new CharacterManager.UserControls.UserControlMagicHandler();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -118,6 +118,9 @@
             // 
             // toolStripContainer1
             // 
+            this.toolStripContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // toolStripContainer1.ContentPanel
             // 
@@ -138,6 +141,9 @@
             // tabControl1
             // 
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPageCharacter);
             this.tabControl1.Controls.Add(this.tabPageMagic);
             this.tabControl1.Location = new System.Drawing.Point(3, 94);
@@ -443,8 +449,20 @@
             this.tabPageMagic.Text = "Magic";
             this.tabPageMagic.UseVisualStyleBackColor = true;
             // 
+            // userControlMagicHandler1
+            // 
+            this.userControlMagicHandler1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlMagicHandler1.Location = new System.Drawing.Point(0, 6);
+            this.userControlMagicHandler1.Name = "userControlMagicHandler1";
+            this.userControlMagicHandler1.Size = new System.Drawing.Size(1034, 798);
+            this.userControlMagicHandler1.TabIndex = 0;
+            // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBoxName);
@@ -457,6 +475,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.textBoxRace);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.buttonAddXp);
@@ -494,6 +514,7 @@
             // 
             // buttonAddXp
             // 
+            this.buttonAddXp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddXp.Location = new System.Drawing.Point(782, 37);
             this.buttonAddXp.Name = "buttonAddXp";
             this.buttonAddXp.Size = new System.Drawing.Size(58, 23);
@@ -503,6 +524,7 @@
             // 
             // textBoxXP
             // 
+            this.textBoxXP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxXP.Location = new System.Drawing.Point(675, 40);
             this.textBoxXP.Name = "textBoxXP";
             this.textBoxXP.ReadOnly = true;
@@ -511,6 +533,7 @@
             // 
             // textBoxAlignment
             // 
+            this.textBoxAlignment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAlignment.Location = new System.Drawing.Point(675, 15);
             this.textBoxAlignment.Name = "textBoxAlignment";
             this.textBoxAlignment.ReadOnly = true;
@@ -519,6 +542,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label5.Location = new System.Drawing.Point(537, 40);
@@ -529,6 +553,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.Location = new System.Drawing.Point(537, 16);
@@ -614,13 +639,6 @@
             this.toolStripButtonLoad.Size = new System.Drawing.Size(37, 22);
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
-            // 
-            // userControlMagicHandler1
-            // 
-            this.userControlMagicHandler1.Location = new System.Drawing.Point(0, 6);
-            this.userControlMagicHandler1.Name = "userControlMagicHandler1";
-            this.userControlMagicHandler1.Size = new System.Drawing.Size(1034, 798);
-            this.userControlMagicHandler1.TabIndex = 0;
             // 
             // Form1
             // 

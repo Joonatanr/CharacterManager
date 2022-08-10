@@ -154,7 +154,12 @@ namespace CharacterManager.UserControls
             if (IsMultipleLevel) 
             {
                 /* TODO : Functionality first, then another look at the fonts. */
-                drawTextOnLine(gfx, "Cantrips:", 2, FontStyle.Bold);
+
+                /* Check if we have any cantrips... */
+                if (myControlList.Find(c => c.Spell.SpellLevel == 0) != null)
+                {
+                    drawTextOnLine(gfx, "Cantrips:", 2, FontStyle.Bold);
+                }
                 foreach (PlayerSpell sp in mySpellDictionary.Keys)
                 {
                     drawTextOnLine(gfx, sp.DisplayedName, mySpellDictionary[sp]);

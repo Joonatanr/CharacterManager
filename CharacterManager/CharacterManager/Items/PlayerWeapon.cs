@@ -101,6 +101,22 @@ namespace CharacterManager.Items
             }
         }
 
+        public String getBaseDamage()
+        {
+            String res = "";
+
+            if (IsVersatile && IsEquippedTwoHanded)
+            {
+                res += TwoHandedDamage.DamageValue;
+            }
+            else
+            {
+                res += Damage.DamageValue;
+            }
+
+            return res;
+        }
+
         public PlayerWeapon Clone()
         {
             return (PlayerWeapon)this.MemberwiseClone();

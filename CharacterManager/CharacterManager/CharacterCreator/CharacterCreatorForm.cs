@@ -183,6 +183,7 @@ namespace CharacterManager.CharacterCreator
                 }
 
                 CreatedCharacter.KnownSpells = chosenSpellNames;
+                CreatedCharacter.UpdateSpellModifiers();
 
             }
             else
