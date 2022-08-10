@@ -62,6 +62,7 @@
             this.AttributeDisplayWIS = new CharacterManager.UserControlAttributeDisplay();
             this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
             this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
+            this.tabPageMagic = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxRace = new System.Windows.Forms.TextBox();
@@ -75,12 +76,12 @@
             this.textBoxClass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPageMagic = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonNew = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.userControlMagicHandler1 = new CharacterManager.UserControls.UserControlMagicHandler();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -88,6 +89,7 @@
             this.tabPageCharacter.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabPageMagic.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -430,6 +432,17 @@
             this.AttributeDisplayCON.Size = new System.Drawing.Size(109, 116);
             this.AttributeDisplayCON.TabIndex = 11;
             // 
+            // tabPageMagic
+            // 
+            this.tabPageMagic.Controls.Add(this.userControlMagicHandler1);
+            this.tabPageMagic.Location = new System.Drawing.Point(4, 4);
+            this.tabPageMagic.Name = "tabPageMagic";
+            this.tabPageMagic.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMagic.Size = new System.Drawing.Size(1034, 804);
+            this.tabPageMagic.TabIndex = 1;
+            this.tabPageMagic.Text = "Magic";
+            this.tabPageMagic.UseVisualStyleBackColor = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -560,16 +573,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Class";
             // 
-            // tabPageMagic
-            // 
-            this.tabPageMagic.Location = new System.Drawing.Point(4, 4);
-            this.tabPageMagic.Name = "tabPageMagic";
-            this.tabPageMagic.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMagic.Size = new System.Drawing.Size(1034, 895);
-            this.tabPageMagic.TabIndex = 1;
-            this.tabPageMagic.Text = "Magic";
-            this.tabPageMagic.UseVisualStyleBackColor = true;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -612,6 +615,13 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
+            // userControlMagicHandler1
+            // 
+            this.userControlMagicHandler1.Location = new System.Drawing.Point(0, 6);
+            this.userControlMagicHandler1.Name = "userControlMagicHandler1";
+            this.userControlMagicHandler1.Size = new System.Drawing.Size(1034, 798);
+            this.userControlMagicHandler1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -631,6 +641,7 @@
             this.tabPageCharacter.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.tabPageMagic.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -694,6 +705,7 @@
         private System.Windows.Forms.Button buttonLongRest;
         private System.Windows.Forms.Button buttonRegisterDamage;
         private System.Windows.Forms.Button buttonHeal;
+        private UserControls.UserControlMagicHandler userControlMagicHandler1;
     }
 }
 

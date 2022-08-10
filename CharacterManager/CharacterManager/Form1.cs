@@ -118,6 +118,18 @@ namespace CharacterManager
 
                 //13. Update initiative bonus.
                 updateInitiativeBonus();
+
+                //14. Update Magic and Spellcasting.
+                if (activeCharacter.IsCharacterSpellCasting())
+                {
+                    userControlMagicHandler1.Visible = true;
+                    userControlMagicHandler1.setCharSpellcastingStatus(this.activeCharacter.CharacterSpellCasting);
+                }
+                else
+                {
+                    userControlMagicHandler1.Visible = false;
+                    userControlMagicHandler1.setCharSpellcastingStatus(null);
+                }
             }
         }
 

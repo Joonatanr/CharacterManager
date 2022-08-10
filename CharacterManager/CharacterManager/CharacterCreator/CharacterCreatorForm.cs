@@ -182,7 +182,7 @@ namespace CharacterManager.CharacterCreator
                     chosenSpellNames.Add(sp.SpellName);
                 }
 
-                CreatedCharacter.CharacterSpells = chosenSpellNames;
+                CreatedCharacter.KnownSpells = chosenSpellNames;
 
             }
             else

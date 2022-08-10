@@ -119,6 +119,7 @@
     <Compile Include="SpecialAttributes\PlayerClassAbility.cs" />
     <Compile Include="SpecialAttributes\SpecialAttribute.cs" />
     <Compile Include="SpecialAttributes\SpellcastingAbility.cs" />
+    <Compile Include="Spells\CharacterSpellcastingStatus.cs" />
     <Compile Include="Spells\PlayerSpell.cs" />
     <Compile Include="Spells\Spellcard.cs">
       <SubType>Form</SubType>
@@ -197,6 +198,12 @@
     </Compile>
     <Compile Include="UserControls\UserControlHitPoints.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlMagicHandler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlMagicHandler.Designer.cs">
+      <DependentUpon>UserControlMagicHandler.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlProficiency.cs">
       <SubType>UserControl</SubType>
@@ -301,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlGenericListBase.resx">
       <DependentUpon>UserControlGenericListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlMagicHandler.resx">
+      <DependentUpon>UserControlMagicHandler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlProficiency.resx">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>

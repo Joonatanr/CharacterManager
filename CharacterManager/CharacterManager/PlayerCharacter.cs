@@ -119,18 +119,17 @@ namespace CharacterManager
         /// <summary>
         /// Contains a list of currently known spells
         /// </summary>
-        public List<String> CharacterSpells = new List<String>();
+        //public List<String> CharacterSpells = new List<String>(); /* TODO : Move these under the spellcastingstatus object. */
         /// <summary>
         /// Contains a list of currently prepared spells. 
         /// </summary>
-        public List<String> PreparedSpells = new List<String>();
+        //public List<String> PreparedSpells = new List<String>();
 
         public List<PlayerWeapon> CharacterWeapons = new List<PlayerWeapon>();
         public List<PlayerArmor> CharacterArmors = new List<PlayerArmor>();
         public List<PlayerItem> CharacterGeneralEquipment = new List<PlayerItem>();
 
-
-        
+        public CharacterSpellcastingStatus CharacterSpellCasting = new CharacterSpellcastingStatus();
 
         public int Level;
         public int ProficiencyBonus;
@@ -140,6 +139,20 @@ namespace CharacterManager
 
         public PlayerSize Size;
         public PlayerAlignment Alignment;
+
+        [XmlIgnore]
+        public List<string> KnownSpells
+        {
+            get { return CharacterSpellCasting.KnownSpells;     }
+            set { CharacterSpellCasting.KnownSpells = value;    }
+        }
+
+        [XmlIgnore]
+        public List<string> PreparedSpells
+        {
+            get { return CharacterSpellCasting.PreparedSpells;  }
+            set { CharacterSpellCasting.PreparedSpells = value; }        
+        }
 
         [XmlIgnore]
         public CharacterBonusValues BonusValues = new CharacterBonusValues();
@@ -267,6 +280,7 @@ namespace CharacterManager
             }
         }
 
+
         public int CurrentHitPoints
         {
             get
@@ -324,6 +338,22 @@ namespace CharacterManager
         {
             /* Should be called only when creating a new character. */
             CharacterCreated?.Invoke(this);
+        }
+
+        public Boolean IsCharacterSpellCasting()
+        {
+            Boolean res = false;
+            PlayerClass myClass = this.GetPlayerClass();
+            
+            if (myClass.SpellCasting != null)
+            {
+                if (myClass.SpellCasting.SpellCastingAttribute != null)
+                {
+                    res = true;
+                }       
+            }
+
+            return res;
         }
 
         internal void PrepareDataForSaving()
@@ -601,6 +631,13 @@ namespace CharacterManager
             return ac;
         }
 
+
+        public PlayerClass GetPlayerClass()
+        {
+            /* TODO : If ever we add multiclassing, then this needs to be refactored. */
+            /* We return the actual object in this case. */
+            return CharacterFactory.getPlayerClassByName(this.ClassName);
+        }
 
         /*************************** Private functions **************************/
         private int getHitBonus(PlayerWeapon w)
