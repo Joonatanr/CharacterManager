@@ -1,131 +1,360 @@
-<PlayerClass>
-	<PlayerClassName>Fighter</PlayerClassName>
-	<HitDie>10</HitDie>
-	<WeaponProficiencies>
-		<string>Martial Weapons</string>
-		<string>Simple Weapons</string>
-	</WeaponProficiencies>
-	<ArmorProficiencies>
-		<string>Light Armor</string>
-		<string>Medium Armor</string>
-		<string>Heavy Armor</string>
-		<string>Shields</string>
-	</ArmorProficiencies>
-	<SavingThrowProficiencies>
-		<string>STR</string>
-		<string>CON</string>
-	</SavingThrowProficiencies>
-	<AvailableSkillProficiencies>
-		<string>Acrobatics</string>
-		<string>Animal Handling</string>
-		<string>Athletics</string>
-		<string>Insight</string>
-		<string>History</string>
-		<string>Intimidation</string>
-		<string>Perception</string>
-		<string>Survival</string>
-	</AvailableSkillProficiencies>
-	<NumberOfSkillsToChoose>2</NumberOfSkillsToChoose>
-	
-	<AvailableEquipment>
-		<EquipmentChoiceList>
-			<optionA>
-				<EquipmentChoice>
-					<Equipment>Chain Mail</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>
-			</optionA>
-			<optionB>
-				<EquipmentChoice>
-					<Equipment>Leather</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>
-				<EquipmentChoice>
-					<Equipment>Longbow</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>
-				<EquipmentChoice>
-					<Equipment>Arrows</Equipment>
-					<Quantity>20</Quantity>
-				</EquipmentChoice>
-			</optionB>
-		</EquipmentChoiceList>
-		<EquipmentChoiceList>
-			<optionA>
-				<EquipmentChoice>
-					<Equipment>AnyMartial</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>
-				<EquipmentChoice>
-					<Equipment>Shield</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>				
-			</optionA>
-			<optionB>
-				<EquipmentChoice>
-					<Equipment>AnyMartial</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>
-				<EquipmentChoice>
-					<Equipment>AnyMartial</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>
-			</optionB>
-		</EquipmentChoiceList>
-		<EquipmentChoiceList>
-			<optionA>
-				<EquipmentChoice>
-					<Equipment>Crossbow, Light</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>
-				<EquipmentChoice>
-					<Equipment>Bolts</Equipment>
-					<Quantity>20</Quantity>
-				</EquipmentChoice>				
-			</optionA>
-			<optionB>
-				<EquipmentChoice>
-					<Equipment>Handaxe</Equipment>
-					<Quantity>2</Quantity>
-				</EquipmentChoice>
-			</optionB>
-		</EquipmentChoiceList>
-		<EquipmentChoiceList>
-			<optionA>
-				<EquipmentChoice>
-					<Equipment>Dungeoneer's Pack</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>		
-			</optionA>
-			<optionB>
-				<EquipmentChoice>
-					<Equipment>Explorer's Pack</Equipment>
-					<Quantity>1</Quantity>
-				</EquipmentChoice>
-			</optionB>
-		</EquipmentChoiceList>
-	</AvailableEquipment>
-	
-	<AvailableClassAbilities>	
-		<PlayerClassAbilityChoice>
-			<ClassAbilityName>Fighting Style</ClassAbilityName>
-			<Description>You adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</Description>
-			<AvailableChoices>
-				<string>Archery Fighting Style</string>
-				<string>Defense Fighting Style</string>
-				<string>Dueling Fighting Style</string>
-				<string>Great Weapon Fighting Style</string>
-				<string>Protection Fighting Style</string>
-				<string>Two-Weapon Fighting Style</string>	
-			</AvailableChoices>
-		</PlayerClassAbilityChoice>
-		
-		<PlayerClassAbilityChoice>
-			<ClassAbilityName>Second Wind</ClassAbilityName>
-			<Description>You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d 10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.</Description>
-			<AvailableChoices>
-					<string>Second Wind</string>
-			</AvailableChoices>
-		</PlayerClassAbilityChoice>
-	</AvailableClassAbilities>
+<?xml version="1.0" encoding="utf-8"?>
+<PlayerClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PlayerClassName>Fighter</PlayerClassName>
+  <HitDie>10</HitDie>
+  <WeaponProficiencies>
+    <string>Martial Weapons</string>
+    <string>Simple Weapons</string>
+  </WeaponProficiencies>
+  <ArmorProficiencies>
+    <string>Light Armor</string>
+    <string>Medium Armor</string>
+    <string>Heavy Armor</string>
+    <string>Shields</string>
+  </ArmorProficiencies>
+  <SavingThrowProficiencies>
+    <string>STR</string>
+    <string>CON</string>
+  </SavingThrowProficiencies>
+  <AvailableSkillProficiencies>
+    <string>Acrobatics</string>
+    <string>Animal Handling</string>
+    <string>Athletics</string>
+    <string>Insight</string>
+    <string>History</string>
+    <string>Intimidation</string>
+    <string>Perception</string>
+    <string>Survival</string>
+  </AvailableSkillProficiencies>
+  <NumberOfSkillsToChoose>2</NumberOfSkillsToChoose>
+  <AvailableEquipment>
+    <EquipmentChoiceList>
+      <optionA>
+        <EquipmentChoice>
+          <Equipment>Chain Mail</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionA>
+      <optionB>
+        <EquipmentChoice>
+          <Equipment>Leather</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+        <EquipmentChoice>
+          <Equipment>Longbow</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+        <EquipmentChoice>
+          <Equipment>Arrows</Equipment>
+          <Quantity>20</Quantity>
+        </EquipmentChoice>
+      </optionB>
+      <optionC />
+      <optionD />
+    </EquipmentChoiceList>
+    <EquipmentChoiceList>
+      <optionA>
+        <EquipmentChoice>
+          <Equipment>AnyMartial</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+        <EquipmentChoice>
+          <Equipment>Shield</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionA>
+      <optionB>
+        <EquipmentChoice>
+          <Equipment>AnyMartial</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+        <EquipmentChoice>
+          <Equipment>AnyMartial</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionB>
+      <optionC />
+      <optionD />
+    </EquipmentChoiceList>
+    <EquipmentChoiceList>
+      <optionA>
+        <EquipmentChoice>
+          <Equipment>Crossbow, Light</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+        <EquipmentChoice>
+          <Equipment>Bolts</Equipment>
+          <Quantity>20</Quantity>
+        </EquipmentChoice>
+      </optionA>
+      <optionB>
+        <EquipmentChoice>
+          <Equipment>Handaxe</Equipment>
+          <Quantity>2</Quantity>
+        </EquipmentChoice>
+      </optionB>
+      <optionC />
+      <optionD />
+    </EquipmentChoiceList>
+    <EquipmentChoiceList>
+      <optionA>
+        <EquipmentChoice>
+          <Equipment>Dungeoneer's Pack</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionA>
+      <optionB>
+        <EquipmentChoice>
+          <Equipment>Explorer's Pack</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionB>
+      <optionC />
+      <optionD />
+    </EquipmentChoiceList>
+  </AvailableEquipment>
+  <AvailableSpells />
+  <SpellslotPerLevel>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+    <SpellSlots_T>
+      <NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+    </SpellSlots_T>
+  </SpellslotPerLevel>
+  <AvailableClassAbilities>
+    <PlayerClassAbilityChoice>
+      <Description>You adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</Description>
+      <ClassAbilityName>Fighting Style</ClassAbilityName>
+      <AvailableChoices>
+        <string>Archery Fighting Style</string>
+        <string>Defense Fighting Style</string>
+        <string>Dueling Fighting Style</string>
+        <string>Great Weapon Fighting Style</string>
+        <string>Protection Fighting Style</string>
+        <string>Two-Weapon Fighting Style</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
+    <PlayerClassAbilityChoice>
+      <Description>You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d 10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.</Description>
+      <ClassAbilityName>Second Wind</ClassAbilityName>
+      <AvailableChoices>
+        <string>Second Wind</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
+  </AvailableClassAbilities>
 </PlayerClass>

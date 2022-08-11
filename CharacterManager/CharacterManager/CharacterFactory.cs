@@ -433,6 +433,13 @@ namespace CharacterManager
 
                     curr = ((PlayerClass)reader.Deserialize(file));
                     Classes.Add(curr);
+
+                    /* Only for debug... */
+                    
+                    //StreamWriter sw = new System.IO.StreamWriter(filepath + "OUT");
+                    //reader.Serialize(sw, curr);
+                    //sw.Flush();
+                    //sw.Close();
                     file.Close();
                 }
                 catch (Exception ex)
