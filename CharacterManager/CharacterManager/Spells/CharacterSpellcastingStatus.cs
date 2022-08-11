@@ -17,13 +17,19 @@ namespace CharacterManager.Spells
         public int MaxNumberOfPreparedSpells;
         public int SpellAbilityModifier;
 
-        public struct SpellSlotData
+        public class SpellSlotData
         {
             public int MaximumCount;
             public int ActiveCount;
 
 
-            public SpellSlotData(int max, int active) : this()
+            public SpellSlotData()
+            {
+                this.MaximumCount = 0;
+                this.ActiveCount = 0;
+            }
+
+            public SpellSlotData(int max, int active)
             {
                 this.MaximumCount = max;
                 this.ActiveCount = active;

@@ -92,6 +92,9 @@ namespace CharacterManager.UserControls
                 userControlMaxPreparedSpells.Value = "N/A";
                 /* TODO : Should somehow hide or disable the user control for preparing spells. */
             }
+
+            /* Lets update the spell slot data. */
+            userControlSpellSlotsArea1.setSpellSlotData(1, myStat.Level1SpellSlots);
         }
 
         private void userControlSpellChoice1_Load(object sender, EventArgs e)

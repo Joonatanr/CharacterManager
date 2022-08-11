@@ -7,20 +7,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CharacterManager.Spells.CharacterSpellcastingStatus;
 
 namespace CharacterManager.UserControls
 {
     public partial class UserControlSpellSlotRow : UserControl
     {
-        private int number_of_slots = 3; /* Set some sane default value */
-        
+        //private int number_of_slots = 3; /* Set some sane default value */
+        private SpellSlotData mySpellSlotData = new SpellSlotData(3, 3);
+
+        public SpellSlotData SpellSlots
+        {
+            get
+            {
+                return mySpellSlotData;
+            }
+
+            set
+            {
+                mySpellSlotData = value;
+                updateNumberOfSlots();
+            }
+        }
+
         public int NumberOfSlots
         {
-            get { return number_of_slots; }
+            get { return mySpellSlotData.MaximumCount; }
             
             set
             {
-                number_of_slots = value;
+                mySpellSlotData.MaximumCount = value;
                 updateNumberOfSlots();
             }
         }
@@ -29,51 +45,14 @@ namespace CharacterManager.UserControls
         {
             get
             {
-                int res = 0;
-
-                foreach(UserControl ctrl in this.Controls)
-                {
-                    if(ctrl is UserControlSpellSlotIndicator)
-                    {
-                        if ((ctrl as UserControlSpellSlotIndicator).IsActive)
-                        {
-                            res++;
-                        }
-                    }
-                }
-
-                return res;
+                return mySpellSlotData.ActiveCount;
             }
 
             set
             {
-                int val = 0;
-                if(value >= NumberOfSlots)
-                {
-                    val = NumberOfSlots;
-                }
-                else
-                {
-                    val = value;
-                }
-
-                foreach (UserControl ctrl in this.Controls)
-                {
-                    if (ctrl is UserControlSpellSlotIndicator)
-                    {
-                        if (val > 0)
-                        {
-                            val--;
-                            (ctrl as UserControlSpellSlotIndicator).IsActive = true;
-                        }
-                        else
-                        {
-                            (ctrl as UserControlSpellSlotIndicator).IsActive = false;
-                        }
-                    }
-                }
-
+                mySpellSlotData.ActiveCount = value;
             }
+
         }
 
 
@@ -92,6 +71,18 @@ namespace CharacterManager.UserControls
             InitializeComponent();
         }
 
+        private void HandleUserChangedSpellSlot(bool isChecked)
+        {
+            if (isChecked)
+            {
+                mySpellSlotData.ActiveCount++;
+            }
+            else
+            {
+                mySpellSlotData.ActiveCount--;
+            }    
+        }
+
         private void updateNumberOfSlots()
         {
             /* First clear any existing indicators. */
@@ -103,14 +94,27 @@ namespace CharacterManager.UserControls
                 }
             }
 
+            int activeCount = mySpellSlotData.ActiveCount;
+
             /* Next lets set up some indicators. */
-            for (int x = 0; x < number_of_slots; x++)
+            for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
             {
                 UserControlSpellSlotIndicator indicator = new UserControlSpellSlotIndicator();
                 indicator.Left = (x * 20) + label1.Right + 4;
                 
                 indicator.Top = (this.Height / 2) - (indicator.Height / 2);
 
+                if(activeCount > 0)
+                {
+                    indicator.IsActive = true;
+                    activeCount--;
+                }
+                else
+                {
+                    indicator.IsActive = false;
+                }
+
+                indicator.SpellSlotCheckedChangedByUser += new UserControlSpellSlotIndicator.SpellSlotCheckedChanged(HandleUserChangedSpellSlot);
 
                 this.Controls.Add(indicator);
             }

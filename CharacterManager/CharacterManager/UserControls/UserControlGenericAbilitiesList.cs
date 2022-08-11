@@ -64,7 +64,7 @@ namespace CharacterManager.UserControls
             /// <summary>
             /// This is called if the user manually presses one of the spell slots and therefore spends or restores a charge.
             /// </summary>
-            private void handleActiveSpellSlotsChangedByUser()
+            private void handleActiveSpellSlotsChangedByUser(bool IsChecked)
             {
                 int cnt = 0;
 
