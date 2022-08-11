@@ -364,16 +364,29 @@ namespace CharacterManager
             List<PlayerAbility> resultList = new List<PlayerAbility>();
             foreach (PlayerAbilityDescriptor attribDesc in raw.CharacterAbilities)
             {
-                PlayerAbility member = AttributesList.Find(attrib => attrib.AttributeName == attribDesc.AbilityName);
-                if (member != null)
+                PlayerAbility member = null;
+                if (attribDesc.AbilityName == "Spellcasting")
                 {
-                    attribDesc.ConnectedObject = member;
-                    member.RemainingCharges = attribDesc.RemainingCharges; /* TODO : This information also needs to be passed the other way back. */
-                    member.IsActive = attribDesc.IsActive;
-                    resultList.Add(member);
+                    /* We search for this from the class description instead. */
+                    PlayerClass pClass = raw.GetPlayerClass();
+                    member = pClass.SpellCasting;
                 }
                 else
                 {
+                    member = AttributesList.Find(attrib => attrib.AttributeName == attribDesc.AbilityName);
+                }
+                    
+                if (member != null)
+                {
+                        attribDesc.ConnectedObject = member;
+                        member.RemainingCharges = attribDesc.RemainingCharges; /* TODO : This information also needs to be passed the other way back. */
+                        member.IsActive = attribDesc.IsActive;
+                        resultList.Add(member);
+                }
+                else
+                {
+                    /* TODO : Actually report error. */
+                    /* Maybe returning false is not a good idea? Maybe just skip this one and report an error? */
                     return false;
                 }
             }
