@@ -65,7 +65,29 @@ namespace CharacterManager
 
         public SpellcastingAbility SpellCasting = null;
         public List<String> AvailableSpells = new List<String>();
-        public SpellSlots_T [] SpellslotPerLevel = new SpellSlots_T[20];
+        public SpellSlots_T[] SpellslotPerLevel = new SpellSlots_T[20]
+        {
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+        }; 
 
         /* TODO : This probably needs to be able to support multiple choices etc... Lets make a simple test for now. */
         /* Also note that for the time being this is only for level1, so we really need to expand this quite  alot. */

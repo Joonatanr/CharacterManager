@@ -25,6 +25,58 @@ namespace CharacterManager.UserControls
             }
         }
 
+        public int NumberOfRemainingSlots
+        {
+            get
+            {
+                int res = 0;
+
+                foreach(UserControl ctrl in this.Controls)
+                {
+                    if(ctrl is UserControlSpellSlotIndicator)
+                    {
+                        if ((ctrl as UserControlSpellSlotIndicator).IsActive)
+                        {
+                            res++;
+                        }
+                    }
+                }
+
+                return res;
+            }
+
+            set
+            {
+                int val = 0;
+                if(value >= NumberOfSlots)
+                {
+                    val = NumberOfSlots;
+                }
+                else
+                {
+                    val = value;
+                }
+
+                foreach (UserControl ctrl in this.Controls)
+                {
+                    if (ctrl is UserControlSpellSlotIndicator)
+                    {
+                        if (val > 0)
+                        {
+                            val--;
+                            (ctrl as UserControlSpellSlotIndicator).IsActive = true;
+                        }
+                        else
+                        {
+                            (ctrl as UserControlSpellSlotIndicator).IsActive = false;
+                        }
+                    }
+                }
+
+            }
+        }
+
+
         public string LabelName
         {
             get { return label1.Text; }

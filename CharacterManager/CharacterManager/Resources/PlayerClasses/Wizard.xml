@@ -104,145 +104,145 @@
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>2</NumberOfLev2SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>2</NumberOfLev3SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>1</NumberOfLev4SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>2</NumberOfLev4SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>1</NumberOfLev5SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
-			<NumberOfLev1SpellSlots>1</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>2</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
 		</SpellSlots_T>		
 	</SpellSlotsPerLevel>
 	

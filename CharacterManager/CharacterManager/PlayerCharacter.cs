@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using CharacterManager.Items;
 using CharacterManager.Spells;
+using static CharacterManager.Spells.CharacterSpellcastingStatus;
 
 namespace CharacterManager
 {
@@ -653,6 +654,16 @@ namespace CharacterManager
             /* TODO : If ever we add multiclassing, then this needs to be refactored. */
             /* We return the actual object in this case. */
             return CharacterFactory.getPlayerClassByName(this.ClassName);
+        }
+
+        public void setSpellSlotData(int level, SpellSlotData data)
+        {
+            this.CharacterSpellCasting.setSpellSlotDataForLevel(level, data);
+        }
+
+        public SpellSlotData getSpellSlotData(int level)
+        {
+            return this.CharacterSpellCasting.getSpellSlotDataForLevel(level);
         }
 
         /*************************** Private functions **************************/

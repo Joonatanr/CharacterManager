@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CharacterManager.Items;
 using CharacterManager.Spells;
 using CharacterManager.UserControls;
+using static CharacterManager.Spells.CharacterSpellcastingStatus;
 
 namespace CharacterManager.CharacterCreator
 {
@@ -183,6 +184,11 @@ namespace CharacterManager.CharacterCreator
                 }
 
                 CreatedCharacter.KnownSpells = chosenSpellNames;
+
+                SpellSlotData dataForLevel1Spellslots;
+                dataForLevel1Spellslots.MaximumCount = SelectedClass.SpellslotPerLevel[0].getNumberOfSlotsPerLevel(1);
+                dataForLevel1Spellslots.ActiveCount = dataForLevel1Spellslots.MaximumCount;
+                CreatedCharacter.setSpellSlotData(1, dataForLevel1Spellslots);
                 CreatedCharacter.UpdateSpellModifiers();
 
             }
