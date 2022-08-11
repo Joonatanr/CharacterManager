@@ -16,8 +16,7 @@ namespace CharacterManager.UserControls
         private Boolean isMouseSelecting = false;
 
         public delegate void SpellSlotCheckedChanged();
-
-        public event SpellSlotCheckedChanged SpellSlotCheckedChangedByUser;
+        public SpellSlotCheckedChanged SpellSlotCheckedChangedByUser;
 
         public Boolean IsActive
         {

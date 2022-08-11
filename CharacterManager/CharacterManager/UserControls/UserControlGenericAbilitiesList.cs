@@ -21,6 +21,10 @@ namespace CharacterManager.UserControls
             public delegate Boolean UseAbilityButtonHandler(PlayerAbility ability);
             public UseAbilityButtonHandler UseAbilityButtonClicked;
 
+            public delegate void ChangeAbilityChargesManuallyHandler(PlayerAbility ability, int numberOfActiveButtons);
+            public ChangeAbilityChargesManuallyHandler changeAbilityChargesManually;
+
+
             /* TODO */
             public UserControlSpellSlotIndicator [] slotArray;
 
@@ -50,10 +54,32 @@ namespace CharacterManager.UserControls
                 
                 for (int x = 0; x < cnt; x++)
                 {
-                    slotArray[x] = slots[x];    
+                    slotArray[x] = slots[x];
+                    slotArray[x].SpellSlotCheckedChangedByUser = handleActiveSpellSlotsChangedByUser;
                 }
 
                 setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+            }
+
+            /// <summary>
+            /// This is called if the user manually presses one of the spell slots and therefore spends or restores a charge.
+            /// </summary>
+            private void handleActiveSpellSlotsChangedByUser()
+            {
+                int cnt = 0;
+
+                foreach (UserControlSpellSlotIndicator indicator in slotArray)
+                {
+                    if (indicator.IsActive)
+                    {
+                        cnt++;
+                    }
+                }
+                
+                if (changeAbilityChargesManually != null)
+                {
+                    changeAbilityChargesManually.Invoke(Attribute, cnt);
+                }
             }
 
             private void setNumberOfSpellSlotsActive(int cnt)
@@ -179,6 +205,7 @@ namespace CharacterManager.UserControls
 
                         cData.setUseButton(useButton);
                         cData.UseAbilityButtonClicked = handleUseAbilityButton;
+                        cData.changeAbilityChargesManually = SpellSlotIndicatorChangedManuallyHandler;
 
                         UserControlSpellSlotIndicator [] arr = new UserControlSpellSlotIndicator[attrib.MaximumCharges];
 
@@ -211,6 +238,12 @@ namespace CharacterManager.UserControls
             {
                return PlayerAbilityUsed.Invoke(ability);
             }
+        }
+
+        private void SpellSlotIndicatorChangedManuallyHandler(PlayerAbility ability, int cnt)
+        {
+            /* Soo... we get the amount of buttons that are checked first. Then we adjust the ability remaining uses accordingly. */
+            ability.RemainingCharges = cnt;
         }
 
         protected override void drawData(Graphics gfx, Font font)
