@@ -29,6 +29,12 @@ namespace CharacterManager.UserControls
             myKnownSpells = new List<PlayerSpell>();
             myKnownCantrips = new List<PlayerSpell>();
 
+            if (stat == null)
+            {
+                //Nothing to add here... 
+                return;
+            }
+
             foreach(string sp in stat.KnownSpells)
             {
                 PlayerSpell obj = CharacterFactory.getPlayerSpellFromString(sp);
