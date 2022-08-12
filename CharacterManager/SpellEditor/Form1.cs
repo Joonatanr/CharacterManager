@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using CharacterManager.Spells;
-
+using static CharacterManager.Spells.PlayerSpell;
 
 namespace SpellEditor
 {
@@ -22,6 +22,10 @@ namespace SpellEditor
         public Form1()
         {
             InitializeComponent();
+
+            comboBoxAoeType.DataSource = Enum.GetValues(typeof(AreaOfEffectType));
+            comboBoxRangeType.DataSource = Enum.GetValues(typeof(SpellRangeType));
+            comboBoxCastingTimeType.DataSource = Enum.GetValues(typeof(CastingTimeEnum));
         }
 
         private void parseSpellsFromXml(String filepath)
@@ -34,7 +38,8 @@ namespace SpellEditor
 
                 foreach(PlayerSpell spell in SpellList)
                 {
-                    listView1.Items.Add(spell.SpellName);
+                    listBox1.Items.Add(spell.SpellName);
+                    //listView1.Items.Add(spell.SpellName);
                 }
 
                 file.Close();
