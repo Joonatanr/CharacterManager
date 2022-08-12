@@ -98,6 +98,11 @@ namespace CharacterManager.Spells
             this.SpellLevel = 0;
         }
 
+        public PlayerSpell(string SpellName)
+        {
+            this.SpellName = SpellName;
+        }
+
         public static PlayerSpell resolveFromString(string str)
         {
             /* Return a playerspell object from a string. */

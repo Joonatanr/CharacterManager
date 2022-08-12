@@ -166,6 +166,15 @@ namespace SpellEditor
                 MessageBox.Show("Could not resolve spell casting time interval");
             }
 
+            try
+            {
+                numericUpDownMaterialCost.Value = spell.MaterialCost;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Could not resolve spell material cost");
+            }
+
             checkBoxVerbalComponent.Checked = spell.IsVerbalComponent;
             checkBoxSomaticComponent.Checked = spell.IsSomaticComponent;
             checkBoxMaterialComponent.Checked = spell.IsMaterialComponent;
@@ -450,6 +459,44 @@ namespace SpellEditor
                 {
                     selectedSpell.AtHigherLevels = richTextBoxAtHigherLevels.Text;
                     setSpellDataAsModified();
+                }
+            }
+        }
+
+        private void numericUpDownMaterialCost_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                if (this.selectedSpell.MaterialCost != (int)numericUpDownMaterialCost.Value)
+                {
+                    this.selectedSpell.MaterialCost = (int)numericUpDownMaterialCost.Value;
+                    setSpellDataAsModified();
+                }
+            }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            FormAddNewSpell myForm = new FormAddNewSpell();
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                if (!string.IsNullOrEmpty(myForm.NewSpellName))
+                {
+                    PlayerSpell mySpell = new PlayerSpell(myForm.NewSpellName);
+                    mySpell.IsModified = true;
+                    /* Obvious check if we already have a spell with this name... */
+                    foreach(PlayerSpell sp in SpellList)
+                    {
+                        if (sp.SpellName == mySpell.SpellName)
+                        {
+                            MessageBox.Show("Spell with name " + sp.SpellName + " already exists"); 
+                            return;
+                        }
+                    }
+
+                    SpellList.Add(mySpell);
+                    updateDisplayedSpells();
+                    listBox1.SelectedItem = mySpell.SpellName;
                 }
             }
         }

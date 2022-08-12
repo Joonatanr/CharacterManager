@@ -68,6 +68,9 @@ namespace SpellEditor
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSpellName = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.numericUpDownMaterialCost = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -78,6 +81,7 @@ namespace SpellEditor
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaterialCost)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLoad
@@ -150,6 +154,8 @@ namespace SpellEditor
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.numericUpDownMaterialCost);
+            this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.textBoxMaterialComponent);
             this.groupBox5.Controls.Add(this.checkBoxMaterialComponent);
             this.groupBox5.Controls.Add(this.checkBoxSomaticComponent);
@@ -520,11 +526,45 @@ namespace SpellEditor
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAdd.Location = new System.Drawing.Point(604, 592);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 35);
+            this.buttonAdd.TabIndex = 5;
+            this.buttonAdd.Text = "Add";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(0, 93);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 15);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Material Cost";
+            // 
+            // numericUpDownMaterialCost
+            // 
+            this.numericUpDownMaterialCost.Location = new System.Drawing.Point(81, 91);
+            this.numericUpDownMaterialCost.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDownMaterialCost.Name = "numericUpDownMaterialCost";
+            this.numericUpDownMaterialCost.Size = new System.Drawing.Size(173, 23);
+            this.numericUpDownMaterialCost.TabIndex = 5;
+            this.numericUpDownMaterialCost.ValueChanged += new System.EventHandler(this.numericUpDownMaterialCost_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(878, 639);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox1);
@@ -546,6 +586,7 @@ namespace SpellEditor
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaterialCost)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -590,6 +631,9 @@ namespace SpellEditor
         private System.Windows.Forms.CheckBox checkBoxRitual;
         private System.Windows.Forms.CheckBox checkBoxConcentration;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.NumericUpDown numericUpDownMaterialCost;
+        private System.Windows.Forms.Label label13;
     }
 }
 

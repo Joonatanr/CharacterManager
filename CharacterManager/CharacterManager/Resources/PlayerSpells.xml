@@ -1371,4 +1371,82 @@ increases by 1d12 for each slot level above 1st.</AtHigherLevels>
     <MaterialComponent>a twig from a tree that has been struck by lightning</MaterialComponent>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Aid</SpellName>
+    <Description>Your spell bolsters your allies with toughness and
+resolve. Choose up to three creatures within range.
+Each target’s hit point maximum and current hit points
+increase by 5 for the duration.</Description>
+    <AtHigherLevels>When you cast this spell using a spell slot of 3rd level or higher, a target’s hit points
+increase by an additional 5 for each slot level above 2nd.</AtHigherLevels>
+    <School>Abjuration</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a tiny strip of white cloth</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Alter Self</SpellName>
+    <Description>You assume a different form. When you cast the spell,
+choose one of the following options, the effects of which
+last for the duration of the spell. 
+
+While the spell lasts, you can end one option as an action to gain the benefits
+of a different one.
+
+Aquatic Adaptation. You adapt your body to an
+aquatic environment, sprouting gills and growing
+webbing between your fingers. You can breathe
+underwater and gain a swimming speed equal to your
+walking speed.
+
+Change Appearance. You transform your appearance.
+You decide what you look like, including your height,
+weight, facial features, sound of your voice, hair length,
+coloration, and distinguishing characteristics, if any.
+You can make yourself appear as a member of another
+race, though none of your statistics change. You also
+can’t appear as a creature of a different size than you,
+and your basic shape stays the same; if you're bipedal,
+you can’t use this spell to become quadrupedal, for
+instance. At any time for the duration of the spell, you
+can use your action to change your appearance in
+this way again.
+
+Natural Weapons. You grow claws, fangs, spines,
+horns, or a different natural w eapon of your choice. Your
+unarmed strikes deal 1d6 bludgeoning, piercing, or
+slashing damage, as appropriate to the natural weapon
+you chose, and you are proficient with your unarmed
+strikes. Finally, the natural weapon is magic and you
+have a +1 bonus to the attack and damage rolls you
+make using it.</Description>
+    <School>Transmutation</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
 </ArrayOfPlayerSpell>
