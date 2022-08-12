@@ -167,6 +167,7 @@ namespace SpellEditor
             this.textBoxMaterialComponent.Name = "textBoxMaterialComponent";
             this.textBoxMaterialComponent.Size = new System.Drawing.Size(173, 23);
             this.textBoxMaterialComponent.TabIndex = 3;
+            this.textBoxMaterialComponent.TextChanged += new System.EventHandler(this.textBoxMaterialComponent_TextChanged);
             // 
             // checkBoxMaterialComponent
             // 
@@ -177,6 +178,7 @@ namespace SpellEditor
             this.checkBoxMaterialComponent.TabIndex = 2;
             this.checkBoxMaterialComponent.Text = "Material";
             this.checkBoxMaterialComponent.UseVisualStyleBackColor = true;
+            this.checkBoxMaterialComponent.CheckedChanged += new System.EventHandler(this.checkBoxMaterialComponent_CheckedChanged);
             // 
             // checkBoxSomaticComponent
             // 
@@ -187,6 +189,7 @@ namespace SpellEditor
             this.checkBoxSomaticComponent.TabIndex = 1;
             this.checkBoxSomaticComponent.Text = "Somatic";
             this.checkBoxSomaticComponent.UseVisualStyleBackColor = true;
+            this.checkBoxSomaticComponent.CheckedChanged += new System.EventHandler(this.checkBoxSomaticComponent_CheckedChanged);
             // 
             // checkBoxVerbalComponent
             // 
@@ -197,6 +200,7 @@ namespace SpellEditor
             this.checkBoxVerbalComponent.TabIndex = 0;
             this.checkBoxVerbalComponent.Text = "Verbal";
             this.checkBoxVerbalComponent.UseVisualStyleBackColor = true;
+            this.checkBoxVerbalComponent.CheckedChanged += new System.EventHandler(this.checkBoxVerbalComponent_CheckedChanged);
             // 
             // groupBox4
             // 
@@ -222,6 +226,7 @@ namespace SpellEditor
             this.checkBoxRitual.TabIndex = 20;
             this.checkBoxRitual.Text = "Ritual";
             this.checkBoxRitual.UseVisualStyleBackColor = true;
+            this.checkBoxRitual.CheckedChanged += new System.EventHandler(this.checkBoxRitual_CheckedChanged);
             // 
             // checkBoxConcentration
             // 
@@ -232,6 +237,7 @@ namespace SpellEditor
             this.checkBoxConcentration.TabIndex = 19;
             this.checkBoxConcentration.Text = "Concentration";
             this.checkBoxConcentration.UseVisualStyleBackColor = true;
+            this.checkBoxConcentration.CheckedChanged += new System.EventHandler(this.checkBoxConcentration_CheckedChanged);
             // 
             // numericUpDownCastingTime
             // 
@@ -244,6 +250,7 @@ namespace SpellEditor
             this.numericUpDownCastingTime.Name = "numericUpDownCastingTime";
             this.numericUpDownCastingTime.Size = new System.Drawing.Size(198, 23);
             this.numericUpDownCastingTime.TabIndex = 19;
+            this.numericUpDownCastingTime.ValueChanged += new System.EventHandler(this.numericUpDownCastingTime_ValueChanged);
             // 
             // comboBoxCastingTimeType
             // 
@@ -252,6 +259,7 @@ namespace SpellEditor
             this.comboBoxCastingTimeType.Name = "comboBoxCastingTimeType";
             this.comboBoxCastingTimeType.Size = new System.Drawing.Size(198, 23);
             this.comboBoxCastingTimeType.TabIndex = 16;
+            this.comboBoxCastingTimeType.SelectedIndexChanged += new System.EventHandler(this.comboBoxCastingTimeType_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -313,6 +321,7 @@ namespace SpellEditor
             this.comboBoxRangeType.Name = "comboBoxRangeType";
             this.comboBoxRangeType.Size = new System.Drawing.Size(216, 23);
             this.comboBoxRangeType.TabIndex = 12;
+            this.comboBoxRangeType.SelectedIndexChanged += new System.EventHandler(this.comboBoxRangeType_SelectedIndexChanged);
             // 
             // numericUpDownSpellRange
             // 
@@ -327,6 +336,7 @@ namespace SpellEditor
             this.numericUpDownSpellRange.Name = "numericUpDownSpellRange";
             this.numericUpDownSpellRange.Size = new System.Drawing.Size(216, 23);
             this.numericUpDownSpellRange.TabIndex = 11;
+            this.numericUpDownSpellRange.ValueChanged += new System.EventHandler(this.numericUpDownSpellRange_ValueChanged);
             // 
             // groupBox2
             // 
@@ -354,6 +364,7 @@ namespace SpellEditor
             this.numericUpDownAoeSize.Name = "numericUpDownAoeSize";
             this.numericUpDownAoeSize.Size = new System.Drawing.Size(198, 23);
             this.numericUpDownAoeSize.TabIndex = 15;
+            this.numericUpDownAoeSize.ValueChanged += new System.EventHandler(this.numericUpDownAoeSize_ValueChanged);
             // 
             // label9
             // 
@@ -380,6 +391,7 @@ namespace SpellEditor
             this.comboBoxAoeType.Name = "comboBoxAoeType";
             this.comboBoxAoeType.Size = new System.Drawing.Size(198, 23);
             this.comboBoxAoeType.TabIndex = 0;
+            this.comboBoxAoeType.SelectedIndexChanged += new System.EventHandler(this.comboBoxAoeType_SelectedIndexChanged);
             // 
             // numericUpDownSpellDuration
             // 
@@ -392,6 +404,7 @@ namespace SpellEditor
             this.numericUpDownSpellDuration.Name = "numericUpDownSpellDuration";
             this.numericUpDownSpellDuration.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownSpellDuration.TabIndex = 13;
+            this.numericUpDownSpellDuration.ValueChanged += new System.EventHandler(this.numericUpDownSpellDuration_ValueChanged);
             // 
             // label7
             // 
@@ -427,6 +440,7 @@ namespace SpellEditor
             this.comboBoxSpellSchool.Name = "comboBoxSpellSchool";
             this.comboBoxSpellSchool.Size = new System.Drawing.Size(121, 23);
             this.comboBoxSpellSchool.TabIndex = 7;
+            this.comboBoxSpellSchool.SelectedIndexChanged += new System.EventHandler(this.comboBoxSpellSchool_SelectedIndexChanged);
             // 
             // label4
             // 

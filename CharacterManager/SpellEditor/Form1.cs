@@ -187,14 +187,6 @@ namespace SpellEditor
             }
         }
 
-        private void numericUpDownLevel_ValueChanged(object sender, EventArgs e)
-        {
-            if(this.selectedSpell != null)
-            {
-                this.selectedSpell.SpellLevel = (int)numericUpDownLevel.Value;
-            }
-        }
-
         private void buttonSave_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(LoadedFilePath))
@@ -205,11 +197,137 @@ namespace SpellEditor
                     XmlSerializer writer = new XmlSerializer(typeof(List<PlayerSpell>));
                     StreamWriter sw = new System.IO.StreamWriter(LoadedFilePath);
                     writer.Serialize(sw, SpellList);
+                    sw.Flush();
+                    sw.Close();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Failed to save file " + LoadedFilePath + " Exception : " + ex.Message);
                 }
+            }
+        }
+
+
+        private void numericUpDownLevel_ValueChanged(object sender, EventArgs e)
+        {
+            if(this.selectedSpell != null)
+            {
+                this.selectedSpell.SpellLevel = (int)numericUpDownLevel.Value;
+            }
+        }
+
+        private void comboBoxSpellSchool_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                selectedSpell.School = comboBoxSpellSchool.SelectedItem.ToString();
+            }
+        }
+
+        private void numericUpDownSpellDuration_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                selectedSpell.SpellDuration = (int)numericUpDownSpellDuration.Value;
+            }
+        }
+
+        private void numericUpDownSpellRange_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                selectedSpell.SpellRange = (int)numericUpDownSpellRange.Value;
+            }
+        }
+
+        private void comboBoxRangeType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                string selectedValue = comboBoxRangeType.SelectedItem.ToString();
+                selectedSpell.RangeType = (SpellRangeType)Enum.Parse(typeof(SpellRangeType), selectedValue);
+            }
+        }
+
+        private void comboBoxAoeType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                string selectedValue = comboBoxAoeType.SelectedItem.ToString();
+                selectedSpell.AoeType = (AreaOfEffectType)Enum.Parse(typeof(AreaOfEffectType), selectedValue);
+            }
+        }
+
+        private void numericUpDownAoeSize_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                selectedSpell.AoeSize = (int)numericUpDownAoeSize.Value;
+            }
+        }
+
+        private void comboBoxCastingTimeType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                string selectedValue = comboBoxCastingTimeType.SelectedItem.ToString();
+                selectedSpell.CastingTime = (CastingTimeEnum)Enum.Parse(typeof(CastingTimeEnum), selectedValue);
+            }
+        }
+
+        private void numericUpDownCastingTime_ValueChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                selectedSpell.CastingTimePeriod = (int)numericUpDownCastingTime.Value;
+            }
+        }
+
+        private void checkBoxConcentration_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.selectedSpell != null)
+            {
+                selectedSpell.IsConcentration = checkBoxConcentration.Checked;
+            }
+        }
+
+        private void checkBoxRitual_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                selectedSpell.IsRitual = checkBoxRitual.Checked;
+            }
+        }
+
+        private void checkBoxVerbalComponent_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.selectedSpell != null)
+            {
+                selectedSpell.IsVerbalComponent = checkBoxVerbalComponent.Checked;
+            }
+        }
+
+        private void checkBoxSomaticComponent_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                selectedSpell.IsSomaticComponent = checkBoxSomaticComponent.Checked;
+            }
+        }
+
+        private void checkBoxMaterialComponent_CheckedChanged(object sender, EventArgs e)
+        {
+            if(this.selectedSpell != null)
+            {
+                selectedSpell.IsMaterialComponent = true;
+            }
+        }
+
+        private void textBoxMaterialComponent_TextChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                this.selectedSpell.MaterialComponent = textBoxMaterialComponent.Text;
             }
         }
     }

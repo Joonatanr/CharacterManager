@@ -120,7 +120,7 @@ worn or carried. This spell’s damage increases by 1d10 when you reach
     <SpellDuration>0</SpellDuration>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
-    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
     <CastingTime>CASTING_TIME_ACTION</CastingTime>
     <CastingTimePeriod>0</CastingTimePeriod>
     <IsVerbalComponent>true</IsVerbalComponent>
