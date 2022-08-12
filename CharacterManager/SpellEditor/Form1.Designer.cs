@@ -33,12 +33,15 @@ namespace SpellEditor
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownLevel = new System.Windows.Forms.NumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBoxMaterialComponent = new System.Windows.Forms.TextBox();
             this.checkBoxMaterialComponent = new System.Windows.Forms.CheckBox();
             this.checkBoxSomaticComponent = new System.Windows.Forms.CheckBox();
             this.checkBoxVerbalComponent = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBoxRitual = new System.Windows.Forms.CheckBox();
+            this.checkBoxConcentration = new System.Windows.Forms.CheckBox();
             this.numericUpDownCastingTime = new System.Windows.Forms.NumericUpDown();
             this.comboBoxCastingTimeType = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -53,21 +56,19 @@ namespace SpellEditor
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxAoeType = new System.Windows.Forms.ComboBox();
-            this.numericUpDownDuration = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownSpellDuration = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxSpellSchool = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxAtHigherLevels = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxSpellDescription = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSpellName = new System.Windows.Forms.TextBox();
-            this.numericUpDownLevel = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxConcentration = new System.Windows.Forms.CheckBox();
-            this.checkBoxRitual = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCastingTime)).BeginInit();
@@ -75,8 +76,7 @@ namespace SpellEditor
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellRange)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDuration)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLoad
@@ -104,6 +104,7 @@ namespace SpellEditor
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(262, 559);
             this.listBox1.TabIndex = 2;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -115,15 +116,15 @@ namespace SpellEditor
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.numericUpDownDuration);
+            this.groupBox1.Controls.Add(this.numericUpDownSpellDuration);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.comboBoxSpellSchool);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.richTextBox2);
+            this.groupBox1.Controls.Add(this.richTextBoxAtHigherLevels);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.richTextBoxSpellDescription);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBoxSpellName);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
@@ -132,6 +133,18 @@ namespace SpellEditor
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spell Data";
+            // 
+            // numericUpDownLevel
+            // 
+            this.numericUpDownLevel.Location = new System.Drawing.Point(100, 85);
+            this.numericUpDownLevel.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.numericUpDownLevel.Name = "numericUpDownLevel";
+            this.numericUpDownLevel.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownLevel.TabIndex = 18;
             // 
             // groupBox5
             // 
@@ -197,6 +210,26 @@ namespace SpellEditor
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Casting Time";
+            // 
+            // checkBoxRitual
+            // 
+            this.checkBoxRitual.AutoSize = true;
+            this.checkBoxRitual.Location = new System.Drawing.Point(199, 80);
+            this.checkBoxRitual.Name = "checkBoxRitual";
+            this.checkBoxRitual.Size = new System.Drawing.Size(56, 19);
+            this.checkBoxRitual.TabIndex = 20;
+            this.checkBoxRitual.Text = "Ritual";
+            this.checkBoxRitual.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxConcentration
+            // 
+            this.checkBoxConcentration.AutoSize = true;
+            this.checkBoxConcentration.Location = new System.Drawing.Point(12, 80);
+            this.checkBoxConcentration.Name = "checkBoxConcentration";
+            this.checkBoxConcentration.Size = new System.Drawing.Size(102, 19);
+            this.checkBoxConcentration.TabIndex = 19;
+            this.checkBoxConcentration.Text = "Concentration";
+            this.checkBoxConcentration.UseVisualStyleBackColor = true;
             // 
             // numericUpDownCastingTime
             // 
@@ -346,17 +379,17 @@ namespace SpellEditor
             this.comboBoxAoeType.Size = new System.Drawing.Size(198, 23);
             this.comboBoxAoeType.TabIndex = 0;
             // 
-            // numericUpDownDuration
+            // numericUpDownSpellDuration
             // 
-            this.numericUpDownDuration.Location = new System.Drawing.Point(100, 114);
-            this.numericUpDownDuration.Maximum = new decimal(new int[] {
+            this.numericUpDownSpellDuration.Location = new System.Drawing.Point(100, 114);
+            this.numericUpDownSpellDuration.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
-            this.numericUpDownDuration.Name = "numericUpDownDuration";
-            this.numericUpDownDuration.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDownDuration.TabIndex = 13;
+            this.numericUpDownSpellDuration.Name = "numericUpDownSpellDuration";
+            this.numericUpDownSpellDuration.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownSpellDuration.TabIndex = 13;
             // 
             // label7
             // 
@@ -402,15 +435,15 @@ namespace SpellEditor
             this.label4.TabIndex = 6;
             this.label4.Text = "School";
             // 
-            // richTextBox2
+            // richTextBoxAtHigherLevels
             // 
-            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.richTextBoxAtHigherLevels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox2.Location = new System.Drawing.Point(112, 475);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(467, 81);
-            this.richTextBox2.TabIndex = 5;
-            this.richTextBox2.Text = "";
+            this.richTextBoxAtHigherLevels.Location = new System.Drawing.Point(112, 475);
+            this.richTextBoxAtHigherLevels.Name = "richTextBoxAtHigherLevels";
+            this.richTextBoxAtHigherLevels.Size = new System.Drawing.Size(467, 81);
+            this.richTextBoxAtHigherLevels.TabIndex = 5;
+            this.richTextBoxAtHigherLevels.Text = "";
             // 
             // label3
             // 
@@ -430,15 +463,15 @@ namespace SpellEditor
             this.label2.TabIndex = 3;
             this.label2.Text = "Description";
             // 
-            // richTextBox1
+            // richTextBoxSpellDescription
             // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.richTextBoxSpellDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(112, 339);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(467, 127);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.richTextBoxSpellDescription.Location = new System.Drawing.Point(112, 339);
+            this.richTextBoxSpellDescription.Name = "richTextBoxSpellDescription";
+            this.richTextBoxSpellDescription.Size = new System.Drawing.Size(467, 127);
+            this.richTextBoxSpellDescription.TabIndex = 2;
+            this.richTextBoxSpellDescription.Text = "";
             // 
             // label1
             // 
@@ -458,38 +491,6 @@ namespace SpellEditor
             this.textBoxSpellName.Size = new System.Drawing.Size(480, 23);
             this.textBoxSpellName.TabIndex = 0;
             // 
-            // numericUpDownLevel
-            // 
-            this.numericUpDownLevel.Location = new System.Drawing.Point(100, 85);
-            this.numericUpDownLevel.Maximum = new decimal(new int[] {
-            9,
-            0,
-            0,
-            0});
-            this.numericUpDownLevel.Name = "numericUpDownLevel";
-            this.numericUpDownLevel.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDownLevel.TabIndex = 18;
-            // 
-            // checkBoxConcentration
-            // 
-            this.checkBoxConcentration.AutoSize = true;
-            this.checkBoxConcentration.Location = new System.Drawing.Point(12, 80);
-            this.checkBoxConcentration.Name = "checkBoxConcentration";
-            this.checkBoxConcentration.Size = new System.Drawing.Size(102, 19);
-            this.checkBoxConcentration.TabIndex = 19;
-            this.checkBoxConcentration.Text = "Concentration";
-            this.checkBoxConcentration.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRitual
-            // 
-            this.checkBoxRitual.AutoSize = true;
-            this.checkBoxRitual.Location = new System.Drawing.Point(199, 80);
-            this.checkBoxRitual.Name = "checkBoxRitual";
-            this.checkBoxRitual.Size = new System.Drawing.Size(56, 19);
-            this.checkBoxRitual.TabIndex = 20;
-            this.checkBoxRitual.Text = "Ritual";
-            this.checkBoxRitual.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -502,6 +503,7 @@ namespace SpellEditor
             this.Text = "SpellEditor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -513,8 +515,7 @@ namespace SpellEditor
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDuration)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -527,13 +528,13 @@ namespace SpellEditor
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSpellName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxSpellDescription;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBoxAtHigherLevels;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxSpellSchool;
-        private System.Windows.Forms.NumericUpDown numericUpDownDuration;
+        private System.Windows.Forms.NumericUpDown numericUpDownSpellDuration;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDownSpellRange;
         private System.Windows.Forms.GroupBox groupBox2;
