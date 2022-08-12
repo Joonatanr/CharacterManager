@@ -1478,4 +1478,328 @@ additional beast for each slot level above 1st.</AtHigherLevels>
     <MaterialComponent>A morsel of food</MaterialComponent>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Animal Messenger</SpellName>
+    <Description>By means of this spell, you use an animal to deliver a
+message. Choose a Tiny beast you can see within range,
+such as a squirrel, a blue jay, or a bat. You specify a
+location, which you must have visited, and a recipient
+who matches a general description, such as “a man or
+woman dressed in the uniform of the town guard” or “a
+red-haired dwarf wearing a pointed hat.” You also speak
+a message of up to twenty-five words. The target beast
+travels for the duration of the spell toward the specified
+location, covering about 50 miles per 24 hours for a
+flying messenger, or 25 miles for other animals.
+
+When the messenger arrives, it delivers your m essage
+to the creature that you described, replicating the sound
+o f your voice. The messenger speaks only to a creature
+matching the description you gave. If the messenger
+doesn’t reach its destination before the spell ends, the
+message is lost, and the beast makes its way back to
+where you cast this spell.</Description>
+    <AtHigherLevels>If you cast this spell using a spell
+slot of 3nd level or higher, the duration of the spell
+increases by 48 hours for each slot level above 2nd.</AtHigherLevels>
+    <School>Enchantment</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent>A morsel of food</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Animal Shapes</SpellName>
+    <Description>Your magic turns others into beasts. Choose any
+number of willing creatures that you can see within
+range. You transform each target into the form of a
+Large or smaller beast with a challenge rating of 4 or
+lower. 
+
+On subsequent turns, you can use your action to
+transform affected creatures into new forms.
+The transformation lasts for the duration for each
+target, or until the target drops to 0 hit points or dies.
+You can choose a different form for each target. 
+
+A target’s game statistics are replaced by the statistics o f
+the chosen beast, though the target retains its alignment
+and Intelligence, Wisdom, and Charisma scores. The
+target assumes the hit points o f its new form, and when
+it reverts to its normal form, it returns to the number
+o f hit points it had before it transformed. If it reverts as
+a result o f dropping to 0 hit points, any excess damage
+carries over to its normal form. As long as the excess
+damage doesn’t reduce the creature’s normal form to 0
+hit points, it isn’t knocked unconscious. 
+
+The creature is limited in the actions it can perform by the nature of its
+new form, and it can’t speak or cast spells.
+
+The target’s gear melds into the new form. The target
+can’t activate, wield, or otherwise benefit from any of its equipment.</Description>
+    <AtHigherLevels />
+    <School>Transmutation</School>
+    <SpellLevel>8</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Animate Dead</SpellName>
+    <Description>This spell creates an undead servant. Choose a pile
+of bones or a corpse o f a Medium or Small humanoid
+within range. Your spell imbues the target with a foul
+mimicry of life, raising it as an undead creature. The
+target becomes a skeleton if you chose bones or a
+zombie if you chose a corpse (the DM has the creature’s
+game statistics).
+
+On each of your turns, you can use a bonus action
+to mentally command any creature you made with
+this spell if the creature is within 60 feet of you (if you
+control multiple creatures, you can command any or all
+of them at the same time, issuing the same command to
+each one). You decide what action the creature will take
+and where it w ill move during its next turn, or you can
+issue a general command, such as to guard a particular
+chamber or corridor. If you issue no commands, the
+creature only defends itself against hostile creatures.
+Once given an order, the creature continues to follow it
+until its task is complete.
+
+The creature is under your control for 24 hours,
+after which it stops obeying any command you’ve given
+it. To maintain control of the creature for another
+24 hours, you must cast this spell on the creature
+again before the current 24-hour period ends. This
+use of the spell reasserts your control over up to four
+creatures you have animated with this spell, rather than
+animating a new one.</Description>
+    <AtHigherLevels>When you cast this spell using a
+spell slot of 4th level or higher, you animate or reassert
+control over two additional undead creatures for each
+slot level above 3rd. Each o f the creatures must come
+from a different corpse or pile of bones.</AtHigherLevels>
+    <School>Necromancy</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>10</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a drop of blood, a piece of flesh,</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Animate Objects</SpellName>
+    <Description>Objects come to life at your command. Choose up to
+ten nonmagical objects within range that are not being
+worn or carried. Medium targets count as two objects,
+Large targets count as four objects, Huge targets
+count as eight objects. You can’t animate any object
+larger than Huge. Each target animates and becomes a
+creature under your control until the spell ends or until
+reduced to 0 hit points.
+
+As a bonus action, you can mentally command any
+creature you made with this spell if the creature is
+within 500 feet of you (if you control multiple creatures,
+you can command any or all o f them at the same time,
+issuing the same command to each one). You decide
+what action the creature w ill take and where it will
+move during its next turn, or you can issue a general
+command, such as to guard a particular chamber or
+corridor. If you issue no commands, the creature only
+defends itself against hostile creatures. Once given
+an order, the creature continues to follow it until its
+task is complete.
+
+A n i m a t e d  O b j e c t  S t a t i s t i c s
+Size      HP    AC     Attack                         Str Dex
+Tiny       20    18    +8 to hit, 1d4 + 4 damage   4   18
+Small     25    16    +6 to hit, 1d8 + 2 damage    6   14
+Medium  40    13    +5 to hit, 2d6 + 1 damage  10   12
+Large      50    10    +6 to hit, 2d10 + 2 damage 14  10
+Huge      80    10    +8 to hit, 2d12 + 4 damage 18   6
+
+An animated object is a construct with AC, hit points,
+attacks, Strength, and Dexterity determined by its size.
+Its Constitution is 10 and its Intelligence and Wisdom
+are 3, and its Charisma is 1. Its speed is 30 feet; if the
+object lacks legs or other appendages it can use for
+locomotion, it instead has a flying speed o f 30 feet and
+can hover. If the object is securely attached to a surface
+or a larger object, such as a chain bolted to a wall, its
+speed is 0. It has blindsight with a radius o f 30 feet and
+is blind beyond that distance. When the animated object
+drops to 0 hit points, it reverts to its original object
+form, and any remaining damage carries over to its
+original object form.
+
+If you command an object to attack, it can make a
+single melee attack against a creature within 5 feet
+of it. It makes a slam attack with an attack bonus and
+bludgeoning damage determined by its size. The DM
+might rule that a specific object inflicts slashing or
+piercing damage based on its form.</Description>
+    <AtHigherLevels>If you cast this spell using a spell slot of 
+6th level or higher, you can animate two
+additional objects for each slot level above 5th.</AtHigherLevels>
+    <School>Transmutation</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Antilife Shell</SpellName>
+    <Description>A shimmering barrier extends out from you in a 10-foot
+radius and moves with you, remaining centered on
+you and hedging out creatures other than undead and
+constructs. The barrier lasts for the duration.
+The barrier prevents an affected creature from
+passing or reaching through. An affected creature
+can cast spells or make attacks with ranged or reach
+weapons through the barrier.
+
+If you move so that an affected creature is forced to
+pass through the barrier, the spell ends.</Description>
+    <AtHigherLevels />
+    <School>Abjuration</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>10</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Antimagic Field</SpellName>
+    <Description>A 10-foot-radius invisible sphere o f antimagic surrounds
+you. This area is divorced from the magical energy that
+suffuses the multiverse. Within the sphere, spells can’t
+be cast, summoned creatures disappear, and even m agic
+items become mundane. Until the spell ends, the sphere
+moves with you, centered on you.
+Spells and other magical effects, except those created
+by an artifact or a deity, are suppressed in the sphere
+and can’t protrude into it. A slot expended to cast
+a suppressed spell is consumed. While an effect is
+suppressed, it doesn’t function, but the time it spends
+suppressed counts against its duration.
+
+Targeted Effects. Spells and other magical effects,
+such as magic missile and charm person, that target
+a creature or an object in the sphere have no effect
+on that target.
+
+Areas o f Magic. The area o f another spell or magical
+effect, such as fireball, can’t extend into the sphere.
+If the sphere overlaps an area o f magic, the part of
+the area that is covered by the sphere is suppressed.
+For example, the flames created by a wall o f fire are
+suppressed within the sphere, creating a gap in the wall
+if the overlap is large enough.
+
+Spells. Any active spell or other magical effect on a
+creature or an object in the sphere is suppressed while
+the creature or object is in it.
+
+Magic Items. The properties and powers of
+magic items are suppressed in the sphere. For
+example, a + 1 longsword in the sphere functions as a
+nonmagical longsword.
+A magic weapon’s properties and powers are
+suppressed if it is used against a target in the sphere or
+wielded by an attacker in the sphere. If a magic w eapon
+or a piece o f magic ammunition fully leaves the sphere
+(for example, if you fire a magic arrow or throw a magic
+spear at a target outside the sphere), the magic o f the
+item ceases to be suppressed as soon as it exits.
+
+Magical Travel. Teleportation and planar travel
+fail to work in the sphere, whether the sphere is the
+destination or the departure point for such magical
+travel. A portal to another location, world, or plane of
+existence, as w ell as an opening to an extradimensional
+space such as that created by the rope trick spell,
+temporarily closes while in the sphere.
+
+Creatures and Objects. A creature or object
+summoned or created by m agic temporarily winks out
+o f existence in the sphere. Such a creature instantly
+reappears once the space the creature occupied is no
+longer within the sphere.
+
+Dispel Magic. Spells and magical effects such as
+dispel magic have no effect on the sphere. Likewise, the
+spheres created by different antimagic field spells don’t
+nullify each other.</Description>
+    <School>Abjuration</School>
+    <SpellLevel>8</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>10</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a pinch of powdered iron or iron filings</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
 </ArrayOfPlayerSpell>

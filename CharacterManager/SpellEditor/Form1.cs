@@ -268,10 +268,13 @@ namespace SpellEditor
         {
             if (this.selectedSpell != null)
             {
-                if(selectedSpell.School != comboBoxSpellSchool.SelectedItem.ToString())
+                if(comboBoxSpellSchool.SelectedItem != null)
                 {
-                    selectedSpell.School = comboBoxSpellSchool.SelectedItem.ToString();
-                    setSpellDataAsModified();
+                    if (selectedSpell.School != comboBoxSpellSchool.SelectedItem.ToString())
+                    {
+                        selectedSpell.School = comboBoxSpellSchool.SelectedItem.ToString();
+                        setSpellDataAsModified();
+                    }
                 }
             }
         }
