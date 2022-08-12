@@ -276,6 +276,10 @@ namespace SpellEditor
             }
         }
 
+        /* Guess there is no pretty way of syncing these values... */
+        private Boolean SyncFromRoundsMinutes = false;
+        private Boolean SyncFromRoundsHours = false;
+
         private void numericUpDownSpellDuration_ValueChanged(object sender, EventArgs e)
         {
             if (this.selectedSpell != null)
@@ -286,6 +290,73 @@ namespace SpellEditor
                     setSpellDataAsModified();
                 }
             }
+
+            if (SyncFromMinutesRounds)
+            {
+                SyncFromMinutesRounds = false;
+                return;
+            }
+
+            if (SyncFromHoursRounds)
+            {
+                SyncFromHoursRounds = false;
+                return;
+            }
+
+            SyncFromRoundsMinutes = true;
+            SyncFromRoundsHours = true;
+
+            /* Synchronise the other duration controls. */
+            numericUpDownDurationMinutes.Value = (int)numericUpDownSpellDuration.Value / 10;
+            numericUpDownDurationHours.Value = (int)numericUpDownSpellDuration.Value / 600;
+        }
+
+        private Boolean SyncFromMinutesRounds = false;
+        private Boolean SyncFromMinutesHours = false;
+
+        private void numericUpDownDurationMinutes_ValueChanged(object sender, EventArgs e)
+        {
+            if (SyncFromRoundsMinutes)
+            {
+                SyncFromRoundsMinutes = false;
+                return;
+            }
+
+            if (SyncFromHoursMinutes)
+            {
+                SyncFromHoursMinutes = false;
+                return;
+            }
+
+            SyncFromMinutesRounds = true;
+            SyncFromMinutesHours = true;
+
+            numericUpDownSpellDuration.Value = numericUpDownDurationMinutes.Value * 10;
+            numericUpDownDurationHours.Value = (int)numericUpDownDurationMinutes.Value / 60;
+        }
+
+        private Boolean SyncFromHoursMinutes = false;
+        private Boolean SyncFromHoursRounds = false;
+
+        private void numericUpDownDurationHours_ValueChanged(object sender, EventArgs e)
+        {
+            if (SyncFromRoundsHours)
+            {
+                SyncFromRoundsHours = false;
+                return;
+            }
+
+            if (SyncFromMinutesHours)
+            {
+                SyncFromMinutesHours = false;
+                return;
+            }
+
+            numericUpDownSpellDuration.Value = numericUpDownDurationHours.Value * 600;
+            numericUpDownDurationMinutes.Value = numericUpDownDurationHours.Value * 60;
+
+            SyncFromHoursMinutes = true;
+            SyncFromHoursRounds = true;
         }
 
         private void numericUpDownSpellRange_ValueChanged(object sender, EventArgs e)
@@ -498,6 +569,16 @@ namespace SpellEditor
                     updateDisplayedSpells();
                     listBox1.SelectedItem = mySpell.SpellName;
                 }
+            }
+        }
+
+        private void buttonSpellCard_Click(object sender, EventArgs e)
+        {
+            if(selectedSpell != null)
+            {
+                Spellcard card = new Spellcard();
+                card.setSpell(selectedSpell);
+                card.ShowDialog();
             }
         }
     }

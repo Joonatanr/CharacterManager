@@ -33,8 +33,15 @@ namespace SpellEditor
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.numericUpDownDurationHours = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.numericUpDownDurationMinutes = new System.Windows.Forms.NumericUpDown();
+            this.buttonSpellCard = new System.Windows.Forms.Button();
             this.numericUpDownLevel = new System.Windows.Forms.NumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownMaterialCost = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBoxMaterialComponent = new System.Windows.Forms.TextBox();
             this.checkBoxMaterialComponent = new System.Windows.Forms.CheckBox();
             this.checkBoxSomaticComponent = new System.Windows.Forms.CheckBox();
@@ -69,11 +76,12 @@ namespace SpellEditor
             this.textBoxSpellName = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.numericUpDownMaterialCost = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDurationHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDurationMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaterialCost)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCastingTime)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -81,7 +89,6 @@ namespace SpellEditor
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaterialCost)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLoad
@@ -116,6 +123,11 @@ namespace SpellEditor
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.numericUpDownDurationHours);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.numericUpDownDurationMinutes);
+            this.groupBox1.Controls.Add(this.buttonSpellCard);
             this.groupBox1.Controls.Add(this.numericUpDownLevel);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -138,6 +150,60 @@ namespace SpellEditor
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spell Data";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(9, 174);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 15);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Duration (hr)";
+            // 
+            // numericUpDownDurationHours
+            // 
+            this.numericUpDownDurationHours.Location = new System.Drawing.Point(100, 172);
+            this.numericUpDownDurationHours.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDownDurationHours.Name = "numericUpDownDurationHours";
+            this.numericUpDownDurationHours.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownDurationHours.TabIndex = 22;
+            this.numericUpDownDurationHours.ValueChanged += new System.EventHandler(this.numericUpDownDurationHours_ValueChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(10, 145);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 15);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Duration (min)";
+            // 
+            // numericUpDownDurationMinutes
+            // 
+            this.numericUpDownDurationMinutes.Location = new System.Drawing.Point(100, 143);
+            this.numericUpDownDurationMinutes.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDownDurationMinutes.Name = "numericUpDownDurationMinutes";
+            this.numericUpDownDurationMinutes.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownDurationMinutes.TabIndex = 20;
+            this.numericUpDownDurationMinutes.ValueChanged += new System.EventHandler(this.numericUpDownDurationMinutes_ValueChanged);
+            // 
+            // buttonSpellCard
+            // 
+            this.buttonSpellCard.Location = new System.Drawing.Point(6, 545);
+            this.buttonSpellCard.Name = "buttonSpellCard";
+            this.buttonSpellCard.Size = new System.Drawing.Size(75, 23);
+            this.buttonSpellCard.TabIndex = 19;
+            this.buttonSpellCard.Text = "Spell Card";
+            this.buttonSpellCard.UseVisualStyleBackColor = true;
+            this.buttonSpellCard.Click += new System.EventHandler(this.buttonSpellCard_Click);
             // 
             // numericUpDownLevel
             // 
@@ -166,6 +232,28 @@ namespace SpellEditor
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Components";
+            // 
+            // numericUpDownMaterialCost
+            // 
+            this.numericUpDownMaterialCost.Location = new System.Drawing.Point(81, 91);
+            this.numericUpDownMaterialCost.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDownMaterialCost.Name = "numericUpDownMaterialCost";
+            this.numericUpDownMaterialCost.Size = new System.Drawing.Size(173, 23);
+            this.numericUpDownMaterialCost.TabIndex = 5;
+            this.numericUpDownMaterialCost.ValueChanged += new System.EventHandler(this.numericUpDownMaterialCost_ValueChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(0, 93);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 15);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Material Cost";
             // 
             // textBoxMaterialComponent
             // 
@@ -537,28 +625,6 @@ namespace SpellEditor
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(0, 93);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 15);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Material Cost";
-            // 
-            // numericUpDownMaterialCost
-            // 
-            this.numericUpDownMaterialCost.Location = new System.Drawing.Point(81, 91);
-            this.numericUpDownMaterialCost.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.numericUpDownMaterialCost.Name = "numericUpDownMaterialCost";
-            this.numericUpDownMaterialCost.Size = new System.Drawing.Size(173, 23);
-            this.numericUpDownMaterialCost.TabIndex = 5;
-            this.numericUpDownMaterialCost.ValueChanged += new System.EventHandler(this.numericUpDownMaterialCost_ValueChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -573,9 +639,12 @@ namespace SpellEditor
             this.Text = "SpellEditor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDurationHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDurationMinutes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaterialCost)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCastingTime)).EndInit();
@@ -586,7 +655,6 @@ namespace SpellEditor
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaterialCost)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -634,6 +702,11 @@ namespace SpellEditor
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.NumericUpDown numericUpDownMaterialCost;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button buttonSpellCard;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown numericUpDownDurationHours;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown numericUpDownDurationMinutes;
     }
 }
 
