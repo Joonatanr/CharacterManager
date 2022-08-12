@@ -460,6 +460,7 @@ namespace SpellEditor
             this.richTextBoxAtHigherLevels.Size = new System.Drawing.Size(467, 81);
             this.richTextBoxAtHigherLevels.TabIndex = 5;
             this.richTextBoxAtHigherLevels.Text = "";
+            this.richTextBoxAtHigherLevels.TextChanged += new System.EventHandler(this.richTextBoxAtHigherLevels_TextChanged);
             // 
             // label3
             // 
@@ -488,6 +489,7 @@ namespace SpellEditor
             this.richTextBoxSpellDescription.Size = new System.Drawing.Size(467, 127);
             this.richTextBoxSpellDescription.TabIndex = 2;
             this.richTextBoxSpellDescription.Text = "";
+            this.richTextBoxSpellDescription.TextChanged += new System.EventHandler(this.richTextBoxSpellDescription_TextChanged);
             // 
             // label1
             // 

@@ -20,6 +20,7 @@ namespace SpellEditor
         private static List<PlayerSpell> SpellList = new List<PlayerSpell>();
         private PlayerSpell selectedSpell;
         private String LoadedFilePath = "";
+
         
         public Form1()
         {
@@ -44,11 +45,7 @@ namespace SpellEditor
                     return;
                 }
 
-                foreach(PlayerSpell spell in SpellList)
-                {
-                    listBox1.Items.Add(spell.SpellName);
-                    //listView1.Items.Add(spell.SpellName);
-                }
+                updateDisplayedSpells();
 
                 file.Close();
             }
@@ -56,6 +53,19 @@ namespace SpellEditor
             {
                 MessageBox.Show("Failed to open file : " + ex.Message);
             }
+        }
+
+
+        private void updateDisplayedSpells()
+        {
+            int currentSelection = listBox1.SelectedIndex;
+            listBox1.Items.Clear();
+
+            foreach (PlayerSpell spell in SpellList)
+            {
+                listBox1.Items.Add(spell.ListNameForEditor);
+            }
+            listBox1.SelectedIndex = currentSelection;
         }
 
         private void buttonLoad_Click(object sender, EventArgs e)
@@ -179,6 +189,9 @@ namespace SpellEditor
             // Get the currently selected item in the ListBox.
             string curItem = listBox1.SelectedItem.ToString();
 
+            /* Hack, but it works. */
+            curItem = curItem.Replace("*", "");
+
             selectedSpell = SpellList.Find(sp => sp.SpellName == curItem);
 
             if(selectedSpell != null)
@@ -199,6 +212,14 @@ namespace SpellEditor
                     writer.Serialize(sw, SpellList);
                     sw.Flush();
                     sw.Close();
+
+                    foreach(PlayerSpell sp in SpellList)
+                    {
+                        sp.IsModified = false;
+                        updateDisplayedSpells();
+                    }
+
+
                 }
                 catch (Exception ex)
                 {
@@ -208,11 +229,29 @@ namespace SpellEditor
         }
 
 
+        private void setSpellDataAsModified()
+        {
+            if (selectedSpell.IsModified)
+            {
+                /* Should already be marked as modified, so no changes to be made. */
+                return;
+            }
+            else
+            {
+                selectedSpell.IsModified = true;
+                updateDisplayedSpells();                
+            }
+        }
+
         private void numericUpDownLevel_ValueChanged(object sender, EventArgs e)
         {
             if(this.selectedSpell != null)
             {
-                this.selectedSpell.SpellLevel = (int)numericUpDownLevel.Value;
+                if (this.selectedSpell.SpellLevel != (int)numericUpDownLevel.Value)
+                {
+                    this.selectedSpell.SpellLevel = (int)numericUpDownLevel.Value;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -220,7 +259,11 @@ namespace SpellEditor
         {
             if (this.selectedSpell != null)
             {
-                selectedSpell.School = comboBoxSpellSchool.SelectedItem.ToString();
+                if(selectedSpell.School != comboBoxSpellSchool.SelectedItem.ToString())
+                {
+                    selectedSpell.School = comboBoxSpellSchool.SelectedItem.ToString();
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -228,7 +271,11 @@ namespace SpellEditor
         {
             if (this.selectedSpell != null)
             {
-                selectedSpell.SpellDuration = (int)numericUpDownSpellDuration.Value;
+                if(selectedSpell.SpellDuration != (int)numericUpDownSpellDuration.Value)
+                {
+                    selectedSpell.SpellDuration = (int)numericUpDownSpellDuration.Value;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -236,7 +283,11 @@ namespace SpellEditor
         {
             if (this.selectedSpell != null)
             {
-                selectedSpell.SpellRange = (int)numericUpDownSpellRange.Value;
+                if (selectedSpell.SpellRange != (int)numericUpDownSpellRange.Value)
+                {
+                    selectedSpell.SpellRange = (int)numericUpDownSpellRange.Value;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -245,7 +296,12 @@ namespace SpellEditor
             if (this.selectedSpell != null)
             {
                 string selectedValue = comboBoxRangeType.SelectedItem.ToString();
-                selectedSpell.RangeType = (SpellRangeType)Enum.Parse(typeof(SpellRangeType), selectedValue);
+                SpellRangeType value = (SpellRangeType)Enum.Parse(typeof(SpellRangeType), selectedValue);
+                if (selectedSpell.RangeType != value)
+                {
+                    selectedSpell.RangeType = value;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -254,7 +310,13 @@ namespace SpellEditor
             if (this.selectedSpell != null)
             {
                 string selectedValue = comboBoxAoeType.SelectedItem.ToString();
-                selectedSpell.AoeType = (AreaOfEffectType)Enum.Parse(typeof(AreaOfEffectType), selectedValue);
+                AreaOfEffectType value = (AreaOfEffectType)Enum.Parse(typeof(AreaOfEffectType), selectedValue);
+                
+                if (selectedSpell.AoeType != value)
+                {
+                    selectedSpell.AoeType = value;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -262,7 +324,11 @@ namespace SpellEditor
         {
             if (this.selectedSpell != null)
             {
-                selectedSpell.AoeSize = (int)numericUpDownAoeSize.Value;
+                if(selectedSpell.AoeSize != (int)numericUpDownAoeSize.Value)
+                {
+                    selectedSpell.AoeSize = (int)numericUpDownAoeSize.Value;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -271,7 +337,12 @@ namespace SpellEditor
             if (this.selectedSpell != null)
             {
                 string selectedValue = comboBoxCastingTimeType.SelectedItem.ToString();
-                selectedSpell.CastingTime = (CastingTimeEnum)Enum.Parse(typeof(CastingTimeEnum), selectedValue);
+                CastingTimeEnum value = (CastingTimeEnum)Enum.Parse(typeof(CastingTimeEnum), selectedValue);
+                if(selectedSpell.CastingTime != value)
+                {
+                    selectedSpell.CastingTime = value;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -279,7 +350,11 @@ namespace SpellEditor
         {
             if (this.selectedSpell != null)
             {
-                selectedSpell.CastingTimePeriod = (int)numericUpDownCastingTime.Value;
+                if(selectedSpell.CastingTimePeriod != (int)numericUpDownCastingTime.Value)
+                {
+                    selectedSpell.CastingTimePeriod = (int)numericUpDownCastingTime.Value;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -287,7 +362,11 @@ namespace SpellEditor
         {
             if(this.selectedSpell != null)
             {
-                selectedSpell.IsConcentration = checkBoxConcentration.Checked;
+                if(selectedSpell.IsConcentration != checkBoxConcentration.Checked)
+                {
+                    selectedSpell.IsConcentration = checkBoxConcentration.Checked;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -295,7 +374,11 @@ namespace SpellEditor
         {
             if (this.selectedSpell != null)
             {
-                selectedSpell.IsRitual = checkBoxRitual.Checked;
+                if (selectedSpell.IsRitual != checkBoxRitual.Checked)
+                {
+                    selectedSpell.IsRitual = checkBoxRitual.Checked;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -303,7 +386,11 @@ namespace SpellEditor
         {
             if(this.selectedSpell != null)
             {
-                selectedSpell.IsVerbalComponent = checkBoxVerbalComponent.Checked;
+                if(selectedSpell.IsVerbalComponent != checkBoxVerbalComponent.Checked)
+                {
+                    selectedSpell.IsVerbalComponent = checkBoxVerbalComponent.Checked;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -311,7 +398,11 @@ namespace SpellEditor
         {
             if (this.selectedSpell != null)
             {
-                selectedSpell.IsSomaticComponent = checkBoxSomaticComponent.Checked;
+                if(selectedSpell.IsSomaticComponent != checkBoxSomaticComponent.Checked)
+                {
+                    selectedSpell.IsSomaticComponent = checkBoxSomaticComponent.Checked;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -319,7 +410,11 @@ namespace SpellEditor
         {
             if(this.selectedSpell != null)
             {
-                selectedSpell.IsMaterialComponent = true;
+                if (selectedSpell.IsMaterialComponent != checkBoxMaterialComponent.Checked)
+                {
+                    selectedSpell.IsMaterialComponent = checkBoxMaterialComponent.Checked;
+                    setSpellDataAsModified();
+                }
             }
         }
 
@@ -327,7 +422,35 @@ namespace SpellEditor
         {
             if (this.selectedSpell != null)
             {
-                this.selectedSpell.MaterialComponent = textBoxMaterialComponent.Text;
+                if(this.selectedSpell.MaterialComponent != textBoxMaterialComponent.Text)
+                {
+                    this.selectedSpell.MaterialComponent = textBoxMaterialComponent.Text;
+                    setSpellDataAsModified();
+                }
+            }
+        }
+
+        private void richTextBoxSpellDescription_TextChanged(object sender, EventArgs e)
+        {
+            if(this.selectedSpell != null)
+            {
+                if (this.selectedSpell.Description != richTextBoxSpellDescription.Text)
+                {
+                    this.selectedSpell.Description = richTextBoxSpellDescription.Text;
+                    setSpellDataAsModified();
+                }
+            }
+        }
+
+        private void richTextBoxAtHigherLevels_TextChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                if(this.selectedSpell.AtHigherLevels != richTextBoxAtHigherLevels.Text)
+                {
+                    selectedSpell.AtHigherLevels = richTextBoxAtHigherLevels.Text;
+                    setSpellDataAsModified();
+                }
             }
         }
     }

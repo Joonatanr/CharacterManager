@@ -61,13 +61,32 @@ namespace CharacterManager.Spells
         public Boolean IsRitual = false;
 
         public String MaterialComponent = "";
-       
+
+        [XmlIgnore]
+        public Boolean IsModified = false; /* Used only by the SpellEditor. */
+
         [XmlIgnore]
         public string DisplayedName
         {
             get
             {
                 return SpellName;
+            }
+        }
+        
+        [XmlIgnore]
+        public string ListNameForEditor
+        {
+            get
+            {
+                if (IsModified)
+                {
+                    return SpellName + "*";
+                }
+                else
+                {
+                    return SpellName;
+                }
             }
         }
 

@@ -252,7 +252,7 @@ you can hear.
 You can cast this spell through solid objects if you
 are familiar with the target and know it is beyond
 the barrier. Magical silence. 1 foot of stone, 1 inch of
-com m on metal, a thin sheet of lead, or 3 feet of w ood
+common metal, a thin sheet of lead, or 3 feet of wood
 blocks the spell. The spell doesn’t have to follow a
 straight line and can travel freely around corners or
 through openings.</Description>
@@ -262,7 +262,7 @@ through openings.</Description>
     <SpellDuration>1</SpellDuration>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
-    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
     <CastingTime>CASTING_TIME_ACTION</CastingTime>
     <CastingTimePeriod>0</CastingTimePeriod>
     <IsVerbalComponent>true</IsVerbalComponent>
@@ -923,6 +923,7 @@ Should the spell be dispelled, the original script and
 the illusion both disappear.
 
 A creature with truesight can read the hidden message.</Description>
+    <AtHigherLevels />
     <School>Illusion</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -1205,13 +1206,15 @@ each slot level above 1st.</AtHigherLevels>
 perceives everything as hilariously funny and falls
 into fits of laughter if this spell affects it. The target
 must succeed on a Wisdom saving throw or fall prone,
-becom ing incapacitated and unable to stand up for the
+becoming incapacitated and unable to stand up for the
 duration. A creature with an Intelligence score of 4 or
 less isn’t affected.
+
 At the end of each of its turns, and each time it takes
 damage, the target can make another Wisdom saving
 throw. The target has advantage on the saving throw if
 it’s triggered by damage. On a success, the spell ends.</Description>
+    <AtHigherLevels />
     <School>Enchantment</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
