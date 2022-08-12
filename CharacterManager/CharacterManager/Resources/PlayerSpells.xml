@@ -1,55 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfPlayerSpell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	
-	<!-- Cantrips -->
-	<PlayerSpell>
-		<SpellName>Acid Splash</SpellName>
-		<School>Conjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>60</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>0</SpellDuration>
-		
-		<Description>You hurl a bubble of acid. Choose one creature within
+  <PlayerSpell>
+    <SpellName>Acid Splash</SpellName>
+    <Description>You hurl a bubble of acid. Choose one creature within
 range, or choose two creatures within range that are
 within 5 feet of each other. A target must succeed on a
 Dexterity saving throw or take 1d6 acid damage.
 This spell’s damage increases by 1d6 when you reach
 5th level (2d6), 11th level (3d6), and 17th level (4d6).</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Blade Ward</SpellName>
-		<School>Abjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		
-		<Description>You extend your hand and trace a sigil of warding in the
+    <School>Conjuration</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Blade Ward</SpellName>
+    <Description>You extend your hand and trace a sigil of warding in the
 air. Until the end of your next turn, you have resistance
 against bludgeoning, piercing, and slashing damage
 dealt by weapon attacks.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Chill Touch</SpellName>
-		<School>Necromancy</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>120</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		
-		<Description>You create a ghostly, skeletal hand in the space of a
+    <School>Abjuration</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Chill Touch</SpellName>
+    <Description>You create a ghostly, skeletal hand in the space of a
 creature within range. Make a ranged spell attack
 against the creature to assail it with the chill of the
 grave. On a hit, the target takes 1d8 necrotic damage,
@@ -59,21 +60,26 @@ If you hit an undead target, it also has disadvantage on
 attack rolls against you until the end of your next turn.
 This spell’s damage increases by 1d8 when you reach
 5th level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Dancing Lights</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>120</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<SpellDuration>10</SpellDuration>
-		<IsConcentration>true</IsConcentration>
-		
-		<Description>You create up to four torch-sized lights within range,
+    <School>Necromancy</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Dancing Lights</SpellName>
+    <Description>You create up to four torch-sized lights within range,
 making them appear as torches, lanterns, or glowing
 orbs that hover in the air for the duration. You can
 also combine the four lights into one glowing vaguely
@@ -83,41 +89,51 @@ As a bonus action on your turn, you can move the
 lights up to 60 feet to a new spot within range. A light
 must be within 20 feet of another light created by this
 spell, and a light winks out if it exceeds the spell’s range.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Fire Bolt</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>120</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>0</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		
-		<Description>You hurl a mote of fire at a creature or object within
+    <School>Evocation</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Fire Bolt</SpellName>
+    <Description>You hurl a mote of fire at a creature or object within
 range. Make a ranged spell attack against the
 target. On a hit, the target takes 1d10 fire damage. A
 flammable object hit by this spell ignites if it isn't being
 worn or carried. This spell’s damage increases by 1d10 when you reach
 5th level (2d10), 11th level (3d10), and 17th level (4d10).</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Friends</SpellName>
-		<School>Enchantment</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>0</SpellRange>
-		<IsVerbalComponent>false</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>10</SpellDuration>
-		<IsConcentration>true</IsConcentration>
-		
-		<Description>For the duration, you have advantage on all Charisma
+    <School>Evocation</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Friends</SpellName>
+    <Description>For the duration, you have advantage on all Charisma
 checks directed at one creature of your choice that isn’t
 hostile toward you. When the spell ends, the creature
 realizes that you used magic to influence its mood
@@ -125,22 +141,26 @@ and becomes hostile toward you. A creature prone
 to violence might attack you. Another creature might
 seek retribution in other ways (at the DM’s discretion),
 depending on the nature o f your interaction with it.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Light</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_TOUCH</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>false</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<SpellDuration>100</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		
-		<Description>You touch one object that is no larger than 10 feet in any
+    <School>Enchantment</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>false</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Light</SpellName>
+    <Description>You touch one object that is no larger than 10 feet in any
 dimension. Until the spell ends, the object sheds bright
 light in a 20-foot radius and dim light for an additional
 20 feet. The light can be colored as you like. Completely
@@ -149,21 +169,26 @@ light. The spell ends if you cast it again or dismiss it
 as an action. If you target an object held or worn by a hostile
 creature, that creature must succeed on a Dexterity
 saving throw to avoid the spell.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Mage Hand</SpellName>
-		<School>Conjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>30</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>10</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		
-		<Description>A spectral, floating hand appears at a point you choose
+    <School>Evocation</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Mage Hand</SpellName>
+    <Description>A spectral, floating hand appears at a point you choose
 within range. The hand lasts for the duration or until
 you dismiss it as an action. The hand vanishes if it is
 ever more than 30 feet away from you or if you cast
@@ -174,23 +199,26 @@ container, or pour the contents out o f a vial. You can
 move the hand up to 30 feet each time you use it.
 The hand can’t attack, activate magic items, or carry
 more than 10 pounds.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Mending</SpellName>
-		<School>Transmutation</School>
-		<CastingTime>CASTING_TIME_PERIOD</CastingTime>
-		<CastingTimePeriod>10</CastingTimePeriod>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_TOUCH</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<SpellDuration>0</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		
-		<Description>This spell repairs a single break or tear in an object
+    <School>Conjuration</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Mending</SpellName>
+    <Description>This spell repairs a single break or tear in an object
 you touch, such as a broken chain link, two halves of
 a broken key, a torn cloak, or a leaking wineskin. As
 long as the break or tear is no larger than 1 foot in
@@ -198,20 +226,26 @@ any dimension, you mend it. leaving no trace of the
 former damage. This spell can physically repair a magic item
 or construct, but the spell can’t restore magic to
 such an object.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Message</SpellName>
-		<School>Transmutation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>120</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>You point your finger toward a creature within range
+    <School>Transmutation</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Message</SpellName>
+    <Description>You point your finger toward a creature within range
 and whisper a message. The target (and only the target)
 hears the message and can reply in a whisper that only
 you can hear.
@@ -222,20 +256,26 @@ com m on metal, a thin sheet of lead, or 3 feet of w ood
 blocks the spell. The spell doesn’t have to follow a
 straight line and can travel freely around corners or
 through openings.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Minor Illusion</SpellName>
-		<School>Illusion</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>30</SpellRange>
-		<IsVerbalComponent>false</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<SpellDuration>10</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>You create a sound or an image of an object within
+    <School>Transmutation</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Minor Illusion</SpellName>
+    <Description>You create a sound or an image of an object within
 range that lasts for the duration. The illusion also ends if
 you dismiss it as an action or cast this spell again.
 If you create a sound, its volume can range from a
@@ -257,40 +297,52 @@ against your spell save DC. If a creature discerns the
 illusion for what it is, the illusion becomes faint to
 the creature
 		</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Poison Spray</SpellName>
-		<School>Conjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>10</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>You extend your hand toward a creature you can see
+    <School>Illusion</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>false</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Poison Spray</SpellName>
+    <Description>You extend your hand toward a creature you can see
 within range and project a puff of noxious gas from your
 palm. The creature must succeed on a Constitution
 saving throw or take 1d12 poison damage.
 This spell’s damage increases by 1d12 when you reach
 5th level (2d12), 11th level (3d12), and 17th level (4d12).
 		</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Presdigitation</SpellName>
-		<School>Transmutation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>10</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>600</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>This spell is a minor magical trick that novice
+    <School>Conjuration</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>10</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Presdigitation</SpellName>
+    <Description>This spell is a minor magical trick that novice
 spellcasters use for practice. You create one of the
 following magical effects within range:
 • You create an instantaneous, harm less sensory effect,
@@ -315,20 +367,26 @@ If you cast this spell multiple times, you can have up to
 three of its non-instantaneous effects active at a time,
 and you can dismiss such an effect as an action
 		</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Ray of Frost</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>60</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>A frigid beam of blue-white light streaks toward a
+    <School>Transmutation</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>10</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Ray of Frost</SpellName>
+    <Description>A frigid beam of blue-white light streaks toward a
 creature within range. Make a ranged spell attack
 against the target. On a hit, it takes 1d8 cold damage,
 and its speed is reduced by 10 feet until the start of
@@ -336,21 +394,26 @@ your next turn.
 The spell’s damage increases by 1d8 when you reach
 5th level (2d8), 11th level (3d8), and 17th level (4d8).
 		</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Shocking Grasp</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_TOUCH</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>Lightning springs from your hand to deliver a shock to
+    <School>Evocation</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Shocking Grasp</SpellName>
+    <Description>Lightning springs from your hand to deliver a shock to
 a creature you try to touch. Make a melee spell attack
 against the target. You have advantage on the attack roll
 if the target is wearing arm or made of metal. On a hit,
@@ -359,41 +422,50 @@ reactions until the start of its next turn.
 The spell’s damage increases by 1d8 when you reach
 5th level (2d8), 11th level (3d8), and 17th level (4d8).
 		</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>True Strike</SpellName>
-		<School>Divination</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellLevel>0</SpellLevel>
-		<SpellRange>30</SpellRange>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		<IsConcentration>true</IsConcentration>
-		<Description>You extend your hand and point a finger at a target in
+    <School>Evocation</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>True Strike</SpellName>
+    <Description>You extend your hand and point a finger at a target in
 range. Your magic grants you a brief insight into the target’s defenses. 
 On your next turn, you gain advantage on your first attack roll against the target, provided that
 this spell hasn’t ended.
 		</Description>
-	</PlayerSpell>
-	
-	<!-- Level 1 Spells -->
-	
-	<PlayerSpell>
-		<SpellName>Alarm</SpellName>
-		<School>Abjuration</School>
-		<CastingTime>CASTING_TIME_PERIOD</CastingTime>
-		<CastingTimePeriod>10</CastingTimePeriod>
-		<SpellRange>30</SpellRange>
-		<SpellLevel>1</SpellLevel>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<SpellDuration>4800</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>You set an alarm against unwanted intrusion. Choose
+    <School>Divination</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Alarm</SpellName>
+    <Description>You set an alarm against unwanted intrusion. Choose
 a door, a window, or an area within range that is no
 larger than a 20-foot cube. Until the spell ends, an alarm
 alerts you whenever a Tiny or larger creature touches
@@ -404,45 +476,53 @@ A mental alarm alerts you with a ping in your mind
 if you are within 1 mile of the warded area. This ping
 awakens you if you are sleeping. An audible alarm produces 
 the sound of a hand bell for 10 seconds within 60 feet.</Description>
-	</PlayerSpell>
-
-	<PlayerSpell>
-		<SpellName>Burning Hands</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<SpellLevel>1</SpellLevel>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		<AoeSize>15</AoeSize>
-		<AoeType>AOE_TYPE_CONE</AoeType>
-		<IsConcentration>false</IsConcentration>
-		<Description>As you hold your hands with thumbs touching and fingers spread, 
+    <School>Abjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Burning Hands</SpellName>
+    <Description>As you hold your hands with thumbs touching and fingers spread, 
 a thin sheet of flames shoots forth from your outstretched fingertips. 
 Each creature in a 15-foot cone must make a Dexterity saving throw. 
 A creature takes 3d6 fire damage on a failed save, or half as much
 damage on a successful one. The fire ignites any flammable objects in 
 the area that aren’t being worn or carried.</Description>
-		<AtHigherLevels>When you cast this spell using a spell slot of 2nd level or higher, 
+    <AtHigherLevels>When you cast this spell using a spell slot of 2nd level or higher, 
 the damage increases by 1d6 for each slot level above 1st.</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Charm Person</SpellName>
-		<School>Enchantment</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>30</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<SpellLevel>1</SpellLevel>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<SpellDuration>600</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>You attempt to charm a humanoid you can see within
+    <School>Evocation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>15</AoeSize>
+    <AoeType>AOE_TYPE_CONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Charm Person</SpellName>
+    <Description>You attempt to charm a humanoid you can see within
 range. It must make a Wisdom saving throw, and does
 so with advantage if you or your companions are fighting
 it. If it fails the saving throw, it is charmed by you until
@@ -450,53 +530,59 @@ the spell ends or until you or your companions do
 anything harmful to it. The charmed creature regards
 you as a friendly acquaintance. When the spell ends, the
 creature knows it was charmed by you.</Description>
-		<AtHigherLevels>When you cast this spell using
+    <AtHigherLevels>When you cast this spell using
 a spell slot of 2nd level or higher, you can target one
 additional creature for each slot level above 1st. The
 creatures must be within 30 feet of each other when
 you target them.</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Chromatic Orb</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>90</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<SpellLevel>1</SpellLevel>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a diamond worth at least 50 gp</MaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>You hurl a 4-inch-diameter sphere of energy at a
+    <School>Enchantment</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Chromatic Orb</SpellName>
+    <Description>You hurl a 4-inch-diameter sphere of energy at a
 creature that you can see within range. You choose
 acid, cold, fire, lightning, poison, or thunder for the type
 of orb you create, and then make a ranged spell attack
 against the target. If the attack hits, the creature takes
 3d8 damage of the type you chose.</Description>
-		<AtHigherLevels>When you cast this spell using a
+    <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the damage increases by
 1d8 for each slot level above 1st.</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Color Spray</SpellName>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<AoeType>AOE_TYPE_CONE</AoeType>
-		<AoeSize>15</AoeSize>
-		<School>Illusion</School>
-		<SpellLevel>1</SpellLevel>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a pinch of powder or sand that is colored red, yellow, and blue</MaterialComponent>
-		<SpellDuration>1</SpellDuration>
-		<IsConcentration>false</IsConcentration>
-		<Description>A dazzling array of flashing, colored light springs from your hand. Roll 6 d10; 
+    <School>Evocation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>90</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a diamond worth at least 50 gp</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Color Spray</SpellName>
+    <Description>A dazzling array of flashing, colored light springs from your hand. Roll 6 d10; 
 the total is how many hit points of creatures this spell can effect. Creatures 
 in a 15-foot cone originating from you are affected in ascending order of 
 their current hit points (ignoring unconscious creatures and creatures that can’t see).
@@ -505,48 +591,55 @@ affected by this spell is blinded until the spell ends. Subtract each
 creature’s hit points from the total before moving on to the creature with
 the next lowest hit points. A creature’s hit points must be equal to or 
 less than the remaining total for that creature to be affected.</Description>
-		<AtHigherLevels>When you cast this spell using a
+    <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, roll an additional 2d10
-for each slot level above 1st</AtHigherLevels>		
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Comprehend Languages</SpellName>
-		<School>Divination</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<SpellLevel>1</SpellLevel>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a pinch of soot and salt</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>600</SpellDuration>
-		<IsRitual>true</IsRitual>
-		<Description>For the duration, you understand the literal meaning of
+for each slot level above 1st</AtHigherLevels>
+    <School>Illusion</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>15</AoeSize>
+    <AoeType>AOE_TYPE_CONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a pinch of powder or sand that is colored red, yellow, and blue</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Comprehend Languages</SpellName>
+    <Description>For the duration, you understand the literal meaning of
 any spoken language that you hear. You also understand
 any written language that you see, but you must be
 touching the surface on which the words are written. 
 It takes about 1 minute to read one page of text. This spell doesn’t 
 decode secret m essages in a text or a glyph, such as an arcane sigil, 
 that isn’t part of a written language</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Detect Magic</SpellName>
-		<School>Divination</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<IsConcentration>true</IsConcentration>
-		<SpellDuration>100</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>true</IsRitual>
-		<Description>For the duration, you sense the presence of magic
+    <School>Divination</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent>a pinch of soot and salt</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Detect Magic</SpellName>
+    <Description>For the duration, you sense the presence of magic
 within 30 feet of you. If you sense magic in this way, you
 can use your action to see a faint aura around any visible
 creature or object in the area that bears magic, and you
@@ -555,22 +648,26 @@ learn its school of magic, if any.
 The spell can penetrate most barriers, but it is blocked
 by 1 foot of stone, 1 inch of common metal, a thin sheet
 of lead, or 3 feet of wood or dirt.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Disguise Self</SpellName>
-		<School>Illusion</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>600</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You make yourself—including your clothing, armor,
+    <School>Divination</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Disguise Self</SpellName>
+    <Description>You make yourself—including your clothing, armor,
 weapons, and other belongings on your person—look
 different until the spell ends or until you use your action
 to dismiss it. You can seem 1 foot shorter or taller and
@@ -592,86 +689,98 @@ To discern that you are disguised, a creature can use
 its action to inspect your appearance and must succeed
 on an Intelligence (Investigation) check against your
 spell save DC.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Expeditious Retreat</SpellName>
-		<School>Transmutation</School>
-		<CastingTime>CASTING_TIME_BONUS_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<IsConcentration>true</IsConcentration>
-		<SpellDuration>100</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>This spell allows you to move at an incredible pace.
+    <School>Illusion</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Expeditious Retreat</SpellName>
+    <Description>This spell allows you to move at an incredible pace.
 When you cast this spell, and then as a bonus action
 on each of your turns until the spell ends, you can take
 the Dash action.</Description>
-	</PlayerSpell>
-
-	<PlayerSpell>
-		<SpellName>False Life</SpellName>
-		<School>Necromancy</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a small amount of alcohol or distilled spirits</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>600</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>Bolstering yourself with a necromantic facsimile of life,
+    <School>Transmutation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_BONUS_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>False Life</SpellName>
+    <Description>Bolstering yourself with a necromantic facsimile of life,
 you gain 1d4 + 4 temporary hit points for the duration..</Description>
-		<AtHigherLevels>When you cast this spell using a
+    <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, you gain 5 additional
 temporary hit points for each slot level above 1st.
 		</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Feather Fall</SpellName>
-		<School>Transmutation</School>
-		<CastingTime>CASTING_TIME_REACTION</CastingTime>
-		<SpellRange>60</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>false</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a small feather or piece of down</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>10</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>Choose up to five falling creatures within range. 
+    <School>Necromancy</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a small amount of alcohol or distilled spirits</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Feather Fall</SpellName>
+    <Description>Choose up to five falling creatures within range. 
 A falling creature's rate of descent slows to 60 feet per
 round until the spell ends. If the creature lands before
 the spell ends, it takes no falling damage and can land
 on its feet, and the spell ends for that creature.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Find Familiar</SpellName>
-		<School>Conjuration</School>
-		<CastingTime>CASTING_TIME_PERIOD</CastingTime>
-		<CastingTimePeriod>600</CastingTimePeriod>
-		<SpellRange>10</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>10 gp worth of charcoal,incense, and herbs that must be consumed by fire in a brass brazier</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>1</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), 
+    <School>Transmutation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_REACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a small feather or piece of down</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Find Familiar</SpellName>
+    <Description>You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), 
 hawk,lizard, octopus, owl, poisonous snake, fish (quipper),rat, raven, sea horse, spider, or weasel. 
 Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though 
 it is a celestial, fey, or fiend (your choice) instead of a beast. Your familiar acts independently of you, 
@@ -693,50 +802,53 @@ Your familiar transforms into the chosen creature.
 Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the
 spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast
 it. If the spell requires an attack roll, you use your attack modifier for the roll.</Description>
-	</PlayerSpell>
-
-	<PlayerSpell>
-		<SpellName>Fog Cloud</SpellName>
-		<School>Conjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>120</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<AoeType>AOE_TYPE_SPHERE</AoeType>
-		<AoeSize>20</AoeSize>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<IsConcentration>true</IsConcentration>
-		<SpellDuration>600</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You create a 20-foot-radius sphere of fog centered on a
+    <School>Conjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>10</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>600</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>10 gp worth of charcoal,incense, and herbs that must be consumed by fire in a brass brazier</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Fog Cloud</SpellName>
+    <Description>You create a 20-foot-radius sphere of fog centered on a
 point within range. The sphere spreads around corners,
 and its area is heavily obscured. It lasts for the duration
 or until a wind of moderate or greater speed (at least 10
 miles per hour) disperses it</Description>
-		<AtHigherLevels>When you cast this spell using a
+    <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the radius of the fog
 increases by 20 feet for each slot level above 1st.</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Grease</SpellName>
-		<School>Conjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>60</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<AoeType>AOE_TYPE_SQUARE</AoeType>
-		<AoeSize>10</AoeSize>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a bit of pork rind or butter</MaterialComponent>
-		<IsConcentration>true</IsConcentration>
-		<SpellDuration>10</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>Slick grease covers the ground in a 10-foot square
+    <School>Conjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>20</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Grease</SpellName>
+    <Description>Slick grease covers the ground in a 10-foot square
 centered on a point within range and turns it into
 difficult terrain for the duration.
 When the grease appears, each creature standing in
@@ -744,24 +856,26 @@ its area must succeed on a Dexterity saving throw or fall
 prone. A creature that enters the area or ends its turn
 there must also succeed on a Dexterity saving throw
 or fall prone.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Identify</SpellName>
-		<School>Divination</School>
-		<CastingTime>CASTING_TIME_PERIOD</CastingTime>
-		<CastingTimePeriod>10</CastingTimePeriod>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_TOUCH</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a pearl worth at least 100 gp and an owl feather</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>0</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You choose one object that you must touch throughout
+    <School>Conjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>10</AoeSize>
+    <AoeType>AOE_TYPE_SQUARE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a bit of pork rind or butter</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Identify</SpellName>
+    <Description>You choose one object that you must touch throughout
 the casting of the spell. If it is a magic item or som e
 other magic-imbued object, you learn its properties
 and how to use them, whether it requires attunement
@@ -772,24 +886,26 @@ spell created it.
 
 If you instead touch a creature throughout the casting,
 you learn what spells, if any, are currently affecting it.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Illusory Script</SpellName>
-		<School>Illusion</School>
-		<CastingTime>CASTING_TIME_PERIOD</CastingTime>
-		<CastingTimePeriod>10</CastingTimePeriod>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_TOUCH</RangeType>
-		<IsVerbalComponent>false</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a lead-based ink worth at least 10gp, which the spell consumes</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>144000</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You write on parchment, paper, or some other suitable
+    <School>Divination</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a pearl worth at least 100 gp and an owl feather</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Illusory Script</SpellName>
+    <Description>You write on parchment, paper, or some other suitable
 writing material and imbue it with a potent illusion that
 lasts for the duration.
 
@@ -807,106 +923,122 @@ Should the spell be dispelled, the original script and
 the illusion both disappear.
 
 A creature with truesight can read the hidden message.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Jump</SpellName>
-		<School>Transmutation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_TOUCH</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a grasshopper’s hind leg</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>10</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You touch a creature. The creature’s jump distance is
+    <School>Illusion</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>144000</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>false</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a lead-based ink worth at least 10gp, which the spell consumes</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Jump</SpellName>
+    <Description>You touch a creature. The creature’s jump distance is
 tripled until the spell ends.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Longstrider</SpellName>
-		<School>Transmutation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_TOUCH</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a pinch of dirt</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>600</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You touch a creature. The target’s speed increases by 10
+    <School>Transmutation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a grasshopper’s hind leg</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Longstrider</SpellName>
+    <Description>You touch a creature. The target’s speed increases by 10
 feet until the spell ends.</Description>
-		<AtHigherLevels>When you cast this spell using
+    <AtHigherLevels>When you cast this spell using
 a spell slot of 2nd level or higher, you can target one
 additional creature for each slot level above 1st.</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Mage Armor</SpellName>
-		<School>Abjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_TOUCH</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a piece of cured leather</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>4800</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You touch a willing creature who isn’t wearing armor,
+    <School>Transmutation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a pinch of dirt</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Mage Armor</SpellName>
+    <Description>You touch a willing creature who isn’t wearing armor,
 and a protective magical force surrounds it until the
 spell ends. The target’s base AC becom es 13 + its
 Dexterity modifier. The spell ends if the target dons
 armor or if you dismiss the spell as an action.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Magic Missile</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>120</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>1</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You create three glowing darts of magical force. Each
+    <School>Abjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a piece of cured leather</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Magic Missile</SpellName>
+    <Description>You create three glowing darts of magical force. Each
 dart hits a creature of your choice that you can see
 within range. A dart deals 1d4 + 1 force damage to its
 target. The darts all strike simultaneously, and you can
 direct them to hit one creature or several.</Description>
-		<AtHigherLevels>When you cast this spell using a
+    <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the spell creates one
 more dart for each slot level above 1st.</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Protection from Evil and Good</SpellName>
-		<School>Abjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_TOUCH</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>holy water or powdered silver and iron, which the spell consumes</MaterialComponent>
-		<IsConcentration>true</IsConcentration>
-		<SpellDuration>100</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>Until the spell ends, one willing creature you
+    <School>Evocation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Protection from Evil and Good</SpellName>
+    <Description>Until the spell ends, one willing creature you
 touch is protected against certain types of
 creatures: aberrations, celestials, elementals, fey,
 fiends, and undead.
@@ -918,67 +1050,78 @@ or possessed by them. If the target is already charmed,
 frightened, or possessed by such a creature, the target
 has advantage on any new saving throw against the
 relevant effect.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Ray of Sickness</SpellName>
-		<School>Necromancy</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>60</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>1</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>A ray of sickening greenish energy lashes out toward
+    <School>Abjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>holy water or powdered silver and iron, which the spell consumes</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Ray of Sickness</SpellName>
+    <Description>A ray of sickening greenish energy lashes out toward
 a creature within range. Make a ranged spell attack
 against the target. On a hit, the target takes 2d8 poison
 damage and must make a Constitution saving throw.
 On a failed save, it is also poisoned until the end of
 your next turn.</Description>
-		<AtHigherLevels>When you cast this spell using a
+    <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the damage increases by
 1d8 for each slot level above 1st.</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Shield</SpellName>
-		<School>Abjuration</School>
-		<CastingTime>CASTING_TIME_REACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>1</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>An invisible barrier of magical force appears and
+    <School>Necromancy</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Shield</SpellName>
+    <Description>An invisible barrier of magical force appears and
 protects you. Until the start of your next turn, you have a
 +5 bonus to AC, including against the triggering attack,
 and you take no damage from magic missile.
 </Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Silent Image</SpellName>
-		<School>Illusion</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>60</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a bit of fleece</MaterialComponent>
-		<IsConcentration>true</IsConcentration>
-		<SpellDuration>100</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>You create the image of an object, a creature, or some
+    <School>Abjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_REACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Silent Image</SpellName>
+    <Description>You create the image of an object, a creature, or some
 other visible phenomenon that is no larger than a 15-foot
 cube. The image appears at a spot within range and
 lasts for the duration. 
@@ -998,23 +1141,26 @@ that it is an illusion with a successful Intelligence
 (Investigation) check against your spell save DC. If a
 creature discerns the illusion for what it is, the creature
 can see through the image.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Sleep</SpellName>
-		<School>Enchantment</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>90</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a pinch of fine sand, rose petals, or a cricket</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>10</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>This spell sends creatures into a magical slumber.
+    <School>Illusion</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a bit of fleece</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Sleep</SpellName>
+    <Description>This spell sends creatures into a magical slumber.
 Roll 5d8; the total is how many hit points of creatures
 this spell can affect. Creatures within 20 feet of
 a point you choose within range are affected in
@@ -1033,26 +1179,29 @@ to be affected.
 
 Undead and creatures immune to being charmed
 aren’t affected by this spell.</Description>
-		<AtHigherLevels>When you cast this spell using a
+    <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, roll an additional 2d8 for
 each slot level above 1st.</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Tasha’s Hideous Laughter</SpellName>
-		<School>Enchantment</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>30</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>tiny tarts and a feather that is waved in the air</MaterialComponent>
-		<IsConcentration>true</IsConcentration>
-		<SpellDuration>10</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>A creature of your choice that you can see within range
+    <School>Enchantment</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>90</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a pinch of fine sand, rose petals, or a cricket</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Tasha’s Hideous Laughter</SpellName>
+    <Description>A creature of your choice that you can see within range
 perceives everything as hilariously funny and falls
 into fits of laughter if this spell affects it. The target
 must succeed on a Wisdom saving throw or fall prone,
@@ -1063,23 +1212,26 @@ At the end of each of its turns, and each time it takes
 damage, the target can make another Wisdom saving
 throw. The target has advantage on the saving throw if
 it’s triggered by damage. On a success, the spell ends.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Tenser’s Floating Disk</SpellName>
-		<School>Conjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>30</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a drop of mercury</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>600</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>true</IsRitual>
-		<Description>This spell creates a circular, horizontal plane of force,
+    <School>Enchantment</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>tiny tarts and a feather that is waved in the air</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Tenser’s Floating Disk</SpellName>
+    <Description>This spell creates a circular, horizontal plane of force,
 3 feet in diameter and 1 inch thick, that floats 3 feet
 above the ground in an unoccupied space of your choice
 that you can see within range. The disk remains for the
@@ -1097,24 +1249,26 @@ was created at the bottom.
 If you move m ore than 100 feet from the disk (typically
 because it can’t move around an obstacle to follow you),
 the spell ends.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Thunderwave</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>0</SpellRange>
-		<RangeType>RANGE_TYPE_SELF</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>false</IsMaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>0</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<AoeType>AOE_TYPE_CUBE</AoeType>
-		<AoeSize>15</AoeSize>
-		<IsRitual>false</IsRitual>
-		<Description>A wave of thunderous force sweeps out from you. Each
+    <School>Conjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent>a drop of mercury</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Thunderwave</SpellName>
+    <Description>A wave of thunderous force sweeps out from you. Each
 creature in a 15-foot cube originating from you must
 make a Constitution saving throw. On a failed save, a
 creature takes 2d8 thunder damage and is pushed 10
@@ -1124,26 +1278,29 @@ In addition, unsecured objects that are completely
 within the area of effect are automatically pushed 10 feet
 away from you by the spell’s effect, and the spell emits a
 thunderous boom audible out to 300 feet.</Description>
-		<AtHigherLevels>When you cast this spell using a
+    <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the damage increases by
 1d8 for each slot level above 1st.</AtHigherLevels>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Unseen Servant</SpellName>
-		<School>Conjuration</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>60</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a piece of string and a bit of wood</MaterialComponent>
-		<IsConcentration>false</IsConcentration>
-		<SpellDuration>600</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>true</IsRitual>
-		<Description>This spell creates an invisible, mindless, shapeless
+    <School>Evocation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>15</AoeSize>
+    <AoeType>AOE_TYPE_CUBE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Unseen Servant</SpellName>
+    <Description>This spell creates an invisible, mindless, shapeless
 force that perform s simple tasks at your command until
 the spell ends. The servant springs into existence in an
 unoccupied space on the ground within range. It has AC
@@ -1162,23 +1319,26 @@ next command.
 If you command the servant to perform a task that
 would move it more than 60 feet away from you,
 the spell ends.</Description>
-	</PlayerSpell>
-	
-	<PlayerSpell>
-		<SpellName>Witch Bolt</SpellName>
-		<School>Evocation</School>
-		<CastingTime>CASTING_TIME_ACTION</CastingTime>
-		<SpellRange>30</SpellRange>
-		<RangeType>RANGE_TYPE_RANGED</RangeType>
-		<IsVerbalComponent>true</IsVerbalComponent>
-		<IsSomaticComponent>true</IsSomaticComponent>
-		<IsMaterialComponent>true</IsMaterialComponent>
-		<MaterialComponent>a twig from a tree that has been struck by lightning</MaterialComponent>
-		<IsConcentration>true</IsConcentration>
-		<SpellDuration>10</SpellDuration>
-		<SpellLevel>1</SpellLevel>
-		<IsRitual>false</IsRitual>
-		<Description>A beam of crackling, blue energy lances out toward
+    <School>Conjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent>a piece of string and a bit of wood</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Witch Bolt</SpellName>
+    <Description>A beam of crackling, blue energy lances out toward
 a creature within range, forming a sustained arc of
 lightning between you and the target. Make a ranged
 spell attack against that creature. On a hit, the target
@@ -1188,8 +1348,24 @@ lightning damage to the target automatically. The spell
 ends if you use your action to do anything else. The spell
 also ends if the target is ever outside the spell’s range or
 if it has total cover from you.</Description>
-		<AtHigherLevels>When you cast this spell using
+    <AtHigherLevels>When you cast this spell using
 a spell slot of 2nd level or higher, the initial damage
 increases by 1d12 for each slot level above 1st.</AtHigherLevels>
-	</PlayerSpell>	
+    <School>Evocation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a twig from a tree that has been struck by lightning</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
 </ArrayOfPlayerSpell>

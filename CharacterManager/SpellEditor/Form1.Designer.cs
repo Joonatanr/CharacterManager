@@ -67,6 +67,7 @@ namespace SpellEditor
             this.richTextBoxSpellDescription = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSpellName = new System.Windows.Forms.TextBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -82,9 +83,9 @@ namespace SpellEditor
             // buttonLoad
             // 
             this.buttonLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonLoad.Location = new System.Drawing.Point(12, 586);
+            this.buttonLoad.Location = new System.Drawing.Point(12, 592);
             this.buttonLoad.Name = "buttonLoad";
-            this.buttonLoad.Size = new System.Drawing.Size(75, 23);
+            this.buttonLoad.Size = new System.Drawing.Size(75, 35);
             this.buttonLoad.TabIndex = 1;
             this.buttonLoad.Text = "Load";
             this.buttonLoad.UseVisualStyleBackColor = true;
@@ -102,7 +103,7 @@ namespace SpellEditor
             this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(604, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(262, 559);
+            this.listBox1.Size = new System.Drawing.Size(262, 574);
             this.listBox1.TabIndex = 2;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -129,7 +130,7 @@ namespace SpellEditor
             this.groupBox1.Controls.Add(this.textBoxSpellName);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(585, 568);
+            this.groupBox1.Size = new System.Drawing.Size(585, 574);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spell Data";
@@ -145,6 +146,7 @@ namespace SpellEditor
             this.numericUpDownLevel.Name = "numericUpDownLevel";
             this.numericUpDownLevel.Size = new System.Drawing.Size(120, 23);
             this.numericUpDownLevel.TabIndex = 18;
+            this.numericUpDownLevel.ValueChanged += new System.EventHandler(this.numericUpDownLevel_ValueChanged);
             // 
             // groupBox5
             // 
@@ -491,11 +493,23 @@ namespace SpellEditor
             this.textBoxSpellName.Size = new System.Drawing.Size(480, 23);
             this.textBoxSpellName.TabIndex = 0;
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSave.Location = new System.Drawing.Point(100, 592);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 35);
+            this.buttonSave.TabIndex = 4;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 621);
+            this.ClientSize = new System.Drawing.Size(878, 639);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.buttonLoad);
@@ -559,6 +573,7 @@ namespace SpellEditor
         private System.Windows.Forms.NumericUpDown numericUpDownLevel;
         private System.Windows.Forms.CheckBox checkBoxRitual;
         private System.Windows.Forms.CheckBox checkBoxConcentration;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
 

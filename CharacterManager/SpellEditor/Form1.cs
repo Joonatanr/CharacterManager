@@ -19,6 +19,7 @@ namespace SpellEditor
     {
         private static List<PlayerSpell> SpellList = new List<PlayerSpell>();
         private PlayerSpell selectedSpell;
+        private String LoadedFilePath = "";
         
         public Form1()
         {
@@ -61,8 +62,8 @@ namespace SpellEditor
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string filePath = openFileDialog1.FileName;
-                parseSpellsFromXml(filePath);
+                LoadedFilePath = openFileDialog1.FileName;
+                parseSpellsFromXml(LoadedFilePath);
             }
         }
 
@@ -183,6 +184,32 @@ namespace SpellEditor
             if(selectedSpell != null)
             {
                 loadSpellData(selectedSpell);
+            }
+        }
+
+        private void numericUpDownLevel_ValueChanged(object sender, EventArgs e)
+        {
+            if(this.selectedSpell != null)
+            {
+                this.selectedSpell.SpellLevel = (int)numericUpDownLevel.Value;
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(LoadedFilePath))
+            {
+                /* Keep it simple for now. */
+                try
+                {
+                    XmlSerializer writer = new XmlSerializer(typeof(List<PlayerSpell>));
+                    StreamWriter sw = new System.IO.StreamWriter(LoadedFilePath);
+                    writer.Serialize(sw, SpellList);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed to save file " + LoadedFilePath + " Exception : " + ex.Message);
+                }
             }
         }
     }
