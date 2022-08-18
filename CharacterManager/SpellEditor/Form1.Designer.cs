@@ -33,12 +33,19 @@ namespace SpellEditor
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.numericUpDownDurationHours = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
-            this.numericUpDownDurationMinutes = new System.Windows.Forms.NumericUpDown();
-            this.buttonSpellCard = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.comboBoxSpellSchool = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.numericUpDownLevel = new System.Windows.Forms.NumericUpDown();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.numericUpDownSpellDuration = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDurationHours = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownDurationMinutes = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.buttonSpellCard = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.numericUpDownMaterialCost = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
@@ -63,11 +70,6 @@ namespace SpellEditor
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxAoeType = new System.Windows.Forms.ComboBox();
-            this.numericUpDownSpellDuration = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxSpellSchool = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.richTextBoxAtHigherLevels = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -77,9 +79,12 @@ namespace SpellEditor
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDurationHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDurationMinutes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaterialCost)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -88,7 +93,6 @@ namespace SpellEditor
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellRange)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLoad
@@ -123,21 +127,13 @@ namespace SpellEditor
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.numericUpDownDurationHours);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.numericUpDownDurationMinutes);
+            this.groupBox1.Controls.Add(this.groupBox7);
+            this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.buttonSpellCard);
-            this.groupBox1.Controls.Add(this.numericUpDownLevel);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.numericUpDownSpellDuration);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.comboBoxSpellSchool);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.richTextBoxAtHigherLevels);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -151,63 +147,58 @@ namespace SpellEditor
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spell Data";
             // 
-            // label15
+            // groupBox7
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(9, 174);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 15);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "Duration (hr)";
+            this.groupBox7.Controls.Add(this.comboBoxSpellSchool);
+            this.groupBox7.Controls.Add(this.label4);
+            this.groupBox7.Controls.Add(this.label5);
+            this.groupBox7.Controls.Add(this.numericUpDownLevel);
+            this.groupBox7.Location = new System.Drawing.Point(6, 45);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(260, 77);
+            this.groupBox7.TabIndex = 25;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Spell Type";
             // 
-            // numericUpDownDurationHours
+            // comboBoxSpellSchool
             // 
-            this.numericUpDownDurationHours.Location = new System.Drawing.Point(100, 172);
-            this.numericUpDownDurationHours.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numericUpDownDurationHours.Name = "numericUpDownDurationHours";
-            this.numericUpDownDurationHours.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDownDurationHours.TabIndex = 22;
-            this.numericUpDownDurationHours.ValueChanged += new System.EventHandler(this.numericUpDownDurationHours_ValueChanged);
+            this.comboBoxSpellSchool.FormattingEnabled = true;
+            this.comboBoxSpellSchool.Items.AddRange(new object[] {
+            "Abjuration",
+            "Conjuration",
+            "Enchantment",
+            "Evocation",
+            "Necromancy",
+            "Divination",
+            "Illusion",
+            "Transmutation"});
+            this.comboBoxSpellSchool.Location = new System.Drawing.Point(60, 22);
+            this.comboBoxSpellSchool.Name = "comboBoxSpellSchool";
+            this.comboBoxSpellSchool.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxSpellSchool.TabIndex = 7;
+            this.comboBoxSpellSchool.SelectedIndexChanged += new System.EventHandler(this.comboBoxSpellSchool_SelectedIndexChanged);
             // 
-            // label14
+            // label4
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(10, 145);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(85, 15);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "Duration (min)";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 15);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "School";
             // 
-            // numericUpDownDurationMinutes
+            // label5
             // 
-            this.numericUpDownDurationMinutes.Location = new System.Drawing.Point(100, 143);
-            this.numericUpDownDurationMinutes.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numericUpDownDurationMinutes.Name = "numericUpDownDurationMinutes";
-            this.numericUpDownDurationMinutes.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDownDurationMinutes.TabIndex = 20;
-            this.numericUpDownDurationMinutes.ValueChanged += new System.EventHandler(this.numericUpDownDurationMinutes_ValueChanged);
-            // 
-            // buttonSpellCard
-            // 
-            this.buttonSpellCard.Location = new System.Drawing.Point(6, 545);
-            this.buttonSpellCard.Name = "buttonSpellCard";
-            this.buttonSpellCard.Size = new System.Drawing.Size(75, 23);
-            this.buttonSpellCard.TabIndex = 19;
-            this.buttonSpellCard.Text = "Spell Card";
-            this.buttonSpellCard.UseVisualStyleBackColor = true;
-            this.buttonSpellCard.Click += new System.EventHandler(this.buttonSpellCard_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 15);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Level";
             // 
             // numericUpDownLevel
             // 
-            this.numericUpDownLevel.Location = new System.Drawing.Point(100, 85);
+            this.numericUpDownLevel.Location = new System.Drawing.Point(61, 51);
             this.numericUpDownLevel.Maximum = new decimal(new int[] {
             9,
             0,
@@ -218,6 +209,98 @@ namespace SpellEditor
             this.numericUpDownLevel.TabIndex = 18;
             this.numericUpDownLevel.ValueChanged += new System.EventHandler(this.numericUpDownLevel_ValueChanged);
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label7);
+            this.groupBox6.Controls.Add(this.label15);
+            this.groupBox6.Controls.Add(this.numericUpDownSpellDuration);
+            this.groupBox6.Controls.Add(this.numericUpDownDurationHours);
+            this.groupBox6.Controls.Add(this.numericUpDownDurationMinutes);
+            this.groupBox6.Controls.Add(this.label14);
+            this.groupBox6.Location = new System.Drawing.Point(6, 122);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(260, 100);
+            this.groupBox6.TabIndex = 24;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Duration";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 15);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Duration (rnd)";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(3, 77);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 15);
+            this.label15.TabIndex = 23;
+            this.label15.Text = "Duration (hr)";
+            // 
+            // numericUpDownSpellDuration
+            // 
+            this.numericUpDownSpellDuration.Location = new System.Drawing.Point(94, 17);
+            this.numericUpDownSpellDuration.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.numericUpDownSpellDuration.Name = "numericUpDownSpellDuration";
+            this.numericUpDownSpellDuration.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownSpellDuration.TabIndex = 13;
+            this.numericUpDownSpellDuration.ValueChanged += new System.EventHandler(this.numericUpDownSpellDuration_ValueChanged);
+            // 
+            // numericUpDownDurationHours
+            // 
+            this.numericUpDownDurationHours.Location = new System.Drawing.Point(94, 75);
+            this.numericUpDownDurationHours.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.numericUpDownDurationHours.Name = "numericUpDownDurationHours";
+            this.numericUpDownDurationHours.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownDurationHours.TabIndex = 22;
+            this.numericUpDownDurationHours.ValueChanged += new System.EventHandler(this.numericUpDownDurationHours_ValueChanged);
+            // 
+            // numericUpDownDurationMinutes
+            // 
+            this.numericUpDownDurationMinutes.Location = new System.Drawing.Point(94, 46);
+            this.numericUpDownDurationMinutes.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.numericUpDownDurationMinutes.Name = "numericUpDownDurationMinutes";
+            this.numericUpDownDurationMinutes.Size = new System.Drawing.Size(120, 23);
+            this.numericUpDownDurationMinutes.TabIndex = 20;
+            this.numericUpDownDurationMinutes.ValueChanged += new System.EventHandler(this.numericUpDownDurationMinutes_ValueChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(4, 48);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 15);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Duration (min)";
+            // 
+            // buttonSpellCard
+            // 
+            this.buttonSpellCard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSpellCard.Location = new System.Drawing.Point(6, 545);
+            this.buttonSpellCard.Name = "buttonSpellCard";
+            this.buttonSpellCard.Size = new System.Drawing.Size(75, 23);
+            this.buttonSpellCard.TabIndex = 19;
+            this.buttonSpellCard.Text = "Spell Card";
+            this.buttonSpellCard.UseVisualStyleBackColor = true;
+            this.buttonSpellCard.Click += new System.EventHandler(this.buttonSpellCard_Click);
+            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.numericUpDownMaterialCost);
@@ -226,7 +309,7 @@ namespace SpellEditor
             this.groupBox5.Controls.Add(this.checkBoxMaterialComponent);
             this.groupBox5.Controls.Add(this.checkBoxSomaticComponent);
             this.groupBox5.Controls.Add(this.checkBoxVerbalComponent);
-            this.groupBox5.Location = new System.Drawing.Point(6, 217);
+            this.groupBox5.Location = new System.Drawing.Point(6, 225);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(260, 116);
             this.groupBox5.TabIndex = 17;
@@ -298,13 +381,15 @@ namespace SpellEditor
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.checkBoxRitual);
             this.groupBox4.Controls.Add(this.checkBoxConcentration);
             this.groupBox4.Controls.Add(this.numericUpDownCastingTime);
             this.groupBox4.Controls.Add(this.comboBoxCastingTimeType);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Location = new System.Drawing.Point(272, 217);
+            this.groupBox4.Location = new System.Drawing.Point(272, 226);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(307, 116);
             this.groupBox4.TabIndex = 16;
@@ -335,6 +420,8 @@ namespace SpellEditor
             // 
             // numericUpDownCastingTime
             // 
+            this.numericUpDownCastingTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownCastingTime.Location = new System.Drawing.Point(103, 51);
             this.numericUpDownCastingTime.Maximum = new decimal(new int[] {
             100000,
@@ -348,6 +435,8 @@ namespace SpellEditor
             // 
             // comboBoxCastingTimeType
             // 
+            this.comboBoxCastingTimeType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxCastingTimeType.FormattingEnabled = true;
             this.comboBoxCastingTimeType.Location = new System.Drawing.Point(103, 22);
             this.comboBoxCastingTimeType.Name = "comboBoxCastingTimeType";
@@ -440,15 +529,17 @@ namespace SpellEditor
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.comboBoxAoeType);
-            this.groupBox2.Location = new System.Drawing.Point(272, 128);
+            this.groupBox2.Location = new System.Drawing.Point(272, 122);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(307, 83);
+            this.groupBox2.Size = new System.Drawing.Size(307, 100);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "AOE Effects";
             // 
             // numericUpDownAoeSize
             // 
+            this.numericUpDownAoeSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownAoeSize.Location = new System.Drawing.Point(103, 51);
             this.numericUpDownAoeSize.Maximum = new decimal(new int[] {
             100000,
@@ -480,6 +571,8 @@ namespace SpellEditor
             // 
             // comboBoxAoeType
             // 
+            this.comboBoxAoeType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxAoeType.FormattingEnabled = true;
             this.comboBoxAoeType.Location = new System.Drawing.Point(103, 22);
             this.comboBoxAoeType.Name = "comboBoxAoeType";
@@ -487,67 +580,9 @@ namespace SpellEditor
             this.comboBoxAoeType.TabIndex = 0;
             this.comboBoxAoeType.SelectedIndexChanged += new System.EventHandler(this.comboBoxAoeType_SelectedIndexChanged);
             // 
-            // numericUpDownSpellDuration
-            // 
-            this.numericUpDownSpellDuration.Location = new System.Drawing.Point(100, 114);
-            this.numericUpDownSpellDuration.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numericUpDownSpellDuration.Name = "numericUpDownSpellDuration";
-            this.numericUpDownSpellDuration.Size = new System.Drawing.Size(120, 23);
-            this.numericUpDownSpellDuration.TabIndex = 13;
-            this.numericUpDownSpellDuration.ValueChanged += new System.EventHandler(this.numericUpDownSpellDuration_ValueChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 116);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 15);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Duration (rnd)";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 15);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Level";
-            // 
-            // comboBoxSpellSchool
-            // 
-            this.comboBoxSpellSchool.FormattingEnabled = true;
-            this.comboBoxSpellSchool.Items.AddRange(new object[] {
-            "Abjuration",
-            "Conjuration",
-            "Enchantment",
-            "Evocation",
-            "Necromancy",
-            "Divination",
-            "Illusion",
-            "Transmutation"});
-            this.comboBoxSpellSchool.Location = new System.Drawing.Point(99, 56);
-            this.comboBoxSpellSchool.Name = "comboBoxSpellSchool";
-            this.comboBoxSpellSchool.Size = new System.Drawing.Size(121, 23);
-            this.comboBoxSpellSchool.TabIndex = 7;
-            this.comboBoxSpellSchool.SelectedIndexChanged += new System.EventHandler(this.comboBoxSpellSchool_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "School";
-            // 
             // richTextBoxAtHigherLevels
             // 
-            this.richTextBoxAtHigherLevels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.richTextBoxAtHigherLevels.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxAtHigherLevels.Location = new System.Drawing.Point(112, 475);
             this.richTextBoxAtHigherLevels.Name = "richTextBoxAtHigherLevels";
@@ -558,6 +593,7 @@ namespace SpellEditor
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(10, 475);
             this.label3.Name = "label3";
@@ -568,7 +604,7 @@ namespace SpellEditor
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 339);
+            this.label2.Location = new System.Drawing.Point(10, 352);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 3;
@@ -576,11 +612,12 @@ namespace SpellEditor
             // 
             // richTextBoxSpellDescription
             // 
-            this.richTextBoxSpellDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.richTextBoxSpellDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxSpellDescription.Location = new System.Drawing.Point(112, 339);
+            this.richTextBoxSpellDescription.Location = new System.Drawing.Point(112, 349);
             this.richTextBoxSpellDescription.Name = "richTextBoxSpellDescription";
-            this.richTextBoxSpellDescription.Size = new System.Drawing.Size(467, 127);
+            this.richTextBoxSpellDescription.Size = new System.Drawing.Size(467, 117);
             this.richTextBoxSpellDescription.TabIndex = 2;
             this.richTextBoxSpellDescription.Text = "";
             this.richTextBoxSpellDescription.TextChanged += new System.EventHandler(this.richTextBoxSpellDescription_TextChanged);
@@ -639,9 +676,14 @@ namespace SpellEditor
             this.Text = "SpellEditor";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDurationHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDurationMinutes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaterialCost)).EndInit();
@@ -654,7 +696,6 @@ namespace SpellEditor
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellDuration)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -686,27 +727,29 @@ namespace SpellEditor
         private System.Windows.Forms.ComboBox comboBoxRangeType;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.NumericUpDown numericUpDownCastingTime;
         private System.Windows.Forms.ComboBox comboBoxCastingTimeType;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBoxMaterialComponent;
-        private System.Windows.Forms.CheckBox checkBoxMaterialComponent;
-        private System.Windows.Forms.CheckBox checkBoxSomaticComponent;
-        private System.Windows.Forms.CheckBox checkBoxVerbalComponent;
         private System.Windows.Forms.NumericUpDown numericUpDownLevel;
         private System.Windows.Forms.CheckBox checkBoxRitual;
         private System.Windows.Forms.CheckBox checkBoxConcentration;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.NumericUpDown numericUpDownMaterialCost;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button buttonSpellCard;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.NumericUpDown numericUpDownDurationHours;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.NumericUpDown numericUpDownDurationMinutes;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.NumericUpDown numericUpDownMaterialCost;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBoxMaterialComponent;
+        private System.Windows.Forms.CheckBox checkBoxMaterialComponent;
+        private System.Windows.Forms.CheckBox checkBoxSomaticComponent;
+        private System.Windows.Forms.CheckBox checkBoxVerbalComponent;
+        private System.Windows.Forms.NumericUpDown numericUpDownCastingTime;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }
 

@@ -1802,4 +1802,292 @@ nullify each other.</Description>
     <MaterialComponent>a pinch of powdered iron or iron filings</MaterialComponent>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Antipathy/Sympathy</SpellName>
+    <Description>This spell attracts or repels creatures of your choice.
+You target something within range, either a Huge or
+smaller object or creature or an area that is no larger
+than a 200-foot cube. Then specify a kind of intelligent
+creature, such as red dragons, goblins, or vampires.
+You invest the target with an aura that either attracts or
+repels the specified creatures for the duration. Choose
+antipathy or sympathy as the aura’s effect.
+
+Antipathy. The enchantment causes creatures of the
+kind you designated to feel an intense urge to leave the
+area and avoid the target. When such a creature can
+see the target or comes within 60 feet of it, the creature
+must succeed on a Wisdom saving throw or become
+frightened. The creature remains frightened while it can
+see the target or is within 60 feet of it. While frightened
+by the target, the creature must use its movement to move to the nearest 
+safe spot from which it can’t see the target. If the creature moves more than 
+60 feet from the target and can’t see it, the creature is no longer
+frightened, but the creature becomes frightened again if
+it regains sight o f the target or moves within 60 feet of it.
+
+Sympathy. The enchantment causes the specified
+creatures to feel an intense urge to approach the target
+while within 60 feet of it or able to see it. When such a
+creature can see the target or comes within 60 feet o f it,
+the creature must succeed on a Wisdom saving throw or
+use its movement on each o f its turns to enter the area
+or move within reach of the target. When the creature
+has done so, it can’t willingly m ove away from the target.
+If the target damages or otherwise harms an affected
+creature, the affected creature can make a Wisdom
+saving throw to end the effect, as described below.
+
+Ending the Effect. If an affected creature ends its
+turn while not within 60 feet of the target or able to see
+it, the creature makes a Wisdom saving throw. On a
+successful save, the creature is no longer affected by
+the target and recognizes the feeling of repugnance or
+attraction as magical. In addition, a creature affected by
+the spell is allowed another Wisdom saving throw every
+24 hours while the spell persists.
+
+A creature that successfully saves against this effect
+is immune to it for 1 minute, after which time it can be
+affected again.</Description>
+    <School>Enchantment</School>
+    <SpellLevel>8</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>144000</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>600</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Arcane Eye</SpellName>
+    <Description>You create an invisible, magical eye within range that
+hovers in the air for the duration.
+You mentally receive visual information from the eye,
+which has normal vision and darkvision out to 30 feet.
+
+The eye can look in every direction.
+As an action, you can move the eye up to 30 feet in
+any direction. There is no limit to how far away from
+you the eye can move, but it can’t enter another plane
+of existence. A solid barrier blocks the eye’s movement,
+but the eye can pass through an opening as small as 1
+inch in diameter.</Description>
+    <School>Divination</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a bit of bat fur</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Arcane Gate</SpellName>
+    <Description>You create linked teleportation portals that remain open
+for the duration. Choose two points on the ground that
+you can see, one point within 10 feet of you and one
+point within 500 feet of you. A circular portal, 10 feet
+in diameter, opens over each point. If the portal would
+open in the space occupied by a creature, the spell fails,
+and the casting is lost.
+
+The portals are two-dimensional glowing rings
+filled with mist, hovering inches from the ground and p
+erpendicular to it at the points you choose. A ring is
+visible only from one side (your choice), which is the side
+that functions as a portal.
+
+Any creature or object entering the portal exits from
+the other portal as if the two were adjacent to each
+other; passing through a portal from the nonportal side
+has no effect. The mist that fills each portal is opaque
+and blocks vision through it. On your turn, you can
+rotate the rings as a bonus action so that the active side
+faces in a different direction.</Description>
+    <School>Conjuration</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>500</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Arcane Lock</SpellName>
+    <Description>You touch a closed door, window, gate, chest, or other
+entryway, and it becomes locked for the duration. You
+and the creatures you designate when you cast this
+spell can open the object normally. You can also set a
+password that, when spoken within 5 feet of the object,
+suppresses this spell for 1 minute. Otherwise, it is
+impassable until it is broken or the spell is dispelled or
+suppressed. Casting knock on the object suppresses
+arcane lock for 10 minutes.
+
+While affected by this spell, the object is more difficult
+to break or force open; the DC to break it or pick any
+locks on it increases by 10.</Description>
+    <School>Abjuration</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>gold dust worth at least 25gp, which the spell consumes</MaterialComponent>
+    <MaterialCost>25</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Armor of Agathys</SpellName>
+    <Description>A protective magical force surrounds you, manifesting
+as a spectral frost that covers you and your gear.
+You gain 5 temporary hit points for the duration. If a
+creature hits you with a melee attack while you have
+these hit points, the creature takes 5 cold damage.</Description>
+    <AtHigherLevels>When you cast this spell using a spell slot o f 2nd level or higher, 
+both the temporary hit points and the cold damage increase by 
+5 for each slot level above 1st.</AtHigherLevels>
+    <School>Abjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a cup of water</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Arms of Hadar</SpellName>
+    <Description>You invoke the power of Hadar, the Dark Hunger.
+Tendrils of dark energy erupt from you and batter all
+creatures within 10 feet of you. Each creature in that
+area must m ake a Strength saving throw. On a failed
+save, a target takes 2d6 necrotic damage and can’t take
+reactions until its next turn. On a successful save, the
+creature takes half damage, but suffers no other effect.</Description>
+    <AtHigherLevels>When you cast this spell using a
+spell slot of 2nd level or higher, the damage increases by
+1d6 for each slot level above 1st.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>10</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Astral Projection</SpellName>
+    <Description>You and up to eight willing creatures within range
+project your astral bodies into the Astral Plane (the
+spell fails and the casting is wasted if you are already
+on that plane). The material body you leave behind is
+unconscious and in a state of suspended animation; it
+doesn’t need food or air and doesn’t age.
+
+Your astral body resembles your m rtal form in
+almost every way, replicating your game statistics and
+possessions. The principal difference is the addition of
+a silvery cord that extends from between your shoulder
+blades and trails behind you, fading to invisibility after
+1 foot. This cord is your tether to your material body. As
+long as the tether remains intact, you can find your way
+home. If the cord is cut—something that can happen
+only when an effect specifically states that it does—your
+soul and body are separated, killing you instantly.
+
+Your astral form can freely travel through the Astral
+Plane and can pass through portals there leading to any
+other plane. If you enter a new plane or return to the
+plane you were on when casting this spell, your body and
+possessions are transported along the silver cord, allowing
+you to re-enter your body as you enter the new plane.
+Your astral form is a separate incarnation. Any damage
+or other effects that apply to it have no effect on your
+physical body, nor do they persist when you return to it.
+The spell ends for you and your companions when
+you use your action to dismiss it. When the spell ends,
+the affected creature returns to its physical body,
+and it awakens.
+
+The spell might also end early for you or one of your
+companions. A successful dispel magic spell used
+against an astral or physical body ends the spell for that
+creature. If a creature’s original body or its astral form
+drops to 0 hit points, the spell ends for that creature. If
+the spell ends and the silver cord is intact, the cord pulls
+the creature’s astral form back to its body, ending its
+state of suspended animation.
+If you are returned to your body prematurely, your
+companions remain in their astral forms and must find
+their own way back to their bodies, usually by dropping
+to 0 hit points.</Description>
+    <AtHigherLevels />
+    <School>Necromancy</School>
+    <SpellLevel>9</SpellLevel>
+    <SpellRange>10</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>600</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>for each creature you affect with this spell, you must provide one jacinth worth at least 1000GP and one ornately carved bar of silver worth at least 100gp, all of which the spell consumes</MaterialComponent>
+    <MaterialCost>1100</MaterialCost>
+  </PlayerSpell>
 </ArrayOfPlayerSpell>

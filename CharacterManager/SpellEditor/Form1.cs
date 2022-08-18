@@ -570,7 +570,11 @@ namespace SpellEditor
 
                     SpellList.Add(mySpell);
                     updateDisplayedSpells();
-                    listBox1.SelectedItem = mySpell.SpellName;
+                    int index = listBox1.FindString(mySpell.SpellName);
+                    if (index != -1)
+                    {
+                        listBox1.SetSelected(index, true);
+                    }
                 }
             }
         }
