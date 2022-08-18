@@ -99,6 +99,26 @@ namespace CharacterManager.Spells
             }
         }
 
+        private string getRangeText(int range)
+        {
+            if(range < 5280)
+            {
+                return range.ToString() + " feet";
+            }
+            else
+            {
+                int milesRange = range / 5280;
+                if(milesRange > 1)
+                {
+                    return milesRange.ToString() + " miles";
+                }
+                else
+                {
+                    return milesRange.ToString() + " mile";
+                }
+            }
+        }
+
         private void updateRange()
         {
             if (mySpell.SpellRange == 0) 
@@ -128,12 +148,12 @@ namespace CharacterManager.Spells
                 }
                 else
                 {
-                    labelRange.Text = mySpell.SpellRange.ToString() + " feet";
+                    labelRange.Text = getRangeText(mySpell.SpellRange);
                 }
             }
             else
             {
-                labelRange.Text = mySpell.SpellRange.ToString() + " feet";
+                labelRange.Text = getRangeText(mySpell.SpellRange);
             }
         }
 

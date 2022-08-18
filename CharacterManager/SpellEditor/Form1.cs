@@ -45,6 +45,8 @@ namespace SpellEditor
                     return;
                 }
 
+                SpellList = SpellList.OrderBy(sp => sp.SpellName).ToList();
+
                 updateDisplayedSpells();
 
                 file.Close();
@@ -569,6 +571,9 @@ namespace SpellEditor
                     }
 
                     SpellList.Add(mySpell);
+
+                    SpellList = SpellList.OrderBy(sp => sp.SpellName).ToList();
+
                     updateDisplayedSpells();
                     int index = listBox1.FindString(mySpell.SpellName);
                     if (index != -1)
