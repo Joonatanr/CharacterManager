@@ -850,6 +850,7 @@ has resistance to poison damage, and has advantage
 on saving throws against effects that cause any of the
 following conditions: blinded, charmed, deafened,
 frightened, paralyzed, poisoned, and stunned.</Description>
+    <AtHigherLevels />
     <School>Abjuration</School>
     <SpellLevel>4</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -1816,6 +1817,69 @@ luminous, intangible orb about the size of your fist.</Description>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a focus worth at least 100 gp, either a jeweled horn for hearing or a glass eye for seeing</MaterialComponent>
     <MaterialCost>100</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Clone</SpellName>
+    <Description>This spell grows an inert duplicate o f a living creature
+as a safeguard against death. This clone forms inside
+a sealed vessel and grows to full size and maturity
+after 120 days; you can also choose to have the clone
+be a younger version o f the same creature. It remains
+inert and endures indefinitely, as long as its vessel
+remains undisturbed.
+
+At any time after the clone matures, if the original
+creature dies, its soul transfers to the clone, provided
+that the soul is free and willing to return. The clone is
+physically identical to the original and has the same
+personality, memories, and abilities, but none of the
+original’s equipment. The original creature’s physical
+remains, if they still exist, become inert and can’t
+thereafter be restored to life, since the creature’s soul
+is elsewhere.</Description>
+    <School>Necromancy</School>
+    <SpellLevel>8</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>600</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>Diamond worth at least 1000gp and at least 1 cubic inch of flesh to be cloned, which the spell consumes, and a vessel worth at least 2000GP that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground or crystal container filled with salt water </MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <SpellName>Cloud Of Daggers</SpellName>
+    <Description>You fill the air with spinning daggers in a cube 5 feet on
+each side, centered on a point you choose within range.
+A creature takes 4d4 slashing damage when it enters
+the spell’s area for the first time on a turn or starts
+its turn there.</Description>
+    <AtHigherLevels>When you cast this spell using a spell slot of 
+3rd level or higher, the damage increases by
+2d4 for each slot level above 2nd.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a sliver of glass</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
     <SpellName>Color Spray</SpellName>
