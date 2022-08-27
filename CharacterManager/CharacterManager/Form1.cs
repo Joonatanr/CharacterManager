@@ -349,6 +349,7 @@ namespace CharacterManager
                     if (hands < 1)
                     {
                         armor.IsEquipped = false;
+                        updateArmorClass();
                     }
                     else
                     {
