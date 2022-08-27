@@ -28,14 +28,59 @@ namespace CharacterManager
         /* All bonuses that are determined by special abilities should be defined here. */
         public class CharacterBonusValues
         {
-            public int AcBonus = 0; /* Current bonus to AC from abilities and magical effects etc. */
-            public int AttackRollBonus = 0;
-            public int AttackDamageBonus = 0;
+            public List<BonusValueModifier> AcBonusModifiers = new List<BonusValueModifier>();
+            public List<BonusValueModifier> AttackRollBonusModifiers = new List<BonusValueModifier>();
+            public List<BonusValueModifier> AttackDamageBonusModifiers = new List<BonusValueModifier>();
+
             public string AttackNoteString = string.Empty;
+
+            public int AttackRollBonus
+            {
+                get
+                {
+                    return getModifierTotalValue(AttackRollBonusModifiers);
+                }
+            }
+
+            public int AttackDamageBonus
+            {
+                get
+                {
+                    return getModifierTotalValue(AttackDamageBonusModifiers);
+                }
+            }
+
+            public int AcBonus
+            {
+                get
+                {
+                    return getModifierTotalValue(AcBonusModifiers);
+                }
+            }
+
+
+            private int getModifierTotalValue(List<BonusValueModifier> modList)
+            {
+                int res = 0;
+
+                foreach (BonusValueModifier mod in modList)
+                {
+                    res += mod.modifierValue;
+                }
+
+                return res;
+            }
 
             public CharacterBonusValues()
             {
                 
+            }
+
+            internal void ResetAttackModifiers()
+            {
+                AttackNoteString = "";
+                AttackRollBonusModifiers = new List<BonusValueModifier>();
+                AttackDamageBonusModifiers = new List<BonusValueModifier>();
             }
         }
 
@@ -392,69 +437,62 @@ namespace CharacterManager
             }
         }
 
-
-        public String MakeWeaponAttack(PlayerWeapon w)
+        
+        public bool MakeWeaponAttack(PlayerWeapon w, out string resultString, out List<BonusValueModifier> attackModifiers, out List<BonusValueModifier> damageModifiers)
         {
-            String res = "";
-            BonusValues.AttackRollBonus = 0;
-            BonusValues.AttackDamageBonus = 0;
-            BonusValues.AttackNoteString = "";
-
-            AttackRoll?.Invoke(this, w);
+            resultString = "";
+            attackModifiers = new List<BonusValueModifier>();
+            damageModifiers = new List<BonusValueModifier>();
 
             if (!w.IsEquipped)
             {
-                res = "Weapon not equipped.";
+                resultString = "Weapon not equipped.";
+                return false;
+            }
+            else if (w.IsAmmunition)
+            {
+                if (!isRangedAmmoOk(w))
+                {
+                    resultString = "No ammunition";
+                }
             }
             else
             {
-                int hitBonus = getHitBonus(w) + BonusValues.AttackRollBonus;
-                if (hitBonus < 0)
-                {
-                    res += "1d20 " + hitBonus.ToString();
-                }
-                else
-                {
-                    res += "1d20 + " + hitBonus.ToString();
-                }
+                /* First set up the attack roll */
+                /* We begin with a simple d20 always. */
+                attackModifiers.Add(new BonusValueModifier("base", "1d20"));
+                
+                /* Add ability and proficiency bonuses */
+                List<BonusValueModifier> hitbonuses = getHitBonuses(w);
+                attackModifiers.AddRange(hitbonuses);
 
-                res += " : " + w.getBaseDamage();
-                res += " + ";
+                /* Now we look at the damage bonus. */
+                /* First lets get the base damage. */
+                damageModifiers.Add(new BonusValueModifier("base damage", w.getBaseDamage()));
 
-                int damageBonus = getDamageBonus(w);
-                damageBonus += BonusValues.AttackDamageBonus;
-                res += damageBonus.ToString();
-                res += " " + w.Damage.Type + " damage";
+                /* Now lets get the damage bonuses */
 
-                if (w.IsRanged)
-                {
-                    res += "\n";
-                    res += "Range : " + w.Range.NormalRange.ToString() + "/" + w.Range.LongRange.ToString();
-                }
-                else
-                {
-                    res += "\n";
-                    res += "Reach : " + w.Reach.ToString() + "ft";
-                }
+                List<BonusValueModifier> damageBonuses = getDamageBonus(w);
+                damageModifiers.AddRange(damageBonuses);
 
-                if (w.IsAmmunition)
-                {
-                    if (!isRangedAmmoOk(w))
-                    {
-                        res = "No ammunition";
-                    }
-                }
+                /* We add all miscallenous bonuses from abilities and such. */
+                BonusValues.ResetAttackModifiers();
+                AttackRoll?.Invoke(this, w);
 
+                attackModifiers.AddRange(BonusValues.AttackRollBonusModifiers);
+                damageModifiers.AddRange(BonusValues.AttackDamageBonusModifiers);
+
+                /* TODO : Need to add this in some other manner. This information should end up on the weapon attack form. */
                 if (BonusValues.AttackNoteString.Length > 0)
                 {
-                    res += "\n" + BonusValues.AttackNoteString;
+                    resultString += "\n" + BonusValues.AttackNoteString;
                 }
                 /*TODO : Ranged weapons will probably be more complicated... */
                 /*TODO : Should also consider thrown weapons. --- We really need a form for this. */
                 /*TODO : Take ammo into account. */
             }
 
-            return res;
+            return true;
         }
 
         internal void PerformLongRest()
@@ -578,7 +616,9 @@ namespace CharacterManager
             isArmorWorn = false;
             isShieldWorn = false;
             PlayerArmor wornArmor = null;
-            BonusValues.AcBonus = 0;
+
+            BonusValues.AcBonusModifiers = new List<BonusValueModifier>();
+
 
             foreach (PlayerArmor armor in CharacterArmors)
             {
@@ -668,46 +708,95 @@ namespace CharacterManager
         }
 
         /*************************** Private functions **************************/
-        private int getHitBonus(PlayerWeapon w)
+        private List<BonusValueModifier> getHitBonuses(PlayerWeapon w)
         {
-            int res;
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
 
+            int abilityModifier;
+            string abilityDescriptor;
+            
             if (w.IsRanged)
             {
-                res = this.getModifier("DEX");
+                abilityModifier = this.getModifier("DEX");
+                abilityDescriptor = "DEX bonus";
             }
             else
             {
-                res = this.getModifier("STR");
+                abilityModifier = this.getModifier("STR");
+                abilityDescriptor = "STR bonus";
             }
+
+            if (w.IsFinesse)
+            {
+                int dexBonus = this.getModifier("DEX");
+                int strBonus = this.getModifier("STR");
+
+                if (dexBonus > strBonus)
+                {
+                    abilityModifier = dexBonus;
+                    abilityDescriptor = "DEX bonus";
+                }
+                else
+                {
+                    abilityModifier = strBonus;
+                    abilityDescriptor = "STR bonus";
+                }
+            }
+
+            res.Add(new BonusValueModifier(abilityDescriptor,abilityModifier));
 
             /* Handle the proficiency bonus here. */
             if (isProficientWithWeapon(w))
             {
-                res += ProficiencyBonus;
+                res.Add(new BonusValueModifier("Prof. bonus" ,ProficiencyBonus));
             }
 
-            /* TODO : Check for additional effects... */
+            /* Add magical effects if any */
+            /* TODO */
 
             return res;
         }
 
 
-        private int getDamageBonus(PlayerWeapon w)
+        private List<BonusValueModifier> getDamageBonus(PlayerWeapon w)
         {
-            int res = 0;
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
+            int abilityModifier;
+            string abilityDescriptor;
 
             if (w.IsRanged)
             {
-                res = this.getModifier("DEX");    
+                abilityModifier = this.getModifier("DEX");
+                abilityDescriptor = "DEX bonus";
             }
             else
             {
-                res = this.getModifier("STR");
+                abilityModifier = this.getModifier("STR");
+                abilityDescriptor = "STR bonus";
             }
 
-            /* TODO : Check for additional effects. */
+            if (w.IsFinesse)
+            {
+                int dexBonus = this.getModifier("DEX");
+                int strBonus = this.getModifier("STR");
+
+                if (dexBonus > strBonus)
+                {
+                    abilityModifier = dexBonus;
+                    abilityDescriptor = "DEX bonus";
+                }
+                else
+                {
+                    abilityModifier = strBonus;
+                    abilityDescriptor = "STR bonus";
+                }
+            }
+
+            res.Add(new BonusValueModifier(abilityDescriptor, abilityModifier));
+
             return res;
+
+            /* TODO : Check for additional effects. */
         }
 
         private Boolean isRangedAmmoOk(PlayerWeapon w)

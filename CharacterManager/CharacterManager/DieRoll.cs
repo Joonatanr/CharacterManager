@@ -10,6 +10,58 @@ namespace CharacterManager
     public abstract class DieRollComponent
     {
         public abstract int getValue(out String log);
+
+        public static DieRollComponent parseFromString(string str)
+        {
+            /* Lets see if component contains a d. */
+            if ((str[0] == 'd') || (str[0] == 'D'))
+            {
+                int type_of_die;
+                if (!int.TryParse(str.TrimStart(new char[] { 'd', 'D' }), out type_of_die))
+                {
+                    throw new Exception("Failed to parse");
+                }
+
+                return(new DieRoll(1, type_of_die));
+            }
+            else if (str.Contains("d"))
+            {
+                String[] sub = str.Split('d');
+
+                int number_of_dice;
+                int type_of_die;
+
+                if (sub.Length == 2)
+                {
+                    if (!int.TryParse(sub[0], out number_of_dice))
+                    {
+                        throw new Exception("Failed to parse");
+                    }
+
+                    if (!int.TryParse(sub[1], out type_of_die))
+                    {
+                        throw new Exception("Failed to parse");
+                    }
+                }
+                else
+                {
+                    throw new Exception("Failed to parse");
+                }
+
+                return new DieRoll(number_of_dice, type_of_die);
+            }
+            else
+            {
+                int constval;
+
+                if (!int.TryParse(str, out constval))
+                {
+                    throw new Exception("Failed to parse");
+                }
+
+                return new DieRollConstant(constval);
+            }
+        }
     }
 
     public class DieRollConstant : DieRollComponent
@@ -91,6 +143,14 @@ namespace CharacterManager
         [XmlIgnore]
         private String _dieRollString;
 
+        public List<DieRollComponent> DieRollComponents
+        {
+            get
+            {
+                return myComponents;
+            }
+        }
+
         public DieRollValue()
         {
             this.DieRollString = "0";
@@ -132,6 +192,11 @@ namespace CharacterManager
             //Lets do this simply. Pattern is something like 2d10 + 4
             text = text.Replace(" ", string.Empty);
 
+            if(text[0] == '+')
+            {
+                text = text.Insert(0, "0");
+            }
+
             /* Lets try a simple hack here...*/
             for (int x = 0; x < text.Length; x++)
             {
@@ -147,54 +212,7 @@ namespace CharacterManager
 
             foreach (String component in components)
             {
-                /* Lets see if component contains a d. */
-                if ((component[0] == 'd') || (component[0] == 'D'))
-                {
-                    int type_of_die;
-                    if (!int.TryParse(component.TrimStart(new char[] { 'd', 'D' }), out type_of_die))
-                    {
-                        throw new Exception("Failed to parse");
-                    }
-
-                    res.Add(new DieRoll(1, type_of_die));
-                }
-                else if (component.Contains("d"))
-                {
-                    String[] sub = component.Split('d');
-
-                    int number_of_dice;
-                    int type_of_die;
-
-                    if (sub.Length == 2)
-                    {
-                        if (!int.TryParse(sub[0], out number_of_dice))
-                        {
-                            throw new Exception("Failed to parse");
-                        }
-
-                        if (!int.TryParse(sub[1], out type_of_die))
-                        {
-                            throw new Exception("Failed to parse");
-                        }
-                    }
-                    else
-                    {
-                        throw new Exception("Failed to parse");
-                    }
-
-                    res.Add(new DieRoll(number_of_dice, type_of_die));
-                }
-                else
-                {
-                    int constval;
-
-                    if (!int.TryParse(component, out constval))
-                    {
-                        throw new Exception("Failed to parse");
-                    }
-
-                    res.Add(new DieRollConstant(constval));
-                }
+                res.Add(DieRoll.parseFromString(component));
             }
 
             return res;

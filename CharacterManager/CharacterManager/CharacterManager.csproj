@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BonusValueModifier.cs" />
     <Compile Include="CharacterBackGround.cs" />
     <Compile Include="CharacterCreator\CharacterCreatorForm.cs">
       <SubType>Form</SubType>
@@ -305,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CustomButton.resx">
       <DependentUpon>CustomButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FormWeaponAttack.resx">
+      <DependentUpon>FormWeaponAttack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl5eBase.resx">
       <DependentUpon>UserControl5eBase.cs</DependentUpon>

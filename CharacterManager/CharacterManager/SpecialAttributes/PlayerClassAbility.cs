@@ -31,7 +31,7 @@ namespace CharacterManager
         {
             if (w.IsRanged)
             {
-                c.BonusValues.AttackRollBonus += 2;
+                c.BonusValues.AttackRollBonusModifiers.Add(new BonusValueModifier("Archery Fighting Style", 2));
             }
         }
     }
@@ -53,7 +53,7 @@ namespace CharacterManager
         {
             if (c.isArmorWorn)
             {
-                c.BonusValues.AcBonus++;
+                c.BonusValues.AcBonusModifiers.Add(new BonusValueModifier("Defense Fighting Style", 1));
             }
         }
     }
@@ -112,7 +112,8 @@ namespace CharacterManager
 
             if (isOnlyOneEquipped && (w.IsEquippedTwoHanded == false))
             {
-                c.BonusValues.AttackRollBonus += 2;
+                //c.BonusValues.AttackRollBonus += 2;
+                c.BonusValues.AttackRollBonusModifiers.Add(new BonusValueModifier("Dueling Fighting Style", 2));
             }
         }
     }
@@ -198,7 +199,8 @@ namespace CharacterManager
 
                 if (!w.IsRanged)
                 {
-                    c.BonusValues.AttackDamageBonus += bonus;
+                    //c.BonusValues.AttackDamageBonus += bonus;
+                    c.BonusValues.AttackDamageBonusModifiers.Add(new BonusValueModifier("Rage", bonus));
                 }
             }
         }
@@ -223,7 +225,8 @@ namespace CharacterManager
         {
             if (!c.isArmorWorn)
             {
-                c.BonusValues.AcBonus += c.getModifier("CON");
+                //c.BonusValues.AcBonus += c.getModifier("CON");
+                c.BonusValues.AcBonusModifiers.Add(new BonusValueModifier("Unarmored Defense", c.getModifier("CON")));
             }
         }
     }

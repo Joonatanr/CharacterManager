@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
 using CharacterManager.CharacterCreator;
+using CharacterManager.UserControls;
 
 namespace CharacterManager
 {
@@ -255,12 +256,29 @@ namespace CharacterManager
 
         private void userControlWeaponsHandler1_WeaponAttackEvent(Items.PlayerWeapon w)
         {
-            /* TODO : This is a placeholder. */
             if (activeCharacter != null)
             {
-                /* TODO : We should probably have a separate form for making a weapon attack... */
-                MessageBox.Show(activeCharacter.MakeWeaponAttack(w));
-                //userControlEquipmentHandler1.Update();
+                string attackresult;
+                FormWeaponAttack weaponForm = new FormWeaponAttack();
+
+                List<BonusValueModifier> attackModifiers;
+                List<BonusValueModifier> damageModifiers;
+
+                /* TODO : Maybe rename function? */
+                if (activeCharacter.MakeWeaponAttack(w, out attackresult, out attackModifiers, out damageModifiers) == false)
+                {
+                    MessageBox.Show(attackresult);
+                }
+                else
+                {
+                    weaponForm.Weapon = w;
+                    weaponForm.AttackModifiers = attackModifiers;
+                    weaponForm.DamageModifiers = damageModifiers;
+
+                    weaponForm.Show();
+                }
+                
+                /* TODO : Investigate why this call is necessary... */
                 userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
             }
         }
