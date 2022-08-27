@@ -167,6 +167,12 @@
     <Compile Include="UserControls\UserControlAttributeSetup.Designer.cs">
       <DependentUpon>UserControlAttributeSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlDieRollBonusValuesHandler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlDieRollBonusValuesHandler.Designer.cs">
+      <DependentUpon>UserControlDieRollBonusValuesHandler.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControlEquipmentChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlAttributeSetup.resx">
       <DependentUpon>UserControlAttributeSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlDieRollBonusValuesHandler.resx">
+      <DependentUpon>UserControlDieRollBonusValuesHandler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlEquipmentChoice.resx">
       <DependentUpon>UserControlEquipmentChoice.cs</DependentUpon>
