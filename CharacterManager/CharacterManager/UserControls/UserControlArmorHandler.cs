@@ -70,7 +70,7 @@ namespace CharacterManager.UserControls
         private List<PlayerArmor> armorList = new List<PlayerArmor>();
         private List<ArmorControlData> mainList = new List<ArmorControlData>();
 
-        public delegate void ArmorEquipChangedHandler();
+        public delegate void ArmorEquipChangedHandler(PlayerArmor armor);
         public ArmorEquipChangedHandler ArmorEquipChanged;
 
         public UserControlArmorHandler() : base()
@@ -123,6 +123,14 @@ namespace CharacterManager.UserControls
             }
         }
 
+        public void updateEquippedStatus()
+        {
+            foreach(ArmorControlData acdata in mainList) 
+            {
+                acdata.setEquipped(acdata.armor.IsEquipped);
+            }
+        }
+
         private void ArmorEquippedChanged(PlayerArmor armor, Boolean updateOthers)
         {
             if (updateOthers)
@@ -143,7 +151,7 @@ namespace CharacterManager.UserControls
                 }
             }
 
-            ArmorEquipChanged?.Invoke();
+            ArmorEquipChanged?.Invoke(armor);
         }
 
         protected override void drawData(Graphics gfx, Font font)

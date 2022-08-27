@@ -18,8 +18,9 @@ namespace CharacterManager.UserControls
             public CustomButton AttackBtn;
             public CustomButton EquipButton;
 
-            public delegate void WeaponAtckButtonClickedHandler(PlayerWeapon w);
-            public event WeaponAtckButtonClickedHandler WeaponAttackClicked;
+            public delegate void WeaponButtonClickedHandler(PlayerWeapon w);
+            public event WeaponButtonClickedHandler WeaponAttackClicked;
+            public event WeaponButtonClickedHandler WeaponEquipClicked;
 
             public WeaponControlData(PlayerWeapon w)
             {
@@ -71,7 +72,6 @@ namespace CharacterManager.UserControls
 
             private void EquipButton_Click(object sender, EventArgs e)
             {
-                /* TODO : This is a placeholder. */
                 if (weapon.IsVersatile)
                 {
                     if (weapon.IsEquipped && !weapon.IsEquippedTwoHanded)
@@ -103,20 +103,22 @@ namespace CharacterManager.UserControls
                         weapon.setEquipped(true, false);
                     }
                 }
+
+                WeaponEquipClicked?.Invoke(weapon);
             }
         }
 
         private List<PlayerWeapon> weaponList = new List<PlayerWeapon>();
         private List<WeaponControlData> mainList = new List<WeaponControlData>();
 
-        public delegate void weaponAttackHandler(PlayerWeapon w);
-        public event weaponAttackHandler WeaponAttackEvent;
+        public delegate void weaponEventHandler(PlayerWeapon w);
+        public event weaponEventHandler WeaponAttackEvent;
+        public event weaponEventHandler WeaponEquipEvent;
 
 
         public void setWeaponList(List<PlayerWeapon> wList)
         {
             this.weaponList = wList;
-            /* TODO : Infobuttons, equip and attack buttons. */
             setupButtons();
             this.DoubleBuffered = true;
             this.Invalidate();
@@ -147,6 +149,7 @@ namespace CharacterManager.UserControls
                 /* 1. Set up the attack button. */
                 myData.AttackBtn.Location = new Point(this.Width - 43, y + 3);
                 myData.WeaponAttackClicked += HandleAttack;
+                myData.WeaponEquipClicked += HandleEquip;
                 this.Controls.Add(myData.AttackBtn);
 
 
@@ -165,10 +168,24 @@ namespace CharacterManager.UserControls
             }
         }
 
+
+        public void updateEquipStatus()
+        {
+            foreach(WeaponControlData wcdata in mainList)
+            {
+                wcdata.setEquipped(wcdata.weapon.IsEquipped, wcdata.weapon.IsEquippedTwoHanded);
+            }
+        }
+
         private void HandleAttack(PlayerWeapon w)
         {
             /* Pass the event outside of the control. */
             WeaponAttackEvent?.Invoke(w);
+        }
+
+        private void HandleEquip(PlayerWeapon w)
+        {
+            WeaponEquipEvent?.Invoke(w);
         }
 
         protected override void drawData(Graphics gfx, Font font)

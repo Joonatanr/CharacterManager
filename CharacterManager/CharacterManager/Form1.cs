@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
 using CharacterManager.CharacterCreator;
+using CharacterManager.Items;
 using CharacterManager.UserControls;
 
 namespace CharacterManager
@@ -113,7 +114,7 @@ namespace CharacterManager
 
                 //11. Update armors.
                 userControlArmorHandler1.setArmorList(activeCharacter.CharacterArmors);
-                userControlArmorHandler1.ArmorEquipChanged = updateArmorClass;
+                userControlArmorHandler1.ArmorEquipChanged = armorEquippedChanged;
                 updateArmorClass();
 
                 //12. Update general inventory.
@@ -158,6 +159,47 @@ namespace CharacterManager
             else
             {
                 userControlInitiative.Value = bonus.ToString();
+            }
+        }
+
+        private void armorEquippedChanged(PlayerArmor armor)
+        {
+            updateArmorClass();
+
+            int hands = 2;
+
+            if (armor.IsShield)
+            {
+                /* If we equipped a shield, then we will need to check if we are using 2H weapons */
+                /* TODO */
+                if (armor.IsEquipped)
+                {
+                    hands--;
+                }
+
+                foreach (Items.PlayerWeapon weapon in activeCharacter.CharacterWeapons)
+                {
+                    if (weapon.IsEquipped)
+                    {
+                        if (!weapon.IsEquippedTwoHanded)
+                        {
+                            if (hands > 0)
+                            {
+                                hands--;
+                            }
+                            else
+                            {
+                                weapon.setEquipped(false, false);
+                            }
+                        }
+                        else
+                        {
+                            weapon.setEquipped(false, false);
+                        }
+                    }
+                }
+
+                userControlWeaponsHandler1.updateEquipStatus();
             }
         }
 
@@ -283,6 +325,65 @@ namespace CharacterManager
             }
         }
 
+        private void userControlWeaponsHandler1_WeaponEquipEvent(Items.PlayerWeapon w)
+        {
+            int hands = 2;
+
+            if (w.IsEquipped)
+            {
+                if (w.IsEquippedTwoHanded)
+                {
+                    hands -= 2;
+                }
+                else
+                {
+                    hands--;
+                }
+            }
+
+            foreach(Items.PlayerWeapon weapon in activeCharacter.CharacterWeapons)
+            {
+                if (weapon != w)
+                {
+                    if (weapon.IsEquipped)
+                    {
+                        if (!weapon.IsEquippedTwoHanded)
+                        {
+                            if(hands > 0)
+                            {
+                                hands--;
+                            }
+                            else
+                            {
+                                weapon.setEquipped(false, false);
+                            }
+                        }
+                        else
+                        {
+                            weapon.setEquipped(false, false);
+                        }
+                    }
+                }
+            }
+
+            /* Lets Also consider Shield */
+            foreach(PlayerArmor armor in activeCharacter.CharacterArmors)
+            {
+                if (armor.IsShield)
+                {
+                    if (hands < 1)
+                    {
+                        armor.IsEquipped = false;
+                    }
+                }
+            }
+
+            /* TODO : Also catch Shield equipping/unequipping! */
+
+            userControlWeaponsHandler1.updateEquipStatus();
+            userControlArmorHandler1.updateEquippedStatus();
+        }
+
         private void buttonLongRest_Click(object sender, EventArgs e)
         {
             /* TODO */
@@ -339,6 +440,8 @@ namespace CharacterManager
             /* TODO : This is a placeholder. */
             return ability.UseAbility(activeCharacter);
         }
+
+
     }
 
     public static class RichTextBoxExtensions

@@ -504,6 +504,8 @@ namespace CharacterManager
             {
                 ability.RemainingCharges = ability.MaximumCharges;
             }
+
+            /* TODO : Restore spell slots. */
         }
 
         internal void UpdateSpellModifiers()
