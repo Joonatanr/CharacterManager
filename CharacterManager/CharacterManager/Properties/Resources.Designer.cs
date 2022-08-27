@@ -117,24 +117,20 @@ namespace CharacterManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;PlayerClass&gt;
-        ///	&lt;PlayerClassName&gt;Fighter&lt;/PlayerClassName&gt;
-        ///	&lt;HitDie&gt;10&lt;/HitDie&gt;
-        ///	&lt;WeaponProficiencies&gt;
-        ///		&lt;string&gt;Martial Weapons&lt;/string&gt;
-        ///		&lt;string&gt;Simple Weapons&lt;/string&gt;
-        ///	&lt;/WeaponProficiencies&gt;
-        ///	&lt;ArmorProficiencies&gt;
-        ///		&lt;string&gt;Light Armor&lt;/string&gt;
-        ///		&lt;string&gt;Medium Armor&lt;/string&gt;
-        ///		&lt;string&gt;Heavy Armor&lt;/string&gt;
-        ///		&lt;string&gt;Shields&lt;/string&gt;
-        ///	&lt;/ArmorProficiencies&gt;
-        ///	&lt;SavingThrowProficiencies&gt;
-        ///		&lt;string&gt;STR&lt;/string&gt;
-        ///		&lt;string&gt;CON&lt;/string&gt;
-        ///	&lt;/SavingThrowProficiencies&gt;
-        ///	&lt;AvailableSkillProficiencies&gt;        /// [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///&lt;PlayerClass xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+        ///  &lt;PlayerClassName&gt;Fighter&lt;/PlayerClassName&gt;
+        ///  &lt;HitDie&gt;10&lt;/HitDie&gt;
+        ///  &lt;WeaponProficiencies&gt;
+        ///    &lt;string&gt;Martial Weapons&lt;/string&gt;
+        ///    &lt;string&gt;Simple Weapons&lt;/string&gt;
+        ///  &lt;/WeaponProficiencies&gt;
+        ///  &lt;ArmorProficiencies&gt;
+        ///    &lt;string&gt;Light Armor&lt;/string&gt;
+        ///    &lt;string&gt;Medium Armor&lt;/string&gt;
+        ///    &lt;string&gt;Heavy Armor&lt;/string&gt;
+        ///    &lt;string&gt;Shields&lt;/string&gt;
+        ///  &lt;/Ar [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Fighter {
             get {
@@ -154,6 +150,9 @@ namespace CharacterManager.Properties {
         ///		&lt;WIS&gt;1&lt;/WIS&gt;
         ///    &lt;/BonusAttributes&gt;
         ///	&lt;NumberOfGenericBonusAttributes&gt;0&lt;/NumberOfGenericBonusAttributes&gt;
+        ///	&lt;MaximumAge&gt;100&lt;/MaximumAge&gt;
+        ///	&lt;Size&gt;Medium&lt;/Size&gt;
+        ///	&lt;BaseSpeed&gt;30&lt;/BaseSpeed&gt;
         ///&lt;/PlayerRace&gt;.
         /// </summary>
         internal static string Human {
@@ -173,24 +172,31 @@ namespace CharacterManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;PlayerClass&gt;
-        ///	&lt;PlayerClassName&gt;Wizard&lt;/PlayerClassName&gt;
-        ///	&lt;HitDie&gt;6&lt;/HitDie&gt;
-        ///	&lt;WeaponProficiencies&gt;
-        ///		&lt;string&gt;Daggers&lt;/string&gt;
-        ///		&lt;string&gt;Darts&lt;/string&gt;
-        ///		&lt;string&gt;Slings&lt;/string&gt;
-        ///		&lt;string&gt;Quarterstaffs&lt;/string&gt;
-        ///		&lt;string&gt;Light Crossbows&lt;/string&gt;
-        ///	&lt;/WeaponProficiencies&gt;
-        ///	&lt;ArmorProficiencies&gt;
-        ///	&lt;/ArmorProficiencies&gt;
-        ///	&lt;SavingThrowProficiencies&gt;
-        ///		&lt;string&gt;INT&lt;/string&gt;
-        ///		&lt;string&gt;WIS&lt;/string&gt;
-        ///	&lt;/SavingThrowProficiencies&gt;
-        ///	&lt;NumberOfSkillsToChoose&gt;2&lt;/NumberOfSkillsToChoose&gt;
-        ///	&lt;AvailableSkillProficien [rest of string was truncated]&quot;;.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TwoHandedSword {
+            get {
+                object obj = ResourceManager.GetObject("TwoHandedSword", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///&lt;PlayerClass xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+        ///  &lt;PlayerClassName&gt;Wizard&lt;/PlayerClassName&gt;
+        ///  &lt;HitDie&gt;6&lt;/HitDie&gt;
+        ///  &lt;WeaponProficiencies&gt;
+        ///    &lt;string&gt;Dagger&lt;/string&gt;
+        ///    &lt;string&gt;Dart&lt;/string&gt;
+        ///    &lt;string&gt;Sling&lt;/string&gt;
+        ///    &lt;string&gt;Quarterstaff&lt;/string&gt;
+        ///    &lt;string&gt;Light Crossbow&lt;/string&gt;
+        ///  &lt;/WeaponProficiencies&gt;
+        ///  &lt;ArmorProficiencies /&gt;
+        ///  &lt;SavingThrowProficiencies&gt;
+        ///    &lt;string&gt;INT&lt;/string&gt;
+        ///   [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Wizard {
             get {

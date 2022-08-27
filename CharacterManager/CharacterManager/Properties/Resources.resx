@@ -118,22 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Fighter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerClasses\Fighter.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1257</value>
+  </data>
+  <data name="Human" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerRaces\Human.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1257</value>
+  </data>
+  <data name="Elf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerRaces\Elf.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1257</value>
+  </data>
+  <data name="old-paper-texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\old-paper-texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerClasses\Wizard.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1257</value>
   </data>
   <data name="Dwarf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerRaces\Dwarf.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1257</value>
   </data>
-  <data name="Elf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayerRaces\Elf.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1257</value>
-  </data>
-  <data name="Human" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayerRaces\Human.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1257</value>
-  </data>
-  <data name="Fighter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayerClasses\Fighter.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1257</value>
-  </data>
-  <data name="old-paper-texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\old-paper-texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TwoHandedSword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pictures\TwoHandedSword.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

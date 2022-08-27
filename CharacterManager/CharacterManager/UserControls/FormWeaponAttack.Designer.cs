@@ -38,8 +38,10 @@ namespace CharacterManager.UserControls
             this.label7 = new System.Windows.Forms.Label();
             this.richTextBoxRolls = new System.Windows.Forms.RichTextBox();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.userControlDamageDieRoll = new CharacterManager.UserControls.UserControlDieRollBonusValuesHandler();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.userControlAttackDieRolls = new CharacterManager.UserControls.UserControlDieRollBonusValuesHandler();
+            this.userControlDamageDieRoll = new CharacterManager.UserControls.UserControlDieRollBonusValuesHandler();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -119,17 +121,18 @@ namespace CharacterManager.UserControls
             // 
             // richTextBoxRolls
             // 
-            this.richTextBoxRolls.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxRolls.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.richTextBoxRolls.Location = new System.Drawing.Point(191, 132);
             this.richTextBoxRolls.Name = "richTextBoxRolls";
-            this.richTextBoxRolls.Size = new System.Drawing.Size(530, 148);
+            this.richTextBoxRolls.Size = new System.Drawing.Size(530, 315);
             this.richTextBoxRolls.TabIndex = 19;
             this.richTextBoxRolls.Text = "";
             // 
             // buttonClose
             // 
-            this.buttonClose.Location = new System.Drawing.Point(10, 250);
+            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonClose.Location = new System.Drawing.Point(10, 417);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 30);
             this.buttonClose.TabIndex = 20;
@@ -137,15 +140,17 @@ namespace CharacterManager.UserControls
             this.buttonClose.UseVisualStyleBackColor = true;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // userControlDamageDieRoll
+            // pictureBox1
             // 
-            this.userControlDamageDieRoll.BackColor = System.Drawing.Color.Transparent;
-            this.userControlDamageDieRoll.Location = new System.Drawing.Point(-1, 78);
-            this.userControlDamageDieRoll.Modifiers = null;
-            this.userControlDamageDieRoll.Name = "userControlDamageDieRoll";
-            this.userControlDamageDieRoll.Size = new System.Drawing.Size(722, 27);
-            this.userControlDamageDieRoll.TabIndex = 21;
-            this.userControlDamageDieRoll.UserControlName = "Damage Roll:";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = global::CharacterManager.Properties.Resources.TwoHandedSword;
+            this.pictureBox1.Location = new System.Drawing.Point(737, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(264, 425);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // userControlAttackDieRolls
             // 
@@ -157,12 +162,23 @@ namespace CharacterManager.UserControls
             this.userControlAttackDieRolls.TabIndex = 22;
             this.userControlAttackDieRolls.UserControlName = "Attack Roll:";
             // 
+            // userControlDamageDieRoll
+            // 
+            this.userControlDamageDieRoll.BackColor = System.Drawing.Color.Transparent;
+            this.userControlDamageDieRoll.Location = new System.Drawing.Point(-1, 78);
+            this.userControlDamageDieRoll.Modifiers = null;
+            this.userControlDamageDieRoll.Name = "userControlDamageDieRoll";
+            this.userControlDamageDieRoll.Size = new System.Drawing.Size(722, 27);
+            this.userControlDamageDieRoll.TabIndex = 21;
+            this.userControlDamageDieRoll.UserControlName = "Damage Roll:";
+            // 
             // FormWeaponAttack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CharacterManager.Properties.Resources.old_paper_texture;
-            this.ClientSize = new System.Drawing.Size(742, 292);
+            this.ClientSize = new System.Drawing.Size(1013, 459);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.userControlAttackDieRolls);
             this.Controls.Add(this.userControlDamageDieRoll);
             this.Controls.Add(this.buttonClose);
@@ -177,6 +193,7 @@ namespace CharacterManager.UserControls
             this.Name = "FormWeaponAttack";
             this.Text = "Weapon Attack";
             this.Load += new System.EventHandler(this.FormWeaponAttack_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +212,6 @@ namespace CharacterManager.UserControls
         private System.Windows.Forms.Button buttonClose;
         private UserControlDieRollBonusValuesHandler userControlDamageDieRoll;
         private UserControlDieRollBonusValuesHandler userControlAttackDieRolls;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
