@@ -97,6 +97,9 @@ namespace CharacterManager.CharacterCreator
                     CreatedCharacter.setMainAndSubrace(SelectedMainRace, SelectedSubRace);
                 }
 
+                //3.5 Set speed.
+                CreatedCharacter.Speed = getSpeedValue();
+
                 //4. Set weapon and armor proficiencies.
                 CreatedCharacter.WeaponProficiencies = getAllWeaponProficiencies();
                 CreatedCharacter.ArmorProficiencies = getAllArmorProficiencies();

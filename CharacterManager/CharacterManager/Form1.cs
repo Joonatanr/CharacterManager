@@ -82,8 +82,10 @@ namespace CharacterManager
                     userControlSkillProficiencies1.setProficientAtSkill(skill);
                 }
 
-                //5. Update passive perception.
+                //5. Update passive perception and speed.
                 textBoxPerception.Text = activeCharacter.PassivePerception.ToString();
+                userControlSpeed.Value = activeCharacter.Speed.ToString() + "ft";
+
 
                 //6. Update Player alignment.
                 String alignmentString = activeCharacter.Alignment.ToString();

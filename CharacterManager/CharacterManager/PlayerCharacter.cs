@@ -136,6 +136,7 @@ namespace CharacterManager
         public int ProficiencyBonus;
         public int ExperiencePoints;
         public int MaxHitPoints;
+        public int Speed = 0;
         private int _CurrentHitPoints;
 
         public PlayerSize Size;
