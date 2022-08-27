@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,7 +51,17 @@ namespace CharacterManager.UserControls
 
                 labelWeaponName.Text = weaponName;
 
-                
+                /* Lets see if a picture exists for our weapon */
+                string fileName = _weapon.ItemName.Replace(",", "");
+                string imgName = "Resources/Pictures/" + fileName + ".png";
+                if (File.Exists(imgName))
+                {
+                    pictureBox1.Image = Image.FromFile(imgName);
+                }
+                else
+                {
+                    pictureBox1.Image = Image.FromFile("Resources/Pictures/Default.png");
+                }
             }
         }
 
