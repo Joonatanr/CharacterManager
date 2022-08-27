@@ -449,48 +449,47 @@ namespace CharacterManager
                 resultString = "Weapon not equipped.";
                 return false;
             }
-            else if (w.IsAmmunition)
+
+            if (w.IsAmmunition)
             {
                 if (!isRangedAmmoOk(w))
                 {
                     resultString = "No ammunition";
+                    return false;
                 }
             }
-            else
-            {
-                /* First set up the attack roll */
-                /* We begin with a simple d20 always. */
-                attackModifiers.Add(new BonusValueModifier("base", "1d20"));
-                
-                /* Add ability and proficiency bonuses */
-                List<BonusValueModifier> hitbonuses = getHitBonuses(w);
-                attackModifiers.AddRange(hitbonuses);
 
-                /* Now we look at the damage bonus. */
-                /* First lets get the base damage. */
-                damageModifiers.Add(new BonusValueModifier("base damage", w.getBaseDamage()));
+           /* First set up the attack roll */
+           /* We begin with a simple d20 always. */
+           attackModifiers.Add(new BonusValueModifier("base", "1d20"));
+           
+           /* Add ability and proficiency bonuses */
+           List<BonusValueModifier> hitbonuses = getHitBonuses(w);
+           attackModifiers.AddRange(hitbonuses);
 
-                /* Now lets get the damage bonuses */
+           /* Now we look at the damage bonus. */
+           /* First lets get the base damage. */
+           damageModifiers.Add(new BonusValueModifier("base damage", w.getBaseDamage()));
 
-                List<BonusValueModifier> damageBonuses = getDamageBonus(w);
-                damageModifiers.AddRange(damageBonuses);
+           /* Now lets get the damage bonuses */
 
-                /* We add all miscallenous bonuses from abilities and such. */
-                BonusValues.ResetAttackModifiers();
-                AttackRoll?.Invoke(this, w);
+           List<BonusValueModifier> damageBonuses = getDamageBonus(w);
+           damageModifiers.AddRange(damageBonuses);
 
-                attackModifiers.AddRange(BonusValues.AttackRollBonusModifiers);
-                damageModifiers.AddRange(BonusValues.AttackDamageBonusModifiers);
+           /* We add all miscallenous bonuses from abilities and such. */
+           BonusValues.ResetAttackModifiers();
+           AttackRoll?.Invoke(this, w);
 
-                /* TODO : Need to add this in some other manner. This information should end up on the weapon attack form. */
-                if (BonusValues.AttackNoteString.Length > 0)
-                {
-                    resultString += "\n" + BonusValues.AttackNoteString;
-                }
-                /*TODO : Ranged weapons will probably be more complicated... */
-                /*TODO : Should also consider thrown weapons. --- We really need a form for this. */
-                /*TODO : Take ammo into account. */
-            }
+           attackModifiers.AddRange(BonusValues.AttackRollBonusModifiers);
+           damageModifiers.AddRange(BonusValues.AttackDamageBonusModifiers);
+
+           /* TODO : Need to add this in some other manner. This information should end up on the weapon attack form. */
+           if (BonusValues.AttackNoteString.Length > 0)
+           {
+               resultString += "\n" + BonusValues.AttackNoteString;
+           }
+           /*TODO : Ranged weapons will probably be more complicated... */
+           /*TODO : Should also consider thrown weapons. --- We really need a form for this. */
 
             return true;
         }

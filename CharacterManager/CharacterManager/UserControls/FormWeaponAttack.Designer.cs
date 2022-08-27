@@ -32,7 +32,7 @@ namespace CharacterManager.UserControls
             this.label1 = new System.Windows.Forms.Label();
             this.labelWeaponName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxRange = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,12 +75,12 @@ namespace CharacterManager.UserControls
             this.label4.TabIndex = 4;
             this.label4.Text = "Range:";
             // 
-            // textBox1
+            // textBoxRange
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 130);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.textBoxRange.Location = new System.Drawing.Point(76, 130);
+            this.textBoxRange.Name = "textBoxRange";
+            this.textBoxRange.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRange.TabIndex = 5;
             // 
             // label5
             // 
@@ -170,7 +170,7 @@ namespace CharacterManager.UserControls
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxRange);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelWeaponName);
             this.Controls.Add(this.label1);
@@ -187,7 +187,7 @@ namespace CharacterManager.UserControls
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelWeaponName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxRange;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

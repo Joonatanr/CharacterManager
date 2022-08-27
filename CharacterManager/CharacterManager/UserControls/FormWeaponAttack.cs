@@ -38,7 +38,19 @@ namespace CharacterManager.UserControls
                         weaponName += "(1H)";
                     }
                 }
+
+                if (_weapon.IsRanged)
+                {
+                    textBoxRange.Text = _weapon.Range.NormalRange.ToString() + " / " + _weapon.Range.LongRange.ToString();
+                }
+                else
+                {
+                    textBoxRange.Text = "Melee";
+                }
+
                 labelWeaponName.Text = weaponName;
+
+                
             }
         }
 
