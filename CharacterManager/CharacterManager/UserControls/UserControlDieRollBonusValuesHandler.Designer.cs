@@ -29,12 +29,14 @@ namespace CharacterManager.UserControls
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxRollTotalResult = new System.Windows.Forms.TextBox();
             this.buttonRoll = new System.Windows.Forms.Button();
             this.textBoxTotalRoll = new System.Windows.Forms.TextBox();
             this.textBoxRollSituational = new System.Windows.Forms.TextBox();
             this.textBoxRollMods = new System.Windows.Forms.TextBox();
             this.labelControlName = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // textBoxRollTotalResult
@@ -44,7 +46,7 @@ namespace CharacterManager.UserControls
             this.textBoxRollTotalResult.Location = new System.Drawing.Point(624, 0);
             this.textBoxRollTotalResult.Name = "textBoxRollTotalResult";
             this.textBoxRollTotalResult.ReadOnly = true;
-            this.textBoxRollTotalResult.Size = new System.Drawing.Size(183, 20);
+            this.textBoxRollTotalResult.Size = new System.Drawing.Size(128, 20);
             this.textBoxRollTotalResult.TabIndex = 18;
             this.textBoxRollTotalResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -56,6 +58,7 @@ namespace CharacterManager.UserControls
             this.buttonRoll.TabIndex = 17;
             this.buttonRoll.Text = "Roll";
             this.buttonRoll.UseVisualStyleBackColor = true;
+            this.buttonRoll.Click += new System.EventHandler(this.buttonRoll_Click);
             // 
             // textBoxTotalRoll
             // 
@@ -84,6 +87,7 @@ namespace CharacterManager.UserControls
             this.textBoxRollMods.Size = new System.Drawing.Size(147, 20);
             this.textBoxRollMods.TabIndex = 14;
             this.textBoxRollMods.Text = "1d20+3+2+1";
+            this.toolTip1.SetToolTip(this.textBoxRollMods, "Hello World");
             // 
             // labelControlName
             // 
@@ -95,6 +99,17 @@ namespace CharacterManager.UserControls
             this.labelControlName.Size = new System.Drawing.Size(90, 20);
             this.labelControlName.TabIndex = 13;
             this.labelControlName.Text = "Attack Roll:";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 200;
+            this.toolTip1.AutoPopDelay = 10000;
+            this.toolTip1.InitialDelay = 50;
+            this.toolTip1.ReshowDelay = 40;
+            this.toolTip1.ShowAlways = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Modifiers";
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // UserControlDieRollBonusValuesHandler
             // 
@@ -108,7 +123,7 @@ namespace CharacterManager.UserControls
             this.Controls.Add(this.textBoxRollMods);
             this.Controls.Add(this.labelControlName);
             this.Name = "UserControlDieRollBonusValuesHandler";
-            this.Size = new System.Drawing.Size(810, 27);
+            this.Size = new System.Drawing.Size(813, 27);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,5 +137,6 @@ namespace CharacterManager.UserControls
         private System.Windows.Forms.TextBox textBoxRollSituational;
         private System.Windows.Forms.TextBox textBoxRollMods;
         private System.Windows.Forms.Label labelControlName;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

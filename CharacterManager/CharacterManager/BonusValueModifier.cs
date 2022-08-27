@@ -51,6 +51,26 @@ namespace CharacterManager
             return modifierDieRoll.ToString();
         }
 
+        public static string getToolTipStringFromList(List<BonusValueModifier> bonusValueList)
+        {
+            string modifierString = "";
+            if (bonusValueList != null)
+            {
+                if (bonusValueList.Count > 0)
+                {
+                    foreach (BonusValueModifier mod in bonusValueList)
+                    {
+                        string modString = mod.getBonusValueString();
+                        modString += " - " + mod.modifierName;
+                        modifierString += modString;
+                        modifierString += Environment.NewLine;
+                    }
+                }
+            }
+
+            return modifierString;
+        }
+
         public static string getStringFromList(List<BonusValueModifier> bonusValueList)
         {
             string modifierString = "";

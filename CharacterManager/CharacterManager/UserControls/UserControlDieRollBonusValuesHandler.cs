@@ -41,6 +41,9 @@ namespace CharacterManager.UserControls
             }
         }
 
+        public delegate void logRoll(string str, object sender);
+        public logRoll rollListener;
+
         public UserControlDieRollBonusValuesHandler()
         {
             InitializeComponent();
@@ -49,6 +52,7 @@ namespace CharacterManager.UserControls
         public void updateModifiers()
         {
             textBoxRollMods.Text = BonusValueModifier.getStringFromList(_modifiers);
+            toolTip1.SetToolTip(textBoxRollMods, BonusValueModifier.getToolTipStringFromList(_modifiers));
             updateTotalModifiers();
         }
 
@@ -117,6 +121,35 @@ namespace CharacterManager.UserControls
             {
                 updateTotalModifiers();
             }
+        }
+
+        private void buttonRoll_Click(object sender, EventArgs e)
+        {
+            /* We should have the complete roll contained in the total textbox, so lets use that. */
+            string totalRoll = textBoxTotalRoll.Text;
+            
+            if (string.IsNullOrEmpty(totalRoll))
+            {
+                return;
+            }
+
+            /* Lets create an object with all the modifiers */
+            DieRollValue myValue = new DieRollValue(totalRoll);
+            
+            string logString;
+            int result = myValue.RollValue(out logString);
+
+            if(rollListener != null)
+            {
+                rollListener(logString, this);
+            }
+
+            textBoxRollTotalResult.Text = result.ToString();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

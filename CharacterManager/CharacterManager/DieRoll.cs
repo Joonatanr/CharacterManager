@@ -179,10 +179,16 @@ namespace CharacterManager
 
             int res = 0;
 
+            string logRes;
+
             foreach (DieRollComponent c in myComponents)
             {
-                res += c.getValue(out log);
+                res += c.getValue(out logRes);
+                log += logRes + " + ";
             }
+
+            log = log.Remove(log.Length - 2);
+            log += " = " + res.ToString();
 
             return res;
         }
