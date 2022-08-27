@@ -296,7 +296,7 @@
       <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
     </SpellSlots_T>
   </SpellslotPerLevel>
-  <AvailableClassAbilities>
+  <AvailableClassAbilitiesLevel1>
     <PlayerClassAbilityChoice>
       <Description>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren’t wearing heavy armor:
 • You have advantage on Strength checks and Strength saving throws.
@@ -318,5 +318,5 @@ you must finish a long rest before you can rage again.</Description>
         <string>Unarmored Defense</string>
       </AvailableChoices>
     </PlayerClassAbilityChoice>
-  </AvailableClassAbilities>
+  </AvailableClassAbilitiesLevel1>
 </PlayerClass>

@@ -336,25 +336,35 @@
       <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
     </SpellSlots_T>
   </SpellslotPerLevel>
-  <AvailableClassAbilities>
-    <PlayerClassAbilityChoice>
-      <Description>You adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</Description>
-      <ClassAbilityName>Fighting Style</ClassAbilityName>
-      <AvailableChoices>
-        <string>Archery Fighting Style</string>
-        <string>Defense Fighting Style</string>
-        <string>Dueling Fighting Style</string>
-        <string>Great Weapon Fighting Style</string>
-        <string>Protection Fighting Style</string>
-        <string>Two-Weapon Fighting Style</string>
-      </AvailableChoices>
-    </PlayerClassAbilityChoice>
-    <PlayerClassAbilityChoice>
-      <Description>You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d 10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.</Description>
-      <ClassAbilityName>Second Wind</ClassAbilityName>
-      <AvailableChoices>
-        <string>Second Wind</string>
-      </AvailableChoices>
-    </PlayerClassAbilityChoice>
-  </AvailableClassAbilities>
+  
+	<!-- Level 1 -->
+	<AvailableClassAbilitiesLevel1>
+		<PlayerClassAbilityChoice>
+			<Description>You adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</Description>
+			<ClassAbilityName>Fighting Style</ClassAbilityName>
+			<AvailableChoices>
+				<string>Archery Fighting Style</string>
+				<string>Defense Fighting Style</string>
+				<string>Dueling Fighting Style</string>
+				<string>Great Weapon Fighting Style</string>
+				<string>Protection Fighting Style</string>
+				<string>Two-Weapon Fighting Style</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+		<PlayerClassAbilityChoice>
+			<Description>You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d 10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.</Description>
+			<ClassAbilityName>Second Wind</ClassAbilityName>
+			<AvailableChoices>
+				<string>Second Wind</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel1>
+	
+	<!-- Level 2 -->
+	<AvailableClassAbilitiesLevel2>
+	</AvailableClassAbilitiesLevel2>
+	
+	<!-- Level 3 -->
+	<AvailableClassAbilitiesLevel3>
+	</AvailableClassAbilitiesLevel3>
 </PlayerClass>

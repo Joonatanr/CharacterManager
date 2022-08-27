@@ -29,7 +29,7 @@ namespace CharacterManager.CharacterCreator
 
             List<PlayerClassAbilityChoice> choicesList = new List<PlayerClassAbilityChoice>();
 
-            foreach (PlayerClassAbilityChoice choice in _selectedClass.AvailableClassAbilities)
+            foreach (PlayerClassAbilityChoice choice in _selectedClass.getAvailableClassAbilities(1))
             {
                 choicesList.Add(choice);
             }
