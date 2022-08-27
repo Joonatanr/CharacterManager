@@ -341,7 +341,23 @@ namespace CharacterManager
                 }
             }
 
-            foreach(Items.PlayerWeapon weapon in activeCharacter.CharacterWeapons)
+            /* Lets first consider Shield */
+            foreach (PlayerArmor armor in activeCharacter.CharacterArmors)
+            {
+                if (armor.IsShield && armor.IsEquipped)
+                {
+                    if (hands < 1)
+                    {
+                        armor.IsEquipped = false;
+                    }
+                    else
+                    {
+                        hands--;
+                    }
+                }
+            }
+
+            foreach (Items.PlayerWeapon weapon in activeCharacter.CharacterWeapons)
             {
                 if (weapon != w)
                 {
@@ -365,20 +381,6 @@ namespace CharacterManager
                     }
                 }
             }
-
-            /* Lets Also consider Shield */
-            foreach(PlayerArmor armor in activeCharacter.CharacterArmors)
-            {
-                if (armor.IsShield)
-                {
-                    if (hands < 1)
-                    {
-                        armor.IsEquipped = false;
-                    }
-                }
-            }
-
-            /* TODO : Also catch Shield equipping/unequipping! */
 
             userControlWeaponsHandler1.updateEquipStatus();
             userControlArmorHandler1.updateEquippedStatus();
