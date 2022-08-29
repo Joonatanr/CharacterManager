@@ -260,7 +260,7 @@ namespace CharacterManager
                 //Lets do this simply. Pattern is something like 2d10 + 4
                 str = str.Replace(" ", string.Empty);
 
-                if (str[0] == '+')
+                if (str[0] == '+' || str[0] == '-')
                 {
                     str = str.Insert(0, "0");
                 }
