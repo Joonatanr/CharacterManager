@@ -46,6 +46,12 @@ namespace CharacterManager
             modifierDieRoll = DieRoll.parseFromString(dieRoll);
         }
 
+        public BonusValueModifier(string desc, DieRoll dieRoll)
+        {
+            this.modifierName = desc;
+            this.modifierDieRoll = dieRoll;
+        }
+
         public string getBonusValueString()
         {
             return modifierDieRoll.ToString();
@@ -69,6 +75,21 @@ namespace CharacterManager
             }
 
             return modifierString;
+        }
+
+        public static DieRollEquation GetEquationFromList(List<BonusValueModifier> list)
+        {
+            List<DieRollComponent> components = new List<DieRollComponent>();
+
+            if(list != null)
+            {
+                foreach(BonusValueModifier modifier in list)
+                {
+                    components.Add(modifier.modifierDieRoll);
+                }
+            }
+
+            return new DieRollEquation(components);
         }
 
         public static string getStringFromList(List<BonusValueModifier> bonusValueList)

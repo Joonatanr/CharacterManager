@@ -34,6 +34,9 @@ namespace CharacterManager
 
             public string AttackNoteString = string.Empty;
 
+            /* Values that might be accessed during levelup. */
+            public List<BonusValueModifier> HitPointLevelupModifiers = new List<BonusValueModifier>();
+
             public int AttackRollBonus
             {
                 get
@@ -387,6 +390,11 @@ namespace CharacterManager
         {
             /* Should be called only when creating a new character. */
             CharacterCreated?.Invoke(this);
+        }
+
+        public void setupCharacterLevelup()
+        {
+            CharacterLevelup?.Invoke(this);
         }
 
         public Boolean IsCharacterSpellCasting()

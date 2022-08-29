@@ -32,7 +32,6 @@ namespace CharacterManager.UserControls
                 EquipButton.Font = new Font("Arial", 8.0f);
                 EquipButton.Click += new System.EventHandler(EquipButton_Click);
 
-                /* TODO : Set up attack button. */
                 AttackBtn = new CustomButton();
                 AttackBtn.Size = new Size(40, 17);
                 AttackBtn.ButtonText = "Attack";

@@ -146,6 +146,12 @@
     <Compile Include="UserControls\FormAddXp.Designer.cs">
       <DependentUpon>FormAddXp.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\FormLevelup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\FormLevelup.Designer.cs">
+      <DependentUpon>FormLevelup.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\FormUseAbility.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormAddXp.resx">
       <DependentUpon>FormAddXp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FormLevelup.resx">
+      <DependentUpon>FormLevelup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormUseAbility.resx">
       <DependentUpon>FormUseAbility.cs</DependentUpon>

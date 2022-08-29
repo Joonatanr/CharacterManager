@@ -17,12 +17,17 @@ namespace CharacterManager.SpecialAttributes
         public override void InitializeSubscriptions(PlayerCharacter c)
         {
             c.CharacterCreated += setHitPoints;
-            c.CharacterLevelup += setHitPoints;
+            c.CharacterLevelup += setHitPointBonusForLevelup;
         }
 
         private void setHitPoints(PlayerCharacter c)
         {
             c.MaxHitPoints++;
+        }
+
+        private void setHitPointBonusForLevelup(PlayerCharacter c)
+        {
+            c.BonusValues.HitPointLevelupModifiers.Add(new BonusValueModifier("Dwarven Toughness", 1));
         }
     } 
 }

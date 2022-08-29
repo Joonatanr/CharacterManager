@@ -444,15 +444,17 @@ namespace CharacterManager
                 if (myXpForm.DialogResult == DialogResult.OK)
                 {
                     activeCharacter.ExperiencePoints = myXpForm.CurrentXp;
-                    activeCharacter.Level = myXpForm.CurrentLevel;
-
-                    this.textBoxXP.Text = activeCharacter.ExperiencePoints.ToString();
-                    this.textBoxLevel.Text = activeCharacter.Level.ToString();
 
                     if (myXpForm.CurrentLevel > activeCharacter.Level)
                     {
                         handleLevelUpCharacter();
+                        activeCharacter.Level = myXpForm.CurrentLevel;
+
+                        updateCharacterAttributes();
                     }
+
+                    this.textBoxXP.Text = activeCharacter.ExperiencePoints.ToString();
+                    this.textBoxLevel.Text = activeCharacter.Level.ToString();
                 }
             }
         }
@@ -461,6 +463,12 @@ namespace CharacterManager
         {
             /* TODO : Level up. */
             /* This is simply a placeholder. */
+            /* Call this first to setup the level up process. */
+            activeCharacter.setupCharacterLevelup();
+
+            /* TODO : Run the level up form. */
+            FormLevelup myForm = new FormLevelup(activeCharacter);
+            myForm.ShowDialog();
         }
     }
 

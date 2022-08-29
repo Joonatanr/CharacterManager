@@ -24,7 +24,6 @@ namespace CharacterManager.UserControls
             public delegate void ChangeAbilityChargesManuallyHandler(PlayerAbility ability, int numberOfActiveButtons);
             public ChangeAbilityChargesManuallyHandler changeAbilityChargesManually;
 
-
             /* TODO */
             public UserControlSpellSlotIndicator [] slotArray;
 
@@ -195,7 +194,14 @@ namespace CharacterManager.UserControls
                         useButton.Size = new Size(45, 17);
                         if (attrib.IsToggle) 
                         {
-                            useButton.ButtonText = "Activate";
+                            if (attrib.IsActive) 
+                            {
+                                useButton.ButtonText = "Disable";
+                            }
+                            else
+                            {
+                                useButton.ButtonText = "Activate";
+                            }
                         }
                         else
                         {
@@ -249,7 +255,6 @@ namespace CharacterManager.UserControls
         protected override void drawData(Graphics gfx, Font font)
         {
             //Lets draw a descriptive text.
-            //gfx.DrawString("Abilities:", font, new SolidBrush(Color.Black), new Point(1, 1));
             drawTextOnLine(gfx, "Abilities:", 0, font);
 
             int y = 2;
