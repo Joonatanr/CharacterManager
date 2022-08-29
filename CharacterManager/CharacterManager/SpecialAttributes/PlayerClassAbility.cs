@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CharacterManager.Items;
 using CharacterManager.SpecialAttributes;
+using CharacterManager.UserControls;
 
 namespace CharacterManager
 {
@@ -151,13 +152,20 @@ namespace CharacterManager
 
         public override bool UseAbility(PlayerCharacter c)
         {
-            /* TODO : We probably need another form type for dierolls, etc... Good enough for now.. */
-            FormDamageRegister myForm = new FormDamageRegister();
-            myForm.LabelString = "Restore 1d10 + your fighter level,\n enter die roll value:";
+            FormUseAbility myForm = new FormUseAbility();
+
+            /* TODO : Can't we get this in some other manner??? The ability itself should have the description... */
+            myForm.Description = "Restore 1d10 + your fighter level";
+            myForm.AbilityName = "Second Wind";
+
+            List<BonusValueModifier> rollComponents = new List<BonusValueModifier>();
+            rollComponents.Add(new BonusValueModifier("Level", c.Level));
+            rollComponents.Add(new BonusValueModifier("Second wind die", "1d10"));
+            myForm.DieRollModifiers = rollComponents;
 
             if (myForm.ShowDialog() == DialogResult.OK)
             {
-                c.CurrentHitPoints += c.Level + myForm.Damage;
+                c.CurrentHitPoints = Math.Min(c.MaxHitPoints, myForm.RollResult + c.CurrentHitPoints);
                 return true;
             }
             else

@@ -94,6 +94,10 @@ namespace CharacterManager
                                     modifierString += "+ ";
                                 }
                                 modifierString += mod.getBonusValueString() + " ";
+                            }else if(mod.modifierDieRoll is DieRoll)
+                            {
+                                modifierString += "+ ";
+                                modifierString += mod.getBonusValueString() + " ";
                             }
                         }
 

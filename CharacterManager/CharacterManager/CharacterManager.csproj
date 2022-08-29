@@ -93,12 +93,6 @@
     <Compile Include="CharacterCreator\FormChooseEquipment.Designer.cs">
       <DependentUpon>FormChooseEquipment.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDamageRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDamageRegister.Designer.cs">
-      <DependentUpon>FormDamageRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="Items\PlayerArmor.cs" />
     <Compile Include="Items\PlayerItem.cs" />
     <Compile Include="Items\PlayerToolKit.cs" />
@@ -140,11 +134,23 @@
     <Compile Include="UserControls\CustomButton.Designer.cs">
       <DependentUpon>CustomButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CustomRTB.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\DieRollTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\FormAddXp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserControls\FormAddXp.Designer.cs">
       <DependentUpon>FormAddXp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FormUseAbility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\FormUseAbility.Designer.cs">
+      <DependentUpon>FormUseAbility.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\FormWeaponAttack.cs">
       <SubType>Form</SubType>
@@ -293,9 +299,6 @@
     <EmbeddedResource Include="CharacterCreator\FormChooseEquipment.resx">
       <DependentUpon>FormChooseEquipment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDamageRegister.resx">
-      <DependentUpon>FormDamageRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -321,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormAddXp.resx">
       <DependentUpon>FormAddXp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FormUseAbility.resx">
+      <DependentUpon>FormUseAbility.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormWeaponAttack.resx">
       <DependentUpon>FormWeaponAttack.cs</DependentUpon>

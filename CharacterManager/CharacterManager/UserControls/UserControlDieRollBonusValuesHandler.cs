@@ -84,7 +84,7 @@ namespace CharacterManager.UserControls
             {
                 try
                 {
-                    DieRollValue parsedDieRoll = new DieRollValue(situationalBonus);
+                    DieRollEquation parsedDieRoll = new DieRollEquation(situationalBonus);
                     List<DieRollComponent> rollComponents = parsedDieRoll.DieRollComponents;
                     foreach (DieRollComponent component in rollComponents)
                     {
@@ -107,7 +107,8 @@ namespace CharacterManager.UserControls
             }
 
             totalValueString += totalBonus.ToString();
-            textBoxTotalRoll.Text = totalValueString;
+            //dieRollTextBoxTotalRoll.Text = totalValueString;
+            dieRollTextBoxTotalRoll.DieRollObject = new DieRollEquation(totalValueString); /* This method is probably safer. */
         }
 
         private void textBoxRollSituational_Leave(object sender, EventArgs e)
@@ -126,18 +127,8 @@ namespace CharacterManager.UserControls
         private void buttonRoll_Click(object sender, EventArgs e)
         {
             /* We should have the complete roll contained in the total textbox, so lets use that. */
-            string totalRoll = textBoxTotalRoll.Text;
-            
-            if (string.IsNullOrEmpty(totalRoll))
-            {
-                return;
-            }
-
-            /* Lets create an object with all the modifiers */
-            DieRollValue myValue = new DieRollValue(totalRoll);
-            
             string logString;
-            int result = myValue.RollValue(out logString);
+            int result = dieRollTextBoxTotalRoll.Roll(out logString);
 
             if(rollListener != null)
             {

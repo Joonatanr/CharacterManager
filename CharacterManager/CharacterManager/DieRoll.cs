@@ -122,26 +122,24 @@ namespace CharacterManager
     }
 
     [Serializable]
-    public class DieRollValue
+    public class DieRollEquation
     {
         public String DieRollString
         {
             get
             {
-                return _dieRollString;
+                return this.ToString();
             }
             set
             {
-                _dieRollString = value;
-                myComponents = parseText(_dieRollString);
+                myComponents = parseText(value);
             }
         }
 
         //Contains the necessary components to calculate the value.
         [XmlIgnore]
         private List<DieRollComponent> myComponents = new List<DieRollComponent>();
-        [XmlIgnore]
-        private String _dieRollString;
+
 
         public List<DieRollComponent> DieRollComponents
         {
@@ -149,16 +147,26 @@ namespace CharacterManager
             {
                 return myComponents;
             }
+
+            set
+            {
+                myComponents = value;
+            }
         }
 
-        public DieRollValue()
+        public DieRollEquation()
         {
-            this.DieRollString = "0";
+            myComponents = new List<DieRollComponent>();
         }
 
-        public DieRollValue(String val)
+        public DieRollEquation(String val)
         {
             this.DieRollString = val;
+        }
+
+        public DieRollEquation(List<DieRollComponent> componentList)
+        {
+            myComponents = componentList;
         }
         
 
@@ -195,33 +203,110 @@ namespace CharacterManager
 
         private List<DieRollComponent> parseText(String text)
         {
-            //Lets do this simply. Pattern is something like 2d10 + 4
-            text = text.Replace(" ", string.Empty);
+            return parseComponentListFromString(text);
+        }
 
-            if(text[0] == '+')
+        /* Lets make sure that all parsing of strings is done here. We return a list of DieRollComponent type objects */
+        public static List<DieRollComponent> parseComponentListFromString(string str)
+        {
+            List<DieRollComponent> res = new List<DieRollComponent>();
+            if (!string.IsNullOrEmpty(str))
             {
-                text = text.Insert(0, "0");
-            }
+                //Lets do this simply. Pattern is something like 2d10 + 4
+                str = str.Replace(" ", string.Empty);
 
-            /* Lets try a simple hack here...*/
-            for (int x = 0; x < text.Length; x++)
-            {
-                if (text[x] == '-')
+                if (str[0] == '+')
                 {
-                    text = text.Insert(x, "+");
-                    x++;
+                    str = str.Insert(0, "0");
+                }
+
+                /* Lets try a simple hack here...*/
+                for (int x = 0; x < str.Length; x++)
+                {
+                    if (str[x] == '-')
+                    {
+                        str = str.Insert(x, "+");
+                        x++;
+                    }
+                }
+
+                string[] components = str.Split('+');
+
+
+                foreach (String component in components)
+                {
+                    res.Add(DieRoll.parseFromString(component));
                 }
             }
 
-            string[] components = text.Split('+');
-            List<DieRollComponent> res = new List<DieRollComponent>();
+            return res;
+        }
 
-            foreach (String component in components)
+        /* Here we create a string representation. If separate is set to true, then each component is written out separately. */
+        public static string createStringFromDieRollComponents(List<DieRollComponent> input, bool separate)
+        {
+            string modifierString = "";
+            string dummy;
+            int totalConstantValue = 0;
+
+
+            if (input != null)
             {
-                res.Add(DieRoll.parseFromString(component));
+                if (input.Count > 0)
+                {
+                    bool isFirst = true;
+                    foreach (DieRollComponent component in input)
+                    {
+                        if (isFirst)
+                        {
+                            modifierString += component.ToString() + " ";
+                        }
+                        else
+                        {
+                            if (component is DieRollConstant)
+                            {
+                                if (separate == true)
+                                {
+                                    if (component.getValue(out dummy) >= 0)
+                                    {
+                                        modifierString += "+ ";
+                                    }
+                                    modifierString += component.ToString() + " ";
+                                }
+                                else
+                                {
+                                    totalConstantValue += component.getValue(out dummy);
+                                }
+                            }
+                            else if (component is DieRoll)
+                            {
+                                modifierString += "+ ";
+                                modifierString += component.ToString() + " ";
+                            }
+                        }
+
+                        isFirst = false;
+                    }
+
+                    if (separate == false)
+                    {
+                        /* We add all the constants with one separate modifier. */
+                        if (totalConstantValue >= 0)
+                        {
+                            modifierString += "+ ";
+                        }
+                        modifierString += totalConstantValue.ToString();
+                    }
+                }
             }
 
-            return res;
+            return modifierString;
+        }
+
+        /* Here we create a string representation of the DieRollEquation object itself. */
+        public override string ToString()
+        {
+            return createStringFromDieRollComponents(this.myComponents, true);
         }
     }
 }

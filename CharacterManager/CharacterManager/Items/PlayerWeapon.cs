@@ -67,7 +67,7 @@ namespace CharacterManager.Items
 
         public int rollDamage(out String log)
         {
-            DieRollValue value = new DieRollValue(Damage.DamageValue);
+            DieRollEquation value = new DieRollEquation(Damage.DamageValue);
             return value.RollValue(out log);
         }
 

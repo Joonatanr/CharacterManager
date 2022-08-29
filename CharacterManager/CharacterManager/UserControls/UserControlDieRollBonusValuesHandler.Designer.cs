@@ -32,11 +32,11 @@ namespace CharacterManager.UserControls
             this.components = new System.ComponentModel.Container();
             this.textBoxRollTotalResult = new System.Windows.Forms.TextBox();
             this.buttonRoll = new System.Windows.Forms.Button();
-            this.textBoxTotalRoll = new System.Windows.Forms.TextBox();
             this.textBoxRollSituational = new System.Windows.Forms.TextBox();
             this.textBoxRollMods = new System.Windows.Forms.TextBox();
             this.labelControlName = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.dieRollTextBoxTotalRoll = new CharacterManager.UserControls.DieRollTextBox();
             this.SuspendLayout();
             // 
             // textBoxRollTotalResult
@@ -59,15 +59,6 @@ namespace CharacterManager.UserControls
             this.buttonRoll.Text = "Roll";
             this.buttonRoll.UseVisualStyleBackColor = true;
             this.buttonRoll.Click += new System.EventHandler(this.buttonRoll_Click);
-            // 
-            // textBoxTotalRoll
-            // 
-            this.textBoxTotalRoll.Location = new System.Drawing.Point(418, 2);
-            this.textBoxTotalRoll.Name = "textBoxTotalRoll";
-            this.textBoxTotalRoll.ReadOnly = true;
-            this.textBoxTotalRoll.Size = new System.Drawing.Size(119, 20);
-            this.textBoxTotalRoll.TabIndex = 16;
-            this.textBoxTotalRoll.Text = "1d20+8";
             // 
             // textBoxRollSituational
             // 
@@ -111,14 +102,22 @@ namespace CharacterManager.UserControls
             this.toolTip1.ToolTipTitle = "Modifiers";
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // dieRollTextBoxTotalRoll
+            // 
+            this.dieRollTextBoxTotalRoll.DieRollObject = null;
+            this.dieRollTextBoxTotalRoll.Location = new System.Drawing.Point(418, 2);
+            this.dieRollTextBoxTotalRoll.Name = "dieRollTextBoxTotalRoll";
+            this.dieRollTextBoxTotalRoll.Size = new System.Drawing.Size(119, 20);
+            this.dieRollTextBoxTotalRoll.TabIndex = 19;
+            // 
             // UserControlDieRollBonusValuesHandler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.dieRollTextBoxTotalRoll);
             this.Controls.Add(this.textBoxRollTotalResult);
             this.Controls.Add(this.buttonRoll);
-            this.Controls.Add(this.textBoxTotalRoll);
             this.Controls.Add(this.textBoxRollSituational);
             this.Controls.Add(this.textBoxRollMods);
             this.Controls.Add(this.labelControlName);
@@ -133,10 +132,10 @@ namespace CharacterManager.UserControls
 
         private System.Windows.Forms.TextBox textBoxRollTotalResult;
         private System.Windows.Forms.Button buttonRoll;
-        private System.Windows.Forms.TextBox textBoxTotalRoll;
         private System.Windows.Forms.TextBox textBoxRollSituational;
         private System.Windows.Forms.TextBox textBoxRollMods;
         private System.Windows.Forms.Label labelControlName;
         private System.Windows.Forms.ToolTip toolTip1;
+        private DieRollTextBox dieRollTextBoxTotalRoll;
     }
 }
