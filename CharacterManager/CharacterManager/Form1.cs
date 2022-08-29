@@ -207,8 +207,11 @@ namespace CharacterManager
 
         private void updateArmorClass()
         {
-            int ac = activeCharacter.getCurrentArmorClass();
+            List<BonusValueModifier> acMods;
+            int ac = activeCharacter.getCurrentArmorClassModifiers(out acMods);
+            
             userControlArmorClass.Value = ac.ToString();
+            userControlArmorClass.ToolTip = BonusValueModifier.getToolTipStringFromList(acMods);
         }
 
         private void LoadCharacter(PlayerCharacter c)

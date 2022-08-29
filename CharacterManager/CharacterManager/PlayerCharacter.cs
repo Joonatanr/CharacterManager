@@ -612,7 +612,7 @@ namespace CharacterManager
             return false;
         }
 
-        public int getCurrentArmorClass()
+        public int getCurrentArmorClassModifiers(out List<BonusValueModifier> acMods)
         {
             isArmorWorn = false;
             isShieldWorn = false;
@@ -652,17 +652,18 @@ namespace CharacterManager
             }
 
 
-            int ac = 0;
-
             if (!isArmorWorn)
             {
                 /* Unarmed is quite simple. */
-                ac = getModifier("DEX") + 10;
+                BonusValues.AcBonusModifiers.Add(new BonusValueModifier("Unarmed", 10));
+                BonusValues.AcBonusModifiers.Add(new BonusValueModifier("DEX bonus", getModifier("DEX")));
             }
             else
             {
                 /* We are wearing armor. */
-                ac = wornArmor.ArmorClass;
+                //ac = wornArmor.ArmorClass;
+                BonusValues.AcBonusModifiers.Add(new BonusValueModifier(wornArmor.getDisplayedName(), wornArmor.ArmorClass));
+
 
                 if (wornArmor.IsDexterityModifier)
                 {
@@ -672,22 +673,26 @@ namespace CharacterManager
                     {
                         dexBonus = Math.Min(dexBonus, wornArmor.MaxDexModifier);
                     }
-                    ac += dexBonus;
+
+                    //ac += dexBonus;
+                    BonusValues.AcBonusModifiers.Add(new BonusValueModifier("DEX bonus", dexBonus));
                 }
 
             }
 
             if (isShieldWorn)
             {
-                ac += 2;
+                /* TODO : Take shield armor bonus into account (could be +1 shield for example). */
+                BonusValues.AcBonusModifiers.Add(new BonusValueModifier("Shield", 2));
             }
 
             /* Fire the event. */
             ArmorDonned?.Invoke(this);
 
-            ac += BonusValues.AcBonus;
+            //ac += BonusValues.AcBonus;
 
-            return ac;
+            acMods = BonusValues.AcBonusModifiers;
+            return BonusValues.AcBonus;
         }
 
 

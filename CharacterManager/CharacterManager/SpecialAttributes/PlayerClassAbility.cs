@@ -159,8 +159,8 @@ namespace CharacterManager
             myForm.AbilityName = "Second Wind";
 
             List<BonusValueModifier> rollComponents = new List<BonusValueModifier>();
-            rollComponents.Add(new BonusValueModifier("Level", c.Level));
             rollComponents.Add(new BonusValueModifier("Second wind die", "1d10"));
+            rollComponents.Add(new BonusValueModifier("Level", c.Level));
             myForm.DieRollModifiers = rollComponents;
 
             if (myForm.ShowDialog() == DialogResult.OK)
@@ -233,7 +233,6 @@ namespace CharacterManager
         {
             if (!c.isArmorWorn)
             {
-                //c.BonusValues.AcBonus += c.getModifier("CON");
                 c.BonusValues.AcBonusModifiers.Add(new BonusValueModifier("Unarmored Defense", c.getModifier("CON")));
             }
         }

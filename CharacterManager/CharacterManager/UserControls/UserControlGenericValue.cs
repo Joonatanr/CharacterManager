@@ -10,10 +10,25 @@ namespace CharacterManager.UserControls
     class UserControlGenericValue : UserControl5eBase
     {
         private string _value;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.ComponentModel.IContainer components;
         private string _label;
 
         public String Value { get { return _value; } set { _value = value; this.Invalidate(); } }
         public string Label { get { return _label; } set { _label = value; this.Invalidate(); } }
+
+        public UserControlGenericValue() : base()
+        {
+            InitializeComponent();
+        }
+
+        public String ToolTip
+        {
+            set
+            {
+                toolTip1.SetToolTip(this, value);
+            }
+        }
 
         protected override void drawData(Graphics gfx)
         {
@@ -32,6 +47,20 @@ namespace CharacterManager.UserControls
             gfx.DrawString(_value, font, new SolidBrush(Color.Black), new Rectangle(0, 5, Width, Height - 5), format);
 
             drawLabel(gfx, _label);
+
+        }
+
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.SuspendLayout();
+            // 
+            // UserControlGenericValue
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Name = "UserControlGenericValue";
+            this.ResumeLayout(false);
 
         }
     }

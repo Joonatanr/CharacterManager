@@ -17,6 +17,7 @@ namespace CharacterManager.UserControls
         public UserControl5eBase()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
 
         protected override void OnPaint(PaintEventArgs e)
