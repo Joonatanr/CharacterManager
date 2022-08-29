@@ -340,6 +340,9 @@
     <EmbeddedResource Include="UserControls\UserControlGenericListBase.resx">
       <DependentUpon>UserControlGenericListBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlHitPoints.resx">
+      <DependentUpon>UserControlHitPoints.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlMagicHandler.resx">
       <DependentUpon>UserControlMagicHandler.cs</DependentUpon>
     </EmbeddedResource>

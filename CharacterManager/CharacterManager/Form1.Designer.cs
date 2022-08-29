@@ -38,8 +38,6 @@
             this.buttonShortRest = new System.Windows.Forms.Button();
             this.buttonLongRest = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.buttonHeal = new System.Windows.Forms.Button();
-            this.buttonRegisterDamage = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBoxPerception = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -201,8 +199,6 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.buttonHeal);
-            this.groupBox4.Controls.Add(this.buttonRegisterDamage);
             this.groupBox4.Controls.Add(this.userControlSpeed);
             this.groupBox4.Controls.Add(this.userControlInitiative);
             this.groupBox4.Controls.Add(this.userControlArmorClass);
@@ -212,28 +208,6 @@
             this.groupBox4.Size = new System.Drawing.Size(311, 172);
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
-            // 
-            // buttonHeal
-            // 
-            this.buttonHeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonHeal.Location = new System.Drawing.Point(184, 127);
-            this.buttonHeal.Name = "buttonHeal";
-            this.buttonHeal.Size = new System.Drawing.Size(80, 35);
-            this.buttonHeal.TabIndex = 33;
-            this.buttonHeal.Text = "Heal";
-            this.buttonHeal.UseVisualStyleBackColor = true;
-            this.buttonHeal.Click += new System.EventHandler(this.buttonHeal_Click);
-            // 
-            // buttonRegisterDamage
-            // 
-            this.buttonRegisterDamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.buttonRegisterDamage.Location = new System.Drawing.Point(184, 83);
-            this.buttonRegisterDamage.Name = "buttonRegisterDamage";
-            this.buttonRegisterDamage.Size = new System.Drawing.Size(80, 42);
-            this.buttonRegisterDamage.TabIndex = 32;
-            this.buttonRegisterDamage.Text = "Register Damage";
-            this.buttonRegisterDamage.UseVisualStyleBackColor = true;
-            this.buttonRegisterDamage.Click += new System.EventHandler(this.buttonRegisterDamage_Click);
             // 
             // richTextBox1
             // 
@@ -526,9 +500,9 @@
             // 
             this.userControlSpeed.IsBorder = true;
             this.userControlSpeed.Label = "Speed";
-            this.userControlSpeed.Location = new System.Drawing.Point(184, 19);
+            this.userControlSpeed.Location = new System.Drawing.Point(214, 19);
             this.userControlSpeed.Name = "userControlSpeed";
-            this.userControlSpeed.Size = new System.Drawing.Size(80, 58);
+            this.userControlSpeed.Size = new System.Drawing.Size(91, 58);
             this.userControlSpeed.TabIndex = 31;
             this.userControlSpeed.Value = "0";
             // 
@@ -536,9 +510,9 @@
             // 
             this.userControlInitiative.IsBorder = true;
             this.userControlInitiative.Label = "Initiative";
-            this.userControlInitiative.Location = new System.Drawing.Point(99, 19);
+            this.userControlInitiative.Location = new System.Drawing.Point(110, 19);
             this.userControlInitiative.Name = "userControlInitiative";
-            this.userControlInitiative.Size = new System.Drawing.Size(80, 58);
+            this.userControlInitiative.Size = new System.Drawing.Size(97, 58);
             this.userControlInitiative.TabIndex = 30;
             this.userControlInitiative.Value = "0";
             // 
@@ -546,9 +520,9 @@
             // 
             this.userControlArmorClass.IsBorder = true;
             this.userControlArmorClass.Label = "Armor Class";
-            this.userControlArmorClass.Location = new System.Drawing.Point(14, 19);
+            this.userControlArmorClass.Location = new System.Drawing.Point(6, 19);
             this.userControlArmorClass.Name = "userControlArmorClass";
-            this.userControlArmorClass.Size = new System.Drawing.Size(80, 58);
+            this.userControlArmorClass.Size = new System.Drawing.Size(97, 58);
             this.userControlArmorClass.TabIndex = 29;
             this.userControlArmorClass.Value = "0";
             // 
@@ -556,9 +530,9 @@
             // 
             this.userControlHitPoints1.CurrentHitPoints = 10;
             this.userControlHitPoints1.IsBorder = true;
-            this.userControlHitPoints1.Location = new System.Drawing.Point(14, 83);
+            this.userControlHitPoints1.Location = new System.Drawing.Point(6, 83);
             this.userControlHitPoints1.Name = "userControlHitPoints1";
-            this.userControlHitPoints1.Size = new System.Drawing.Size(156, 83);
+            this.userControlHitPoints1.Size = new System.Drawing.Size(299, 83);
             this.userControlHitPoints1.TabIndex = 28;
             // 
             // userControlSkillProficiencies1
@@ -722,8 +696,6 @@
         private UserControls.UserControlEquipmentHandler userControlEquipmentHandler1;
         private System.Windows.Forms.Button buttonShortRest;
         private System.Windows.Forms.Button buttonLongRest;
-        private System.Windows.Forms.Button buttonRegisterDamage;
-        private System.Windows.Forms.Button buttonHeal;
         private UserControls.UserControlMagicHandler userControlMagicHandler1;
     }
 }
