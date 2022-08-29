@@ -31,6 +31,7 @@ namespace CharacterManager.UserControls
             // UserControlHitPoints
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Name = "UserControlHitPoints";
             this.DoubleClick += new System.EventHandler(this.UserControlHitPoints_DoubleClick);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UserControlHitPoints_KeyDown);
