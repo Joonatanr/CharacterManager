@@ -140,6 +140,12 @@
     <Compile Include="UserControls\CustomButton.Designer.cs">
       <DependentUpon>CustomButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\FormAddXp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\FormAddXp.Designer.cs">
+      <DependentUpon>FormAddXp.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\FormWeaponAttack.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CustomButton.resx">
       <DependentUpon>CustomButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FormAddXp.resx">
+      <DependentUpon>FormAddXp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormWeaponAttack.resx">
       <DependentUpon>FormWeaponAttack.cs</DependentUpon>

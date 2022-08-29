@@ -25,6 +25,8 @@ namespace CharacterManager
             InitializeComponent();
             CharacterFactory.setErrorHandler(new TextBoxWriter(richTextBox1));
             CharacterFactory.Initialize();
+
+            userControlHitPoints1.HitPointsChangedListener = new UserControlHitPoints.HitPointsChanged(HitPointsChanged);
         }
 
 
@@ -400,41 +402,19 @@ namespace CharacterManager
             /* TODO */
         }
 
-        private void buttonRegisterDamage_Click(object sender, EventArgs e)
+        private void HitPointsChanged(int hp)
         {
             if (activeCharacter == null)
             {
                 return;
             }
 
-            FormDamageRegister myForm = new FormDamageRegister();
-            if (myForm.ShowDialog() == DialogResult.OK)
+            activeCharacter.CurrentHitPoints = hp;
+            if (activeCharacter.CurrentHitPoints < 0)
             {
-                activeCharacter.CurrentHitPoints -= myForm.Damage;
-                if (activeCharacter.CurrentHitPoints < 0)
-                {
-                    activeCharacter.CurrentHitPoints = 0;
-                    /* TODO : Might have to handle PC death at this point, but maybe it's actually not necessary. */
-                }
-            }
-        }
-
-        private void buttonHeal_Click(object sender, EventArgs e)
-        {
-            if (activeCharacter == null)
-            {
-                return;
-            }
-
-            FormDamageRegister myForm = new FormDamageRegister();
-            myForm.LabelString = "Heal Amount:";
-            if (myForm.ShowDialog() == DialogResult.OK)
-            {
-                activeCharacter.CurrentHitPoints += myForm.Damage;
-                if (activeCharacter.CurrentHitPoints > activeCharacter.MaxHitPoints)
-                {
-                    activeCharacter.CurrentHitPoints = activeCharacter.MaxHitPoints;
-                }
+                activeCharacter.CurrentHitPoints = 0;
+                UpdateHitPoints();
+                /* TODO : Might have to handle PC death at this point, but maybe it's actually not necessary. */
             }
         }
 
@@ -444,7 +424,41 @@ namespace CharacterManager
             return ability.UseAbility(activeCharacter);
         }
 
+        private void buttonAddXp_Click(object sender, EventArgs e)
+        {
+            FormAddXp myXpForm = new FormAddXp();
+            
+            if(activeCharacter != null)
+            {
+                myXpForm.CurrentXp = activeCharacter.ExperiencePoints;
+                myXpForm.CurrentLevel = activeCharacter.Level; 
+            }
+            
+            myXpForm.ShowDialog();
 
+            if (activeCharacter != null)
+            {
+                if (myXpForm.DialogResult == DialogResult.OK)
+                {
+                    activeCharacter.ExperiencePoints = myXpForm.CurrentXp;
+                    activeCharacter.Level = myXpForm.CurrentLevel;
+
+                    this.textBoxXP.Text = activeCharacter.ExperiencePoints.ToString();
+                    this.textBoxLevel.Text = activeCharacter.Level.ToString();
+
+                    if (myXpForm.CurrentLevel > activeCharacter.Level)
+                    {
+                        handleLevelUpCharacter();
+                    }
+                }
+            }
+        }
+
+        private void handleLevelUpCharacter()
+        {
+            /* TODO : Level up. */
+            /* This is simply a placeholder. */
+        }
     }
 
     public static class RichTextBoxExtensions

@@ -17,6 +17,10 @@ namespace CharacterManager.UserControls
         private System.ComponentModel.IContainer components;
         private string EditingText = "";
 
+        public delegate void HitPointsChanged(int hp);
+        public HitPointsChanged HitPointsChangedListener = null;
+
+
         public UserControlHitPoints() : base()
         {
             InitializeComponent();
@@ -144,6 +148,10 @@ namespace CharacterManager.UserControls
             
             isEditing = false;
             this.Invalidate();
+            if(HitPointsChangedListener != null)
+            {
+                HitPointsChangedListener.Invoke(CurrentHitPoints);
+            }
         }
 
 

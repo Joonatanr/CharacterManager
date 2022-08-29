@@ -341,6 +341,7 @@
             this.buttonAddXp.TabIndex = 22;
             this.buttonAddXp.Text = "Add XP";
             this.buttonAddXp.UseVisualStyleBackColor = true;
+            this.buttonAddXp.Click += new System.EventHandler(this.buttonAddXp_Click);
             // 
             // textBoxXP
             // 
