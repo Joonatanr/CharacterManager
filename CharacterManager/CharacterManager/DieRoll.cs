@@ -66,22 +66,35 @@ namespace CharacterManager
 
     public class DieRollConstant : DieRollComponent
     {
-        protected int value;
+        protected int _value;
+
+
+        public int ConstantValue
+        {
+            get
+            {
+                return _value;
+            }
+            set
+            {
+                _value = value;
+            }
+        }
 
         public DieRollConstant(int value)
         {
-            this.value = value;
+            this._value = value;
         }
 
         public override int getValue(out String log)
         {
-            log = this.value.ToString() + " ";
-            return this.value;
+            log = this._value.ToString() + " ";
+            return this._value;
         }
 
         public override string ToString()
         {
-            return this.value.ToString();
+            return this._value.ToString();
         }
     }
 
@@ -186,7 +199,6 @@ namespace CharacterManager
             }
 
             int res = 0;
-
             string logRes;
 
             foreach (DieRollComponent c in myComponents)
@@ -198,7 +210,40 @@ namespace CharacterManager
             log = log.Remove(log.Length - 2);
             log += " = " + res.ToString();
 
+            /* We have to take care of negative variables. Otherwise we will get results like 1d20 + -10 */
+            log = log.Replace("+ -", " - ");
+
+
             return res;
+        }
+
+
+        /* Reduces all constant dieroll components to one value. */
+        public void ReduceConstants()
+        {
+            List<DieRollComponent> reducedList = new List<DieRollComponent>();
+            int totalConstantValue = 0;
+            int constantCount = 0;
+            
+            foreach(DieRollComponent component in myComponents)
+            {
+                if(component is DieRollConstant)
+                {
+                    totalConstantValue += (component as DieRollConstant).ConstantValue;
+                    constantCount++;
+                }
+                else 
+                {
+                    reducedList.Add(component);
+                }    
+            }
+
+            if (constantCount > 0)
+            {
+                DieRollConstant totalConstant = new DieRollConstant(totalConstantValue);
+                reducedList.Add(totalConstant);
+            }
+            this.DieRollComponents = reducedList;
         }
 
         private List<DieRollComponent> parseText(String text)

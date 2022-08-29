@@ -58,47 +58,29 @@ namespace CharacterManager.UserControls
 
         public void updateTotalModifiers()
         {
-            int totalBonus = 0;
-            string totalValueString = "";
 
             if(_modifiers == null)
             {
                 return;
             }
 
-            foreach (BonusValueModifier mod in _modifiers)
+            List<DieRollComponent> myComponents = new List<DieRollComponent>();
+
+            foreach(BonusValueModifier mod in _modifiers)
             {
-                if (mod.modifierDieRoll is DieRoll)
-                {
-                    totalValueString += mod.getBonusValueString() + " + ";
-                }
-                else
-                {
-                    totalBonus += mod.modifierValue;
-                }
+                myComponents.Add(mod.modifierDieRoll);
             }
 
-            /* Now lets go over situational bonus. First we need to resolve the string */
+            /* Now lets go over the situational bonus... */
             string situationalBonus = textBoxRollSituational.Text;
+            List<DieRollComponent> parsedComponents;
+
             if (!string.IsNullOrEmpty(situationalBonus))
             {
                 try
                 {
-                    DieRollEquation parsedDieRoll = new DieRollEquation(situationalBonus);
-                    List<DieRollComponent> rollComponents = parsedDieRoll.DieRollComponents;
-                    foreach (DieRollComponent component in rollComponents)
-                    {
-                        if (component is DieRoll)
-                        {
-                            totalValueString += component.ToString() + " + ";
-                        }
-                        else
-                        {
-                            string dummy; /* TODO : Log should be handled differently. */
-                            totalBonus += component.getValue(out dummy);
-                        }
-                    }
-
+                    parsedComponents = DieRollEquation.parseComponentListFromString(situationalBonus);
+                    myComponents.AddRange(parsedComponents);
                 }
                 catch (Exception)
                 {
@@ -106,9 +88,12 @@ namespace CharacterManager.UserControls
                 }
             }
 
-            totalValueString += totalBonus.ToString();
-            //dieRollTextBoxTotalRoll.Text = totalValueString;
-            dieRollTextBoxTotalRoll.DieRollObject = new DieRollEquation(totalValueString); /* This method is probably safer. */
+            DieRollEquation myEquation = new DieRollEquation();
+            myEquation.DieRollComponents = myComponents;
+            myEquation.ReduceConstants(); /* Might not be the best way, but it will probably work. TODO : Maybe should return a new Equation object??? */
+            
+
+            dieRollTextBoxTotalRoll.DieRollObject = myEquation; /* This method is probably safer. */
         }
 
         private void textBoxRollSituational_Leave(object sender, EventArgs e)
