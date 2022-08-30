@@ -103,6 +103,12 @@ namespace CharacterManager.UserControls
             userControlSpellSlotsArea1.setSpellSlotData(1, myStat.Level1SpellSlots);
         }
 
+        public void UpdateAllDisplayedData()
+        {
+            /* TODO : This is a placeholder. */
+            userControlSpellSlotsArea1.updateSpellSlotDisplay();
+        }
+
         private void userControlSpellChoice1_Load(object sender, EventArgs e)
         {
 

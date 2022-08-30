@@ -18,6 +18,12 @@ namespace CharacterManager.UserControls
             InitializeComponent();
         }
 
+        public void updateSpellSlotDisplay()
+        {
+            /* TODO : Placeholder. */
+            userControlSpellSlotRow1.UpdateSpellSlotRowData();
+        }
+
         public void setSpellSlotData(int level, SpellSlotData data)
         {
             /* TODO : Placeholder. */
@@ -25,8 +31,6 @@ namespace CharacterManager.UserControls
             switch (level)
             {
                 case 1:
-                    //userControlSpellSlotRow1.NumberOfSlots = data.MaximumCount;
-                    //userControlSpellSlotRow1.NumberOfSlots = data.ActiveCount;
                     userControlSpellSlotRow1.SpellSlots = data;
                     break;
                 default:

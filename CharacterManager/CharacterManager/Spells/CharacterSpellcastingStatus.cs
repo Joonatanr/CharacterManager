@@ -116,5 +116,14 @@ namespace CharacterManager.Spells
                 default: return new SpellSlotData(0, 0);
             }
         }
+
+        public void RechargeAllSpellSlots()
+        {
+            for(int x = 1; x <= 9; x++)
+            {
+                SpellSlotData data = getSpellSlotDataForLevel(x);
+                data.ActiveCount = data.MaximumCount;
+            }
+        }
     }
 }

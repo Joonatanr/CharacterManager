@@ -71,6 +71,11 @@ namespace CharacterManager.CharacterCreator
                     PlayerAbility ability = cast.getSelectedAbility();
                     if (ability != null)
                     {
+                        if(ability.MaximumCharges > 0)
+                        {
+                            ability.RemainingCharges = ability.MaximumCharges;
+                        }
+
                         res.Add(ability);
                     }
                 }

@@ -398,6 +398,7 @@ namespace CharacterManager
             activeCharacter.PerformLongRest();
             /* TODO : Maybe we can do this with a listener function? */
             UpdateCharacterAbilities();
+            userControlMagicHandler1.UpdateAllDisplayedData();
         }
 
         private void buttonShortRest_Click(object sender, EventArgs e)

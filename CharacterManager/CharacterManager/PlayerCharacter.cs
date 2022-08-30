@@ -510,10 +510,14 @@ namespace CharacterManager
             /* 2. Recharge lost abilities. */
             foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
             {
-                ability.RemainingCharges = ability.MaximumCharges;
+                if (ability.RechargeAtLongRest)
+                {
+                    ability.RemainingCharges = ability.MaximumCharges;
+                }
             }
 
-            /* TODO : Restore spell slots. */
+            /* 3. Restore spell points. */
+            this.CharacterSpellCasting.RechargeAllSpellSlots();
         }
 
         internal void UpdateSpellModifiers()

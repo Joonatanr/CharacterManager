@@ -31,14 +31,18 @@ namespace CharacterManager.UserControls
         {
             this.label1 = new System.Windows.Forms.Label();
             this.buttonOk = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBoxHPResult = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dieRollHitPointsRoll = new CharacterManager.UserControls.DieRollTextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.groupBoxHitPoints = new System.Windows.Forms.GroupBox();
             this.labelNewMaxHP = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxHPResult = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dieRollHitPointsRoll = new CharacterManager.UserControls.DieRollTextBox();
+            this.groupBoxAbilities = new System.Windows.Forms.GroupBox();
+            this.buttonSelectNewAbilities = new System.Windows.Forms.Button();
+            this.userControlGenericAbilitiesList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
+            this.groupBoxHitPoints.SuspendLayout();
+            this.groupBoxAbilities.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +58,7 @@ namespace CharacterManager.UserControls
             // buttonOk
             // 
             this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonOk.Location = new System.Drawing.Point(16, 448);
+            this.buttonOk.Location = new System.Drawing.Point(16, 499);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 1;
@@ -62,67 +66,22 @@ namespace CharacterManager.UserControls
             this.buttonOk.UseVisualStyleBackColor = true;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
-            // groupBox1
+            // groupBoxHitPoints
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxHitPoints.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.labelNewMaxHP);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBoxHPResult);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.dieRollHitPointsRoll);
-            this.groupBox1.Location = new System.Drawing.Point(12, 32);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(474, 59);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Hit Points";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(7, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(59, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Roll HP";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBoxHPResult
-            // 
-            this.textBoxHPResult.Location = new System.Drawing.Point(242, 23);
-            this.textBoxHPResult.Name = "textBoxHPResult";
-            this.textBoxHPResult.Size = new System.Drawing.Size(71, 20);
-            this.textBoxHPResult.TabIndex = 2;
-            this.textBoxHPResult.TextChanged += new System.EventHandler(this.textBoxHPResult_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(196, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Result:";
-            // 
-            // dieRollHitPointsRoll
-            // 
-            this.dieRollHitPointsRoll.DieRollObject = null;
-            this.dieRollHitPointsRoll.Location = new System.Drawing.Point(72, 22);
-            this.dieRollHitPointsRoll.Name = "dieRollHitPointsRoll";
-            this.dieRollHitPointsRoll.ReadOnly = true;
-            this.dieRollHitPointsRoll.Size = new System.Drawing.Size(100, 20);
-            this.dieRollHitPointsRoll.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(335, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Max HP:";
+            this.groupBoxHitPoints.Controls.Add(this.labelNewMaxHP);
+            this.groupBoxHitPoints.Controls.Add(this.label3);
+            this.groupBoxHitPoints.Controls.Add(this.label2);
+            this.groupBoxHitPoints.Controls.Add(this.textBoxHPResult);
+            this.groupBoxHitPoints.Controls.Add(this.button1);
+            this.groupBoxHitPoints.Controls.Add(this.dieRollHitPointsRoll);
+            this.groupBoxHitPoints.Location = new System.Drawing.Point(12, 32);
+            this.groupBoxHitPoints.Name = "groupBoxHitPoints";
+            this.groupBoxHitPoints.Size = new System.Drawing.Size(474, 59);
+            this.groupBoxHitPoints.TabIndex = 2;
+            this.groupBoxHitPoints.TabStop = false;
+            this.groupBoxHitPoints.Text = "Hit Points";
             // 
             // labelNewMaxHP
             // 
@@ -134,18 +93,97 @@ namespace CharacterManager.UserControls
             this.labelNewMaxHP.TabIndex = 5;
             this.labelNewMaxHP.Text = "10";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(335, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Max HP:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(196, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Result:";
+            // 
+            // textBoxHPResult
+            // 
+            this.textBoxHPResult.Location = new System.Drawing.Point(242, 23);
+            this.textBoxHPResult.Name = "textBoxHPResult";
+            this.textBoxHPResult.Size = new System.Drawing.Size(71, 20);
+            this.textBoxHPResult.TabIndex = 2;
+            this.textBoxHPResult.TextChanged += new System.EventHandler(this.textBoxHPResult_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(59, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Roll HP";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dieRollHitPointsRoll
+            // 
+            this.dieRollHitPointsRoll.DieRollObject = null;
+            this.dieRollHitPointsRoll.Location = new System.Drawing.Point(72, 22);
+            this.dieRollHitPointsRoll.Name = "dieRollHitPointsRoll";
+            this.dieRollHitPointsRoll.ReadOnly = true;
+            this.dieRollHitPointsRoll.Size = new System.Drawing.Size(100, 20);
+            this.dieRollHitPointsRoll.TabIndex = 0;
+            // 
+            // groupBoxAbilities
+            // 
+            this.groupBoxAbilities.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxAbilities.Controls.Add(this.userControlGenericAbilitiesList1);
+            this.groupBoxAbilities.Controls.Add(this.buttonSelectNewAbilities);
+            this.groupBoxAbilities.Location = new System.Drawing.Point(12, 97);
+            this.groupBoxAbilities.Name = "groupBoxAbilities";
+            this.groupBoxAbilities.Size = new System.Drawing.Size(474, 176);
+            this.groupBoxAbilities.TabIndex = 3;
+            this.groupBoxAbilities.TabStop = false;
+            this.groupBoxAbilities.Text = "Select new Abilities";
+            // 
+            // buttonSelectNewAbilities
+            // 
+            this.buttonSelectNewAbilities.Location = new System.Drawing.Point(7, 19);
+            this.buttonSelectNewAbilities.Name = "buttonSelectNewAbilities";
+            this.buttonSelectNewAbilities.Size = new System.Drawing.Size(110, 52);
+            this.buttonSelectNewAbilities.TabIndex = 0;
+            this.buttonSelectNewAbilities.Text = "Select New Abilities";
+            this.buttonSelectNewAbilities.UseVisualStyleBackColor = true;
+            this.buttonSelectNewAbilities.Click += new System.EventHandler(this.buttonSelectNewAbilities_Click);
+            // 
+            // userControlGenericAbilitiesList1
+            // 
+            this.userControlGenericAbilitiesList1.IsBorder = true;
+            this.userControlGenericAbilitiesList1.IsSlotsVisible = false;
+            this.userControlGenericAbilitiesList1.Location = new System.Drawing.Point(212, 15);
+            this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
+            this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(256, 151);
+            this.userControlGenericAbilitiesList1.TabIndex = 1;
+            // 
             // FormLevelup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 483);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(498, 534);
+            this.Controls.Add(this.groupBoxAbilities);
+            this.Controls.Add(this.groupBoxHitPoints);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.label1);
             this.Name = "FormLevelup";
             this.Text = "FormLevelup";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxHitPoints.ResumeLayout(false);
+            this.groupBoxHitPoints.PerformLayout();
+            this.groupBoxAbilities.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,12 +193,15 @@ namespace CharacterManager.UserControls
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonOk;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxHitPoints;
         private DieRollTextBox dieRollHitPointsRoll;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxHPResult;
         private System.Windows.Forms.Label labelNewMaxHP;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBoxAbilities;
+        private System.Windows.Forms.Button buttonSelectNewAbilities;
+        private UserControlGenericAbilitiesList userControlGenericAbilitiesList1;
     }
 }

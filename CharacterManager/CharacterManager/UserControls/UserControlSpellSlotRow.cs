@@ -15,6 +15,7 @@ namespace CharacterManager.UserControls
     {
         //private int number_of_slots = 3; /* Set some sane default value */
         private SpellSlotData mySpellSlotData = new SpellSlotData(3, 3);
+        private List<UserControlSpellSlotIndicator> mySpellSlotIndicators = new List<UserControlSpellSlotIndicator>();
 
         public SpellSlotData SpellSlots
         {
@@ -71,6 +72,28 @@ namespace CharacterManager.UserControls
             InitializeComponent();
         }
 
+        public void UpdateSpellSlotRowData()
+        {
+            for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
+            {
+                try
+                {
+                    if (x < (mySpellSlotData.ActiveCount))
+                    {
+                        mySpellSlotIndicators[x].IsActive = true;
+                    }
+                    else
+                    {
+                        mySpellSlotIndicators[x].IsActive = false;
+                    }
+                }
+                catch (Exception)
+                {
+                    /* Lets hope this does not happen... */
+                }
+            }
+        }
+
         private void HandleUserChangedSpellSlot(bool isChecked)
         {
             if (isChecked)
@@ -86,15 +109,15 @@ namespace CharacterManager.UserControls
         private void updateNumberOfSlots()
         {
             /* First clear any existing indicators. */
-            foreach(Control ctrl in this.Controls)
+
+            foreach (Control item in this.Controls.OfType<UserControlSpellSlotIndicator>().ToList())
             {
-                if (ctrl is UserControlSpellSlotIndicator)
-                {
-                    this.Controls.Remove(ctrl);
-                }
+                this.Controls.Remove(item);
             }
 
             int activeCount = mySpellSlotData.ActiveCount;
+
+            mySpellSlotIndicators = new List<UserControlSpellSlotIndicator>();
 
             /* Next lets set up some indicators. */
             for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
@@ -117,6 +140,7 @@ namespace CharacterManager.UserControls
                 indicator.SpellSlotCheckedChangedByUser += new UserControlSpellSlotIndicator.SpellSlotCheckedChanged(HandleUserChangedSpellSlot);
 
                 this.Controls.Add(indicator);
+                this.mySpellSlotIndicators.Add(indicator);
             }
         }
     }
