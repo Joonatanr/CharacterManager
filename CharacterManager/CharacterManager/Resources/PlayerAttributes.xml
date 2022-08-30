@@ -496,6 +496,19 @@ your Strength or Dexterity modifier (your choice)</Description>
 			<string>Commander's Strike</string>
 			<string>Disarming Attack</string>
 			<string>Distracting Strike</string>
+			<string>Evasive Footwork</string>
+			<string>Feinting Attack</string>
+			<string>Goading Attack</string>
+			<string>Lunging Attack</string>
+			<string>Maneuvering Attack</string>
+			<string>Menacing Attack</string>
+			<string>Parry</string>
+			<string>Precision Attack</string>
+			<string>Pushing Attack</string>
+			<string>Rally</string>
+			<string>Riposte</string>
+			<string>Sweeping Attack</string>
+			<string>Trip Attack</string>
 		</AvailableManeuvers>
 	</PlayerAbility>
 	

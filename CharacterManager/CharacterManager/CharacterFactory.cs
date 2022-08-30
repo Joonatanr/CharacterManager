@@ -31,6 +31,7 @@ namespace CharacterManager
         private static List<Items.PlayerItem> GenericItemList;
         private static List<Items.PlayerToolKit> ToolKitItemList;
         private static List<Language> LanguageList;
+        private static List<CombatManeuver> CombatManeuverList;
 
         public static List<String> getMainRacesList()
         {
@@ -96,6 +97,7 @@ namespace CharacterManager
                 parseWeaponsFromXml("Resources/PlayerItems/PlayerWeapon.xml");
                 parseToolkitsFromXml("Resources/PlayerItems/PlayerTools.xml");
                 parseLanguagesFromXml("Resources/Languages.xml");
+                parseCombatManeuversFromXml("Resources/CombatManeuvers.xml");
                 parseSpellsFromXml("Resources/PlayerSpells.xml");
 
                 foreach (PlayerRace race in Races)
@@ -249,6 +251,12 @@ namespace CharacterManager
         {
             return LanguageList;
         }
+
+        public static List<CombatManeuver> getAllCombatManeuvers()
+        {
+            return CombatManeuverList;
+        }
+
 
         public static List<CharacterBackGround> getAllBackGrounds()
         {
@@ -567,6 +575,22 @@ namespace CharacterManager
                 StreamReader file = new System.IO.StreamReader(filepath);
 
                 LanguageList = (List<Language>)reader.Deserialize(file);
+                file.Close();
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
+        }
+
+        private static void parseCombatManeuversFromXml(string filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<CombatManeuver>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                CombatManeuverList = (List<CombatManeuver>)reader.Deserialize(file);
                 file.Close();
             }
             catch (Exception ex)
