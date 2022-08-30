@@ -522,6 +522,19 @@ namespace CharacterManager
             this.CharacterSpellCasting.RechargeAllSpellSlots();
         }
 
+        internal void PerformShortRest()
+        {
+            /* TODO : Allow the spending of hit dice. */
+
+            foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
+            {
+                if (ability.RechargeAtShortRest)
+                {
+                    ability.RemainingCharges = ability.MaximumCharges;
+                }
+            }
+        }
+
         internal void UpdateSpellModifiers()
         {
             if (this.IsCharacterSpellCasting())

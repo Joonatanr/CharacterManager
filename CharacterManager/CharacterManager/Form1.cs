@@ -432,7 +432,8 @@ namespace CharacterManager
 
         private void buttonShortRest_Click(object sender, EventArgs e)
         {
-            /* TODO */
+            activeCharacter.PerformShortRest();
+            UpdateCharacterAbilities();
         }
 
         private void HitPointsChanged(int hp)
