@@ -30,6 +30,9 @@ namespace CharacterManager.CharacterCreator
         private List<PlayerAbility> _abilitiesList;
         private PlayerAbility selectedAbility;
 
+        public delegate void SelectedArchetypeChangedListener(PlayerClassArchetype archetype);
+        public SelectedArchetypeChangedListener SelectedArcheTypeChanged;
+
         public UserControlClassFeature()
         {
             InitializeComponent();
@@ -47,9 +50,18 @@ namespace CharacterManager.CharacterCreator
 
             /* Update the ability choice visual data. */
             /* 1. Update the description of the ability. */
-            labelTitle.Text = _abilityChoice.ClassAbilityName;
-            richTextBoxAbilityDescription.Text = _abilityChoice.Description;
-            
+            if (_abilitiesList.Count > 1)
+            {
+                labelTitle.Text = _abilityChoice.ClassAbilityName;
+                richTextBoxAbilityDescription.Text = _abilityChoice.Description;
+            }
+            else
+            {
+                labelTitle.Text = _abilitiesList[0].AttributeName;
+                richTextBoxAbilityDescription.Text = _abilitiesList[0].Description;
+            }
+
+
             if (_abilitiesList.Count > 1)
             {
 
@@ -83,6 +95,15 @@ namespace CharacterManager.CharacterCreator
             if (selectedAbility != null)
             {
                 richTextBoxAbilitySub.Text = selectedAbility.Description;
+            }
+
+            /* Now it gets interesting. It is possible that we have selected a new archetype and therefore we have to show new things on the form. */
+            if(selectedAbility is PlayerClassArchetype)
+            {
+                if (SelectedArcheTypeChanged != null)
+                {
+                    SelectedArcheTypeChanged.Invoke((PlayerClassArchetype)selectedAbility);
+                }
             }
         }
     }

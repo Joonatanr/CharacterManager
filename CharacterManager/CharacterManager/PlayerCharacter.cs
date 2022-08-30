@@ -156,6 +156,8 @@ namespace CharacterManager
 
         public String ClassName { get; set; }
 
+        public String SubClassName { get; set; } /* Describes the Archetype of the chosen class. */
+
         public CharacterBaseAttributes BaseAttributes { get { return _baseAttributes; } set { _baseAttributes = value; } }
 
         public List<String> SkillProficiencies = new List<String>();
@@ -714,6 +716,12 @@ namespace CharacterManager
             /* We return the actual object in this case. */
             return CharacterFactory.getPlayerClassByName(this.ClassName);
         }
+
+        public PlayerClassArchetype GetPlayerSubClass()
+        {
+            return CharacterFactory.getPlayerSubClassByName(this.ClassName, this.SubClassName);
+        }
+
 
         public void setSpellSlotData(int level, SpellSlotData data)
         {

@@ -453,6 +453,14 @@ these spells.</Description>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<AttributeName>Improved Critical</AttributeName>
+		<Description>Beginning when you choose this archetype at 3rd
+level, your weapon attacks score a critical hit on a
+roll of 19 or 20.</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
 <!-- Barbarian class abilities -->
 	
 	<PlayerAbility>
