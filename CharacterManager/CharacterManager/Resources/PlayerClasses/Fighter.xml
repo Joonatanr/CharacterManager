@@ -396,6 +396,15 @@ absorbs the lessons of history, theory, and artistry
 that are reflected in the Battle Master archetype, but
 those who do are well-rounded fighters of great skill
 and knowledge.</Description>
+			
+			<AvailableAbilitiesAtLevel3>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Combat Superiority</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel3>
+
 		</PlayerClassArchetype>
 		<PlayerClassArchetype>
 			<ArcheTypeName>Champion</ArcheTypeName>

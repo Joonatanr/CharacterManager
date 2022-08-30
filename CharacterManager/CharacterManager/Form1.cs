@@ -27,6 +27,35 @@ namespace CharacterManager
             CharacterFactory.Initialize();
 
             userControlHitPoints1.HitPointsChangedListener = new UserControlHitPoints.HitPointsChanged(HitPointsChanged);
+
+#if false
+            /* DEBUG : Do not commit this. */
+            PlayerAbility Ability1 = new PlayerAbility("Test1");
+            Ability1.Description = "TEST1";
+            PlayerAbility Ability2 = new PlayerAbility("Test2");
+            Ability2.Description = "TEST2";
+            PlayerManeuverAbility Ability3 = new PlayerManeuverAbility();
+            Ability3.AttributeName = "Test3";
+            Ability3.Description = "TEST3";
+            Ability3.AvailableManeuvers = new List<string>();
+            Ability3.AvailableManeuvers.Add("Maneuver1");
+            Ability3.AvailableManeuvers.Add("Maneuver2");
+
+            List<PlayerAbility> MyTestList = new List<PlayerAbility>();
+
+            MyTestList.Add(Ability1);
+            MyTestList.Add(Ability2);
+            MyTestList.Add(Ability3);
+
+            Type[] ExtraTypes = { typeof(PlayerManeuverAbility) };
+
+            XmlSerializer ser = new XmlSerializer(typeof(List<PlayerAbility>), ExtraTypes);
+
+            using (FileStream fs = new FileStream("yolo.xml", FileMode.Create))
+            {
+                ser.Serialize(fs, MyTestList);
+            }
+#endif
         }
 
 

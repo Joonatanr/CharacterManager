@@ -462,7 +462,8 @@ namespace CharacterManager
         {
             try
             {
-                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerAbility>));
+                Type[] ExtraTypes = { typeof(PlayerManeuverAbility) };
+                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerAbility>), ExtraTypes);
                 StreamReader file = new System.IO.StreamReader(filepath);
 
                 AttributesList = (List<PlayerAbility>)reader.Deserialize(file);
