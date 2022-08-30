@@ -94,6 +94,7 @@
       <DependentUpon>FormChooseEquipment.cs</DependentUpon>
     </Compile>
     <Compile Include="Items\PlayerArmor.cs" />
+    <Compile Include="Items\PlayerBaseItem.cs" />
     <Compile Include="Items\PlayerItem.cs" />
     <Compile Include="Items\PlayerToolKit.cs" />
     <Compile Include="Items\PlayerWeapon.cs" />

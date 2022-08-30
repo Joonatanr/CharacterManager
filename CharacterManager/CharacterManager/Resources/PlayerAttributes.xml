@@ -131,6 +131,8 @@ at 16th level. After you use your breath weapon, you can’t use it
 again until you complete a short or long rest.
 		</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>true</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -156,6 +158,8 @@ at 16th level. After you use your breath weapon, you can’t use it
 again until you complete a short or long rest.
 		</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>true</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -179,6 +183,8 @@ at 16th level. After you use your breath weapon, you can’t use it
 again until you complete a short or long rest.
 		</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>true</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -203,6 +209,8 @@ at 16th level. After you use your breath weapon, you can’t use it
 again until you complete a short or long rest.
 		</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>true</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 	<!-- Green Dragon -->
@@ -220,6 +228,8 @@ at 16th level. After you use your breath weapon, you can’t use it
 again until you complete a short or long rest.
 		</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>true</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -244,6 +254,8 @@ at 16th level. After you use your breath weapon, you can’t use it
 again until you complete a short or long rest.
 		</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>true</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 	<!-- Silver Dragon -->
@@ -261,6 +273,8 @@ at 16th level. After you use your breath weapon, you can’t use it
 again until you complete a short or long rest.
 		</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>true</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -333,7 +347,7 @@ flame, which you can use to light a candle,
 torch, or campfire. Using the device 
 requires your action.
 
-3. Music Box. W hen opened, this music box 
+3. Music Box. When opened, this music box 
 plays a single song at a moderate volume.
 The box stops playing when it 
 reaches the son g’s end or 
@@ -354,6 +368,8 @@ when it is closed.</Description>
 point instead. You can’t use this feature again until you 
 finish a long rest.</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -375,11 +391,13 @@ damage of the critical hit.</Description>
 		<AttributeName>Infernal Legacy</AttributeName>
 		<Description>You know the thaumaturgy cantrip. 
 Once you reach 3rd level, you can cast the hellish
-rebuke spell once per day as a 2nd-level spell. O nce you 
+rebuke spell once per day as a 2nd-level spell. Once you 
 reach 5th level, you can also cast the darkness spell 
 once per day. Charisma is your spellcasting ability for 
 these spells.</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 <!-- Fighter class abilities -->
@@ -423,6 +441,16 @@ these spells.</Description>
 		<AttributeName>Second Wind</AttributeName>
 		<Description>You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d 10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>true</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<AttributeName>Action Surge</AttributeName>
+		<Description>Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. O nce you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it tw ice before a rest, but only once on the same turn.</Description>
+		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>true</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 <!-- Barbarian class abilities -->
@@ -439,6 +467,8 @@ Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if
 You can also end your rage on your turn as a bonus action. Once you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.</Description>
 		<MaximumCharges>2</MaximumCharges>
 		<IsToggle>true</IsToggle>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 		
 	<PlayerAbility>
@@ -460,5 +490,7 @@ For example, if you’re a 4th-level wizard, you can recover
 up to two levels worth of spell slots. You can recover either
 a 2nd-level spell slot or two 1st-level spell slots.</Description>
 		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 </ArrayOfPlayerAbility>

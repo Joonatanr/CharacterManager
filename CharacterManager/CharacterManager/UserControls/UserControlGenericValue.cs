@@ -10,8 +10,8 @@ namespace CharacterManager.UserControls
     class UserControlGenericValue : UserControl5eBase
     {
         private string _value;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.ComponentModel.IContainer components;
+        private System.Windows.Forms.ToolTip toolTip1;
         private string _label;
 
         public String Value { get { return _value; } set { _value = value; this.Invalidate(); } }

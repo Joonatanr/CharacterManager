@@ -15,6 +15,8 @@ namespace CharacterManager
         public string AttributeName;
         public int MaximumCharges = 0; /* Maximum uses 0 indicates a passive ability. */ /* TODO : Should take levels etc. into account. */
         public Boolean IsToggle = false; /* Can the ability be toggled on or off. */
+        public Boolean RechargeAtShortRest = false;
+        public Boolean RechargeAtLongRest = false;
 
         [XmlIgnore]
         public virtual string DisplayedName { get { return AttributeName; } } /* This should be used instead of the AttributeName*/

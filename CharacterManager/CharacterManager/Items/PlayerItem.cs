@@ -10,10 +10,8 @@ namespace CharacterManager.Items
     [Serializable]
     [XmlInclude(typeof(ItemContainer))]
     [XmlInclude(typeof(PlayerToolKit))]
-    public class PlayerItem
+    public class PlayerItem : PlayerBaseItem
     {
-        public String ItemName;
-        public String Description;
         public float Weight;
         public float Cost; //In Gold, smaller quantities in decimal places.
         public int Quantity = 1;

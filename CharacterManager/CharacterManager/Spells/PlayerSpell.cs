@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.Items;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace CharacterManager.Spells
     
     /* Lets do some magic. :) */
     [Serializable]
-    public class PlayerSpell
+    public class PlayerSpell : PlayerBaseItem
     {
         
         public enum CastingTimeEnum
@@ -41,7 +42,20 @@ namespace CharacterManager.Spells
 
 
         public String SpellName;
-        public String Description;
+
+        public override string ItemName
+        {
+            get
+            {
+                return this.SpellName;
+            }
+
+            set
+            {
+                this.SpellName = value;
+            }
+        }
+
         public String AtHigherLevels;
         public String School;
         public int SpellLevel;
