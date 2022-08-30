@@ -447,9 +447,9 @@ namespace CharacterManager
 
                     if (myXpForm.CurrentLevel > activeCharacter.Level)
                     {
-                        handleLevelUpCharacter();
+                        /* TODO : Handle case where we somehow level up several times. Could happen with a lot of XP. */
                         activeCharacter.Level = myXpForm.CurrentLevel;
-
+                        handleLevelUpCharacter();
                         updateCharacterAttributes();
                     }
 

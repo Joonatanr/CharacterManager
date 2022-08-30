@@ -978,7 +978,7 @@ namespace CharacterManager.CharacterCreator
                 return;
             }
 
-            myChooseClassFeaturesForm.setSelectedClass(SelectedClass);
+            myChooseClassFeaturesForm.setSelectedClassAndLevel(SelectedClass, 1);
 
             if (myChooseClassFeaturesForm.ShowDialog() == DialogResult.OK)
             {
@@ -997,6 +997,14 @@ namespace CharacterManager.CharacterCreator
             if (SelectedClass.SpellCasting == null)
             {
                 MessageBox.Show("No spellcasting for this class");
+                return;
+            }
+
+            List <PlayerClassAbilityChoice> choices = SelectedClass.getAvailableClassAbilities(1);
+
+            if(choices.Find(ch => ch.ClassAbilityName == "SpellCasting") == null)
+            {
+                MessageBox.Show("No spellcassting for this class at level 1");
                 return;
             }
 

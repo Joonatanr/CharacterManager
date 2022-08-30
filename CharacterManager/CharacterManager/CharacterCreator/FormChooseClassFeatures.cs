@@ -19,7 +19,7 @@ namespace CharacterManager.CharacterCreator
             InitializeComponent();
         }
 
-        public void setSelectedClass(PlayerClass c)
+        public void setSelectedClassAndLevel(PlayerClass c, int level)
         {
             _selectedClass = c;
 
@@ -29,7 +29,7 @@ namespace CharacterManager.CharacterCreator
 
             List<PlayerClassAbilityChoice> choicesList = new List<PlayerClassAbilityChoice>();
 
-            foreach (PlayerClassAbilityChoice choice in _selectedClass.getAvailableClassAbilities(1))
+            foreach (PlayerClassAbilityChoice choice in _selectedClass.getAvailableClassAbilities(level))
             {
                 choicesList.Add(choice);
             }
@@ -37,14 +37,12 @@ namespace CharacterManager.CharacterCreator
             /* We want to display the spellcasting ability as a player ability in the form. */
             if (c.SpellCasting != null)
             {
-                /* We also want to add this to the list, although it is defined separately. */
-                PlayerClassAbilityChoice spellCastingChoice = new PlayerClassAbilityChoice();
-                spellCastingChoice.ClassAbilityName = "Spellcasting";
-                spellCastingChoice.Description = c.SpellCasting.Description;
-                List<String> stringObj = new List<String>();
-                stringObj.Add("Spellcasting");
-                spellCastingChoice.AvailableChoices = stringObj;
-                choicesList.Add(spellCastingChoice);
+                PlayerClassAbilityChoice spellCastingChoice = choicesList.Find(ch => ch.ClassAbilityName == "SpellCasting");
+                
+                if(spellCastingChoice != null)
+                {
+                    spellCastingChoice.Description = c.SpellCasting.Description;
+                }
             }
 
 

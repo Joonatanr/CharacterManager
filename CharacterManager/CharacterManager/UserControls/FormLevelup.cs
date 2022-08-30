@@ -43,6 +43,15 @@ namespace CharacterManager.UserControls
         private void setupLevelUp()
         {
             /* 1. Set up hit points */
+            setupHitpoints();
+
+            /* 2. Set up new player abilities. */
+            setupNewPlayerAbilities();
+        }
+
+
+        private void setupHitpoints()
+        {
             prevMaxHp = _myCharacter.MaxHitPoints;
             labelNewMaxHP.Text = prevMaxHp.ToString();
 
@@ -58,6 +67,13 @@ namespace CharacterManager.UserControls
 
             dieRollHitPointsRoll.DieRollObject = equation;
         }
+
+        private void setupNewPlayerAbilities()
+        {
+            int newLevel = _myCharacter.Level;
+            List<PlayerClassAbilityChoice> abilityChoices = _myCharacter.GetPlayerClass().getAvailableClassAbilities(newLevel);
+        }
+
 
         private void buttonOk_Click(object sender, EventArgs e)
         {

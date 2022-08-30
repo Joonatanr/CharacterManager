@@ -372,5 +372,12 @@
         <string>Arcane Recovery</string>
       </AvailableChoices>
     </PlayerClassAbilityChoice>
+	<PlayerClassAbilityChoice>
+      <Description>Wizard Spellcasting</Description>
+      <ClassAbilityName>SpellCasting</ClassAbilityName>
+      <AvailableChoices>
+        <string>SpellCasting</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel1>
 </PlayerClass>
