@@ -112,6 +112,7 @@ namespace CharacterManager
         public List<PlayerClassAbilityChoice> AvailableClassAbilitiesLevel19 = new List<PlayerClassAbilityChoice>();
         public List<PlayerClassAbilityChoice> AvailableClassAbilitiesLevel20 = new List<PlayerClassAbilityChoice>();
 
+        public List<PlayerClassArchetype> ArcheTypes = new List<PlayerClassArchetype>();
 
 
         public PlayerClass()
@@ -207,6 +208,19 @@ namespace CharacterManager
             }
 
             return resolvedAbilities;
+        }
+
+        public void setAbilityChoices(List<PlayerAbility> choices)
+        {
+            this.resolvedAbilities = choices;
+            List<string> abilityNames = new List<string>();
+
+            foreach(PlayerAbility ability in choices)
+            {
+                abilityNames.Add(ability.DisplayedName);
+            }
+
+            AvailableChoices = abilityNames;
         }
 
         private void resolveAbilities()

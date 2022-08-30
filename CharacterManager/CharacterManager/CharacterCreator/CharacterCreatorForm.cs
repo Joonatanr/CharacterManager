@@ -73,6 +73,7 @@ namespace CharacterManager.CharacterCreator
                 //1. Set player name.
                 CreatedCharacter = new PlayerCharacter(textBoxCharName.Text);
                 CreatedCharacter.ClassName = SelectedClass.PlayerClassName;
+                CreatedCharacter.SubClassName = ""; /* No archetype yet. */
 
                 //2. Set base attributes.
                 CreatedCharacter.StrengthAttribute = userControlAttributeSetupSTR.TotalAttributeValue;

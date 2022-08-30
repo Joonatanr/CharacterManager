@@ -32,8 +32,8 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.richTextBoxAbilitySub = new System.Windows.Forms.RichTextBox();
             this.comboBoxAbilitySelect = new System.Windows.Forms.ComboBox();
+            this.richTextBoxAbilitySub = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.comboBoxAbilitySelect);
             this.groupBox2.Controls.Add(this.richTextBoxAbilitySub);
             this.groupBox2.Location = new System.Drawing.Point(286, 3);
@@ -79,17 +81,6 @@
             this.groupBox2.Size = new System.Drawing.Size(208, 123);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            // 
-            // richTextBoxAbilitySub
-            // 
-            this.richTextBoxAbilitySub.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxAbilitySub.Location = new System.Drawing.Point(6, 39);
-            this.richTextBoxAbilitySub.Name = "richTextBoxAbilitySub";
-            this.richTextBoxAbilitySub.Size = new System.Drawing.Size(196, 78);
-            this.richTextBoxAbilitySub.TabIndex = 0;
-            this.richTextBoxAbilitySub.Text = "";
             // 
             // comboBoxAbilitySelect
             // 
@@ -101,6 +92,17 @@
             this.comboBoxAbilitySelect.Size = new System.Drawing.Size(196, 21);
             this.comboBoxAbilitySelect.TabIndex = 1;
             this.comboBoxAbilitySelect.SelectedIndexChanged += new System.EventHandler(this.comboBoxAbilitySelect_SelectedIndexChanged);
+            // 
+            // richTextBoxAbilitySub
+            // 
+            this.richTextBoxAbilitySub.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxAbilitySub.Location = new System.Drawing.Point(6, 39);
+            this.richTextBoxAbilitySub.Name = "richTextBoxAbilitySub";
+            this.richTextBoxAbilitySub.Size = new System.Drawing.Size(196, 78);
+            this.richTextBoxAbilitySub.TabIndex = 0;
+            this.richTextBoxAbilitySub.Text = "";
             // 
             // UserControlClassFeature
             // 

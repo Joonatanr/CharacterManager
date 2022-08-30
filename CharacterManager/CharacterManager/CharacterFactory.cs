@@ -146,6 +146,14 @@ namespace CharacterManager
             return res;
         }
 
+        public static PlayerClassArchetype getPlayerSubClassByName(string className, string subclassName)
+        {
+            PlayerClass mainClass = getPlayerClassByName(className);
+            List<PlayerClassArchetype> archeTypes = mainClass.ArcheTypes;
+
+            return archeTypes.Find(at => at.ArcheTypeName == subclassName);
+        }
+
         public static Items.PlayerItem getPlayerItemByName(String name)
         {
             Items.PlayerItem res = null;
