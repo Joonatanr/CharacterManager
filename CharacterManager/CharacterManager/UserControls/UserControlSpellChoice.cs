@@ -56,6 +56,58 @@ namespace CharacterManager.UserControls
             ItemSelectionChanged += new ItemChoiceChangedListener(SpellSelectionChangedHandler);
         }
 
+        protected override void setItemPositions(List<PlayerSpell> items, out Dictionary<int, PlayerSpell> itemDictionary, out Dictionary<int, StringContainer> textDictionary)
+        {
+            if (IsMultipleLevel == false)
+            {
+                base.setItemPositions(items, out itemDictionary, out textDictionary);
+            }
+            else
+            {
+                Dictionary<int, PlayerSpell> itemLocations = new Dictionary<int, PlayerSpell>();
+                Dictionary<int, StringContainer> textLocations = new Dictionary<int, StringContainer>();
+                int y = 1;
+
+                for(int level = 0; level <= 9; level++)
+                {
+                    List<PlayerSpell> spellsOfThisLevel = items.FindAll(sp => sp.SpellLevel == level);
+
+                    if (spellsOfThisLevel.Count > 0)
+                    {
+                        /* Lets first add the title */
+
+                        string title;
+                        if (level == 0)
+                        {
+                            title = "Cantrips: ";
+                        }
+                        else
+                        {
+                            title = "Level " + level.ToString() + ":";
+                        }
+
+                        StringContainer titleContainer = new UserControlBaseChoice<PlayerSpell>.StringContainer(title, new Font("Arial", 12, FontStyle.Bold));
+
+                        textLocations.Add(y, titleContainer);
+                        y++;
+
+                        foreach(PlayerSpell spell in spellsOfThisLevel)
+                        {
+                            textLocations.Add(y, new UserControlBaseChoice<PlayerSpell>.StringContainer(spell.DisplayedName));
+                            itemLocations.Add(y, spell);
+                            y++;
+                        }
+
+                    }
+                }
+
+
+                itemDictionary = itemLocations;
+                textDictionary = textLocations;
+            }
+        }
+
+
         private void SpellSelectionChangedHandler(PlayerSpell spell, bool isChosen)
         {
             if(SpellSelectionChanged != null)

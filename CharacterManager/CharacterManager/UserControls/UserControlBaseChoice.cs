@@ -27,9 +27,34 @@ namespace CharacterManager.UserControls
         protected List<ItemHandleControl<ItemType>> myControlList = new List<ItemHandleControl<ItemType>>();
         protected List<ItemType> myItemList = new List<ItemType>();
         protected List<ItemType> myLockedItemList = new List<ItemType>(); /* These are spells that are already chosen because they come from racial abilities etc... */
+        
+
+        protected class StringContainer
+        {
+            public string str;
+            public Font font = new Font("Arial", 12, FontStyle.Regular);
+
+            public StringContainer()
+            {
+                str = "";
+            }
+
+            public StringContainer(string str)
+            {
+                this.str = str;
+            }
+
+            public StringContainer(string str, Font font)
+            {
+                this.str = str;
+                this.font = font;
+            }
+        }
+
 
         /* This dictionary should contain the line number for each spell... Needed to sync visual data. Might not be the perfect solution, but maybe this will work. */
-        protected Dictionary<ItemType, int> myItemDictionary = new Dictionary<ItemType, int>();
+        protected Dictionary<int, ItemType> myItemDictionary = new Dictionary<int, ItemType>();
+        protected Dictionary<int, StringContainer> myTextDictionary = new Dictionary<int, StringContainer>();
 
         /* Delegates. */
         public delegate void ItemChoiceChangedListener(ItemType Item, bool isChosen);
@@ -112,26 +137,18 @@ namespace CharacterManager.UserControls
             this.Controls.Clear(); /* Remove any existing controls. */
             myControlList = new List<ItemHandleControl<ItemType>>();
 
-            int y = 1;
+            List<ItemType> combinedItemList = myItemList.Union(myLockedItemList).ToList();
+            setItemPositions(combinedItemList, out myItemDictionary, out myTextDictionary);
 
-            List<ItemType> combinedItemList = myItemList.Union(myLockedItemList).ToList(); /* TODO : Use this list. */
-            myItemDictionary = new Dictionary<ItemType, int>();
-
-            foreach (ItemType s in combinedItemList)
-            {
-                myItemDictionary.Add(s, y);
-                y++;
-            }
-
-            foreach (ItemType s in myItemDictionary.Keys)
+            foreach (int index in myItemDictionary.Keys)
             {
                 CustomButton iBtn = new CustomButton();
                 iBtn.Size = new Size(40, 18);
                 iBtn.ButtonText = "Info";
-                ItemHandleControl<ItemType> ctrl = new ItemHandleControl<ItemType>(s, iBtn);
+                ItemHandleControl<ItemType> ctrl = new ItemHandleControl<ItemType>(myItemDictionary[index], iBtn);
                 myControlList.Add(ctrl);
 
-                AddButtonOnLine(iBtn, myItemDictionary[s] - 1, 3); /*TODO : Looks like adding controls begins with line index 1, but text uses index 0... <sigh>*/
+                AddButtonOnLine(iBtn, index - 1, 3); /*TODO : Looks like adding controls begins with line index 1, but text uses index 0... <sigh>*/
 
                 if (IsCheckBoxed)
                 {
@@ -139,7 +156,7 @@ namespace CharacterManager.UserControls
                     myCheckBox.Size = new Size(16, 16);
                     ctrl.setCheckBox(myCheckBox);
 
-                    if (myLockedItemList.Find(lockedItem => lockedItem.ItemName == s.ItemName) != null)
+                    if (myLockedItemList.Find(lockedItem => lockedItem.ItemName == myItemDictionary[index].ItemName) != null)
                     {
                         //Spell is already learned because of racial attributes or otherwise.
                         ctrl.IsLocked = true;
@@ -149,7 +166,7 @@ namespace CharacterManager.UserControls
                         //We only add the external listener if this control is going to be modified by the user.
                         ctrl.ItemCheckedChanged += Ctrl_ItemCheckedChanged;
                     }
-                    AddControlOnLine(myCheckBox, myItemDictionary[s] - 1, 3 + iBtn.Width);
+                    AddControlOnLine(myCheckBox, index - 1, 3 + iBtn.Width);
                 }
             }
 
@@ -157,14 +174,33 @@ namespace CharacterManager.UserControls
         }
 
 
-        /* TODO : Reimplement the multilevel stuff. This was badly implemented in the first place. */
+        protected virtual void setItemPositions(List<ItemType> items, out Dictionary<int, ItemType> itemDictionary, out Dictionary<int, StringContainer> textDictionary)
+        {
+            Dictionary<int, ItemType> itemLocations = new Dictionary<int, ItemType>();
+            Dictionary<int, StringContainer> textLocations = new Dictionary<int, StringContainer>();
+
+            int y = 1;
+
+            foreach (ItemType s in items)
+            {
+                itemLocations.Add(y, s);
+                StringContainer nameStr = new StringContainer(s.DisplayedName);
+                textLocations.Add(y, nameStr);
+                y++;
+            }
+
+            itemDictionary = itemLocations;
+            textDictionary = textLocations;
+        }
+
+
         protected override void drawData(Graphics gfx, Font font)
         {
             drawTextOnLine(gfx, _titleString, 0, FontStyle.Bold);
 
-            foreach (ItemType sp in myItemDictionary.Keys)
+            foreach (int index in myTextDictionary.Keys)
             {
-                    drawTextOnLine(gfx, sp.DisplayedName, myItemDictionary[sp]);
+                drawTextOnLine(gfx, myTextDictionary[index].str, index, myTextDictionary[index].font);
             }
             
 
