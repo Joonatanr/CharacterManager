@@ -34,6 +34,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxAbilitySelect = new System.Windows.Forms.ComboBox();
             this.richTextBoxAbilitySub = new System.Windows.Forms.RichTextBox();
+            this.buttonExtraChoices = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buttonExtraChoices);
             this.groupBox1.Controls.Add(this.labelTitle);
             this.groupBox1.Controls.Add(this.richTextBoxAbilityDescription);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
@@ -104,6 +106,17 @@
             this.richTextBoxAbilitySub.TabIndex = 0;
             this.richTextBoxAbilitySub.Text = "";
             // 
+            // buttonExtraChoices
+            // 
+            this.buttonExtraChoices.Location = new System.Drawing.Point(153, 10);
+            this.buttonExtraChoices.Name = "buttonExtraChoices";
+            this.buttonExtraChoices.Size = new System.Drawing.Size(118, 23);
+            this.buttonExtraChoices.TabIndex = 2;
+            this.buttonExtraChoices.Text = "Extra";
+            this.buttonExtraChoices.UseVisualStyleBackColor = true;
+            this.buttonExtraChoices.Visible = false;
+            this.buttonExtraChoices.Click += new System.EventHandler(this.buttonExtraChoices_Click);
+            // 
             // UserControlClassFeature
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,5 +140,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox comboBoxAbilitySelect;
         private System.Windows.Forms.RichTextBox richTextBoxAbilitySub;
+        private System.Windows.Forms.Button buttonExtraChoices;
     }
 }

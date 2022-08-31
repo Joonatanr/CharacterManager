@@ -33,6 +33,8 @@ namespace CharacterManager.CharacterCreator
         public delegate void SelectedArchetypeChangedListener(PlayerClassArchetype archetype);
         public SelectedArchetypeChangedListener SelectedArcheTypeChanged;
 
+        private EventHandler ExtraChoiceEventHandler = null;
+
         public UserControlClassFeature()
         {
             InitializeComponent();
@@ -84,7 +86,25 @@ namespace CharacterManager.CharacterCreator
                 /* This is a single choice ability, so no choice really. */
                 richTextBoxAbilitySub.Visible = false;
                 comboBoxAbilitySelect.Visible = false;
+
+                /* For a single choice ability, we might still have some extra choices that need to be made. */
+                string btnText;
+                System.EventHandler eventHandler;
+
+                if (selectedAbility.ExtraChoiceOptions(out btnText, out eventHandler) == true)
+                {
+                    this.buttonExtraChoices.Text = btnText;
+                    this.buttonExtraChoices.Visible = true;
+                    this.ExtraChoiceEventHandler = eventHandler;
+                }
+                else
+                {
+                    this.buttonExtraChoices.Visible = false;
+                }
+
             }
+
+            
         }
 
         private void comboBoxAbilitySelect_SelectedIndexChanged(object sender, EventArgs e)
@@ -104,6 +124,15 @@ namespace CharacterManager.CharacterCreator
                 {
                     SelectedArcheTypeChanged.Invoke((PlayerClassArchetype)selectedAbility);
                 }
+            }
+        }
+
+        private void buttonExtraChoices_Click(object sender, EventArgs e)
+        {
+            /* Placeholder. This should be replaced if the button is actually used. */
+            if(this.ExtraChoiceEventHandler != null)
+            {
+                ExtraChoiceEventHandler.Invoke(sender, e);
             }
         }
     }

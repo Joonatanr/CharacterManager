@@ -65,5 +65,13 @@ namespace CharacterManager
         {
             /* TODO - This will be overwritten by special abilities. */
         }
+
+        public virtual bool ExtraChoiceOptions(out string btnText, out System.EventHandler clickHandler)
+        {
+            btnText = "None";
+            clickHandler = null;
+            /* Return false : No extra choice options are available. */
+            return false;
+        }
     }
 }
