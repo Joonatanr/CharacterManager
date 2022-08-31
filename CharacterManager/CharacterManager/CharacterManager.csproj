@@ -102,6 +102,7 @@
     <Compile Include="PlayerAbility.cs" />
     <Compile Include="PlayerCharacter.cs" />
     <Compile Include="PlayerClass.cs" />
+    <Compile Include="PlayerClassAbilityChoice.cs" />
     <Compile Include="PlayerClassArchetype.cs" />
     <Compile Include="PlayerManeuverAbility.cs" />
     <Compile Include="PlayerRace.cs" />
@@ -132,6 +133,9 @@
     <Compile Include="UserControls\AlignmentChoice.Designer.cs">
       <DependentUpon>AlignmentChoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ChoiceList\UserControlManeuverChoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\CustomButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +153,12 @@
     </Compile>
     <Compile Include="UserControls\FormAddXp.Designer.cs">
       <DependentUpon>FormAddXp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Levelup\FormChooseCombatManeuvers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Levelup\FormChooseCombatManeuvers.Designer.cs">
+      <DependentUpon>FormChooseCombatManeuvers.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Levelup\FormLevelup.cs">
       <SubType>Form</SubType>
@@ -338,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormAddXp.resx">
       <DependentUpon>FormAddXp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Levelup\FormChooseCombatManeuvers.resx">
+      <DependentUpon>FormChooseCombatManeuvers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Levelup\FormLevelup.resx">
       <DependentUpon>FormLevelup.cs</DependentUpon>

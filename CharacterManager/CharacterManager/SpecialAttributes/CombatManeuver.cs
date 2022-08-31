@@ -12,6 +12,6 @@ namespace CharacterManager.SpecialAttributes
     {
         public string ManeuverName;
 
-        public override string ItemName { get => ManeuverName; set => ManeuverName = value; }
+        public override string ItemName { get => ManeuverName; set => ManeuverName = value; } 
     }
 }
