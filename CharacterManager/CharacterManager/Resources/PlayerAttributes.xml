@@ -512,8 +512,8 @@ your Strength or Dexterity modifier (your choice)</Description>
 		</AvailableManeuvers>
 		<AvailableManeuversAtLevel3>3</AvailableManeuversAtLevel3>
 		<AvailableManeuversAtLevel7>2</AvailableManeuversAtLevel7>
-		<AvailableManeuversAtLevel10>2</AvailableManeuversAtLeve10>
-		<AvailableManeuversAtLevel15>2</AvailableManeuversAtLevel5>
+		<AvailableManeuversAtLevel10>2</AvailableManeuversAtLevel10>
+		<AvailableManeuversAtLevel15>2</AvailableManeuversAtLevel15>
 	</PlayerAbility>
 	
 <!-- Barbarian class abilities -->
