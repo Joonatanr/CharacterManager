@@ -185,7 +185,26 @@ namespace CharacterManager
     public class PlayerClassAbilityChoice
     {   
         public string Description;
-        public string ClassAbilityName;
+        public string ClassAbilityName
+        {
+            get
+            {
+                if(this.AvailableChoices.Count == 1)
+                {
+                    /* We use the name of the first choice in this case. */
+                    return this.AvailableChoices[0];
+                }
+                else
+                {
+                    return _classAbilityName;
+                }
+            }
+
+            set
+            {
+                _classAbilityName = value;
+            }
+        }
         public List<string> AvailableChoices { get; set; }
 
         /* This part is basically defined in C#, so no way to really parse. */
@@ -193,6 +212,8 @@ namespace CharacterManager
         private List<PlayerAbility> resolvedAbilities;
 
         private Boolean isListResolved = false;
+        private string _classAbilityName; /* Name for a list of choices */
+
 
         public PlayerClassAbilityChoice()
         {
