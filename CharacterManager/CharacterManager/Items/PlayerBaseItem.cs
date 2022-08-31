@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace CharacterManager.Items
 {
@@ -14,5 +16,19 @@ namespace CharacterManager.Items
     {
         public virtual string Description { get; set; }
         public virtual string ItemName { get; set; }
+
+        [XmlIgnore]
+        public virtual string DisplayedName
+        {
+            get
+            {
+                return ItemName;
+            }
+        }
+
+        public virtual void ShowDescription()
+        {
+            MessageBox.Show(ItemName + Environment.NewLine + Environment.NewLine + Description);
+        }
     }
 }

@@ -189,6 +189,9 @@
     <Compile Include="UserControls\UserControlAttributeSetup.Designer.cs">
       <DependentUpon>UserControlAttributeSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlBaseChoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\UserControlDieRollBonusValuesHandler.cs">
       <SubType>UserControl</SubType>
     </Compile>

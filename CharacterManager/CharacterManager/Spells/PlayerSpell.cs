@@ -78,15 +78,6 @@ namespace CharacterManager.Spells
 
         [XmlIgnore]
         public Boolean IsModified = false; /* Used only by the SpellEditor. */
-
-        [XmlIgnore]
-        public string DisplayedName
-        {
-            get
-            {
-                return SpellName;
-            }
-        }
         
         [XmlIgnore]
         public string ListNameForEditor
@@ -131,6 +122,13 @@ namespace CharacterManager.Spells
             }
 
             return res;
+        }
+
+        public override void ShowDescription()
+        {
+            Spellcard card = new Spellcard();
+            card.setSpell(this);
+            card.ShowDialog();
         }
     }
 }
