@@ -150,10 +150,10 @@
     <Compile Include="UserControls\FormAddXp.Designer.cs">
       <DependentUpon>FormAddXp.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\FormLevelup.cs">
+    <Compile Include="UserControls\Levelup\FormLevelup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\FormLevelup.Designer.cs">
+    <Compile Include="UserControls\Levelup\FormLevelup.Designer.cs">
       <DependentUpon>FormLevelup.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\FormUseAbility.cs">
@@ -168,11 +168,11 @@
     <Compile Include="UserControls\FormWeaponAttack.Designer.cs">
       <DependentUpon>FormWeaponAttack.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ItemHandlerControl.cs" />
-    <Compile Include="UserControls\UserControl5eBase.cs">
+    <Compile Include="UserControls\ChoiceList\ItemHandlerControl.cs" />
+    <Compile Include="UserControls\Base\UserControl5eBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl5eBase.Designer.cs">
+    <Compile Include="UserControls\Base\UserControl5eBase.Designer.cs">
       <DependentUpon>UserControl5eBase.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlArmorHandler.cs">
@@ -190,7 +190,7 @@
     <Compile Include="UserControls\UserControlAttributeSetup.Designer.cs">
       <DependentUpon>UserControlAttributeSetup.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlBaseChoice.cs">
+    <Compile Include="UserControls\ChoiceList\UserControlBaseChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UserControlDieRollBonusValuesHandler.cs">
@@ -262,25 +262,25 @@
     <Compile Include="UserControls\UserControlSkillProficiencies.Designer.cs">
       <DependentUpon>UserControlSkillProficiencies.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlSpellChoice.cs">
+    <Compile Include="UserControls\ChoiceList\UserControlSpellChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlSpellSlotIndicator.cs">
+    <Compile Include="UserControls\SpellIndicators\UserControlSpellSlotIndicator.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlSpellSlotIndicator.Designer.cs">
+    <Compile Include="UserControls\SpellIndicators\UserControlSpellSlotIndicator.Designer.cs">
       <DependentUpon>UserControlSpellSlotIndicator.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlSpellSlotRow.cs">
+    <Compile Include="UserControls\SpellIndicators\UserControlSpellSlotRow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlSpellSlotRow.Designer.cs">
+    <Compile Include="UserControls\SpellIndicators\UserControlSpellSlotRow.Designer.cs">
       <DependentUpon>UserControlSpellSlotRow.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlSpellSlotsArea.cs">
+    <Compile Include="UserControls\SpellIndicators\UserControlSpellSlotsArea.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlSpellSlotsArea.Designer.cs">
+    <Compile Include="UserControls\SpellIndicators\UserControlSpellSlotsArea.Designer.cs">
       <DependentUpon>UserControlSpellSlotsArea.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlToolProficiencyChoice.cs">
@@ -339,7 +339,7 @@
     <EmbeddedResource Include="UserControls\FormAddXp.resx">
       <DependentUpon>FormAddXp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\FormLevelup.resx">
+    <EmbeddedResource Include="UserControls\Levelup\FormLevelup.resx">
       <DependentUpon>FormLevelup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormUseAbility.resx">
@@ -348,7 +348,7 @@
     <EmbeddedResource Include="UserControls\FormWeaponAttack.resx">
       <DependentUpon>FormWeaponAttack.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControl5eBase.resx">
+    <EmbeddedResource Include="UserControls\Base\UserControl5eBase.resx">
       <DependentUpon>UserControl5eBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlAttributeDisplay.resx">
@@ -390,13 +390,13 @@
     <EmbeddedResource Include="UserControls\UserControlSkillProficiencies.resx">
       <DependentUpon>UserControlSkillProficiencies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlSpellSlotIndicator.resx">
+    <EmbeddedResource Include="UserControls\SpellIndicators\UserControlSpellSlotIndicator.resx">
       <DependentUpon>UserControlSpellSlotIndicator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlSpellSlotRow.resx">
+    <EmbeddedResource Include="UserControls\SpellIndicators\UserControlSpellSlotRow.resx">
       <DependentUpon>UserControlSpellSlotRow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlSpellSlotsArea.resx">
+    <EmbeddedResource Include="UserControls\SpellIndicators\UserControlSpellSlotsArea.resx">
       <DependentUpon>UserControlSpellSlotsArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlToolProficiencyChoice.resx">
