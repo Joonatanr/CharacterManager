@@ -13,18 +13,18 @@ namespace CharacterManager.UserControls.Levelup
 {
     public partial class FormChooseCombatManeuvers : Form
     {
-        private List<CombatManeuver> _availableManeuvers = new List<CombatManeuver>();
-        
-        public List<CombatManeuver> AvailableManeuvers
+        private PlayerManeuverAbility _myAbility;
+
+        public PlayerManeuverAbility ManeuverAbility
         {
             get
             {
-                return _availableManeuvers;
+                return _myAbility;
             }
 
             set
             {
-                _availableManeuvers = value;
+                _myAbility = value;
                 updateAvailableManeuvers();
             }
         }
@@ -36,7 +36,7 @@ namespace CharacterManager.UserControls.Levelup
 
         private void updateAvailableManeuvers()
         {
-            userControlManeuverChoiceAvailableManeuvers.setAvailableManeuverChoices(_availableManeuvers);
+            userControlManeuverChoiceAvailableManeuvers.setAvailableManeuverChoices(_myAbility.AvailableManeuverObjects);
         }
     }
 }
