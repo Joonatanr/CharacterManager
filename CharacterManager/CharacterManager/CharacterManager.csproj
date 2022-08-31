@@ -168,6 +168,7 @@
     <Compile Include="UserControls\FormWeaponAttack.Designer.cs">
       <DependentUpon>FormWeaponAttack.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ItemHandlerControl.cs" />
     <Compile Include="UserControls\UserControl5eBase.cs">
       <SubType>UserControl</SubType>
     </Compile>
