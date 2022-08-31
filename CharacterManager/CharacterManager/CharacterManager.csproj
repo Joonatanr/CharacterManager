@@ -141,7 +141,7 @@
     <Compile Include="UserControls\CustomRTB.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UserControls\DieRollTextBox.cs">
+    <Compile Include="UserControls\Dice\DieRollTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\FormAddXp.cs">
@@ -175,13 +175,13 @@
     <Compile Include="UserControls\Base\UserControl5eBase.Designer.cs">
       <DependentUpon>UserControl5eBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlArmorHandler.cs">
+    <Compile Include="UserControls\MainForm\UserControlArmorHandler.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlAttributeDisplay.cs">
+    <Compile Include="UserControls\MainForm\UserControlAttributeDisplay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlAttributeDisplay.Designer.cs">
+    <Compile Include="UserControls\MainForm\UserControlAttributeDisplay.Designer.cs">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlAttributeSetup.cs">
@@ -193,10 +193,10 @@
     <Compile Include="UserControls\ChoiceList\UserControlBaseChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlDieRollBonusValuesHandler.cs">
+    <Compile Include="UserControls\Dice\UserControlDieRollBonusValuesHandler.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlDieRollBonusValuesHandler.Designer.cs">
+    <Compile Include="UserControls\Dice\UserControlDieRollBonusValuesHandler.Designer.cs">
       <DependentUpon>UserControlDieRollBonusValuesHandler.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlEquipmentChoice.cs">
@@ -235,13 +235,13 @@
     <Compile Include="UserControls\UserControlGenericValue.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlHitPoints.cs">
+    <Compile Include="UserControls\MainForm\UserControlHitPoints.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlMagicHandler.cs">
+    <Compile Include="UserControls\MainForm\UserControlMagicHandler.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlMagicHandler.Designer.cs">
+    <Compile Include="UserControls\MainForm\UserControlMagicHandler.Designer.cs">
       <DependentUpon>UserControlMagicHandler.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControlProficiency.cs">
@@ -289,7 +289,7 @@
     <Compile Include="UserControls\UserControlToolProficiencyChoice.Designer.cs">
       <DependentUpon>UserControlToolProficiencyChoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlWeaponsHandler.cs">
+    <Compile Include="UserControls\MainForm\UserControlWeaponsHandler.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <EmbeddedResource Include="CharacterCreator\CharacterCreatorForm.resx">
@@ -351,13 +351,13 @@
     <EmbeddedResource Include="UserControls\Base\UserControl5eBase.resx">
       <DependentUpon>UserControl5eBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlAttributeDisplay.resx">
+    <EmbeddedResource Include="UserControls\MainForm\UserControlAttributeDisplay.resx">
       <DependentUpon>UserControlAttributeDisplay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlAttributeSetup.resx">
       <DependentUpon>UserControlAttributeSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlDieRollBonusValuesHandler.resx">
+    <EmbeddedResource Include="UserControls\Dice\UserControlDieRollBonusValuesHandler.resx">
       <DependentUpon>UserControlDieRollBonusValuesHandler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlEquipmentChoice.resx">
@@ -375,10 +375,10 @@
     <EmbeddedResource Include="UserControls\UserControlGenericValue.resx">
       <DependentUpon>UserControlGenericValue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlHitPoints.resx">
+    <EmbeddedResource Include="UserControls\MainForm\UserControlHitPoints.resx">
       <DependentUpon>UserControlHitPoints.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlMagicHandler.resx">
+    <EmbeddedResource Include="UserControls\MainForm\UserControlMagicHandler.resx">
       <DependentUpon>UserControlMagicHandler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlProficiency.resx">
