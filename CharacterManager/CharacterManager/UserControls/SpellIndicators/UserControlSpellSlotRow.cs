@@ -17,6 +17,9 @@ namespace CharacterManager.UserControls
         private SpellSlotData mySpellSlotData = new SpellSlotData(3, 3);
         private List<UserControlSpellSlotIndicator> mySpellSlotIndicators = new List<UserControlSpellSlotIndicator>();
 
+        public delegate void ActiveSlotsChangedListener(int active_cnt);
+        public ActiveSlotsChangedListener ActiveSlotsChanged;
+
         public SpellSlotData SpellSlots
         {
             get
@@ -104,7 +107,12 @@ namespace CharacterManager.UserControls
             else
             {
                 mySpellSlotData.ActiveCount--;
-            }    
+            }
+
+            if (ActiveSlotsChanged != null)
+            {
+                ActiveSlotsChanged.Invoke(mySpellSlotData.ActiveCount);
+            }
         }
 
         private void updateNumberOfSlots()

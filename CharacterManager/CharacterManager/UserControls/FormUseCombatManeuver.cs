@@ -21,6 +21,7 @@ namespace CharacterManager.UserControls
             set
             {
                 _myManeuverAbility = value;
+                _myManeuverAbility.RemainingChargesChanged += new PlayerAbility.PlayerAbilityValueChanged(HandleManeuverChargesChanged);
                 updateDisplayedData();
             }
         }
@@ -37,9 +38,20 @@ namespace CharacterManager.UserControls
                 userControlManeuverChoice1.setAvailableManeuverChoices(_myManeuverAbility.ChosenManeuverObjects);
                 userControlSpellSlotRow1.NumberOfSlots = _myManeuverAbility.MaximumCharges;
                 userControlSpellSlotRow1.NumberOfRemainingSlots = _myManeuverAbility.RemainingCharges;
+                userControlSpellSlotRow1.ActiveSlotsChanged = new UserControlSpellSlotRow.ActiveSlotsChangedListener(HandleManeuverChargesChangedByUser);
 
                 dieRollTextBox1.DieRollObject = _myManeuverAbility.DiceObject;
             }
+        }
+
+        private void HandleManeuverChargesChangedByUser(int value)
+        {
+            _myManeuverAbility.RemainingCharges = value;
+        }
+
+        private void HandleManeuverChargesChanged(int value)
+        {
+            userControlSpellSlotRow1.NumberOfRemainingSlots = value;
         }
 
         private void buttonRoll_Click(object sender, EventArgs e)
