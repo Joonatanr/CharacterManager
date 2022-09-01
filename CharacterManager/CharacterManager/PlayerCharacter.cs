@@ -76,7 +76,7 @@ namespace CharacterManager
 
             public CharacterBonusValues()
             {
-                
+               
             }
 
             internal void ResetAttackModifiers()
@@ -84,6 +84,11 @@ namespace CharacterManager
                 AttackNoteString = "";
                 AttackRollBonusModifiers = new List<BonusValueModifier>();
                 AttackDamageBonusModifiers = new List<BonusValueModifier>();
+            }
+
+            internal void ResetLevelUpModifiers()
+            {
+                HitPointLevelupModifiers = new List<BonusValueModifier>();
             }
         }
 
