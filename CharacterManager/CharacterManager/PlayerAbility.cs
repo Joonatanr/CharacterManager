@@ -156,6 +156,12 @@ namespace CharacterManager
             MessageBox.Show(this.Description);
         }
 
+        public virtual List<BonusValueModifier> getDifficultyClass(PlayerCharacter c)
+        {
+            /* This can be overridden by special abilities. */
+            return new List<BonusValueModifier>();
+        }
+
         protected virtual void ResolveOptions(List<string> options)
         {
             /* This can be overwritten by special abilities. */

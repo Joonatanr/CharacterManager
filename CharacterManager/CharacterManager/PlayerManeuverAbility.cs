@@ -181,6 +181,30 @@ namespace CharacterManager
             myInfoForm.Show();
         }
 
+        public override List<BonusValueModifier> getDifficultyClass(PlayerCharacter c)
+        {
+            List<BonusValueModifier> modifiers = new List<BonusValueModifier>();
+
+            int dexMod = c.getModifier("DEX");
+            int strMod = c.getModifier("STR");
+
+            modifiers.Add(new BonusValueModifier("Base", 8));
+
+            if (strMod >= dexMod)
+            {
+                modifiers.Add(new BonusValueModifier("STR bonus", strMod));
+            }
+            else
+            {
+                modifiers.Add(new BonusValueModifier("DEX bonus", dexMod));
+            }
+
+            modifiers.Add(new BonusValueModifier("Proficiency Bonus", c.ProficiencyBonus));
+
+            return modifiers;
+        }
+
+
         private void handleManeuverChoice(PlayerCharacter Character)
         {
             FormChooseCombatManeuvers myForm = new FormChooseCombatManeuvers();
@@ -188,10 +212,9 @@ namespace CharacterManager
             myForm.ManeuverAbility = this;
             myForm.Character = Character;
             myForm.Show();
-
-            /* TODO : This is a placeholder. */
         }
 
+        
 
         private void resolveManeuverList()
         {

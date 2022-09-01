@@ -78,22 +78,43 @@ namespace CharacterManager.UserControls
 
         public void UpdateSpellSlotRowData()
         {
+            /* Lets check if we actually need to update anything... */
+            int currentActive = 0;
+
             for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
             {
                 try
                 {
-                    if (x < (mySpellSlotData.ActiveCount))
+                    if (mySpellSlotIndicators[x].IsActive)
                     {
-                        mySpellSlotIndicators[x].IsActive = true;
-                    }
-                    else
-                    {
-                        mySpellSlotIndicators[x].IsActive = false;
+                        currentActive++;
                     }
                 }
                 catch (Exception)
                 {
-                    /* Lets hope this does not happen... */
+                    /* Oh dear... */
+                }
+            }
+
+            if (currentActive != mySpellSlotData.ActiveCount)
+            {
+                for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
+                {
+                    try
+                    {
+                        if (x < (mySpellSlotData.ActiveCount))
+                        {
+                            mySpellSlotIndicators[x].IsActive = true;
+                        }
+                        else
+                        {
+                            mySpellSlotIndicators[x].IsActive = false;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        /* Lets hope this does not happen... */
+                    }
                 }
             }
         }
