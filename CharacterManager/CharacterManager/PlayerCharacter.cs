@@ -401,12 +401,7 @@ namespace CharacterManager
             CharacterAbilities = new List<PlayerAbilityDescriptor>();
             foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
             {
-                PlayerAbilityDescriptor desc = new PlayerAbilityDescriptor();
-                desc.AbilityName = ability.AttributeName;
-                desc.RemainingCharges = ability.RemainingCharges;
-                desc.IsActive = ability.IsActive;
-
-                CharacterAbilities.Add(desc);
+                CharacterAbilities.Add(ability.ConvertToDescriptor());
             }
         }
 
@@ -568,11 +563,8 @@ namespace CharacterManager
             {
                 if (overwriteDescriptors)
                 {
-                    PlayerAbilityDescriptor desc = new PlayerAbilityDescriptor(obj.AttributeName);
-                    desc.ConnectedObject = obj;
-                    desc.RemainingCharges = obj.MaximumCharges; /* Assume we start at full in this case. */
-                    desc.IsActive = obj.IsActive;
-                    CharacterAbilities.Add(desc);
+                    obj.RemainingCharges = obj.MaximumCharges;
+                    CharacterAbilities.Add(obj.ConvertToDescriptor());
                 }
                 obj.InitializeSubscriptions(this);
             }

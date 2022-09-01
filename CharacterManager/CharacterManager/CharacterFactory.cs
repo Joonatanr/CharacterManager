@@ -376,46 +376,43 @@ namespace CharacterManager
 
             raw.setMainAndSubrace(mainRace, subRace);
 
+            PlayerClass pClass = raw.GetPlayerClass();
+
             //Lets resolve the character attribute list.
             List<PlayerAbility> resultList = new List<PlayerAbility>();
             foreach (PlayerAbilityDescriptor attribDesc in raw.CharacterAbilities)
             {
                 PlayerAbility member = null;
-                if (attribDesc.AbilityName == "Spellcasting")
+                
+                if (attribDesc.AbilityName.ToLower() == "spellcasting")
                 {
                     /* We search for this from the class description instead. */
-                    PlayerClass pClass = raw.GetPlayerClass();
                     member = pClass.SpellCasting;
                 }
                 else
                 {
                     member = AttributesList.Find(attrib => attrib.AttributeName == attribDesc.AbilityName);
+
+                    if (member == null)
+                    {
+                        /* We might be dealing with an archetype... */
+                        PlayerClassArchetype aType = pClass.ArcheTypes.Find(at => at.ArcheTypeName == attribDesc.AbilityName);
+                        member = aType;
+                    }
+
+                    if (member != null)
+                    {
+                        member.ResolveFromDescriptor(attribDesc);
+                    }
                 }
-                    
-                if (member != null)
+                
+                if(member == null)
                 {
-                        attribDesc.ConnectedObject = member;
-                        member.RemainingCharges = attribDesc.RemainingCharges; /* TODO : This information also needs to be passed the other way back. */
-                        member.IsActive = attribDesc.IsActive;
-                        resultList.Add(member);
+                    logError("Failed to resolve ability : " + attribDesc.AbilityName);
                 }
                 else
                 {
-                    /* We might be dealing with an archetype... */
-                    PlayerClass pClass = raw.GetPlayerClass();
-
-                    PlayerClassArchetype aType = pClass.ArcheTypes.Find(at => at.ArcheTypeName == attribDesc.AbilityName);
-                    if (aType != null)
-                    {
-                        attribDesc.ConnectedObject = aType;
-                        resultList.Add(aType);
-                    }
-                    else
-                    {
-
-                        /* TODO : Actually report error. */
-                        logError("Failed to resolve ability : " + attribDesc.AbilityName);
-                    }
+                    resultList.Add(member);
                 }
             }
             raw.setCharacterAbilitiesList(resultList, false);

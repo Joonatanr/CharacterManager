@@ -62,6 +62,26 @@ namespace CharacterManager
             return true;
         }
 
+        public virtual PlayerAbilityDescriptor ConvertToDescriptor()
+        {
+            PlayerAbilityDescriptor desc = new PlayerAbilityDescriptor();
+            desc.AbilityName = this.AttributeName;
+            desc.RemainingCharges = this.RemainingCharges;
+            desc.IsActive = this.IsActive;
+            desc.ConnectedObject = this;
+
+            return desc;
+        }
+
+        public virtual void ResolveFromDescriptor(PlayerAbilityDescriptor desc)
+        {
+            desc.ConnectedObject = this;
+            this.RemainingCharges = desc.RemainingCharges;
+            this.IsActive = desc.IsActive;
+            this.ResolveOptions(desc.Options1);
+
+        }
+
         public virtual void InitializeSubscriptions(PlayerCharacter c)
         {
             /* TODO - This will be overwritten by special abilities. */
@@ -73,6 +93,11 @@ namespace CharacterManager
             clickHandler = null;
             /* Return false : No extra choice options are available. */
             return false;
+        }
+
+        protected virtual void ResolveOptions(List<string> options)
+        {
+            /* This can be overwritten by special abilities. */
         }
     }
 }

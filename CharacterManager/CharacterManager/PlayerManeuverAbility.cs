@@ -146,6 +146,24 @@ namespace CharacterManager
             }
         }
 
+        public override PlayerAbilityDescriptor ConvertToDescriptor()
+        {
+            PlayerAbilityDescriptor desc = base.ConvertToDescriptor();
+
+            desc.Options1 = new List<string>();
+
+            List<CombatManeuver> chosenManeuvers = ChosenManeuverObjects;
+
+            if (chosenManeuvers != null)
+            {
+                foreach (CombatManeuver maneuver in chosenManeuvers)
+                {
+                    desc.Options1.Add(maneuver.ManeuverName);
+                }
+            }
+
+            return desc;
+        }
 
         private void handleManeuverChoice(PlayerCharacter Character)
         {
