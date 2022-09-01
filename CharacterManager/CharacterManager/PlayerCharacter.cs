@@ -118,27 +118,6 @@ namespace CharacterManager
             public SizeDescriptor sizeType;
         }
 
-        [Serializable]
-        public class PlayerAbilityDescriptor
-        {
-            public string AbilityName;
-            public int RemainingCharges = 0;
-            public Boolean IsActive = false;
-
-            [XmlIgnore]
-            public PlayerAbility ConnectedObject = null;
-
-            public PlayerAbilityDescriptor()
-            {
-                AbilityName = "UNKNOWN";
-            }
-            
-            public PlayerAbilityDescriptor(String name)
-            {
-                AbilityName = name;
-            }
-        }
-
         public static readonly String[] CharacterSkillProficiencies = new String[]
         {
             "Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation",
@@ -419,10 +398,10 @@ namespace CharacterManager
         {
             /* This is necessary because we use descriptors not raw objects to save ability data. */
             /* Lets create whole new descriptors here.  */
-            CharacterAbilities = new List<PlayerCharacter.PlayerAbilityDescriptor>();
+            CharacterAbilities = new List<PlayerAbilityDescriptor>();
             foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
             {
-                PlayerCharacter.PlayerAbilityDescriptor desc = new PlayerCharacter.PlayerAbilityDescriptor();
+                PlayerAbilityDescriptor desc = new PlayerAbilityDescriptor();
                 desc.AbilityName = ability.AttributeName;
                 desc.RemainingCharges = ability.RemainingCharges;
                 desc.IsActive = ability.IsActive;
