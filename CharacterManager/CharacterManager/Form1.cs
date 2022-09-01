@@ -497,9 +497,39 @@ namespace CharacterManager
             /* Call this first to setup the level up process. */
             activeCharacter.setupCharacterLevelup();
 
-            /* TODO : Run the level up form. */
             FormLevelup myForm = new FormLevelup(activeCharacter);
             myForm.ShowDialog();
+        }
+
+        /* Just for debugging. TODO : Remove this. */
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (activeCharacter != null)
+            {
+                PlayerAbility myAbility = activeCharacter.CharacterAbilitiesObjectList.Find(ab => ab.Name == "Combat Superiority");
+                if (myAbility != null)
+                {
+                    if (myAbility.RemainingCharges < myAbility.MaximumCharges)
+                    {
+                        myAbility.RemainingCharges++;
+                    }
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (activeCharacter != null)
+            {
+                PlayerAbility myAbility = activeCharacter.CharacterAbilitiesObjectList.Find(ab => ab.Name == "Combat Superiority");
+                if (myAbility != null)
+                {
+                    if (myAbility.RemainingCharges > 0)
+                    {
+                        myAbility.RemainingCharges--;
+                    }
+                }
+            }
         }
     }
 

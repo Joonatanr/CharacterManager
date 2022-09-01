@@ -15,7 +15,22 @@ namespace CharacterManager
 
         public string Description;
         public string Name;
-        public int MaximumCharges = 0; /* Maximum uses 0 indicates a passive ability. */ /* TODO : Should take levels etc. into account. */
+
+        [XmlIgnore]
+        private int _maximumCharges = 0; /* Maximum uses 0 indicates a passive ability. */
+        public int MaximumCharges
+        {
+            get { return _maximumCharges;   }
+            set 
+            { 
+                _maximumCharges = value;
+                if (MaximumChargesChanged != null)
+                {
+                    MaximumChargesChanged.Invoke(_maximumCharges);
+                }
+            }
+        }
+        
         public Boolean IsToggle = false; /* Can the ability be toggled on or off. */
         public Boolean RechargeAtShortRest = false;
         public Boolean RechargeAtLongRest = false;
@@ -24,8 +39,26 @@ namespace CharacterManager
         [XmlIgnore]
         public virtual string DisplayedName { get { return Name; } } /* This should be used instead of the AttributeName*/
 
+        private int _remainingCharges = 0;
         [XmlIgnore]
-        public int RemainingCharges = 0;
+        public int RemainingCharges
+        {
+            get { return _remainingCharges; }
+            set
+            {
+                bool isChanged = false;
+                if(value != _remainingCharges)
+                {
+                    isChanged = true;
+                }
+                
+                _remainingCharges = value;
+                if ((RemainingChargesChanged != null) && isChanged)
+                {
+                    RemainingChargesChanged.Invoke(_remainingCharges);
+                }
+            }
+        }
 
         [XmlIgnore]
         public Boolean IsActive = false;
@@ -43,6 +76,13 @@ namespace CharacterManager
                 this.Dice = value.DieRollString;
             }
         }
+
+        /* TODO : We really need to get started with this. */
+        public delegate void PlayerAbilityValueChanged(int value);
+
+        public event PlayerAbilityValueChanged MaximumChargesChanged;
+        public event PlayerAbilityValueChanged RemainingChargesChanged;
+
 
         public PlayerAbility()
         {

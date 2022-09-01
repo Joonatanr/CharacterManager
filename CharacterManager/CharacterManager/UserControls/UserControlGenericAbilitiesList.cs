@@ -32,6 +32,7 @@ namespace CharacterManager.UserControls
             public AttributeControlData(PlayerAbility _attribute)
             {
                 Attribute = _attribute;
+                _attribute.RemainingChargesChanged += new PlayerAbility.PlayerAbilityValueChanged(HandleRemainingChargesChanged);
             }
 
             public void setUseButton(CustomButton btn)
@@ -43,6 +44,27 @@ namespace CharacterManager.UserControls
             private void Btn_Click(object sender, EventArgs e)
             {
                 throw new NotImplementedException();
+            }
+
+            private void HandleRemainingChargesChanged(int value)
+            {
+                int active_cnt = value;
+
+                if (slotArray != null) 
+                {
+                    for (int x = 0; x < slotArray.Length; x++)
+                    {
+                        if (active_cnt > 0)
+                        {
+                            slotArray[x].IsActive = true;
+                            active_cnt--;
+                        }
+                        else
+                        {
+                            slotArray[x].IsActive = false;
+                        }
+                    }
+                }
             }
 
             public void setSpellSlots(UserControlSpellSlotIndicator[] slots, int cnt) 
@@ -178,6 +200,10 @@ namespace CharacterManager.UserControls
             {
                 AttributeControlData cData = new AttributeControlData(attrib);
                 
+
+                /***YOLO****/
+
+
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), new EventHandler(attrib.HandleInfoButtonClicked));
                 myBtn.Width = 35;
                 buttonNumber++;
@@ -248,7 +274,6 @@ namespace CharacterManager.UserControls
 
         private void SpellSlotIndicatorChangedManuallyHandler(PlayerAbility ability, int cnt)
         {
-            /* Soo... we get the amount of buttons that are checked first. Then we adjust the ability remaining uses accordingly. */
             ability.RemainingCharges = cnt;
         }
 
