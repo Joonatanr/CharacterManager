@@ -62,7 +62,7 @@ namespace CharacterManager.CharacterCreator
             }
             else
             {
-                labelTitle.Text = _abilitiesList[0].AttributeName;
+                labelTitle.Text = _abilitiesList[0].Name;
                 richTextBoxAbilityDescription.Text = _abilitiesList[0].Description;
             }
 

@@ -178,7 +178,7 @@ namespace CharacterManager.UserControls
             {
                 AttributeControlData cData = new AttributeControlData(attrib);
                 
-                InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), attrib.Description);
+                InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), new EventHandler(attrib.HandleInfoButtonClicked));
                 myBtn.Width = 35;
                 buttonNumber++;
                 AddButtonOnLine(myBtn, y, 0);

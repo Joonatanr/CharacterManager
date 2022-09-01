@@ -79,7 +79,7 @@ namespace CharacterManager.UserControls.Levelup
             if(_myCharacter != null)
             {
                 List<PlayerAbility> abilitiesList = _myCharacter.CharacterAbilitiesObjectList;
-                PlayerAbility existingAbility = abilitiesList.Find(a => a.AttributeName == this._myAbility.AttributeName);
+                PlayerAbility existingAbility = abilitiesList.Find(a => a.Name == this._myAbility.Name);
                 
                 if (existingAbility != null) 
                 {

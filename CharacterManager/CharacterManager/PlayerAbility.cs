@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 using static CharacterManager.CharacterCreator.UserControlClassFeature;
 
@@ -13,14 +14,15 @@ namespace CharacterManager
     {
 
         public string Description;
-        public string AttributeName;
+        public string Name;
         public int MaximumCharges = 0; /* Maximum uses 0 indicates a passive ability. */ /* TODO : Should take levels etc. into account. */
         public Boolean IsToggle = false; /* Can the ability be toggled on or off. */
         public Boolean RechargeAtShortRest = false;
         public Boolean RechargeAtLongRest = false;
+        public string Dice; /* A lot of playerabilities have some kind of diceroll associated with it. */
 
         [XmlIgnore]
-        public virtual string DisplayedName { get { return AttributeName; } } /* This should be used instead of the AttributeName*/
+        public virtual string DisplayedName { get { return Name; } } /* This should be used instead of the AttributeName*/
 
         [XmlIgnore]
         public int RemainingCharges = 0;
@@ -28,15 +30,29 @@ namespace CharacterManager
         [XmlIgnore]
         public Boolean IsActive = false;
 
+        [XmlIgnore]
+        public DieRollEquation DiceObject
+        {
+            get
+            {
+                return new DieRollEquation(Dice);
+            }
+
+            set
+            {
+                this.Dice = value.DieRollString;
+            }
+        }
+
         public PlayerAbility()
         {
-            AttributeName = "UNKNOWN";
+            Name = "UNKNOWN";
             Description = "<BLANK>";
         }
 
         public PlayerAbility(String name)
         {
-            AttributeName = name;
+            Name = name;
         }
 
         internal static PlayerAbility resolveFromString(string s)
@@ -65,7 +81,7 @@ namespace CharacterManager
         public virtual PlayerAbilityDescriptor ConvertToDescriptor()
         {
             PlayerAbilityDescriptor desc = new PlayerAbilityDescriptor();
-            desc.AbilityName = this.AttributeName;
+            desc.AbilityName = this.Name;
             desc.RemainingCharges = this.RemainingCharges;
             desc.IsActive = this.IsActive;
             desc.ConnectedObject = this;
@@ -93,6 +109,11 @@ namespace CharacterManager
             clickHandler = null;
             /* Return false : No extra choice options are available. */
             return false;
+        }
+
+        public virtual void HandleInfoButtonClicked(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.Description);
         }
 
         protected virtual void ResolveOptions(List<string> options)

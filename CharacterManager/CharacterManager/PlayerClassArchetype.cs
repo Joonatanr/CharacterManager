@@ -43,8 +43,8 @@ namespace CharacterManager
         [XmlIgnore]
         public string ArcheTypeName
         {
-            get { return this.AttributeName;    }
-            set { this.AttributeName = value;   }
+            get { return this.Name;    }
+            set { this.Name = value;   }
         }
 
         public List<PlayerClassAbilityChoice> getAbilityChoicesByLevel(int level)

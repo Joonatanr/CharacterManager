@@ -52,6 +52,7 @@ namespace CharacterManager.UserControls
             set
             {
                 mySpellSlotData.ActiveCount = value;
+                UpdateSpellSlotRowData();
             }
 
         }

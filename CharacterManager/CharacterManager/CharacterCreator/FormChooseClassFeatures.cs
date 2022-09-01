@@ -76,7 +76,7 @@ namespace CharacterManager.CharacterCreator
 
                 foreach (PlayerAbility ability in choiceList)
                 {
-                    PlayerClassArchetype correspondingArchetype = _selectedClass.ArcheTypes.Find(at => at.ArcheTypeName == ability.AttributeName);
+                    PlayerClassArchetype correspondingArchetype = _selectedClass.ArcheTypes.Find(at => at.ArcheTypeName == ability.Name);
                     if (correspondingArchetype != null)
                     {
                         archeTypeList.Add(correspondingArchetype);

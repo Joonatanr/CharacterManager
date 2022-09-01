@@ -386,7 +386,7 @@
 	
 	<ArcheTypes>
 		<PlayerClassArchetype>
-			<AttributeName>Battle Master</AttributeName>
+			<Name>Battle Master</Name>
 			<Description>Those who emulate the archetypal Battle Master
 employ martial techniques passed down through
 generations. To a Battle Master, combat is an academic
@@ -407,7 +407,7 @@ and knowledge.</Description>
 
 		</PlayerClassArchetype>
 		<PlayerClassArchetype>
-			<AttributeName>Champion</AttributeName>
+			<Name>Champion</Name>
 			<Description>The archetypal Champion focuses on the development
 of raw physical power honed to deadly perfection.
 Those who model themselves on this archetype combine
@@ -424,7 +424,7 @@ devastating blows.</Description>
 			
 		</PlayerClassArchetype>
 		<PlayerClassArchetype>
-			<AttributeName>Eldritch Knight</AttributeName>
+			<Name>Eldritch Knight</Name>
 			<Description>The archetypal Eldritch Knight combines the martial
 mastery common to all fighters with a careful study of
 magic. Eldritch Knights use magical techniques similar

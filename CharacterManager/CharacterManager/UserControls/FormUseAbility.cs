@@ -23,7 +23,7 @@ namespace CharacterManager.UserControls
             set
             {
                 _myAbility = value;
-                labelAbilityName.Text = _myAbility.AttributeName;
+                labelAbilityName.Text = _myAbility.Name;
                 customRTBDescription.Text = _myAbility.Description;
             }
         }

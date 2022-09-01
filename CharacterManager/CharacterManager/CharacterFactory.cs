@@ -243,7 +243,7 @@ namespace CharacterManager
 
         public static PlayerAbility getPlayerAbilityFromString(string s)
         {
-            PlayerAbility res = AttributesList.Find(a => a.AttributeName == s);
+            PlayerAbility res = AttributesList.Find(a => a.Name == s);
             return res;
         }
 
@@ -391,7 +391,7 @@ namespace CharacterManager
                 }
                 else
                 {
-                    member = AttributesList.Find(attrib => attrib.AttributeName == attribDesc.AbilityName);
+                    member = AttributesList.Find(attrib => attrib.Name == attribDesc.AbilityName);
 
                     if (member == null)
                     {
@@ -496,7 +496,7 @@ namespace CharacterManager
             for (int i = 0; i < AttributesList.Count; i++)
             {
                 PlayerAbility attrib = AttributesList[i];
-                SpecialAttribute specialAttribute = SpecialAttributeList.Find(spec => spec.AttributeName == attrib.AttributeName);
+                SpecialAttribute specialAttribute = SpecialAttributeList.Find(spec => spec.Name == attrib.Name);
                 if (specialAttribute != null)
                 {
                     //We found a matching special attribute.

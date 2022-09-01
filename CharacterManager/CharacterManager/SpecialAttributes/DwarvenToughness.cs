@@ -11,7 +11,7 @@ namespace CharacterManager.SpecialAttributes
     {
         public DwarvenToughness()
         {
-            this.AttributeName = "Dwarven Toughness";
+            this.Name = "Dwarven Toughness";
         }
 
         public override void InitializeSubscriptions(PlayerCharacter c)

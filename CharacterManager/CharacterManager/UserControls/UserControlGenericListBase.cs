@@ -21,8 +21,8 @@ namespace CharacterManager.UserControls
 
         protected class InfoButton : CustomButton
         {
-            //private PlayerAttribute attribute;
             private String infoString;
+            private EventHandler showInfo = null;
 
             public InfoButton(string name, string info)
             {
@@ -31,18 +31,33 @@ namespace CharacterManager.UserControls
                 this.Font = new Font("Arial", 8.0f);
                 this.ButtonText = "Info";
                 this.Size = new Size(40, 17);
-                //this.TextAlign = ContentAlignment.TopCenter;
                 this.infoString = info;
+            }
+
+            public InfoButton(string name, EventHandler clickHandler)
+            {
+                this.Click += new System.EventHandler(button_Click);
+                this.Name = name;
+                this.Font = new Font("Arial", 8.0f);
+                this.ButtonText = "Info";
+                this.Size = new Size(40, 17);
+                this.showInfo = clickHandler;
             }
 
             private void button_Click(object sender, EventArgs e)
             {
-                if (infoString != null)
+                if(showInfo != null)
                 {
-                    MessageBox.Show(infoString);
+                    showInfo.Invoke(this, e);
                 }
-                /* Not sure why this is needed, but this makes the button be deselected after it is clicked. */
-                this.Parent.Focus();
+                else if (infoString != null)
+                {
+                
+                    MessageBox.Show(infoString);
+
+                    /* Not sure why this is needed, but this makes the button be deselected after it is clicked. */
+                    this.Parent.Focus();
+                }
             }
         }
 

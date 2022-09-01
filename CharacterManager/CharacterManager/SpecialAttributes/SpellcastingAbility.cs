@@ -25,7 +25,7 @@ namespace CharacterManager.SpecialAttributes
 
         public SpellcastingAbility()
         {
-            this.AttributeName = "Spellcasting";
+            this.Name = "Spellcasting";
             this.IsToggle = false;
         }
 

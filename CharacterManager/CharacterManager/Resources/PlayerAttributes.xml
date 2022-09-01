@@ -1,25 +1,25 @@
 ﻿<ArrayOfPlayerAbility xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	
 	<PlayerAbility>
-		<AttributeName>Darkvision</AttributeName>
+		<Name>Darkvision</Name>
 		<Description>You can see in dim light within 60 feet as if it were bright light and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Dwarven Resilience</AttributeName>
+		<Name>Dwarven Resilience</Name>
 		<Description>You have advantage on saving throws against poison, and you have resistance against poison damage.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Dwarven Toughness</AttributeName>
+		<Name>Dwarven Toughness</Name>
 		<Description>Your hit point maximum increased by 1, and it increases by 1 every time you gain a level.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Stonecunning</AttributeName>
+		<Name>Stonecunning</Name>
 		<Description> Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
@@ -27,19 +27,19 @@
 <!-- Elves -->
 	
 	<PlayerAbility>
-		<AttributeName>Fey Ancestry</AttributeName>
+		<Name>Fey Ancestry</Name>
 		<Description>You have advantage on saving throws against being charmed, and magic can’t put you to sleep.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Trance</AttributeName>
+		<Name>Trance</Name>
 		<Description> Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have becom e reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep. </Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Mask of the Wild</AttributeName>
+		<Name>Mask of the Wild</Name>
 		<Description>You can attempt to hide even when 
 you are only lightly obscured by foliage, heavy rain, 
 falling snow, mist, and other natural phenomena.
@@ -48,14 +48,14 @@ falling snow, mist, and other natural phenomena.
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Superior Darkvision</AttributeName>
+		<Name>Superior Darkvision</Name>
 		<Description>Your darkvision has a 
 radius of 120 feet.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 		
 	<PlayerAbility>
-		<AttributeName>Sunlight Sensitivity</AttributeName>
+		<Name>Sunlight Sensitivity</Name>
 		<Description>You have disadvantage on attack 
 rolls and on Wisdom (Perception) checks that rely on 
 sight when you, the target of your attack, or whatever 
@@ -65,7 +65,7 @@ you are trying to perceive is in direct sunlight.
 	</PlayerAbility>
 		
 	<PlayerAbility>
-		<AttributeName>Drow Magic</AttributeName>
+		<Name>Drow Magic</Name>
 		<Description>You know the dancing lights cantrip. 
 When you reach 3rd level, you can cast the faerie fire
 spell once per day. When you reach 5th level, you can 
@@ -77,7 +77,7 @@ your spellcasting ability for these spells.
 	
 <!-- Halflings -->
 	<PlayerAbility>
-		<AttributeName>Lucky</AttributeName>
+		<Name>Lucky</Name>
 		<Description>When you roll a 1 on an attack roll, ability check, or saving throw, 
 		you can reroll the die and must use the new roll.
 		</Description>
@@ -85,21 +85,21 @@ your spellcasting ability for these spells.
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Brave</AttributeName>
+		<Name>Brave</Name>
 		<Description>You have advantage on saving throws againstbeing frightened.
 		</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Halfling Nimbleness</AttributeName>
+		<Name>Halfling Nimbleness</Name>
 		<Description>You can move through the space of any creature that is of a size larger than yours.
 		</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Naturally Stealthy</AttributeName>
+		<Name>Naturally Stealthy</Name>
 		<Description>You can attempt to hide even
 when you are obscured only by a creature that is at least
 one size larger than you.
@@ -108,7 +108,7 @@ one size larger than you.
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Stout Resilience</AttributeName>
+		<Name>Stout Resilience</Name>
 		<Description>You have advantage on saving
 throws against poison, and you have resistance
 against poison damage.
@@ -120,7 +120,7 @@ against poison damage.
 <!-- Black Dragon -->
 <!-- Copper Dragon -->
 	<PlayerAbility>
-		<AttributeName>Acid Breath</AttributeName>
+		<Name>Acid Breath</Name>
 		<Description>You can use your action to exhale
 acid. Each creature in a 5 by 30ft line must make DEX saving throw. The DC for this saving throw equals 8 +
 your Constitution modifier + your proficiency bonus. A
@@ -136,7 +136,7 @@ again until you complete a short or long rest.
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Acid Resistance</AttributeName>
+		<Name>Acid Resistance</Name>
 		<Description>Your draconic ancestry gives you resistance to acid damage.
 		</Description>
 		<MaximumCharges>0</MaximumCharges>
@@ -146,7 +146,7 @@ again until you complete a short or long rest.
 	<!-- Bronze Dragon -->
 	
 	<PlayerAbility>
-		<AttributeName>Lightning Breath</AttributeName>
+		<Name>Lightning Breath</Name>
 		<Description>You can use your action to exhale
 lightning. Each creature in a 5 by 30ft line must make a DEX saving throw. 
 The DC for this saving throw equals 8 +
@@ -163,7 +163,7 @@ again until you complete a short or long rest.
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Lightning Resistance</AttributeName>
+		<Name>Lightning Resistance</Name>
 		<Description>Your draconic ancestry gives you resistance to lightning damage.
 		</Description>
 		<MaximumCharges>0</MaximumCharges>
@@ -171,7 +171,7 @@ again until you complete a short or long rest.
 	
 	<!-- Brass Dragon -->
 	<PlayerAbility>
-		<AttributeName>Fire Breath(Brass)</AttributeName>
+		<Name>Fire Breath(Brass)</Name>
 		<Description>You can use your action to exhale
 fire. Each creature in a 5 by 30ft line must make a DEX saving throw. 
 The DC for this saving throw equals 8 +
@@ -188,7 +188,7 @@ again until you complete a short or long rest.
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Fire Resistance</AttributeName>
+		<Name>Fire Resistance</Name>
 		<Description>Your draconic ancestry gives you resistance to fire damage.
 		</Description>
 		<MaximumCharges>0</MaximumCharges>
@@ -197,7 +197,7 @@ again until you complete a short or long rest.
 	<!-- Gold Dragon -->
 	
 	<PlayerAbility>
-		<AttributeName>Fire Breath(Gold)</AttributeName>
+		<Name>Fire Breath(Gold)</Name>
 		<Description>You can use your acGon to exhale
 fire. Each creature in a 15ft cone must make a DEX saving throw. 
 The DC for this saving throw equals 8 +
@@ -216,7 +216,7 @@ again until you complete a short or long rest.
 	<!-- Green Dragon -->
 	
 	<PlayerAbility>
-		<AttributeName>Poison Breath</AttributeName>
+		<Name>Poison Breath</Name>
 		<Description>You can use your action to exhale
 poison. Each creature in a 15ft cone must make a CON saving throw. 
 The DC for this saving throw equals 8 +
@@ -233,7 +233,7 @@ again until you complete a short or long rest.
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Poison Resistance</AttributeName>
+		<Name>Poison Resistance</Name>
 		<Description>Your draconic ancestry gives you resistance to poison damage.
 		</Description>
 		<MaximumCharges>0</MaximumCharges>
@@ -242,7 +242,7 @@ again until you complete a short or long rest.
 	<!-- Red Dragon -->
 	
 	<PlayerAbility>
-		<AttributeName>Fire Breath(Red)</AttributeName>
+		<Name>Fire Breath(Red)</Name>
 		<Description>You can use your action to exhale
 fire. Each creature in a 15ft cone must make a DEX saving throw. 
 The DC for this saving throw equals 8 +
@@ -261,7 +261,7 @@ again until you complete a short or long rest.
 	<!-- Silver Dragon -->
 	
 	<PlayerAbility>
-		<AttributeName>Cold Breath</AttributeName>
+		<Name>Cold Breath</Name>
 		<Description>You can use your action to exhale
 cold air. Each creature in a 15ft cone must make a CON saving throw. 
 The DC for this saving throw equals 8 +
@@ -278,7 +278,7 @@ again until you complete a short or long rest.
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Cold Resistance</AttributeName>
+		<Name>Cold Resistance</Name>
 		<Description>Your draconic ancestry gives you resistance to cold damage.
 		</Description>
 		<MaximumCharges>0</MaximumCharges>
@@ -289,13 +289,13 @@ again until you complete a short or long rest.
 
 <!-- Gnome abilities -->
 	<PlayerAbility>
-		<AttributeName>Gnome Cunning</AttributeName>
+		<Name>Gnome Cunning</Name>
 		<Description>You have advantage on all Intelligence, Wisdom , and Charisma saving throws against magic.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Speak with Small Beasts</AttributeName>
+		<Name>Speak with Small Beasts</Name>
 		<Description>Through sounds and 
 gestures, you can communicate simple ideas with Small 
 or smaller beasts. Forest gnomes love animals and often 
@@ -306,13 +306,13 @@ and other creatures as beloved pets.
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Natural Illusionist</AttributeName>
+		<Name>Natural Illusionist</Name>
 		<Description> You know the minor illusion cantrip. Intelligence is your spellcasting ability for it.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Artificer's Lore</AttributeName>
+		<Name>Artificer's Lore</Name>
 		<Description> Whenever you make an Intelligence 
 (History) check related to magic items, alchemical 
 objects, or technological devices, you can add twice your 
@@ -322,7 +322,7 @@ normally apply</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Tinker</AttributeName>
+		<Name>Tinker</Name>
 		<Description>You have proficiency with artisan’s tools 
 (tinker’s tools). Using those tools, you can spend 1 
 hour and 10 gp worth of materials to construct a Tiny 
@@ -356,13 +356,13 @@ when it is closed.</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Menacing</AttributeName>
+		<Name>Menacing</Name>
 		<Description>You gain proficiency in the Intimidation skill.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Relentless Endurance</AttributeName>
+		<Name>Relentless Endurance</Name>
 		<Description>When you are reduced to 
 0 hit points but not killed outright, you can drop to 1 hit 
 point instead. You can’t use this feature again until you 
@@ -373,7 +373,7 @@ finish a long rest.</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Savage Attacks</AttributeName>
+		<Name>Savage Attacks</Name>
 		<Description>When you score a critical hit with 
 a melee weapon attack, you can roll one of the weapon’s 
 damage dice one additional time and add it to the extra 
@@ -382,13 +382,13 @@ damage of the critical hit.</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Hellish Resistance</AttributeName>
+		<Name>Hellish Resistance</Name>
 		<Description> You have resistance to fire damage</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Infernal Legacy</AttributeName>
+		<Name>Infernal Legacy</Name>
 		<Description>You know the thaumaturgy cantrip. 
 Once you reach 3rd level, you can cast the hellish
 rebuke spell once per day as a 2nd-level spell. Once you 
@@ -402,43 +402,43 @@ these spells.</Description>
 	
 <!-- Fighter class abilities -->
 	<PlayerAbility>
-		<AttributeName>Archery Fighting Style</AttributeName>
+		<Name>Archery Fighting Style</Name>
 		<Description>You gain a +2 bonus to attack rolls you make with ranged weapons.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Defense Fighting Style</AttributeName>
+		<Name>Defense Fighting Style</Name>
 		<Description>While you are wearing armor, you gain a +1 bonus to AC.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Dueling Fighting Style</AttributeName>
+		<Name>Dueling Fighting Style</Name>
 		<Description>When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Great Weapon Fighting Style</AttributeName>
+		<Name>Great Weapon Fighting Style</Name>
 		<Description>When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 
 	<PlayerAbility>
-		<AttributeName>Protection Fighting Style</AttributeName>
+		<Name>Protection Fighting Style</Name>
 		<Description>When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be w ielding a shield.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 
 	<PlayerAbility>
-		<AttributeName>Two-Weapon Fighting Style</AttributeName>
+		<Name>Two-Weapon Fighting Style</Name>
 		<Description>When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Second Wind</AttributeName>
+		<Name>Second Wind</Name>
 		<Description>You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d 10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.</Description>
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
@@ -446,7 +446,7 @@ these spells.</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Action Surge</AttributeName>
+		<Name>Action Surge</Name>
 		<Description>Starting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action. O nce you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it tw ice before a rest, but only once on the same turn.</Description>
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
@@ -454,7 +454,7 @@ these spells.</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Improved Critical</AttributeName>
+		<Name>Improved Critical</Name>
 		<Description>Beginning when you choose this archetype at 3rd
 level, your weapon attacks score a critical hit on a
 roll of 19 or 20.</Description>
@@ -462,7 +462,7 @@ roll of 19 or 20.</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility xsi:type="PlayerManeuverAbility">
-		<AttributeName>Combat Superiority</AttributeName>
+		<Name>Combat Superiority</Name>
 		<Description>When you choose this archetype at 3rd level, you
 learn maneuvers that are fueled by special dice called superiority dice.
 
@@ -514,12 +514,14 @@ your Strength or Dexterity modifier (your choice)</Description>
 		<AvailableManeuversAtLevel7>2</AvailableManeuversAtLevel7>
 		<AvailableManeuversAtLevel10>2</AvailableManeuversAtLevel10>
 		<AvailableManeuversAtLevel15>2</AvailableManeuversAtLevel15>
+		
+		<Dice>1d8</Dice>
 	</PlayerAbility>
 	
 <!-- Barbarian class abilities -->
 	
 	<PlayerAbility>
-		<AttributeName>Rage</AttributeName>
+		<Name>Rage</Name>
 		<Description>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren’t wearing heavy armor:
 
 • You have advantage on Strength checks and Strength saving throws.
@@ -535,26 +537,26 @@ You can also end your rage on your turn as a bonus action. Once you have raged t
 	</PlayerAbility>
 		
 	<PlayerAbility>
-		<AttributeName>Unarmored Defense</AttributeName>
+		<Name>Unarmored Defense</Name>
 		<Description>While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Reckless Attack</AttributeName>
+		<Name>Reckless Attack</Name>
 		<Description>Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<AttributeName>Danger Sense</AttributeName>
+		<Name>Danger Sense</Name>
 		<Description>At 2nd level, you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can’t be blinded, deafened, or incapacitated.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 
 <!-- Wizard class abilities -->
 	<PlayerAbility>
-		<AttributeName>Arcane Recovery</AttributeName>
+		<Name>Arcane Recovery</Name>
 		<Description>You have learned to regain some of your magical energy
 by studying your spellbook. Once per day when you
 finish a short rest, you can choose expended spell slots

@@ -1,4 +1,5 @@
 ﻿using CharacterManager.SpecialAttributes;
+using CharacterManager.UserControls;
 using CharacterManager.UserControls.Levelup;
 using System;
 using System.Collections.Generic;
@@ -86,7 +87,8 @@ namespace CharacterManager
 
         [XmlIgnore]
         private Boolean isListResolved = false;
-
+        
+        
         /* TODO : We should notifiy if the user has not selected all available maneuvers. */
 
         public override bool ExtraChoiceOptions(out string btnText, out ExtraChoiceEventHandler clickHandler)
@@ -163,6 +165,20 @@ namespace CharacterManager
             }
 
             return desc;
+        }
+
+        public override void ResolveFromDescriptor(PlayerAbilityDescriptor desc)
+        {
+            base.ResolveFromDescriptor(desc);
+            ChosenManeuvers = desc.Options1;
+            resolveManeuverList();
+        }
+
+        public override void HandleInfoButtonClicked(object sender, EventArgs e)
+        {
+            FormUseCombatManeuver myInfoForm = new FormUseCombatManeuver();
+            myInfoForm.ManeuverAbility = this;
+            myInfoForm.Show();
         }
 
         private void handleManeuverChoice(PlayerCharacter Character)

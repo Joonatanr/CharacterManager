@@ -71,7 +71,7 @@ namespace CharacterManager
 
             foreach (String attribStr in PlayerAttributes)
             {
-                PlayerAbility attrib = listOfAvailableAttributes.Find(a => a.AttributeName == attribStr);
+                PlayerAbility attrib = listOfAvailableAttributes.Find(a => a.Name == attribStr);
                 if (attrib != null)
                 {
                     PlayerAttributeReferences.Add(attrib);
