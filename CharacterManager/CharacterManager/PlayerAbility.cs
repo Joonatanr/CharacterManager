@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using static CharacterManager.CharacterCreator.UserControlClassFeature;
 
 namespace CharacterManager
 {
@@ -66,7 +67,7 @@ namespace CharacterManager
             /* TODO - This will be overwritten by special abilities. */
         }
 
-        public virtual bool ExtraChoiceOptions(out string btnText, out System.EventHandler clickHandler)
+        public virtual bool ExtraChoiceOptions(out string btnText, out ExtraChoiceEventHandler clickHandler)
         {
             btnText = "None";
             clickHandler = null;

@@ -14,52 +14,69 @@ namespace CharacterManager.CharacterCreator
     {
         private PlayerClass _selectedClass = null;
         private int _currentLevel;
-        
+        private PlayerCharacter _currentCharacter = null;
+
         public FormChooseClassFeatures()
         {
             InitializeComponent();
         }
 
+
+        public void setPlayerCharacter(PlayerCharacter Character)
+        {
+            _currentCharacter = Character;
+            _currentLevel = Character.Level;
+            _selectedClass = Character.GetPlayerClass();
+            setupChoices();   
+        }
+
+
         public void setSelectedClassAndLevel(PlayerClass c, int level)
         {
             _selectedClass = c;
             _currentLevel = level;
+            _currentCharacter = null;
+            setupChoices();
+        }
 
+        private void setupChoices()
+        {
             groupBox1.Controls.Clear();
+            /* TODO : Investigate if clearing controls in this manner is a good way of doing things. */
 
             int yloc = 15;
 
             List<PlayerClassAbilityChoice> choicesList = new List<PlayerClassAbilityChoice>();
 
-            foreach (PlayerClassAbilityChoice choice in _selectedClass.getAvailableClassAbilities(level))
+            foreach (PlayerClassAbilityChoice choice in _selectedClass.getAvailableClassAbilities(_currentLevel))
             {
                 choicesList.Add(choice);
             }
 
             /* We want to display the spellcasting ability as a player ability in the form. */
-            if (c.SpellCasting != null)
+            if (_selectedClass.SpellCasting != null)
             {
                 PlayerClassAbilityChoice spellCastingChoice = choicesList.Find(ch => ch.ClassAbilityName == "SpellCasting");
-                
-                if(spellCastingChoice != null)
+
+                if (spellCastingChoice != null)
                 {
-                    spellCastingChoice.Description = c.SpellCasting.Description;
+                    spellCastingChoice.Description = _selectedClass.SpellCasting.Description;
                 }
             }
 
             /* Check if we have the choice of a new Archetype. */
             PlayerClassAbilityChoice archetypeChoice = choicesList.Find(ch => ch.ClassAbilityName == "Archetype");
-            
-            if(archetypeChoice != null)
+
+            if (archetypeChoice != null)
             {
                 List<PlayerAbility> archeTypeList = new List<PlayerAbility>();
 
                 /* Set up this choice. */
                 List<PlayerAbility> choiceList = archetypeChoice.getAllClassAbilityChoices();
-                
-                foreach(PlayerAbility ability in choiceList)
+
+                foreach (PlayerAbility ability in choiceList)
                 {
-                    PlayerClassArchetype correspondingArchetype = c.ArcheTypes.Find(at => at.ArcheTypeName == ability.AttributeName);
+                    PlayerClassArchetype correspondingArchetype = _selectedClass.ArcheTypes.Find(at => at.ArcheTypeName == ability.AttributeName);
                     if (correspondingArchetype != null)
                     {
                         archeTypeList.Add(correspondingArchetype);
@@ -74,16 +91,17 @@ namespace CharacterManager.CharacterCreator
             {
 
                 /* Lets create a user control for each.*/
-                yloc = AddUserControlClassFeature(choice, yloc);
+                yloc = AddUserControlClassFeature(choice, yloc, _currentCharacter);
             }
         }
 
 
         /* Returns the next free Y position. */
-        private int AddUserControlClassFeature(PlayerClassAbilityChoice choice, int yloc)
+        private int AddUserControlClassFeature(PlayerClassAbilityChoice choice, int yloc, PlayerCharacter Character)
         {
             UserControlClassFeature ctrl = new UserControlClassFeature();
             ctrl.AbilityChoice = choice;
+            ctrl.Character = Character;
             ctrl.Location = new Point(5, yloc);
             ctrl.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
             ctrl.Width = groupBox1.Width - 10;
@@ -136,7 +154,7 @@ namespace CharacterManager.CharacterCreator
 
             foreach(PlayerClassAbilityChoice choice in ArcheTypeChoices)
             {
-                yloc = AddUserControlClassFeature(choice, yloc);
+                yloc = AddUserControlClassFeature(choice, yloc, _currentCharacter);
             }
         }
 

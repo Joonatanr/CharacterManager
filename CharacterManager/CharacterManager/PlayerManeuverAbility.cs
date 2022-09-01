@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using static CharacterManager.CharacterCreator.UserControlClassFeature;
 
 namespace CharacterManager
 {
@@ -14,7 +15,8 @@ namespace CharacterManager
     public class PlayerManeuverAbility : PlayerAbility
     {
         public List<string> AvailableManeuvers = new List<string>();
-        
+        public List<string> ChosenManeuvers = new List<string>();
+
         public int AvailableManeuversAtLevel1 = 0;
         public int AvailableManeuversAtLevel2 = 0;
         public int AvailableManeuversAtLevel3 = 0;
@@ -56,15 +58,41 @@ namespace CharacterManager
             }
         }
 
+        private List<CombatManeuver> _chosenManeuverAbilities = null;
+        [XmlIgnore]
+        public List<CombatManeuver> ChosenManeuverObjects
+        {
+            get
+            {
+                if (!isListResolved)
+                {
+                    resolveManeuverList();
+                    isListResolved = true;
+                }
+                return _chosenManeuverAbilities;
+            }
+
+            set
+            {
+                _chosenManeuverAbilities = value;
+                ChosenManeuvers = new List<string>();
+                
+                foreach(CombatManeuver maneuver in _chosenManeuverAbilities)
+                {
+                    ChosenManeuvers.Add(maneuver.ManeuverName);
+                }
+            }
+        }
+
         [XmlIgnore]
         private Boolean isListResolved = false;
 
         /* TODO : We should notifiy if the user has not selected all available maneuvers. */
 
-        public override bool ExtraChoiceOptions(out string btnText, out EventHandler clickHandler)
+        public override bool ExtraChoiceOptions(out string btnText, out ExtraChoiceEventHandler clickHandler)
         {
             btnText = "Choose Maneuvers";
-            clickHandler = new EventHandler(handleManeuverChoice);
+            clickHandler = new ExtraChoiceEventHandler(handleManeuverChoice);
             return true;
         }
 
@@ -119,11 +147,12 @@ namespace CharacterManager
         }
 
 
-        private void handleManeuverChoice(object sender, System.EventArgs e)
+        private void handleManeuverChoice(PlayerCharacter Character)
         {
             FormChooseCombatManeuvers myForm = new FormChooseCombatManeuvers();
             resolveManeuverList();
             myForm.ManeuverAbility = this;
+            myForm.Character = Character;
             myForm.Show();
 
             /* TODO : This is a placeholder. */
@@ -133,6 +162,8 @@ namespace CharacterManager
         private void resolveManeuverList()
         {
             _availableManeuverAbilities = new List<CombatManeuver>();
+            _chosenManeuverAbilities = new List<CombatManeuver>();
+
             List<CombatManeuver> definedManeuvers = CharacterFactory.getAllCombatManeuvers();
             
             foreach (string maneuever in AvailableManeuvers)
@@ -141,7 +172,17 @@ namespace CharacterManager
                 
                 if(resolvedManeuver != null)
                 {
-                    AvailableManeuverObjects.Add(resolvedManeuver);
+                    _availableManeuverAbilities.Add(resolvedManeuver);
+                }
+            }
+
+            
+            foreach(string chosenManeuver in ChosenManeuvers)
+            {
+                CombatManeuver obj = _availableManeuverAbilities.Find(m => m.ManeuverName == chosenManeuver);
+                if(obj != null)
+                {
+                    _chosenManeuverAbilities.Add(obj);
                 }
             }
         }

@@ -401,9 +401,21 @@ namespace CharacterManager
                 }
                 else
                 {
-                    /* TODO : Actually report error. */
-                    /* Maybe returning false is not a good idea? Maybe just skip this one and report an error? */
-                    return false;
+                    /* We might be dealing with an archetype... */
+                    PlayerClass pClass = raw.GetPlayerClass();
+
+                    PlayerClassArchetype aType = pClass.ArcheTypes.Find(at => at.ArcheTypeName == attribDesc.AbilityName);
+                    if (aType != null)
+                    {
+                        attribDesc.ConnectedObject = aType;
+                        resultList.Add(aType);
+                    }
+                    else
+                    {
+
+                        /* TODO : Actually report error. */
+                        logError("Failed to resolve ability : " + attribDesc.AbilityName);
+                    }
                 }
             }
             raw.setCharacterAbilitiesList(resultList, false);

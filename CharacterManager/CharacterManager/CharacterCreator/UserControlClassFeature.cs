@@ -26,6 +26,8 @@ namespace CharacterManager.CharacterCreator
             }
         }
 
+        public PlayerCharacter Character { get; set; }
+
         private PlayerClassAbilityChoice _abilityChoice;
         private List<PlayerAbility> _abilitiesList;
         private PlayerAbility selectedAbility;
@@ -33,7 +35,8 @@ namespace CharacterManager.CharacterCreator
         public delegate void SelectedArchetypeChangedListener(PlayerClassArchetype archetype);
         public SelectedArchetypeChangedListener SelectedArcheTypeChanged;
 
-        private EventHandler ExtraChoiceEventHandler = null;
+        public delegate void ExtraChoiceEventHandler(PlayerCharacter c);
+        private ExtraChoiceEventHandler ExtraChoiceClicked = null;
 
         public UserControlClassFeature()
         {
@@ -89,13 +92,13 @@ namespace CharacterManager.CharacterCreator
 
                 /* For a single choice ability, we might still have some extra choices that need to be made. */
                 string btnText;
-                System.EventHandler eventHandler;
+                ExtraChoiceEventHandler eventHandler;
 
                 if (selectedAbility.ExtraChoiceOptions(out btnText, out eventHandler) == true)
                 {
                     this.buttonExtraChoices.Text = btnText;
                     this.buttonExtraChoices.Visible = true;
-                    this.ExtraChoiceEventHandler = eventHandler;
+                    this.ExtraChoiceClicked = eventHandler;
                 }
                 else
                 {
@@ -130,9 +133,9 @@ namespace CharacterManager.CharacterCreator
         private void buttonExtraChoices_Click(object sender, EventArgs e)
         {
             /* Placeholder. This should be replaced if the button is actually used. */
-            if(this.ExtraChoiceEventHandler != null)
+            if(this.ExtraChoiceClicked != null)
             {
-                ExtraChoiceEventHandler.Invoke(sender, e);
+                ExtraChoiceClicked.Invoke(Character);
             }
         }
     }

@@ -32,6 +32,7 @@ namespace CharacterManager.UserControls.Levelup
             this.panel1 = new System.Windows.Forms.Panel();
             this.userControlManeuverChoiceAvailableManeuvers = new CharacterManager.UserControls.ChoiceList.UserControlManeuverChoice();
             this.userControlManeuverChoiceChosenManeuvers = new CharacterManager.UserControls.ChoiceList.UserControlManeuverChoice();
+            this.buttonOk = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@ namespace CharacterManager.UserControls.Levelup
             // 
             this.userControlManeuverChoiceAvailableManeuvers.IsAvailabilityCount = true;
             this.userControlManeuverChoiceAvailableManeuvers.IsBorder = true;
-            this.userControlManeuverChoiceAvailableManeuvers.IsCheckBoxed = false;
+            this.userControlManeuverChoiceAvailableManeuvers.IsCheckBoxed = true;
             this.userControlManeuverChoiceAvailableManeuvers.Location = new System.Drawing.Point(3, 3);
             this.userControlManeuverChoiceAvailableManeuvers.MaximumAvailableChoices = 0;
             this.userControlManeuverChoiceAvailableManeuvers.Name = "userControlManeuverChoiceAvailableManeuvers";
@@ -70,11 +71,23 @@ namespace CharacterManager.UserControls.Levelup
             this.userControlManeuverChoiceChosenManeuvers.TabIndex = 0;
             this.userControlManeuverChoiceChosenManeuvers.TitleString = "Chosen Maneuvers";
             // 
+            // buttonOk
+            // 
+            this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonOk.Location = new System.Drawing.Point(12, 521);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(75, 34);
+            this.buttonOk.TabIndex = 3;
+            this.buttonOk.Text = "OK";
+            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
+            // 
             // FormChooseCombatManeuvers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 521);
+            this.ClientSize = new System.Drawing.Size(645, 567);
+            this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.userControlManeuverChoiceChosenManeuvers);
             this.Name = "FormChooseCombatManeuvers";
@@ -89,5 +102,6 @@ namespace CharacterManager.UserControls.Levelup
         private ChoiceList.UserControlManeuverChoice userControlManeuverChoiceChosenManeuvers;
         private ChoiceList.UserControlManeuverChoice userControlManeuverChoiceAvailableManeuvers;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonOk;
     }
 }

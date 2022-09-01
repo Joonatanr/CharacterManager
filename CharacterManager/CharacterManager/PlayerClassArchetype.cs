@@ -10,8 +10,6 @@ namespace CharacterManager
     [Serializable]
     public class PlayerClassArchetype : PlayerAbility
     {
-        public string ArcheTypeName;
-
         public List<PlayerClassAbilityChoice> AvailableAbilitiesAtLevel1 = new List<PlayerClassAbilityChoice>();
         public List<PlayerClassAbilityChoice> AvailableAbilitiesAtLevel2 = new List<PlayerClassAbilityChoice>();
         public List<PlayerClassAbilityChoice> AvailableAbilitiesAtLevel3 = new List<PlayerClassAbilityChoice>();
@@ -40,6 +38,13 @@ namespace CharacterManager
         public override string DisplayedName
         {
             get { return ArcheTypeName;  }
+        }
+
+        [XmlIgnore]
+        public string ArcheTypeName
+        {
+            get { return this.AttributeName;    }
+            set { this.AttributeName = value;   }
         }
 
         public List<PlayerClassAbilityChoice> getAbilityChoicesByLevel(int level)

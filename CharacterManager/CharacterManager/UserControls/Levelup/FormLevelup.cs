@@ -144,7 +144,7 @@ namespace CharacterManager.UserControls
              Perhaps in this case, we should simply add the new abilities anyway. */
             
             FormChooseClassFeatures myForm = new FormChooseClassFeatures();
-            myForm.setSelectedClassAndLevel(_myCharacter.GetPlayerClass(), _myCharacter.Level);
+            myForm.setPlayerCharacter(_myCharacter);
 
             myForm.ShowDialog();
             if(myForm.DialogResult == DialogResult.OK)
