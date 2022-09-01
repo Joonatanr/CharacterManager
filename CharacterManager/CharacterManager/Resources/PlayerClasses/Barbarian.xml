@@ -319,4 +319,21 @@ you must finish a long rest before you can rage again.</Description>
       </AvailableChoices>
     </PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel1>
+  
+  	<!-- Level 2 -->
+	<AvailableClassAbilitiesLevel2>
+		
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Reckless Attack</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+		
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Danger Sense</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+		
+	</AvailableClassAbilitiesLevel2>
 </PlayerClass>
