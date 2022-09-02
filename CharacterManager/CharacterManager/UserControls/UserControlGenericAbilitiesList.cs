@@ -14,17 +14,28 @@ namespace CharacterManager.UserControls
     {
         private class AttributeControlData
         {
-            public PlayerAbility Attribute;
+            private PlayerAbility _myAttribute;
+            
+            public PlayerAbility Attribute
+            {
+                get
+                {
+                    return _myAttribute;
+                }
+
+                set
+                {
+                    _myAttribute = value;
+                    _myAttribute.RemainingChargesChanged += new PlayerAbility.PlayerAbilityValueChanged(HandleRemainingChargesChanged);
+                    _myAttribute.IsActiveChanged += new PlayerAbility.PlayerAbilityIsActiveChanged(handleAbilityActiveChanged);
+                }
+            }
             public InfoButton ButtonInfo;
             public CustomButton UseButton;
-
-            public delegate Boolean UseAbilityButtonHandler(PlayerAbility ability);
-            public UseAbilityButtonHandler UseAbilityButtonClicked;
 
             public delegate void ChangeAbilityChargesManuallyHandler(PlayerAbility ability, int numberOfActiveButtons);
             public ChangeAbilityChargesManuallyHandler changeAbilityChargesManually;
 
-            /* TODO */
             public UserControlSpellSlotIndicator [] slotArray;
 
             private int numberOfSpellSlots;
@@ -32,7 +43,6 @@ namespace CharacterManager.UserControls
             public AttributeControlData(PlayerAbility _attribute)
             {
                 Attribute = _attribute;
-                _attribute.RemainingChargesChanged += new PlayerAbility.PlayerAbilityValueChanged(HandleRemainingChargesChanged);
             }
 
             public void setUseButton(CustomButton btn)
@@ -126,37 +136,36 @@ namespace CharacterManager.UserControls
 
             private void Use_Click(object sender, EventArgs e)
             {
-                if (Attribute.RemainingCharges > 0 ||(Attribute.IsToggle && Attribute.IsActive))
+                if (Attribute.RemainingCharges > 0 || (Attribute.IsToggle && Attribute.IsActive))
                 {
-                    if (UseAbilityButtonClicked != null)
-                    {
-                        if (UseAbilityButtonClicked.Invoke(Attribute))
-                        {
-                            if (Attribute.IsToggle)
-                            {
-                                if (Attribute.IsActive)
-                                {
-                                    this.UseButton.ButtonText = "Disable";
-                                    Attribute.RemainingCharges--;
-                                    setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
-                                }
-                                else
-                                {
-                                    this.UseButton.ButtonText = "Activate";
-                                }
-                                UseButton.Parent.Invalidate();
-                            }
-                            else
-                            {
-                                Attribute.RemainingCharges--;
-                                setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
-                            }
-                        }
-                    }
+                    Attribute.UseAbility();    
                 }
                 else
                 {
                     MessageBox.Show("No uses of ability remaining");
+                }
+            }
+
+            private void handleAbilityActiveChanged(bool isActive)
+            {
+                if (Attribute.IsToggle)
+                {
+                    if (Attribute.IsActive)
+                    {
+                        this.UseButton.ButtonText = "Disable";
+                        Attribute.RemainingCharges--;
+                        //setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+                    }
+                    else
+                    {
+                        this.UseButton.ButtonText = "Activate";
+                    }
+                    UseButton.Parent.Invalidate();
+                }
+                else
+                {
+                    Attribute.RemainingCharges--;
+                    //setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
                 }
             }
         }
@@ -231,7 +240,6 @@ namespace CharacterManager.UserControls
                         AddButtonOnLine(useButton, y, myBtn.Width + 1);
 
                         cData.setUseButton(useButton);
-                        cData.UseAbilityButtonClicked = handleUseAbilityButton;
                         cData.changeAbilityChargesManually = SpellSlotIndicatorChangedManuallyHandler;
 
                         UserControlSpellSlotIndicator [] arr = new UserControlSpellSlotIndicator[attrib.MaximumCharges];
@@ -253,11 +261,6 @@ namespace CharacterManager.UserControls
             }
 
             this.Invalidate();
-        }
-
-        private Boolean handleUseAbilityButton(PlayerAbility ability)
-        {
-            return ability.UseAbility();
         }
 
         private void SpellSlotIndicatorChangedManuallyHandler(PlayerAbility ability, int cnt)

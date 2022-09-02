@@ -49,6 +49,12 @@ namespace CharacterManager
             set
             {
                 bool isChanged = false;
+
+                if (value < 0)
+                {
+                    value = 0;
+                }
+
                 if(value != _remainingCharges)
                 {
                     isChanged = true;
@@ -62,8 +68,27 @@ namespace CharacterManager
             }
         }
 
+        private Boolean _isActive = false;
         [XmlIgnore]
-        public Boolean IsActive { get; set; } = false;
+        public Boolean IsActive
+        {
+            get
+            {
+                return _isActive;
+            }
+
+            set
+            {
+                if (_isActive != value)
+                {
+                    _isActive = value;
+                    if (IsActiveChanged != null)
+                    {
+                        IsActiveChanged.Invoke(_isActive);
+                    }
+                }
+            }
+        }
 
         [XmlIgnore]
         public DieRollEquation DiceObject
@@ -81,10 +106,12 @@ namespace CharacterManager
 
         /* TODO : We really need to get started with this. */
         public delegate void PlayerAbilityValueChanged(int value);
+        public delegate void PlayerAbilityIsActiveChanged(bool isActive);
 
         public event PlayerAbilityValueChanged MaximumChargesChanged;
         public event PlayerAbilityValueChanged RemainingChargesChanged;
 
+        public event PlayerAbilityIsActiveChanged IsActiveChanged;
 
         [XmlIgnore]
         protected PlayerCharacter _connectedCharacter;
