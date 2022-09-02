@@ -36,6 +36,9 @@ namespace CharacterManager.UserControls
             public delegate void ChangeAbilityChargesManuallyHandler(PlayerAbility ability, int numberOfActiveButtons);
             public ChangeAbilityChargesManuallyHandler changeAbilityChargesManually;
 
+            public delegate void DisplayDataChangedHandler();
+            public DisplayDataChangedHandler DisplayDataChanged;
+
             public UserControlSpellSlotIndicator [] slotArray;
 
             private int numberOfSpellSlots;
@@ -154,18 +157,21 @@ namespace CharacterManager.UserControls
                     {
                         this.UseButton.ButtonText = "Disable";
                         Attribute.RemainingCharges--;
-                        //setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
                     }
                     else
                     {
                         this.UseButton.ButtonText = "Activate";
                     }
-                    UseButton.Parent.Invalidate();
+                    
+                    if(DisplayDataChanged != null)
+                    {
+                        DisplayDataChanged.Invoke();
+                    }
+                    //UseButton.Parent.Invalidate();
                 }
                 else
                 {
                     Attribute.RemainingCharges--;
-                    //setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
                 }
             }
         }
@@ -241,6 +247,7 @@ namespace CharacterManager.UserControls
 
                         cData.setUseButton(useButton);
                         cData.changeAbilityChargesManually = SpellSlotIndicatorChangedManuallyHandler;
+                        cData.DisplayDataChanged = new AttributeControlData.DisplayDataChangedHandler(handleDisplayDataChanged);
 
                         UserControlSpellSlotIndicator [] arr = new UserControlSpellSlotIndicator[attrib.MaximumCharges];
 
@@ -260,6 +267,11 @@ namespace CharacterManager.UserControls
                 y++;
             }
 
+            this.Invalidate();
+        }
+
+        private void handleDisplayDataChanged()
+        {
             this.Invalidate();
         }
 
