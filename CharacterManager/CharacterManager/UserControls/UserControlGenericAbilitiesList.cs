@@ -197,15 +197,10 @@ namespace CharacterManager.UserControls
             }
 
 
-            //Lets test adding a button for reach of the attributes.
             int y = 1;
             foreach (PlayerAbility attrib in listOfAttributes)
             {
                 AttributeControlData cData = new AttributeControlData(attrib);
-                
-
-                /***YOLO****/
-
 
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), new EventHandler(attrib.HandleInfoButtonClicked));
                 myBtn.Width = 35;
