@@ -180,6 +180,7 @@ namespace SpellEditor
             checkBoxVerbalComponent.Checked = spell.IsVerbalComponent;
             checkBoxSomaticComponent.Checked = spell.IsSomaticComponent;
             checkBoxMaterialComponent.Checked = spell.IsMaterialComponent;
+            checkBoxDurationUntilDispelled.Checked = spell.IsUntilDispelled;
 
             if (spell.IsMaterialComponent)
             {
@@ -503,6 +504,18 @@ namespace SpellEditor
             }
         }
 
+        private void checkBoxDurationUntilDispelled_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                if (selectedSpell.IsUntilDispelled != checkBoxDurationUntilDispelled.Checked)
+                {
+                    selectedSpell.IsUntilDispelled = checkBoxDurationUntilDispelled.Checked;
+                    setSpellDataAsModified();
+                }
+            }
+        }
+
         private void textBoxMaterialComponent_TextChanged(object sender, EventArgs e)
         {
             if (this.selectedSpell != null)
@@ -593,5 +606,7 @@ namespace SpellEditor
                 card.ShowDialog();
             }
         }
+
+
     }
 }

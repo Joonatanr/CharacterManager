@@ -61,6 +61,7 @@ namespace CharacterManager.Spells
         public int SpellLevel;
         public int SpellRange;
         public int SpellDuration; /* In turns, 0 means instantaneous effect. */
+        public bool IsUntilDispelled = false;
         public int AoeSize = 0;
         public AreaOfEffectType AoeType = AreaOfEffectType.AOE_TYPE_NONE;
         public SpellRangeType RangeType = SpellRangeType.RANGE_TYPE_NONE;

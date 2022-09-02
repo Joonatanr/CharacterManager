@@ -78,6 +78,7 @@ namespace SpellEditor
             this.textBoxSpellName = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.checkBoxDurationUntilDispelled = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
@@ -383,6 +384,7 @@ namespace SpellEditor
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.checkBoxDurationUntilDispelled);
             this.groupBox4.Controls.Add(this.checkBoxRitual);
             this.groupBox4.Controls.Add(this.checkBoxConcentration);
             this.groupBox4.Controls.Add(this.numericUpDownCastingTime);
@@ -399,7 +401,7 @@ namespace SpellEditor
             // checkBoxRitual
             // 
             this.checkBoxRitual.AutoSize = true;
-            this.checkBoxRitual.Location = new System.Drawing.Point(199, 80);
+            this.checkBoxRitual.Location = new System.Drawing.Point(199, 75);
             this.checkBoxRitual.Name = "checkBoxRitual";
             this.checkBoxRitual.Size = new System.Drawing.Size(56, 19);
             this.checkBoxRitual.TabIndex = 20;
@@ -410,7 +412,7 @@ namespace SpellEditor
             // checkBoxConcentration
             // 
             this.checkBoxConcentration.AutoSize = true;
-            this.checkBoxConcentration.Location = new System.Drawing.Point(12, 80);
+            this.checkBoxConcentration.Location = new System.Drawing.Point(12, 75);
             this.checkBoxConcentration.Name = "checkBoxConcentration";
             this.checkBoxConcentration.Size = new System.Drawing.Size(102, 19);
             this.checkBoxConcentration.TabIndex = 19;
@@ -662,6 +664,17 @@ namespace SpellEditor
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // checkBoxDurationUntilDispelled
+            // 
+            this.checkBoxDurationUntilDispelled.AutoSize = true;
+            this.checkBoxDurationUntilDispelled.Location = new System.Drawing.Point(12, 94);
+            this.checkBoxDurationUntilDispelled.Name = "checkBoxDurationUntilDispelled";
+            this.checkBoxDurationUntilDispelled.Size = new System.Drawing.Size(151, 19);
+            this.checkBoxDurationUntilDispelled.TabIndex = 24;
+            this.checkBoxDurationUntilDispelled.Text = "Duration Until Dispelled";
+            this.checkBoxDurationUntilDispelled.UseVisualStyleBackColor = true;
+            this.checkBoxDurationUntilDispelled.CheckedChanged += new System.EventHandler(this.checkBoxDurationUntilDispelled_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -750,6 +763,7 @@ namespace SpellEditor
         private System.Windows.Forms.NumericUpDown numericUpDownCastingTime;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.CheckBox checkBoxDurationUntilDispelled;
     }
 }
 

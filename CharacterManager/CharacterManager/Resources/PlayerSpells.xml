@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfPlayerSpell xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <PlayerSpell>
-    <SpellName>Acid Splash</SpellName>
     <Description>You hurl a bubble of acid. Choose one creature within
 range, or choose two creatures within range that are
 within 5 feet of each other. A target must succeed on a
 Dexterity saving throw or take 1d6 acid damage.
 This spell’s damage increases by 1d6 when you reach
 5th level (2d6), 11th level (3d6), and 17th level (4d6).</Description>
+    <ItemName>Acid Splash</ItemName>
+    <SpellName>Acid Splash</SpellName>
     <School>Conjuration</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -26,17 +28,19 @@ This spell’s damage increases by 1d6 when you reach
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Aid</SpellName>
     <Description>Your spell bolsters your allies with toughness and
 resolve. Choose up to three creatures within range.
 Each target’s hit point maximum and current hit points
 increase by 5 for the duration.</Description>
+    <ItemName>Aid</ItemName>
+    <SpellName>Aid</SpellName>
     <AtHigherLevels>When you cast this spell using a spell slot of 3rd level or higher, a target’s hit points
 increase by an additional 5 for each slot level above 2nd.</AtHigherLevels>
     <School>Abjuration</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -51,7 +55,6 @@ increase by an additional 5 for each slot level above 2nd.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Alarm</SpellName>
     <Description>You set an alarm against unwanted intrusion. Choose
 a door, a window, or an area within range that is no
 larger than a 20-foot cube. Until the spell ends, an alarm
@@ -63,10 +66,13 @@ A mental alarm alerts you with a ping in your mind
 if you are within 1 mile of the warded area. This ping
 awakens you if you are sleeping. An audible alarm produces 
 the sound of a hand bell for 10 seconds within 60 feet.</Description>
+    <ItemName>Alarm</ItemName>
+    <SpellName>Alarm</SpellName>
     <School>Abjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -81,7 +87,6 @@ the sound of a hand bell for 10 seconds within 60 feet.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Alter Self</SpellName>
     <Description>You assume a different form. When you cast the spell,
 choose one of the following options, the effects of which
 last for the duration of the spell. 
@@ -116,10 +121,13 @@ you chose, and you are proficient with your unarmed
 strikes. Finally, the natural weapon is magic and you
 have a +1 bonus to the attack and damage rolls you
 make using it.</Description>
+    <ItemName>Alter Self</ItemName>
+    <SpellName>Alter Self</SpellName>
     <School>Transmutation</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -134,7 +142,6 @@ make using it.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Animal Friendship</SpellName>
     <Description>This spell lets you convince a beast that you mean it no
 harm. Choose a beast that you can see within range.
 It must see and hear you. If the beast’s Intelligence is
@@ -142,6 +149,8 @@ It must see and hear you. If the beast’s Intelligence is
 succeed on a W isdom saving throw or be charmed
 by you for the spell’s duration. If you or one of your
 companions harms the target, the spells ends.</Description>
+    <ItemName>Animal Friendship</ItemName>
+    <SpellName>Animal Friendship</SpellName>
     <AtHigherLevels>When you cast this spell using
 a spell slot o f 2nd level or higher, you can affect one
 additional beast for each slot level above 1st.</AtHigherLevels>
@@ -149,6 +158,7 @@ additional beast for each slot level above 1st.</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -163,7 +173,6 @@ additional beast for each slot level above 1st.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Animal Messenger</SpellName>
     <Description>By means of this spell, you use an animal to deliver a
 message. Choose a Tiny beast you can see within range,
 such as a squirrel, a blue jay, or a bat. You specify a
@@ -183,6 +192,8 @@ matching the description you gave. If the messenger
 doesn’t reach its destination before the spell ends, the
 message is lost, and the beast makes its way back to
 where you cast this spell.</Description>
+    <ItemName>Animal Messenger</ItemName>
+    <SpellName>Animal Messenger</SpellName>
     <AtHigherLevels>If you cast this spell using a spell
 slot of 3nd level or higher, the duration of the spell
 increases by 48 hours for each slot level above 2nd.</AtHigherLevels>
@@ -190,6 +201,7 @@ increases by 48 hours for each slot level above 2nd.</AtHigherLevels>
     <SpellLevel>2</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -204,7 +216,6 @@ increases by 48 hours for each slot level above 2nd.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Animal Shapes</SpellName>
     <Description>Your magic turns others into beasts. Choose any
 number of willing creatures that you can see within
 range. You transform each target into the form of a
@@ -233,11 +244,14 @@ new form, and it can’t speak or cast spells.
 
 The target’s gear melds into the new form. The target
 can’t activate, wield, or otherwise benefit from any of its equipment.</Description>
+    <ItemName>Animal Shapes</ItemName>
+    <SpellName>Animal Shapes</SpellName>
     <AtHigherLevels />
     <School>Transmutation</School>
     <SpellLevel>8</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -252,7 +266,6 @@ can’t activate, wield, or otherwise benefit from any of its equipment.</Descri
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Animate Dead</SpellName>
     <Description>This spell creates an undead servant. Choose a pile
 of bones or a corpse o f a Medium or Small humanoid
 within range. Your spell imbues the target with a foul
@@ -282,6 +295,8 @@ again before the current 24-hour period ends. This
 use of the spell reasserts your control over up to four
 creatures you have animated with this spell, rather than
 animating a new one.</Description>
+    <ItemName>Animate Dead</ItemName>
+    <SpellName>Animate Dead</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 4th level or higher, you animate or reassert
 control over two additional undead creatures for each
@@ -291,6 +306,7 @@ from a different corpse or pile of bones.</AtHigherLevels>
     <SpellLevel>3</SpellLevel>
     <SpellRange>10</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -305,7 +321,6 @@ from a different corpse or pile of bones.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Animate Objects</SpellName>
     <Description>Objects come to life at your command. Choose up to
 ten nonmagical objects within range that are not being
 worn or carried. Medium targets count as two objects,
@@ -356,6 +371,8 @@ of it. It makes a slam attack with an attack bonus and
 bludgeoning damage determined by its size. The DM
 might rule that a specific object inflicts slashing or
 piercing damage based on its form.</Description>
+    <ItemName>Animate Objects</ItemName>
+    <SpellName>Animate Objects</SpellName>
     <AtHigherLevels>If you cast this spell using a spell slot of 
 6th level or higher, you can animate two
 additional objects for each slot level above 5th.</AtHigherLevels>
@@ -363,6 +380,7 @@ additional objects for each slot level above 5th.</AtHigherLevels>
     <SpellLevel>5</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -377,7 +395,6 @@ additional objects for each slot level above 5th.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Antilife Shell</SpellName>
     <Description>A shimmering barrier extends out from you in a 10-foot
 radius and moves with you, remaining centered on
 you and hedging out creatures other than undead and
@@ -389,11 +406,14 @@ weapons through the barrier.
 
 If you move so that an affected creature is forced to
 pass through the barrier, the spell ends.</Description>
+    <ItemName>Antilife Shell</ItemName>
+    <SpellName>Antilife Shell</SpellName>
     <AtHigherLevels />
     <School>Abjuration</School>
     <SpellLevel>5</SpellLevel>
     <SpellRange>10</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -408,7 +428,6 @@ pass through the barrier, the spell ends.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Antimagic Field</SpellName>
     <Description>A 10-foot-radius invisible sphere o f antimagic surrounds
 you. This area is divorced from the magical energy that
 suffuses the multiverse. Within the sphere, spells can’t
@@ -469,10 +488,13 @@ Dispel Magic. Spells and magical effects such as
 dispel magic have no effect on the sphere. Likewise, the
 spheres created by different antimagic field spells don’t
 nullify each other.</Description>
+    <ItemName>Antimagic Field</ItemName>
+    <SpellName>Antimagic Field</SpellName>
     <School>Abjuration</School>
     <SpellLevel>8</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>10</AoeSize>
     <AoeType>AOE_TYPE_SPHERE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -487,7 +509,6 @@ nullify each other.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Antipathy/Sympathy</SpellName>
     <Description>This spell attracts or repels creatures of your choice.
 You target something within range, either a Huge or
 smaller object or creature or an area that is no larger
@@ -534,10 +555,13 @@ the spell is allowed another Wisdom saving throw every
 A creature that successfully saves against this effect
 is immune to it for 1 minute, after which time it can be
 affected again.</Description>
+    <ItemName>Antipathy/Sympathy</ItemName>
+    <SpellName>Antipathy/Sympathy</SpellName>
     <School>Enchantment</School>
     <SpellLevel>8</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>144000</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -552,7 +576,6 @@ affected again.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Arcane Eye</SpellName>
     <Description>You create an invisible, magical eye within range that
 hovers in the air for the duration.
 You mentally receive visual information from the eye,
@@ -565,10 +588,13 @@ you the eye can move, but it can’t enter another plane
 of existence. A solid barrier blocks the eye’s movement,
 but the eye can pass through an opening as small as 1
 inch in diameter.</Description>
+    <ItemName>Arcane Eye</ItemName>
+    <SpellName>Arcane Eye</SpellName>
     <School>Divination</School>
     <SpellLevel>4</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -583,7 +609,6 @@ inch in diameter.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Arcane Gate</SpellName>
     <Description>You create linked teleportation portals that remain open
 for the duration. Choose two points on the ground that
 you can see, one point within 10 feet of you and one
@@ -605,10 +630,13 @@ has no effect. The mist that fills each portal is opaque
 and blocks vision through it. On your turn, you can
 rotate the rings as a bonus action so that the active side
 faces in a different direction.</Description>
+    <ItemName>Arcane Gate</ItemName>
+    <SpellName>Arcane Gate</SpellName>
     <School>Conjuration</School>
     <SpellLevel>6</SpellLevel>
     <SpellRange>500</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -623,7 +651,6 @@ faces in a different direction.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Arcane Lock</SpellName>
     <Description>You touch a closed door, window, gate, chest, or other
 entryway, and it becomes locked for the duration. You
 and the creatures you designate when you cast this
@@ -637,10 +664,13 @@ arcane lock for 10 minutes.
 While affected by this spell, the object is more difficult
 to break or force open; the DC to break it or pick any
 locks on it increases by 10.</Description>
+    <ItemName>Arcane Lock</ItemName>
+    <SpellName>Arcane Lock</SpellName>
     <School>Abjuration</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -655,12 +685,13 @@ locks on it increases by 10.</Description>
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Armor of Agathys</SpellName>
     <Description>A protective magical force surrounds you, manifesting
 as a spectral frost that covers you and your gear.
 You gain 5 temporary hit points for the duration. If a
 creature hits you with a melee attack while you have
 these hit points, the creature takes 5 cold damage.</Description>
+    <ItemName>Armor of Agathys</ItemName>
+    <SpellName>Armor of Agathys</SpellName>
     <AtHigherLevels>When you cast this spell using a spell slot o f 2nd level or higher, 
 both the temporary hit points and the cold damage increase by 
 5 for each slot level above 1st.</AtHigherLevels>
@@ -668,6 +699,7 @@ both the temporary hit points and the cold damage increase by
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -682,7 +714,6 @@ both the temporary hit points and the cold damage increase by
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Arms of Hadar</SpellName>
     <Description>You invoke the power of Hadar, the Dark Hunger.
 Tendrils of dark energy erupt from you and batter all
 creatures within 10 feet of you. Each creature in that
@@ -690,6 +721,8 @@ area must m ake a Strength saving throw. On a failed
 save, a target takes 2d6 necrotic damage and can’t take
 reactions until its next turn. On a successful save, the
 creature takes half damage, but suffers no other effect.</Description>
+    <ItemName>Arms of Hadar</ItemName>
+    <SpellName>Arms of Hadar</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the damage increases by
 1d6 for each slot level above 1st.</AtHigherLevels>
@@ -697,6 +730,7 @@ spell slot of 2nd level or higher, the damage increases by
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>10</AoeSize>
     <AoeType>AOE_TYPE_SPHERE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -711,7 +745,6 @@ spell slot of 2nd level or higher, the damage increases by
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Astral Projection</SpellName>
     <Description>You and up to eight willing creatures within range
 project your astral bodies into the Astral Plane (the
 spell fails and the casting is wasted if you are already
@@ -756,11 +789,14 @@ If you are returned to your body prematurely, your
 companions remain in their astral forms and must find
 their own way back to their bodies, usually by dropping
 to 0 hit points.</Description>
+    <ItemName>Astral Projection</ItemName>
+    <SpellName>Astral Projection</SpellName>
     <AtHigherLevels />
     <School>Necromancy</School>
     <SpellLevel>9</SpellLevel>
     <SpellRange>10</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -775,7 +811,6 @@ to 0 hit points.</Description>
     <MaterialCost>1100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Augury</SpellName>
     <Description>By casting gem-inlaid sticks, rolling dragon bones,
 laying out ornate cards, or employing some other
 divining tool, you receive an omen from an otherworldly
@@ -797,10 +832,13 @@ If you cast the spell two or more times before
 completing your next long rest, there is a cumulative 25
 percent chance for each casting after the first that you
 get a random reading. The DM makes this roll in secret.</Description>
+    <ItemName>Augury</ItemName>
+    <SpellName>Augury</SpellName>
     <School>Divination</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -815,7 +853,6 @@ get a random reading. The DM makes this roll in secret.</Description>
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Aura Of Life</SpellName>
     <Description>Life-preserving energy radiates from you in an aura with
 a 30-foot radius. Until the spell ends, the aura moves
 with you, centered on you. Each nonhostile creature
@@ -823,10 +860,13 @@ in the aura (including you) has resistance to necrotic
 damage, and its hit point maximum can't be reduced. In
 addition, a nonhostile, living creature regains 1 hit point
 when it starts its turn in the aura with 0 hit points.</Description>
+    <ItemName>Aura Of Life</ItemName>
+    <SpellName>Aura Of Life</SpellName>
     <School>Abjuration</School>
     <SpellLevel>4</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>30</AoeSize>
     <AoeType>AOE_TYPE_SPHERE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -841,7 +881,6 @@ when it starts its turn in the aura with 0 hit points.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Aura Of Purity</SpellName>
     <Description>Purifying energy radiates from you in an aura with a
 30-foot radius. Until the spell ends, the aura moves
 with you, centered on you. Each nonhostile creature
@@ -850,11 +889,14 @@ has resistance to poison damage, and has advantage
 on saving throws against effects that cause any of the
 following conditions: blinded, charmed, deafened,
 frightened, paralyzed, poisoned, and stunned.</Description>
+    <ItemName>Aura Of Purity</ItemName>
+    <SpellName>Aura Of Purity</SpellName>
     <AtHigherLevels />
     <School>Abjuration</School>
     <SpellLevel>4</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>30</AoeSize>
     <AoeType>AOE_TYPE_SPHERE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -869,16 +911,18 @@ frightened, paralyzed, poisoned, and stunned.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Aura Of Vitality</SpellName>
     <Description>Healing energy radiates from you in an aura with a
 30-foot radius. Until the spell ends, the aura moves with
 you, centered on you. You can use a bonus action to
 cause one creature in the aura (including you) to regain
 2d6 hit points.</Description>
+    <ItemName>Aura Of Vitality</ItemName>
+    <SpellName>Aura Of Vitality</SpellName>
     <School>Evocation</School>
     <SpellLevel>3</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>30</AoeSize>
     <AoeType>AOE_TYPE_SPHERE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -893,7 +937,6 @@ cause one creature in the aura (including you) to regain
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Awaken</SpellName>
     <Description>After spending the casting time tracing magical
 pathways within a precious gemstone, you touch a Huge
 or smaller beast or plant. The target must have either
@@ -912,10 +955,13 @@ harmful to it. When the charmed condition ends,
 the awakened creature chooses whether to remain
 friendly to you, based on how you treated it while
 it w as charmed.</Description>
+    <ItemName>Awaken</ItemName>
+    <SpellName>Awaken</SpellName>
     <School>Transmutation</School>
     <SpellLevel>5</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -930,13 +976,14 @@ it w as charmed.</Description>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Bane</SpellName>
     <Description>Up to three creatures o f your choice that you can see
 within range must make Charisma saving throws.
 Whenever a target that fails this saving throw makes
 an attack roll or a saving throw before the spell ends,
 the target must roll a d4 and subtract the number rolled
 from the attack roll or saving throw.</Description>
+    <ItemName>Bane</ItemName>
+    <SpellName>Bane</SpellName>
     <AtHigherLevels>When you cast this spell using
 a spell slot of 2nd level or higher, you can target one
 additional creature for each slot level above 1st.</AtHigherLevels>
@@ -944,6 +991,7 @@ additional creature for each slot level above 1st.</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -958,7 +1006,6 @@ additional creature for each slot level above 1st.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Banishing Smite</SpellName>
     <Description>The next time you hit a creature with a weapon attack
 before this spell ends, your weapon crackles with force,
 and the attack deals an extra 5d10 force damage to the
@@ -972,11 +1019,14 @@ there, the target is incapacitated. It remains there until
 the spell ends, at which point the target reappears in the
 space it left or in the nearest unoccupied space if that
 space is occupied.</Description>
+    <ItemName>Banishing Smite</ItemName>
+    <SpellName>Banishing Smite</SpellName>
     <AtHigherLevels />
     <School>Abjuration</School>
     <SpellLevel>5</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -991,7 +1041,6 @@ space is occupied.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Banishment</SpellName>
     <Description>You attempt to send one creature that you can see
 within range to another plane of existence. The
 target must succeed on a Charisma saving throw
@@ -1010,6 +1059,8 @@ If the spell ends before 1 minute has passed, the
 target reappears in the space it left or in the nearest
 unoccupied space if that space is occupied. Otherwise,
 the target doesn't return.</Description>
+    <ItemName>Banishment</ItemName>
+    <SpellName>Banishment</SpellName>
     <AtHigherLevels>When you cast this spell using
 a spell slot of 5th level or higher, you can target one
 additional creature for each slot level above 4th.</AtHigherLevels>
@@ -1017,6 +1068,7 @@ additional creature for each slot level above 4th.</AtHigherLevels>
     <SpellLevel>4</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1031,16 +1083,18 @@ additional creature for each slot level above 4th.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Barkskin</SpellName>
     <Description>You touch a w illing creature. Until the spell ends, the
 target’s skin has a rough, bark-like appearance, and the
 target’s AC can’t be less than 16, regardless of what kind
 of armor it is wearing.</Description>
+    <ItemName>Barkskin</ItemName>
+    <SpellName>Barkskin</SpellName>
     <AtHigherLevels />
     <School>Transmutation</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -1055,16 +1109,18 @@ of armor it is wearing.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Beacon Of Hope</SpellName>
     <Description>This spell bestows hope and vitality. Choose any
 number of creatures within range. For the duration,
 each target has advantage on Wisdom saving throws
 and death saving throws, and regains the maximum
 number of hit points possible from any healing.</Description>
+    <ItemName>Beacon Of Hope</ItemName>
+    <SpellName>Beacon Of Hope</SpellName>
     <School>Abjuration</School>
     <SpellLevel>3</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1079,7 +1135,6 @@ number of hit points possible from any healing.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Beast Sense</SpellName>
     <Description>You touch a willing beast. For the duration o f the spell,
 you can use your action to see through the beast’s eyes
 and hear what it hears, and continue to do so until
@@ -1089,10 +1144,13 @@ While perceiving through the beast’s senses, you gain
 the benefits of any special senses possessed by that
 creature, though you are blinded and deafened to your
 own surroundings.</Description>
+    <ItemName>Beast Sense</ItemName>
+    <SpellName>Beast Sense</SpellName>
     <School>Divination</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -1107,7 +1165,6 @@ own surroundings.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Bestow Curse</SpellName>
     <Description>You touch a creature, and that creature must succeed
 on a W isdom saving throw or become cursed for the
 duration o f the spell. When you cast this spell, choose
@@ -1131,6 +1188,8 @@ A remove curse spell ends this effect. At the DM’s
 option, you may choose an alternative curse effect, but
 it should be no more powerful than those described
 above. The DM has final say on such a curse’s effect.</Description>
+    <ItemName>Bestow Curse</ItemName>
+    <SpellName>Bestow Curse</SpellName>
     <AtHigherLevels>If you cast this spell using a spell slot of 4th level or higher, 
 the duration is concentration, up to 10 minutes. 
 If you use a spell slot of 5th level or higher, the duration is 8 hours. 
@@ -1142,6 +1201,7 @@ that doesn’t require concentration.</AtHigherLevels>
     <SpellLevel>3</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -1156,7 +1216,6 @@ that doesn’t require concentration.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Bigby's Hand</SpellName>
     <Description>You create a Large hand of shimmering, translucent force in an 
 unoccupied space that you can see within range. The hand lasts 
 for the spell’s duration, and it moves at your command, mimicking 
@@ -1205,6 +1264,8 @@ move toward you through the hand’s space, but that
 space is difficult terrain for the target.
 
 </Description>
+    <ItemName>Bigby's Hand</ItemName>
+    <SpellName>Bigby's Hand</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 6th level or higher, the damage from the
 clenched fist option increases by 2d8 and the damage
@@ -1214,6 +1275,7 @@ level above 5th.</AtHigherLevels>
     <SpellLevel>5</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1228,7 +1290,6 @@ level above 5th.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Blade Barrier</SpellName>
     <Description>You create a vertical wall of whirling, razor-sharp blades
 made of magical energy. The wall appears within range
 and lasts for the duration. You can make a straight wall
@@ -1243,11 +1304,14 @@ time on a turn or starts its turn there, the creature must
 make a Dexterity saving throw. On a failed save, the
 creature takes 6 d10 slashing damage. On a successful
 save, the creature takes half as much damage.</Description>
+    <ItemName>Blade Barrier</ItemName>
+    <SpellName>Blade Barrier</SpellName>
     <AtHigherLevels />
     <School>Evocation</School>
     <SpellLevel>6</SpellLevel>
     <SpellRange>90</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1262,15 +1326,17 @@ save, the creature takes half as much damage.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Blade Ward</SpellName>
     <Description>You extend your hand and trace a sigil of warding in the
 air. Until the end of your next turn, you have resistance
 against bludgeoning, piercing, and slashing damage
 dealt by weapon attacks.</Description>
+    <ItemName>Blade Ward</ItemName>
+    <SpellName>Blade Ward</SpellName>
     <School>Abjuration</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1285,12 +1351,13 @@ dealt by weapon attacks.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Bless</SpellName>
     <Description>You bless up to three creatures of your choice within
 range. Whenever a target makes an attack roll or a
 saving throw before the spell ends, the target can roll
 a d4 and add the number rolled to the attack roll or
 saving throw.</Description>
+    <ItemName>Bless</ItemName>
+    <SpellName>Bless</SpellName>
     <AtHigherLevels>When you cast this spell using a spell slot of 2nd 
 level or higher, you can target one additional 
 creature for each slot level above 1st.</AtHigherLevels>
@@ -1298,6 +1365,7 @@ creature for each slot level above 1st.</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1312,7 +1380,6 @@ creature for each slot level above 1st.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Blight</SpellName>
     <Description>Necromantic energy washes over a creature of your
 choice that you can see within range, draining moisture
 and vitality from it. The target must make a Constitution
@@ -1325,6 +1392,8 @@ deals maximum damage to it.
 If you target a nonmagical plant that isn’t a creature,
 such as a tree or shrub, it doesn’t make a saving throw;
 it simply withers and dies.</Description>
+    <ItemName>Blight</ItemName>
+    <SpellName>Blight</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot o f 5th level or higher, the damage increases by
 1d8 for each slot level above 4th.</AtHigherLevels>
@@ -1332,6 +1401,7 @@ spell slot o f 5th level or higher, the damage increases by
     <SpellLevel>4</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1346,7 +1416,6 @@ spell slot o f 5th level or higher, the damage increases by
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Blinding Smite</SpellName>
     <Description>The next time you hit a creature with a melee w eapon
 attack during this spell’s duration, your weapon flares
 with bright light, and the attack deals an extra 3d8
@@ -1357,11 +1426,14 @@ blinded until the spell ends.
 A creature blinded by this spell makes another
 Constitution saving throw at the end o f each o f its turns.
 On a successful save, it is no longer blinded.</Description>
+    <ItemName>Blinding Smite</ItemName>
+    <SpellName>Blinding Smite</SpellName>
     <AtHigherLevels />
     <School>Evocation</School>
     <SpellLevel>3</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1376,13 +1448,14 @@ On a successful save, it is no longer blinded.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Blindness/Deafness</SpellName>
     <Description>You can blind or deafen a foe. Choose one creature that
 you can see within range to make a Constitution saving
 throw. If it fails, the target is either blinded or deafened
 (your choice) for the duration. At the end of each of its
 turns, the target can make a Constitution saving throw.
 On a success, the spell ends.</Description>
+    <ItemName>Blindness/Deafness</ItemName>
+    <SpellName>Blindness/Deafness</SpellName>
     <AtHigherLevels>When you cast this spell using a spell slot o f 3rd level 
 or higher, you can target one additional creature for 
 each slot level above 2nd.</AtHigherLevels>
@@ -1390,6 +1463,7 @@ each slot level above 2nd.</AtHigherLevels>
     <SpellLevel>2</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1404,7 +1478,6 @@ each slot level above 2nd.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Blink</SpellName>
     <Description>Roll a d20 at the end of each o f your turns for the
 duration of the spell. On a roll o f 11 or higher, you
 vanish from your current plane of existence and appear
@@ -1425,11 +1498,14 @@ feet away. You can only affect and be affected by other
 creatures on the Ethereal Plane. Creatures that aren’t
 there can’t perceive you or interact with you, unless they
 have the ability to do so.</Description>
+    <ItemName>Blink</ItemName>
+    <SpellName>Blink</SpellName>
     <AtHigherLevels />
     <School>Transmutation</School>
     <SpellLevel>3</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1444,17 +1520,19 @@ have the ability to do so.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Blur</SpellName>
     <Description>Your body becomes blurred, shifting and wavering to
 all w ho can see you. For the duration, any creature has
 disadvantage on attack rolls against you. An attacker
 is immune to this effect if it doesn’t rely on sight,
 as with blindsight, or can see through illusions, as
 with truesight.</Description>
+    <ItemName>Blur</ItemName>
+    <SpellName>Blur</SpellName>
     <School>Illusion</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1469,7 +1547,6 @@ with truesight.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Branding Smite</SpellName>
     <Description>The next time you hit a creature with a weapon attack
 before this spell ends, the w eapon gleams with astral
 radiance as you strike. The attack deals an extra 2d6
@@ -1478,6 +1555,8 @@ it’s invisible, and the target sheds dim light in a 5-foot
 radius and can’t become invisible until the spell ends.
 
 </Description>
+    <ItemName>Branding Smite</ItemName>
+    <SpellName>Branding Smite</SpellName>
     <AtHigherLevels>When you cast this spell using a spell slot of 3rd level 
 or higher, the extra damage increases by 1d6 for 
 each slot level above 2nd.</AtHigherLevels>
@@ -1485,6 +1564,7 @@ each slot level above 2nd.</AtHigherLevels>
     <SpellLevel>2</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1499,19 +1579,21 @@ each slot level above 2nd.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Burning Hands</SpellName>
     <Description>As you hold your hands with thumbs touching and fingers spread, 
 a thin sheet of flames shoots forth from your outstretched fingertips. 
 Each creature in a 15-foot cone must make a Dexterity saving throw. 
 A creature takes 3d6 fire damage on a failed save, or half as much
 damage on a successful one. The fire ignites any flammable objects in 
 the area that aren’t being worn or carried.</Description>
+    <ItemName>Burning Hands</ItemName>
+    <SpellName>Burning Hands</SpellName>
     <AtHigherLevels>When you cast this spell using a spell slot of 2nd level or higher, 
 the damage increases by 1d6 for each slot level above 1st.</AtHigherLevels>
     <School>Evocation</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>15</AoeSize>
     <AoeType>AOE_TYPE_CONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1526,7 +1608,6 @@ the damage increases by 1d6 for each slot level above 1st.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Call Lightning</SpellName>
     <Description>A storm cloud appears in the shape of a cylinder that
 is 10 feet tall with a 60-foot radius, centered on a point
 you can see 100 feet directly above you. The spell fails
@@ -1548,6 +1629,8 @@ If you are outdoors in stormy conditions when you
 cast this spell, the spell gives you control over the
 existing storm instead of creating a new one. Under
 such conditions, the spell’s damage increases by 1d10.</Description>
+    <ItemName>Call Lightning</ItemName>
+    <SpellName>Call Lightning</SpellName>
     <AtHigherLevels>When you cast this spell using a spell slot of 4th or 
 higher level, the damage increases by 1d10 for each 
 slot level above 3rd.</AtHigherLevels>
@@ -1555,6 +1638,7 @@ slot level above 3rd.</AtHigherLevels>
     <SpellLevel>3</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1569,7 +1653,6 @@ slot level above 3rd.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Calm Emotions</SpellName>
     <Description>You attempt to suppress strong emotions in a group
 of people. Each humanoid in a 20-foot-radius sphere
 centered on a point you choose within range must make
@@ -1587,11 +1670,14 @@ indifference ends if the target is attacked or harmed by
 a spell or if it w itnesses any of its friends being harmed.
 When the spell ends, the creature becomes hostile
 again, unless the DM rules otherwise.</Description>
+    <ItemName>Calm Emotions</ItemName>
+    <SpellName>Calm Emotions</SpellName>
     <AtHigherLevels />
     <School>Enchantment</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1606,7 +1692,6 @@ again, unless the DM rules otherwise.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Chain Lightning</SpellName>
     <Description>You create a bolt of lightning that arcs toward a target of
 your choice that you can see within range. Three bolts
 then leap from that target to as many as three other
@@ -1617,6 +1702,8 @@ be targeted by only one of the bolts.
 A target must make a Dexterity saving throw. The
 target takes 10d8 lightning damage on a failed save, or
 half as much damage on a successful one.</Description>
+    <ItemName>Chain Lightning</ItemName>
+    <SpellName>Chain Lightning</SpellName>
     <AtHigherLevels>When you cast this spell using
 a spell slot of 7th level or higher, one additional bolt
 leaps from the first target to another target for each slot
@@ -1625,6 +1712,7 @@ level above 6th.</AtHigherLevels>
     <SpellLevel>6</SpellLevel>
     <SpellRange>150</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1639,7 +1727,6 @@ level above 6th.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Charm Person</SpellName>
     <Description>You attempt to charm a humanoid you can see within
 range. It must make a Wisdom saving throw, and does
 so with advantage if you or your companions are fighting
@@ -1648,6 +1735,8 @@ the spell ends or until you or your companions do
 anything harmful to it. The charmed creature regards
 you as a friendly acquaintance. When the spell ends, the
 creature knows it was charmed by you.</Description>
+    <ItemName>Charm Person</ItemName>
+    <SpellName>Charm Person</SpellName>
     <AtHigherLevels>When you cast this spell using
 a spell slot of 2nd level or higher, you can target one
 additional creature for each slot level above 1st. The
@@ -1657,6 +1746,7 @@ you target them.</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1671,7 +1761,6 @@ you target them.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Chill Touch</SpellName>
     <Description>You create a ghostly, skeletal hand in the space of a
 creature within range. Make a ranged spell attack
 against the creature to assail it with the chill of the
@@ -1682,10 +1771,13 @@ If you hit an undead target, it also has disadvantage on
 attack rolls against you until the end of your next turn.
 This spell’s damage increases by 1d8 when you reach
 5th level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
+    <ItemName>Chill Touch</ItemName>
+    <SpellName>Chill Touch</SpellName>
     <School>Necromancy</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -1700,13 +1792,14 @@ This spell’s damage increases by 1d8 when you reach
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Chromatic Orb</SpellName>
     <Description>You hurl a 4-inch-diameter sphere of energy at a
 creature that you can see within range. You choose
 acid, cold, fire, lightning, poison, or thunder for the type
 of orb you create, and then make a ranged spell attack
 against the target. If the attack hits, the creature takes
 3d8 damage of the type you chose.</Description>
+    <ItemName>Chromatic Orb</ItemName>
+    <SpellName>Chromatic Orb</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the damage increases by
 1d8 for each slot level above 1st.</AtHigherLevels>
@@ -1714,6 +1807,7 @@ spell slot of 2nd level or higher, the damage increases by
     <SpellLevel>1</SpellLevel>
     <SpellRange>90</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1728,12 +1822,13 @@ spell slot of 2nd level or higher, the damage increases by
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Circle Of Death</SpellName>
     <Description>sphere o f negative energy ripples out in a 60-footradius
 sphere from a point within range. Each creature
 in that area must make a Constitution saving throw. A
 target takes 8d6 necrotic damage on a failed save, or
 half as much damage on a successful one.</Description>
+    <ItemName>Circle Of Death</ItemName>
+    <SpellName>Circle Of Death</SpellName>
     <AtHigherLevels>When you cast this spell using a spell slot of 7th level
  or higher, the damage increases by 2d6 for each 
 slot level above 6th.</AtHigherLevels>
@@ -1741,6 +1836,7 @@ slot level above 6th.</AtHigherLevels>
     <SpellLevel>6</SpellLevel>
     <SpellRange>150</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>60</AoeSize>
     <AoeType>AOE_TYPE_SPHERE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1755,7 +1851,6 @@ slot level above 6th.</AtHigherLevels>
     <MaterialCost>500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Circle Of Power</SpellName>
     <Description>Divine energy radiates from you, distorting and
 diffusing magical energy within 30 feet o f you. Until
 the spell ends, the sphere moves with you, centered on
@@ -1766,11 +1861,14 @@ an affected creature succeeds on a saving throw made
 against a spell or magical effect that allows it to make a
 saving throw to take only half damage, it instead takes
 no damage if it succeeds on the saving throw.</Description>
+    <ItemName>Circle Of Power</ItemName>
+    <SpellName>Circle Of Power</SpellName>
     <AtHigherLevels />
     <School>Abjuration</School>
     <SpellLevel>5</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>30</AoeSize>
     <AoeType>AOE_TYPE_SPHERE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1785,7 +1883,6 @@ no damage if it succeeds on the saving throw.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Clairvoyance</SpellName>
     <Description>You create an invisible sensor within range in a location
 familiar to you (a place you have visited or seen before)
 or in an obvious location that is unfamiliar to you (such
@@ -1801,10 +1898,13 @@ can switch between seeing and hearing.
 A creature that can see the sensor (such as a creature
 benefiting from see invisibility or truesight) sees a
 luminous, intangible orb about the size of your fist.</Description>
+    <ItemName>Clairvoyance</ItemName>
+    <SpellName>Clairvoyance</SpellName>
     <School>Divination</School>
     <SpellLevel>3</SpellLevel>
     <SpellRange>5280</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1819,7 +1919,6 @@ luminous, intangible orb about the size of your fist.</Description>
     <MaterialCost>100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Clone</SpellName>
     <Description>This spell grows an inert duplicate o f a living creature
 as a safeguard against death. This clone forms inside
 a sealed vessel and grows to full size and maturity
@@ -1837,10 +1936,13 @@ original’s equipment. The original creature’s physical
 remains, if they still exist, become inert and can’t
 thereafter be restored to life, since the creature’s soul
 is elsewhere.</Description>
+    <ItemName>Clone</ItemName>
+    <SpellName>Clone</SpellName>
     <School>Necromancy</School>
     <SpellLevel>8</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -1855,12 +1957,13 @@ is elsewhere.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Cloud Of Daggers</SpellName>
     <Description>You fill the air with spinning daggers in a cube 5 feet on
 each side, centered on a point you choose within range.
 A creature takes 4d4 slashing damage when it enters
 the spell’s area for the first time on a turn or starts
 its turn there.</Description>
+    <ItemName>Cloud Of Daggers</ItemName>
+    <SpellName>Cloud Of Daggers</SpellName>
     <AtHigherLevels>When you cast this spell using a spell slot of 
 3rd level or higher, the damage increases by
 2d4 for each slot level above 2nd.</AtHigherLevels>
@@ -1868,6 +1971,7 @@ its turn there.</Description>
     <SpellLevel>2</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -1882,7 +1986,43 @@ its turn there.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Color Spray</SpellName>
+    <Description>You create a 20-foot-radius sphere of poisonous, yellowgreen fog 
+centered on a point you choose within range. The fog spreads around corners. 
+It lasts for the duration or until strong wind disperses the fog, ending the spell.
+Its area is heavily obscured.
+
+´When a creature enters the spell’s area for the first time on a turn 
+or starts its turn there, that creature must make a Constitution saving throw. 
+The creature takes 5d8 poison damage on a failed save, or half as much
+damage on a successful one. 
+
+Creatures are affected even if they hold their breath or don’t need to breathe.
+The fog m oves 10 feet away from you at the start of each o f your turns, rolling 
+along the surface of the ground. The vapors, being heavier than air, sink to the
+lowest level of the land, even pouring down openings.</Description>
+    <ItemName>Cloudkill</ItemName>
+    <SpellName>Cloudkill</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 6th level or higher, 
+the damage increases by 1d8 for each slot level above 5th.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>20</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>A dazzling array of flashing, colored light springs from your hand. Roll 6 d10; 
 the total is how many hit points of creatures this spell can effect. Creatures 
 in a 15-foot cone originating from you are affected in ascending order of 
@@ -1892,6 +2032,8 @@ affected by this spell is blinded until the spell ends. Subtract each
 creature’s hit points from the total before moving on to the creature with
 the next lowest hit points. A creature’s hit points must be equal to or 
 less than the remaining total for that creature to be affected.</Description>
+    <ItemName>Color Spray</ItemName>
+    <SpellName>Color Spray</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, roll an additional 2d10
 for each slot level above 1st</AtHigherLevels>
@@ -1899,6 +2041,7 @@ for each slot level above 1st</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>15</AoeSize>
     <AoeType>AOE_TYPE_CONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1913,7 +2056,176 @@ for each slot level above 1st</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Comprehend Languages</SpellName>
+    <Description>You speak a one-word command to a creature you can
+see within range. The target must succeed on a Wisdom
+saving throw or follow the command on its next turn.
+The spell has no effect if the target is undead, if it
+doesn’t understand your language, or if your command
+is directly harmful to it.
+
+Some typical commands and their effects follow. You
+might issue a command other than one described here.
+If you do so, the DM determines how the target behaves.
+If the target can’t follow your command, the spell ends.
+
+Approach. The target moves toward you by the
+shortest and most direct route, ending its turn if it
+moves within 5 feet o f you.
+
+Drop. The target drops whatever it is holding and then
+ends its turn.
+
+Flee. The target spends its turn moving away from
+you by the fastest available means.
+
+Grovel. The target falls prone and then ends its turn.
+
+Halt. The target doesn’t move and takes no actions.
+A flying creature stays aloft, provided that it is able to
+do so. If it must move to stay aloft, it flies the minimum
+distance needed to remain in the air.</Description>
+    <ItemName>Command</ItemName>
+    <SpellName>Command</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 2nd level or higher, 
+you can affect one additional creature for each slot level above 1st. 
+The creatures must be within 30 feet o f each other when
+you target them.</AtHigherLevels>
+    <School>Enchantment</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You contact your deity or a divine proxy and ask up to
+three questions that can be answered with a yes or no.
+You must ask your questions before the spell ends. You
+receive a correct answer for each question.
+Divine beings aren’t necessarily omniscient, so you
+might receive “unclear” as an answer if a question
+pertains to information that lies beyond the deity’s
+knowledge. In a case where a one-word answer could be
+misleading or contrary to the deity’s interests, the DM
+might offer a short phrase as an answer instead.
+
+If you cast the spell two or more times before finishing
+your next long rest, there is a cumulative 25 percent
+chance for each casting after the first that you get no
+answer. The DM makes this roll in secret.</Description>
+    <ItemName>Commune</ItemName>
+    <SpellName>Commune</SpellName>
+    <AtHigherLevels />
+    <School>Divination</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent>incense and a vial of holy water</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You briefly become one with nature and gain knowledge
+of the surrounding territory. In the outdoors, the spell
+gives you knowledge o f the land within 3 miles o f you.
+In caves and other natural underground settings, the
+radius is limited to 300 feet. The spell doesn’t function
+where nature has been replaced by construction, such
+as in dungeons and towns.
+
+You instantly gain knowledge o f up to three facts of
+your choice about any o f the following subjects as they
+relate to the area:
+
+• terrain and bodies of water
+• prevalent plants, minerals, animals, or peoples
+• powerful celestials, fey, fiends, elementals, or undead
+• influence from other planes o f existence
+• buildings
+
+For example, you could determine the location of
+powerful undead in the area, the location o f major
+sources of safe drinking water, and the location o f any
+nearby towns.</Description>
+    <ItemName>Commune With Nature</ItemName>
+    <SpellName>Commune With Nature</SpellName>
+    <School>Divination</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You attempt to compel a creature into a duel. One
+creature that you can see within range must make a
+Wisdom saving throw. On a failed save, the creature is
+drawn to you, compelled by your divine demand. For
+the duration, it has disadvantage on attack rolls against
+creatures other than you, and must make a Wisdom
+saving throw each time it attempts to move to a space
+that is more than 30 feet away from you; if it succeeds
+on this saving throw, this spell doesn’t restrict the
+target’s movement for that turn.
+
+The spell ends if you attack any other creature, if you
+cast a spell that targets a hostile creature other than the
+target, if a creature friendly to you damages the target or
+casts a harmful spell on it, or if you end your turn more
+than 30 feet away from the target.</Description>
+    <ItemName>Compelled Duel</ItemName>
+    <SpellName>Compelled Duel</SpellName>
+    <School>Enchantment</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_BONUS_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>For the duration, you understand the literal meaning of
 any spoken language that you hear. You also understand
 any written language that you see, but you must be
@@ -1921,10 +2233,13 @@ touching the surface on which the words are written.
 It takes about 1 minute to read one page of text. This spell doesn’t 
 decode secret m essages in a text or a glyph, such as an arcane sigil, 
 that isn’t part of a written language</Description>
+    <ItemName>Comprehend Languages</ItemName>
+    <SpellName>Comprehend Languages</SpellName>
     <School>Divination</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1939,7 +2254,1054 @@ that isn’t part of a written language</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Dancing Lights</SpellName>
+    <Description>Creatures of your choice that you can see within range
+and that can hear you must make a W isdom saving
+throw. A target automatically succeeds on this saving
+throw if it can’t be charmed. On a failed save, a target
+is affected by this spell. Until the spell ends, you can
+use a bonus action on each o f your turns to designate a
+direction that is horizontal to you. Each affected target
+must u se as much o f its movement as possible to move
+in that direction on its next turn. It can take its action
+before it moves. After moving in this way, it can make
+another Wisdom saving to try to end the effect.
+
+A target isn’t compelled to move into an obviously
+deadly hazard, such as a fire or pit, but it w ill provoke
+opportunity attacks to move in the designated direction.</Description>
+    <ItemName>Compulsion</ItemName>
+    <SpellName>Compulsion</SpellName>
+    <School>Enchantment</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A blast o f cold air erupts from your hands. Each
+creature in a 60-foot cone must make a Constitution
+saving throw. A creature takes 8d8 cold damage on a
+failed save, or half as much damage on a successful one.
+A creature killed by this spell becomes a frozen statue
+until it thaws.
+
+</Description>
+    <ItemName>Cone Of Cold</ItemName>
+    <SpellName>Cone Of Cold</SpellName>
+    <AtHigherLevels>When you cast this spell using a
+spell slot o f 6th level or higher, the damage increases by
+1d8 for each slot level above 5th.</AtHigherLevels>
+    <School>Evocation</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>60</AoeSize>
+    <AoeType>AOE_TYPE_CONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a small crystal or glass cone</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>This spell assaults and twists creatures' minds,
+spawning delusions and provoking uncontrolled action.
+Each creature in a 10-foot-radius sphere centered on
+a point you choose within range must succeed on a
+Wisdom saving throw when you cast this spell or be
+affected by it.
+
+An affected target can’t take reactions and must roll
+a d 10 at the start o f each o f its turns to determine its
+behavior for that turn.
+
+1  The creature uses all its movement to move in a
+    random direction. To determine the direction, roll
+    a d8 and assign a direction to each die face. The
+   creature doesn’t take an action this turn.
+2-6 The creature doesn’t move or take actions this turn.
+7-8 The creature uses its action to make a melee attack
+       against a randomly determined creature within its
+       reach. If there is no creature within its reach, the
+       creature does nothing this turn.
+9-10 The creature can act and move normally
+
+At the end of each of its turns, an affected target can
+make a W isdom saving throw. If it succeeds, this effect
+ends for that target.</Description>
+    <ItemName>Confusion</ItemName>
+    <SpellName>Confusion</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 
+5th level or higher, the radius of the sphere increases 
+by 5 feet for each slot level above 4th.</AtHigherLevels>
+    <School>Enchantment</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>90</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>10</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>three nut shells</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You summon fey spirits that take the form o f beasts and
+appear in unoccupied spaces that you can see within
+range. Choose one o f the following options for what
+appears:
+
+• One beast o f challenge rating 2 or lower
+• Two beasts o f challenge rating 1 or lower
+• Four beasts o f challenge rating 1/2 or lower
+• Eight beasts o f challenge rating 1/4 or lower
+
+Each beast is also considered fey, and it disappears
+when it drops to 0 hit points or when the spell ends.
+The summoned creatures are friendly to you and your
+companions. Roll initiative for the summoned creatures
+as a group, which has its own turns. They obey any
+verbal commands that you issue to them (no action
+required by you). If you don’t issue any commands to
+them, they defend themselves from hostile creatures,
+but otherwise take no actions.
+
+The DM has the creatures’ statistics.</Description>
+    <ItemName>Conjure Animals</ItemName>
+    <SpellName>Conjure Animals</SpellName>
+    <AtHigherLevels>When you cast this spell using certain higher-level spell slots, 
+you choose one of the summoning options above, and more creatures appear:
+twice as many with a 5th-level slot, three times as many
+with a 7th-level slot, and four times as many with a
+9th-level slot.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You throw a nonmagical w eapon or fire a piece of
+nonmagical ammunition into the air to create a cone
+of identical weapons that shoot forward and then
+disappear. Each creature in a 60-foot cone must succeed
+on a Dexterity saving throw. A creature takes 3d8
+damage on a failed save, or half as much damage on a
+successful one. The damage type is the same as that of
+the weapon or ammunition used as a component.</Description>
+    <ItemName>Conjure Barrage</ItemName>
+    <SpellName>Conjure Barrage</SpellName>
+    <AtHigherLevels />
+    <School>Conjuration</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>60</AoeSize>
+    <AoeType>AOE_TYPE_CONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>one piece of ammunition or a thrown weapon</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You summon a celestial o f challenge rating 4 or lower,
+which appears in an unoccupied space that you can see
+within range. The celestial disappears when it drops to
+0 hit points or when the spell ends.
+The celestial is friendly to you and your companions
+for the duration. Roll initiative for the celestial, which
+has its own turns. It obeys any verbal commands that
+you issue to it (no action required by you), as long as
+they don’t violate its alignment. If you don’t issue any
+commands to the celestial, it defends itself from hostile
+creatures but otherwise takes no actions.
+The DM has the celestial’s statistics.</Description>
+    <ItemName>Conjure Celestial</ItemName>
+    <SpellName>Conjure Celestial</SpellName>
+    <AtHigherLevels>When you cast this spell using a 9th-level spell slot, 
+you summon a celestial of challenge rating 5 or lower.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>7</SpellLevel>
+    <SpellRange>90</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You call forth an elemental servant. Choose an area o f air,
+earth, fire, or water that fills a 10-foot cube within range.
+An elemental o f challenge rating 5 or lower appropriate
+to the area you chose appears in an unoccupied space
+within 10 feet o f it. For example, a fire elemental
+emerges from a bonfire, and an earth elemental rises
+up from the ground. The elemental disappears when it
+drops to 0 hit points or when the spell ends.
+The elemental is friendly to you and your companions
+for the duration. Roll initiative for the elemental, which
+has its own turns. It obeys any verbal commands that
+you issue to it (no action required by you). If you don’t
+issue any commands to the elemental, it defends itself
+from hostile creatures but otherwise takes no actions.
+If your concentration is broken, the elemental doesn’t
+disappear. Instead, you lose control o f the elemental,
+it becomes hostile toward you and your companions,
+and it might attack. An uncontrolled elemental can’t
+be dismissed by you, and it disappears 1 hour after
+you summoned it.
+
+The DM has the elemental’s statistics.</Description>
+    <ItemName>Conjure Elemental</ItemName>
+    <SpellName>Conjure Elemental</SpellName>
+    <AtHigherLevels>When you cast this spell using
+a spell slot o f 6th level or higher, the challenge rating
+increases by 1 for each slot level above 5th.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>90</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>burning incense for air, soft clay for earth, sulfur and phosphorus fire, or water and sand for water</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You summon a fey creature o f challenge rating 6 or
+lower, or a fey spirit that takes the form of a beast of
+challenge rating 6 or lower. It appears in an unoccupied
+space that you can see within range. The fey creature
+disappears when it drops to 0 hit points or when
+the spell ends.
+
+The fey creature is friendly to you and your
+companions for the duration. Roll initiative for the
+creature, which has its own turns. It obeys any verbal
+commands that you issue to it (no action required
+by you), as long as they don't violate its alignment. If
+you don’t issue any commands to the fey creature, it
+defends itself from hostile creatures but otherwise
+takes no actions.
+
+If your concentration is broken, the fey creature
+doesn’t disappear. Instead, you lose control o f the
+fey creature, it becomes hostile toward you and your
+companions, and it might attack. An uncontrolled fey
+creature can't be dismissed by you, and it disappears 1
+hour after you summoned it.
+The DM has the fey creature’s statistics.</Description>
+    <ItemName>Conjure Fey</ItemName>
+    <SpellName>Conjure Fey</SpellName>
+    <AtHigherLevels>When you cast this spell using
+a spell slot o f 7th level or higher, the challenge rating
+increases by 1 for each slot level above 6th.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>90</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You summon elementals that appear in unoccupied
+spaces that you can see within range. You choose one
+the following options for what appears:
+
+• One elemental o f challenge rating 2 or lower
+• Two elementals o f challenge rating 1 or lower
+• Four elementals o f challenge rating 1/2 or lower
+• Eight elementals of challenge rating 1/4 or lower.
+
+An elemental summoned by this spell disappears when
+it drops to 0 hit points or when the spell ends.
+The summoned creatures are friendly to you and your
+companions. Roll initiative for the summoned creatures
+as a group, which has its own turns. They obey any
+verbal commands that you issue to them (no action
+required by you). If you don’t issue any commands to
+them, they defend themselves from hostile creatures,
+but otherwise take no actions.
+
+The DM has the creatures' statistics.</Description>
+    <ItemName>Conjure Minor Elementals</ItemName>
+    <SpellName>Conjure Minor Elementals</SpellName>
+    <AtHigherLevels>When you cast this spell using certain higher-level spell slots, 
+you choose one of the summoning options above, and more 
+creatures appear: twice as many with a 6th-level slot and three times as
+many with an 8th-level slot.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>90</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You fire a piece o f nonmagical ammunition from a
+ranged weapon or throw a nonmagical w eapon into
+the air and choose a point within range. Hundreds of
+duplicates of the ammunition or weapon fall in a volley
+from above and then disappear. Each creature in a
+40-foot-radius. 20-foot-high cylinder centered on that
+point must make a Dexterity saving throw. A creature
+takes 8d8 damage on a failed save, or half as much
+damage on a successful one. The damage type is the
+same as that of the ammunition or weapon.</Description>
+    <ItemName>Conjure Volley</ItemName>
+    <SpellName>Conjure Volley</SpellName>
+    <AtHigherLevels />
+    <School>Conjuration</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>150</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>one piece of ammunition or one thrown weapon</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You summon fey creatures that appear in unoccupied
+spaces that you can see within range. Choose one o f the
+following options for what appears:
+
+• One fey creature o f challenge rating 2 or lower
+• Two fey creatures o f challenge rating 1 or lower
+• Four fey creatures o f challenge rating 1/2 or lower
+• Eight fey creatures o f challenge rating 1/4 or lower
+
+A summoned creature disappears when it drops to 0 hit
+points or when the spell ends.
+The summoned creatures are friendly to you and your
+companions. Roll initiative for the summoned creatures
+as a group, which have their own turns. They obey any
+verbal commands that you issue to them (no action
+required by you). If you don't issue any commands to
+them, they defend themselves from hostile creatures,
+but otherwise take no actions.
+
+The DM has the creatures’ statistics.</Description>
+    <ItemName>Conjure Woodland Beings</ItemName>
+    <SpellName>Conjure Woodland Beings</SpellName>
+    <AtHigherLevels>When you cast this spell using certain higher-level spell slots, 
+you choose one of the summoning options above, and more creatures appear:
+twice as many with a 6th-level slot and three times as
+many with an 8th-level slot.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>one holly berry per creature summoned</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You mentally contact a demigod, the spirit o f a long-dead
+sage, or some other mysterious entity from another
+plane. Contacting this extraplanar intelligence can
+strain or even break your mind. When you cast this
+spell, make a DC 15 Intelligence saving throw. 
+
+On a failure, you take 6d6 psychic damage and are insane
+until you finish a long rest. While insane, you can’t take
+actions, can’t understand what other creatures say, can’t
+read, and speak only in gibberish. A greater restoration
+spell cast on you ends this effect.
+On a successful save, you can ask the entity up to five
+questions. You must ask your questions before the spell
+ends. The DM answers each question with one word,
+such as “yes,” “no,” “maybe,” “never,” “irrelevant,” or
+“unclear” (if the entity doesn’t know the answer to the
+question). If a one-word answer w ould be misleading,
+the DM might instead offer a short phrase as an answer.</Description>
+    <ItemName>Contact Other Plane</ItemName>
+    <SpellName>Contact Other Plane</SpellName>
+    <AtHigherLevels />
+    <School>Divination</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Your touch inflicts disease. Make a melee spell attack
+against a creature within your reach. On a hit, you afflict
+the creature with a disease o f your choice from any o f
+the ones described below.
+At the end o f each o f the target’s turns, it must make
+a Constitution saving throw. After failing three of
+these saving throws, the disease’s effects last for the
+duration, and the creature stops making these saves.
+After succeeding on three o f these saving throws, the
+creature recovers from the disease, and the spell ends.
+Since this spell induces a natural disease in its
+target, any effect that removes a disease or otherwise
+ameliorates a disease’s effects apply to it.
+
+Blinding Sickness. Pain grips the creature’s mind,
+and its eyes turn milky white. The creature has
+disadvantage on Wisdom checks and W isdom saving
+throws and is blinded.
+
+Filth Fever. A raging fever sweeps through the
+creature’s body. The creature has disadvantage on
+Strength checks, Strength saving throws, and attack
+rolls that use Strength.
+
+Flesh Rot. The creature’s flesh decays. The creature
+has disadvantage on Charisma checks and vulnerability
+to all damage.
+
+Mindfire. The creature’s mind becomes feverish. The
+creature has disadvantage on Intelligence checks and
+Intelligence saving throws, and the creature behaves as
+if under the effects o f the confusion spell during combat.
+
+Seizure. The creature is overcome with shaking.
+The creature has disadvantage on Dexterity checks,
+Dexterity saving throws, and attack rolls that
+use Dexterity.
+
+Slimy Doom. The creature begins to bleed
+uncontrollably. The creature has disadvantage on
+Constitution checks and Constitution saving throws.
+In addition, whenever the creature takes damage, it is
+stunned until the end o f its next turn.</Description>
+    <ItemName>Contagion</ItemName>
+    <SpellName>Contagion</SpellName>
+    <School>Necromancy</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>100800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Choose a spell o f 5th level or lower that you can cast, that
+has a casting time o f 1 action, and that can target you.
+You cast that spell—called the contingent spell—as part
+of casting contingency, expending spell slots for both, but
+the contingent spell doesn't come into effect. Instead, it
+takes effect when a certain circumstance occurs. You
+describe that circumstance when you cast the two spells.
+For example, a contingency cast with water breathing
+might stipulate that water breathing comes into effect
+when you are engulfed in water or a similar liquid.
+The contingent spell takes effect immediately after the
+circumstance is met for the first time, whether or not you
+want it to. and then contingency ends.
+
+The contingent spell takes effect only on you, even
+if it can normally target others. You can use only one
+contingency spell at a time. If you cast this spell again,
+the effect o f another contingency spell on you ends. Also,
+contingency ends on you if its material component is
+ever not on your person.</Description>
+    <ItemName>Contingency</ItemName>
+    <SpellName>Contingency</SpellName>
+    <School>Evocation</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>144000</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>100</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a statuette of yourself carved from ivory and decorated with gems worth at least 1500gp.</MaterialComponent>
+    <MaterialCost>1500</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A flame, equivalent in brightness to a torch, springs
+forth from an object that you touch. The effect looks like
+a regular flame, but it creates no heat and doesn’t use
+oxygen. A continual flame can be covered or hidden but
+not smothered or quenched.</Description>
+    <ItemName>Continual Flame</ItemName>
+    <SpellName>Continual Flame</SpellName>
+    <School>Evocation</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>true</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>ruby dust worth 50gp, which the spell consumes</MaterialComponent>
+    <MaterialCost>50</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Until the spell ends, you control any freestanding water
+inside an area you choose that is a cube up to 100 feet
+on a side. You can choose from any o f the following
+effects when you cast this spell. As an action on your
+turn, you can repeat the same effect or choose a
+different one.
+
+Flood. You cause the water level o f all standing water in
+the area to rise by as much as 20 feet. If the area includes
+a shore, the flooding water spills over onto dry land.
+If you choose an area in a large body o f water, you
+instead create a 20-foot tall wave that travels from one
+side o f the area to the other and then crashes down. Any
+Huge or smaller vehicles in the wave’s path are carried
+with it to the other side. Any Huge or smaller vehicles
+struck by the wave have a 25 percent chance of capsizing.
+The water level remains elevated until the spell ends
+or you choose a different effect. If this effect produced
+a wave, the wave repeats on the start o f your next turn
+while the flood effect lasts.
+
+Part Water. You cause water in the area to move
+apart and create a trench. The trench extends across
+the spell’s area, and the separated water forms a wall to
+either side. The trench remains until the spell ends or
+you choose a different effect. The water then slowly fills
+in the trench over the course o f the next round until the
+normal water level is restored.
+
+Redirect Flow. You cause flowing water in the area
+to move in a direction you choose, even if the water has
+to flow over obstacles, up walls, or in other unlikely
+directions. The water in the area moves as you direct
+it, but once it moves beyond the spell’s area, it resumes
+its flow based on the terrain conditions. The water
+continues to move in the direction you chose until the
+spell ends or you choose a different effect.
+
+Whirlpool. This effect requires a body o f water
+at least 50 feet square and 25 feet deep. You cause
+a whirlpool to form in the center o f the area. The
+whirlpool forms a vortex that is 5 feet w ide at the
+base, up to 50 feet w ide at the top, and 25 feet tall. Any
+creature or object in the water and within 25 feet o f the
+vortex is pulled 10 feet toward it. A creature can swim
+away from the vortex by m aking a Strength (Athletics)
+check against your spell save DC.
+When a creature enters the vortex for the first time on
+a turn or starts its turn there, it must make a Strength
+saving throw. On a failed save, the creature takes 2d8
+bludgeoning damage and is caught in the vortex until
+the spell ends. On a successful save, the creature takes
+half damage, and isn’t caught in the vortex. A creature
+caught in the vortex can use its action to try to swim
+away from the vortex as described above, but has
+disadvantage on the Strength (Athletics) check to do so.
+The first time each turn that an object enters the
+vortex, the object takes 2d8 bludgeoning damage; this
+damage occurs each round it remains in the vortex.</Description>
+    <ItemName>Control Water</ItemName>
+    <SpellName>Control Water</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>300</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a drop of water and a pinch of dust</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You take control of the weather within 5 miles of  you
+for the duration. You must be outdoors to cast this spell.
+Moving to a place where you don’t have a clear path to
+the sky ends the spell early.
+
+When you cast the spell, you change the current
+weather conditions, which are determined by the DM
+based on the climate and season. You can change
+precipitation, temperature, and wind. It takes 1d4 x 10
+minutes for the new conditions to take effect. Once they
+do so, you can change the conditions again. When the
+spell ends, the weather gradually returns to normal.
+
+When you change the weather conditions, find a
+current condition on the following tables and change its
+stage by one, up or down. When changing the wind, you
+can change its direction.
+
+Precipitation:
+
+Stage Condition
+1       Clear
+2        Light clouds
+3       Overcast or ground fog
+4       Rain, hail, or snow
+5       Torrential rain, driving hail, or blizzard
+
+Temperature:
+Stage      Condition
+1             Unbearable heat
+2             Hot
+3             Warm
+4             Cool
+5             Cold
+6             Arctic cold
+
+Wind:
+
+Stage Condition
+1        Calm
+2        Moderate wind
+3        Strong wind
+4        Gale
+5         Storm</Description>
+    <ItemName>Control Weather</ItemName>
+    <SpellName>Control Weather</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>8</SpellLevel>
+    <SpellRange>10000</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>100</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>(burning incense and bits of earth and wood mixed in water</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You attempt to interrupt a creature in the process of
+casting a spell. If the creature is casting a spell o f 3rd
+level or lower, its spell fails and has no effect. If it is
+casting a spell o f 4th level or higher, make an ability
+check using your spellcasting ability. The DC equals 10
++ the spell’s level. On a success, the creature’s spell fails
+and has no effect.</Description>
+    <ItemName>Counterspell</ItemName>
+    <SpellName>Counterspell</SpellName>
+    <AtHigherLevels>When you cast this spell using a
+spell slot o f 4th level or higher, the interrupted spell has
+no effect if its level is less than or equal to the level o f the
+spell slot you used.</AtHigherLevels>
+    <School>Abjuration</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_REACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>false</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You create 45 pounds o f food and 30 gallons of water
+on the ground or in containers within range, enough
+to sustain up to fifteen humanoids or five steeds for
+24 hours. The food is bland but nourishing, and spoils
+if uneaten after 24 hours. The water is clean and
+doesn’t go bad.</Description>
+    <ItemName>Create Food And Water</ItemName>
+    <SpellName>Create Food And Water</SpellName>
+    <AtHigherLevels />
+    <School>Conjuration</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You either create or destroy water.
+
+Create Water. You create up to 10 gallons o f clean
+water within range in an open container. Alternatively,
+the water falls as rain in a 30-foot cube within range,
+extinguishing exposed flames in the area.
+
+D estroy Water. You destroy up to 10 gallons o f water
+in an open container within range. Alternatively, you
+destroy fog in a 30-foot cube within range.</Description>
+    <ItemName>Create Or Destroy Water</ItemName>
+    <SpellName>Create Or Destroy Water</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 2nd level 
+or higher, you create or destroy 10 additional gallons of water, 
+or the size of the cube increases by 5 feet, for 
+each slot level above 1st.</AtHigherLevels>
+    <School>Transmutation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a drop o f water if creating water or a few grains o f sand if destroying it</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You can cast this spell only at night. Choose up to three
+corpses of Medium or Small humanoids within range.
+Each corpse becomes a ghoul under your control. (The
+DM has game statistics for these creatures.)
+
+As a bonus action on each o f your turns, you can
+mentally command any creature you animated with
+this spell if the creature is within 120 feet o f you (if you
+control multiple creatures, you can command any or all
+o f them at the same time, issuing the same command to
+each one). You decide what action the creature w ill take
+and where it will move during its next turn, or you can
+issue a general command, such as to guard a particular
+chamber or corridor. If you issue no commands, the
+creature only defends itself against hostile creatures.
+Once given an order, the creature continues to follow it
+until its task is complete.
+
+The creature is under your control for 24 hours,
+after which it stops obeying any command you have
+given it. To maintain control o f the creature for another
+24 hours, you must cast this spell on the creature
+before the current 24-hour period ends. This use
+of the spell reasserts your control over up to three
+creatures you have animated with this spell, rather than
+animating new ones.
+
+</Description>
+    <ItemName>Create Undead</ItemName>
+    <SpellName>Create Undead</SpellName>
+    <AtHigherLevels>When you cast this spell using a 7th-level spell slot, you 
+can animate or reassert control over four ghouls. When you
+cast this spell using an 8th-level spell slot, you can animate 
+or reassert control over five ghouls or two ghasts or wights. 
+When you cast this spell using a 9th-level spell slot, you can 
+animate or reassert control over six ghouls, three ghasts or wights,
+or two mummies.</AtHigherLevels>
+    <School>Necromancy</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>10</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>one clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150gp black onyx stone for each corpse</MaterialComponent>
+    <MaterialCost>150</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You pull wisps of shadow material from the Shadowfell
+to create a nonliving object of vegetable matter within
+range: soft goods, rope, wood, or something similar. You
+can also use this spell to create mineral objects such as
+stone, crystal, or metal. The object created must be no
+larger than a 5-foot cube, and the object must be o f a
+form and material that you have seen before.
+The duration depends on the object’s material. If
+the object is composed o f multiple materials, use the
+shortest duration.
+
+Material                         Duration
+Vegetable matter            1 day
+Stone or crystal               12 hours
+Precious metals               1 hour
+Gems                              10 minutes
+Adamantine or mithral   1 minute
+
+Using any material created by this spell as another
+spell’s material component causes that spell to fail.
+
+When you cast this spell using a spell slot of 6th level or higher, 
+the cube increases by 5 feet for each slot level above 5th.</Description>
+    <ItemName>Creation</ItemName>
+    <SpellName>Creation</SpellName>
+    <AtHigherLevels />
+    <School>Illusion</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a tiny piece of matter of the same type of item you plan to create</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>One humanoid o f your choice that you can see within
+range must succeed on a W isdom saving throw or
+become charmed by you for the duration. While
+the target is charmed in this way, a twisted crown
+of jagged iron appears on its head, and a madness
+glows in its eyes.
+
+The charmed target must use its action before moving
+on each of its turns to make a melee attack against a
+creature other than itself that you mentally choose.
+
+The target can act normally on its turn if you choose no
+creature or if none are within its reach.
+On your subsequent turns, you must use your action to
+maintain control over the target, or the spell ends. Also,
+the target can make a Wisdom saving throw at the end
+of each o f its turns. On a success, the spell ends.</Description>
+    <ItemName>Crown Of Madness</ItemName>
+    <SpellName>Crown Of Madness</SpellName>
+    <School>Enchantment</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Holy power radiates from you in an aura with a 30-foot
+radius, awakening boldness in friendly creatures. Until
+the spell ends, the aura moves with you, centered on
+you. While in the aura, each nonhostile creature in the
+aura (including you) deals an extra 1d4 radiant damage
+when it hits with a w eapon attack.</Description>
+    <ItemName>Crusader's Mantle</ItemName>
+    <SpellName>Crusader's Mantle</SpellName>
+    <School>Evocation</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A creature you touch regains a number o f hit points
+equal to 1d8 + your spellcasting ability modifier. This
+spell has no effect on undead or constructs.</Description>
+    <ItemName>Cure Wounds</ItemName>
+    <SpellName>Cure Wounds</SpellName>
+    <AtHigherLevels>When you cast this spell using a
+spell slot of 2nd level or higher, the healing increases by
+1d8 for each slot level above 1st.</AtHigherLevels>
+    <School>Evocation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>You create up to four torch-sized lights within range,
 making them appear as torches, lanterns, or glowing
 orbs that hover in the air for the duration. You can
@@ -1950,10 +3312,13 @@ As a bonus action on your turn, you can move the
 lights up to 60 feet to a new spot within range. A light
 must be within 20 feet of another light created by this
 spell, and a light winks out if it exceeds the spell’s range.</Description>
+    <ItemName>Dancing Lights</ItemName>
+    <SpellName>Dancing Lights</SpellName>
     <School>Evocation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -1968,7 +3333,65 @@ spell, and a light winks out if it exceeds the spell’s range.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Detect Magic</SpellName>
+    <Description>Magical darkness spreads from a point you choose
+within range to fill a 15-foot-radius sphere for the
+duration. The darkness spreads around corners.
+A creature with darkvision can’t see through this
+darkness, and nonmagical light can’t illuminate it.
+If the point you choose is on an object you are holding
+or one that isn’t being w orn or carried, the darkness
+emanates from the object and moves with it. Completely
+covering the source o f the darkness with an opaque
+object, such as a bowl or a helm, blocks the darkness.
+If any of this spell’s area overlaps with an area o f light
+created by a spell o f 2nd level or lower, the spell that
+created the light is dispelled.</Description>
+    <ItemName>Darkness</ItemName>
+    <SpellName>Darkness</SpellName>
+    <AtHigherLevels />
+    <School>Evocation</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>15</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>bat fur and a drop of pitch or piece of coal</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You touch a willing creature to grant it the ability to
+see in the dark. For the duration, that creature has
+darkvision out to a range of 60 feet.</Description>
+    <ItemName>Darkvision</ItemName>
+    <SpellName>Darkvision</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>either a pinch of dried carrot or an agate</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>For the duration, you sense the presence of magic
 within 30 feet of you. If you sense magic in this way, you
 can use your action to see a faint aura around any visible
@@ -1978,10 +3401,13 @@ learn its school of magic, if any.
 The spell can penetrate most barriers, but it is blocked
 by 1 foot of stone, 1 inch of common metal, a thin sheet
 of lead, or 3 feet of wood or dirt.</Description>
+    <ItemName>Detect Magic</ItemName>
+    <SpellName>Detect Magic</SpellName>
     <School>Divination</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -1996,7 +3422,6 @@ of lead, or 3 feet of wood or dirt.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Disguise Self</SpellName>
     <Description>You make yourself—including your clothing, armor,
 weapons, and other belongings on your person—look
 different until the spell ends or until you use your action
@@ -2019,10 +3444,13 @@ To discern that you are disguised, a creature can use
 its action to inspect your appearance and must succeed
 on an Intelligence (Investigation) check against your
 spell save DC.</Description>
+    <ItemName>Disguise Self</ItemName>
+    <SpellName>Disguise Self</SpellName>
     <School>Illusion</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -2037,15 +3465,17 @@ spell save DC.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Expeditious Retreat</SpellName>
     <Description>This spell allows you to move at an incredible pace.
 When you cast this spell, and then as a bonus action
 on each of your turns until the spell ends, you can take
 the Dash action.</Description>
+    <ItemName>Expeditious Retreat</ItemName>
+    <SpellName>Expeditious Retreat</SpellName>
     <School>Transmutation</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -2060,9 +3490,10 @@ the Dash action.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>False Life</SpellName>
     <Description>Bolstering yourself with a necromantic facsimile of life,
 you gain 1d4 + 4 temporary hit points for the duration..</Description>
+    <ItemName>False Life</ItemName>
+    <SpellName>False Life</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, you gain 5 additional
 temporary hit points for each slot level above 1st.
@@ -2071,6 +3502,7 @@ temporary hit points for each slot level above 1st.
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -2085,16 +3517,18 @@ temporary hit points for each slot level above 1st.
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Feather Fall</SpellName>
     <Description>Choose up to five falling creatures within range. 
 A falling creature's rate of descent slows to 60 feet per
 round until the spell ends. If the creature lands before
 the spell ends, it takes no falling damage and can land
 on its feet, and the spell ends for that creature.</Description>
+    <ItemName>Feather Fall</ItemName>
+    <SpellName>Feather Fall</SpellName>
     <School>Transmutation</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2109,7 +3543,6 @@ on its feet, and the spell ends for that creature.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Find Familiar</SpellName>
     <Description>You gain the service of a familiar, a spirit that takes an animal form you choose: bat, cat, crab, frog (toad), 
 hawk,lizard, octopus, owl, poisonous snake, fish (quipper),rat, raven, sea horse, spider, or weasel. 
 Appearing in an unoccupied space within range, the familiar has the statistics of the chosen form, though 
@@ -2132,10 +3565,13 @@ Your familiar transforms into the chosen creature.
 Finally, when you cast a spell with a range of touch, your familiar can deliver the spell as if it had cast the
 spell. Your familiar must be within 100 feet of you, and it must use its reaction to deliver the spell when you cast
 it. If the spell requires an attack roll, you use your attack modifier for the roll.</Description>
+    <ItemName>Find Familiar</ItemName>
+    <SpellName>Find Familiar</SpellName>
     <School>Conjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>10</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2150,17 +3586,19 @@ it. If the spell requires an attack roll, you use your attack modifier for the r
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Fire Bolt</SpellName>
     <Description>You hurl a mote of fire at a creature or object within
 range. Make a ranged spell attack against the
 target. On a hit, the target takes 1d10 fire damage. A
 flammable object hit by this spell ignites if it isn't being
 worn or carried. This spell’s damage increases by 1d10 when you reach
 5th level (2d10), 11th level (3d10), and 17th level (4d10).</Description>
+    <ItemName>Fire Bolt</ItemName>
+    <SpellName>Fire Bolt</SpellName>
     <School>Evocation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2175,12 +3613,13 @@ worn or carried. This spell’s damage increases by 1d10 when you reach
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Fog Cloud</SpellName>
     <Description>You create a 20-foot-radius sphere of fog centered on a
 point within range. The sphere spreads around corners,
 and its area is heavily obscured. It lasts for the duration
 or until a wind of moderate or greater speed (at least 10
 miles per hour) disperses it</Description>
+    <ItemName>Fog Cloud</ItemName>
+    <SpellName>Fog Cloud</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the radius of the fog
 increases by 20 feet for each slot level above 1st.</AtHigherLevels>
@@ -2188,6 +3627,7 @@ increases by 20 feet for each slot level above 1st.</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>20</AoeSize>
     <AoeType>AOE_TYPE_SPHERE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2202,7 +3642,6 @@ increases by 20 feet for each slot level above 1st.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Friends</SpellName>
     <Description>For the duration, you have advantage on all Charisma
 checks directed at one creature of your choice that isn’t
 hostile toward you. When the spell ends, the creature
@@ -2211,10 +3650,13 @@ and becomes hostile toward you. A creature prone
 to violence might attack you. Another creature might
 seek retribution in other ways (at the DM’s discretion),
 depending on the nature o f your interaction with it.</Description>
+    <ItemName>Friends</ItemName>
+    <SpellName>Friends</SpellName>
     <School>Enchantment</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -2229,7 +3671,6 @@ depending on the nature o f your interaction with it.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Grease</SpellName>
     <Description>Slick grease covers the ground in a 10-foot square
 centered on a point within range and turns it into
 difficult terrain for the duration.
@@ -2238,10 +3679,13 @@ its area must succeed on a Dexterity saving throw or fall
 prone. A creature that enters the area or ends its turn
 there must also succeed on a Dexterity saving throw
 or fall prone.</Description>
+    <ItemName>Grease</ItemName>
+    <SpellName>Grease</SpellName>
     <School>Conjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>10</AoeSize>
     <AoeType>AOE_TYPE_SQUARE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2256,7 +3700,6 @@ or fall prone.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Identify</SpellName>
     <Description>You choose one object that you must touch throughout
 the casting of the spell. If it is a magic item or som e
 other magic-imbued object, you learn its properties
@@ -2268,10 +3711,13 @@ spell created it.
 
 If you instead touch a creature throughout the casting,
 you learn what spells, if any, are currently affecting it.</Description>
+    <ItemName>Identify</ItemName>
+    <SpellName>Identify</SpellName>
     <School>Divination</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -2286,7 +3732,6 @@ you learn what spells, if any, are currently affecting it.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Illusory Script</SpellName>
     <Description>You write on parchment, paper, or some other suitable
 writing material and imbue it with a potent illusion that
 lasts for the duration.
@@ -2305,11 +3750,14 @@ Should the spell be dispelled, the original script and
 the illusion both disappear.
 
 A creature with truesight can read the hidden message.</Description>
+    <ItemName>Illusory Script</ItemName>
+    <SpellName>Illusory Script</SpellName>
     <AtHigherLevels />
     <School>Illusion</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>144000</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -2324,13 +3772,15 @@ A creature with truesight can read the hidden message.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Jump</SpellName>
     <Description>You touch a creature. The creature’s jump distance is
 tripled until the spell ends.</Description>
+    <ItemName>Jump</ItemName>
+    <SpellName>Jump</SpellName>
     <School>Transmutation</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -2345,7 +3795,6 @@ tripled until the spell ends.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Light</SpellName>
     <Description>You touch one object that is no larger than 10 feet in any
 dimension. Until the spell ends, the object sheds bright
 light in a 20-foot radius and dim light for an additional
@@ -2355,10 +3804,13 @@ light. The spell ends if you cast it again or dismiss it
 as an action. If you target an object held or worn by a hostile
 creature, that creature must succeed on a Dexterity
 saving throw to avoid the spell.</Description>
+    <ItemName>Light</ItemName>
+    <SpellName>Light</SpellName>
     <School>Evocation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -2373,9 +3825,10 @@ saving throw to avoid the spell.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Longstrider</SpellName>
     <Description>You touch a creature. The target’s speed increases by 10
 feet until the spell ends.</Description>
+    <ItemName>Longstrider</ItemName>
+    <SpellName>Longstrider</SpellName>
     <AtHigherLevels>When you cast this spell using
 a spell slot of 2nd level or higher, you can target one
 additional creature for each slot level above 1st.</AtHigherLevels>
@@ -2383,6 +3836,7 @@ additional creature for each slot level above 1st.</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -2397,16 +3851,18 @@ additional creature for each slot level above 1st.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Mage Armor</SpellName>
     <Description>You touch a willing creature who isn’t wearing armor,
 and a protective magical force surrounds it until the
 spell ends. The target’s base AC becom es 13 + its
 Dexterity modifier. The spell ends if the target dons
 armor or if you dismiss the spell as an action.</Description>
+    <ItemName>Mage Armor</ItemName>
+    <SpellName>Mage Armor</SpellName>
     <School>Abjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -2421,7 +3877,6 @@ armor or if you dismiss the spell as an action.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Mage Hand</SpellName>
     <Description>A spectral, floating hand appears at a point you choose
 within range. The hand lasts for the duration or until
 you dismiss it as an action. The hand vanishes if it is
@@ -2433,10 +3888,13 @@ container, or pour the contents out o f a vial. You can
 move the hand up to 30 feet each time you use it.
 The hand can’t attack, activate magic items, or carry
 more than 10 pounds.</Description>
+    <ItemName>Mage Hand</ItemName>
+    <SpellName>Mage Hand</SpellName>
     <School>Conjuration</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -2451,12 +3909,13 @@ more than 10 pounds.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Magic Missile</SpellName>
     <Description>You create three glowing darts of magical force. Each
 dart hits a creature of your choice that you can see
 within range. A dart deals 1d4 + 1 force damage to its
 target. The darts all strike simultaneously, and you can
 direct them to hit one creature or several.</Description>
+    <ItemName>Magic Missile</ItemName>
+    <SpellName>Magic Missile</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the spell creates one
 more dart for each slot level above 1st.</AtHigherLevels>
@@ -2464,6 +3923,7 @@ more dart for each slot level above 1st.</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2478,7 +3938,6 @@ more dart for each slot level above 1st.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Mending</SpellName>
     <Description>This spell repairs a single break or tear in an object
 you touch, such as a broken chain link, two halves of
 a broken key, a torn cloak, or a leaking wineskin. As
@@ -2487,10 +3946,13 @@ any dimension, you mend it. leaving no trace of the
 former damage. This spell can physically repair a magic item
 or construct, but the spell can’t restore magic to
 such an object.</Description>
+    <ItemName>Mending</ItemName>
+    <SpellName>Mending</SpellName>
     <School>Transmutation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -2505,7 +3967,6 @@ such an object.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Message</SpellName>
     <Description>You point your finger toward a creature within range
 and whisper a message. The target (and only the target)
 hears the message and can reply in a whisper that only
@@ -2517,10 +3978,13 @@ common metal, a thin sheet of lead, or 3 feet of wood
 blocks the spell. The spell doesn’t have to follow a
 straight line and can travel freely around corners or
 through openings.</Description>
+    <ItemName>Message</ItemName>
+    <SpellName>Message</SpellName>
     <School>Transmutation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2535,7 +3999,6 @@ through openings.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Minor Illusion</SpellName>
     <Description>You create a sound or an image of an object within
 range that lasts for the duration. The illusion also ends if
 you dismiss it as an action or cast this spell again.
@@ -2558,10 +4021,13 @@ against your spell save DC. If a creature discerns the
 illusion for what it is, the illusion becomes faint to
 the creature
 		</Description>
+    <ItemName>Minor Illusion</ItemName>
+    <SpellName>Minor Illusion</SpellName>
     <School>Illusion</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -2576,7 +4042,6 @@ the creature
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Poison Spray</SpellName>
     <Description>You extend your hand toward a creature you can see
 within range and project a puff of noxious gas from your
 palm. The creature must succeed on a Constitution
@@ -2584,10 +4049,13 @@ saving throw or take 1d12 poison damage.
 This spell’s damage increases by 1d12 when you reach
 5th level (2d12), 11th level (3d12), and 17th level (4d12).
 		</Description>
+    <ItemName>Poison Spray</ItemName>
+    <SpellName>Poison Spray</SpellName>
     <School>Conjuration</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>10</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -2602,7 +4070,6 @@ This spell’s damage increases by 1d12 when you reach
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Presdigitation</SpellName>
     <Description>This spell is a minor magical trick that novice
 spellcasters use for practice. You create one of the
 following magical effects within range:
@@ -2628,10 +4095,13 @@ If you cast this spell multiple times, you can have up to
 three of its non-instantaneous effects active at a time,
 and you can dismiss such an effect as an action
 		</Description>
+    <ItemName>Presdigitation</ItemName>
+    <SpellName>Presdigitation</SpellName>
     <School>Transmutation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>10</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -2646,7 +4116,6 @@ and you can dismiss such an effect as an action
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Protection from Evil and Good</SpellName>
     <Description>Until the spell ends, one willing creature you
 touch is protected against certain types of
 creatures: aberrations, celestials, elementals, fey,
@@ -2659,10 +4128,13 @@ or possessed by them. If the target is already charmed,
 frightened, or possessed by such a creature, the target
 has advantage on any new saving throw against the
 relevant effect.</Description>
+    <ItemName>Protection from Evil and Good</ItemName>
+    <SpellName>Protection from Evil and Good</SpellName>
     <School>Abjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -2677,7 +4149,6 @@ relevant effect.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Ray of Frost</SpellName>
     <Description>A frigid beam of blue-white light streaks toward a
 creature within range. Make a ranged spell attack
 against the target. On a hit, it takes 1d8 cold damage,
@@ -2686,10 +4157,13 @@ your next turn.
 The spell’s damage increases by 1d8 when you reach
 5th level (2d8), 11th level (3d8), and 17th level (4d8).
 		</Description>
+    <ItemName>Ray of Frost</ItemName>
+    <SpellName>Ray of Frost</SpellName>
     <School>Evocation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -2704,13 +4178,14 @@ The spell’s damage increases by 1d8 when you reach
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Ray of Sickness</SpellName>
     <Description>A ray of sickening greenish energy lashes out toward
 a creature within range. Make a ranged spell attack
 against the target. On a hit, the target takes 2d8 poison
 damage and must make a Constitution saving throw.
 On a failed save, it is also poisoned until the end of
 your next turn.</Description>
+    <ItemName>Ray of Sickness</ItemName>
+    <SpellName>Ray of Sickness</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the damage increases by
 1d8 for each slot level above 1st.</AtHigherLevels>
@@ -2718,6 +4193,7 @@ spell slot of 2nd level or higher, the damage increases by
     <SpellLevel>1</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2732,16 +4208,18 @@ spell slot of 2nd level or higher, the damage increases by
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Shield</SpellName>
     <Description>An invisible barrier of magical force appears and
 protects you. Until the start of your next turn, you have a
 +5 bonus to AC, including against the triggering attack,
 and you take no damage from magic missile.
 </Description>
+    <ItemName>Shield</ItemName>
+    <SpellName>Shield</SpellName>
     <School>Abjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -2756,7 +4234,6 @@ and you take no damage from magic missile.
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Shocking Grasp</SpellName>
     <Description>Lightning springs from your hand to deliver a shock to
 a creature you try to touch. Make a melee spell attack
 against the target. You have advantage on the attack roll
@@ -2766,10 +4243,13 @@ reactions until the start of its next turn.
 The spell’s damage increases by 1d8 when you reach
 5th level (2d8), 11th level (3d8), and 17th level (4d8).
 		</Description>
+    <ItemName>Shocking Grasp</ItemName>
+    <SpellName>Shocking Grasp</SpellName>
     <School>Evocation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_TOUCH</RangeType>
@@ -2784,7 +4264,6 @@ The spell’s damage increases by 1d8 when you reach
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Silent Image</SpellName>
     <Description>You create the image of an object, a creature, or some
 other visible phenomenon that is no larger than a 15-foot
 cube. The image appears at a spot within range and
@@ -2805,10 +4284,13 @@ that it is an illusion with a successful Intelligence
 (Investigation) check against your spell save DC. If a
 creature discerns the illusion for what it is, the creature
 can see through the image.</Description>
+    <ItemName>Silent Image</ItemName>
+    <SpellName>Silent Image</SpellName>
     <School>Illusion</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2823,7 +4305,6 @@ can see through the image.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Sleep</SpellName>
     <Description>This spell sends creatures into a magical slumber.
 Roll 5d8; the total is how many hit points of creatures
 this spell can affect. Creatures within 20 feet of
@@ -2843,6 +4324,8 @@ to be affected.
 
 Undead and creatures immune to being charmed
 aren’t affected by this spell.</Description>
+    <ItemName>Sleep</ItemName>
+    <SpellName>Sleep</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, roll an additional 2d8 for
 each slot level above 1st.</AtHigherLevels>
@@ -2850,6 +4333,7 @@ each slot level above 1st.</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>90</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2864,7 +4348,6 @@ each slot level above 1st.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Tasha’s Hideous Laughter</SpellName>
     <Description>A creature of your choice that you can see within range
 perceives everything as hilariously funny and falls
 into fits of laughter if this spell affects it. The target
@@ -2877,11 +4360,14 @@ At the end of each of its turns, and each time it takes
 damage, the target can make another Wisdom saving
 throw. The target has advantage on the saving throw if
 it’s triggered by damage. On a success, the spell ends.</Description>
+    <ItemName>Tasha’s Hideous Laughter</ItemName>
+    <SpellName>Tasha’s Hideous Laughter</SpellName>
     <AtHigherLevels />
     <School>Enchantment</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2896,7 +4382,6 @@ it’s triggered by damage. On a success, the spell ends.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Tenser’s Floating Disk</SpellName>
     <Description>This spell creates a circular, horizontal plane of force,
 3 feet in diameter and 1 inch thick, that floats 3 feet
 above the ground in an unoccupied space of your choice
@@ -2915,10 +4400,13 @@ was created at the bottom.
 If you move m ore than 100 feet from the disk (typically
 because it can’t move around an obstacle to follow you),
 the spell ends.</Description>
+    <ItemName>Tenser’s Floating Disk</ItemName>
+    <SpellName>Tenser’s Floating Disk</SpellName>
     <School>Conjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -2933,7 +4421,6 @@ the spell ends.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Thunderwave</SpellName>
     <Description>A wave of thunderous force sweeps out from you. Each
 creature in a 15-foot cube originating from you must
 make a Constitution saving throw. On a failed save, a
@@ -2944,6 +4431,8 @@ In addition, unsecured objects that are completely
 within the area of effect are automatically pushed 10 feet
 away from you by the spell’s effect, and the spell emits a
 thunderous boom audible out to 300 feet.</Description>
+    <ItemName>Thunderwave</ItemName>
+    <SpellName>Thunderwave</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 2nd level or higher, the damage increases by
 1d8 for each slot level above 1st.</AtHigherLevels>
@@ -2951,6 +4440,7 @@ spell slot of 2nd level or higher, the damage increases by
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>15</AoeSize>
     <AoeType>AOE_TYPE_CUBE</AoeType>
     <RangeType>RANGE_TYPE_SELF</RangeType>
@@ -2965,16 +4455,18 @@ spell slot of 2nd level or higher, the damage increases by
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>True Strike</SpellName>
     <Description>You extend your hand and point a finger at a target in
 range. Your magic grants you a brief insight into the target’s defenses. 
 On your next turn, you gain advantage on your first attack roll against the target, provided that
 this spell hasn’t ended.
 		</Description>
+    <ItemName>True Strike</ItemName>
+    <SpellName>True Strike</SpellName>
     <School>Divination</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>1</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_NONE</RangeType>
@@ -2989,7 +4481,6 @@ this spell hasn’t ended.
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Unseen Servant</SpellName>
     <Description>This spell creates an invisible, mindless, shapeless
 force that perform s simple tasks at your command until
 the spell ends. The servant springs into existence in an
@@ -3009,10 +4500,13 @@ next command.
 If you command the servant to perform a task that
 would move it more than 60 feet away from you,
 the spell ends.</Description>
+    <ItemName>Unseen Servant</ItemName>
+    <SpellName>Unseen Servant</SpellName>
     <School>Conjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>60</SpellRange>
     <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>
@@ -3027,7 +4521,6 @@ the spell ends.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <SpellName>Witch Bolt</SpellName>
     <Description>A beam of crackling, blue energy lances out toward
 a creature within range, forming a sustained arc of
 lightning between you and the target. Make a ranged
@@ -3038,6 +4531,8 @@ lightning damage to the target automatically. The spell
 ends if you use your action to do anything else. The spell
 also ends if the target is ever outside the spell’s range or
 if it has total cover from you.</Description>
+    <ItemName>Witch Bolt</ItemName>
+    <SpellName>Witch Bolt</SpellName>
     <AtHigherLevels>When you cast this spell using
 a spell slot of 2nd level or higher, the initial damage
 increases by 1d12 for each slot level above 1st.</AtHigherLevels>
@@ -3045,6 +4540,7 @@ increases by 1d12 for each slot level above 1st.</AtHigherLevels>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
     <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
     <RangeType>RANGE_TYPE_RANGED</RangeType>

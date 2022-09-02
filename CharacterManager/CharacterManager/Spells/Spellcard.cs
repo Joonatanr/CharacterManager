@@ -189,17 +189,25 @@ namespace CharacterManager.Spells
         {
             String durString;
 
-            if (mySpell.SpellDuration > 0)
+            if (this.mySpell.IsUntilDispelled)
             {
-                durString = getDurationString(mySpell.SpellDuration);
-                if (mySpell.IsConcentration)
-                {
-                    durString = "Concentration, up to " + durString;
-                }     
+                durString = "Until dispelled";
             }
-            else
-            {
-                durString = "Instantaneous";
+            else 
+            { 
+
+                if (mySpell.SpellDuration > 0)
+                {
+                    durString = getDurationString(mySpell.SpellDuration);
+                    if (mySpell.IsConcentration)
+                    {
+                        durString = "Concentration, up to " + durString;
+                    }
+                }
+                else
+                {
+                    durString = "Instantaneous";
+                }
             }
 
             labelDuration.Text = durString;
@@ -252,6 +260,7 @@ namespace CharacterManager.Spells
         private String getDurationString(int turns)
         {
             String res = "";
+            
             if(turns < 10)
             {
                 /* Not sure if this actually happens. */
