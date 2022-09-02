@@ -311,22 +311,27 @@ namespace CharacterManager
                 List<BonusValueModifier> attackModifiers;
                 List<BonusValueModifier> damageModifiers;
 
-                if (activeCharacter.MakeWeaponAttack(w, out attackresult, out attackModifiers, out damageModifiers) == false)
+                bool isAttackOk = true;
+
+                if (!w.IsEquipped)
                 {
-                    MessageBox.Show(attackresult);
+                    MessageBox.Show("Weapon not equipped.");
+                    isAttackOk = false;
                 }
-                else
+
+                if (isAttackOk)
                 {
+                    activeCharacter.getWeaponAttackModifiers(w, out attackModifiers, out damageModifiers);
+         
                     weaponForm.Weapon = w;
                     weaponForm.AttackModifiers = attackModifiers;
                     weaponForm.DamageModifiers = damageModifiers;
                     weaponForm.setCharacter(activeCharacter);
 
                     weaponForm.Show();
+                    
+                    userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
                 }
-                
-
-                userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
             }
         }
 

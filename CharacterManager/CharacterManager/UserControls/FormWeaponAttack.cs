@@ -114,9 +114,33 @@ namespace CharacterManager.UserControls
             {
                 List<PlayerAbility> combatAbilitiesList = _connectedCharacter.CharacterAbilitiesObjectList.FindAll(a => a.IsCombatAbility).ToList();
                 userControlCombatAbilitiesList.setAttributeList(combatAbilitiesList);
+
+                foreach(PlayerAbility combatAbility in combatAbilitiesList)
+                {
+                    combatAbility.IsActiveChanged += new PlayerAbility.PlayerAbilityIsActiveChanged(CombatAbilityActiveChangedHandler);
+                    combatAbility.AbilityUsed += new PlayerAbility.PlayerAbilityUsedListener(CombatAbilityUsedHandler);
+                }
             }
         }
 
+        private void CombatAbilityActiveChangedHandler(bool isActive)
+        {
+
+        }
+
+        private void CombatAbilityUsedHandler(PlayerAbility ability)
+        {
+            /* Lets refresh out attack modifiers then... */
+            if(_connectedCharacter != null)
+            {
+                List<BonusValueModifier> attackModifiers;
+                List<BonusValueModifier> damageModifiers;
+
+                _connectedCharacter.getWeaponAttackModifiers(Weapon, out attackModifiers, out damageModifiers);
+                AttackModifiers = attackModifiers;
+                DamageModifiers = damageModifiers;
+            }
+        }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {

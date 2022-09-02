@@ -107,11 +107,13 @@ namespace CharacterManager
         /* TODO : We really need to get started with this. */
         public delegate void PlayerAbilityValueChanged(int value);
         public delegate void PlayerAbilityIsActiveChanged(bool isActive);
+        public delegate void PlayerAbilityUsedListener(PlayerAbility ability);
 
         public event PlayerAbilityValueChanged MaximumChargesChanged;
         public event PlayerAbilityValueChanged RemainingChargesChanged;
 
         public event PlayerAbilityIsActiveChanged IsActiveChanged;
+        public event PlayerAbilityUsedListener AbilityUsed;
 
         [XmlIgnore]
         protected PlayerCharacter _connectedCharacter;
@@ -177,7 +179,14 @@ namespace CharacterManager
             {
                 res = UseAbilitySpecial();
             }
-            
+
+            if (res)
+            {
+                if(AbilityUsed != null)
+                {
+                    AbilityUsed.Invoke(this);
+                }
+            }
             /* TODO : Create another method for overwriting. This one should be universal for all abilities. */
 
             return res;

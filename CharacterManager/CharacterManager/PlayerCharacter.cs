@@ -427,26 +427,11 @@ namespace CharacterManager
         }
 
         
-        public bool MakeWeaponAttack(PlayerWeapon w, out string resultString, out List<BonusValueModifier> attackModifiers, out List<BonusValueModifier> damageModifiers)
+        public void getWeaponAttackModifiers(PlayerWeapon w, out List<BonusValueModifier> attackModifiers, out List<BonusValueModifier> damageModifiers)
         {
-            resultString = "";
             attackModifiers = new List<BonusValueModifier>();
             damageModifiers = new List<BonusValueModifier>();
 
-            if (!w.IsEquipped)
-            {
-                resultString = "Weapon not equipped.";
-                return false;
-            }
-
-            if (w.IsAmmunition)
-            {
-                if (!isRangedAmmoOk(w))
-                {
-                    resultString = "No ammunition";
-                    return false;
-                }
-            }
 
            /* First set up the attack roll */
            /* We begin with a simple d20 always. */
@@ -471,16 +456,6 @@ namespace CharacterManager
 
            attackModifiers.AddRange(BonusValues.AttackRollBonusModifiers);
            damageModifiers.AddRange(BonusValues.AttackDamageBonusModifiers);
-
-           /* TODO : Need to add this in some other manner. This information should end up on the weapon attack form. */
-           if (BonusValues.AttackNoteString.Length > 0)
-           {
-               resultString += "\n" + BonusValues.AttackNoteString;
-           }
-           /*TODO : Ranged weapons will probably be more complicated... */
-           /*TODO : Should also consider thrown weapons. --- We really need a form for this. */
-
-            return true;
         }
 
         internal void PerformLongRest()
@@ -573,7 +548,20 @@ namespace CharacterManager
                 }
                 obj.connectToCharacter(this);
                 obj.InitializeSubscriptions(this);
+                obj.AbilityUsed += new PlayerAbility.PlayerAbilityUsedListener(abilityUsed);
+                obj.IsActiveChanged += new PlayerAbility.PlayerAbilityIsActiveChanged(abilityActiveChanged);
+                
             }
+        }
+
+        private void abilityUsed(PlayerAbility ability)
+        {
+            /* TODO Placeholder. */
+        }
+
+        private void abilityActiveChanged(bool isActive)
+        {
+            /* TODO Placeholder */
         }
 
 
