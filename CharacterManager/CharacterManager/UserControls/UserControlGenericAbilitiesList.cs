@@ -155,12 +155,18 @@ namespace CharacterManager.UserControls
                 {
                     if (Attribute.IsActive)
                     {
-                        this.UseButton.ButtonText = "Disable";
+                        if (this.UseButton != null)
+                        {
+                            this.UseButton.ButtonText = "Disable";
+                        }
                         //Attribute.RemainingCharges--;
                     }
                     else
                     {
-                        this.UseButton.ButtonText = "Activate";
+                        if (this.UseButton != null)
+                        {
+                            this.UseButton.ButtonText = "Activate";
+                        }
                     }
                     
                     if(DisplayDataChanged != null)

@@ -298,14 +298,13 @@ namespace CharacterManager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show("There are lines : " + userControlWeaponsHandler1.originalNumberOfLines);
+            
         }
 
         private void userControlWeaponsHandler1_WeaponAttackEvent(Items.PlayerWeapon w)
         {
             if (activeCharacter != null)
             {
-                string attackresult;
                 FormWeaponAttack weaponForm = new FormWeaponAttack();
 
                 List<BonusValueModifier> attackModifiers;
