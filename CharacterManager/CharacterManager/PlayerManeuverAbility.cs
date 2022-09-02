@@ -181,26 +181,28 @@ namespace CharacterManager
             myInfoForm.Show();
         }
 
-        public override List<BonusValueModifier> getDifficultyClass(PlayerCharacter c)
+        public override List<BonusValueModifier> getDifficultyClass()
         {
             List<BonusValueModifier> modifiers = new List<BonusValueModifier>();
 
-            int dexMod = c.getModifier("DEX");
-            int strMod = c.getModifier("STR");
-
-            modifiers.Add(new BonusValueModifier("Base", 8));
-
-            if (strMod >= dexMod)
+            if (_connectedCharacter != null)
             {
-                modifiers.Add(new BonusValueModifier("STR bonus", strMod));
-            }
-            else
-            {
-                modifiers.Add(new BonusValueModifier("DEX bonus", dexMod));
-            }
+                int dexMod = _connectedCharacter.getModifier("DEX");
+                int strMod = _connectedCharacter.getModifier("STR");
 
-            modifiers.Add(new BonusValueModifier("Proficiency Bonus", c.ProficiencyBonus));
+                modifiers.Add(new BonusValueModifier("Base", 8));
 
+                if (strMod >= dexMod)
+                {
+                    modifiers.Add(new BonusValueModifier("STR bonus", strMod));
+                }
+                else
+                {
+                    modifiers.Add(new BonusValueModifier("DEX bonus", dexMod));
+                }
+
+                modifiers.Add(new BonusValueModifier("Proficiency Bonus", _connectedCharacter.ProficiencyBonus));
+            }
             return modifiers;
         }
 

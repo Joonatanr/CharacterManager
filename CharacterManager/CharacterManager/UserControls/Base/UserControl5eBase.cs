@@ -20,6 +20,11 @@ namespace CharacterManager.UserControls
             this.DoubleBuffered = true;
         }
 
+        public void setTooltipString(string str)
+        {
+            toolTip1.SetToolTip(this, str);
+        }
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

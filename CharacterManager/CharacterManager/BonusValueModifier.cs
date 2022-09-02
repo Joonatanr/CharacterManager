@@ -129,5 +129,17 @@ namespace CharacterManager
 
             return modifierString;
         }
+
+        public static int getTotalValueFromList(List<BonusValueModifier> list)
+        {
+            int res = 0;
+
+            foreach(BonusValueModifier mod in list)
+            {
+                res += mod.modifierValue;
+            }
+
+            return res;
+        }
     };
 }

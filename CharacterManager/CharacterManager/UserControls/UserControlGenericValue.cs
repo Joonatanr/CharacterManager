@@ -17,6 +17,22 @@ namespace CharacterManager.UserControls
         public String Value { get { return _value; } set { _value = value; this.Invalidate(); } }
         public string Label { get { return _label; } set { _label = value; this.Invalidate(); } }
 
+        private List<BonusValueModifier> _myBonusValues = new List<BonusValueModifier>();
+        public List<BonusValueModifier> ValueModifiers
+        {
+            get
+            {
+                return _myBonusValues;
+            }
+
+            set
+            {
+                _myBonusValues = value;
+                this.Value = BonusValueModifier.getTotalValueFromList(_myBonusValues).ToString();
+                this.setTooltipString(BonusValueModifier.getToolTipStringFromList(_myBonusValues));
+            }
+        }
+
         public UserControlGenericValue() : base()
         {
             InitializeComponent();

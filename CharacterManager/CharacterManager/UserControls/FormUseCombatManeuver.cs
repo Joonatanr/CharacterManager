@@ -42,11 +42,8 @@ namespace CharacterManager.UserControls
 
                 dieRollTextBox1.DieRollObject = _myManeuverAbility.DiceObject;
 
-
-                /* We need access to the player character object.... */
-                /* TODO */
-                //List<BonusValueModifier> DifficultyClassModifiers = _myManeuverAbility.getDifficultyClass();
-                //userControlGenericValue1.Value = 
+                List<BonusValueModifier> DifficultyClassModifiers = _myManeuverAbility.getDifficultyClass();
+                userControlGenericValue1.ValueModifiers = DifficultyClassModifiers;
             }
         }
 

@@ -84,6 +84,9 @@ namespace CharacterManager
         public event PlayerAbilityValueChanged RemainingChargesChanged;
 
 
+        [XmlIgnore]
+        protected PlayerCharacter _connectedCharacter;
+
         public PlayerAbility()
         {
             Name = "UNKNOWN";
@@ -98,6 +101,11 @@ namespace CharacterManager
         internal static PlayerAbility resolveFromString(string s)
         {
             return CharacterFactory.getPlayerAbilityFromString(s);
+        }
+
+        public void connectToCharacter(PlayerCharacter c)
+        {
+            _connectedCharacter = c;
         }
 
         public virtual Boolean UseAbility(PlayerCharacter c)
@@ -156,7 +164,7 @@ namespace CharacterManager
             MessageBox.Show(this.Description);
         }
 
-        public virtual List<BonusValueModifier> getDifficultyClass(PlayerCharacter c)
+        public virtual List<BonusValueModifier> getDifficultyClass()
         {
             /* This can be overridden by special abilities. */
             return new List<BonusValueModifier>();

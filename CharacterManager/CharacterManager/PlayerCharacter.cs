@@ -571,6 +571,7 @@ namespace CharacterManager
                     obj.RemainingCharges = obj.MaximumCharges;
                     CharacterAbilities.Add(obj.ConvertToDescriptor());
                 }
+                obj.connectToCharacter(this);
                 obj.InitializeSubscriptions(this);
             }
         }
