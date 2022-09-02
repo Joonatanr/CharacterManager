@@ -13,10 +13,10 @@ namespace CharacterManager
     public class PlayerAbility
     {
 
-        public string Description;
-        public string Name;
+        public string Description { get; set; }
+        public string Name { get; set; }
 
-        public bool IsCombatAbility = false;
+        public bool IsCombatAbility { get; set; } = false;
 
         [XmlIgnore]
         private int _maximumCharges = 0; /* Maximum uses 0 indicates a passive ability. */
@@ -33,10 +33,10 @@ namespace CharacterManager
             }
         }
         
-        public Boolean IsToggle = false; /* Can the ability be toggled on or off. */
-        public Boolean RechargeAtShortRest = false;
-        public Boolean RechargeAtLongRest = false;
-        public string Dice; /* A lot of playerabilities have some kind of diceroll associated with it. */
+        public Boolean IsToggle { get; set; } = false; /* Can the ability be toggled on or off. */
+        public Boolean RechargeAtShortRest { get; set; } = false;
+        public Boolean RechargeAtLongRest { get; set; } = false;
+        public string Dice { get; set; } /* A lot of playerabilities have some kind of diceroll associated with it. */
 
         [XmlIgnore]
         public virtual string DisplayedName { get { return Name; } } /* This should be used instead of the AttributeName*/
@@ -63,7 +63,7 @@ namespace CharacterManager
         }
 
         [XmlIgnore]
-        public Boolean IsActive = false;
+        public Boolean IsActive { get; set; } = false;
 
         [XmlIgnore]
         public DieRollEquation DiceObject

@@ -207,7 +207,6 @@ namespace CharacterManager
 
                 if (!w.IsRanged)
                 {
-                    //c.BonusValues.AttackDamageBonus += bonus;
                     c.BonusValues.AttackDamageBonusModifiers.Add(new BonusValueModifier("Rage", bonus));
                 }
             }
