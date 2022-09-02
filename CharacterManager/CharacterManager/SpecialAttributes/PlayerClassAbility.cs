@@ -150,13 +150,8 @@ namespace CharacterManager
             this.Name = "Second Wind";
         }
 
-        public override bool UseAbility()
-        {
-            if( base.UseAbility() == false)
-            {
-                return false;
-            }
-            
+        public override bool UseAbilitySpecial()
+        {            
             FormUseAbility myForm = new FormUseAbility();
 
             /* TODO : Can't we get this in some other manner??? The ability itself should have the description... */

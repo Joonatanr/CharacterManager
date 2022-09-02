@@ -139,9 +139,9 @@ namespace CharacterManager.UserControls
 
             private void Use_Click(object sender, EventArgs e)
             {
-                if (Attribute.RemainingCharges > 0 || (Attribute.IsToggle && Attribute.IsActive))
+                if (Attribute.UseAbility())
                 {
-                    Attribute.UseAbility();    
+                     /* Should we do something here. */
                 }
                 else
                 {
@@ -156,7 +156,7 @@ namespace CharacterManager.UserControls
                     if (Attribute.IsActive)
                     {
                         this.UseButton.ButtonText = "Disable";
-                        Attribute.RemainingCharges--;
+                        //Attribute.RemainingCharges--;
                     }
                     else
                     {
@@ -167,11 +167,10 @@ namespace CharacterManager.UserControls
                     {
                         DisplayDataChanged.Invoke();
                     }
-                    //UseButton.Parent.Invalidate();
                 }
                 else
                 {
-                    Attribute.RemainingCharges--;
+                    //Attribute.RemainingCharges--;
                 }
             }
         }
@@ -220,7 +219,6 @@ namespace CharacterManager.UserControls
                 AddButtonOnLine(myBtn, y, 0);
                 cData.ButtonInfo = myBtn;
 
-                /* TODO : This part is unfinished and mostly a placeholder. */
                 if (IsSlotsVisible) 
                 {
                     if (attrib.MaximumCharges > 0)

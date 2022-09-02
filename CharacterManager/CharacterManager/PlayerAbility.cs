@@ -137,21 +137,56 @@ namespace CharacterManager
             _connectedCharacter = c;
         }
 
-        public virtual Boolean UseAbility()
+        public Boolean UseAbility()
         {
-            /* This will be overwritten by special abilities. */
-            if (this.IsToggle)
+            bool res = true;
+            
+            if(IsToggle && IsActive)
             {
-                if (this.IsActive)
+                /* Special case, we are deactivating. */
+                this.IsActive = false;
+                res = true;
+            }
+            else 
+            {
+                if (MaximumCharges > 0)
                 {
-                    this.IsActive = false;
+                    if (RemainingCharges > 0)
+                    {
+                        RemainingCharges--;
+                        res = true;
+                    }
+                    else
+                    {
+                        res = false;
+                    }
                 }
                 else
+                {
+                    res = true;
+                }
+
+                if (IsToggle && res)
                 {
                     this.IsActive = true;
                 }
             }
 
+
+            if (res)
+            {
+                res = UseAbilitySpecial();
+            }
+            
+            /* TODO : Create another method for overwriting. This one should be universal for all abilities. */
+
+            return res;
+        }
+
+
+        /* This will be overwritten by special abilities. */
+        public virtual bool UseAbilitySpecial()
+        {
             return true;
         }
 
