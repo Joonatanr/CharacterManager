@@ -531,6 +531,16 @@ your Strength or Dexterity modifier (your choice)</Description>
 		
 		<Dice>1d8</Dice>
 		<IsCombatAbility>true</IsCombatAbility>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>10</Level>
+				<Dice>1d10</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>15</Level>
+				<Dice>1d12</Dice>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
 	</PlayerAbility>
 	
 <!-- Barbarian class abilities -->
