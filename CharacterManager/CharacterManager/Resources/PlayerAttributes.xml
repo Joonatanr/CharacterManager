@@ -550,6 +550,12 @@ You can also end your rage on your turn as a bonus action. Once you have raged t
 		<RechargeAtShortRest>false</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
 		<IsCombatAbility>true</IsCombatAbility>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>3</Level>
+				<MaximumCharges>3</MaximumCharges>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
 	</PlayerAbility>
 		
 	<PlayerAbility>

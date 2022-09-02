@@ -687,6 +687,15 @@ namespace CharacterManager
             return BonusValues.AcBonus;
         }
 
+        public void UpdateAbilityConnections()
+        {
+            /* We update all connections of the abilities to the player object itself. */
+            foreach(PlayerAbility ability in CharacterAbilitiesObjectList)
+            {
+                ability.connectToCharacter(this);
+            }
+        }
+
 
         public PlayerClass GetPlayerClass()
         {

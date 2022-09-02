@@ -101,6 +101,7 @@
     <Compile Include="Language.cs" />
     <Compile Include="PlayerAbility.cs" />
     <Compile Include="PlayerAbilityDescriptor.cs" />
+    <Compile Include="PlayerAbilityUpgrade.cs" />
     <Compile Include="PlayerCharacter.cs" />
     <Compile Include="PlayerClass.cs" />
     <Compile Include="PlayerClassAbilityChoice.cs" />

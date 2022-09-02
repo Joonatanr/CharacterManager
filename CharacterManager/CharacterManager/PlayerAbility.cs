@@ -38,6 +38,8 @@ namespace CharacterManager
         public Boolean RechargeAtLongRest { get; set; } = false;
         public string Dice { get; set; } /* A lot of playerabilities have some kind of diceroll associated with it. */
 
+        public List<PlayerAbilityUpgrade> Upgrades { get; set; }
+
         [XmlIgnore]
         public virtual string DisplayedName { get { return Name; } } /* This should be used instead of the AttributeName*/
 
@@ -137,6 +139,43 @@ namespace CharacterManager
         public void connectToCharacter(PlayerCharacter c)
         {
             _connectedCharacter = c;
+
+            /* Here we can resolve all possible upgrades. */
+            resolveUpgrades();
+        }
+
+        private void resolveUpgrades()
+        {
+            if (_connectedCharacter != null)
+            {
+                int level = _connectedCharacter.Level;
+
+                if (Upgrades != null)
+                {
+                    List<PlayerAbilityUpgrade> myUpgrades = Upgrades.OrderBy(u => u.Level).ToList();
+
+                    foreach (PlayerAbilityUpgrade upgrade in myUpgrades)
+                    {
+                        if (upgrade.Level <= level)
+                        {
+                            applyUpgrade(upgrade);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void applyUpgrade(PlayerAbilityUpgrade upgrade)
+        {
+            /* TODO : There should be a better way to do this. */
+            if (upgrade.Dice != null)
+            {
+                this.Dice = upgrade.Dice;
+            }
+            if (upgrade.MaximumCharges > 0)
+            {
+                this.MaximumCharges = upgrade.MaximumCharges;
+            }
         }
 
         /// <summary>

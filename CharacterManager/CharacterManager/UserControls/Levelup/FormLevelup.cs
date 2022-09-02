@@ -113,8 +113,18 @@ namespace CharacterManager.UserControls
         private void buttonOk_Click(object sender, EventArgs e)
         {
             /* TODO  : Here we finalize the character. */
+
+            
             _myCharacter.CharacterAbilitiesObjectList.AddRange(SelectedPlayerAbilities);
             _myCharacter.CurrentHitPoints += (_myCharacter.MaxHitPoints - prevMaxHp);
+
+            _myCharacter.UpdateAbilityConnections();
+
+            foreach(PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
+            {
+                ability.RemainingCharges = ability.MaximumCharges;
+            }
+
 
             this.DialogResult = DialogResult.OK;
             this.Close();
