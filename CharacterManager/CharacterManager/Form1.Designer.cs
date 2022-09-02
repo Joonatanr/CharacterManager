@@ -35,6 +35,8 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonShortRest = new System.Windows.Forms.Button();
             this.buttonLongRest = new System.Windows.Forms.Button();
             this.userControlEquipmentHandler1 = new CharacterManager.UserControls.UserControlEquipmentHandler();
@@ -80,8 +82,6 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -179,6 +179,26 @@
             this.tabPageCharacter.TabIndex = 0;
             this.tabPageCharacter.Text = "Character";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(907, 600);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Debug -";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(907, 572);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Debug +";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // buttonShortRest
             // 
             this.buttonShortRest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
@@ -235,7 +255,6 @@
             this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
             this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(288, 409);
             this.userControlGenericAbilitiesList1.TabIndex = 30;
-            this.userControlGenericAbilitiesList1.PlayerAbilityUsed += new CharacterManager.UserControls.UserControlGenericAbilitiesList.PlayerAbilityUseHandler(this.userControlGenericAbilitiesList1_PlayerAbilityUsed);
             // 
             // groupBox4
             // 
@@ -620,26 +639,6 @@
             this.toolStripButtonLoad.Size = new System.Drawing.Size(37, 22);
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(907, 572);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Debug +";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(907, 600);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Debug -";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

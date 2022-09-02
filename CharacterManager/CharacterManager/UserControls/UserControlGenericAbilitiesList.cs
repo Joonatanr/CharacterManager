@@ -170,9 +170,6 @@ namespace CharacterManager.UserControls
 
         public Boolean IsSlotsVisible { get; set; } = false;
 
-        public delegate Boolean PlayerAbilityUseHandler(PlayerAbility ability);
-        public event PlayerAbilityUseHandler PlayerAbilityUsed;
-
         public UserControlGenericAbilitiesList() : base()
         {
             InitializeComponent();
@@ -260,14 +257,7 @@ namespace CharacterManager.UserControls
 
         private Boolean handleUseAbilityButton(PlayerAbility ability)
         {
-            if (PlayerAbilityUsed == null)
-            {
-                return false;
-            }
-            else
-            {
-               return PlayerAbilityUsed.Invoke(ability);
-            }
+            return ability.UseAbility();
         }
 
         private void SpellSlotIndicatorChangedManuallyHandler(PlayerAbility ability, int cnt)

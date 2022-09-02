@@ -110,7 +110,7 @@ namespace CharacterManager
             _connectedCharacter = c;
         }
 
-        public virtual Boolean UseAbility(PlayerCharacter c)
+        public virtual Boolean UseAbility()
         {
             /* This will be overwritten by special abilities. */
             if (this.IsToggle)

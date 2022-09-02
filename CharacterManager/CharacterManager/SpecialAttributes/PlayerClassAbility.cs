@@ -150,23 +150,35 @@ namespace CharacterManager
             this.Name = "Second Wind";
         }
 
-        public override bool UseAbility(PlayerCharacter c)
+        public override bool UseAbility()
         {
+            if( base.UseAbility() == false)
+            {
+                return false;
+            }
+            
             FormUseAbility myForm = new FormUseAbility();
 
             /* TODO : Can't we get this in some other manner??? The ability itself should have the description... */
             myForm.Description = "Restore 1d10 + your fighter level";
             myForm.AbilityName = "Second Wind";
 
-            List<BonusValueModifier> rollComponents = new List<BonusValueModifier>();
-            rollComponents.Add(new BonusValueModifier("Second wind die", "1d10"));
-            rollComponents.Add(new BonusValueModifier("Level", c.Level));
-            myForm.DieRollModifiers = rollComponents;
-
-            if (myForm.ShowDialog() == DialogResult.OK)
+            if (_connectedCharacter != null)
             {
-                c.CurrentHitPoints = Math.Min(c.MaxHitPoints, myForm.RollResult + c.CurrentHitPoints);
-                return true;
+                List<BonusValueModifier> rollComponents = new List<BonusValueModifier>();
+                rollComponents.Add(new BonusValueModifier("Second wind die", "1d10"));
+                rollComponents.Add(new BonusValueModifier("Level", _connectedCharacter.Level));
+                myForm.DieRollModifiers = rollComponents;
+
+                if (myForm.ShowDialog() == DialogResult.OK)
+                {
+                    _connectedCharacter.CurrentHitPoints = Math.Min(_connectedCharacter.MaxHitPoints, myForm.RollResult + _connectedCharacter.CurrentHitPoints);
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             else
             {

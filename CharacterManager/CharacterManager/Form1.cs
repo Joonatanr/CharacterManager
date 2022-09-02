@@ -423,12 +423,6 @@ namespace CharacterManager
             }
         }
 
-        private bool userControlGenericAbilitiesList1_PlayerAbilityUsed(PlayerAbility ability)
-        {
-            /* TODO : This is a placeholder. */
-            return ability.UseAbility(activeCharacter);
-        }
-
         private void buttonAddXp_Click(object sender, EventArgs e)
         {
             FormAddXp myXpForm = new FormAddXp();
