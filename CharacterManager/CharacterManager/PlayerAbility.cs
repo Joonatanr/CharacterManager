@@ -139,6 +139,31 @@ namespace CharacterManager
             _connectedCharacter = c;
         }
 
+        /// <summary>
+        /// This should be accessed if the ability will return some situational attack modifiers immediately after it is used.
+        /// Basically this is used for an ability that gives bonuses for a single attack. An ability that can provide bonuses
+        /// consistently while active, such as Rage should modify the attack bonuses through the PlayerCharacter event handlers.
+        /// </summary>
+        /// <returns></returns>
+        public virtual List<BonusValueModifier> getSituationalAttackModifiers()
+        {
+            /* Here we just return an empty list. Subclasses can return something interesting. */
+            return new List<BonusValueModifier>();
+        }
+
+        /// <summary>
+        /// This should be accessed if the ability will return some situational damage modifiers immediately after it is used.
+        /// Basically this is used for an ability that gives bonuses for a single attack. An ability that can provide bonuses
+        /// consistently while active, such as Rage should modify the attack bonuses through the PlayerCharacter event handlers.
+        /// </summary>
+        /// <returns></returns>
+        public virtual List<BonusValueModifier> getSituationalDamageModifiers()
+        {
+            /* Here we just return an empty list. Subclasses can return something interesting. */
+            return new List<BonusValueModifier>();
+        }
+
+
         public Boolean UseAbility()
         {
             bool res = true;

@@ -207,6 +207,15 @@ namespace CharacterManager
         }
 
 
+        public override List<BonusValueModifier> getSituationalDamageModifiers()
+        {
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
+
+            res.Add(new BonusValueModifier("Superiority Die", this.Dice));
+
+            return res;
+        }
+
         private void handleManeuverChoice(PlayerCharacter Character)
         {
             FormChooseCombatManeuvers myForm = new FormChooseCombatManeuvers();

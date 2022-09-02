@@ -125,13 +125,8 @@ namespace CharacterManager.UserControls
 
         private void CombatAbilityActiveChangedHandler(bool isActive)
         {
-
-        }
-
-        private void CombatAbilityUsedHandler(PlayerAbility ability)
-        {
             /* Lets refresh out attack modifiers then... */
-            if(_connectedCharacter != null)
+            if (_connectedCharacter != null)
             {
                 List<BonusValueModifier> attackModifiers;
                 List<BonusValueModifier> damageModifiers;
@@ -139,6 +134,28 @@ namespace CharacterManager.UserControls
                 _connectedCharacter.getWeaponAttackModifiers(Weapon, out attackModifiers, out damageModifiers);
                 AttackModifiers = attackModifiers;
                 DamageModifiers = damageModifiers;
+            }
+        }
+
+        private void CombatAbilityUsedHandler(PlayerAbility ability)
+        {
+            /* In case of a single use ability, we will update the situational bonus of said ability. */
+            List<BonusValueModifier> situationalAttackBonusModifiers = ability.getSituationalAttackModifiers();
+            List<BonusValueModifier> situationalDamageBonusModifiers = ability.getSituationalDamageModifiers();
+
+            /* TODO : Perhaps a more complex solution could be implemented in the future. Maybe add a separate DieRollTextBox for
+             ability modifiers. This will get its value incremented by each ability use. Such as using a Divine Smite, Combat Maneuver and
+            some other ability at the same time... However for the time being, lets just overwrite the situational bonus. For a more
+            complex situation manual editing will be required... */
+
+            if(situationalAttackBonusModifiers.Count > 0)
+            {
+                userControlAttackDieRolls.setSituationalBonus(BonusValueModifier.GetEquationFromList(situationalAttackBonusModifiers));
+            }
+
+            if(situationalDamageBonusModifiers.Count > 0)
+            {
+                userControlDamageDieRoll.setSituationalBonus(BonusValueModifier.GetEquationFromList(situationalDamageBonusModifiers));
             }
         }
 

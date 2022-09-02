@@ -67,6 +67,7 @@ namespace CharacterManager.UserControls
             this.textBoxRollSituational.Size = new System.Drawing.Size(130, 20);
             this.textBoxRollSituational.TabIndex = 15;
             this.textBoxRollSituational.Text = "0";
+            this.textBoxRollSituational.TextChanged += new System.EventHandler(this.textBoxRollSituational_TextChanged);
             this.textBoxRollSituational.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxRollSituational_KeyDown);
             this.textBoxRollSituational.Leave += new System.EventHandler(this.textBoxRollSituational_Leave);
             // 

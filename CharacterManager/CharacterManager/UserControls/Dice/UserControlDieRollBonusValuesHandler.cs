@@ -123,9 +123,21 @@ namespace CharacterManager.UserControls
             textBoxRollTotalResult.Text = result.ToString();
         }
 
+        private void textBoxRollSituational_TextChanged(object sender, EventArgs e)
+        {
+            /* Might have been changed programmatically... We need to catch this somehow. */
+        }
+
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+
+        internal void setSituationalBonus(DieRollEquation dieRollEquation)
+        {
+            /* We do this in a very simplified manner for now. */
+            textBoxRollSituational.Text = dieRollEquation.ToString();
+            updateTotalModifiers();
         }
     }
 }
