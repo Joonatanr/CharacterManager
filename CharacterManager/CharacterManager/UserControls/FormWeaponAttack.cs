@@ -15,6 +15,7 @@ namespace CharacterManager.UserControls
     public partial class FormWeaponAttack : Form
     {
         private PlayerWeapon _weapon;
+        private PlayerCharacter _connectedCharacter = null;
 
         public PlayerWeapon Weapon
         {
@@ -98,6 +99,22 @@ namespace CharacterManager.UserControls
 
             userControlAttackDieRolls.rollListener = new UserControlDieRollBonusValuesHandler.logRoll(logReport);
             userControlDamageDieRoll.rollListener = new UserControlDieRollBonusValuesHandler.logRoll(logReport);
+        }
+
+        public void setCharacter(PlayerCharacter character)
+        {
+            _connectedCharacter = character;
+            setupCombatAbilitiesList();
+        }
+
+
+        private void setupCombatAbilitiesList()
+        {
+            if(_connectedCharacter != null)
+            {
+                List<PlayerAbility> combatAbilitiesList = _connectedCharacter.CharacterAbilitiesObjectList.FindAll(a => a.IsCombatAbility).ToList();
+                userControlCombatAbilitiesList.setAttributeList(combatAbilitiesList);
+            }
         }
 
 

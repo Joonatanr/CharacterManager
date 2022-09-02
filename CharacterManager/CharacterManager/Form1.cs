@@ -311,7 +311,6 @@ namespace CharacterManager
                 List<BonusValueModifier> attackModifiers;
                 List<BonusValueModifier> damageModifiers;
 
-                /* TODO : Maybe rename function? */
                 if (activeCharacter.MakeWeaponAttack(w, out attackresult, out attackModifiers, out damageModifiers) == false)
                 {
                     MessageBox.Show(attackresult);
@@ -321,11 +320,12 @@ namespace CharacterManager
                     weaponForm.Weapon = w;
                     weaponForm.AttackModifiers = attackModifiers;
                     weaponForm.DamageModifiers = damageModifiers;
+                    weaponForm.setCharacter(activeCharacter);
 
                     weaponForm.Show();
                 }
                 
-                /* TODO : Investigate why this call is necessary... */
+
                 userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
             }
         }

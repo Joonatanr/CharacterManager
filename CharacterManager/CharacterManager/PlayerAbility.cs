@@ -16,6 +16,8 @@ namespace CharacterManager
         public string Description;
         public string Name;
 
+        public bool IsCombatAbility = false;
+
         [XmlIgnore]
         private int _maximumCharges = 0; /* Maximum uses 0 indicates a passive ability. */
         public int MaximumCharges

@@ -161,6 +161,9 @@ namespace CharacterManager.UserControls
             }
         }
 
+
+        public String Title { get; set; } = "Abilities:";
+
         private List<PlayerAbility> listOfAttributes = new List<PlayerAbility>();
         private List<AttributeControlData> listOfAttributeControls = new List<AttributeControlData>();
 
@@ -280,7 +283,7 @@ namespace CharacterManager.UserControls
         protected override void drawData(Graphics gfx, Font font)
         {
             //Lets draw a descriptive text.
-            drawTextOnLine(gfx, "Abilities:", 0, font);
+            drawTextOnLine(gfx, Title, 0, font);
 
             int y = 2;
             if (listOfAttributes != null)

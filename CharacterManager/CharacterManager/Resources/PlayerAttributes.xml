@@ -133,6 +133,7 @@ again until you complete a short or long rest.
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -160,6 +161,7 @@ again until you complete a short or long rest.
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -185,6 +187,7 @@ again until you complete a short or long rest.
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -211,6 +214,7 @@ again until you complete a short or long rest.
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<!-- Green Dragon -->
@@ -230,6 +234,7 @@ again until you complete a short or long rest.
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -256,6 +261,7 @@ again until you complete a short or long rest.
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<!-- Silver Dragon -->
@@ -275,6 +281,7 @@ again until you complete a short or long rest.
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -379,6 +386,7 @@ a melee weapon attack, you can roll one of the weapon’s
 damage dice one additional time and add it to the extra 
 damage of the critical hit.</Description>
 		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -405,6 +413,7 @@ these spells.</Description>
 		<Name>Archery Fighting Style</Name>
 		<Description>You gain a +2 bonus to attack rolls you make with ranged weapons.</Description>
 		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -417,12 +426,14 @@ these spells.</Description>
 		<Name>Dueling Fighting Style</Name>
 		<Description>When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</Description>
 		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
 		<Name>Great Weapon Fighting Style</Name>
 		<Description>When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.</Description>
 		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 
 	<PlayerAbility>
@@ -435,6 +446,7 @@ these spells.</Description>
 		<Name>Two-Weapon Fighting Style</Name>
 		<Description>When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.</Description>
 		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -451,6 +463,7 @@ these spells.</Description>
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -459,6 +472,7 @@ these spells.</Description>
 level, your weapon attacks score a critical hit on a
 roll of 19 or 20.</Description>
 		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility xsi:type="PlayerManeuverAbility">
@@ -516,6 +530,7 @@ your Strength or Dexterity modifier (your choice)</Description>
 		<AvailableManeuversAtLevel15>2</AvailableManeuversAtLevel15>
 		
 		<Dice>1d8</Dice>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 <!-- Barbarian class abilities -->
@@ -534,6 +549,7 @@ You can also end your rage on your turn as a bonus action. Once you have raged t
 		<IsToggle>true</IsToggle>
 		<RechargeAtShortRest>false</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 		
 	<PlayerAbility>
@@ -546,6 +562,7 @@ You can also end your rage on your turn as a bonus action. Once you have raged t
 		<Name>Reckless Attack</Name>
 		<Description>Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.</Description>
 		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>

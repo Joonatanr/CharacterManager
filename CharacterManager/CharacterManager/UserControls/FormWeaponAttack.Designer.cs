@@ -39,9 +39,12 @@ namespace CharacterManager.UserControls
             this.richTextBoxRolls = new System.Windows.Forms.RichTextBox();
             this.buttonClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.userControlCombatAbilitiesList = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
             this.userControlAttackDieRolls = new CharacterManager.UserControls.UserControlDieRollBonusValuesHandler();
             this.userControlDamageDieRoll = new CharacterManager.UserControls.UserControlDieRollBonusValuesHandler();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -71,7 +74,7 @@ namespace CharacterManager.UserControls
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 130);
+            this.label4.Location = new System.Drawing.Point(12, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 20);
             this.label4.TabIndex = 4;
@@ -79,7 +82,7 @@ namespace CharacterManager.UserControls
             // 
             // textBoxRange
             // 
-            this.textBoxRange.Location = new System.Drawing.Point(76, 130);
+            this.textBoxRange.Location = new System.Drawing.Point(127, 119);
             this.textBoxRange.Name = "textBoxRange";
             this.textBoxRange.Size = new System.Drawing.Size(100, 20);
             this.textBoxRange.TabIndex = 5;
@@ -123,16 +126,16 @@ namespace CharacterManager.UserControls
             // 
             this.richTextBoxRolls.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.richTextBoxRolls.Location = new System.Drawing.Point(191, 132);
+            this.richTextBoxRolls.Location = new System.Drawing.Point(355, 299);
             this.richTextBoxRolls.Name = "richTextBoxRolls";
-            this.richTextBoxRolls.Size = new System.Drawing.Size(530, 315);
+            this.richTextBoxRolls.Size = new System.Drawing.Size(295, 148);
             this.richTextBoxRolls.TabIndex = 19;
             this.richTextBoxRolls.Text = "";
             // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonClose.Location = new System.Drawing.Point(10, 417);
+            this.buttonClose.Location = new System.Drawing.Point(10, 467);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(75, 30);
             this.buttonClose.TabIndex = 20;
@@ -151,6 +154,29 @@ namespace CharacterManager.UserControls
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.userControlCombatAbilitiesList);
+            this.panel1.Location = new System.Drawing.Point(10, 145);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(339, 316);
+            this.panel1.TabIndex = 25;
+            // 
+            // userControlCombatAbilitiesList
+            // 
+            this.userControlCombatAbilitiesList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlCombatAbilitiesList.BackColor = System.Drawing.Color.Transparent;
+            this.userControlCombatAbilitiesList.IsBorder = true;
+            this.userControlCombatAbilitiesList.IsSlotsVisible = true;
+            this.userControlCombatAbilitiesList.Location = new System.Drawing.Point(3, 3);
+            this.userControlCombatAbilitiesList.Name = "userControlCombatAbilitiesList";
+            this.userControlCombatAbilitiesList.Size = new System.Drawing.Size(333, 299);
+            this.userControlCombatAbilitiesList.TabIndex = 24;
+            this.userControlCombatAbilitiesList.Title = "Combat Abilities";
             // 
             // userControlAttackDieRolls
             // 
@@ -177,7 +203,8 @@ namespace CharacterManager.UserControls
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CharacterManager.Properties.Resources.old_paper_texture;
-            this.ClientSize = new System.Drawing.Size(1013, 459);
+            this.ClientSize = new System.Drawing.Size(1013, 509);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.userControlAttackDieRolls);
             this.Controls.Add(this.userControlDamageDieRoll);
@@ -194,6 +221,7 @@ namespace CharacterManager.UserControls
             this.Text = "Weapon Attack";
             this.Load += new System.EventHandler(this.FormWeaponAttack_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +241,7 @@ namespace CharacterManager.UserControls
         private UserControlDieRollBonusValuesHandler userControlDamageDieRoll;
         private UserControlDieRollBonusValuesHandler userControlAttackDieRolls;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private UserControlGenericAbilitiesList userControlCombatAbilitiesList;
+        private System.Windows.Forms.Panel panel1;
     }
 }
