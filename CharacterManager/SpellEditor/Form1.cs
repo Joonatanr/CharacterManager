@@ -115,7 +115,9 @@ namespace SpellEditor
 
             try
             {
-                numericUpDownSpellDuration.Value = spell.SpellDuration;
+                  SyncFromRoundsMinutes = false;
+                  SyncFromRoundsHours = false;
+                  numericUpDownSpellDuration.Value = spell.SpellDuration;
             }
             catch (Exception ex)
             {
