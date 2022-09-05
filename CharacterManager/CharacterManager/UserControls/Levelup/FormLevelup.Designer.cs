@@ -37,11 +37,12 @@ namespace CharacterManager.UserControls
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxHPResult = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dieRollHitPointsRoll = new CharacterManager.UserControls.DieRollTextBox();
             this.groupBoxAbilities = new System.Windows.Forms.GroupBox();
-            this.buttonSelectNewAbilities = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.userControlGenericAbilitiesList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
-            this.dieRollHitPointsRoll = new CharacterManager.UserControls.DieRollTextBox();
+            this.buttonSelectNewAbilities = new System.Windows.Forms.Button();
+            this.buttonSelectNewSpells = new System.Windows.Forms.Button();
             this.groupBoxHitPoints.SuspendLayout();
             this.groupBoxAbilities.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -131,10 +132,20 @@ namespace CharacterManager.UserControls
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dieRollHitPointsRoll
+            // 
+            this.dieRollHitPointsRoll.DieRollObject = null;
+            this.dieRollHitPointsRoll.Location = new System.Drawing.Point(72, 22);
+            this.dieRollHitPointsRoll.Name = "dieRollHitPointsRoll";
+            this.dieRollHitPointsRoll.ReadOnly = true;
+            this.dieRollHitPointsRoll.Size = new System.Drawing.Size(100, 20);
+            this.dieRollHitPointsRoll.TabIndex = 0;
+            // 
             // groupBoxAbilities
             // 
             this.groupBoxAbilities.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxAbilities.Controls.Add(this.buttonSelectNewSpells);
             this.groupBoxAbilities.Controls.Add(this.panel1);
             this.groupBoxAbilities.Controls.Add(this.buttonSelectNewAbilities);
             this.groupBoxAbilities.Location = new System.Drawing.Point(12, 97);
@@ -142,17 +153,7 @@ namespace CharacterManager.UserControls
             this.groupBoxAbilities.Size = new System.Drawing.Size(474, 194);
             this.groupBoxAbilities.TabIndex = 3;
             this.groupBoxAbilities.TabStop = false;
-            this.groupBoxAbilities.Text = "Select new Abilities";
-            // 
-            // buttonSelectNewAbilities
-            // 
-            this.buttonSelectNewAbilities.Location = new System.Drawing.Point(7, 19);
-            this.buttonSelectNewAbilities.Name = "buttonSelectNewAbilities";
-            this.buttonSelectNewAbilities.Size = new System.Drawing.Size(110, 52);
-            this.buttonSelectNewAbilities.TabIndex = 0;
-            this.buttonSelectNewAbilities.Text = "Select New Abilities";
-            this.buttonSelectNewAbilities.UseVisualStyleBackColor = true;
-            this.buttonSelectNewAbilities.Click += new System.EventHandler(this.buttonSelectNewAbilities_Click);
+            this.groupBoxAbilities.Text = "Select new Features";
             // 
             // panel1
             // 
@@ -171,15 +172,27 @@ namespace CharacterManager.UserControls
             this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
             this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(284, 167);
             this.userControlGenericAbilitiesList1.TabIndex = 1;
+            this.userControlGenericAbilitiesList1.Title = "Abilities:";
             // 
-            // dieRollHitPointsRoll
+            // buttonSelectNewAbilities
             // 
-            this.dieRollHitPointsRoll.DieRollObject = null;
-            this.dieRollHitPointsRoll.Location = new System.Drawing.Point(72, 22);
-            this.dieRollHitPointsRoll.Name = "dieRollHitPointsRoll";
-            this.dieRollHitPointsRoll.ReadOnly = true;
-            this.dieRollHitPointsRoll.Size = new System.Drawing.Size(100, 20);
-            this.dieRollHitPointsRoll.TabIndex = 0;
+            this.buttonSelectNewAbilities.Location = new System.Drawing.Point(7, 19);
+            this.buttonSelectNewAbilities.Name = "buttonSelectNewAbilities";
+            this.buttonSelectNewAbilities.Size = new System.Drawing.Size(165, 52);
+            this.buttonSelectNewAbilities.TabIndex = 0;
+            this.buttonSelectNewAbilities.Text = "Select New Abilities";
+            this.buttonSelectNewAbilities.UseVisualStyleBackColor = true;
+            this.buttonSelectNewAbilities.Click += new System.EventHandler(this.buttonSelectNewAbilities_Click);
+            // 
+            // buttonSelectNewSpells
+            // 
+            this.buttonSelectNewSpells.Location = new System.Drawing.Point(7, 77);
+            this.buttonSelectNewSpells.Name = "buttonSelectNewSpells";
+            this.buttonSelectNewSpells.Size = new System.Drawing.Size(165, 52);
+            this.buttonSelectNewSpells.TabIndex = 3;
+            this.buttonSelectNewSpells.Text = "Learn new Spells";
+            this.buttonSelectNewSpells.UseVisualStyleBackColor = true;
+            this.buttonSelectNewSpells.Click += new System.EventHandler(this.buttonSelectNewSpells_Click);
             // 
             // FormLevelup
             // 
@@ -216,5 +229,6 @@ namespace CharacterManager.UserControls
         private System.Windows.Forms.Button buttonSelectNewAbilities;
         private UserControlGenericAbilitiesList userControlGenericAbilitiesList1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonSelectNewSpells;
     }
 }

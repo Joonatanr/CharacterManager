@@ -12,47 +12,6 @@ namespace CharacterManager
     [Serializable]
     public class PlayerClass
     {
-        [Serializable]
-        public class SpellSlots_T
-        {
-            public int NumberOfLev1SpellSlots = 0;
-            public int NumberOfLev2SpellSlots = 0;
-            public int NumberOfLev3SpellSlots = 0;
-            public int NumberOfLev4SpellSlots = 0;
-            public int NumberOfLev5SpellSlots = 0;
-            public int NumberOfLev6SpellSlots = 0;
-            public int NumberOfLev7SpellSlots = 0;
-            public int NumberOfLev8SpellSlots = 0;
-            public int NumberOfLev9SpellSlots = 0;
-
-            public int getNumberOfSlotsPerLevel(int level)
-            {
-                switch (level)
-                {
-                    case 1:
-                        return NumberOfLev1SpellSlots;
-                    case 2 :
-                        return NumberOfLev2SpellSlots;
-                    case 3:
-                        return NumberOfLev3SpellSlots;
-                    case 4:
-                        return NumberOfLev4SpellSlots;
-                    case 5:
-                        return NumberOfLev5SpellSlots;
-                    case 6:
-                        return NumberOfLev6SpellSlots;
-                    case 7:
-                        return NumberOfLev7SpellSlots;
-                    case 8:
-                        return NumberOfLev8SpellSlots;
-                    case 9:
-                        return NumberOfLev9SpellSlots;
-                    default:
-                        return 0;
-                }
-            }
-        }
-
         public String PlayerClassName;
         public int HitDie;
 
@@ -64,30 +23,7 @@ namespace CharacterManager
         public List<EquipmentChoiceList> AvailableEquipment = new List<EquipmentChoiceList>();
 
         public SpellcastingAbility SpellCasting = null;
-        public List<String> AvailableSpells = new List<String>();
-        public SpellSlots_T[] SpellslotPerLevel = new SpellSlots_T[20]
-        {
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-            new SpellSlots_T(),
-        };
+
 
         /* Looks like we need to use this crude implementation because dotnet cannot serialize an array of lists... */
 
@@ -120,15 +56,76 @@ namespace CharacterManager
             PlayerClassName = "UNKNOWN";
         }
 
-        public List<PlayerSpell> GetAvailableSpells()
+        public List<PlayerSpell> GetAvailableSpells(int SpellLevel)
         {
             List<PlayerSpell> res = new List<PlayerSpell>();
-            foreach(string s in AvailableSpells)
+
+            if (this.SpellCasting != null)
             {
-                res.Add(PlayerSpell.resolveFromString(s));
+                foreach (string s in this.SpellCasting.AvailableSpells)
+                {
+                    PlayerSpell sp = PlayerSpell.resolveFromString(s);
+                    if(sp.SpellLevel == SpellLevel)
+                    {
+                        res.Add(sp);
+                    }
+                }
             }
 
             return res;
+        }
+
+        public List<PlayerSpell> GetSpellsThatCanBeLearnedAtLevel(int playerLevel)
+        {
+            if (SpellCasting != null)
+            {
+                int MaxLevelSpellSlot = 0;
+                SpellSlots_T slots = SpellCasting.SpellslotPerLevel[playerLevel];
+                for (int x = 0; x <= 9; x++)
+                {
+                    
+                    if (slots.getNumberOfSlotsPerLevel(x) > 0)
+                    {
+                        MaxLevelSpellSlot = Math.Max(MaxLevelSpellSlot, slots.getNumberOfSlotsPerLevel(x));
+                    }
+                }
+
+                List<PlayerSpell> res = new List<PlayerSpell>();
+
+                for (int x = 0; x < MaxLevelSpellSlot; x++)
+                {
+                    List<PlayerSpell> spellsOfLevel = GetAvailableSpells(x);
+                    res.AddRange(spellsOfLevel);
+                }
+
+                return res;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public int getSpellSlotsForLevel(int playerLevel, int spellSlotLevel)
+        {
+            if(this.SpellCasting != null)
+            {
+                if(playerLevel < 1 || playerLevel > 20) 
+                {
+                    return 0;
+                }
+
+                if(spellSlotLevel < 0 || spellSlotLevel > 9)
+                {
+                    return 0;
+                }
+
+                return this.SpellCasting.SpellslotPerLevel[playerLevel - 1].getNumberOfSlotsPerLevel(spellSlotLevel);
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public List<PlayerClassAbilityChoice> getAvailableClassAbilities(int level)

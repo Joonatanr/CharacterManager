@@ -190,7 +190,8 @@ namespace CharacterManager.CharacterCreator
                 CreatedCharacter.KnownSpells = chosenSpellNames;
 
                 SpellSlotData dataForLevel1Spellslots = new SpellSlotData(0,0);
-                dataForLevel1Spellslots.MaximumCount = SelectedClass.SpellslotPerLevel[0].getNumberOfSlotsPerLevel(1);
+                //dataForLevel1Spellslots.MaximumCount = SelectedClass.SpellslotPerLevel[0].getNumberOfSlotsPerLevel(1);
+                dataForLevel1Spellslots.MaximumCount = SelectedClass.getSpellSlotsForLevel(1, 1);
                 dataForLevel1Spellslots.ActiveCount = dataForLevel1Spellslots.MaximumCount;
                 CreatedCharacter.setSpellSlotData(1, dataForLevel1Spellslots);
                 CreatedCharacter.UpdateSpellModifiers();
@@ -987,6 +988,9 @@ namespace CharacterManager.CharacterCreator
             }
         }
 
+        /* TODO : This is just a hack to ensure that we do not reset spell selection every time the form is reopened. */
+        private PlayerClass currentClassForSpellcasting = null;
+
         private void buttonChooseSpells_Click(object sender, EventArgs e)
         {
             if (SelectedClass == null)
@@ -1009,7 +1013,21 @@ namespace CharacterManager.CharacterCreator
                 return;
             }
 
-            myChooseSpellsForm.setSpellChoices(SelectedClass);
+            if (currentClassForSpellcasting != SelectedClass)
+            {
+
+                int NumberOfCantripsToChoose = SelectedClass.SpellCasting.NumberOfInitialCantrips;
+                int NumberOfSpellsToChoose = SelectedClass.SpellCasting.NumberOfInitialLev1Spells;
+
+                /* We assume that at level 1, it is possible to only select cantrips and level 1 spells. */
+                List<PlayerSpell> AvailableSpells = SelectedClass.GetAvailableSpells(0);
+                AvailableSpells.AddRange(SelectedClass.GetAvailableSpells(1));
+
+                myChooseSpellsForm.setSpellChoices(AvailableSpells, NumberOfCantripsToChoose, NumberOfSpellsToChoose);
+
+                currentClassForSpellcasting = SelectedClass;
+            }
+
             if (myChooseSpellsForm.ShowDialog() == DialogResult.OK)
             {
                 /* TODO */

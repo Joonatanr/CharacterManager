@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.Spells;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,34 @@ namespace CharacterManager.SpecialAttributes
         public string SpellCastingAttribute; /* STR, WIS, DEX, CON, CHA or INT */
         public int NumberOfInitialCantrips = 0;
         public int NumberOfInitialLev1Spells = 0;
+
+        public int[] NewSpellsLearnedAtLevelup = new int[20];
+        public int[] NewCantripsLearnedAtLevelup = new int[20];
+        public List<String> AvailableSpells = new List<String>();
+
+        public SpellSlots_T[] SpellslotPerLevel = new SpellSlots_T[20]
+{
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+            new SpellSlots_T(),
+};
 
         public enum SpellPreparationType
         {
@@ -43,5 +72,36 @@ namespace CharacterManager.SpecialAttributes
                     return -1;
             }
         }
+
+        public int GetNewSpellsLearnedAtLevel(int PlayerLevel)
+        {
+            if(PlayerLevel <= 0)
+            {
+                return 0;
+            }
+
+            if(PlayerLevel > 20)
+            {
+                return 0;
+            }
+
+            return NewSpellsLearnedAtLevelup[PlayerLevel - 1];
+        }
+
+        public int GetNewCantripsLearnedAtLevel(int PlayerLevel)
+        {
+            if (PlayerLevel <= 0)
+            {
+                return 0;
+            }
+
+            if (PlayerLevel > 20)
+            {
+                return 0;
+            }
+
+            return NewCantripsLearnedAtLevelup[PlayerLevel - 1];
+        }
+
     }
 }

@@ -22,7 +22,16 @@ namespace CharacterManager.UserControls
         public bool IsAvailabilityCount { get; set; } = true;
 
         public bool IsCheckBoxed { get; set; } = false;
-        public int MaximumAvailableChoices { get; set; } = 0;
+
+        private int _maximumAvailableChoices = 0;
+        public int MaximumAvailableChoices
+        {
+            get { return _maximumAvailableChoices;  }
+            set 
+            { 
+                _maximumAvailableChoices = value;
+            }
+        }
 
         protected List<ItemHandleControl<ItemType>> myControlList = new List<ItemHandleControl<ItemType>>();
         protected List<ItemType> myItemList = new List<ItemType>();
@@ -131,7 +140,7 @@ namespace CharacterManager.UserControls
             return res;
         }
 
-        /* TODO : Reimplement the multilevel spell stuff. This has been poorly implemented anyway, so it should be redone. */
+
         protected void UpdateValues()
         {
             this.Controls.Clear(); /* Remove any existing controls. */

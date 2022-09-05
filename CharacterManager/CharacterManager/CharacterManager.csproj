@@ -129,6 +129,7 @@
     <Compile Include="Spells\Spellcard.Designer.cs">
       <DependentUpon>Spellcard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Spells\SpellSlots_T.cs" />
     <Compile Include="UserControls\AlignmentChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>

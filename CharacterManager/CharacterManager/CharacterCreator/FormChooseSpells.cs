@@ -19,7 +19,6 @@ namespace CharacterManager.CharacterCreator
         private List<PlayerSpell> _myLockedCantripList = new List<PlayerSpell>(); //These are cantrips that are derived from race or background etc.
         private List<PlayerSpell> _myLockedSpellList = new List<PlayerSpell>();
         
-        private PlayerClass _selectedClass;
 
         private int NumberOfCantripsToChoose = 0;
         private int NumberOfSpellsToChoose = 0;
@@ -29,20 +28,13 @@ namespace CharacterManager.CharacterCreator
             InitializeComponent();
         }
 
-        public void setSpellChoices(PlayerClass c)
+        public void setSpellChoices(List<PlayerSpell> spells, int numberOfCantripsToChoose, int numberOfSpellsToChoose)
         {
-            if (_selectedClass != c)
-            {
-                _selectedClass = c;
-                NumberOfCantripsToChoose = c.SpellCasting.NumberOfInitialCantrips;
-                NumberOfSpellsToChoose = c.SpellCasting.NumberOfInitialLev1Spells;
-                updateNumberOfChoices();
-                setSpellChoices(c.GetAvailableSpells());
-            }
-        }
+            NumberOfCantripsToChoose = numberOfCantripsToChoose;
+            NumberOfSpellsToChoose = numberOfSpellsToChoose;
 
-        public void setSpellChoices(List<PlayerSpell> spells)
-        {
+            updateNumberOfChoices();
+
             _myCantripList = new List<PlayerSpell>();
             _mySpellList = new List<PlayerSpell>();
             

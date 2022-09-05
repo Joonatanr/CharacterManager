@@ -720,6 +720,22 @@ namespace CharacterManager
             return this.CharacterSpellCasting.getSpellSlotDataForLevel(level);
         }
 
+        public List<PlayerSpell> GetKnownSpells()
+        {
+            List<PlayerSpell> res = new List<PlayerSpell>();
+
+            if(this.CharacterSpellCasting != null)
+            {
+                foreach(string spString in CharacterSpellCasting.KnownSpells)
+                {
+                    res.Add(CharacterFactory.getPlayerSpellFromString(spString));
+                }
+            }
+
+            return res;
+        }
+
+
         /*************************** Private functions **************************/
         private List<BonusValueModifier> getHitBonuses(PlayerWeapon w)
         {

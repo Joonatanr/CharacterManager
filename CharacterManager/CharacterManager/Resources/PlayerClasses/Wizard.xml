@@ -93,277 +93,325 @@
     <NumberOfInitialCantrips>3</NumberOfInitialCantrips>
     <NumberOfInitialLev1Spells>6</NumberOfInitialLev1Spells>
     <SpellPreparation>PREPARATION_FULL</SpellPreparation>
+	<AvailableSpells>
+		<string>Acid Splash</string>
+		<string>Blade Ward</string>
+		<string>Chill Touch</string>
+		<string>Dancing Lights</string>
+		<string>Fire Bolt</string>
+		<string>Friends</string>
+		<string>Light</string>
+		<string>Mage Hand</string>
+		<string>Mending</string>
+		<string>Message</string>
+		<string>Minor Illusion</string>
+		<string>Poison Spray</string>
+		<string>Presdigitation</string>
+		<string>Ray of Frost</string>
+		<string>Shocking Grasp</string>
+		<string>True Strike</string>
+		<string>Alarm</string>
+		<string>Burning Hands</string>
+		<string>Charm Person</string>
+		<string>Chromatic Orb</string>
+		<string>Color Spray</string>
+		<string>Comprehend Languages</string>
+		<string>Detect Magic</string>
+		<string>Disguise Self</string>
+		<string>Expeditious Retreat</string>
+		<string>False Life</string>
+		<string>Feather Fall</string>
+		<string>Find Familiar</string>
+		<string>Fog Cloud</string>
+		<string>Grease</string>
+		<string>Identify</string>
+		<string>Illusory Script</string>
+		<string>Jump</string>
+		<string>Longstrider</string>
+		<string>Mage Armor</string>
+		<string>Magic Missile</string>
+		<string>Protection from Evil and Good</string>
+		<string>Ray of Sickness</string>
+		<string>Shield</string>
+		<string>Silent Image</string>
+		<string>Sleep</string>
+		<string>Tasha’s Hideous Laughter</string>
+		<string>Tenser’s Floating Disk</string>
+		<string>Thunderwave</string>
+		<string>Unseen Servant</string>
+		<string>Witch Bolt</string>
+	</AvailableSpells>
+	<SpellslotPerLevel>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>2</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>2</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>1</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>2</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>1</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>2</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+	</SpellslotPerLevel>
+	
+	<NewSpellsLearnedAtLevelup>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+		<int>2</int>
+	</NewSpellsLearnedAtLevelup>
+	
+	<NewCantripsLearnedAtLevelup>
+		<int>3</int>
+		<int>0</int>
+		<int>0</int>
+		<int>1</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>1</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+	</NewCantripsLearnedAtLevelup>
   </SpellCasting>
-  <AvailableSpells>
-    <string>Acid Splash</string>
-    <string>Blade Ward</string>
-    <string>Chill Touch</string>
-    <string>Dancing Lights</string>
-    <string>Fire Bolt</string>
-    <string>Friends</string>
-    <string>Light</string>
-    <string>Mage Hand</string>
-    <string>Mending</string>
-    <string>Message</string>
-    <string>Minor Illusion</string>
-    <string>Poison Spray</string>
-    <string>Presdigitation</string>
-    <string>Ray of Frost</string>
-    <string>Shocking Grasp</string>
-    <string>True Strike</string>
-    <string>Alarm</string>
-    <string>Burning Hands</string>
-    <string>Charm Person</string>
-    <string>Chromatic Orb</string>
-    <string>Color Spray</string>
-    <string>Comprehend Languages</string>
-    <string>Detect Magic</string>
-    <string>Disguise Self</string>
-    <string>Expeditious Retreat</string>
-    <string>False Life</string>
-    <string>Feather Fall</string>
-    <string>Find Familiar</string>
-    <string>Fog Cloud</string>
-    <string>Grease</string>
-    <string>Identify</string>
-    <string>Illusory Script</string>
-    <string>Jump</string>
-    <string>Longstrider</string>
-    <string>Mage Armor</string>
-    <string>Magic Missile</string>
-    <string>Protection from Evil and Good</string>
-    <string>Ray of Sickness</string>
-    <string>Shield</string>
-    <string>Silent Image</string>
-    <string>Sleep</string>
-    <string>Tasha’s Hideous Laughter</string>
-    <string>Tenser’s Floating Disk</string>
-    <string>Thunderwave</string>
-    <string>Unseen Servant</string>
-    <string>Witch Bolt</string>
-  </AvailableSpells>
-  <SpellslotPerLevel>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>2</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>2</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>1</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>2</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>1</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-    <SpellSlots_T>
-      <NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
-      <NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
-      <NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
-      <NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
-      <NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
-      <NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
-      <NumberOfLev7SpellSlots>2</NumberOfLev7SpellSlots>
-      <NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
-      <NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
-    </SpellSlots_T>
-  </SpellslotPerLevel>
+
+  
   <AvailableClassAbilitiesLevel1>
     <PlayerClassAbilityChoice>
       <Description>You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher. For example, if you’re a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover eithe  a 2nd-level spell slot or two 1st-level spell slots.</Description>
@@ -380,4 +428,426 @@
       </AvailableChoices>
     </PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel1>
+  
+  <AvailableClassAbilitiesLevel2>
+		<PlayerClassAbilityChoice>
+			<Description>Arcane Tradition</Description>
+			<ClassAbilityName>Archetype</ClassAbilityName>
+			<AvailableChoices>
+				<string>School Of Abjuration</string>
+				<string>School Of Conjuration</string>
+				<string>School Of Divination</string>
+				<string>School Of Enchantment</string>
+				<string>School Of Evocation</string>
+				<string>School Of Illusion</string>
+				<string>School Of Necromancy</string>
+				<string>School Of Transmutation</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+  </AvailableClassAbilitiesLevel2>
+  
+  <ArcheTypes>
+		<PlayerClassArchetype>
+			<Name>School Of Abjuration</Name>
+			<Description>The School of Abjuration emphasizes magic that blocks,
+banishes, or protects. Detractors of this school say
+that its tradition is about denial, negation rather than
+positive assertion. You understand, however, that ending
+harmful effects, protecting the weak, and banishing evil
+influences is anything but a philosophical void. It is a
+proud and respected vocation.
+Called abjurers, members of this school are sought
+when baleful spirits require exorcism , when important
+locations must be guarded against magical spying, and
+when portals to other planes of existence must be closed.</Description>
+			
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Abjuration Savant</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Arcane Ward</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Projected Ward</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Improved Abjuration</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Spell Resistance</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
+
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>School Of Conjuration</Name>
+			<Description>As a conjurer, you favor spells that produce objects
+and creatures out of thin air. You can conjure billowing
+clouds of killing fog or summon creatures from
+elsewhere to fight on your behalf. As your mastery
+grows, you learn spells of transportation and can
+teleport yourself across vast distances, even to other
+planes of existence, in an instant.</Description>
+
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Conjuration Savant</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Minor Conjuration</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Benign Transposition</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Focused Conjuration</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Durable Summons</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>	
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>School Of Divination</Name>
+			<Description>The counsel of a diviner is sought by royalty and
+commoners alike, for all seek a clearer understanding
+of the past, present, and future. As a diviner, you strive
+to part the veils of space, time, and consciousness so
+that you can see clearly. You work to master spells of
+discernment, remote viewing, supernatural knowledge,
+and foresight.</Description>
+			
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Divination Savant</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Portent</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Expert Divination</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>The Third Eye</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Greater Portent</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>	
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>School Of Enchantment</Name>
+			<Description>As a member of the School of Enchantment, you have
+honed your ability to magically entrance and beguile
+other people and monsters. Some enchanters are
+peacemakers who bewitch the violent to lay down their
+arms and charm the cruel into showing mercy. Others
+are tyrants who magically bind the unwilling into their
+service. Most enchanters fall somewhere in between.</Description>
+			
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Enchantment Savant</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Hypnotic Gaze</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Instinctive Charm</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Split Enchantment</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Alter Memories</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
+			
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>School Of Evocation</Name>
+			<Description>You focus your study on magic that creates powerful
+elemental effects such as bitter cold, searing flame,
+rolling thunder, crackling lightning, and burning acid.
+Some evokers find employment in military forces,
+serving as artillery to blast enemy arm ies from afar.
+Others use their spectacular power to protect the weak,
+while some seek their own gain as bandits, adventurers,
+or aspiring tyrants.</Description>
+			
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Evocation Savant</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Sculpt Spells</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Potent Cantrip</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Empowered Evocation</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Overchannel</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>School Of Illusion</Name>
+			<Description>You focus your studies on magic that dazzles the
+senses, befuddles the mind, and tricks even the w isest
+folk. Your magic is subtle, but the illusions crafted by
+your keen mind make the impossible seem real. Som e
+illusionists—including many gnome wizards—are
+benign tricksters who use their spells to entertain.
+Others are more sinister masters of deception, using
+their illusions to frighten and fool others for their
+personal gain.</Description>
+
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Illusion Savant</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Improved Minor Illusion</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Malleable Illusions</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Illusory Self</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Illusory Reality</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>School Of Necromancy</Name>
+			<Description>The School of Necromancy explores the cosmic forces
+of life, death, and undeath. As you focus your studies in
+this tradition, you learn to manipulate the energy that
+animates all living things. As you progress, you learn to
+sap the life force from a creature as your magic destroys
+its body, transforming that vital energy into magical
+power you can manipulate.
+Most people see necrom ancers as menacing, or even
+villainous, due to the close association with death.
+Not all necromancers are evil, but the forces they
+manipulate are considered taboo by many societies.</Description>
+
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Necromancy Savant</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Grim Harvest</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Undead Thralls</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Inured To Undeath</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Command Undead</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
+
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>School Of Transmutation</Name>
+			<Description>You are a student of spells that modify energy and matter.
+To you, the world is not a fixed thing, but eminently
+mutable, and you delight in being an agent of change.
+You wield the raw stuff of creation and learn to alter both
+physical forms and mental qualities. Your magic gives
+you the tools to become a smith on reality’s forge.
+Some transmuters are tinkerers and pranksters,
+turning people into toads and transforming copper into
+silver for fun and occasional profit. Others pursue their
+magical studies with deadly seriousness, seeking the
+power of the gods to make and destroy worlds.</Description>
+
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Transmutation Savant</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Minor Alchemy</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Transmuter's Stone</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Shapechanger</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Master Transmuter</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
+		</PlayerClassArchetype>
+		
+	</ArcheTypes>
 </PlayerClass>

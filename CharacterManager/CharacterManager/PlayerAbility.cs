@@ -12,7 +12,6 @@ namespace CharacterManager
     [Serializable]
     public class PlayerAbility
     {
-
         public string Description { get; set; }
         public string Name { get; set; }
 
@@ -39,6 +38,9 @@ namespace CharacterManager
         public string Dice { get; set; } /* A lot of playerabilities have some kind of diceroll associated with it. */
 
         public List<PlayerAbilityUpgrade> Upgrades { get; set; }
+
+        /* TODO : Implement this part. */
+        public List<string> SpellsAddedByAbility = new List<string>();
 
         [XmlIgnore]
         public virtual string DisplayedName { get { return Name; } } /* This should be used instead of the AttributeName*/

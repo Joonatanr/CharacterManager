@@ -1,4 +1,5 @@
 ﻿using CharacterManager.CharacterCreator;
+using CharacterManager.Spells;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -98,7 +99,8 @@ namespace CharacterManager.UserControls
             else
             {
                 /* TODO : Placeholder. */
-                groupBoxAbilities.Visible = false;
+                //groupBoxAbilities.Visible = false;
+                buttonSelectNewAbilities.Enabled = false;
             }
         }
 
@@ -162,6 +164,37 @@ namespace CharacterManager.UserControls
                 /* We don't add the new abilities to the character yet. This we will do when levelup is finalized. */
                 SelectedPlayerAbilities = myForm.getAllSelectedAbilities();
                 setCombinedAbilitiesDisplay();
+            }
+        }
+
+        private void buttonSelectNewSpells_Click(object sender, EventArgs e)
+        {
+            /* TODO - First we do a naive implementation. Not taking into account that selected abilities might give the PC a spellcasting ability.  */
+            if (_myCharacter.IsCharacterSpellCasting())
+            {
+                FormChooseSpells myForm = new FormChooseSpells();
+
+                /* First lets get a list of spells that are already known. */
+                List<PlayerSpell> KnownSpells = _myCharacter.GetKnownSpells();
+
+                /* TODO : We might have classes where spells can be switched when leveling up. */
+                myForm.setFixedSpells(KnownSpells);
+
+                PlayerClass _myClass = _myCharacter.GetPlayerClass();
+
+                List<PlayerSpell> SpellsAvailableForLearning = _myClass.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
+                
+                /* Add spells */
+                myForm.setSpellChoices(SpellsAvailableForLearning, _myClass.SpellCasting.GetNewCantripsLearnedAtLevel(_myCharacter.Level), _myClass.SpellCasting.GetNewSpellsLearnedAtLevel(_myCharacter.Level));
+
+                myForm.ShowDialog();
+
+                /* TODO : Handle result. */
+
+            }
+            else
+            {
+                MessageBox.Show("No spellcasting for this character");
             }
         }
     }
