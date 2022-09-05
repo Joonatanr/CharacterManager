@@ -33,8 +33,6 @@ namespace CharacterManager.CharacterCreator
             NumberOfCantripsToChoose = numberOfCantripsToChoose;
             NumberOfSpellsToChoose = numberOfSpellsToChoose;
 
-            updateNumberOfChoices();
-
             _myCantripList = new List<PlayerSpell>();
             _mySpellList = new List<PlayerSpell>();
             
@@ -44,17 +42,14 @@ namespace CharacterManager.CharacterCreator
                 {
                     _myCantripList.Add(spell);
                 }
-                else if(spell.SpellLevel == 1)
-                {
-                    _mySpellList.Add(spell);
-                }
                 else
                 {
-                    /* TODO For the future. */
+                    _mySpellList.Add(spell);
                 }
             }
 
             updateVisualControlData();
+            updateNumberOfChoices();
         }
 
 
@@ -100,6 +95,19 @@ namespace CharacterManager.CharacterCreator
         {
             userControlSpellChoice1.MaximumAvailableChoices = NumberOfCantripsToChoose;
             userControlSpellChoice2.MaximumAvailableChoices = NumberOfSpellsToChoose;
+
+            /* We lock the choices here if the number of available choices are 0. */
+            if (NumberOfCantripsToChoose == 0)
+            {
+                userControlSpellChoice1.setSelectionsLocked(true);
+            }
+
+            if (NumberOfSpellsToChoose == 0)
+            {
+                /* TODO */
+                userControlSpellChoice2.setSelectionsLocked(true);
+            }
+
         }
 
         private void updateVisualControlData()

@@ -18,6 +18,7 @@ namespace CharacterManager.UserControls
         private int prevMaxHp;
 
         private List<PlayerAbility> SelectedPlayerAbilities = new List<PlayerAbility>();
+        private List<string> SelectedSpellNames = new List<string>();
 
         public PlayerCharacter Character
         {
@@ -51,6 +52,9 @@ namespace CharacterManager.UserControls
 
             /* 2. Set up new player abilities. */
             setupNewPlayerAbilities();
+
+            /* 3. Set up already known spells. */
+            SelectedSpellNames = _myCharacter.KnownSpells;
         }
 
 
@@ -116,18 +120,41 @@ namespace CharacterManager.UserControls
         {
             /* TODO  : Here we finalize the character. */
 
-            
-            _myCharacter.CharacterAbilitiesObjectList.AddRange(SelectedPlayerAbilities);
+
+            //_myCharacter.CharacterAbilitiesObjectList.AddRange(SelectedPlayerAbilities);
+            List<PlayerAbility> resultAbilities = _myCharacter.CharacterAbilitiesObjectList;
+            resultAbilities.AddRange(SelectedPlayerAbilities);
+            _myCharacter.setCharacterAbilitiesList(resultAbilities, true);
+
+            /* Update HP. */
             _myCharacter.CurrentHitPoints += (_myCharacter.MaxHitPoints - prevMaxHp);
 
-            _myCharacter.UpdateAbilityConnections();
-
-            foreach(PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
+            foreach (PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
             {
                 ability.RemainingCharges = ability.MaximumCharges;
             }
 
+            /* Update the spell selections. */
+            
+            _myCharacter.KnownSpells = SelectedSpellNames;
 
+
+#if false
+            if (_myClass.SpellCasting != null)
+            {
+                PlayerClass _myClass = _myCharacter.GetPlayerClass();
+                _myClass.SpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);
+
+                /* TODO : Update spell slots */
+                for (int SpellLevel = 1; SpellLevel <= 9; SpellLevel++)
+                {
+                    /* TODO */
+                    //_myCharacter.CharacterSpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);
+                    //_myClass.SpellCasting.
+                }
+
+            }
+#endif
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -178,6 +205,7 @@ namespace CharacterManager.UserControls
                 List<PlayerSpell> KnownSpells = _myCharacter.GetKnownSpells();
 
                 /* TODO : We might have classes where spells can be switched when leveling up. */
+                /* TODO : Consider abilities that might add new spells. */
                 myForm.setFixedSpells(KnownSpells);
 
                 PlayerClass _myClass = _myCharacter.GetPlayerClass();
@@ -190,7 +218,19 @@ namespace CharacterManager.UserControls
                 myForm.ShowDialog();
 
                 /* TODO : Handle result. */
+                if (myForm.DialogResult == DialogResult.OK)
+                {
+                    List<PlayerSpell> res = myForm.getChosenPlayerSpells();
 
+                    SelectedSpellNames = new List<string>();
+
+                    foreach(PlayerSpell spellObj in res)
+                    {
+                        SelectedSpellNames.Add(spellObj.SpellName);
+                    }
+
+                    //_myCharacter.CharacterSpellCasting.KnownSpells = SpellNames;
+                }
             }
             else
             {

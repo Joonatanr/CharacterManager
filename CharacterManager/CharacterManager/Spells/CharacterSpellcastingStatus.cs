@@ -55,9 +55,9 @@ namespace CharacterManager.Spells
             
         }
 
-        public void setSpellSlotDataForLevel(int level, SpellSlotData data)
+        public void setSpellSlotDataForLevel(int SpellLevel, SpellSlotData data)
         {
-            switch (level)
+            switch (SpellLevel)
             {
                 case 1:
                      Level1SpellSlots = data;

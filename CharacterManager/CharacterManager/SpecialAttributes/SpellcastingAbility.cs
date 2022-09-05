@@ -20,7 +20,7 @@ namespace CharacterManager.SpecialAttributes
         public List<String> AvailableSpells = new List<String>();
 
         public SpellSlots_T[] SpellslotPerLevel = new SpellSlots_T[20]
-{
+        {
             new SpellSlots_T(),
             new SpellSlots_T(),
             new SpellSlots_T(),
@@ -41,7 +41,7 @@ namespace CharacterManager.SpecialAttributes
             new SpellSlots_T(),
             new SpellSlots_T(),
             new SpellSlots_T(),
-};
+        };
 
         public enum SpellPreparationType
         {
@@ -101,6 +101,16 @@ namespace CharacterManager.SpecialAttributes
             }
 
             return NewCantripsLearnedAtLevelup[PlayerLevel - 1];
+        }
+
+        public SpellSlots_T getSpellSlotDataForLevel(int PlayerLevel)
+        {
+            if (PlayerLevel < 1 || PlayerLevel > 20)
+            {
+                return null;
+            }
+
+            return SpellslotPerLevel[PlayerLevel - 1];
         }
 
     }

@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BonusValueModifier.cs" />
     <Compile Include="CharacterBackGround.cs" />
+    <Compile Include="CharacterBonusValues.cs" />
     <Compile Include="CharacterCreator\CharacterCreatorForm.cs">
       <SubType>Form</SubType>
     </Compile>

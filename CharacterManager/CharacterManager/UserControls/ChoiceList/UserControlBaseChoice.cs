@@ -140,7 +140,6 @@ namespace CharacterManager.UserControls
             return res;
         }
 
-
         protected void UpdateValues()
         {
             this.Controls.Clear(); /* Remove any existing controls. */

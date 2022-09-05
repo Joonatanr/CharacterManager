@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using CharacterManager.Items;
+using CharacterManager.SpecialAttributes;
 using CharacterManager.Spells;
 using static CharacterManager.Spells.CharacterSpellcastingStatus;
 
@@ -22,74 +23,6 @@ namespace CharacterManager
             public int CHA;
             public int CON;
             public int WIS;
-        }
-
-
-        /* All bonuses that are determined by special abilities should be defined here. */
-        public class CharacterBonusValues
-        {
-            public List<BonusValueModifier> AcBonusModifiers = new List<BonusValueModifier>();
-            public List<BonusValueModifier> AttackRollBonusModifiers = new List<BonusValueModifier>();
-            public List<BonusValueModifier> AttackDamageBonusModifiers = new List<BonusValueModifier>();
-
-            public string AttackNoteString = string.Empty;
-
-            /* Values that might be accessed during levelup. */
-            public List<BonusValueModifier> HitPointLevelupModifiers = new List<BonusValueModifier>();
-
-            public int AttackRollBonus
-            {
-                get
-                {
-                    return getModifierTotalValue(AttackRollBonusModifiers);
-                }
-            }
-
-            public int AttackDamageBonus
-            {
-                get
-                {
-                    return getModifierTotalValue(AttackDamageBonusModifiers);
-                }
-            }
-
-            public int AcBonus
-            {
-                get
-                {
-                    return getModifierTotalValue(AcBonusModifiers);
-                }
-            }
-
-
-            private int getModifierTotalValue(List<BonusValueModifier> modList)
-            {
-                int res = 0;
-
-                foreach (BonusValueModifier mod in modList)
-                {
-                    res += mod.modifierValue;
-                }
-
-                return res;
-            }
-
-            public CharacterBonusValues()
-            {
-               
-            }
-
-            internal void ResetAttackModifiers()
-            {
-                AttackNoteString = "";
-                AttackRollBonusModifiers = new List<BonusValueModifier>();
-                AttackDamageBonusModifiers = new List<BonusValueModifier>();
-            }
-
-            internal void ResetLevelUpModifiers()
-            {
-                HitPointLevelupModifiers = new List<BonusValueModifier>();
-            }
         }
 
         /* TODO : Maybe this can be done differently... */
@@ -166,6 +99,13 @@ namespace CharacterManager
 
         public CharacterSpellcastingStatus CharacterSpellCasting = new CharacterSpellcastingStatus();
 
+        /* TODO : This part is still in development. Should move a lot of spellcasting functionality to the PlayerCharacter spellcasting ability.*/
+        private SpellcastingAbility _mySpellcastingAbility = null;
+        public SpellcastingAbility SpellCasting
+        {
+            get { return _mySpellcastingAbility; }
+        }
+
         public int Level;
         public int ProficiencyBonus;
         public int ExperiencePoints;
@@ -180,7 +120,14 @@ namespace CharacterManager
         public List<string> KnownSpells
         {
             get { return CharacterSpellCasting.KnownSpells;     }
-            set { CharacterSpellCasting.KnownSpells = value;    }
+            set 
+            {
+                /* TODO : Consider if Spellcasting is null??? */
+                if (CharacterSpellCasting != null)
+                {
+                    CharacterSpellCasting.KnownSpells = value;
+                }
+            }
         }
 
         [XmlIgnore]
@@ -551,6 +498,11 @@ namespace CharacterManager
                 obj.AbilityUsed += new PlayerAbility.PlayerAbilityUsedListener(abilityUsed);
                 obj.IsActiveChanged += new PlayerAbility.PlayerAbilityIsActiveChanged(abilityActiveChanged);
                 
+                if (obj is SpellcastingAbility)
+                {
+                    /* This character has a spellcasting ability. In the future we may have multiclassing and therefore more than one. */
+                    _mySpellcastingAbility = (SpellcastingAbility)obj;
+                }
             }
         }
 
@@ -687,16 +639,6 @@ namespace CharacterManager
             return BonusValues.AcBonus;
         }
 
-        public void UpdateAbilityConnections()
-        {
-            /* We update all connections of the abilities to the player object itself. */
-            foreach(PlayerAbility ability in CharacterAbilitiesObjectList)
-            {
-                ability.connectToCharacter(this);
-            }
-        }
-
-
         public PlayerClass GetPlayerClass()
         {
             /* TODO : If ever we add multiclassing, then this needs to be refactored. */
@@ -710,9 +652,9 @@ namespace CharacterManager
         }
 
 
-        public void setSpellSlotData(int level, SpellSlotData data)
+        public void setSpellSlotData(int SpellLevel, SpellSlotData data)
         {
-            this.CharacterSpellCasting.setSpellSlotDataForLevel(level, data);
+            this.CharacterSpellCasting.setSpellSlotDataForLevel(SpellLevel, data);
         }
 
         public SpellSlotData getSpellSlotData(int level)
