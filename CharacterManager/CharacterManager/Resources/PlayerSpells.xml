@@ -5317,6 +5317,75 @@ worn or carried. This spell’s damage increases by 1d10 when you reach
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
+    <Description>Thin and wispy flames wreathe your body for the
+duration, shedding bright light in a 10-foot radius and
+dim light for an additional 10 feet. You can end the spell
+early by using an action to dism iss it.
+
+The flames provide you with a warm shield or a chill
+shield, as you choose. The w arm shield grants you
+resistance to cold damage, and the chill shield grants
+you resistance to fire damage.
+
+In addition, whenever a creature within 5 feet of you
+hits you with a melee attack, the shield erupts with
+flame. The attacker takes 2d8 fire damage from a warm
+shield, or 2d8 cold damage from a cold shield.</Description>
+    <ItemName>Fire Shield</ItemName>
+    <SpellName>Fire Shield</SpellName>
+    <School>Evocation</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a bit of phosphorus or a firefly</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A storm made up of sheets of roaring flame appears
+in a location you choose within range. The area of the
+storm consists of up to ten 10-foot cubes, which you can
+arrange as you wish. Each cube must have at least one
+face adjacent to the face of another cube. Each creature
+in the area must make a Dexterity saving throw. It
+takes 7d10 fire damage on a failed save, or half as much
+damage on a successful one.
+
+The fire damages objects in the area and ignites
+flammable objects that aren't being worn or carried.
+If you choose, plant life in the area is unaffected
+by this spell.</Description>
+    <ItemName>Fire Storm</ItemName>
+    <SpellName>Fire Storm</SpellName>
+    <School>Evocation</School>
+    <SpellLevel>7</SpellLevel>
+    <SpellRange>150</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>A bright streak flashes from your pointing finger to a
 point you choose within range and then blossom s with
 a low roar into an explosion of flame. Each creature
@@ -5349,6 +5418,182 @@ the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
+    <Description>You evoke a fiery blade in your free hand. The blade is
+similar in size and shape to a scimitar, and it lasts for
+the duration. If you let go of the blade, it disappears, but
+you can evoke the blade again as a bonus action.
+
+You can use your action to make a melee spell
+attack with the fiery blade. On a hit, the target takes
+3d6 fire damage.
+
+The flaming blade sheds bright light in a 10-foot
+radius and dim light for an additional 10 feet.</Description>
+    <ItemName>Flame Blade</ItemName>
+    <SpellName>Flame Blade</SpellName>
+    <AtHigherLevels>When you cast this spell using a
+spell slot of 4th level or higher, the damage increases by
+1d6 for every two slot levels above 2nd.</AtHigherLevels>
+    <School>Evocation</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_BONUS_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>leaf of sumac</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A vertical colum n o f divine fire roars dow n from the
+heavens in a location you specify. Each creature in
+a 10-foot-radius, 40-foot-high cylinder centered on a
+point within range must make a Dexterity saving throw.
+A creature takes 4d6 fire damage and 4d6 radiant
+damage on a failed save, or half as much damage on a
+successful one.</Description>
+    <ItemName>Flame Strike</ItemName>
+    <SpellName>Flame Strike</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 6th level or 
+higher, the fire damage or the radiant damage 
+(your choice) increases by 1d6 for each slot level above 5th.</AtHigherLevels>
+    <School>Evocation</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a pinch of sulfur</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A 5-foot-diameter sphere of fire appears in an
+unoccupied space of your choice within range and lasts
+for the duration. Any creature that ends its turn within 5
+feet of the sphere must make a Dexterity saving throw.
+The creature takes 2d6 fire damage on a failed save, or
+half as much damage on a successful one.
+As a bonus action, you can move the sphere up to 30
+feet. If you ram the sphere into a creature, that creature
+must make the saving throw against the sphere’s
+damage, and the sphere stops moving this turn.
+W hen you move the sphere, you can direct it over
+barriers up to 5 feet tall and jum p it across pits up to
+10 feet wide. The sphere ignites flammable objects not
+being w orn or carried, and it sheds bright light in a
+20-foot radius and dim light for an additional 20 feet.</Description>
+    <ItemName>Flaming Sphere</ItemName>
+    <SpellName>Flaming Sphere</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 3rd level or higher, 
+the damage increases by 1d6 for each slot level above 2nd.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a bit of tallow, a pinch of brimstone, and a dusting of powdered iron</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You attempt to turn one creature that you can see within
+range into stone. If the target’s body is made of flesh, the
+creature must make a Constitution saving throw. On a
+failed save, it is restrained as its flesh begins to harden.
+On a successful save, the creature isn’t affected.
+A creature restrained by this spell must make another
+Constitution saving throw at the end of each of its turns.
+If it successfully saves against this spell three times, the
+spell ends. If it fails its saves three times, it is turned
+to stone and subjected to the petrified condition for the
+duration. The successes and failures don’t need to be
+consecutive; keep track o f both until the target collects
+three of a kind.
+
+If the creature is physically broken while petrified,
+it suffers from similar deformities if it reverts to its
+original state.
+
+If you maintain your concentration on this spell for the
+entire possible duration, the creature is turned to stone
+until the effect is removed.</Description>
+    <ItemName>Flesh To Stone</ItemName>
+    <SpellName>Flesh To Stone</SpellName>
+    <AtHigherLevels />
+    <School>Transmutation</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a pinch of lime, water, and earth</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You touch a w illing creature. The target gains a flying
+speed of 60 feet for the duration. W hen the spell ends,
+the target falls if it is still aloft, unless it can stop the fall.
+
+</Description>
+    <ItemName>Fly</ItemName>
+    <SpellName>Fly</SpellName>
+    <AtHigherLevels>When you cast this spell using
+a spell slot of 4th level or higher, you can target one
+additional creature for each slot level above 3rd.</AtHigherLevels>
+    <School>Transmutation</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a wing feather from any bird</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>You create a 20-foot-radius sphere of fog centered on a
 point within range. The sphere spreads around corners,
 and its area is heavily obscured. It lasts for the duration
@@ -5378,6 +5623,168 @@ increases by 20 feet for each slot level above 1st.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
+    <Description>You create a ward against magical travel that protects
+up to 40,000 square feet of floor space to a height of 30
+feet above the floor. For the duration, creatures can’t
+teleport into the area or use portals, such as those
+created by the gate spell, to enter the area. The spell
+proofs the area against planar travel, and therefore
+prevents creatures from accessing the area by way of
+the Astral Plane, Ethereal Plane, Feywild, Shadowfell,
+or the plane shift spell.
+
+In addition, the spell dam ages types of creatures that
+you choose w hen you cast it. C hoose one or m ore o f the
+following: celestials, elementals, fey, fiends, and undead.
+W hen a chosen creature enters the spell’s area for the
+first time on a turn or starts its turn there, the creature
+takes 5d10 radiant or necrotic damage (your choice
+when you cast this spell).
+
+When you cast this spell, you can designate a
+password. A creature that speaks the passw ord as it
+enters the area takes no damage from the spell.
+
+The spell’s area can't overlap with the area of another
+forbiddance spell. If you cast forbiddance every day for
+30 days in the sam e location, the spell lasts until it is
+dispelled, and the material com ponents are consum ed
+on the last casting.</Description>
+    <ItemName>Forbiddance</ItemName>
+    <SpellName>Forbiddance</SpellName>
+    <AtHigherLevels />
+    <School>Abjuration</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>100</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a sprinkling of holy water, rate incense, and powdered ruby worth at least 1000pg</MaterialComponent>
+    <MaterialCost>1000</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>An im mobile, invisible, cube-shaped prison com posed of
+magical force springs into existence around an area you
+choose within range. The prison can be a cage or a solid
+box, as you choose.
+
+A prison in the shape of a cage can be up to 20 feet on
+a side and is made from 1/2-inch diameter bars spaced
+1/2 inch apart.
+
+A prison in the shape of a box can be up to 10 feet on
+a side, creating a solid barrier that prevents any matter
+from passing through it and blocking any spells cast into
+or out from the area.
+
+When you cast the spell, any creature that is
+completely inside the cage's area is trapped. Creatures
+only partially within the area, or those too large to fit
+inside the area, are pushed away from the center of the
+area until they are completely outside the area.
+
+A creature inside the cage can’t leave it by nonm agical
+means. If the creature tries to use teleportation or
+interplanar travel to leave the cage, it must first make a
+Charisma saving throw. On a success, the creature can
+use that magic to exit the cage. On a failure, the creature
+can't exit the cage and wastes the use of the spell or
+effect. The cage also extends into the Ethereal Plane,
+blocking ethereal travel.
+
+This spell can’t be dispelled by dispel magic.</Description>
+    <ItemName>Forcecage</ItemName>
+    <SpellName>Forcecage</SpellName>
+    <School>Evocation</School>
+    <SpellLevel>7</SpellLevel>
+    <SpellRange>100</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>ruby dust worth 1500gp</MaterialComponent>
+    <MaterialCost>1500</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You touch a willing creature and bestow a limited ability
+to see into the immediate future. For the duration, the
+target can’t be surprised and has advantage on attack
+rolls, ability checks, and saving throws. Additionally,
+other creatures have disadvantage on attack rolls
+against the target for the duration
+.
+This spell immediately ends if you cast it again before
+its duration ends.</Description>
+    <ItemName>Foresight</ItemName>
+    <SpellName>Foresight</SpellName>
+    <School>Divination</School>
+    <SpellLevel>9</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a hummingbird feather</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You touch a willing creature. For the duration, the
+target’s movement is unaffected by difficult terrain, and
+spells and other magical effects can neither reduce
+the target’s speed nor cause the target to be paralyzed
+or restrained.
+
+The target can also spend 5 feet of movement to
+automatically escape from nonm agical restraints, such
+as manacles or a creature that has it grappled. Finally,
+being underwater im poses no penalties on the target's
+movement or attacks.</Description>
+    <ItemName>Freedom Of Movement</ItemName>
+    <SpellName>Freedom Of Movement</SpellName>
+    <School>Abjuration</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a leather strap, bound around the arm or a similar appendage</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>For the duration, you have advantage on all Charisma
 checks directed at one creature of your choice that isn’t
 hostile toward you. When the spell ends, the creature
@@ -5399,6 +5806,416 @@ depending on the nature o f your interaction with it.</Description>
     <CastingTime>CASTING_TIME_ACTION</CastingTime>
     <CastingTimePeriod>0</CastingTimePeriod>
     <IsVerbalComponent>false</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You transform a willing creature you touch, along with
+everything it’s wearing and carrying, into a misty cloud
+for the duration. The spell ends if the creature drops to
+0 hit points. An incorporeal creature isn’t affected.
+
+W hile in this form, the target’s only method of
+movement is a flying speed of 10 feet. The target can
+enter and occupy the space of another creature. The
+target has resistance to nonm agical damage, and it has
+advantage on Strength, Dexterity, and Constitution
+saving throws. The target can pass through small holes,
+narrow openings, and even m ere cracks, though it treats
+liquids as though they w ere solid surfaces. The target
+can't fall and remains hovering in the air even when
+stunned or otherwise incapacitated.
+
+W hile in the form of a misty cloud, the target can’t talk
+or manipulate objects, and any objects it w as carrying or
+holding can’t be dropped, used, or otherwise interacted
+with. The target can’t attack or cast spells.</Description>
+    <ItemName>Gaseous Form</ItemName>
+    <SpellName>Gaseous Form</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You conjure a portal linking an unoccupied space you
+can see within range to a precise location on a different
+plane of existence. The portal is a circular opening,
+which you can make 5 to 20 feet in diameter. You can
+orient the portal in any direction you choose. The portal
+lasts for the duration.
+
+The portal has a front and a back on each plane where
+it appears. Travel through the portal is possible only
+by m oving through its front. Anything that does so is
+instantly transported to the other plane, appearing in
+the unoccupied space nearest to the portal.
+Deities and other planar rulers can prevent portals
+created by this spell from opening in their presence or
+anywhere within their domains.
+
+When you cast this spell, you can speak the name
+of a specific creature (a pseudonym, title, or nicknam e
+doesn’t work). If that creature is on a plane other than
+the one you are on, the portal opens in the named
+creature’s immediate vicinity and draws the creature
+through it to the nearest unoccupied space on your side
+of the portal. You gain no special pow er over the creature,
+and it is free to act as the DM deem s appropriate. It
+might leave, attack you, or help you.</Description>
+    <ItemName>Gate</ItemName>
+    <SpellName>Gate</SpellName>
+    <School>Conjuration</School>
+    <SpellLevel>9</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a diamond worth at least 5000gp</MaterialComponent>
+    <MaterialCost>5000</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You place a magical com m and on a creature that you
+can see within range, forcing it to carry out some
+service or refrain from som e action or course of activity
+as you decide. If the creature can understand you, it
+must succeed on a Wisdom saving throw or becom e
+charmed by you for the duration. While the creature
+is charmed by you, it takes 5 d10 psychic damage
+each time it acts in a manner directly counter to your
+instructions, but no m ore than once each day. A creature
+that can't understand you is unaffected by the spell.
+
+You can issue any com m and you choose, short of an
+activity that would result in certain death. Should you
+issue a suicidal command, the spell ends.
+
+You can end the spell early by using an action to
+dism iss it. A remove curse, greater restoration, or wish
+spell also ends it.
+
+When you cast this spell using
+a spell slot o f 7th or 8th level, the duration is 1 year.
+When you cast this spell using a spell slot of 9th level,
+the spell lasts until it is ended by one of the spells
+mentioned above.</Description>
+    <ItemName>Geas</ItemName>
+    <SpellName>Geas</SpellName>
+    <School>Enchantment</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>432000</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You touch a corpse or other remains. For the
+duration, the target is protected from decay and can’t
+become undead.
+
+The spell also effectively extends the time limit on
+raising the target from the dead, since days spent under
+the influence of this spell don’t count against the time
+limit of spells such as raise dead.</Description>
+    <ItemName>Gentle Repose</ItemName>
+    <SpellName>Gentle Repose</SpellName>
+    <School>Necromancy</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>144000</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent>a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You transform up to ten centipedes, three spiders, five
+w asps, or one scorpion within range into giant versions
+of their natural form s for the duration. A centipede
+becom es a giant centipede, a spider becomes a giant
+spider, a wasp becomes a giant wasp, and a scorpion
+becomes a giant scorpion.
+
+Each creature obeys your verbal com m ands, and
+in combat, they act on your turn each round. The DM
+has the statistics for these creatures and resolves their
+actions and movement.
+
+A creature remains in its giant size for the duration,
+until it drops to 0 hit points, or until you use an action to
+dismiss the effect on it.
+
+The DM might allow you to choose different targets.
+For example, if you transform a bee, its giant version
+might have the sam e statistics as a giant wasp.</Description>
+    <ItemName>Giant Insect</ItemName>
+    <SpellName>Giant Insect</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Until the spell ends, when you make a Charisma
+check, you can replace the number you roll with a 15.
+Additionally, no matter what you say, magic that would
+determine if you are telling the truth indicates that you
+are being truthful.</Description>
+    <ItemName>Glibness</ItemName>
+    <SpellName>Glibness</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>8</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>An im mobile, faintly shim m ering barrier springs into
+existence in a 10-foot radius around you and rem ains for
+the duration.
+
+Any spell of 5th level or lower cast from outside the
+barrier can't affect creatures or objects within it, even
+if the spell is cast using a higher level spell slot. Such a
+spell can target creatures and objects within the barrier,
+but the spell has no effect on them. Similarly, the area
+within the barrier is excluded from the areas affected
+by such spells.
+
+When you cast this spell using a spell slot of 7th level 
+or higher, the barrier blocks spells of one level higher 
+for each slot level above 6th.</Description>
+    <ItemName>Globe Of Invulnerability</ItemName>
+    <SpellName>Globe Of Invulnerability</SpellName>
+    <School>Abjuration</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>10</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a glass or crystal bead that shatters when the spell ends</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>When you cast this spell, you inscribe a glyph that
+harms other creatures, either upon a surface (such as
+a table or a section of floor or wall) or within an object
+that can be closed (such as a book, a scroll, or a treasure
+chest) to conceal the glyph. If you choose a surface, the
+glyph can cover an area of the surface no larger than
+10 feet in diameter. If you choose an object, that object
+must remain in its place; if the object is m oved m ore
+than 10 feet from where you cast this spell, the glyph is
+broken, and the spell ends without being triggered.
+
+The glyph is nearly invisible and requires a successful
+Intelligence (Investigation) check against your spell save
+DC to be found.
+
+You decide what triggers the glyph w hen you cast
+the spell. For glyphs inscribed on a surface, the most
+typical triggers include touching or standing on the
+glyph, removing another object covering the glyph,
+approaching within a certain distance of the glyph, or
+manipulating the object on which the glyph is inscribed.
+For glyphs inscribed within an object, the m ost com m on
+triggers include opening that object, approaching within
+a certain distance of the object, or seeing or reading the
+glyph. O nce a glyph is triggered, this spell ends.
+You can further refine the trigger so the spell activates
+only under certain circum stances or according to
+physical characteristics (such as height or weight),
+creature kind (for example, the ward could be set to
+affect aberrations or drow), or alignment. You can also
+set conditions for creatures that don’t trigger the glyph,
+such as those w ho say a certain password.
+
+When you inscribe the glyph, choose explosive runes
+or a spell glyph
+
+Explosive Runes-&gt; When triggered, the glyph erupts
+with magical energy in a 20-foot-radius sphere centered
+on the glyph. The sphere spreads around corners. Each
+creature in the area must make a Dexterity saving
+throw. A creature takes 5d8 acid, cold, fire, lightning, or
+thunder damage on a failed saving throw (your choice
+when you create the glyph), or half as much damage on a
+successful one.
+
+Spell Glyph -&gt;You can store a prepared spell of
+3rd level or lower in the glyph by casting it as part
+of creating the glyph. The spell must target a single
+creature or an area. The spell being stored has no
+immediate effect w hen cast in this way. When the glyph
+is triggered, the stored spell is cast. If the spell has a
+target, it targets the creature that triggered the glyph.
+If the spell affects an area, the area is centered on
+that creature. If the spell summons hostile creatures
+or creates harmful objects or traps, they appear as
+close as possible to the intruder and attack it. If the
+spell requires concentration, it lasts until the end of its
+full duration.
+
+</Description>
+    <ItemName>Glyph Of Warding</ItemName>
+    <SpellName>Glyph Of Warding</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 4th level or higher, 
+the damage of an explosive runes glyph increases by 1d8 for each slot
+level above 3rd. If you create a spell glyph, you can store
+any spell of up to the same level as the slot you use for
+the glyph of warding.</AtHigherLevels>
+    <School>Abjuration</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>true</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>600</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>incense and powdered diamond worth at least 200gp, which the spell consumes</MaterialComponent>
+    <MaterialCost>200</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Up to ten berries appear in your hand and are infused
+with m agic for the duration. A creature can use its
+action to eat one berry. Eating a berry restores 1 hit
+point, and the berry provides enough nourishment to
+sustain a creature for one day
+
+The berries lose their potency if they have not been
+consum ed within 24 hours of the casting of this spell.</Description>
+    <ItemName>Goodberry</ItemName>
+    <SpellName>Goodberry</SpellName>
+    <AtHigherLevels />
+    <School>Transmutation</School>
+    <SpellLevel>1</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a sprig of mistletoe</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You conjure a vine that sprouts from the ground in an
+unoccupied space o f your choice that you can see within
+range. W hen you cast this spell, you can direct the vine
+to lash out at a creature within 30 feet of it that you can
+see. That creature must succeed on a Dexterity saving
+throw or be pulled 20 feet directly toward the vine.
+
+Until the spell ends, you can direct the vine to lash out
+at the sam e creature or another one as a bonus action
+on each o f your turns.</Description>
+    <ItemName>Grasping Vine</ItemName>
+    <SpellName>Grasping Vine</SpellName>
+    <School>Conjuration</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_BONUS_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
     <IsSomaticComponent>true</IsSomaticComponent>
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>true</IsConcentration>
@@ -5434,6 +6251,174 @@ or fall prone.</Description>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of pork rind or butter</MaterialComponent>
     <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You or a creature you touch becom es invisible until the
+spell ends. Anything the target is w earing or carrying is
+invisible as long as it is on the target’s person.</Description>
+    <ItemName>Greater Invisibility</ItemName>
+    <SpellName>Greater Invisibility</SpellName>
+    <School>Illusion</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You imbue a creature you touch with positive energy to
+undo a debilitating effect. You can reduce the target’s
+exhaustion level by one, or end one of the following
+effects on the target:
+
+• One effect that charmed or petrified the target
+• One curse, including the target’s attunement to a
+cursed magic item
+• Any reduction to one of the target’s ability scores
+• One effect reducing the target’s hit point maximum</Description>
+    <ItemName>Greater Restoration</ItemName>
+    <SpellName>Greater Restoration</SpellName>
+    <School>Abjuration</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>diamond dust worth at least 100gp, which the spell consumes</MaterialComponent>
+    <MaterialCost>100</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A Large spectral guardian appears and hovers for the
+duration in an unoccupied space of your choice that you
+can see within range. The guardian occupies that space
+and is indistinct except for a gleaming sword and shield
+emblazoned with the symbol of your deity.
+
+Any creature hostile to you that moves to a space
+within 10 feet of the guardian for the first time on a
+turn must succeed on a Dexterity saving throw. The
+creature takes 20 radiant damage on a failed save, or
+half as much damage on a successful one. The guardian
+vanishes when it has dealt a total of 60 damage.</Description>
+    <ItemName>Guardian Of Faith</ItemName>
+    <SpellName>Guardian Of Faith</SpellName>
+    <School>Conjuration</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You create a ward that protects up to 2,500 square feet
+of floor space (an area 50 feet square, or one hundred
+5-foot squares or twenty-five 10-foot squares). The
+warded area can be up to 20 feet tall, and shaped as you
+desire. You can ward several stories of a stronghold by
+dividing the area am ong them, as long as you can walk
+into each contiguous area while you are casting the spell.
+
+When you cast this spell, you can specify individuals
+that are unaffected by any or all of the effects that
+you choose. You can also specify a passw ord that,
+when spoken aloud, makes the speaker immune to
+these effects.
+
+Guards and wards creates the following effects within
+the warded area
+
+Corridors-&gt; Fog fills all the warded corridors, making
+them heavily obscured. In addition, at each intersection
+or branching passage offering a choice of direction,
+there is a 50 percent chance that a creature other than
+you will believe it is going in the opposite direction from
+the one it chooses.
+
+Doors-&gt; All doors in the w arded area are magically
+locked, as if sealed by an arcane lock spell. In addition,
+you can cover up to ten doors with an illusion (equivalent
+to the illusory object function of the minor illusion spell)
+to make them appear as plain sections of wall.
+
+Stairs-&gt; Webs fill all stairs in the warded area from top
+to bottom, as the web spell. These strands regrow in 10
+minutes if they are burned or torn away while guards
+and wards lasts.
+
+Other Spell Effect-&gt; You can place your choice of one
+of the following magical effects within the warded area
+of the stronghold.
+
+• Place dancing lights in four corridors. You can designate a simple program that the lights repeat as long as
+guards and wards lasts.
+• Place magic mouth in two locations.
+• Place stinking cloud in two locations. The vapors
+appear in the places you designate; they return within
+10 minutes if dispersed by w ind while guards and
+wards lasts.
+• Place a constant gust of wind in one corridor or room .
+• Place a suggestion in one location. You select an area
+of up to 5 feet square, and any creature that enters
+or passes through the area receives the suggestion
+mentally.
+
+The whole warded area radiates magic. A dispel
+magic cast on a specific effect, if successful, removes
+only that effect.
+
+You can create a permanently guarded and warded
+structure by casting this spell there every day
+for one year.</Description>
+    <ItemName>Guards And Wards</ItemName>
+    <SpellName>Guards And Wards</SpellName>
+    <School>Abjuration</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>100</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10gp.</MaterialComponent>
+    <MaterialCost>10</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
     <Description>You choose one object that you must touch throughout
