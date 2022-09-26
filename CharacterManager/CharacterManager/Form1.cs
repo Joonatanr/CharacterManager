@@ -39,8 +39,17 @@ namespace CharacterManager
             {
                 //1. Update character name and other basic things.
                 this.textBoxName.Text = activeCharacter.CharacterName;
-                this.textBoxClass.Text = activeCharacter.ClassName;
-                
+
+                if (string.IsNullOrEmpty(activeCharacter.SubClassName))
+                {
+                    this.textBoxClass.Text = activeCharacter.ClassName;
+                }
+                else
+                {
+                    this.textBoxClass.Text = activeCharacter.ClassName + "(" + activeCharacter.SubClassName + ")";
+                }
+
+
                 if (activeCharacter.SubRaceName == null)
                 {
                     textBoxRace.Text = activeCharacter.MainRaceName;
@@ -50,11 +59,9 @@ namespace CharacterManager
                     textBoxRace.Text = activeCharacter.SubRaceName;
                 }
 
-                this.textBoxClass.Text = activeCharacter.ClassName;
                 this.textBoxXP.Text = activeCharacter.ExperiencePoints.ToString();
                 this.textBoxLevel.Text = activeCharacter.Level.ToString();
                 this.textBoxProfBonus.Text = activeCharacter.ProficiencyBonus.ToString();
-
 
                 //2. Update base attributes
                 this.AttributeDisplaySTR.AttributeValue = activeCharacter.StrengthAttribute;

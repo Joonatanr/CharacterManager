@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.SpecialAttributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ using System.Xml.Serialization;
 
 namespace CharacterManager
 {
+    /* TODO : This should be renamed to subclass. */
     [Serializable]
     public class PlayerClassArchetype : PlayerAbility
     {
@@ -33,6 +35,9 @@ namespace CharacterManager
         public List<PlayerClassAbilityChoice> AvailableAbilitiesAtLevel18 = new List<PlayerClassAbilityChoice>();
         public List<PlayerClassAbilityChoice> AvailableAbilitiesAtLevel19 = new List<PlayerClassAbilityChoice>();
         public List<PlayerClassAbilityChoice> AvailableAbilitiesAtLevel20 = new List<PlayerClassAbilityChoice>();
+
+        /* Some archetypes give a spellcasting ability. This is defined here. */
+        public SpellcastingAbility SpellCasting = null;
 
         [XmlIgnore]
         public override string DisplayedName

@@ -213,6 +213,352 @@ damage to many foes at once, extending the fighter’s
 reach in combat. These knights learn a comparatively
 small number of spells, committing them to memory
 instead of keeping them in a spellbook.</Description>
+
+			<AvailableAbilitiesAtLevel3>
+				<PlayerClassAbilityChoice>
+					<Description>Eldritch Knight Spellcasting</Description>
+					<ClassAbilityName>SpellCasting</ClassAbilityName>
+					<AvailableChoices>
+						<string>SpellCasting</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Weapon Bond</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel3>
+			
+			<SpellCasting>
+				<Description>When you reach 3rd level, you augment your martial
+prowess with the ability to cast spells. See chapter 10
+for the general rules of spellcasting and chapter 11 for
+the wizard spell list.</Description>
+				<AttributeName>Spellcasting</AttributeName>
+				<MaximumCharges>0</MaximumCharges>
+				<IsToggle>false</IsToggle>
+				<SpellCastingAttribute>INT</SpellCastingAttribute>
+				<NumberOfInitialCantrips>2</NumberOfInitialCantrips>
+				<NumberOfInitialLev1Spells>3</NumberOfInitialLev1Spells>
+				<SpellPreparation>PREPARATION_NONE</SpellPreparation>
+				<!--TODO : At 8th, 14th and 20th level the spells can be from any wizard school. This must be taken into account inside the program. Only abjuration and evocation spells are listed here.-->
+				<AvailableSpells>
+					<string>Acid Splash</string>
+					<string>Blade Ward</string>
+					<string>Chill Touch</string>
+					<string>Dancing Lights</string>
+					<string>Fire Bolt</string>
+					<string>Friends</string>
+					<string>Light</string>
+					<string>Mage Hand</string>
+					<string>Mending</string>
+					<string>Message</string>
+					<string>Minor Illusion</string>
+					<string>Poison Spray</string>
+					<string>Presdigitation</string>
+					<string>Ray of Frost</string>
+					<string>Shocking Grasp</string>
+					<string>True Strike</string>
+					<string>Alarm</string>
+					<string>Burning Hands</string>
+					<string>Chromatic Orb</string>
+					<string>Mage Armor</string>
+					<string>Magic Missile</string>
+					<string>Protection from Evil and Good</string>
+					<string>Shield</string>
+					<string>Thunderwave</string>
+					<string>Witch Bolt</string>
+				</AvailableSpells>
+				
+				<SpellslotPerLevel>
+					<!--Level 1-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 2-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>0</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 3-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 4-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 5-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 6-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 7-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>2</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 8-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>2</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 9-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>2</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 10-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 11-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 12-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 13-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>2</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 14-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>2</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 15-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>2</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 16-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 17-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 18-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 19-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>1</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+					<!--Level 20-->
+					<SpellSlots_T>
+						<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+						<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+						<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+						<NumberOfLev4SpellSlots>1</NumberOfLev4SpellSlots>
+						<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+						<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+						<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+						<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+						<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+					</SpellSlots_T>
+				</SpellslotPerLevel>
+	
+				<NewSpellsLearnedAtLevelup>
+					<int>0</int>
+					<int>0</int>
+					<int>3</int>
+					<int>1</int>
+					<int>0</int>
+					<int>0</int>
+					<int>1</int>
+					<int>1</int>
+					<int>0</int>
+					<int>1</int>
+					<int>1</int>
+					<int>0</int>
+					<int>1</int>
+					<int>1</int>
+					<int>0</int>
+					<int>1</int>
+					<int>0</int>
+					<int>0</int>
+					<int>1</int>
+					<int>1</int>
+				</NewSpellsLearnedAtLevelup>
+	
+				<NewCantripsLearnedAtLevelup>
+					<int>0</int>
+					<int>0</int>
+					<int>2</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>1</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+					<int>0</int>
+				</NewCantripsLearnedAtLevelup>
+			</SpellCasting>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	

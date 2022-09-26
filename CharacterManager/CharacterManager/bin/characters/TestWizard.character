@@ -1,10 +1,10 @@
 <PlayerCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SkillProficiencies>
-    <string>Survival</string>
     <string>Religion</string>
     <string>Perception</string>
-    <string>History</string>
-    <string>Animal Handling</string>
+    <string>Medicine</string>
+    <string>Insight</string>
+    <string>Arcana</string>
   </SkillProficiencies>
   <Languages />
   <WeaponProficiencies>
@@ -49,34 +49,127 @@
       <Options1 />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
-      <AbilityName>Spellcasting</AbilityName>
+      <AbilityName>SpellCasting</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
     </PlayerAbilityDescriptor>
   </CharacterAbilities>
-  <CharacterWeapons />
+  <CharacterWeapons>
+    <PlayerWeapon>
+      <ItemName>Quarterstaff</ItemName>
+      <Weight>4</Weight>
+      <Cost>0.2</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>false</IsAmmunition>
+      <IsFinesse>false</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>false</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>false</IsThrown>
+      <IsTwoHanded>false</IsTwoHanded>
+      <IsVersatile>true</IsVersatile>
+      <IsRanged>false</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Simple</Type>
+      <Range>
+        <NormalRange>0</NormalRange>
+        <LongRange>0</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d6</DamageValue>
+        <Type>Bludgeoning</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <DamageValue>1d8</DamageValue>
+        <Type>Bludgeoning</Type>
+      </TwoHandedDamage>
+      <IsEquipped>false</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType />
+    </PlayerWeapon>
+  </CharacterWeapons>
   <CharacterArmors />
   <CharacterGeneralEquipment>
     <PlayerItem
       xsi:type="PlayerToolKit">
-      <Description />
-      <ItemName>Glassblower's Tools</ItemName>
-      <Weight>5</Weight>
-      <Cost>30</Cost>
+      <Description>This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing. </Description>
+      <ItemName>Herbalism Kit</ItemName>
+      <Weight>3</Weight>
+      <Cost>5</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
-      <ToolType>TYPE_ARTISAN</ToolType>
+      <ToolType>TYPE_GENERIC</ToolType>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Shovel</ItemName>
+      <Description>  An arcane focus is a special item— an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or som e similar item— designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus. </Description>
+      <ItemName>Arcane Focus</ItemName>
+      <Weight>1</Weight>
+      <Cost>10</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem
+      xsi:type="ItemContainer">
+      <Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
+      <ItemName>Explorer's Pack</ItemName>
+      <Weight>10</Weight>
+      <Cost>10</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ContainedItems>
+        <ContainerContent>
+          <Name>Backpack</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Bedroll</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Mess Kit</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Tinderbox</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Torch</Name>
+          <Quantity>10</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Rations</Name>
+          <Quantity>10</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Waterskin</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Rope</Name>
+          <Quantity>50</Quantity>
+        </ContainerContent>
+      </ContainedItems>
+    </PlayerItem>
+    <PlayerItem>
+      <ItemName>Spellbook</ItemName>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Iron Pot</ItemName>
+      <ItemName>Scroll case</ItemName>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <ItemName>Winter blanket</ItemName>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
@@ -92,27 +185,21 @@
   </CharacterGeneralEquipment>
   <CharacterSpellCastingStatus>
     <KnownSpells>
-      <string>Dancing Lights</string>
-      <string>Mage Hand</string>
-      <string>Minor Illusion</string>
-      <string>Burning Hands</string>
-      <string>Charm Person</string>
+      <string>Chill Touch</string>
+      <string>Fire Bolt</string>
+      <string>Light</string>
       <string>Comprehend Languages</string>
-      <string>Disguise Self</string>
-      <string>Find Familiar</string>
+      <string>Expeditious Retreat</string>
+      <string>False Life</string>
       <string>Grease</string>
+      <string>Identify</string>
+      <string>Illusory Script</string>
     </KnownSpells>
-    <PreparedSpells>
-      <string>Burning Hands</string>
-      <string>Charm Person</string>
-      <string>Disguise Self</string>
-      <string>Grease</string>
-    </PreparedSpells>
-    <SpellCastingAbility>INT</SpellCastingAbility>
-    <SpellSaveDC>13</SpellSaveDC>
-    <SpellAttackBonus>5</SpellAttackBonus>
-    <MaxNumberOfPreparedSpells>4</MaxNumberOfPreparedSpells>
-    <SpellAbilityModifier>3</SpellAbilityModifier>
+    <PreparedSpells />
+    <SpellSaveDC>0</SpellSaveDC>
+    <SpellAttackBonus>0</SpellAttackBonus>
+    <MaxNumberOfPreparedSpells>0</MaxNumberOfPreparedSpells>
+    <SpellAbilityModifier>0</SpellAbilityModifier>
     <Level1SpellSlots>
       <MaximumCount>2</MaximumCount>
       <ActiveCount>2</ActiveCount>
@@ -153,26 +240,26 @@
   <Level>1</Level>
   <ProficiencyBonus>2</ProficiencyBonus>
   <ExperiencePoints>0</ExperiencePoints>
-  <MaxHitPoints>8</MaxHitPoints>
+  <MaxHitPoints>7</MaxHitPoints>
   <Speed>30</Speed>
   <Size>
     <height>0</height>
     <weight>0</weight>
     <sizeType>Tiny</sizeType>
   </Size>
-  <Alignment>LawfulGood</Alignment>
+  <Alignment>LawfulNeutral</Alignment>
   <MainRaceName>Elf</MainRaceName>
   <SubRaceName>High Elf</SubRaceName>
   <ClassName>Wizard</ClassName>
   <SubClassName />
   <BaseAttributes>
-    <STR>12</STR>
-    <DEX>14</DEX>
+    <STR>10</STR>
+    <DEX>16</DEX>
     <INT>16</INT>
     <CHA>8</CHA>
-    <CON>14</CON>
-    <WIS>10</WIS>
+    <CON>13</CON>
+    <WIS>12</WIS>
   </BaseAttributes>
   <CharacterName>TestWizard</CharacterName>
-  <CurrentHitPoints>8</CurrentHitPoints>
+  <CurrentHitPoints>7</CurrentHitPoints>
 </PlayerCharacter>

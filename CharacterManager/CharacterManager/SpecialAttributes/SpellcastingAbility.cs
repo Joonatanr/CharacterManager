@@ -58,6 +58,29 @@ namespace CharacterManager.SpecialAttributes
             this.IsToggle = false;
         }
 
+        public List<PlayerSpell> GetSpellsThatCanBeLearnedAtLevel(int playerLevel)
+        {
+            List<PlayerSpell> res = new List<PlayerSpell>();
+
+            int MaxLevelSpellSlot = 0;
+            SpellSlots_T slots = SpellslotPerLevel[playerLevel];
+            for (int x = 0; x <= 9; x++)
+            {
+                if (slots.getNumberOfSlotsPerLevel(x) > 0)
+                {
+                    MaxLevelSpellSlot = Math.Max(MaxLevelSpellSlot, slots.getNumberOfSlotsPerLevel(x));
+                }
+            }
+
+            for (int x = 0; x < MaxLevelSpellSlot; x++)
+            {
+                List<PlayerSpell> spellsOfLevel = GetAvailableSpells(x);
+                res.AddRange(spellsOfLevel);
+            }
+
+            return res;
+        }
+
         public int GetMaximumNumberOfPreparedSpells(int spellcasting_ability_modifier, int level)
         {
             switch (SpellPreparation) 
@@ -113,5 +136,20 @@ namespace CharacterManager.SpecialAttributes
             return SpellslotPerLevel[PlayerLevel - 1];
         }
 
+        public List<PlayerSpell> GetAvailableSpells(int SpellLevel)
+        {
+            List<PlayerSpell> res = new List<PlayerSpell>();
+
+            foreach (string s in AvailableSpells)
+            {
+                PlayerSpell sp = PlayerSpell.resolveFromString(s);
+                if (sp.SpellLevel == SpellLevel)
+                {
+                    res.Add(sp);
+                }
+            }
+
+            return res;
+        }
     }
 }

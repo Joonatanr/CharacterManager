@@ -1,4 +1,5 @@
 ﻿using CharacterManager.CharacterCreator;
+using CharacterManager.SpecialAttributes;
 using CharacterManager.Spells;
 using System;
 using System.Collections.Generic;
@@ -116,14 +117,25 @@ namespace CharacterManager.UserControls
             userControlGenericAbilitiesList1.setAttributeList(combinedList);
         }
 
-        private void buttonOk_Click(object sender, EventArgs e)
+        private void finalizeCharacter()
         {
+            PlayerClass _myClass = _myCharacter.GetPlayerClass();
+
             /* TODO  : Here we finalize the character. */
-
-
-            //_myCharacter.CharacterAbilitiesObjectList.AddRange(SelectedPlayerAbilities);
             List<PlayerAbility> resultAbilities = _myCharacter.CharacterAbilitiesObjectList;
             resultAbilities.AddRange(SelectedPlayerAbilities);
+
+            /* We might have selected a new Archetype. Lets update the Subclass property here. */
+            foreach (PlayerAbility ability in SelectedPlayerAbilities)
+            {
+                PlayerClassArchetype _myArchetype = _myClass.ArcheTypes.Find(at => at.ArcheTypeName == ability.Name);
+                if (_myArchetype != null)
+                {
+                    _myCharacter.SubClassName = _myArchetype.Name;
+                    break; /* Lets assume that there is no way to select more than one archetype at a time... */
+                }
+            }
+
             _myCharacter.setCharacterAbilitiesList(resultAbilities, true);
 
             /* Update HP. */
@@ -134,23 +146,26 @@ namespace CharacterManager.UserControls
                 ability.RemainingCharges = ability.MaximumCharges;
             }
 
-            /* Update the spell selections. */
-            
-            _myCharacter.KnownSpells = SelectedSpellNames;
-
-
-            /* Update spell slot amount. */
-            if(_myCharacter.SpellCasting != null)
+            /* Update spell data. */
+            if (_myCharacter.SpellCasting != null)
             {
-                PlayerClass _myClass = _myCharacter.GetPlayerClass();
-                SpellSlots_T slotsForThisLevel =_myClass.SpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);
+                /* Update the spell selections. */
+                _myCharacter.KnownSpells = SelectedSpellNames;
 
+                /* Update spell slot amount. */
+                SpellSlots_T slotsForThisLevel = _myCharacter.SpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);
+                
                 for (int SpellLevel = 1; SpellLevel <= 9; SpellLevel++)
                 {
                     int numberOfSlots = slotsForThisLevel.getNumberOfSlotsPerLevel(SpellLevel);
-                    _myCharacter.setSpellSlotData(SpellLevel, new CharacterSpellcastingStatus.SpellSlotData(numberOfSlots,numberOfSlots));
+                    _myCharacter.setSpellSlotData(SpellLevel, new CharacterSpellcastingStatus.SpellSlotData(numberOfSlots, numberOfSlots));
                 }
             }
+        }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            finalizeCharacter();
 
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -186,15 +201,77 @@ namespace CharacterManager.UserControls
             if(myForm.DialogResult == DialogResult.OK)
             {
                 /* We don't add the new abilities to the character yet. This we will do when levelup is finalized. */
-                SelectedPlayerAbilities = myForm.getAllSelectedAbilities();
+
+                //SelectedPlayerAbilities = myForm.getAllSelectedAbilities();
+                List<PlayerAbility> _selectedAbilities = myForm.getAllSelectedAbilities();
+                SelectedPlayerAbilities = new List<PlayerAbility>();
+
+
+                PlayerClass pClass = _myCharacter.GetPlayerClass();
+                PlayerClassArchetype sClass = _myCharacter.GetPlayerSubClass();
+
+                /* We might have chosen a new archetype. */
+                foreach(PlayerAbility selected in _selectedAbilities)
+                {
+                    if (selected is PlayerClassArchetype)
+                    {
+                        sClass = (PlayerClassArchetype)selected;
+                        break;
+                    }
+                }
+
+                foreach(PlayerAbility selected in _selectedAbilities)
+                {
+                    if(selected.Name.ToLower() == "spellcasting")
+                    {
+                        SelectedPlayerAbilities.Add(CharacterFactory.GetSpellCastingAbilityOfClass(pClass.PlayerClassName, sClass.ArcheTypeName));
+                    }
+                    else
+                    {
+                        SelectedPlayerAbilities.Add(selected);
+                    }
+                }
+                
                 setCombinedAbilitiesDisplay();
             }
         }
 
         private void buttonSelectNewSpells_Click(object sender, EventArgs e)
         {
+            PlayerClass _myClass = _myCharacter.GetPlayerClass();
+            PlayerClassArchetype _mySubclass = _myCharacter.GetPlayerSubClass();
+
+            /* Lets first check if there are any chosen abilities that could give our character a spellcasting ability... */
+            /* For now lets just consider archetypes. */
+
+            PlayerAbility selectedSpellcastingAbility = SelectedPlayerAbilities.Find(a => a.Name.ToLower() == "spellcasting");
+            SpellcastingAbility selectedSpellcasting = null;
+            
+            if (selectedSpellcastingAbility != null)
+            {
+                /* We have selected an ability (presumably an archetype) that will give us spellcasting. */
+                /* TODO : Maybe there is some other way of gaining spellcasting? */
+                PlayerAbility archeType = SelectedPlayerAbilities.Find(a => a is PlayerClassArchetype);
+                if (archeType != null)
+                {
+                    _mySubclass = (PlayerClassArchetype)archeType;
+                    selectedSpellcasting = _mySubclass.SpellCasting;
+                }
+                else
+                {
+                    /* TODO : Analyze this solution. Might not be the best way to solve this.... Maybe things like possible spells and slots should be directly derived from the spellcasting ability itself??? */
+                    /* In this case it can be presumed that the spellcasting is NOT dependent on a new archetype.... Assume it came directly from the class attributes. */
+                    selectedSpellcasting = _myClass.SpellCasting; 
+                }
+            }
+            else
+            {
+                /* No change, so we simply use existing spellcasting ability. */
+                selectedSpellcasting = _myCharacter.SpellCasting;
+            }
+
             /* TODO - First we do a naive implementation. Not taking into account that selected abilities might give the PC a spellcasting ability.  */
-            if (_myCharacter.IsCharacterSpellCasting())
+            if (selectedSpellcasting != null)
             {
                 FormChooseSpells myForm = new FormChooseSpells();
 
@@ -205,16 +282,13 @@ namespace CharacterManager.UserControls
                 /* TODO : Consider abilities that might add new spells. */
                 myForm.setFixedSpells(KnownSpells);
 
-                PlayerClass _myClass = _myCharacter.GetPlayerClass();
+                List<PlayerSpell> SpellsAvailableForLearning = selectedSpellcasting.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
 
-                List<PlayerSpell> SpellsAvailableForLearning = _myClass.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
-                
                 /* Add spells */
-                myForm.setSpellChoices(SpellsAvailableForLearning, _myClass.SpellCasting.GetNewCantripsLearnedAtLevel(_myCharacter.Level), _myClass.SpellCasting.GetNewSpellsLearnedAtLevel(_myCharacter.Level));
+                myForm.setSpellChoices(SpellsAvailableForLearning, selectedSpellcasting.GetNewCantripsLearnedAtLevel(_myCharacter.Level), selectedSpellcasting.GetNewSpellsLearnedAtLevel(_myCharacter.Level));
 
                 myForm.ShowDialog();
 
-                /* TODO : Handle result. */
                 if (myForm.DialogResult == DialogResult.OK)
                 {
                     List<PlayerSpell> res = myForm.getChosenPlayerSpells();
@@ -225,8 +299,6 @@ namespace CharacterManager.UserControls
                     {
                         SelectedSpellNames.Add(spellObj.SpellName);
                     }
-
-                    //_myCharacter.CharacterSpellCasting.KnownSpells = SpellNames;
                 }
             }
             else

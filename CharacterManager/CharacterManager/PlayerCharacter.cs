@@ -333,14 +333,9 @@ namespace CharacterManager
         public Boolean IsCharacterSpellCasting()
         {
             Boolean res = false;
-            PlayerClass myClass = this.GetPlayerClass();
-            
-            if (myClass.SpellCasting != null)
+            if(this.SpellCasting != null)
             {
-                if (myClass.SpellCasting.SpellCastingAttribute != null)
-                {
-                    res = true;
-                }       
+                res = true;
             }
 
             return res;
@@ -440,12 +435,12 @@ namespace CharacterManager
         {
             if (this.IsCharacterSpellCasting())
             {
-                string spellcastingAttribute = this.GetPlayerClass().SpellCasting.SpellCastingAttribute;
+                string spellcastingAttribute = this.SpellCasting.SpellCastingAttribute;
                 int modifier = getModifier(spellcastingAttribute);
                 this.CharacterSpellCastingStatus.SpellAttackBonus = modifier + this.ProficiencyBonus;
                 this.CharacterSpellCastingStatus.SpellSaveDC = modifier + this.ProficiencyBonus + 8;
                 this.CharacterSpellCastingStatus.SpellCastingAbility = spellcastingAttribute;
-                this.CharacterSpellCastingStatus.MaxNumberOfPreparedSpells = this.GetPlayerClass().SpellCasting.GetMaximumNumberOfPreparedSpells(modifier, this.Level);
+                this.CharacterSpellCastingStatus.MaxNumberOfPreparedSpells = this.SpellCasting.GetMaximumNumberOfPreparedSpells(modifier, this.Level);
                 this.CharacterSpellCastingStatus.SpellAbilityModifier = modifier;
             }
         }
@@ -486,6 +481,7 @@ namespace CharacterManager
             {
                 CharacterAbilities = new List<PlayerAbilityDescriptor>();
             }
+
             foreach (PlayerAbility obj in abilityList)
             {
                 if (overwriteDescriptors)
@@ -498,10 +494,11 @@ namespace CharacterManager
                 obj.AbilityUsed += new PlayerAbility.PlayerAbilityUsedListener(abilityUsed);
                 obj.IsActiveChanged += new PlayerAbility.PlayerAbilityIsActiveChanged(abilityActiveChanged);
                 
-                if (obj is SpellcastingAbility)
+                if (obj is SpellcastingAbility || obj.Name.ToLower() == "spellcasting")
                 {
                     /* This character has a spellcasting ability. In the future we may have multiclassing and therefore more than one. */
-                    _mySpellcastingAbility = (SpellcastingAbility)obj;
+                    //_mySpellcastingAbility = (SpellcastingAbility)obj;
+                    _mySpellcastingAbility = CharacterFactory.GetSpellCastingAbilityOfClass(this.ClassName, this.SubClassName);
                 }
             }
         }
@@ -642,7 +639,7 @@ namespace CharacterManager
         public PlayerClass GetPlayerClass()
         {
             /* TODO : If ever we add multiclassing, then this needs to be refactored. */
-            /* We return the actual object in this case. */
+            /* We return the actual object with this access function. */
             return CharacterFactory.getPlayerClassByName(this.ClassName);
         }
 

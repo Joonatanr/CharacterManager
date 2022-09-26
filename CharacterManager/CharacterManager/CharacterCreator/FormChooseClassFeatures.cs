@@ -56,7 +56,7 @@ namespace CharacterManager.CharacterCreator
             /* We want to display the spellcasting ability as a player ability in the form. */
             if (_selectedClass.SpellCasting != null)
             {
-                PlayerClassAbilityChoice spellCastingChoice = choicesList.Find(ch => ch.ClassAbilityName == "SpellCasting");
+                PlayerClassAbilityChoice spellCastingChoice = choicesList.Find(ch => ch.ClassAbilityName.ToLower() == "spellcasting");
 
                 if (spellCastingChoice != null)
                 {
@@ -65,7 +65,7 @@ namespace CharacterManager.CharacterCreator
             }
 
             /* Check if we have the choice of a new Archetype. */
-            PlayerClassAbilityChoice archetypeChoice = choicesList.Find(ch => ch.ClassAbilityName == "Archetype");
+            PlayerClassAbilityChoice archetypeChoice = choicesList.Find(ch => ch.ClassAbilityName.ToLower() == "archetype");
 
             if (archetypeChoice != null)
             {

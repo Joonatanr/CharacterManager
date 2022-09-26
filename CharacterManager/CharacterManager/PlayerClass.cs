@@ -56,56 +56,6 @@ namespace CharacterManager
             PlayerClassName = "UNKNOWN";
         }
 
-        public List<PlayerSpell> GetAvailableSpells(int SpellLevel)
-        {
-            List<PlayerSpell> res = new List<PlayerSpell>();
-
-            if (this.SpellCasting != null)
-            {
-                foreach (string s in this.SpellCasting.AvailableSpells)
-                {
-                    PlayerSpell sp = PlayerSpell.resolveFromString(s);
-                    if(sp.SpellLevel == SpellLevel)
-                    {
-                        res.Add(sp);
-                    }
-                }
-            }
-
-            return res;
-        }
-
-        public List<PlayerSpell> GetSpellsThatCanBeLearnedAtLevel(int playerLevel)
-        {
-            if (SpellCasting != null)
-            {
-                int MaxLevelSpellSlot = 0;
-                SpellSlots_T slots = SpellCasting.SpellslotPerLevel[playerLevel];
-                for (int x = 0; x <= 9; x++)
-                {
-                    
-                    if (slots.getNumberOfSlotsPerLevel(x) > 0)
-                    {
-                        MaxLevelSpellSlot = Math.Max(MaxLevelSpellSlot, slots.getNumberOfSlotsPerLevel(x));
-                    }
-                }
-
-                List<PlayerSpell> res = new List<PlayerSpell>();
-
-                for (int x = 0; x < MaxLevelSpellSlot; x++)
-                {
-                    List<PlayerSpell> spellsOfLevel = GetAvailableSpells(x);
-                    res.AddRange(spellsOfLevel);
-                }
-
-                return res;
-            }
-            else
-            {
-                return null;
-            }
-        }
-
         public int getSpellSlotsForLevel(int playerLevel, int spellSlotLevel)
         {
             if(this.SpellCasting != null)

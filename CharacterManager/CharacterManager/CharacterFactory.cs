@@ -283,6 +283,52 @@ namespace CharacterManager
             return ToolKitItemList;
         }
 
+
+        /// <summary>
+        /// Returns the spellcasting ablity of a class and subclass. Since these are static, then they are returned by the
+        /// characterfactory.
+        /// </summary>
+        /// <param name="className"></param>
+        /// <param name="subClassName"></param>
+        /// <returns></returns>
+        public static SpellcastingAbility GetSpellCastingAbilityOfClass(string className, string subClassName)
+        {
+            if (string.IsNullOrEmpty(className))
+            {
+                return null;
+            }
+
+            PlayerClass pc = getPlayerClassByName(className);
+
+            if (pc != null)
+            {
+                if (pc.SpellCasting != null)
+                {
+                    return pc.SpellCasting;
+                }
+                else if(!string.IsNullOrEmpty(subClassName))
+                {
+                    PlayerClassArchetype aType = getPlayerSubClassByName(className, subClassName);
+                    if(aType != null)
+                    {
+                        return aType.SpellCasting;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         //Basically we try to resolve the item from string.
         /* The idea for this function is that a string might contain some special 
          magic words that indicate a choice between multiple items. */
@@ -377,6 +423,7 @@ namespace CharacterManager
             raw.setMainAndSubrace(mainRace, subRace);
 
             PlayerClass pClass = raw.GetPlayerClass();
+            PlayerClassArchetype pSubclass = raw.GetPlayerSubClass();
 
             //Lets resolve the character attribute list.
             List<PlayerAbility> resultList = new List<PlayerAbility>();
@@ -386,8 +433,13 @@ namespace CharacterManager
                 
                 if (attribDesc.AbilityName.ToLower() == "spellcasting")
                 {
-                    /* We search for this from the class description instead. */
-                    member = pClass.SpellCasting;
+                    /* We search for this from the class description instead. */ 
+                    string subClassName = null;
+                    if(pSubclass != null)
+                    {
+                        subClassName = pSubclass.ArcheTypeName;
+                    }
+                    member = CharacterFactory.GetSpellCastingAbilityOfClass(pClass.PlayerClassName, subClassName);
                 }
                 else
                 {

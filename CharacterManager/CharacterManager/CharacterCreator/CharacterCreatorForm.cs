@@ -1007,7 +1007,7 @@ namespace CharacterManager.CharacterCreator
 
             List <PlayerClassAbilityChoice> choices = SelectedClass.getAvailableClassAbilities(1);
 
-            if(choices.Find(ch => ch.ClassAbilityName == "SpellCasting") == null)
+            if(choices.Find(ch => ch.ClassAbilityName.ToLower() == "spellcasting") == null)
             {
                 MessageBox.Show("No spellcassting for this class at level 1");
                 return;
@@ -1015,13 +1015,12 @@ namespace CharacterManager.CharacterCreator
 
             if (currentClassForSpellcasting != SelectedClass)
             {
-
                 int NumberOfCantripsToChoose = SelectedClass.SpellCasting.NumberOfInitialCantrips;
                 int NumberOfSpellsToChoose = SelectedClass.SpellCasting.NumberOfInitialLev1Spells;
 
                 /* We assume that at level 1, it is possible to only select cantrips and level 1 spells. */
-                List<PlayerSpell> AvailableSpells = SelectedClass.GetAvailableSpells(0);
-                AvailableSpells.AddRange(SelectedClass.GetAvailableSpells(1));
+                List<PlayerSpell> AvailableSpells = SelectedClass.SpellCasting.GetAvailableSpells(0);
+                AvailableSpells.AddRange(SelectedClass.SpellCasting.GetAvailableSpells(1));
 
                 myChooseSpellsForm.setSpellChoices(AvailableSpells, NumberOfCantripsToChoose, NumberOfSpellsToChoose);
 
