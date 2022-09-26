@@ -35,21 +35,24 @@ namespace CharacterManager.UserControls
                 return;
             }
 
-            foreach(string sp in stat.KnownSpells)
+            if (stat.KnownSpells != null)
             {
-                PlayerSpell obj = CharacterFactory.getPlayerSpellFromString(sp);
-                if (obj == null)
+                foreach (string sp in stat.KnownSpells)
                 {
-                    /* TODO : Report error */
-                    
-                }
-                else if(obj.SpellLevel == 0)
-                {
-                    myKnownCantrips.Add(obj);
-                }
-                else 
-                {
-                    myKnownSpells.Add(obj);
+                    PlayerSpell obj = CharacterFactory.getPlayerSpellFromString(sp);
+                    if (obj == null)
+                    {
+                        /* TODO : Report error */
+
+                    }
+                    else if (obj.SpellLevel == 0)
+                    {
+                        myKnownCantrips.Add(obj);
+                    }
+                    else
+                    {
+                        myKnownSpells.Add(obj);
+                    }
                 }
             }
 
@@ -100,7 +103,8 @@ namespace CharacterManager.UserControls
             }
 
             /* Lets update the spell slot data. */
-            userControlSpellSlotsArea1.setSpellSlotData(1, myStat.Level1SpellSlots);
+            //userControlSpellSlotsArea1.setSpellSlotData(1, myStat.Level1SpellSlots);
+            userControlSpellSlotsArea1.setSpellSlotData(stat);
         }
 
         public void UpdateAllDisplayedData()

@@ -9,8 +9,8 @@ namespace CharacterManager.Spells
     [Serializable]
     public class CharacterSpellcastingStatus
     {
-        public List<string> KnownSpells;
-        public List<string> PreparedSpells;
+        public List<string> KnownSpells = new List<string>();
+        public List<string> PreparedSpells = new List<string>();
         public string SpellCastingAbility;
         public int SpellSaveDC;
         public int SpellAttackBonus;

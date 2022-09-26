@@ -130,7 +130,7 @@ namespace CharacterManager
                 {
                     userControlMagicHandler1.Visible = true;
                     this.activeCharacter.UpdateSpellModifiers();
-                    userControlMagicHandler1.setCharSpellcastingStatus(this.activeCharacter.CharacterSpellCasting);
+                    userControlMagicHandler1.setCharSpellcastingStatus(this.activeCharacter.CharacterSpellCastingStatus);
                 }
                 else
                 {

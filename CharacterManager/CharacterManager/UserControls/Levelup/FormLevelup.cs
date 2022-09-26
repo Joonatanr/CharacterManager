@@ -139,22 +139,19 @@ namespace CharacterManager.UserControls
             _myCharacter.KnownSpells = SelectedSpellNames;
 
 
-#if false
-            if (_myClass.SpellCasting != null)
+            /* Update spell slot amount. */
+            if(_myCharacter.SpellCasting != null)
             {
                 PlayerClass _myClass = _myCharacter.GetPlayerClass();
-                _myClass.SpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);
+                SpellSlots_T slotsForThisLevel =_myClass.SpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);
 
-                /* TODO : Update spell slots */
                 for (int SpellLevel = 1; SpellLevel <= 9; SpellLevel++)
                 {
-                    /* TODO */
-                    //_myCharacter.CharacterSpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);
-                    //_myClass.SpellCasting.
+                    int numberOfSlots = slotsForThisLevel.getNumberOfSlotsPerLevel(SpellLevel);
+                    _myCharacter.setSpellSlotData(SpellLevel, new CharacterSpellcastingStatus.SpellSlotData(numberOfSlots,numberOfSlots));
                 }
-
             }
-#endif
+
             this.DialogResult = DialogResult.OK;
             this.Close();
         }

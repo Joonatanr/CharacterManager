@@ -97,7 +97,7 @@ namespace CharacterManager
         public List<PlayerArmor> CharacterArmors = new List<PlayerArmor>();
         public List<PlayerItem> CharacterGeneralEquipment = new List<PlayerItem>();
 
-        public CharacterSpellcastingStatus CharacterSpellCasting = new CharacterSpellcastingStatus();
+        public CharacterSpellcastingStatus CharacterSpellCastingStatus = new CharacterSpellcastingStatus();
 
         /* TODO : This part is still in development. Should move a lot of spellcasting functionality to the PlayerCharacter spellcasting ability.*/
         private SpellcastingAbility _mySpellcastingAbility = null;
@@ -119,13 +119,13 @@ namespace CharacterManager
         [XmlIgnore]
         public List<string> KnownSpells
         {
-            get { return CharacterSpellCasting.KnownSpells;     }
+            get { return CharacterSpellCastingStatus.KnownSpells;     }
             set 
             {
                 /* TODO : Consider if Spellcasting is null??? */
-                if (CharacterSpellCasting != null)
+                if (CharacterSpellCastingStatus != null)
                 {
-                    CharacterSpellCasting.KnownSpells = value;
+                    CharacterSpellCastingStatus.KnownSpells = value;
                 }
             }
         }
@@ -133,8 +133,8 @@ namespace CharacterManager
         [XmlIgnore]
         public List<string> PreparedSpells
         {
-            get { return CharacterSpellCasting.PreparedSpells;  }
-            set { CharacterSpellCasting.PreparedSpells = value; }        
+            get { return CharacterSpellCastingStatus.PreparedSpells;  }
+            set { CharacterSpellCastingStatus.PreparedSpells = value; }        
         }
 
         [XmlIgnore]
@@ -420,7 +420,7 @@ namespace CharacterManager
             }
 
             /* 3. Restore spell points. */
-            this.CharacterSpellCasting.RechargeAllSpellSlots();
+            this.CharacterSpellCastingStatus.RechargeAllSpellSlots();
         }
 
         internal void PerformShortRest()
@@ -442,11 +442,11 @@ namespace CharacterManager
             {
                 string spellcastingAttribute = this.GetPlayerClass().SpellCasting.SpellCastingAttribute;
                 int modifier = getModifier(spellcastingAttribute);
-                this.CharacterSpellCasting.SpellAttackBonus = modifier + this.ProficiencyBonus;
-                this.CharacterSpellCasting.SpellSaveDC = modifier + this.ProficiencyBonus + 8;
-                this.CharacterSpellCasting.SpellCastingAbility = spellcastingAttribute;
-                this.CharacterSpellCasting.MaxNumberOfPreparedSpells = this.GetPlayerClass().SpellCasting.GetMaximumNumberOfPreparedSpells(modifier, this.Level);
-                this.CharacterSpellCasting.SpellAbilityModifier = modifier;
+                this.CharacterSpellCastingStatus.SpellAttackBonus = modifier + this.ProficiencyBonus;
+                this.CharacterSpellCastingStatus.SpellSaveDC = modifier + this.ProficiencyBonus + 8;
+                this.CharacterSpellCastingStatus.SpellCastingAbility = spellcastingAttribute;
+                this.CharacterSpellCastingStatus.MaxNumberOfPreparedSpells = this.GetPlayerClass().SpellCasting.GetMaximumNumberOfPreparedSpells(modifier, this.Level);
+                this.CharacterSpellCastingStatus.SpellAbilityModifier = modifier;
             }
         }
 
@@ -654,21 +654,21 @@ namespace CharacterManager
 
         public void setSpellSlotData(int SpellLevel, SpellSlotData data)
         {
-            this.CharacterSpellCasting.setSpellSlotDataForLevel(SpellLevel, data);
+            this.CharacterSpellCastingStatus.setSpellSlotDataForLevel(SpellLevel, data);
         }
 
         public SpellSlotData getSpellSlotData(int level)
         {
-            return this.CharacterSpellCasting.getSpellSlotDataForLevel(level);
+            return this.CharacterSpellCastingStatus.getSpellSlotDataForLevel(level);
         }
 
         public List<PlayerSpell> GetKnownSpells()
         {
             List<PlayerSpell> res = new List<PlayerSpell>();
 
-            if(this.CharacterSpellCasting != null)
+            if(this.CharacterSpellCastingStatus != null)
             {
-                foreach(string spString in CharacterSpellCasting.KnownSpells)
+                foreach(string spString in CharacterSpellCastingStatus.KnownSpells)
                 {
                     res.Add(CharacterFactory.getPlayerSpellFromString(spString));
                 }

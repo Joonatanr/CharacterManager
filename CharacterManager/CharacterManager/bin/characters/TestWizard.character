@@ -90,7 +90,7 @@
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
   </CharacterGeneralEquipment>
-  <CharacterSpellCasting>
+  <CharacterSpellCastingStatus>
     <KnownSpells>
       <string>Dancing Lights</string>
       <string>Mage Hand</string>
@@ -149,7 +149,7 @@
       <MaximumCount>0</MaximumCount>
       <ActiveCount>0</ActiveCount>
     </Level9SpellSlots>
-  </CharacterSpellCasting>
+  </CharacterSpellCastingStatus>
   <Level>1</Level>
   <ProficiencyBonus>2</ProficiencyBonus>
   <ExperiencePoints>0</ExperiencePoints>
