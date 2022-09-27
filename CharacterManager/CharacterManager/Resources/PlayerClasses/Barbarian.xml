@@ -117,7 +117,6 @@ you must finish a long rest before you can rage again.</Description>
 	
 	<!-- Level 3 -->
 	<AvailableClassAbilitiesLevel3>
-		
 		<PlayerClassAbilityChoice>
 			<Description>Primal Path</Description>
 			<ClassAbilityName>Archetype</ClassAbilityName>
@@ -126,10 +125,27 @@ you must finish a long rest before you can rage again.</Description>
 				<string>Path Of The Totem Warrior</string>
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
-		
 	</AvailableClassAbilitiesLevel3>
 	
-		<ArcheTypes>
+	<!-- Level 4 -->
+	<AvailableClassAbilitiesLevel4>
+	</AvailableClassAbilitiesLevel4>
+	
+	<!-- Level 5 -->
+	<AvailableClassAbilitiesLevel5>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Multiattack x2</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Fast Movement</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel5>
+	
+	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Path Of The Berserker</Name>
 			<Description>For some barbarians, rage is a means to an end-—that

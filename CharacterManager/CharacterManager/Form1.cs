@@ -94,9 +94,7 @@ namespace CharacterManager
                     userControlSkillProficiencies1.setProficientAtSkill(skill);
                 }
 
-                //5. Update passive perception and speed.
-                textBoxPerception.Text = activeCharacter.PassivePerception.ToString();
-                userControlSpeed.Value = activeCharacter.Speed.ToString() + "ft";
+
 
 
                 //6. Update Player alignment.
@@ -145,6 +143,20 @@ namespace CharacterManager
                     userControlMagicHandler1.Visible = false;
                     userControlMagicHandler1.setCharSpellcastingStatus(null);
                 }
+
+                //15. Update passive perception and speed.
+
+                List<BonusValueModifier> PassivePerceptionModifiers = activeCharacter.PassivePerceptionModifiers;
+                /* TODO : Make passive perception into more than just a textbox. */
+                textBoxPerception.Text = BonusValueModifier.getTotalValueFromList(PassivePerceptionModifiers).ToString();
+
+                List<BonusValueModifier> totalSpeedModifiers = new List<BonusValueModifier>();
+                totalSpeedModifiers.Add(new BonusValueModifier("base speed", activeCharacter.Speed));
+                totalSpeedModifiers.AddRange(activeCharacter.BonusValues.SpeedModifiers);
+                userControlSpeed.Value = BonusValueModifier.getTotalValueFromList(totalSpeedModifiers).ToString() + "ft";
+                userControlSpeed.ToolTip = BonusValueModifier.getToolTipStringFromList(totalSpeedModifiers);
+
+                //userControlSpeed.Value = activeCharacter.Speed.ToString() + "ft";
             }
         }
 

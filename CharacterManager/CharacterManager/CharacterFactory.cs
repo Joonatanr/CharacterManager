@@ -704,6 +704,7 @@ namespace CharacterManager
 
             SpecialAttributeList.Add(new RageAbility());
             SpecialAttributeList.Add(new UnarmoredDefenseAbility());
+            SpecialAttributeList.Add(new FastMovementAbility());
 
         }
 

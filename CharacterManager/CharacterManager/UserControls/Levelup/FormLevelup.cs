@@ -181,13 +181,22 @@ namespace CharacterManager.UserControls
 
             _myCharacter.setCharacterAbilitiesList(resultAbilities, true);
 
-            /* Update HP. */
-            _myCharacter.CurrentHitPoints += (_myCharacter.MaxHitPoints - prevMaxHp);
+
 
             foreach (PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
             {
                 ability.RemainingCharges = ability.MaximumCharges;
             }
+
+            /* Check if CON score has been raised. NOTE that this is a special case. */
+            if (CharacterFactory.getAbilityModifierValue((int)numericUpDownCON.Value) > _myCharacter.getModifier("CON"))
+            {
+                /* In this case we increase the HP for each previous level. */
+                _myCharacter.MaxHitPoints += _myCharacter.Level;
+            }
+
+            /* Update HP. */
+            _myCharacter.CurrentHitPoints += (_myCharacter.MaxHitPoints - prevMaxHp);
 
             /* Update base attributes. */
             _myCharacter.StrengthAttribute =    (int)numericUpDownSTR.Value;
@@ -212,6 +221,27 @@ namespace CharacterManager.UserControls
                     int numberOfSlots = slotsForThisLevel.getNumberOfSlotsPerLevel(SpellLevel);
                     _myCharacter.setSpellSlotData(SpellLevel, new CharacterSpellcastingStatus.SpellSlotData(numberOfSlots, numberOfSlots));
                 }
+            }
+
+            /* Update proficiency bonus... Pretty straightforward this one. */
+            if (_myCharacter.Level == 5)
+            {
+                _myCharacter.ProficiencyBonus = 3;
+            }
+
+            if(_myCharacter.Level == 9)
+            {
+                _myCharacter.ProficiencyBonus = 4;
+            }
+
+            if(_myCharacter.Level == 13)
+            {
+                _myCharacter.ProficiencyBonus = 5;
+            }
+
+            if(_myCharacter.Level == 17)
+            {
+                _myCharacter.ProficiencyBonus = 6;
             }
         }
 

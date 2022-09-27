@@ -161,6 +161,19 @@
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel3>
 	
+	<!-- Level 4 -->
+	<AvailableClassAbilitiesLevel4>
+	</AvailableClassAbilitiesLevel4>
+	
+	<!-- Level 5 -->
+	<AvailableClassAbilitiesLevel5>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Multiattack x2</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel5>
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Battle Master</Name>

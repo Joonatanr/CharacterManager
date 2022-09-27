@@ -13,6 +13,8 @@ namespace CharacterManager
         public List<BonusValueModifier> AttackRollBonusModifiers = new List<BonusValueModifier>();
         public List<BonusValueModifier> AttackDamageBonusModifiers = new List<BonusValueModifier>();
 
+        public List<BonusValueModifier> SpeedModifiers = new List<BonusValueModifier>();
+
         public string AttackNoteString = string.Empty;
 
         /* Values that might be accessed during levelup. */

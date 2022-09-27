@@ -145,6 +145,9 @@ namespace CharacterManager
         public Boolean isArmorWorn = false;
 
         [XmlIgnore]
+        public Boolean isHeavyArmorWorn = false;
+
+        [XmlIgnore]
         public Boolean isShieldWorn = false;
 
         public String CharacterName
@@ -251,15 +254,17 @@ namespace CharacterManager
 
 
         [XmlIgnore]
-        public int PassivePerception
+        public List<BonusValueModifier> PassivePerceptionModifiers
         {
             get
             {
-                //TODO : Maybe there are some other bonuses to passive perception?
-                int res = getModifier("WIS") + 10;
+                List<BonusValueModifier> res = new List<BonusValueModifier>();
+                res.Add(new BonusValueModifier("base", 10));
+                res.Add(new BonusValueModifier("WIS bonus", getModifier("WIS")));
+
                 if (isSkillProficientIn("Perception"))
                 {
-                    res += ProficiencyBonus;
+                    res.Add(new BonusValueModifier("Proficiency Bonus", ProficiencyBonus));
                 }
                 return res;
             }
@@ -581,6 +586,7 @@ namespace CharacterManager
         public int getCurrentArmorClassModifiers(out List<BonusValueModifier> acMods)
         {
             isArmorWorn = false;
+            isHeavyArmorWorn = false;
             isShieldWorn = false;
             PlayerArmor wornArmor = null;
 
@@ -627,7 +633,6 @@ namespace CharacterManager
             else
             {
                 /* We are wearing armor. */
-                //ac = wornArmor.ArmorClass;
                 BonusValues.AcBonusModifiers.Add(new BonusValueModifier(wornArmor.getDisplayedName(), wornArmor.ArmorClass));
 
 
@@ -640,10 +645,13 @@ namespace CharacterManager
                         dexBonus = Math.Min(dexBonus, wornArmor.MaxDexModifier);
                     }
 
-                    //ac += dexBonus;
                     BonusValues.AcBonusModifiers.Add(new BonusValueModifier("DEX bonus", dexBonus));
                 }
 
+                if (wornArmor.Type == PlayerArmor.ArmorType.Heavy)
+                {
+                    isHeavyArmorWorn = true;
+                }
             }
 
             if (isShieldWorn)

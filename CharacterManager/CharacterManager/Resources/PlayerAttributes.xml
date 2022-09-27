@@ -566,6 +566,13 @@ break the bond with one of the other two.</Description>
 		<IsCombatAbility>false</IsCombatAbility>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<Name>Multiattack x2</Name>
+		<Description>You can attack twice, instead of
+once, whenever you take the Attack action on your turn.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
 <!-- Barbarian class abilities -->
 	
 	<PlayerAbility>
@@ -655,7 +662,13 @@ advantage on melee attack rolls against any creature
 within 5 feet of you that is hostile to you. The spirit of
 the wolf makes you a leader of hunters.</Description>
 	</PlayerAbility>
-
+	
+	<PlayerAbility>
+		<Name>Fast Movement</Name>
+		<Description>Starting at 5th level, your speed increases by 10 feet while you aren’t wearing heavy armor.</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
 <!-- Wizard class abilities -->
 	<PlayerAbility>
 		<Name>Arcane Recovery</Name>

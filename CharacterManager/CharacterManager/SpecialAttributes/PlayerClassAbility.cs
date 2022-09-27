@@ -244,4 +244,25 @@ namespace CharacterManager
         }
     }
 
+    public class FastMovementAbility : SpecialAttribute
+    {
+        public FastMovementAbility()
+        {
+            this.Name = "Fast Movement";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.ArmorDonned += C_ArmorDonned;
+        }
+
+        private void C_ArmorDonned(PlayerCharacter c)
+        {
+            if (c.isHeavyArmorWorn == false)
+            {
+                c.BonusValues.SpeedModifiers.Add(new BonusValueModifier("Fast movement", 10));
+            }
+        }
+    }
+
 }
