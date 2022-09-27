@@ -43,7 +43,7 @@ namespace CharacterManager.UserControls
                 dieRollTextBox1.DieRollObject = _myManeuverAbility.DiceObject;
 
                 List<BonusValueModifier> DifficultyClassModifiers = _myManeuverAbility.getDifficultyClass();
-                userControlGenericValue1.ValueModifiers = DifficultyClassModifiers;
+                userControlGenericValue1.setBonusValueModifiers(DifficultyClassModifiers);
             }
         }
 

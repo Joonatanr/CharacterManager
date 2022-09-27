@@ -35,6 +35,7 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
+            this.userControlPassivePerception = new CharacterManager.UserControls.UserControlGenericValue();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonShortRest = new System.Windows.Forms.Button();
@@ -49,8 +50,6 @@
             this.userControlArmorClass = new CharacterManager.UserControls.UserControlGenericValue();
             this.userControlHitPoints1 = new CharacterManager.UserControls.UserControlHitPoints();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBoxPerception = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.textBoxProfBonus = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -155,6 +154,7 @@
             // tabPageCharacter
             // 
             this.tabPageCharacter.BackColor = System.Drawing.Color.White;
+            this.tabPageCharacter.Controls.Add(this.userControlPassivePerception);
             this.tabPageCharacter.Controls.Add(this.button2);
             this.tabPageCharacter.Controls.Add(this.button1);
             this.tabPageCharacter.Controls.Add(this.buttonShortRest);
@@ -165,8 +165,6 @@
             this.tabPageCharacter.Controls.Add(this.userControlGenericAbilitiesList1);
             this.tabPageCharacter.Controls.Add(this.groupBox4);
             this.tabPageCharacter.Controls.Add(this.richTextBox1);
-            this.tabPageCharacter.Controls.Add(this.textBoxPerception);
-            this.tabPageCharacter.Controls.Add(this.label8);
             this.tabPageCharacter.Controls.Add(this.userControlSkillProficiencies1);
             this.tabPageCharacter.Controls.Add(this.textBoxProfBonus);
             this.tabPageCharacter.Controls.Add(this.label6);
@@ -178,6 +176,16 @@
             this.tabPageCharacter.Size = new System.Drawing.Size(1034, 804);
             this.tabPageCharacter.TabIndex = 0;
             this.tabPageCharacter.Text = "Character";
+            // 
+            // userControlPassivePerception
+            // 
+            this.userControlPassivePerception.IsBorder = true;
+            this.userControlPassivePerception.Label = "Passive Perception";
+            this.userControlPassivePerception.Location = new System.Drawing.Point(15, 722);
+            this.userControlPassivePerception.Name = "userControlPassivePerception";
+            this.userControlPassivePerception.Size = new System.Drawing.Size(129, 73);
+            this.userControlPassivePerception.TabIndex = 38;
+            this.userControlPassivePerception.Value = "10";
             // 
             // button2
             // 
@@ -255,6 +263,7 @@
             this.userControlGenericAbilitiesList1.Name = "userControlGenericAbilitiesList1";
             this.userControlGenericAbilitiesList1.Size = new System.Drawing.Size(288, 409);
             this.userControlGenericAbilitiesList1.TabIndex = 30;
+            this.userControlGenericAbilitiesList1.Title = "Abilities:";
             // 
             // groupBox4
             // 
@@ -315,24 +324,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(268, 142);
             this.richTextBox1.TabIndex = 27;
             this.richTextBox1.Text = "";
-            // 
-            // textBoxPerception
-            // 
-            this.textBoxPerception.Location = new System.Drawing.Point(216, 722);
-            this.textBoxPerception.Name = "textBoxPerception";
-            this.textBoxPerception.ReadOnly = true;
-            this.textBoxPerception.Size = new System.Drawing.Size(61, 20);
-            this.textBoxPerception.TabIndex = 26;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(13, 724);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(190, 15);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Passive Wisdom(Perception)";
             // 
             // userControlSkillProficiencies1
             // 
@@ -707,8 +698,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private UserControls.UserControlSkillProficiencies userControlSkillProficiencies1;
-        private System.Windows.Forms.TextBox textBoxPerception;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private UserControls.UserControlHitPoints userControlHitPoints1;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -724,6 +713,7 @@
         private UserControls.UserControlMagicHandler userControlMagicHandler1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private UserControls.UserControlGenericValue userControlPassivePerception;
     }
 }
 

@@ -106,7 +106,6 @@ namespace CharacterManager.UserControls
             }
 
             /* Lets update the spell slot data. */
-            //userControlSpellSlotsArea1.setSpellSlotData(1, myStat.Level1SpellSlots);
             userControlSpellSlotsArea1.setSpellSlotData(stat);
         }
 

@@ -145,18 +145,14 @@ namespace CharacterManager
                 }
 
                 //15. Update passive perception and speed.
-
                 List<BonusValueModifier> PassivePerceptionModifiers = activeCharacter.PassivePerceptionModifiers;
-                /* TODO : Make passive perception into more than just a textbox. */
-                textBoxPerception.Text = BonusValueModifier.getTotalValueFromList(PassivePerceptionModifiers).ToString();
+                userControlPassivePerception.setBonusValueModifiers(PassivePerceptionModifiers);
 
                 List<BonusValueModifier> totalSpeedModifiers = new List<BonusValueModifier>();
                 totalSpeedModifiers.Add(new BonusValueModifier("base speed", activeCharacter.Speed));
                 totalSpeedModifiers.AddRange(activeCharacter.BonusValues.SpeedModifiers);
-                userControlSpeed.Value = BonusValueModifier.getTotalValueFromList(totalSpeedModifiers).ToString() + "ft";
-                userControlSpeed.ToolTip = BonusValueModifier.getToolTipStringFromList(totalSpeedModifiers);
 
-                //userControlSpeed.Value = activeCharacter.Speed.ToString() + "ft";
+                userControlSpeed.setBonusValueModifiers(totalSpeedModifiers);
             }
         }
 
