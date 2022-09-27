@@ -8204,6 +8204,334 @@ object or when a silver bell rings within 30 feet o f it.</Description>
     <MaterialCost>10</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
+    <Description>You touch a nonmagical w eapon. Until the spell ends,
+that weapon becomes a magic weapon with a +1 bonus
+to attack rolls and damage rolls.</Description>
+    <ItemName>Magic Weapon</ItemName>
+    <SpellName>Magic Weapon</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 4th level 
+or higher, the bonus increases to +2. When you use a spell 
+slot of 6th level or higher, the bonus increases to +3.</AtHigherLevels>
+    <School>Transmutation</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_BONUS_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You create the image of an object, a creature, or some
+other visible phenomenon that is no larger than a
+20-foot cube. The image appears at a spot that you
+can see within range and lasts for the duration. It
+seems completely real, including sounds, smells, and
+temperature appropriate to the thing depicted. You
+can’t create sufficient heat or cold to cause damage, a
+sound loud enough to deal thunder damage or deafen a
+creature, or a smell that might sicken a creature (like a
+troglodyte’s stench).
+
+As long as you are within range o f the illusion, you
+can use your action to cause the image to move to
+any other spot within range. As the image changes
+location, you can alter its appearance so that its
+movements appear natural for the image. For example,
+if you create an image o f a creature and move it, you
+can alter the image so that it appears to be walking.
+Similarly, you can cause the illusion to make different
+sounds at different times, even making it carry on a
+conversation, for example.
+
+Physical interaction with the image reveals it to be an
+illusion, because things can pass through it. A creature
+that uses its action to examine the image can determine
+that it is an illusion with a successful Intelligence
+(Investigation) check against your spell save DC. If a
+creature discerns the illusion for what it is, the creature
+can see through the image, and its other sensory
+qualities become faint to the creature.</Description>
+    <ItemName>Major Image</ItemName>
+    <SpellName>Major Image</SpellName>
+    <AtHigherLevels>When you cast this spell using
+a spell slot of 6th level or higher, the spell lasts until
+dispelled, without requiring your concentration.</AtHigherLevels>
+    <School>Illusion</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a bit of fleece</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A wave of healing energy washes out from a point of
+your choice within range. Choose up to six creatures
+in a 30-foot-radius sphere centered on that point. Each
+target regains hit points equal to 3d8 + your spellcasting
+ability modifier. This spell has no effect on undead
+or constructs.</Description>
+    <ItemName>Mass Cure Wounds</ItemName>
+    <SpellName>Mass Cure Wounds</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 6th level or higher, 
+the healing increases by 1d8 for each slot level above 5th.</AtHigherLevels>
+    <School>Conjuration</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>30</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A flood of healing energy flows from you into injured
+creatures around you. You restore up to 700 hit points,
+divided as you choose among any number of creatures
+that you can see within range. Creatures healed by
+this spell are also cured o f all diseases and any effect
+making them blinded or deafened. This spell has no
+effect on undead or constructs.</Description>
+    <ItemName>Mass Heal</ItemName>
+    <SpellName>Mass Heal</SpellName>
+    <AtHigherLevels />
+    <School>Conjuration</School>
+    <SpellLevel>9</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>As you call out words of restoration, up to six creatures
+of your choice that you can see within range regain hit
+points equal to 1d4 + your spellcasting ability modifier.
+This spell has no effect on undead or constructs.</Description>
+    <ItemName>Mass Healing Word</ItemName>
+    <SpellName>Mass Healing Word</SpellName>
+    <AtHigherLevels>When you cast this spell using a
+spell slot o f 4th level or higher, the healing increases by
+1d4 for each slot level above 3rd.</AtHigherLevels>
+    <School>Evocation</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_BONUS_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You suggest a course o f activity (limited to a sentence
+or two) and magically influence up to twelve creatures
+of your choice that you can see within range and that
+can hear and understand you. Creatures that can’t be
+charmed are immune to this effect. The suggestion must
+be worded in such a manner as to make the course of
+action sound reasonable. Asking the creature to stab
+itself, throw itself onto a spear, immolate itself, or do
+some other obviously harmful act automatically negates
+the effect of the spell.
+
+Each target must make a Wisdom saving throw. On a
+failed save, it pursues the course of action you described
+to the best of its ability. The suggested course of action
+can continue for the entire duration. If the suggested
+activity can be completed in a shorter time, the spell
+ends when the subject finishes what it was asked to do.
+
+You can also specify conditions that will trigger a
+special activity during the duration. For example, you
+might suggest that a group of soldiers give all their
+money to the first beggar they meet. If the condition isn’t
+met before the spell ends, the activity isn’t performed.
+If you or any o f your companions damage a creature
+affected by this spell, the spell ends for that creature.</Description>
+    <ItemName>Mass Suggestion</ItemName>
+    <SpellName>Mass Suggestion</SpellName>
+    <AtHigherLevels>When you cast this spell using
+a 7th-level spell slot, the duration is 10 days. When
+you use an 8th-level spell slot, the duration is 30 days.
+When you use a 9th-level spell slot, the duration is a
+year and a day.</AtHigherLevels>
+    <School>Enchantment</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a snake’s tongue and either a bit of honeycomb or a drop of sweet oil</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You banish a creature that you can see within range into
+a labyrinthine demiplane. The target remains there for
+the duration or until it escapes the maze.
+
+The target can use its action to attempt to escape.
+When it does so, it makes a DC 20 Intelligence check. If
+it succeeds, it escapes, and the spell ends (a minotaur or
+goristro demon automatically succeeds).
+
+When the spell ends, the target reappears in the
+space it left or, if that space is occupied, in the nearest
+unoccupied space.</Description>
+    <ItemName>Maze</ItemName>
+    <SpellName>Maze</SpellName>
+    <AtHigherLevels />
+    <School>Conjuration</School>
+    <SpellLevel>8</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You step into a stone object or surface large enough to
+fully contain your body, melding yourself and all the
+equipment you carry with the stone for the duration.
+Using your movement, you step into the stone at a point
+you can touch. Nothing of your presence remains visible
+or otherwise detectable by nonmagical senses.
+
+While merged with the stone, you can’t see what
+occurs outside it, and any Wisdom (Perception) checks
+you make to hear sounds outside it are made with
+disadvantage. You remain aware o f the passage of
+time and can cast spells on yourself while merged in
+the stone. You can use your movement to leave the
+stone where you entered it, which ends the spell. You
+otherwise can’t move.
+
+Minor physical damage to the stone doesn’t harm
+you, but its partial destruction or a change in its shape
+(to the extent that you no longer fit w ithin it) expels you
+and deals 6d6 bludgeoning damage to you. The stone’s
+complete destruction (or transmutation into a different
+substance) expels you and deals 50 bludgeoning damage
+to you. If expelled, you fall prone in an unoccupied space
+closest to where you first entered.</Description>
+    <ItemName>Meld Into Stone</ItemName>
+    <SpellName>Meld Into Stone</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>true</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A shimmering green arrow streaks toward a target
+within range and bursts in a spray o f acid. Make a
+ranged spell attack against the target. On a hit, the
+target takes 4d4 acid damage immediately and 2d4 acid
+damage at the end o f its next turn. On a miss, the arrow
+splashes the target with acid for half as much o f the
+initial damage and no damage at the end o f its next turn.</Description>
+    <ItemName>Melf's Acid Arrow</ItemName>
+    <SpellName>Melf's Acid Arrow</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 3rd level or higher, 
+the damage (both initial and later) increases by 1d4
+ for each slot level above 2nd.</AtHigherLevels>
+    <School>Evocation</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>90</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>powdered rhubarb leaf and an adder's stomach</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>This spell repairs a single break or tear in an object
 you touch, such as a broken chain link, two halves of
 a broken key, a torn cloak, or a leaking wineskin. As
