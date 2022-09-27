@@ -133,7 +133,7 @@ namespace CharacterManager.CharacterCreator
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if (userControlSpellChoice1.MaximumAvailableChoices > 0 || userControlSpellChoice2.MaximumAvailableChoices > 0)
+            if (userControlSpellChoice1.RemainingAvailableChoices > 0 || userControlSpellChoice2.RemainingAvailableChoices > 0)
             {
                 MessageBox.Show("Not all spells have been selected!");
             }

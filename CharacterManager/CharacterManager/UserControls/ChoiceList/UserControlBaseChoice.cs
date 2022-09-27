@@ -30,13 +30,20 @@ namespace CharacterManager.UserControls
             set 
             { 
                 _maximumAvailableChoices = value;
+                _remainingAvailableChoices = value;
             }
         }
 
         protected List<ItemHandleControl<ItemType>> myControlList = new List<ItemHandleControl<ItemType>>();
         protected List<ItemType> myItemList = new List<ItemType>();
         protected List<ItemType> myLockedItemList = new List<ItemType>(); /* These are spells that are already chosen because they come from racial abilities etc... */
-        
+
+        public int RemainingAvailableChoices
+        {
+            get { return _remainingAvailableChoices; }
+        }
+
+        private int _remainingAvailableChoices = 0;
 
         protected class StringContainer
         {
@@ -215,7 +222,7 @@ namespace CharacterManager.UserControls
             if (IsAvailabilityCount)
             {
                 int lastLine = getNumberOfLines() - 2;
-                drawTextOnLine(gfx, "Available : " + MaximumAvailableChoices.ToString(), lastLine);
+                drawTextOnLine(gfx, "Available : " + _remainingAvailableChoices.ToString(), lastLine);
             }
         }
 
@@ -223,9 +230,9 @@ namespace CharacterManager.UserControls
         {
             if (isChecked)
             {
-                MaximumAvailableChoices--;
+                _remainingAvailableChoices--;
 
-                if (MaximumAvailableChoices == 0)
+                if (_remainingAvailableChoices == 0)
                 {
                     //We lock the ability to choose more spells...
                     setSelectionsLocked(true);
@@ -233,8 +240,8 @@ namespace CharacterManager.UserControls
             }
             else
             {
-                MaximumAvailableChoices++;
-                if (MaximumAvailableChoices == 1)
+                _remainingAvailableChoices++;
+                if (_remainingAvailableChoices == 1)
                 {
                     //We unlock the ability to choose more spells.
                     setSelectionsLocked(false);
