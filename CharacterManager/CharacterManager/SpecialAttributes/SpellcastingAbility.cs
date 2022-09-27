@@ -81,19 +81,57 @@ namespace CharacterManager.SpecialAttributes
             return res;
         }
 
-        public int GetMaximumNumberOfPreparedSpells(int spellcasting_ability_modifier, int level)
+        public List<BonusValueModifier> GetMaximumNumberOfPreparedSpells(int spellcasting_ability_modifier, int level)
         {
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
+            int total = 0;
+
             switch (SpellPreparation) 
             {
                 case SpellPreparationType.PREPARATION_NONE:
-                    return 0; /* Special case, all are allowed. */
+                    /* Special case, all are allowed. */
+                    res.Add(new BonusValueModifier("No preparation needed", 0));
+                    break;
                 case SpellPreparationType.PREPARATION_HALF:
-                    return (Math.Max(1, spellcasting_ability_modifier + (level / 2)));
+                    res.Add(new BonusValueModifier("Ability modifier", spellcasting_ability_modifier));
+                    res.Add(new BonusValueModifier("Level / 2", level / 2));
+
+                    total = 0;
+                    foreach (BonusValueModifier mod in res)
+                    {
+                        total += mod.modifierValue;
+                    }
+
+                    if(total == 0)
+                    {
+                        /* Minimum of one spell can be prepared */
+                        res.Add(new BonusValueModifier("Minimum of 1", 1));
+                    }
+                     
+                    break;
+
                 case SpellPreparationType.PREPARATION_FULL:
-                    return (Math.Max(1, spellcasting_ability_modifier + level));
+                    res.Add(new BonusValueModifier("Ability modifier", spellcasting_ability_modifier));
+                    res.Add(new BonusValueModifier("Level", level));
+
+                    total = 0;
+                    foreach (BonusValueModifier mod in res)
+                    {
+                        total += mod.modifierValue;
+                    }
+
+                    if (total == 0)
+                    {
+                        /* Minimum of one spell can be prepared */
+                        res.Add(new BonusValueModifier("Minimum of 1", 1));
+                    }
+
+                    break;
                 default:
-                    return -1;
+                    return null;
             }
+
+            return res;
         }
 
         public int GetNewSpellsLearnedAtLevel(int PlayerLevel)

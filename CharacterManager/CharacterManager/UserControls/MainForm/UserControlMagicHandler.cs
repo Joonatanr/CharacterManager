@@ -78,13 +78,16 @@ namespace CharacterManager.UserControls
 
             atckBonus+= myStat.SpellAttackBonus.ToString();
             userControlSpellAttackBonus.Value = atckBonus;
+            userControlSpellAttackBonus.ToolTip = BonusValueModifier.getToolTipStringFromList(myStat.SpellAttackBonusModifiers);
             userControlSpellsaveDc.Value = myStat.SpellSaveDC.ToString();
+            userControlSpellsaveDc.ToolTip = BonusValueModifier.getToolTipStringFromList(myStat.SpellSaveDcModifiers);
 
             /* Simplistic approach first, TODO */
             int maxPreparedSpells = myStat.MaxNumberOfPreparedSpells;
             if (maxPreparedSpells > 0)
             {
                 userControlMaxPreparedSpells.Value = myStat.MaxNumberOfPreparedSpells.ToString();
+                userControlMaxPreparedSpells.ToolTip = BonusValueModifier.getToolTipStringFromList(myStat.MaxNumberOfPreparedModifiers);
                 userControlKnownSpells.MaximumAvailableChoices = myStat.MaxNumberOfPreparedSpells;
 
                 if (myStat.PreparedSpells != null)

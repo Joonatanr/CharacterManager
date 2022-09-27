@@ -437,11 +437,36 @@ namespace CharacterManager
             {
                 string spellcastingAttribute = this.SpellCasting.SpellCastingAttribute;
                 int modifier = getModifier(spellcastingAttribute);
-                this.CharacterSpellCastingStatus.SpellAttackBonus = modifier + this.ProficiencyBonus;
-                this.CharacterSpellCastingStatus.SpellSaveDC = modifier + this.ProficiencyBonus + 8;
+
                 this.CharacterSpellCastingStatus.SpellCastingAbility = spellcastingAttribute;
-                this.CharacterSpellCastingStatus.MaxNumberOfPreparedSpells = this.SpellCasting.GetMaximumNumberOfPreparedSpells(modifier, this.Level);
                 this.CharacterSpellCastingStatus.SpellAbilityModifier = modifier;
+
+                BonusValueModifier SpellCastingAbilityModifier = new BonusValueModifier(spellcastingAttribute + " bonus", modifier);
+                BonusValueModifier ProficiencyBonusModifier = new BonusValueModifier("proficiency bonus ", ProficiencyBonus);
+
+
+                /* 1. Update Spell Attack Bonus. */
+                //this.CharacterSpellCastingStatus.SpellAttackBonus = modifier + this.ProficiencyBonus;
+                List<BonusValueModifier> attackMods = new List<BonusValueModifier>();
+                attackMods.Add(SpellCastingAbilityModifier);
+                attackMods.Add(ProficiencyBonusModifier);
+
+                this.CharacterSpellCastingStatus.SpellAttackBonusModifiers = attackMods;
+
+                /* 2. Update Spell Save DC. */
+                List<BonusValueModifier> SpellSaveDcModifiers = new List<BonusValueModifier>();
+
+                SpellSaveDcModifiers.Add(new BonusValueModifier("base", 8));
+                SpellSaveDcModifiers.Add(SpellCastingAbilityModifier);
+                SpellSaveDcModifiers.Add(ProficiencyBonusModifier);
+
+                this.CharacterSpellCastingStatus.SpellSaveDcModifiers = SpellSaveDcModifiers;
+
+                /* 3. Update maximum number of prepared spells. */
+                
+                this.CharacterSpellCastingStatus.MaxNumberOfPreparedModifiers = this.SpellCasting.GetMaximumNumberOfPreparedSpells(modifier, this.Level);
+                
+               
             }
         }
 

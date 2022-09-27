@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace CharacterManager.Spells
 {
@@ -12,9 +13,62 @@ namespace CharacterManager.Spells
         public List<string> KnownSpells = new List<string>();
         public List<string> PreparedSpells = new List<string>();
         public string SpellCastingAbility;
-        public int SpellSaveDC;
-        public int SpellAttackBonus;
-        public int MaxNumberOfPreparedSpells;
+
+        [XmlIgnore]
+        public List<BonusValueModifier> SpellSaveDcModifiers = new List<BonusValueModifier>();
+
+        [XmlIgnore]
+        public int SpellSaveDC 
+        { 
+            get 
+            {
+                int res = 0;
+
+                foreach(BonusValueModifier mod in SpellSaveDcModifiers)
+                {
+                    res += mod.modifierValue;
+                }
+
+                return res;
+            } 
+        }
+
+        [XmlIgnore]
+        public List<BonusValueModifier> SpellAttackBonusModifiers = new List<BonusValueModifier>();
+
+        [XmlIgnore]
+        public int SpellAttackBonus
+        {
+            get
+            {
+                int res = 0;
+                foreach(BonusValueModifier mod in SpellAttackBonusModifiers)
+                {
+                    res += mod.modifierValue;
+                }
+
+                return res;
+            }
+        }
+
+        [XmlIgnore]
+        public List<BonusValueModifier> MaxNumberOfPreparedModifiers = new List<BonusValueModifier>();
+
+        [XmlIgnore]
+        public int MaxNumberOfPreparedSpells
+        {
+            get
+            {
+                int res = 0;
+                foreach(BonusValueModifier mod in MaxNumberOfPreparedModifiers)
+                {
+                    res += mod.modifierValue;
+                }
+                return res;
+            }
+        }
+        
+        
         public int SpellAbilityModifier;
 
         public class SpellSlotData
