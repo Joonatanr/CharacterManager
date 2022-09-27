@@ -3710,7 +3710,7 @@ be within range.</Description>
     <ItemName>Detect Thoughts</ItemName>
     <SpellName>Detect Thoughts</SpellName>
     <School>Divination</School>
-    <SpellLevel>1</SpellLevel>
+    <SpellLevel>2</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>10</SpellDuration>
     <IsUntilDispelled>false</IsUntilDispelled>

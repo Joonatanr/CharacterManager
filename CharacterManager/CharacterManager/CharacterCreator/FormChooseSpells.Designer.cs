@@ -31,11 +31,11 @@
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.userControlSpellChoice1 = new CharacterManager.UserControls.UserControlSpellChoice();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.userControlChosenSpells = new CharacterManager.UserControls.UserControlSpellChoice();
             this.panel3 = new System.Windows.Forms.Panel();
             this.userControlSpellChoice2 = new CharacterManager.UserControls.UserControlSpellChoice();
-            this.userControlChosenSpells = new CharacterManager.UserControls.UserControlSpellChoice();
-            this.userControlSpellChoice1 = new CharacterManager.UserControls.UserControlSpellChoice();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,6 +72,20 @@
             this.panel1.Size = new System.Drawing.Size(374, 315);
             this.panel1.TabIndex = 13;
             // 
+            // userControlSpellChoice1
+            // 
+            this.userControlSpellChoice1.IsAvailabilityCount = true;
+            this.userControlSpellChoice1.IsBorder = true;
+            this.userControlSpellChoice1.IsCheckBoxed = true;
+            this.userControlSpellChoice1.IsMultipleLevel = false;
+            this.userControlSpellChoice1.Location = new System.Drawing.Point(3, 13);
+            this.userControlSpellChoice1.MaximumAvailableChoices = 0;
+            this.userControlSpellChoice1.Name = "userControlSpellChoice1";
+            this.userControlSpellChoice1.Size = new System.Drawing.Size(346, 290);
+            this.userControlSpellChoice1.TabIndex = 8;
+            this.userControlSpellChoice1.TitleString = "Cantrips:";
+            this.userControlSpellChoice1.SpellSelectionChanged += new CharacterManager.UserControls.UserControlSpellChoice.SpellChoiceChangedListener(this.userControlSpellChoice1_SpellSelectionChanged);
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -83,32 +97,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(443, 644);
             this.panel2.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.userControlSpellChoice2);
-            this.panel3.Location = new System.Drawing.Point(12, 333);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(374, 323);
-            this.panel3.TabIndex = 15;
-            // 
-            // userControlSpellChoice2
-            // 
-            this.userControlSpellChoice2.IsAvailabilityCount = true;
-            this.userControlSpellChoice2.IsBorder = true;
-            this.userControlSpellChoice2.IsCheckBoxed = true;
-            this.userControlSpellChoice2.IsMultipleLevel = false;
-            this.userControlSpellChoice2.Location = new System.Drawing.Point(3, 3);
-            this.userControlSpellChoice2.MaximumAvailableChoices = 0;
-            this.userControlSpellChoice2.MinimumSize = new System.Drawing.Size(346, 277);
-            this.userControlSpellChoice2.Name = "userControlSpellChoice2";
-            this.userControlSpellChoice2.Size = new System.Drawing.Size(346, 317);
-            this.userControlSpellChoice2.TabIndex = 9;
-            this.userControlSpellChoice2.TitleString = "Level 1 Spells";
-            this.userControlSpellChoice2.SpellSelectionChanged += new CharacterManager.UserControls.UserControlSpellChoice.SpellChoiceChangedListener(this.userControlSpellChoice2_SpellSelectionChanged);
             // 
             // userControlChosenSpells
             // 
@@ -127,19 +115,31 @@
             this.userControlChosenSpells.TabIndex = 12;
             this.userControlChosenSpells.TitleString = "Chosen Spells:";
             // 
-            // userControlSpellChoice1
+            // panel3
             // 
-            this.userControlSpellChoice1.IsAvailabilityCount = true;
-            this.userControlSpellChoice1.IsBorder = true;
-            this.userControlSpellChoice1.IsCheckBoxed = true;
-            this.userControlSpellChoice1.IsMultipleLevel = false;
-            this.userControlSpellChoice1.Location = new System.Drawing.Point(3, 13);
-            this.userControlSpellChoice1.MaximumAvailableChoices = 0;
-            this.userControlSpellChoice1.Name = "userControlSpellChoice1";
-            this.userControlSpellChoice1.Size = new System.Drawing.Size(346, 290);
-            this.userControlSpellChoice1.TabIndex = 8;
-            this.userControlSpellChoice1.TitleString = "Cantrips:";
-            this.userControlSpellChoice1.SpellSelectionChanged += new CharacterManager.UserControls.UserControlSpellChoice.SpellChoiceChangedListener(this.userControlSpellChoice1_SpellSelectionChanged);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.AutoScroll = true;
+            this.panel3.Controls.Add(this.userControlSpellChoice2);
+            this.panel3.Location = new System.Drawing.Point(12, 333);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(374, 323);
+            this.panel3.TabIndex = 15;
+            // 
+            // userControlSpellChoice2
+            // 
+            this.userControlSpellChoice2.IsAvailabilityCount = true;
+            this.userControlSpellChoice2.IsBorder = true;
+            this.userControlSpellChoice2.IsCheckBoxed = true;
+            this.userControlSpellChoice2.IsMultipleLevel = true;
+            this.userControlSpellChoice2.Location = new System.Drawing.Point(3, 3);
+            this.userControlSpellChoice2.MaximumAvailableChoices = 0;
+            this.userControlSpellChoice2.MinimumSize = new System.Drawing.Size(346, 277);
+            this.userControlSpellChoice2.Name = "userControlSpellChoice2";
+            this.userControlSpellChoice2.Size = new System.Drawing.Size(346, 317);
+            this.userControlSpellChoice2.TabIndex = 9;
+            this.userControlSpellChoice2.TitleString = "Available spells:";
+            this.userControlSpellChoice2.SpellSelectionChanged += new CharacterManager.UserControls.UserControlSpellChoice.SpellChoiceChangedListener(this.userControlSpellChoice2_SpellSelectionChanged);
             // 
             // FormChooseSpells
             // 

@@ -94,6 +94,7 @@
     <NumberOfInitialLev1Spells>6</NumberOfInitialLev1Spells>
     <SpellPreparation>PREPARATION_FULL</SpellPreparation>
 	<AvailableSpells>
+		<!-- Cantrips-->
 		<string>Acid Splash</string>
 		<string>Blade Ward</string>
 		<string>Chill Touch</string>
@@ -110,6 +111,7 @@
 		<string>Ray of Frost</string>
 		<string>Shocking Grasp</string>
 		<string>True Strike</string>
+		<!-- Level 1 spells-->
 		<string>Alarm</string>
 		<string>Burning Hands</string>
 		<string>Charm Person</string>
@@ -140,8 +142,44 @@
 		<string>Thunderwave</string>
 		<string>Unseen Servant</string>
 		<string>Witch Bolt</string>
+		<!-- Level 2 spells-->
+		<string>Alter Self</string>
+		<string>Arcane Lock</string>
+		<string>Blindness/Deafness</string>
+		<string>Blur</string>
+		<string>Cloud Of Daggers</string>
+		<string>Continual Flame</string>
+		<string>Crown Of Madness</string>
+		<string>Darkness</string>
+		<string>Darkvision</string>
+		<string>Detect Thoughts</string>
+		<string>Enlarge/Reduce</string>
+		<string>Flaming Sphere</string>
+		<string>Gentle Repose</string>
+		<string>Gust Of Wind</string>
+		<string>Hold Person</string>
+		<string>Invisibility</string>
+		<string>Knock</string>
+		<string>Levitate</string>
+		<string>Locate Object</string>
+		<string>Magic Mouth</string>
+		<string>Magic Weapon</string>
+		<string>Melf's Acid Arrow</string>
+		<string>Mirror Image</string>
+		<string>Misty Step</string>
+		<string>Nystul's Magic Aura</string>
+		<string>Phantasmal Force</string>
+		<string>Ray Of Enfeeblement</string>
+		<string>Rope Trick</string>
+		<string>Scorching Ray</string>
+		<string>See Invisibility</string>
+		<string>Shatter</string>
+		<string>Spider Climb</string>
+		<string>Suggestion</string>
+		<string>Web</string>
 	</AvailableSpells>
 	<SpellslotPerLevel>
+		<!-- Level 1 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
@@ -153,6 +191,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 2 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
@@ -164,6 +203,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 3 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>2</NumberOfLev2SpellSlots>
@@ -175,6 +215,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 4 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -186,6 +227,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 5 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -197,6 +239,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 6 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -208,6 +251,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 7 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -219,6 +263,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 8 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -230,6 +275,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 9 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -241,6 +287,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 10 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -252,6 +299,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 11 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -263,6 +311,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 12 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -274,6 +323,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 13 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -285,6 +335,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 14 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -296,6 +347,7 @@
 			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 15 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -307,6 +359,7 @@
 			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 16 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -318,6 +371,7 @@
 			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 17 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -329,6 +383,7 @@
 			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 18 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -340,6 +395,7 @@
 			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 19 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -351,6 +407,7 @@
 			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
 			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
 		</SpellSlots_T>
+		<!-- Level 20 -->
 		<SpellSlots_T>
 			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
 			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
@@ -445,6 +502,9 @@
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel2>
+  
+  <AvailableClassAbilitiesLevel3>
+  </AvailableClassAbilitiesLevel3>
   
   <ArcheTypes>
 		<PlayerClassArchetype>
