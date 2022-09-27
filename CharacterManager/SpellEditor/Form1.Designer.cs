@@ -54,6 +54,7 @@ namespace SpellEditor
             this.checkBoxSomaticComponent = new System.Windows.Forms.CheckBox();
             this.checkBoxVerbalComponent = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBoxDurationUntilDispelled = new System.Windows.Forms.CheckBox();
             this.checkBoxRitual = new System.Windows.Forms.CheckBox();
             this.checkBoxConcentration = new System.Windows.Forms.CheckBox();
             this.numericUpDownCastingTime = new System.Windows.Forms.NumericUpDown();
@@ -78,7 +79,6 @@ namespace SpellEditor
             this.textBoxSpellName = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.checkBoxDurationUntilDispelled = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
@@ -398,6 +398,17 @@ namespace SpellEditor
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Casting Time";
             // 
+            // checkBoxDurationUntilDispelled
+            // 
+            this.checkBoxDurationUntilDispelled.AutoSize = true;
+            this.checkBoxDurationUntilDispelled.Location = new System.Drawing.Point(12, 94);
+            this.checkBoxDurationUntilDispelled.Name = "checkBoxDurationUntilDispelled";
+            this.checkBoxDurationUntilDispelled.Size = new System.Drawing.Size(151, 19);
+            this.checkBoxDurationUntilDispelled.TabIndex = 24;
+            this.checkBoxDurationUntilDispelled.Text = "Duration Until Dispelled";
+            this.checkBoxDurationUntilDispelled.UseVisualStyleBackColor = true;
+            this.checkBoxDurationUntilDispelled.CheckedChanged += new System.EventHandler(this.checkBoxDurationUntilDispelled_CheckedChanged);
+            // 
             // checkBoxRitual
             // 
             this.checkBoxRitual.AutoSize = true;
@@ -514,7 +525,7 @@ namespace SpellEditor
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownSpellRange.Location = new System.Drawing.Point(85, 18);
             this.numericUpDownSpellRange.Maximum = new decimal(new int[] {
-            10000,
+            1000000000,
             0,
             0,
             0});
@@ -663,17 +674,6 @@ namespace SpellEditor
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // checkBoxDurationUntilDispelled
-            // 
-            this.checkBoxDurationUntilDispelled.AutoSize = true;
-            this.checkBoxDurationUntilDispelled.Location = new System.Drawing.Point(12, 94);
-            this.checkBoxDurationUntilDispelled.Name = "checkBoxDurationUntilDispelled";
-            this.checkBoxDurationUntilDispelled.Size = new System.Drawing.Size(151, 19);
-            this.checkBoxDurationUntilDispelled.TabIndex = 24;
-            this.checkBoxDurationUntilDispelled.Text = "Duration Until Dispelled";
-            this.checkBoxDurationUntilDispelled.UseVisualStyleBackColor = true;
-            this.checkBoxDurationUntilDispelled.CheckedChanged += new System.EventHandler(this.checkBoxDurationUntilDispelled_CheckedChanged);
             // 
             // Form1
             // 

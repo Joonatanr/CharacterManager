@@ -146,6 +146,10 @@ namespace CharacterManager.Spells
                 {
                     labelRange.Text = "Touch";
                 }
+                else if(mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_UNLIMITED)
+                {
+                    labelRange.Text = "Unlimited";
+                }
                 else
                 {
                     labelRange.Text = getRangeText(mySpell.SpellRange);
