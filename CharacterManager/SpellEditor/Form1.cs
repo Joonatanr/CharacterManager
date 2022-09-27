@@ -229,11 +229,9 @@ namespace SpellEditor
 
                     foreach(PlayerSpell sp in SpellList)
                     {
-                        sp.IsModified = false;
-                        updateDisplayedSpells();
+                        sp.IsModified = false;   
                     }
-
-
+                    updateDisplayedSpells();
                 }
                 catch (Exception ex)
                 {
