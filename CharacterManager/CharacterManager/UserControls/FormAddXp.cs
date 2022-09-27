@@ -43,7 +43,7 @@ namespace CharacterManager.UserControls
                 {
                     CurrentXp = getLevelThreshold(_myLevel);
                 }
-
+                updateCounters();
             }
 
             get

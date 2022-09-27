@@ -46,6 +46,8 @@ namespace CharacterManager.UserControls
             setupLevelUp();
         }
 
+        private bool isSettingInitialValuesForBaseAttributes = true;
+
         private void setupLevelUp()
         {
             /* 1. Set up hit points */
@@ -56,8 +58,49 @@ namespace CharacterManager.UserControls
 
             /* 3. Set up already known spells. */
             SelectedSpellNames = _myCharacter.KnownSpells;
-        }
 
+            /* 4. Set up base attributes. */
+            numericUpDownSTR.Value = _myCharacter.StrengthAttribute;
+            numericUpDownSTR.Minimum = _myCharacter.StrengthAttribute;
+
+            numericUpDownDEX.Value = _myCharacter.DexAttribute;
+            numericUpDownDEX.Minimum = _myCharacter.DexAttribute;
+
+            numericUpDownCON.Value = _myCharacter.ConAttribute;
+            numericUpDownCON.Minimum = _myCharacter.ConAttribute;
+
+            numericUpDownINT.Value = _myCharacter.IntAttribute;
+            numericUpDownINT.Minimum = _myCharacter.IntAttribute;
+
+            numericUpDownWIS.Value = _myCharacter.WisAttribute;
+            numericUpDownWIS.Minimum = _myCharacter.WisAttribute;
+
+            numericUpDownCHA.Value = _myCharacter.CharAttribute;
+            numericUpDownCHA.Minimum = _myCharacter.CharAttribute;
+
+            if (!_myCharacter.GetPlayerClass().IsAbilityScoreImprovementAtLevel(_myCharacter.Level))
+            {
+                numericUpDownSTR.Enabled = false;
+                numericUpDownDEX.Enabled = false;
+                numericUpDownCON.Enabled = false;
+                numericUpDownINT.Enabled = false;
+                numericUpDownWIS.Enabled = false;
+                numericUpDownCHA.Enabled = false;
+            }
+            else
+            {
+                labelRemainingAttributePoints.Text = "Remaining Points: 2";
+
+                numericUpDownSTR.Maximum = _myCharacter.StrengthAttribute + 2;
+                numericUpDownDEX.Maximum = _myCharacter.DexAttribute + 2;
+                numericUpDownCON.Maximum = _myCharacter.ConAttribute + 2;
+                numericUpDownINT.Maximum = _myCharacter.IntAttribute + 2;
+                numericUpDownWIS.Maximum = _myCharacter.WisAttribute + 2;
+                numericUpDownCHA.Maximum = _myCharacter.CharAttribute + 2;
+            }
+
+            isSettingInitialValuesForBaseAttributes = false;
+        }
 
         private void setupHitpoints()
         {
@@ -145,6 +188,15 @@ namespace CharacterManager.UserControls
             {
                 ability.RemainingCharges = ability.MaximumCharges;
             }
+
+            /* Update base attributes. */
+            _myCharacter.StrengthAttribute =    (int)numericUpDownSTR.Value;
+            _myCharacter.DexAttribute =         (int)numericUpDownDEX.Value;
+            _myCharacter.ConAttribute =         (int)numericUpDownCON.Value;
+            _myCharacter.IntAttribute =         (int)numericUpDownINT.Value;
+            _myCharacter.WisAttribute =         (int)numericUpDownWIS.Value;
+            _myCharacter.CharAttribute =        (int)numericUpDownCHA.Value;
+
 
             /* Update spell data. */
             if (_myCharacter.SpellCasting != null)
@@ -305,6 +357,65 @@ namespace CharacterManager.UserControls
             {
                 MessageBox.Show("No spellcasting for this character");
             }
+        }
+
+        private void UpdateRemainingBaseAttributes()
+        {
+            if (isSettingInitialValuesForBaseAttributes)
+            {
+                return;
+            }
+            
+            int totalUsedPoints = 0;
+
+            totalUsedPoints += ((int)numericUpDownSTR.Value - (int)numericUpDownSTR.Minimum);
+            totalUsedPoints += ((int)numericUpDownDEX.Value - (int)numericUpDownDEX.Minimum);
+            totalUsedPoints += ((int)numericUpDownCON.Value - (int)numericUpDownCON.Minimum);
+            totalUsedPoints += ((int)numericUpDownINT.Value - (int)numericUpDownINT.Minimum);
+            totalUsedPoints += ((int)numericUpDownWIS.Value - (int)numericUpDownWIS.Minimum);
+            totalUsedPoints += ((int)numericUpDownCHA.Value - (int)numericUpDownCHA.Minimum);
+
+            int remainingPoints = 2 - totalUsedPoints;
+
+            labelRemainingAttributePoints.Text = "Remaining Points: " + remainingPoints.ToString();
+
+            numericUpDownSTR.Maximum = numericUpDownSTR.Value + remainingPoints;
+            numericUpDownDEX.Maximum = numericUpDownDEX.Value + remainingPoints;
+            numericUpDownCON.Maximum = numericUpDownCON.Value + remainingPoints;
+            numericUpDownINT.Maximum = numericUpDownINT.Value + remainingPoints;
+            numericUpDownWIS.Maximum = numericUpDownWIS.Value + remainingPoints;
+            numericUpDownCHA.Maximum = numericUpDownCHA.Value + remainingPoints;
+
+        }
+
+        private void numericUpDownSTR_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateRemainingBaseAttributes();
+        }
+
+        private void numericUpDownDEX_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateRemainingBaseAttributes();
+        }
+
+        private void numericUpDownCON_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateRemainingBaseAttributes();
+        }
+
+        private void numericUpDownWIS_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateRemainingBaseAttributes();
+        }
+
+        private void numericUpDownINT_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateRemainingBaseAttributes();
+        }
+
+        private void numericUpDownCHA_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateRemainingBaseAttributes();
         }
     }
 }

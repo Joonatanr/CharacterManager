@@ -50,6 +50,7 @@ namespace CharacterManager
 
         public List<PlayerClassArchetype> ArcheTypes = new List<PlayerClassArchetype>();
 
+        public List<int> AbilityScoreImprovementsAtLevels = new List<int>();
 
         public PlayerClass()
         {
@@ -124,6 +125,18 @@ namespace CharacterManager
                     return AvailableClassAbilitiesLevel20;
                 default:
                     return null;
+            }
+        }
+
+        public Boolean IsAbilityScoreImprovementAtLevel(int level)
+        {
+            if (AbilityScoreImprovementsAtLevels.Contains(level))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

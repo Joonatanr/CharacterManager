@@ -27,6 +27,7 @@ namespace CharacterManager
             CharacterFactory.Initialize();
 
             userControlHitPoints1.HitPointsChangedListener = new UserControlHitPoints.HitPointsChanged(HitPointsChanged);
+
         }
 
 

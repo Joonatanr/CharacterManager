@@ -64,13 +64,9 @@ namespace CharacterManager.CharacterCreator
                 {
                     _myLockedCantripList.Add(spell);
                 }
-                else if (spell.SpellLevel == 1)
+                else 
                 {
                     _myLockedSpellList.Add(spell);
-                }
-                else
-                {
-                    /* TODO For the future. */
                 }
             }
 

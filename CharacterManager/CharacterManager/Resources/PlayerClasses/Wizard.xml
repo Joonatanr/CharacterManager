@@ -910,4 +910,12 @@ power of the gods to make and destroy worlds.</Description>
 		</PlayerClassArchetype>
 		
 	</ArcheTypes>
+	
+	<AbilityScoreImprovementsAtLevels>
+		<int>4</int>
+		<int>8</int>
+		<int>12</int>
+		<int>16</int>
+		<int>19</int>
+	</AbilityScoreImprovementsAtLevels>
 </PlayerClass>
