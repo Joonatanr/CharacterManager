@@ -37,6 +37,7 @@ namespace CharacterManager.Spells
             RANGE_TYPE_SELF,
             RANGE_TYPE_TOUCH,
             RANGE_TYPE_RANGED,
+            RANGE_TYPE_SIGHT,
             RANGE_TYPE_UNLIMITED,
             RANGE_TYPE_NONE
         }

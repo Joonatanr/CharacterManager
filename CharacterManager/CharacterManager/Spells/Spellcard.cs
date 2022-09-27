@@ -150,6 +150,10 @@ namespace CharacterManager.Spells
                 {
                     labelRange.Text = "Unlimited";
                 }
+                else if(mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_SIGHT)
+                {
+                    labelRange.Text = "Sight";
+                }
                 else
                 {
                     labelRange.Text = getRangeText(mySpell.SpellRange);
