@@ -31,6 +31,15 @@ namespace CharacterManager.UserControls
             { 
                 _maximumAvailableChoices = value;
                 _remainingAvailableChoices = value;
+
+                if (value == 0)
+                {
+                    setSelectionsLocked(true);
+                }
+                else
+                {
+                    setSelectionsLocked(false);
+                }
             }
         }
 
@@ -183,6 +192,11 @@ namespace CharacterManager.UserControls
                     }
                     AddControlOnLine(myCheckBox, index - 1, 3 + iBtn.Width);
                 }
+            }
+
+            if (_maximumAvailableChoices == 0 && IsCheckBoxed)
+            {
+                setSelectionsLocked(true);
             }
 
             this.Invalidate();

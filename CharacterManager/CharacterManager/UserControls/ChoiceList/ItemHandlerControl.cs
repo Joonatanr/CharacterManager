@@ -18,7 +18,27 @@ namespace CharacterManager.UserControls
         public delegate void ItemCheckedChangedListener(ItemControlType item, bool isChecked);
         public event ItemCheckedChangedListener ItemCheckedChanged;
 
-        public Boolean isChecked { get { return _chkBox.Checked; } set { _chkBox.Checked = value; } }
+        public Boolean isChecked 
+        { 
+            get 
+            { 
+                if (_chkBox != null) 
+                { 
+                    return _chkBox.Checked; 
+                } 
+                else 
+                { 
+                    return false; 
+                } 
+            } 
+            set 
+            {
+                if (_chkBox != null)
+                {
+                    _chkBox.Checked = value;
+                }
+            } 
+        }
         public Boolean isEnabled { get { return _chkBox.Enabled; } set { if (!IsLocked) { _chkBox.Enabled = value; } } }
         public Boolean IsLocked { get { return _isLocked; } set { _isLocked = value; if (_isLocked) { _chkBox.Checked = true; _chkBox.Enabled = false; } } }
 
