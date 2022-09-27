@@ -8593,6 +8593,66 @@ through openings.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
+    <Description>Blazing orbs of fire plummet to the ground at four
+different points you can see within range. Each creature
+in a 40-foot-radius sphere centered on each point you
+choose must make a Dexterity saving throw. The sphere
+spreads around corners. A creature takes 20d6 fire
+damage and 20d6 bludgeoning damage on a failed
+save, or half as much damage on a successful one. A
+creature in the area of more than one fiery burst is
+affected only once.
+
+The spell damages objects in the area and ignites
+flammable objects that aren’t being worn or carried.</Description>
+    <ItemName>Meteor Swarm</ItemName>
+    <SpellName>Meteor Swarm</SpellName>
+    <School>Evocation</School>
+    <SpellLevel>9</SpellLevel>
+    <SpellRange>5280</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>40</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Until the spell ends, one willing creature you touch is
+immune to psychic damage, any effect that would sense
+its emotions or read its thoughts, divination spells, and
+the charmed condition. The spell even foils wish spells
+and spells or effects o f similar power used to affect the
+target’s mind or to gain information about the target.</Description>
+    <ItemName>Mind Blank</ItemName>
+    <SpellName>Mind Blank</SpellName>
+    <School>Abjuration</School>
+    <SpellLevel>8</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>You create a sound or an image of an object within
 range that lasts for the duration. The illusion also ends if
 you dismiss it as an action or cast this spell again.
@@ -8636,6 +8696,1073 @@ the creature
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
+    <Description>You make terrain in an area up to 1 mile square
+look, sound, smell, and even feel like some other sort
+of terrain. The terrain’s general shape remains the
+same, however. Open fields or a road could be made to
+resemble a swamp, hill, crevasse, or some other difficult
+or impassable terrain. A pond can be made to seem like
+a grassy meadow, a precipice like a gentle slope, or a
+rock-strewn gully like a wide and smooth road.
+
+Similarly, you can alter the appearance of structures,
+or add them where none are present. The spell doesn’t
+disguise, conceal, or add creatures.
+
+The illusion includes audible, visual, tactile, and
+olfactory elements, so it can turn clear ground into
+difficult terrain (or vice versa) or otherwise impede
+movement through the area. Any piece of the illusory
+terrain (such as a rock or stick) that is removed from the
+spell’s area disappears immediately.
+
+Creatures with truesight can see through the illusion
+to the terrain’s true form; however, all other elements
+of the illusion remain, so while the creature is aware of
+the illusion’s presence, the creature can still physically
+interact with the illusion.</Description>
+    <ItemName>Mirage Arcane</ItemName>
+    <SpellName>Mirage Arcane</SpellName>
+    <School>Illusion</School>
+    <SpellLevel>7</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>144000</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>100</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Three illusory duplicates o f yourself appear in your
+space. Until the spell ends, the duplicates move with
+you and mimic your actions, shifting position so it’s
+impossible to track which image is real. You can use
+your action to dismiss the illusory duplicates.
+
+Each time a creature targets you with an attack during
+the spell’s duration, roll a d20 to determine whether the
+attack instead targets one o f your duplicates.
+If you have three duplicates, you must roll a 6 or
+higher to change the attack’s target to a duplicate. With
+two duplicates, you must roll an 8 or higher. With one
+duplicate, you must roll an 11 or higher.
+
+A duplicate’s AC equals 10 + your Dexterity modifier.
+If an attack hits a duplicate, the duplicate is destroyed. A
+duplicate can be destroyed only by an attack that hits it.
+It ignores all other damage and effects. The spell ends
+when all three duplicates are destroyed.
+
+A creature is unaffected by this spell if it can’t see, if it
+relies on senses other than sight, such as blindsight, or
+if it can perceive illusions as false, as with truesight.</Description>
+    <ItemName>Mirror Image</ItemName>
+    <SpellName>Mirror Image</SpellName>
+    <School>Illusion</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You become invisible at the same time that an illusory
+double o f you appears where you are standing. The
+double lasts for the duration, but the invisibility ends if
+you attack or cast a spell.
+
+You can use your action to move your illusory double
+up to twice your speed and make it gesture, speak, and
+behave in whatever way you choose.
+
+You can see through its eyes and hear through its ears
+as if you were located where it is. On each of your turns
+as a bonus action, you can switch from using its senses
+to using your own, or back again. While you are using its
+senses, you are blinded and deafened in regard to your
+own surroundings.</Description>
+    <ItemName>Mislead</ItemName>
+    <SpellName>Mislead</SpellName>
+    <School>Illusion</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>false</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Briefly surrounded by silvery mist, you teleport up to 30
+feet to an unoccupied space that you can see.</Description>
+    <ItemName>Misty Step</ItemName>
+    <SpellName>Misty Step</SpellName>
+    <School>Conjuration</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_BONUS_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You attempt to reshape another creature’s memories.
+One creature that you can see must make a Wisdom
+saving throw. If you are fighting the creature, it has
+advantage on the saving throw. On a failed save, the
+target becomes charmed by you for the duration. The
+charmed target is incapacitated and unaware o f its
+surroundings, though it can still hear you. If it takes any
+damage or is targeted by another spell, this spell ends,
+and none of the target’s memories are modified.
+
+While this charm lasts, you can affect the target’s
+memory of an event that it experienced within the last
+24 hours and that lasted no more than 10 minutes. You
+can permanently eliminate all memory of the event,
+allow the target to recall the event with perfect clarity
+and exacting detail, change its memory of the details of
+the event, or create a memory of some other event.
+
+You must speak to the target to describe how
+its memories are affected, and it must be able to
+understand your language for the modified memories to
+take root. Its mind fills in any gaps in the details o f your
+description. If the spell ends before you have finished
+describing the modified memories, the creature’s
+memory isn’t altered. Otherwise, the modified memories
+take hold when the spell ends.
+
+A modified memory doesn’t necessarily affect how a
+creature behaves, particularly if the memory contradicts
+the creature’s natural inclinations, alignment, or beliefs.
+An illogical modified memory, such as implanting a
+memory of how much the creature enjoyed dousing
+itself in acid, is dismissed, perhaps as a bad dream. The
+DM might deem a modified memory too nonsensical to
+affect a creature in a significant manner.
+
+A remove curse or greater restoration spell cast on the
+target restores the creature’s true memory.</Description>
+    <ItemName>Modify Memory</ItemName>
+    <SpellName>Modify Memory</SpellName>
+    <AtHigherLevels>If you cast this spell using a spell
+slot o f 6th level or higher, you can alter the target’s
+memories o f an event that took place up to 7 days ago
+(6th level), 30 days ago (7th level), 1 year ago (8th level),
+or any time in the creature’s past (9th level).</AtHigherLevels>
+    <School>Enchantment</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A silvery beam o f pale light shines down in a 5-footradius,
+40-foot-high cylinder centered on a point within
+range. Until the spell ends, dim light fills the cylinder.
+When a creature enters the spell’s area for the first
+time on a turn or starts its turn there, it is engulfed
+in ghostly flames that cause searing pain, and it must
+make a Constitution saving throw. It takes 2d10 radiant
+damage on a failed save, or half as much damage on a
+successful one.
+
+A shapechanger makes its saving throw with
+disadvantage. If it fails, it also instantly reverts to its
+original form and can’t assume a different form until it
+leaves the spell’s light.
+
+On each of your turns after you cast this spell, you can
+use an action to move the beam 60 feet in any direction.</Description>
+    <ItemName>Moonbeam</ItemName>
+    <SpellName>Moonbeam</SpellName>
+    <AtHigherLevels>W hen you cast this spell using a
+spell slot of 3rd level or higher, the damage increases by
+1dlO for each slot level above 2nd.</AtHigherLevels>
+    <School>Evocation</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>several seeds of any moonseed plant and a piece of opalescent feldspar</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You conjure a phantom watchdog in an unoccupied
+space that you can see within range, where it remains
+for the duration, until you dismiss it as an action, or until
+you move more than 100 feet away from it.
+
+The hound is invisible to all creatures except you
+and can't be harmed. When a Small or larger creature
+comes within 30 feet of it without first speaking the
+password that you specify when you cast this spell, the
+hound starts barking loudly. The hound sees invisible
+creatures and can see into the Ethereal Plane. It
+ignores illusions.
+
+At the start of each o f your turns, the hound attempts
+to bite one creature within 5 feet o f it that is hostile
+to you. The hound’s attack bonus is equal to your
+spellcasting ability modifier + your proficiency bonus.
+On a hit, it deals 4d8 piercing damage.</Description>
+    <ItemName>Mordenkainen's Faithful Hound</ItemName>
+    <SpellName>Mordenkainen's Faithful Hound</SpellName>
+    <AtHigherLevels />
+    <School>Conjuration</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a tiny silver whistle, a piece of bone and a thread</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You conjure an extradimensional dwelling in range
+that lasts for the duration. You choose where its one
+entrance is located. The entrance shimmers faintly
+and is 5 feet wide and 10 feet tall. You and any creature
+you designate when you cast the spell can enter the
+extradimensional dwelling as long as the portal remains
+open. You can open or close the portal if you are within
+30 feet o f it. While closed, the portal is invisible.
+
+Beyond the portal is a magnificent foyer with
+numerous chambers beyond. The atmosphere is clean,
+fresh, and warm.
+
+You can create any floor plan you like, but the space
+can’t exceed 50 cubes, each cube being 10 feet on
+each side. The place is furnished and decorated as
+you choose. It contains sufficient food to serve a ninecourse
+banquet for up to 100 people. A staff o f 100
+near-transparent servants attends all who enter. You
+decide the visual appearance o f these servants and their
+attire. They are completely obedient to your orders.
+Each servant can perform any task a normal human
+servant could perform, but they can’t attack or take
+any action that would directly harm another creature.
+Thus the servants can fetch things, clean, mend, fold
+clothes, light fires, serve food, pour wine, and so on.
+The servants can go anywhere in the mansion but
+can’t leave it. Furnishings and other objects created
+by this spell dissipate into smoke if removed from the
+mansion. When the spell ends, any creatures inside
+the extradimensional space are expelled into the open
+spaces nearest to the entrance.</Description>
+    <ItemName>Mordenkainen's Magnificent Mansion</ItemName>
+    <SpellName>Mordenkainen's Magnificent Mansion</SpellName>
+    <School>Conjuration</School>
+    <SpellLevel>7</SpellLevel>
+    <SpellRange>300</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>10</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5gp</MaterialComponent>
+    <MaterialCost>5</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You make an area within range magically secure. The
+area is a cube that can be as small as 5 feet to as large
+as 100 feet on each side. The spell lasts for the duration
+or until you use an action to dismiss it.
+When you cast the spell, you decide what sort of
+security the spell provides, choosing any or all o f the
+following properties:
+
+• Sound can't pass through the barrier at the edge of
+the w arded area.
+• The barrier o f the warded area appears dark and foggy,
+preventing vision (including darkvision) through it.
+• Sensors created by divination spells can’t appear
+inside the protected area or pass through the barrier
+at its perimeter.
+• Creatures in the area can’t be targeted by divination
+spells.
+• Nothing can teleport into or out o f the warded area.
+• Planar travel is blocked within the warded area.
+Casting this spell on the same spot every day for a
+year makes this effect permanent.</Description>
+    <ItemName>Mordenkainen's Private Sanctum</ItemName>
+    <SpellName>Mordenkainen's Private Sanctum</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 5th level or higher, 
+you can increase the size of the cube by 100 feet for each slot level beyond 4th.
+Thus you could protect a cube that can be up to 200 feet
+on one side by using a spell slot o f 5th level.</AtHigherLevels>
+    <School>Abjuration</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>100</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You create a sword-shaped plane o f force that hovers
+within range. It lasts for the duration.
+When the sword appears, you make a melee spell
+attack against a target of your choice within 5 feet o f the
+sword. 
+
+On a hit. the target takes 3d10 force damage.
+Until the spell ends, you can use a bonus action on each
+of your turns to move the sword up to 20 feet to a spot
+you can see and repeat this attack against the same
+target or a different one.</Description>
+    <ItemName>Mordenkainen's Sword</ItemName>
+    <SpellName>Mordenkainen's Sword</SpellName>
+    <AtHigherLevels />
+    <School>Evocation</School>
+    <SpellLevel>7</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a miniature platinum sword with a grip and pommel of copper and zinc, worth 250gp</MaterialComponent>
+    <MaterialCost>250</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Choose an area o f terrain no larger than 40 feet on a
+side within range. You can reshape dirt, sand, or clay
+in the area in any manner you choose for the duration.
+You can raise or lower the area’s elevation, create or fill
+in a trench, erect or flatten a wall, or form a pillar. The
+extent o f any such changes can’t exceed half the area’s
+largest dimension. So, if you affect a 40-foot square,
+you can create a pillar up to 20 feet high, raise or lower
+the square’s elevation by up to 20 feet, dig a trench up
+to 20 feet deep, and so on. It takes 10 minutes for these
+changes to complete.
+
+At the end of every 10 minutes you spend
+concentrating on the spell, you can choose a new area of
+terrain to affect.
+
+Because the terrain’s transformation occurs slowly,
+creatures in the area can’t usually be trapped or injured
+by the ground’s movement.
+
+This spell can’t manipulate natural stone or
+stone construction. Rocks and structures shift to
+accommodate the new terrain. If the way you shape
+the terrain would make a structure unstable, it
+might collapse.
+
+Similarly, this spell doesn’t directly affect plant
+growth. The moved earth carries any plants along with it.</Description>
+    <ItemName>Move Earth</ItemName>
+    <SpellName>Move Earth</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>1200</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>an iron blade and a small bag containing a mixture of soils - clay, loam and sand</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>For the duration, you hide a target that you touch
+from divination magic. The target can be a w illing
+creature or a place or an object no larger than 10
+feet in any dimension. The target can’t be targeted by
+any divination magic or perceived through magical
+scrying sensors.</Description>
+    <ItemName>Nondetection</ItemName>
+    <SpellName>Nondetection</SpellName>
+    <School>Abjuration</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>4800</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a pinch of diamond dust worth 25gp sprinkled over the target, which the spell consumes</MaterialComponent>
+    <MaterialCost>25</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You place an illusion on a creature or an object
+you touch so that divination spells reveal false
+information about it. The target can be a willing
+creature or an object that isn’t being carried or worn by
+another creature.
+
+When you cast the spell, choose one or both of the
+following effects. The effect lasts for the duration. If you
+cast this spell on the same creature or object every day
+for 30 days, placing the same effect on it each time, the
+illusion lasts until it is dispelled.
+
+False Aura -&gt;  You change the way the target appears
+to spells and magical effects, such as detect magic,
+that detect magical auras. You can make a nonmagical
+object appear magical, a magical object appear
+nonmagical, or change the object’s magical aura so that
+it appears to belong to a specific school of magic that
+you choose. When you use this effect on an object, you
+can make the false magic apparent to any creature that
+handles the item.
+
+Mask -&gt; You change the way the target appears to spells
+and magical effects that detect creature types, such as a
+paladin’s Divine Sense or the trigger o f a symbol spell.
+You choose a creature type and other spells and magical
+effects treat the target as if it w ere a creature o f that
+type or o f that alignment.</Description>
+    <ItemName>Nystul's Magic Aura</ItemName>
+    <SpellName>Nystul's Magic Aura</SpellName>
+    <School>Illusion</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a small square of silk</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A frigid globe o f cold energy streaks from your fingertips
+to a point of your choice within range, where it explodes
+in a 60-foot-radius sphere. Each creature within the
+area must make a Constitution saving throw. On a
+failed save, a creature takes 10d6 cold damage. On a
+successful save, it takes half as much damage.
+
+If the globe strikes a body o f water or a liquid that is
+principally water (not including water-based creatures),
+it freezes the liquid to a depth o f 6 inches over an area
+30 feet square. This ice lasts for 1 minute. Creatures
+that w ere swimming on the surface of frozen water are
+trapped in the ice. A trapped creature can use an action
+to make a Strength check against your spell save DC
+to break free.
+
+You can refrain from firing the globe after completing
+the spell, if you wish. A small globe about the size of
+a sling stone, cool to the touch, appears in your hand.
+At any time, you or a creature you give the globe to
+can throw the globe (to a range of 40 feet) or hurl it
+with a sling (to the sling’s normal range). It shatters
+on impact, with the same effect as the normal casting
+of the spell. You can also set the globe down without
+shattering it. After 1 minute, if the globe hasn’t already
+shattered, it explodes.</Description>
+    <ItemName>Otiluke's Freezing Sphere</ItemName>
+    <SpellName>Otiluke's Freezing Sphere</SpellName>
+    <AtHigherLevels>When you cast this spell using a
+spell slot o f 7th level or higher, the damage increases by
+1d6 for each slot level above 6th.</AtHigherLevels>
+    <School>Evocation</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>300</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>60</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a small crystal sphere</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A sphere o f shimmering force encloses a creature
+or object o f Large size or smaller within range. An
+unwilling creature must make a Dexterity saving
+throw. On a failed save, the creature is enclosed for
+the duration.
+
+Nothing—not physical objects, energy, or other spell
+effects—can pass through the barrier, in or out, though
+a creature in the sphere can breathe there. The sphere
+is immune to all damage, and a creature or object inside
+can’t be damaged by attacks or effects originating from
+outside, nor can a creature inside the sphere damage
+anything outside it.
+
+The sphere is w eightless and just large enough to
+contain the creature or object inside. An enclosed
+creature can use its action to push against the sphere’s
+walls and thus roll the sphere at up to half the creature’s
+speed. Similarly, the globe can be picked up and moved
+by other creatures.
+
+A disintegrate spell targeting the globe destroys it
+without harming anything inside it.</Description>
+    <ItemName>Otiluke's Resilient Sphere</ItemName>
+    <SpellName>Otiluke's Resilient Sphere</SpellName>
+    <AtHigherLevels />
+    <School>Evocation</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a hemispherical piece of clear crystal and a matching hemispherical piece of gum arabic</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Choose one creature that you can see within range. The
+target begins a comic dance in place: shuffling, tapping
+its feet, and capering for the duration. Creatures that
+can’t be charmed are immune to this spell.
+
+A dancing creature must use all its movement to
+dance without leaving its space and has disadvantage
+on Dexterity saving throws and attack rolls. While
+the target is affected by this spell, other creatures
+have advantage on attack rolls against it. As an
+action, a dancing creature makes a W isdom saving
+throw to regain control of itself. On a successful save,
+the spell ends.</Description>
+    <ItemName>Otto's Irresistible Dance</ItemName>
+    <SpellName>Otto's Irresistible Dance</SpellName>
+    <School>Enchantment</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A veil of shadows and silence radiates from you,
+masking you and your companions from detection.
+For the duration, each creature you choose within 30
+feet of you (including you) has a +10 bonus to Dexterity
+(Stealth) checks and can’t be tracked except by m agical
+means. A creature that receives this bonus leaves
+behind no tracks or other traces o f its passage.</Description>
+    <ItemName>Pass Without Trace</ItemName>
+    <SpellName>Pass Without Trace</SpellName>
+    <School>Abjuration</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>ashes from a burned leaf of mistletoe and a sprig of spruce</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A passage appears at a point of your choice that you
+can see on a wooden, plaster, or stone surface (such as
+a wall, a ceiling, or a floor) within range, and lasts for
+the duration. You choose the opening’s dimensions: up
+to 5 feet wide, 8 feet tall, and 20 feet deep.
+
+The passage creates no instability in a structure surrounding it.
+When the opening disappears, any creatures or
+objects still in the passage created by the spell are safely
+ejected to an unoccupied space nearest to the surface on
+which you cast the spell.</Description>
+    <ItemName>Passwall</ItemName>
+    <SpellName>Passwall</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a pinch of sesame seeds</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You craft an illusion that takes root in the mind o f a
+creature that you can see within range. The target must
+make an Intelligence saving throw. On a failed save, you
+create a phantasmal object, creature, or other visible
+phenomenon of your choice that is no larger than a
+10-foot cube and that is perceivable only to the target
+for the duration. This spell has no effect on undead
+or constructs.
+
+The phantasm includes sound, temperature, and other
+stimuli, also evident only to the creature.
+The target can use its action to examine the phantasm
+with an Intelligence (Investigation) check against your
+spell save DC. If the check succeeds, the target realizes
+that the phantasm is an illusion, and the spell ends.
+
+While a target is affected by the spell, the target treats
+the phantasm as if it were real. The target rationalizes
+any illogical outcomes from interacting with the
+phantasm. For example, a target attempting to walk
+across a phantasmal bridge that spans a chasm falls
+once it steps onto the bridge. If the target survives the
+fall, it still believes that the bridge exists and comes up
+with some other explanation for its fall—it w as pushed,
+it slipped, or a strong wind might have knocked it off.
+
+An affected target is so convinced of the phantasm’s
+reality that it can even take damage from the illusion. A
+phantasm created to appear as a creature can attack the
+target. Similarly, a phantasm created to appear as fire, a
+pool of acid, or lava can burn the target. Each round on
+your turn, the phantasm can deal 1d6 psychic damage
+to the target if it is in the phantasm’s area or within 5
+feet of the phantasm, provided that the illusion is o f a
+creature or hazard that could logically deal damage,
+such as by attacking. The target perceives the damage
+as a type appropriate to the illusion.</Description>
+    <ItemName>Phantasmal Force</ItemName>
+    <SpellName>Phantasmal Force</SpellName>
+    <School>Illusion</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a bit of fleece</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You tap into the nightmares of a creature you can see
+within range and create an illusory manifestation of its
+deepest fears, visible only to that creature. The target
+must make a Wisdom saving throw. On a failed save,
+the target becomes frightened for the duration. At the
+start of each o f the target’s turns before the spell ends,
+the target must succeed on a W isdom saving throw
+or take 4 d10 psychic damage. On a successful save,
+the spell ends.</Description>
+    <ItemName>Phantasmal Killer</ItemName>
+    <SpellName>Phantasmal Killer</SpellName>
+    <AtHigherLevels>When you cast this spell using a
+spell slot of 5th level or higher, the damage increases by
+1dlO for each slot level above 4th.</AtHigherLevels>
+    <School>Illusion</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>120</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A Large quasi-real, horselike creature appears on
+the ground in an unoccupied space o f your choice
+within range. You decide the creature’s appearance,
+but it is equipped with a saddle, bit, and bridle. Any
+of the equipment created by the spell vanishes in a
+puff o f smoke if it is carried more than 10 feet away
+from the steed.
+
+For the duration, you or a creature you choose can
+ride the steed. The creature uses the statistics for a
+riding horse, except it has a speed o f 100 feet and can
+travel 10 miles in an hour, or 13 miles at a fast pace.
+When the spell ends, the steed gradually fades, giving
+the rider 1 minute to dismount. The spell ends if you use
+an action to dismiss it or if the steed takes any damage.</Description>
+    <ItemName>Phantom Steed</ItemName>
+    <SpellName>Phantom Steed</SpellName>
+    <AtHigherLevels />
+    <School>Illusion</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You beseech an otherworldly entity for aid. The being
+must be known to you: a god, a primordial, a demon
+prince, or some other being o f cosmic power. That entity
+sends a celestial, an elemental, or a fiend loyal to it to
+aid you, making the creature appear in an unoccupied
+space within range. If you know a specific creature’s
+name, you can speak that name when you cast this spell
+to request that creature, though you might get a different
+creature anyway (DM’s choice).
+
+When the creature appears, it is under no compulsion
+to behave in any particular way. You can ask the
+creature to perform a service in exchange for payment,
+but it isn’t obliged to do so. The requested task could
+range from simple (fly us across the chasm, or help us
+fight a battle) to complex (spy on our enemies, or protect
+us during our foray into the dungeon). You must be
+able to communicate with the creature to bargain for
+its services.
+
+Payment can take a variety of forms. A celestial might
+require a sizable donation of gold or m agic items to
+an allied temple, while a fiend might demand a living
+sacrifice or a gift of treasure. Some creatures might
+exchange their service for a quest undertaken by you.
+As a rule of thumb, a task that can be measured in
+minutes requires a payment worth 100 gp per minute. A
+task measured in hours requires 1,000 gp per hour. And
+a task measured in days (up to 10 days) requires 10,000
+gp per day. The DM can adjust these payments based on
+the circumstances under which you cast the spell. If the
+task is aligned with the creature’s ethos, the payment
+might be halved or even waived. Nonhazardous tasks
+typically require only half the suggested payment, while
+especially dangerous tasks might require a greater gift.
+Creatures rarely accept tasks that seem suicidal.
+After the creature completes the task, or when the
+agreed-upon duration o f service expires, the creature
+returns to its home plane after reporting back to you,
+if appropriate to the task and if possible. If you are
+unable to agree on a price for the creature’s service, the
+creature immediately returns to its home plane.
+A creature enlisted to join your group counts as
+a member of it, receiving a full share o f experience
+points awarded.</Description>
+    <ItemName>Planar Ally</ItemName>
+    <SpellName>Planar Ally</SpellName>
+    <School>Conjuration</School>
+    <SpellLevel>6</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>100</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>With this spell, you attempt to bind a celestial, an
+elemental, a fey, or a fiend to your service. The creature
+must be within range for the entire casting o f the spell.
+(Typically, the creature is first summoned into the center
+o f an inverted magic circle in order to keep it trapped
+while this spell is cast.) At the completion o f the casting,
+the target must make a Charisma saving throw. On a
+failed save, it is bound to serve you for the duration. If
+the creature w as summoned or created by another spell,
+that spell’s duration is extended to match the duration
+o f this spell.
+
+A bound creature must follow your instructions to the
+best o f its ability. You might command the creature to
+accompany you on an adventure, to guard a location, or
+to deliver a message. The creature obeys the letter of
+your instructions, but if the creature is hostile to you, it
+strives to twist your words to achieve its own objectives.
+If the creature carries out your instructions completely
+before the spell ends, it travels to you to report this fact
+if you are on the same plane o f existence. If you are on a
+different plane o f existence, it returns to the place where
+you bound it and remains there until the spell ends.</Description>
+    <ItemName>Planar Binding</ItemName>
+    <SpellName>Planar Binding</SpellName>
+    <AtHigherLevels>When you cast this spell using a
+spell slot of a higher level, the duration increases to 10
+days with a 6th-level slot, to 30 days with a 7th-level slot,
+to 180 days with an 8th-level slot, and to a year and a
+day with a 9th-level spell slot.</AtHigherLevels>
+    <School>Abjuration</School>
+    <SpellLevel>5</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>14400</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_PERIOD</CastingTime>
+    <CastingTimePeriod>600</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a jewel worth at least 1000GP, which the spell consumes</MaterialComponent>
+    <MaterialCost>1000</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You and up to eight w illing creatures who link hands in
+a circle are transported to a different plane o f existence.
+You can specify a target destination in general terms,
+such as the City of Brass on the Elemental Plane of
+Fire or the palace of Dispater on the second level of the
+Nine Hells, and you appear in or near that destination.
+If you are trying to reach the City of Brass, for example,
+you might arrive in its Street o f Steel, before its Gate of
+Ashes, or looking at the city from across the Sea of Fire,
+at the DM’s discretion.
+
+Alternatively, if you know the sigil sequence of a
+teleportation circle on another plane o f existence, this
+spell can take you to that circle. If the teleportation
+circle is too small to hold all the creatures you
+transported, they appear in the closest unoccupied
+spaces next to the circle.
+
+You can use this spell to banish an unwilling creature
+to another plane. Choose a creature within your reach
+and make a melee spell attack against it. On a hit, the
+creature must make a Charisma saving throw. If the
+creature fails this save, it is transported to a random
+location on the plane of existence you specify. A creature
+so transported must find its own way back to your
+current plane of existence.</Description>
+    <ItemName>Plane Shift</ItemName>
+    <SpellName>Plane Shift</SpellName>
+    <AtHigherLevels />
+    <School>Conjuration</School>
+    <SpellLevel>7</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a forked, metal rod worth at least 250GP, attuned to a particular plane of existence</MaterialComponent>
+    <MaterialCost>250</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>This spell channels vitality into plants within a specific
+area. There are two possible uses for the spell, granting
+either immediate or long-term benefits.
+If you cast this spell using 1 action, choose a point
+within range. All normal plants in a 100-foot radius
+centered on that point become thick and overgrown. A
+creature moving through the area must spend 4 feet of
+movement for every 1 foot it moves.
+You can exclude one or more areas o f any size within
+the spell’s area from being affected.
+
+If you cast this spell over 8 hours, you enrich the
+land. All plants in a half-mile radius centered on a point
+within range become enriched for 1 year. The plants
+yield twice the normal amount o f food when harvested.</Description>
+    <ItemName>Plant Growth</ItemName>
+    <SpellName>Plant Growth</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>150</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
     <Description>You extend your hand toward a creature you can see
 within range and project a puff of noxious gas from your
 palm. The creature must succeed on a Constitution
@@ -8657,6 +9784,166 @@ This spell’s damage increases by 1d12 when you reach
     <CastingTimePeriod>0</CastingTimePeriod>
     <IsVerbalComponent>true</IsVerbalComponent>
     <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>This spell transforms a creature that you can see
+within range into a new form. An unwilling creature
+must make a Wisdom saving throw to avoid the
+effect. A shapechanger automatically succeeds on this
+saving throw.
+
+The transformation lasts for the duration, or until
+the target drops to 0 hit points or dies. The new form
+can be any beast whose challenge rating is equal to or
+less than the target’s (or the target’s level, if it doesn't
+have a challenge rating). The target’s game statistics,
+including mental ability scores, are replaced by the
+statistics of the chosen beast. It retains its alignment
+and personality.
+
+The target assumes the hit points o f its new form.
+When it reverts to its normal form, the creature
+returns to the number of hit points it had before it
+transformed. If it reverts as a result of dropping to
+0 hit points, any excess damage carries over to its
+normal form. As long as the excess damage doesn’t
+reduce the creature’s normal form to 0 hit points, it isn’t
+knocked unconscious.
+
+The creature is limited in the actions it can perform by
+the nature of its new form, and it can’t speak, cast spells,
+or take any other action that requires hands or speech.
+The target’s gear melds into the new form. The
+creature can’t activate, use, wield, or otherwise benefit
+from any of its equipment.</Description>
+    <ItemName>Polymorph</ItemName>
+    <SpellName>Polymorph</SpellName>
+    <School>Transmutation</School>
+    <SpellLevel>4</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>600</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>true</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent>a caterpillar cocoon</MaterialComponent>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>A wave o f healing energy washes over the creature
+you touch. The target regains all its hit points. If the
+creature is charmed, frightened, paralyzed, or stunned,
+the condition ends. If the creature is prone, it can use its
+reaction to stand up. This spell has no effect on undead
+or constructs.</Description>
+    <ItemName>Power Word Heal</ItemName>
+    <SpellName>Power Word Heal</SpellName>
+    <School>Evocation</School>
+    <SpellLevel>9</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_TOUCH</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You utter a word of power that can compel one creature
+you can see within range to die instantly. If the
+creature you choose has 100 hit points or fewer, it dies.
+Otherwise, the spell has no effect.</Description>
+    <ItemName>Power Word Kill</ItemName>
+    <SpellName>Power Word Kill</SpellName>
+    <School>Enchantment</School>
+    <SpellLevel>9</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You speak a word of power that can overwhelm the
+mind of one creature you can see within range, leaving
+it dumbfounded. If the target has 150 hit points or fewer,
+it is stunned. Otherwise, the spell has no effect.
+
+The stunned target must make a Constitution saving
+throw at the end of each of its turns. On a successful
+save, this stunning effect ends.</Description>
+    <ItemName>Power Word Stun</ItemName>
+    <SpellName>Power Word Stun</SpellName>
+    <School>Enchantment</School>
+    <SpellLevel>8</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <MaterialComponent />
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>Up to six creatures of your choice that you can see
+within range each regain hit points equal to 2d8 + your
+spellcasting ability modifier. This spell has no effect on
+undead or constructs.</Description>
+    <ItemName>Prayer Of Healing</ItemName>
+    <SpellName>Prayer Of Healing</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 
+3rd level or higher, the healing increases by
+1d8 for each slot level above 2nd.</AtHigherLevels>
+    <School>Evocation</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>30</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
