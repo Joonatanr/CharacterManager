@@ -187,6 +187,8 @@ namespace CharacterManager
 
     public class StudentOfWarAbility : SpecialAttribute
     {
+        private string chosenAbility = null;
+        
         public StudentOfWarAbility()
         {
             this.Name = "Student Of War";
@@ -199,12 +201,43 @@ namespace CharacterManager
             return true;
         }
 
+        public override void HandleAbilitySelected(PlayerCharacter c)
+        {
+            if (chosenAbility != null)
+            {
+                c.ToolProficiencies.Add(chosenAbility);
+            }
+        }
+
         private void handleToolProficiencyChoice(PlayerCharacter Character)
         {
             GenericListChoiceForm myForm = new GenericListChoiceForm();
 
             /* First lets get the existing tool proficiencies... */
-            /* TODO */
+            List<string> existingToolProficiencies = Character.ToolProficiencies;
+
+            /* Then we need all available artisan tool proficiencies... */
+            List<PlayerToolKit> allToolProficiencies = CharacterFactory.getAllToolSets();
+
+            List<string> availableChoices = new List<string>();
+
+            foreach(PlayerToolKit toolkit in allToolProficiencies)
+            {
+                if (!existingToolProficiencies.Contains(toolkit.ItemName))
+                {
+                    if (toolkit.ToolType == PlayerToolKit.PlayerToolType.TYPE_ARTISAN)
+                    {
+                        availableChoices.Add(toolkit.ItemName);
+                    }
+                }
+            }
+
+            myForm.setChoiceList(availableChoices);
+
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                chosenAbility = myForm.getSelectedItem();
+            }
         }
     }
 

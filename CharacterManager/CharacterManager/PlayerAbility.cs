@@ -299,6 +299,16 @@ namespace CharacterManager
             return false;
         }
 
+        /// <summary>
+        /// This is fired when an ability is selected. It can be used by special abilities, that add or change something
+        /// to the character, such as weapon, tool, language proficiencies, skills, expertise etc.
+        /// </summary>
+        /// <param name="c"></param>
+        public virtual void HandleAbilitySelected(PlayerCharacter c)
+        {
+            /* Can be overridden by abilities. */
+        }
+
         public virtual void HandleInfoButtonClicked(object sender, EventArgs e)
         {
             MessageBox.Show(this.Description);

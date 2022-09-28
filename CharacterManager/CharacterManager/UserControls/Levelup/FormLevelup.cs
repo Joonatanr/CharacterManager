@@ -167,6 +167,10 @@ namespace CharacterManager.UserControls
             /* Some abilities might just fire once and they will not be added to the abilities list. */
 
             /* TODO : Some abilities might add things like proficiencies, languages etc. TODO : Handle this here. */
+            foreach(PlayerAbility selectedAbility in SelectedPlayerAbilities)
+            {
+                selectedAbility.HandleAbilitySelected(_myCharacter);
+            }
 
             List<PlayerAbility> HiddenAbilities = new List<PlayerAbility>();
 
