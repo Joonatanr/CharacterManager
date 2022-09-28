@@ -12,4 +12,15 @@
 		<string>Shortsword</string>
 		<string>Simple Weapons</string>
 	</WeaponProficiencies>
+	<AvailableToolProficiencies>
+		<ToolProficiencyChoice>
+			<ChoiceType>TYPE_MUSICAL_INSTRUMENT</ChoiceType>
+		</ToolProficiencyChoice>
+		<ToolProficiencyChoice>
+			<ChoiceType>TYPE_MUSICAL_INSTRUMENT</ChoiceType>
+		</ToolProficiencyChoice>
+		<ToolProficiencyChoice>
+			<ChoiceType>TYPE_MUSICAL_INSTRUMENT</ChoiceType>
+		</ToolProficiencyChoice>
+	</AvailableToolProficiencies>
 </PlayerClass>

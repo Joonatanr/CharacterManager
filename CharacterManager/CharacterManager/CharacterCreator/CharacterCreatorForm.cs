@@ -36,14 +36,11 @@ namespace CharacterManager.CharacterCreator
         FormChooseEquipment myChooseEquipmentForm = new FormChooseEquipment();
         FormChooseClassFeatures myChooseClassFeaturesForm = new FormChooseClassFeatures();
         FormChooseSpells myChooseSpellsForm = new FormChooseSpells();
+        FormChooseRaceFeatures myChooseRaceFeaturesForm = new FormChooseRaceFeatures();
 
         public CharacterCreatorForm()
         {
             InitializeComponent();
-
-            comboBoxExtraLanguage.Visible = false;
-            labelExtraLanguage.Visible = false;
-            comboBoxExtraLanguage.Enabled = false;
 
             if (CharacterFactory.Initialize() == false)
             {
@@ -627,18 +624,15 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
-            if (comboBoxExtraLanguage.Enabled)
+            List<string> extraRaceLanguages = myChooseRaceFeaturesForm.GetSelectedLanguages();
+            foreach(string extra in extraRaceLanguages)
             {
-                if (comboBoxExtraLanguage.SelectedIndex > -1)
+                if (!knownLanguages.Contains(extra))
                 {
-                    string selectedItem = comboBoxExtraLanguage.Items[comboBoxExtraLanguage.SelectedIndex].ToString();
-                    if (!knownLanguages.Contains(selectedItem))
-                    {
-                        knownLanguages.Add(selectedItem);
-                    }
+                    knownLanguages.Add(extra);
                 }
             }
-
+            
             /* Now we might have selected some more languages from our background. */
             if (myChooseBackGroundForm != null)
             {
@@ -931,6 +925,8 @@ namespace CharacterManager.CharacterCreator
                 SelectedMainRace = CharacterFactory.getRaceByName(comboBoxMainRace.SelectedItem.ToString());
 
                 /* TODO : This is not an ideal solution, maybe a better one can be found in the future...*/
+                /* TODO : Replace this. */
+                /*
                 if (SelectedMainRace.KnownLanguages.Contains("ChooseAny"))
                 {
                     comboBoxExtraLanguage.Visible = true;
@@ -950,7 +946,7 @@ namespace CharacterManager.CharacterCreator
                     labelExtraLanguage.Visible = false;
                     comboBoxExtraLanguage.Enabled = false;
                 }
-                
+                */
                 UpdateToolProficiencyChoices();
                 updateCustomRacialBonusAttributes();
                 updateSkillProficiencies();
@@ -1117,9 +1113,21 @@ namespace CharacterManager.CharacterCreator
 
         }
 
-        private void comboBoxExtraLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            updateKnownLanguages();
+            if(SelectedMainRace == null)
+            {
+                MessageBox.Show("No race selected for your character");
+                return;
+            }
+
+            myChooseRaceFeaturesForm.MainRace = SelectedMainRace;
+            myChooseRaceFeaturesForm.SubRace = SelectedSubRace;
+
+            if(myChooseRaceFeaturesForm.ShowDialog() == DialogResult.OK)
+            {
+                updateKnownLanguages();
+            }
         }
     }
 }

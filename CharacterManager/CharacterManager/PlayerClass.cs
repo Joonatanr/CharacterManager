@@ -21,6 +21,7 @@ namespace CharacterManager
         public List<String> AvailableSkillProficiencies = new List<String>();
         public int NumberOfSkillsToChoose;
         public List<EquipmentChoiceList> AvailableEquipment = new List<EquipmentChoiceList>();
+        public List<ToolProficiencyChoice> AvailableToolProficiencies = new List<ToolProficiencyChoice>();
 
         public SpellcastingAbility SpellCasting = null;
 

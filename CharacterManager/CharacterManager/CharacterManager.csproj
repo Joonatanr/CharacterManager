@@ -61,6 +61,12 @@
     <Compile Include="CharacterCreator\FormChooseClassFeatures.Designer.cs">
       <DependentUpon>FormChooseClassFeatures.cs</DependentUpon>
     </Compile>
+    <Compile Include="CharacterCreator\FormChooseRaceFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterCreator\FormChooseRaceFeatures.Designer.cs">
+      <DependentUpon>FormChooseRaceFeatures.cs</DependentUpon>
+    </Compile>
     <Compile Include="CharacterCreator\FormChooseSpells.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,7 @@
       <DependentUpon>Spellcard.cs</DependentUpon>
     </Compile>
     <Compile Include="Spells\SpellSlots_T.cs" />
+    <Compile Include="ToolProficiencyChoice.cs" />
     <Compile Include="UserControls\AlignmentChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -326,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterCreator\FormChooseClassFeatures.resx">
       <DependentUpon>FormChooseClassFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterCreator\FormChooseRaceFeatures.resx">
+      <DependentUpon>FormChooseRaceFeatures.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterCreator\FormChooseSpells.resx">
       <DependentUpon>FormChooseSpells.cs</DependentUpon>

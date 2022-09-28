@@ -38,6 +38,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelExtraBonus = new System.Windows.Forms.Label();
+            this.userControlAttributeSetupCHA = new CharacterManager.UserControls.UserControlAttributeSetup();
+            this.userControlAttributeSetupWIS = new CharacterManager.UserControls.UserControlAttributeSetup();
+            this.userControlAttributeSetupCON = new CharacterManager.UserControls.UserControlAttributeSetup();
+            this.userControlAttributeSetupDEX = new CharacterManager.UserControls.UserControlAttributeSetup();
+            this.userControlAttributeSetupINT = new CharacterManager.UserControls.UserControlAttributeSetup();
+            this.userControlAttributeSetupSTR = new CharacterManager.UserControls.UserControlAttributeSetup();
             this.labelCustomRacialAttributeBonus = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -45,8 +51,14 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.userControlKnownLanguages = new CharacterManager.UserControls.UserControlProficiencyList();
+            this.alignmentChoice1 = new CharacterManager.UserControls.AlignmentChoice();
+            this.userControlToolProficiencyChoice1 = new CharacterManager.UserControls.UserControlToolProficiencyChoice();
             this.textBoxPassivePerception = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
+            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
+            this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
             this.textBoxHitPoints = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxHitDie = new System.Windows.Forms.TextBox();
@@ -64,25 +76,12 @@
             this.buttonChooseClassFeatures = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.userControlGenericEquipmentList1 = new CharacterManager.UserControls.UserControlGenericEquipmentList();
             this.buttonChooseSpells = new System.Windows.Forms.Button();
             this.buttonChooseEquipment = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.comboBoxPlayerClasses = new System.Windows.Forms.ComboBox();
-            this.comboBoxExtraLanguage = new System.Windows.Forms.ComboBox();
-            this.labelExtraLanguage = new System.Windows.Forms.Label();
-            this.userControlGenericEquipmentList1 = new CharacterManager.UserControls.UserControlGenericEquipmentList();
-            this.userControlAttributeSetupCHA = new CharacterManager.UserControls.UserControlAttributeSetup();
-            this.userControlAttributeSetupWIS = new CharacterManager.UserControls.UserControlAttributeSetup();
-            this.userControlAttributeSetupCON = new CharacterManager.UserControls.UserControlAttributeSetup();
-            this.userControlAttributeSetupDEX = new CharacterManager.UserControls.UserControlAttributeSetup();
-            this.userControlAttributeSetupINT = new CharacterManager.UserControls.UserControlAttributeSetup();
-            this.userControlAttributeSetupSTR = new CharacterManager.UserControls.UserControlAttributeSetup();
-            this.userControlKnownLanguages = new CharacterManager.UserControls.UserControlProficiencyList();
-            this.alignmentChoice1 = new CharacterManager.UserControls.AlignmentChoice();
-            this.userControlToolProficiencyChoice1 = new CharacterManager.UserControls.UserControlToolProficiencyChoice();
-            this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
-            this.userControlSavingThrows1 = new CharacterManager.UserControls.UserControlSavingThrows();
-            this.userControlGenericAttributeList1 = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -197,6 +196,66 @@
             this.labelExtraBonus.Text = "Extra\r\nBonus";
             this.labelExtraBonus.Visible = false;
             // 
+            // userControlAttributeSetupCHA
+            // 
+            this.userControlAttributeSetupCHA.AttributeBonus = 0;
+            this.userControlAttributeSetupCHA.AttributeName = "CHA";
+            this.userControlAttributeSetupCHA.Location = new System.Drawing.Point(6, 167);
+            this.userControlAttributeSetupCHA.Name = "userControlAttributeSetupCHA";
+            this.userControlAttributeSetupCHA.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupCHA.TabIndex = 34;
+            this.userControlAttributeSetupCHA.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
+            // 
+            // userControlAttributeSetupWIS
+            // 
+            this.userControlAttributeSetupWIS.AttributeBonus = 0;
+            this.userControlAttributeSetupWIS.AttributeName = "WIS";
+            this.userControlAttributeSetupWIS.Location = new System.Drawing.Point(6, 141);
+            this.userControlAttributeSetupWIS.Name = "userControlAttributeSetupWIS";
+            this.userControlAttributeSetupWIS.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupWIS.TabIndex = 33;
+            this.userControlAttributeSetupWIS.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
+            // 
+            // userControlAttributeSetupCON
+            // 
+            this.userControlAttributeSetupCON.AttributeBonus = 0;
+            this.userControlAttributeSetupCON.AttributeName = "CON";
+            this.userControlAttributeSetupCON.Location = new System.Drawing.Point(6, 115);
+            this.userControlAttributeSetupCON.Name = "userControlAttributeSetupCON";
+            this.userControlAttributeSetupCON.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupCON.TabIndex = 32;
+            this.userControlAttributeSetupCON.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
+            // 
+            // userControlAttributeSetupDEX
+            // 
+            this.userControlAttributeSetupDEX.AttributeBonus = 0;
+            this.userControlAttributeSetupDEX.AttributeName = "DEX";
+            this.userControlAttributeSetupDEX.Location = new System.Drawing.Point(6, 89);
+            this.userControlAttributeSetupDEX.Name = "userControlAttributeSetupDEX";
+            this.userControlAttributeSetupDEX.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupDEX.TabIndex = 31;
+            this.userControlAttributeSetupDEX.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
+            // 
+            // userControlAttributeSetupINT
+            // 
+            this.userControlAttributeSetupINT.AttributeBonus = 0;
+            this.userControlAttributeSetupINT.AttributeName = "INT";
+            this.userControlAttributeSetupINT.Location = new System.Drawing.Point(6, 63);
+            this.userControlAttributeSetupINT.Name = "userControlAttributeSetupINT";
+            this.userControlAttributeSetupINT.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupINT.TabIndex = 30;
+            this.userControlAttributeSetupINT.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
+            // 
+            // userControlAttributeSetupSTR
+            // 
+            this.userControlAttributeSetupSTR.AttributeBonus = 0;
+            this.userControlAttributeSetupSTR.AttributeName = "STR";
+            this.userControlAttributeSetupSTR.Location = new System.Drawing.Point(6, 37);
+            this.userControlAttributeSetupSTR.Name = "userControlAttributeSetupSTR";
+            this.userControlAttributeSetupSTR.Size = new System.Drawing.Size(248, 26);
+            this.userControlAttributeSetupSTR.TabIndex = 29;
+            this.userControlAttributeSetupSTR.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
+            // 
             // labelCustomRacialAttributeBonus
             // 
             this.labelCustomRacialAttributeBonus.AutoSize = true;
@@ -276,6 +335,29 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Player";
             // 
+            // userControlKnownLanguages
+            // 
+            this.userControlKnownLanguages.IsBorder = true;
+            this.userControlKnownLanguages.Location = new System.Drawing.Point(291, 729);
+            this.userControlKnownLanguages.Name = "userControlKnownLanguages";
+            this.userControlKnownLanguages.Size = new System.Drawing.Size(252, 110);
+            this.userControlKnownLanguages.TabIndex = 26;
+            this.userControlKnownLanguages.TitleString = "Known Languages";
+            // 
+            // alignmentChoice1
+            // 
+            this.alignmentChoice1.Location = new System.Drawing.Point(372, 9);
+            this.alignmentChoice1.Name = "alignmentChoice1";
+            this.alignmentChoice1.Size = new System.Drawing.Size(171, 172);
+            this.alignmentChoice1.TabIndex = 25;
+            // 
+            // userControlToolProficiencyChoice1
+            // 
+            this.userControlToolProficiencyChoice1.Location = new System.Drawing.Point(14, 723);
+            this.userControlToolProficiencyChoice1.Name = "userControlToolProficiencyChoice1";
+            this.userControlToolProficiencyChoice1.Size = new System.Drawing.Size(271, 122);
+            this.userControlToolProficiencyChoice1.TabIndex = 2;
+            // 
             // textBoxPassivePerception
             // 
             this.textBoxPassivePerception.Location = new System.Drawing.Point(300, 110);
@@ -292,6 +374,33 @@
             this.label15.Size = new System.Drawing.Size(98, 13);
             this.label15.TabIndex = 23;
             this.label15.Text = "Passive Perception";
+            // 
+            // userControlSkillProficiencies1
+            // 
+            this.userControlSkillProficiencies1.isSetDataVisible = true;
+            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(10, 185);
+            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
+            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 538);
+            this.userControlSkillProficiencies1.TabIndex = 22;
+            // 
+            // userControlSavingThrows1
+            // 
+            this.userControlSavingThrows1.Location = new System.Drawing.Point(10, 12);
+            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
+            this.userControlSavingThrows1.Size = new System.Drawing.Size(166, 177);
+            this.userControlSavingThrows1.TabIndex = 21;
+            // 
+            // userControlGenericAttributeList1
+            // 
+            this.userControlGenericAttributeList1.AutoScroll = true;
+            this.userControlGenericAttributeList1.AutoScrollMinSize = new System.Drawing.Size(256, 350);
+            this.userControlGenericAttributeList1.IsBorder = true;
+            this.userControlGenericAttributeList1.IsSlotsVisible = false;
+            this.userControlGenericAttributeList1.Location = new System.Drawing.Point(288, 370);
+            this.userControlGenericAttributeList1.Name = "userControlGenericAttributeList1";
+            this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 353);
+            this.userControlGenericAttributeList1.TabIndex = 20;
+            this.userControlGenericAttributeList1.Title = "Abilities:";
             // 
             // textBoxHitPoints
             // 
@@ -363,8 +472,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.labelExtraLanguage);
-            this.groupBox4.Controls.Add(this.comboBoxExtraLanguage);
+            this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.comboBoxMainRace);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.label3);
@@ -465,6 +573,16 @@
             this.panel1.Size = new System.Drawing.Size(229, 310);
             this.panel1.TabIndex = 3;
             // 
+            // userControlGenericEquipmentList1
+            // 
+            this.userControlGenericEquipmentList1.AutoScroll = true;
+            this.userControlGenericEquipmentList1.AutoScrollMinSize = new System.Drawing.Size(228, 300);
+            this.userControlGenericEquipmentList1.IsBorder = true;
+            this.userControlGenericEquipmentList1.Location = new System.Drawing.Point(1, 3);
+            this.userControlGenericEquipmentList1.Name = "userControlGenericEquipmentList1";
+            this.userControlGenericEquipmentList1.Size = new System.Drawing.Size(228, 307);
+            this.userControlGenericEquipmentList1.TabIndex = 2;
+            // 
             // buttonChooseSpells
             // 
             this.buttonChooseSpells.Location = new System.Drawing.Point(125, 19);
@@ -503,143 +621,15 @@
             this.comboBoxPlayerClasses.TabIndex = 0;
             this.comboBoxPlayerClasses.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlayerClasses_SelectedIndexChanged);
             // 
-            // comboBoxExtraLanguage
+            // button1
             // 
-            this.comboBoxExtraLanguage.FormattingEnabled = true;
-            this.comboBoxExtraLanguage.Location = new System.Drawing.Point(162, 46);
-            this.comboBoxExtraLanguage.Name = "comboBoxExtraLanguage";
-            this.comboBoxExtraLanguage.Size = new System.Drawing.Size(80, 21);
-            this.comboBoxExtraLanguage.TabIndex = 8;
-            this.comboBoxExtraLanguage.SelectedIndexChanged += new System.EventHandler(this.comboBoxExtraLanguage_SelectedIndexChanged);
-            // 
-            // labelExtraLanguage
-            // 
-            this.labelExtraLanguage.AutoSize = true;
-            this.labelExtraLanguage.Location = new System.Drawing.Point(160, 24);
-            this.labelExtraLanguage.Name = "labelExtraLanguage";
-            this.labelExtraLanguage.Size = new System.Drawing.Size(82, 13);
-            this.labelExtraLanguage.TabIndex = 9;
-            this.labelExtraLanguage.Text = "Extra Language";
-            // 
-            // userControlGenericEquipmentList1
-            // 
-            this.userControlGenericEquipmentList1.AutoScroll = true;
-            this.userControlGenericEquipmentList1.AutoScrollMinSize = new System.Drawing.Size(228, 300);
-            this.userControlGenericEquipmentList1.IsBorder = true;
-            this.userControlGenericEquipmentList1.Location = new System.Drawing.Point(1, 3);
-            this.userControlGenericEquipmentList1.Name = "userControlGenericEquipmentList1";
-            this.userControlGenericEquipmentList1.Size = new System.Drawing.Size(228, 307);
-            this.userControlGenericEquipmentList1.TabIndex = 2;
-            // 
-            // userControlAttributeSetupCHA
-            // 
-            this.userControlAttributeSetupCHA.AttributeBonus = 0;
-            this.userControlAttributeSetupCHA.AttributeName = "CHA";
-            this.userControlAttributeSetupCHA.Location = new System.Drawing.Point(6, 167);
-            this.userControlAttributeSetupCHA.Name = "userControlAttributeSetupCHA";
-            this.userControlAttributeSetupCHA.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupCHA.TabIndex = 34;
-            this.userControlAttributeSetupCHA.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
-            // 
-            // userControlAttributeSetupWIS
-            // 
-            this.userControlAttributeSetupWIS.AttributeBonus = 0;
-            this.userControlAttributeSetupWIS.AttributeName = "WIS";
-            this.userControlAttributeSetupWIS.Location = new System.Drawing.Point(6, 141);
-            this.userControlAttributeSetupWIS.Name = "userControlAttributeSetupWIS";
-            this.userControlAttributeSetupWIS.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupWIS.TabIndex = 33;
-            this.userControlAttributeSetupWIS.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
-            // 
-            // userControlAttributeSetupCON
-            // 
-            this.userControlAttributeSetupCON.AttributeBonus = 0;
-            this.userControlAttributeSetupCON.AttributeName = "CON";
-            this.userControlAttributeSetupCON.Location = new System.Drawing.Point(6, 115);
-            this.userControlAttributeSetupCON.Name = "userControlAttributeSetupCON";
-            this.userControlAttributeSetupCON.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupCON.TabIndex = 32;
-            this.userControlAttributeSetupCON.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
-            // 
-            // userControlAttributeSetupDEX
-            // 
-            this.userControlAttributeSetupDEX.AttributeBonus = 0;
-            this.userControlAttributeSetupDEX.AttributeName = "DEX";
-            this.userControlAttributeSetupDEX.Location = new System.Drawing.Point(6, 89);
-            this.userControlAttributeSetupDEX.Name = "userControlAttributeSetupDEX";
-            this.userControlAttributeSetupDEX.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupDEX.TabIndex = 31;
-            this.userControlAttributeSetupDEX.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
-            // 
-            // userControlAttributeSetupINT
-            // 
-            this.userControlAttributeSetupINT.AttributeBonus = 0;
-            this.userControlAttributeSetupINT.AttributeName = "INT";
-            this.userControlAttributeSetupINT.Location = new System.Drawing.Point(6, 63);
-            this.userControlAttributeSetupINT.Name = "userControlAttributeSetupINT";
-            this.userControlAttributeSetupINT.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupINT.TabIndex = 30;
-            this.userControlAttributeSetupINT.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
-            // 
-            // userControlAttributeSetupSTR
-            // 
-            this.userControlAttributeSetupSTR.AttributeBonus = 0;
-            this.userControlAttributeSetupSTR.AttributeName = "STR";
-            this.userControlAttributeSetupSTR.Location = new System.Drawing.Point(6, 37);
-            this.userControlAttributeSetupSTR.Name = "userControlAttributeSetupSTR";
-            this.userControlAttributeSetupSTR.Size = new System.Drawing.Size(248, 26);
-            this.userControlAttributeSetupSTR.TabIndex = 29;
-            this.userControlAttributeSetupSTR.ValueChanged += new System.EventHandler(this.baseAttribute_ValueChanged);
-            // 
-            // userControlKnownLanguages
-            // 
-            this.userControlKnownLanguages.IsBorder = true;
-            this.userControlKnownLanguages.Location = new System.Drawing.Point(291, 729);
-            this.userControlKnownLanguages.Name = "userControlKnownLanguages";
-            this.userControlKnownLanguages.Size = new System.Drawing.Size(252, 110);
-            this.userControlKnownLanguages.TabIndex = 26;
-            this.userControlKnownLanguages.TitleString = "Known Languages";
-            // 
-            // alignmentChoice1
-            // 
-            this.alignmentChoice1.Location = new System.Drawing.Point(372, 9);
-            this.alignmentChoice1.Name = "alignmentChoice1";
-            this.alignmentChoice1.Size = new System.Drawing.Size(171, 172);
-            this.alignmentChoice1.TabIndex = 25;
-            // 
-            // userControlToolProficiencyChoice1
-            // 
-            this.userControlToolProficiencyChoice1.Location = new System.Drawing.Point(14, 723);
-            this.userControlToolProficiencyChoice1.Name = "userControlToolProficiencyChoice1";
-            this.userControlToolProficiencyChoice1.Size = new System.Drawing.Size(271, 122);
-            this.userControlToolProficiencyChoice1.TabIndex = 2;
-            // 
-            // userControlSkillProficiencies1
-            // 
-            this.userControlSkillProficiencies1.isSetDataVisible = true;
-            this.userControlSkillProficiencies1.Location = new System.Drawing.Point(10, 185);
-            this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
-            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 538);
-            this.userControlSkillProficiencies1.TabIndex = 22;
-            // 
-            // userControlSavingThrows1
-            // 
-            this.userControlSavingThrows1.Location = new System.Drawing.Point(10, 12);
-            this.userControlSavingThrows1.Name = "userControlSavingThrows1";
-            this.userControlSavingThrows1.Size = new System.Drawing.Size(166, 177);
-            this.userControlSavingThrows1.TabIndex = 21;
-            // 
-            // userControlGenericAttributeList1
-            // 
-            this.userControlGenericAttributeList1.AutoScroll = true;
-            this.userControlGenericAttributeList1.AutoScrollMinSize = new System.Drawing.Size(256, 350);
-            this.userControlGenericAttributeList1.IsBorder = true;
-            this.userControlGenericAttributeList1.IsSlotsVisible = false;
-            this.userControlGenericAttributeList1.Location = new System.Drawing.Point(288, 370);
-            this.userControlGenericAttributeList1.Name = "userControlGenericAttributeList1";
-            this.userControlGenericAttributeList1.Size = new System.Drawing.Size(256, 353);
-            this.userControlGenericAttributeList1.TabIndex = 20;
-            this.userControlGenericAttributeList1.Title = "Abilities:";
+            this.button1.Location = new System.Drawing.Point(160, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 48);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Choose Race Features";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CharacterCreatorForm
             // 
@@ -725,7 +715,6 @@
         private UserControls.UserControlAttributeSetup userControlAttributeSetupCON;
         private System.Windows.Forms.Label labelExtraBonus;
         private UserControls.UserControlProficiencyList userControlKnownLanguages;
-        private System.Windows.Forms.Label labelExtraLanguage;
-        private System.Windows.Forms.ComboBox comboBoxExtraLanguage;
+        private System.Windows.Forms.Button button1;
     }
 }
