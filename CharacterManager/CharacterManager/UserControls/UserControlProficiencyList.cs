@@ -26,6 +26,11 @@ namespace CharacterManager.UserControls
             this.Invalidate();
         }
 
+        public List<string> getProficiencies()
+        {
+            return _proficiencies;
+        }
+
         protected override void drawData(Graphics gfx, Font font)
         {
             int y = 0;

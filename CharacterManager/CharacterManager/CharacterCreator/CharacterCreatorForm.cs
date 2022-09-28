@@ -41,6 +41,10 @@ namespace CharacterManager.CharacterCreator
         {
             InitializeComponent();
 
+            comboBoxExtraLanguage.Visible = false;
+            labelExtraLanguage.Visible = false;
+            comboBoxExtraLanguage.Enabled = false;
+
             if (CharacterFactory.Initialize() == false)
             {
                 throw new Exception("Error : Failed to initialize Character Factory");
@@ -107,6 +111,9 @@ namespace CharacterManager.CharacterCreator
 
                 //4.1 Set Tool Proficiencies
                 CreatedCharacter.ToolProficiencies = userControlToolProficiencyChoice1.getChosenToolProficiencies();
+
+                //4.2 Set Known Languages
+                CreatedCharacter.Languages = userControlKnownLanguages.getProficiencies();
 
                 //5. Set saving throw proficiencies.
                 CreatedCharacter.SavingThrowProficiencies = SelectedClass.SavingThrowProficiencies;
@@ -620,6 +627,18 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
+            if (comboBoxExtraLanguage.Enabled)
+            {
+                if (comboBoxExtraLanguage.SelectedIndex > -1)
+                {
+                    string selectedItem = comboBoxExtraLanguage.Items[comboBoxExtraLanguage.SelectedIndex].ToString();
+                    if (!knownLanguages.Contains(selectedItem))
+                    {
+                        knownLanguages.Add(selectedItem);
+                    }
+                }
+            }
+
             /* Now we might have selected some more languages from our background. */
             if (myChooseBackGroundForm != null)
             {
@@ -633,6 +652,11 @@ namespace CharacterManager.CharacterCreator
                         knownLanguages.Add(bgLanguage.LanguageName);
                     }
                 }
+            }
+
+            if (knownLanguages.Contains("ChooseAny"))
+            {
+                knownLanguages.Remove("ChooseAny");
             }
 
             userControlKnownLanguages.setProficiencylist(knownLanguages);
@@ -891,6 +915,7 @@ namespace CharacterManager.CharacterCreator
             if (comboBoxMainRace.Items.Count > 0)
             {
                 String selectedItem = comboBoxMainRace.SelectedItem.ToString();
+                
                 comboBoxSubRace.Items.Clear();
                 comboBoxSubRace.SelectedIndex = -1;
                 comboBoxSubRace.Text = String.Empty;
@@ -904,6 +929,28 @@ namespace CharacterManager.CharacterCreator
                 }
 
                 SelectedMainRace = CharacterFactory.getRaceByName(comboBoxMainRace.SelectedItem.ToString());
+
+                /* TODO : This is not an ideal solution, maybe a better one can be found in the future...*/
+                if (SelectedMainRace.KnownLanguages.Contains("ChooseAny"))
+                {
+                    comboBoxExtraLanguage.Visible = true;
+                    labelExtraLanguage.Visible = true;
+                    comboBoxExtraLanguage.Enabled = true;
+
+                    comboBoxExtraLanguage.Items.Clear();
+                    List<Language> definedLanguages = CharacterFactory.getAllLanguages();
+                    foreach(Language lang in definedLanguages)
+                    {
+                        comboBoxExtraLanguage.Items.Add(lang.LanguageName);
+                    }
+                }
+                else
+                {
+                    comboBoxExtraLanguage.Visible = false;
+                    labelExtraLanguage.Visible = false;
+                    comboBoxExtraLanguage.Enabled = false;
+                }
+                
                 UpdateToolProficiencyChoices();
                 updateCustomRacialBonusAttributes();
                 updateSkillProficiencies();
@@ -1068,6 +1115,11 @@ namespace CharacterManager.CharacterCreator
                 /* TODO */
             }
 
+        }
+
+        private void comboBoxExtraLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateKnownLanguages();
         }
     }
 }
