@@ -184,6 +184,24 @@ namespace CharacterManager
         }
     }
 
+    public class ImprovedCriticalAbility : SpecialAttribute
+    {
+        public ImprovedCriticalAbility()
+        {
+            this.Name = "Improved Critical";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRollMade += C_AttackRollMade; ;
+        }
+
+        private void C_AttackRollMade(PlayerCharacter c, PlayerWeapon w)
+        {
+            /* We also strike a critical on 19, so lets add it to the list */
+            c.BonusValues.ExtraCritValues.Add(19);
+        }
+    }
 
     public class StudentOfWarAbility : SpecialAttribute
     {

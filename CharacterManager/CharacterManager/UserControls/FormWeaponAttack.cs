@@ -171,10 +171,22 @@ namespace CharacterManager.UserControls
 
         private void logReport(string msg, object sender)
         {
+            List<int> CriticalRolls = new List<int>();
+            bool isCriticalHit = false;
+
             /* TODO : Might need to make this more complex. */
             if (sender == userControlAttackDieRolls)
             {
-                msg = "Attack Roll : " + msg; 
+                msg = "Attack Roll : " + msg;
+                _connectedCharacter.performAttackRoll(_weapon, out CriticalRolls);
+
+                foreach (int critValue in CriticalRolls)
+                {
+                    if (msg.Contains("(D20)" + critValue))
+                    {
+                        isCriticalHit = true;
+                    }
+                }
             }
 
             if(sender == userControlDamageDieRoll)
@@ -182,10 +194,8 @@ namespace CharacterManager.UserControls
                 msg = "Damage Roll: " + msg;
             }
 
-            /* TODO : Might have to handle crits separately. */
-            if (msg.Contains("(D20)20"))
+            if (isCriticalHit)
             {
-                //richTextBoxRolls.AppendText(msg + Environment.NewLine, Color.Green);
                 AppendFormattedText(richTextBoxRolls, msg + Environment.NewLine, Color.Green, true, HorizontalAlignment.Left);
             }
             else if (msg.Contains("(D20)1 "))
@@ -196,6 +206,7 @@ namespace CharacterManager.UserControls
             {
                 richTextBoxRolls.AppendText(msg + Environment.NewLine);
             }
+
             richTextBoxRolls.ScrollToCaret();
         }
 

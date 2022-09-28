@@ -702,6 +702,7 @@ namespace CharacterManager
             SpecialAttributeList.Add(new FightingStyleTwoWeapon());
             SpecialAttributeList.Add(new SecondWindAbility());
             SpecialAttributeList.Add(new StudentOfWarAbility());
+            SpecialAttributeList.Add(new ImprovedCriticalAbility());
 
             SpecialAttributeList.Add(new RageAbility());
             SpecialAttributeList.Add(new UnarmoredDefenseAbility());

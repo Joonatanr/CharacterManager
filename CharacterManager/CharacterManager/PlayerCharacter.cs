@@ -294,7 +294,8 @@ namespace CharacterManager
         public delegate void PlayerAttackEvent(PlayerCharacter c, PlayerWeapon w);
 
         public event PlayerEvent ArmorDonned;
-        public event PlayerAttackEvent AttackRoll;
+        public event PlayerAttackEvent AttackRoll;      /* This one is for setting up the attack roll.      */
+        public event PlayerAttackEvent AttackRollMade;  /* This one is for after the attack roll is made.   */
 
         public event PlayerEvent CharacterCreated;
         public event PlayerEvent CharacterLevelup;
@@ -406,6 +407,28 @@ namespace CharacterManager
            damageModifiers.AddRange(BonusValues.AttackDamageBonusModifiers);
         }
 
+        public void performAttackRoll(PlayerWeapon w, out List<int> criticals)
+        {
+            BonusValues.ExtraCritValues = new List<int>();
+            if(this.AttackRollMade != null)
+            {
+                this.AttackRollMade.Invoke(this, w);
+            }
+
+            criticals = new List<int>();
+
+            /* Normally only a natural 20 gives us a critical hit. */
+            criticals.Add(20);
+
+            foreach (int extraCrit in this.BonusValues.ExtraCritValues)
+            {
+                if (!criticals.Contains(extraCrit))
+                {
+                    criticals.Add(extraCrit);
+                }
+            }
+        }
+
         internal void PerformLongRest()
         {
             /* 1. Heal */
@@ -508,6 +531,8 @@ namespace CharacterManager
         public void setCharacterAbilitiesList(List<PlayerAbility> abilityList, Boolean overwriteDescriptors)
         {
             CharacterAbilitiesObjectList = abilityList;
+            resetAllSubscriptions();
+
             if (overwriteDescriptors)
             {
                 CharacterAbilities = new List<PlayerAbilityDescriptor>();
@@ -528,10 +553,22 @@ namespace CharacterManager
                 if (obj is SpellcastingAbility || obj.Name.ToLower() == "spellcasting")
                 {
                     /* This character has a spellcasting ability. In the future we may have multiclassing and therefore more than one. */
-                    //_mySpellcastingAbility = (SpellcastingAbility)obj;
                     _mySpellcastingAbility = CharacterFactory.GetSpellCastingAbilityOfClass(this.ClassName, this.SubClassName);
                 }
             }
+        }
+
+
+        private void resetAllSubscriptions()
+        {
+            ArmorDonned = null;
+            AttackRoll = null;
+            AttackRollMade = null;
+            CharacterCreated = null;
+            CharacterLevelup = null;
+
+            CharacterHPChanged = null;
+            CharacterAbilityStatsUpdated = null;
         }
 
         private void abilityUsed(PlayerAbility ability)
@@ -663,8 +700,6 @@ namespace CharacterManager
 
             /* Fire the event. */
             ArmorDonned?.Invoke(this);
-
-            //ac += BonusValues.AcBonus;
 
             acMods = BonusValues.AcBonusModifiers;
             return BonusValues.AcBonus;

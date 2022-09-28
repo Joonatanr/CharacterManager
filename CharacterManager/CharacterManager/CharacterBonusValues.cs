@@ -16,6 +16,7 @@ namespace CharacterManager
         public List<BonusValueModifier> SpeedModifiers = new List<BonusValueModifier>();
 
         public string AttackNoteString = string.Empty;
+        public List<int> ExtraCritValues = new List<int>();
 
         /* Values that might be accessed during levelup. */
         public List<BonusValueModifier> HitPointLevelupModifiers = new List<BonusValueModifier>();
