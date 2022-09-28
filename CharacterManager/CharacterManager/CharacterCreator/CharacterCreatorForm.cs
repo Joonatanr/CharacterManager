@@ -107,7 +107,8 @@ namespace CharacterManager.CharacterCreator
                 CreatedCharacter.ArmorProficiencies = getAllArmorProficiencies();
 
                 //4.1 Set Tool Proficiencies
-                CreatedCharacter.ToolProficiencies = userControlToolProficiencyChoice1.getChosenToolProficiencies();
+                //CreatedCharacter.ToolProficiencies = userControlToolProficiencyChoice1.getChosenToolProficiencies();
+                CreatedCharacter.ToolProficiencies = userControlKnownToolProficiencies.getProficiencies();
 
                 //4.2 Set Known Languages
                 CreatedCharacter.Languages = userControlKnownLanguages.getProficiencies();
@@ -504,32 +505,6 @@ namespace CharacterManager.CharacterCreator
             }
         }
 
-        private void UpdateToolProficiencyChoices()
-        {
-            List<String> myChoices = new List<String>();
-
-            if (SelectedMainRace == null)
-            {
-                return;
-            }
-
-            foreach (string str in SelectedMainRace.ToolProficiencies)
-            {
-                myChoices.Add(str);
-            }
-
-            //Not sure if this part is actually needed...
-            if (SelectedSubRace != null)
-            {
-                foreach(string str in SelectedSubRace.ToolProficiencies)
-                {
-                    myChoices.Add(str);
-                }
-            }
-
-            userControlToolProficiencyChoice1.setChoices(myChoices);
-        }
-
         private void UpdateHitPoints(bool updateValue)
         {
             if (updateValue)
@@ -609,6 +584,13 @@ namespace CharacterManager.CharacterCreator
                                                      2);
         }
 
+        private void updateKnownToolProficiencies()
+        {
+            /* 1. We get a list of selected tool proficiencies from racial features. */
+            List<string> toolProfs = myChooseRaceFeaturesForm.GetSelectedToolProficiencies();
+
+            userControlKnownToolProficiencies.setProficiencylist(toolProfs);
+        }
 
         private void updateKnownLanguages()
         {
@@ -924,30 +906,6 @@ namespace CharacterManager.CharacterCreator
 
                 SelectedMainRace = CharacterFactory.getRaceByName(comboBoxMainRace.SelectedItem.ToString());
 
-                /* TODO : This is not an ideal solution, maybe a better one can be found in the future...*/
-                /* TODO : Replace this. */
-                /*
-                if (SelectedMainRace.KnownLanguages.Contains("ChooseAny"))
-                {
-                    comboBoxExtraLanguage.Visible = true;
-                    labelExtraLanguage.Visible = true;
-                    comboBoxExtraLanguage.Enabled = true;
-
-                    comboBoxExtraLanguage.Items.Clear();
-                    List<Language> definedLanguages = CharacterFactory.getAllLanguages();
-                    foreach(Language lang in definedLanguages)
-                    {
-                        comboBoxExtraLanguage.Items.Add(lang.LanguageName);
-                    }
-                }
-                else
-                {
-                    comboBoxExtraLanguage.Visible = false;
-                    labelExtraLanguage.Visible = false;
-                    comboBoxExtraLanguage.Enabled = false;
-                }
-                */
-                UpdateToolProficiencyChoices();
                 updateCustomRacialBonusAttributes();
                 updateSkillProficiencies();
                 updateFixedSpells();
@@ -964,7 +922,6 @@ namespace CharacterManager.CharacterCreator
                 if (mainRace != null && selectedItem != null)
                 {
                     SelectedSubRace = CharacterFactory.getSubRaceByName(mainRace, selectedItem);
-                    UpdateToolProficiencyChoices();
                     updateFixedSpells();
                     updateAllDisplayedData();
                 }
@@ -1127,6 +1084,7 @@ namespace CharacterManager.CharacterCreator
             if(myChooseRaceFeaturesForm.ShowDialog() == DialogResult.OK)
             {
                 updateKnownLanguages();
+                updateKnownToolProficiencies();
             }
         }
     }

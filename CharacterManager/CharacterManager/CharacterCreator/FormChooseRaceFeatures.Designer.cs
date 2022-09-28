@@ -33,7 +33,7 @@ namespace CharacterManager.CharacterCreator
             this.buttonOK = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.labelNoLanguages = new System.Windows.Forms.Label();
-            this.groupBoxToolProficiencies = new System.Windows.Forms.GroupBox();
+            this.userControlToolProficiencyChoice1 = new CharacterManager.UserControls.UserControlToolProficiencyChoice();
             this.groupBoxLanguageOptions.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,23 +80,19 @@ namespace CharacterManager.CharacterCreator
             this.labelNoLanguages.TabIndex = 0;
             this.labelNoLanguages.Text = "No Extra Language Options for this race";
             // 
-            // groupBoxToolProficiencies
+            // userControlToolProficiencyChoice1
             // 
-            this.groupBoxToolProficiencies.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxToolProficiencies.Location = new System.Drawing.Point(12, 108);
-            this.groupBoxToolProficiencies.Name = "groupBoxToolProficiencies";
-            this.groupBoxToolProficiencies.Size = new System.Drawing.Size(260, 126);
-            this.groupBoxToolProficiencies.TabIndex = 3;
-            this.groupBoxToolProficiencies.TabStop = false;
-            this.groupBoxToolProficiencies.Text = "Tool Proficiencies";
+            this.userControlToolProficiencyChoice1.Location = new System.Drawing.Point(12, 107);
+            this.userControlToolProficiencyChoice1.Name = "userControlToolProficiencyChoice1";
+            this.userControlToolProficiencyChoice1.Size = new System.Drawing.Size(263, 127);
+            this.userControlToolProficiencyChoice1.TabIndex = 3;
             // 
             // FormChooseRaceFeatures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 275);
-            this.Controls.Add(this.groupBoxToolProficiencies);
+            this.Controls.Add(this.userControlToolProficiencyChoice1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.groupBoxLanguageOptions);
@@ -115,6 +111,6 @@ namespace CharacterManager.CharacterCreator
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label labelNoLanguages;
-        private System.Windows.Forms.GroupBox groupBoxToolProficiencies;
+        private UserControls.UserControlToolProficiencyChoice userControlToolProficiencyChoice1;
     }
 }

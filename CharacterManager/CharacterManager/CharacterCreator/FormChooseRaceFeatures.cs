@@ -43,8 +43,18 @@ namespace CharacterManager.CharacterCreator
             return res;
         }
 
+        public List<string> GetSelectedToolProficiencies()
+        {
+            return userControlToolProficiencyChoice1.getChosenToolProficiencies();
+        }
+
         private void UpdateChoices()
         {
+            if (_mainRace == null)
+            {
+                return;
+            }
+
             /* Remove any existing combo boxes... */
             List<Control> ControlsToRemove = new List<Control>();
             foreach(Control c in groupBoxLanguageOptions.Controls)
@@ -60,49 +70,60 @@ namespace CharacterManager.CharacterCreator
                 groupBoxLanguageOptions.Controls.Remove(c);
             }
 
-            if(_mainRace != null)
+            /* Lets check first if there are any language choices.... */
+            if (_mainRace.KnownLanguages.Contains("ChooseAny"))
             {
-                /* Lets check first if there are any language choices.... */
-                if (_mainRace.KnownLanguages.Contains("ChooseAny"))
+                labelNoLanguages.Visible = false;
+                int cnt = 0;
+                foreach(string lang in _mainRace.KnownLanguages)
                 {
-                    labelNoLanguages.Visible = false;
-                    int cnt = 0;
-                    foreach(string lang in _mainRace.KnownLanguages)
+                    if (lang == "ChooseAny")
                     {
-                        if (lang == "ChooseAny")
-                        {
-                            cnt++;
-                        }
-                    }
-
-                    List<Language> definedLanguages = CharacterFactory.getAllLanguages();
-                    int yLoc = 20;
-
-                    for (int x = 0; x < cnt; x++)
-                    {
-                        ComboBox myComboBox = new ComboBox();
-                        myComboBox.Location = new Point(10, yLoc);
-                        foreach (Language lang in definedLanguages)
-                        {
-                            myComboBox.Items.Add(lang.LanguageName);
-                        }
-
-                        groupBoxLanguageOptions.Controls.Add(myComboBox);
-
-                        yLoc += myComboBox.Height;
+                        cnt++;
                     }
                 }
-                else
-                {
-                    /* TODO : Make it visible that there are no languages to choose... */
-                    labelNoLanguages.Visible = true;
-                }
 
-                if (_subRace != null)
+                List<Language> definedLanguages = CharacterFactory.getAllLanguages();
+                int yLoc = 20;
+
+                for (int x = 0; x < cnt; x++)
                 {
-                    /* TODO */
+                    ComboBox myComboBox = new ComboBox();
+                    myComboBox.Location = new Point(10, yLoc);
+                    foreach (Language lang in definedLanguages)
+                    {
+                        myComboBox.Items.Add(lang.LanguageName);
+                    }
+                    
+                    groupBoxLanguageOptions.Controls.Add(myComboBox);
+
+                    yLoc += myComboBox.Height;
                 }
             }
+            else
+            {
+                /* TODO : Make it visible that there are no languages to choose... */
+                labelNoLanguages.Visible = true;
+            } 
+
+            /* Now lets check for any tool proficiency options... */
+            List<String> myChoices = new List<String>();
+
+            foreach (string str in _mainRace.ToolProficiencies)
+            {
+                myChoices.Add(str);
+            }
+
+            //Not sure if this part is actually needed...
+            if (_subRace != null)
+            {
+                foreach (string str in _subRace.ToolProficiencies)
+                {
+                    myChoices.Add(str);
+                }
+            }
+
+            userControlToolProficiencyChoice1.setChoices(myChoices);
         }
 
 
