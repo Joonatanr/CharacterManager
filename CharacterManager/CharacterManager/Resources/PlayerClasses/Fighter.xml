@@ -193,9 +193,14 @@ and knowledge.</Description>
 						<string>Combat Superiority</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Student Of War</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel3>
-
 		</PlayerClassArchetype>
+		
 		<PlayerClassArchetype>
 			<Name>Champion</Name>
 			<Description>The archetypal Champion focuses on the development

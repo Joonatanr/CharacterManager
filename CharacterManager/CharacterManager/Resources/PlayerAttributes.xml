@@ -544,6 +544,13 @@ your Strength or Dexterity modifier (your choice)</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
+		<Name>Student Of War</Name>
+		<Description>At 3rd level, you gain proficiency with one type of
+artisan’s tools of your choice.</Description>
+		<IsHidden>true</IsHidden>
+	</PlayerAbility>
+	
+	<PlayerAbility>
 		<Name>Weapon Bond</Name>
 		<Description>At 3rd level, you learn a ritual that creates a magical
 bond between yourself and one weapon. You perform

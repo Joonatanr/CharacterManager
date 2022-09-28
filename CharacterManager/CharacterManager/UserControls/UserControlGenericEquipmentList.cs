@@ -9,13 +9,19 @@ using CharacterManager.Items;
 
 namespace CharacterManager.UserControls
 {
-    class UserControlGenericEquipmentList : UserControlGenericListBase
+    public class UserControlGenericEquipmentList : UserControlGenericListBase
     {
         /* This one might be updated separately... */
         private List<PlayerToolKit> toolList = new List<PlayerToolKit>();
         private List<PlayerWeapon> wList = new List<PlayerWeapon>();
         private List<PlayerArmor> aList = new List<PlayerArmor>();
         private List<PlayerItem> eList = new List<PlayerItem>();
+
+
+        public UserControlGenericEquipmentList() : base()
+        {
+
+        }
 
         /* Updates all items. */
         public void setEquipmentList(List<PlayerItem> equipment)

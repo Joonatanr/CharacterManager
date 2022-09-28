@@ -37,6 +37,7 @@ namespace CharacterManager
         public Boolean RechargeAtLongRest { get; set; } = false;
         public string Dice { get; set; } /* A lot of playerabilities have some kind of diceroll associated with it. */
 
+        public Boolean IsHidden { get; set; } = false; /* If true, then this ability should not be displayed in a list. In fact it will be applied once and then "forgotten". */
         public List<PlayerAbilityUpgrade> Upgrades { get; set; }
 
         /* TODO : Implement this part. */

@@ -105,6 +105,9 @@ namespace CharacterManager.CharacterCreator
                 CreatedCharacter.WeaponProficiencies = getAllWeaponProficiencies();
                 CreatedCharacter.ArmorProficiencies = getAllArmorProficiencies();
 
+                //4.1 Set Tool Proficiencies
+                CreatedCharacter.ToolProficiencies = userControlToolProficiencyChoice1.getChosenToolProficiencies();
+
                 //5. Set saving throw proficiencies.
                 CreatedCharacter.SavingThrowProficiencies = SelectedClass.SavingThrowProficiencies;
 

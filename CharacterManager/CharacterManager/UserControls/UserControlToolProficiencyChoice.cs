@@ -48,5 +48,26 @@ namespace CharacterManager.UserControls
                 groupBox1.Controls.Add(box);
             }
         }
+
+        public List<string> getChosenToolProficiencies()
+        {
+            List<string> res = new List<string>();
+
+            foreach(Control c in groupBox1.Controls)
+            {
+                if (c is RadioButton)
+                {
+                    RadioButton rButton = (RadioButton)c;
+
+                    /* Should be crude but effective. */
+                    if (rButton.Checked)
+                    {
+                        res.Add(rButton.Text);
+                    }
+                }
+            }
+
+            return res;
+        }
     }
 }

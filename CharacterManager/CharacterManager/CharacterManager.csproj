@@ -164,6 +164,12 @@
     <Compile Include="UserControls\FormUseCombatManeuver.Designer.cs">
       <DependentUpon>FormUseCombatManeuver.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\GenericListChoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\GenericListChoiceForm.Designer.cs">
+      <DependentUpon>GenericListChoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Levelup\FormChooseCombatManeuvers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +276,9 @@
     <Compile Include="UserControls\UserControlProficiency.Designer.cs">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControlProficiencyList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\UserControlSavingThrows.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -361,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormUseCombatManeuver.resx">
       <DependentUpon>FormUseCombatManeuver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GenericListChoiceForm.resx">
+      <DependentUpon>GenericListChoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Levelup\FormChooseCombatManeuvers.resx">
       <DependentUpon>FormChooseCombatManeuvers.cs</DependentUpon>

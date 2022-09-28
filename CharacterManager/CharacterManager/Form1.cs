@@ -117,6 +117,9 @@ namespace CharacterManager
                 //9. Update character abilities.
                 UpdateCharacterAbilities();
 
+                //9.1 Update Weapon and armor Proficiencies.
+                userControlWeaponProficiencylist.setProficiencylist(activeCharacter.getAllWeaponAndArmorProficiencies());
+
                 //10. Update weapons.
                 userControlWeaponsHandler1.setWeaponList(activeCharacter.CharacterWeapons);
 

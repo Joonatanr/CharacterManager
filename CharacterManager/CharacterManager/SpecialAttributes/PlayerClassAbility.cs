@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CharacterManager.CharacterCreator;
 using CharacterManager.Items;
 using CharacterManager.SpecialAttributes;
 using CharacterManager.UserControls;
+using static CharacterManager.CharacterCreator.UserControlClassFeature;
 
 namespace CharacterManager
 {
@@ -182,6 +184,29 @@ namespace CharacterManager
         }
     }
 
+
+    public class StudentOfWarAbility : SpecialAttribute
+    {
+        public StudentOfWarAbility()
+        {
+            this.Name = "Student Of War";
+        }
+
+        public override bool ExtraChoiceOptions(out string btnText, out UserControlClassFeature.ExtraChoiceEventHandler clickHandler)
+        {
+            btnText = "Choose Tool Prof.";
+            clickHandler = new ExtraChoiceEventHandler(handleToolProficiencyChoice);
+            return true;
+        }
+
+        private void handleToolProficiencyChoice(PlayerCharacter Character)
+        {
+            GenericListChoiceForm myForm = new GenericListChoiceForm();
+
+            /* First lets get the existing tool proficiencies... */
+            /* TODO */
+        }
+    }
 
     /*********************************************************************************************/
 

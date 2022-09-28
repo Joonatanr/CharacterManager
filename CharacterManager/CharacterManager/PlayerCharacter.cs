@@ -81,6 +81,7 @@ namespace CharacterManager
         public List<String> Languages = new List<String>();
         public List<String> WeaponProficiencies = new List<String>();
         public List<String> ArmorProficiencies = new List<String>();
+        public List<String> ToolProficiencies = new List<String>();
         public List<String> SavingThrowProficiencies = new List<String>();
         public List<PlayerAbilityDescriptor> CharacterAbilities = new List<PlayerAbilityDescriptor>();
         
@@ -707,6 +708,13 @@ namespace CharacterManager
             return res;
         }
 
+
+        public List<string> getAllWeaponAndArmorProficiencies()
+        {
+            List<string> res = WeaponProficiencies;
+            res.AddRange(ArmorProficiencies);
+            return res;
+        }
 
         /*************************** Private functions **************************/
         private List<BonusValueModifier> getHitBonuses(PlayerWeapon w)

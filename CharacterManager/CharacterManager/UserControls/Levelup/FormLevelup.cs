@@ -164,7 +164,25 @@ namespace CharacterManager.UserControls
         {
             PlayerClass _myClass = _myCharacter.GetPlayerClass();
 
-            /* TODO  : Here we finalize the character. */
+            /* Some abilities might just fire once and they will not be added to the abilities list. */
+
+            /* TODO : Some abilities might add things like proficiencies, languages etc. TODO : Handle this here. */
+
+            List<PlayerAbility> HiddenAbilities = new List<PlayerAbility>();
+
+            foreach (PlayerAbility ability in SelectedPlayerAbilities)
+            {
+                if (ability.IsHidden)
+                {
+                    HiddenAbilities.Add(ability);
+                }
+            }
+
+            foreach(PlayerAbility Hidden in HiddenAbilities)
+            {
+                SelectedPlayerAbilities.Remove(Hidden);
+            }
+
             List<PlayerAbility> resultAbilities = _myCharacter.CharacterAbilitiesObjectList;
             resultAbilities.AddRange(SelectedPlayerAbilities);
 
