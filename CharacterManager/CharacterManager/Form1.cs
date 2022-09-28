@@ -120,6 +120,12 @@ namespace CharacterManager
                 //9.1 Update Weapon and armor Proficiencies.
                 userControlWeaponProficiencylist.setProficiencylist(activeCharacter.getAllWeaponAndArmorProficiencies());
 
+                //9.2 Update Tool Proficiencies.
+                userControlToolProficiencies.setProficiencylist(activeCharacter.ToolProficiencies);
+
+                //9.3 Update Language Proficiencies.
+                userControlLanguageProficiencies.setProficiencylist(activeCharacter.Languages);
+
                 //10. Update weapons.
                 userControlWeaponsHandler1.setWeaponList(activeCharacter.CharacterWeapons);
 

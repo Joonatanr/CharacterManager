@@ -21,4 +21,8 @@
 	<SkillProficiencies>
 		<string>Intimidation</string>
 	</SkillProficiencies>
+	<KnownLanguages>
+		<string>Common</string>
+		<string>Orcish</string>
+	</KnownLanguages>
  </PlayerRace>

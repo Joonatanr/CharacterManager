@@ -18,4 +18,8 @@
 		<string>Hellish Resistance</string>
 		<string>Infernal Legacy</string>
 	</PlayerAttributes>
+	<KnownLanguages>
+		<string>Common</string>
+		<string>Infernal</string>
+	</KnownLanguages>
  </PlayerRace>

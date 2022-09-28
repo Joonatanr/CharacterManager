@@ -17,4 +17,9 @@
 		<string>Darkvision</string>
 		<string>Fey Ancestry</string>
 	</PlayerAttributes>
+	<KnownLanguages>
+		<string>Common</string>
+		<string>Elvish</string>
+		<string>ChooseAny</string>
+	</KnownLanguages>
  </PlayerRace>

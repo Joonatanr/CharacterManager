@@ -13,6 +13,10 @@
 	<MaximumAge>80</MaximumAge>
 	<Size>Medium</Size>
 	<BaseSpeed>30</BaseSpeed>
+	<KnownLanguages>
+		<string>Common</string>
+		<string>Draconic</string>
+	</KnownLanguages>
 	
     <SubRaces>
        <PlayerRace>

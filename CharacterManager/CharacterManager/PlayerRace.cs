@@ -26,6 +26,7 @@ namespace CharacterManager
         public List<String> ToolProficiencies = new List<String>();
         public List<String> Spells = new List<String>(); //These are spells and cantrips that are provided solely by the player race.
         public List<String> PlayerAttributes = new List<String>();
+        public List<String> KnownLanguages = new List<String>();
 
         public List<PlayerRace> SubRaces = new List<PlayerRace>();
 

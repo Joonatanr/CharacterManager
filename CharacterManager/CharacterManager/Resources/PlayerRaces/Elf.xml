@@ -20,6 +20,10 @@
 		<string>Fey Ancestry</string>
 		<string>Trance</string>
 	</PlayerAttributes>
+	<KnownLanguages>
+		<string>Common</string>
+		<string>Elvish</string>
+	</KnownLanguages>
 	<SubRaces>
 		<PlayerRace>
 			<RaceName>High Elf</RaceName>

@@ -475,6 +475,9 @@ namespace CharacterManager.CharacterCreator
             //6. Update skill proficiency values.
             updateSkillProficiencyFields();
 
+            //6.1 Update Known Languages.
+            updateKnownLanguages();
+
             //7. Update the generic abilities list.
             updateGenericAbilitiesField();
 
@@ -600,6 +603,39 @@ namespace CharacterManager.CharacterCreator
                                                      getCurrentAttributeBonus("CHA"),
                                                      getCurrentAttributeBonus("CON"),
                                                      2);
+        }
+
+
+        private void updateKnownLanguages()
+        {
+            List<string> knownLanguages = new List<string>();
+
+            /* First lets get the languages given to us by our race. */
+            if(SelectedMainRace != null)
+            {
+                knownLanguages.AddRange(SelectedMainRace.KnownLanguages);
+                if(SelectedSubRace != null)
+                {
+                    knownLanguages.AddRange(SelectedSubRace.KnownLanguages);
+                }
+            }
+
+            /* Now we might have selected some more languages from our background. */
+            if (myChooseBackGroundForm != null)
+            {
+                /* TODO : It should not be possible to choose duplicate languages on the background form... */
+                List<Language> bgLanguages = myChooseBackGroundForm.getAllSelectedLanguages();
+                
+                foreach(Language bgLanguage in bgLanguages)
+                {
+                    if (!knownLanguages.Contains(bgLanguage.LanguageName))
+                    {
+                        knownLanguages.Add(bgLanguage.LanguageName);
+                    }
+                }
+            }
+
+            userControlKnownLanguages.setProficiencylist(knownLanguages);
         }
 
         private int getCurrentAttributeBonus(String attrib)
@@ -767,8 +803,6 @@ namespace CharacterManager.CharacterCreator
             //3. Lets get the skill proficiencies from background.
             if (myChooseBackGroundForm != null)
             {
-               
-
                 foreach(String prof in bgSkillProfs)
                 {
                     if (!userControlSkillProficiencies1.setProficientAtSkill(prof))
@@ -938,7 +972,6 @@ namespace CharacterManager.CharacterCreator
                 return;
             }
 
-            //FormChooseEquipment myForm = new FormChooseEquipment();
             if (myChooseEquipmentForm.SelectedClass != SelectedClass)
             {
                 /* We reset the data in this case. */
@@ -948,7 +981,6 @@ namespace CharacterManager.CharacterCreator
             
             if (myChooseEquipmentForm.ShowDialog() == DialogResult.OK)
             {
-                //myItemList = myChooseEquipmentForm.SelectedItems;
 
                 /* Add the items to display. */
                 updateEquipmentList();
@@ -961,6 +993,7 @@ namespace CharacterManager.CharacterCreator
             {
                 updateEquipmentList();
                 updateSkillProficiencies();
+                updateKnownLanguages();
 
                 if (myChooseBackGroundForm.SelectedBackGround != null) 
                 {

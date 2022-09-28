@@ -67,6 +67,21 @@ namespace CharacterManager
             return res;
         }
 
+        public List<Language> getAllSelectedLanguages()
+        {
+            List<Language> res = new List<Language>();
+
+            foreach (UserControlChoiceBoxSingle single in myOptionsList)
+            {
+                if (single is UserControlLanguageChoice)
+                {
+                    res.Add(((UserControlLanguageChoice)single).getSelectedLanguage());
+                }
+            }
+
+            return res;
+        }
+
         private void buttonOK_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;

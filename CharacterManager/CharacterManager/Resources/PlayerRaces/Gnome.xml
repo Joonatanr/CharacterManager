@@ -16,6 +16,10 @@
 		<string>Darkvision</string>
 		<string>Gnome Cunning</string>
 	</PlayerAttributes>
+	<KnownLanguages>
+		<string>Common</string>
+		<string>Gnomish</string>
+	</KnownLanguages>
     <SubRaces>
        <PlayerRace>
        <RaceName>Forest Gnome</RaceName>

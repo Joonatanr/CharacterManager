@@ -28,6 +28,10 @@
 		<string>Brewer's Supplies</string>
 		<string>Mason's Tools</string>
 	</ToolProficiencies>
+	<KnownLanguages>
+		<string>Common</string>
+		<string>Dwarvish</string>
+	</KnownLanguages>
     <SubRaces>
        <PlayerRace>
        <RaceName>Hill Dwarf</RaceName>
