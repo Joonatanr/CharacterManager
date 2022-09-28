@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlayerClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PlayerClassName>Bard</PlayerClassName>
+	<HitDie>8</HitDie>
+	<ArmorProficiencies>
+		<string>Light Armor</string>
+	</ArmorProficiencies>
+	<WeaponProficiencies>
+		<string>Hand Crossbow</string>
+		<string>Longsword</string>
+		<string>Rapier</string>
+		<string>Shortsword</string>
+		<string>Simple Weapons</string>
+	</WeaponProficiencies>
+</PlayerClass>
