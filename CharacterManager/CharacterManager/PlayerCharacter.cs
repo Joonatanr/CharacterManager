@@ -749,7 +749,8 @@ namespace CharacterManager
 
         public List<string> getAllWeaponAndArmorProficiencies()
         {
-            List<string> res = WeaponProficiencies;
+            List<string> res = new List<string>();
+            res.AddRange(WeaponProficiencies);
             res.AddRange(ArmorProficiencies);
             return res;
         }
