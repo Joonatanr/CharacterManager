@@ -414,6 +414,9 @@
     <EmbeddedResource Include="UserControls\UserControlChoiceBoxSingle.resx">
       <DependentUpon>UserControlChoiceBoxSingle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControlEquipmentChoiceSingle.resx">
+      <DependentUpon>UserControlEquipmentChoiceSingle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlGenericAbilitiesList.resx">
       <DependentUpon>UserControlGenericAbilitiesList.cs</DependentUpon>
     </EmbeddedResource>

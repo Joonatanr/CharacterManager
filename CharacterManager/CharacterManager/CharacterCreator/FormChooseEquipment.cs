@@ -35,6 +35,9 @@ namespace CharacterManager
                 UserControls.UserControlEquipmentChoice myChoiceControl = new UserControls.UserControlEquipmentChoice();
                 myChoiceControl.EqChoice = baseList;
                 myChoiceControl.Location = new Point(10, yOffset);
+                myChoiceControl.Width = groupBox1.Width - 20;
+                myChoiceControl.Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right);
+
                 groupBox1.Controls.Add(myChoiceControl);
                 myControls.Add(myChoiceControl);
 

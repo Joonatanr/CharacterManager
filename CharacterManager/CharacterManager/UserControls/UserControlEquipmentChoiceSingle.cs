@@ -164,5 +164,19 @@ namespace CharacterManager.UserControls
                 comboBox1.Visible = true;
             }
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // UserControlEquipmentChoiceSingle
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Name = "UserControlEquipmentChoiceSingle";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
     }
 }

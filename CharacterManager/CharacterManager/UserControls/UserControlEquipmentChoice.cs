@@ -18,8 +18,6 @@ namespace CharacterManager.UserControls
         private EquipmentChoiceList _eqChoice = null;
         public EquipmentChoiceList EqChoice { get { return _eqChoice; } set { _eqChoice = value; updateControlFields(); } }
 
-        private const int RadioButtonInterval = 240;
-
 
         private struct ChoiceControlPair
         {
@@ -78,24 +76,25 @@ namespace CharacterManager.UserControls
                     yloc = 10;
                     myButton.Location = new Point(xloc, yloc);
 
-                    yloc = 30;
+                    int EdgeOfControl = 0;
 
                     List<UserControlEquipmentChoiceSingle> singleControlList = new List<UserControlEquipmentChoiceSingle>();
                     foreach (EquipmentChoice choice in obj)
                     {
                         UserControlEquipmentChoiceSingle singleControl = new UserControlEquipmentChoiceSingle();
                         singleControl.Choice = choice;
-                        singleControl.Location = new Point(xloc, yloc);
+                        singleControl.Location = new Point(myButton.Right + 5, yloc);
                         groupBox1.Controls.Add(singleControl);
                         singleControlList.Add(singleControl);
 
                         yloc += singleControl.Height;
                         yloc += 1;
+                        EdgeOfControl = singleControl.Right;
                     }
 
 
                     groupBox1.Controls.Add(myButton);
-                    xloc += (RadioButtonInterval + myButton.Width);
+                    xloc = (EdgeOfControl + myButton.Width);
 
                     ChoiceControlPair pair;
                     pair.btn = myButton;

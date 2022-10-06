@@ -19,6 +19,7 @@ namespace CharacterManager.UserControls
         {
             InitializeComponent();
             comboBox1.Visible = false;
+            //this.BackColor = Color.Red;
         }
 
 
