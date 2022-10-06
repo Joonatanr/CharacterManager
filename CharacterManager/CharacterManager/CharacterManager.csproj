@@ -138,6 +138,12 @@
     </Compile>
     <Compile Include="Spells\SpellSlots_T.cs" />
     <Compile Include="ToolProficiencyChoice.cs" />
+    <Compile Include="UserControls\AbilityCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\AbilityCard.Designer.cs">
+      <DependentUpon>AbilityCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AlignmentChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Spells\Spellcard.resx">
       <DependentUpon>Spellcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AbilityCard.resx">
+      <DependentUpon>AbilityCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\AlignmentChoice.resx">
       <DependentUpon>AlignmentChoice.cs</DependentUpon>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.UserControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -320,7 +321,10 @@ namespace CharacterManager
 
         public virtual void HandleInfoButtonClicked(object sender, EventArgs e)
         {
-            MessageBox.Show(this.Description);
+            //MessageBox.Show(this.Description);
+            AbilityCard card = new AbilityCard();
+            card.setAbility(this);
+            card.Show();
         }
 
         public virtual List<BonusValueModifier> getDifficultyClass()

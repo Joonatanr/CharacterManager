@@ -180,9 +180,9 @@ namespace CharacterManager.UserControls
             // 
             this.userControlSpellAttackBonus.IsBorder = true;
             this.userControlSpellAttackBonus.Label = "Spell Attack Bonus";
-            this.userControlSpellAttackBonus.Location = new System.Drawing.Point(274, 10);
+            this.userControlSpellAttackBonus.Location = new System.Drawing.Point(296, 10);
             this.userControlSpellAttackBonus.Name = "userControlSpellAttackBonus";
-            this.userControlSpellAttackBonus.Size = new System.Drawing.Size(128, 78);
+            this.userControlSpellAttackBonus.Size = new System.Drawing.Size(132, 78);
             this.userControlSpellAttackBonus.TabIndex = 3;
             this.userControlSpellAttackBonus.Value = "+0";
             // 
@@ -190,9 +190,9 @@ namespace CharacterManager.UserControls
             // 
             this.userControlSpellsaveDc.IsBorder = true;
             this.userControlSpellsaveDc.Label = "Spell DC";
-            this.userControlSpellsaveDc.Location = new System.Drawing.Point(140, 10);
+            this.userControlSpellsaveDc.Location = new System.Drawing.Point(160, 10);
             this.userControlSpellsaveDc.Name = "userControlSpellsaveDc";
-            this.userControlSpellsaveDc.Size = new System.Drawing.Size(128, 78);
+            this.userControlSpellsaveDc.Size = new System.Drawing.Size(130, 78);
             this.userControlSpellsaveDc.TabIndex = 2;
             this.userControlSpellsaveDc.Value = "8";
             // 
@@ -202,7 +202,7 @@ namespace CharacterManager.UserControls
             this.userControlSpellcastingAbility.Label = "Spellcasting Ability";
             this.userControlSpellcastingAbility.Location = new System.Drawing.Point(6, 10);
             this.userControlSpellcastingAbility.Name = "userControlSpellcastingAbility";
-            this.userControlSpellcastingAbility.Size = new System.Drawing.Size(128, 78);
+            this.userControlSpellcastingAbility.Size = new System.Drawing.Size(148, 78);
             this.userControlSpellcastingAbility.TabIndex = 1;
             this.userControlSpellcastingAbility.Value = "INT";
             // 
