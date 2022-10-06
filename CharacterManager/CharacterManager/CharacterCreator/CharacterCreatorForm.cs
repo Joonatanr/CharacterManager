@@ -483,6 +483,9 @@ namespace CharacterManager.CharacterCreator
             //6.1 Update Known Languages.
             updateKnownLanguages();
 
+            //6.2 Update known tool proficiencies.
+            updateKnownToolProficiencies();
+
             //7. Update the generic abilities list.
             updateGenericAbilitiesField();
 
@@ -591,6 +594,9 @@ namespace CharacterManager.CharacterCreator
 
             /* 2. We get a list of selected tool proficiencies from background. */
             toolProfs.AddRange(myChooseBackGroundForm.getAllToolProficiencies());
+
+            /* 3. We get a list of selected tool proficiencies from the class. */
+            toolProfs.AddRange(myChooseClassFeaturesForm.getChosenToolProficiencies());
 
             userControlKnownToolProficiencies.setProficiencylist(toolProfs);
         }
@@ -1007,7 +1013,6 @@ namespace CharacterManager.CharacterCreator
                 {
                     textBoxBackGround.Text = "None";
                 }
-                /* TODO : Should also update the known languages, and well display them somewhere... */
             }
         }
 
@@ -1025,6 +1030,7 @@ namespace CharacterManager.CharacterCreator
             if (myChooseClassFeaturesForm.ShowDialog() == DialogResult.OK)
             {
                 updateGenericAbilitiesField();
+                updateKnownToolProficiencies();
             }
         }
 

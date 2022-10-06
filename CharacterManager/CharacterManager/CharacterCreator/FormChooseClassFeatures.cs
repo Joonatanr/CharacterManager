@@ -107,6 +107,22 @@ namespace CharacterManager.CharacterCreator
         }
 
 
+        public List<string> getChosenToolProficiencies()
+        {
+            List<string> res = new List<string>();
+
+            foreach(Control c in groupBoxToolProficiencies.Controls)
+            {
+                if(c is UserControlToolProficiencyChoiceVer2)
+                {
+                    UserControlToolProficiencyChoiceVer2 cast = c as UserControlToolProficiencyChoiceVer2;
+                    res.Add(cast.getSelectedToolProficiency());
+                }
+            }
+
+            return res;
+        }
+
         private void setupToolProficiencyChoices(List<ToolProficiencyChoice> toolChoices)
         {
             groupBoxToolProficiencies.Controls.Clear();

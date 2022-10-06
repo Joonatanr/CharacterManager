@@ -38,7 +38,7 @@
             // buttonOK
             // 
             this.buttonOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOK.Location = new System.Drawing.Point(586, 441);
+            this.buttonOK.Location = new System.Drawing.Point(659, 441);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(75, 23);
             this.buttonOK.TabIndex = 0;
@@ -49,7 +49,7 @@
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCancel.Location = new System.Drawing.Point(667, 441);
+            this.buttonCancel.Location = new System.Drawing.Point(740, 441);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 1;
@@ -64,7 +64,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxClassAbilities.Location = new System.Drawing.Point(12, 12);
             this.groupBoxClassAbilities.Name = "groupBoxClassAbilities";
-            this.groupBoxClassAbilities.Size = new System.Drawing.Size(527, 423);
+            this.groupBoxClassAbilities.Size = new System.Drawing.Size(517, 423);
             this.groupBoxClassAbilities.TabIndex = 2;
             this.groupBoxClassAbilities.TabStop = false;
             this.groupBoxClassAbilities.Text = "Class Abilities";
@@ -72,18 +72,19 @@
             // groupBoxToolProficiencies
             // 
             this.groupBoxToolProficiencies.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxToolProficiencies.Location = new System.Drawing.Point(550, 12);
+            this.groupBoxToolProficiencies.Location = new System.Drawing.Point(535, 12);
             this.groupBoxToolProficiencies.Name = "groupBoxToolProficiencies";
-            this.groupBoxToolProficiencies.Size = new System.Drawing.Size(197, 216);
+            this.groupBoxToolProficiencies.Size = new System.Drawing.Size(280, 145);
             this.groupBoxToolProficiencies.TabIndex = 3;
             this.groupBoxToolProficiencies.TabStop = false;
             this.groupBoxToolProficiencies.Text = "Tool Proficiencies";
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(550, 234);
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Location = new System.Drawing.Point(535, 163);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(197, 201);
+            this.groupBox2.Size = new System.Drawing.Size(280, 272);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -92,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(754, 476);
+            this.ClientSize = new System.Drawing.Size(827, 476);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxToolProficiencies);
             this.Controls.Add(this.groupBoxClassAbilities);
