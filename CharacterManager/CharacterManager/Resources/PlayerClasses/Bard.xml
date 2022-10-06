@@ -23,4 +23,104 @@
 			<ChoiceType>TYPE_MUSICAL_INSTRUMENT</ChoiceType>
 		</ToolProficiencyChoice>
 	</AvailableToolProficiencies>
+	<SavingThrowProficiencies>
+		<string>DEX</string>
+		<string>CHA</string>
+	</SavingThrowProficiencies>
+	<AvailableSkillProficiencies>
+		<string>Acrobatics</string>
+		<string>Animal Handling</string>
+		<string>Arcana</string>
+		<string>Athletics</string>
+		<string>Deception</string>
+		<string>Insight</string>
+		<string>History</string>
+		<string>Intimidation</string>
+		<string>Investigation</string>
+		<string>Medicine</string>
+		<string>Nature</string>
+		<string>Perception</string>
+		<string>Performance</string>
+		<string>Persuasion</string>
+		<string>Religion</string>
+		<string>Sleight of Hand</string>
+		<string>Stealth</string>
+		<string>Survival</string>
+  </AvailableSkillProficiencies>
+  <NumberOfSkillsToChoose>3</NumberOfSkillsToChoose>
+  
+  <AvailableEquipment>
+    <EquipmentChoiceList>
+      <optionA>
+        <EquipmentChoice>
+          <Equipment>Rapier</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionA>
+      <optionB>
+        <EquipmentChoice>
+          <Equipment>Longsword</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionB>
+      <optionC>
+	    <EquipmentChoice>
+          <Equipment>AnySimple</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+	  </optionC>
+      <optionD />
+    </EquipmentChoiceList>
+	
+    <EquipmentChoiceList>
+      <optionA>
+        <EquipmentChoice>
+          <Equipment>Diplomat's Pack</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionA>
+      <optionB>
+        <EquipmentChoice>
+          <Equipment>Entertainer's Pack</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionB>
+      <optionC />
+      <optionD />
+    </EquipmentChoiceList>
+	
+    <EquipmentChoiceList>
+      <optionA>
+        <EquipmentChoice>
+          <Equipment>lute</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionA>
+      <optionB>
+        <EquipmentChoice>
+          <Equipment>AnyMusical</Equipment>
+          <Quantity>2</Quantity>
+        </EquipmentChoice>
+      </optionB>
+      <optionC />
+      <optionD />
+	</EquipmentChoiceList>
+	
+	<EquipmentChoiceList>
+      <optionA>
+        <EquipmentChoice>
+          <Equipment>Leather</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+		 <EquipmentChoice>
+          <Equipment>Dagger</Equipment>
+          <Quantity>1</Quantity>
+        </EquipmentChoice>
+      </optionA>
+      <optionB />
+      <optionC />
+      <optionD />
+	</EquipmentChoiceList>
+  </AvailableEquipment>
+  
 </PlayerClass>
