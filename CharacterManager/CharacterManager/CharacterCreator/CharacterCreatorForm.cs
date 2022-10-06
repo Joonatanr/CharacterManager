@@ -589,6 +589,9 @@ namespace CharacterManager.CharacterCreator
             /* 1. We get a list of selected tool proficiencies from racial features. */
             List<string> toolProfs = myChooseRaceFeaturesForm.GetSelectedToolProficiencies();
 
+            /* 2. We get a list of selected tool proficiencies from background. */
+            toolProfs.AddRange(myChooseBackGroundForm.getAllToolProficiencies());
+
             userControlKnownToolProficiencies.setProficiencylist(toolProfs);
         }
 
@@ -994,6 +997,7 @@ namespace CharacterManager.CharacterCreator
                 updateEquipmentList();
                 updateSkillProficiencies();
                 updateKnownLanguages();
+                updateKnownToolProficiencies();
 
                 if (myChooseBackGroundForm.SelectedBackGround != null) 
                 {

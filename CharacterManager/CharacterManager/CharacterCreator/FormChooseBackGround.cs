@@ -18,6 +18,7 @@ namespace CharacterManager
         private CharacterBackGround _selectedBackGround = null;
         private List<UserControlChoiceBoxSingle> myOptionsList = new List<UserControlChoiceBoxSingle>();
         private List<PlayerItem> mySelectedItems = new List<PlayerItem>();
+        private List<string> myToolProficiencies = new List<string>();
 
         public CharacterBackGround SelectedBackGround { get { return _selectedBackGround; } }
 
@@ -61,6 +62,23 @@ namespace CharacterManager
                 foreach (string prof in _selectedBackGround.SkillProficiencies)
                 {
                     res.Add(prof);
+                }
+            }
+
+            return res;
+        }
+
+        public List<string> getAllToolProficiencies()
+        {
+            List<string> res = new List<string>();
+
+            res.AddRange(myToolProficiencies);
+
+            foreach (UserControlChoiceBoxSingle single in myOptionsList)
+            {
+                if (single is UserControlToolProficiencyChoiceVer2)
+                {
+                    res.Add(((UserControlToolProficiencyChoiceVer2)single).getSelectedToolProficiency());
                 }
             }
 
@@ -149,7 +167,33 @@ namespace CharacterManager
                     }
                 }
 
+                myToolProficiencies = new List<string>();
+                if (_selectedBackGround.ToolProficiencies.Count > 0)
+                {
+                    writeBoldTextToRT("\n\nTool Proficiencies:\n");
 
+                    foreach(string toolProf in _selectedBackGround.ToolProficiencies)
+                    {
+                        ToolProficiencyChoice profChoice = ToolProficiencyChoice.parseFromString(toolProf);
+                        List<string> choices = profChoice.getAllAvailableChoices();
+                        
+                        if(choices.Count == 1)
+                        {
+                            richTextBoxDescription.AppendText(choices[0] + "\n");
+                            myToolProficiencies.Add(choices[0]);
+                        }
+                        else if(choices.Count > 1)
+                        {
+                            UserControlToolProficiencyChoiceVer2 toolProfChoice = new UserControlToolProficiencyChoiceVer2();
+                            toolProfChoice.setToolProficiencyChoice(profChoice);
+                            myOptionsList.Add(toolProfChoice);
+                        }
+                        else
+                        {
+                            /* Strange case... We do not do anything. */
+                        }
+                    }
+                }
 
                 richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
                 richTextBoxDescription.AppendText("\n\nEquipment:\n");
@@ -194,6 +238,13 @@ namespace CharacterManager
 
                 updateOptions();
             }
+        }
+
+        private void writeBoldTextToRT(string text)
+        {
+            richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
+            richTextBoxDescription.AppendText(text);
+            richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Regular);
         }
     }
 }

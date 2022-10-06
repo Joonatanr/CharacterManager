@@ -16,6 +16,7 @@ namespace CharacterManager
             TYPE_MUSICAL_INSTRUMENT,    /* Choose any musical instrument proficiency                                    */
             TYPE_ARTISAN_TOOL,          /* Choose any artisan tool                                                      */
             TYPE_ARTISAN_OR_MUSICAL,    /* Choose any musical instrument OR artisan tool                                */
+            TYPE_GAMING,                /* Choose any gaming set                                                        */
         }
 
         public ToolProficiencyChoiceType ChoiceType = ToolProficiencyChoiceType.TYPE_LIST; /* Default is a list of possibilities. */
@@ -30,6 +31,33 @@ namespace CharacterManager
             AvailableChoices.Add("NONE");
         }
 
+        public static ToolProficiencyChoice parseFromString(string str)
+        {
+            ToolProficiencyChoice res = new ToolProficiencyChoice();
+
+            if(str == "AnyGaming")
+            {
+                res.ChoiceType = ToolProficiencyChoiceType.TYPE_GAMING;
+            }
+            else if(str == "AnyMusical")
+            {
+                res.ChoiceType = ToolProficiencyChoiceType.TYPE_MUSICAL_INSTRUMENT;
+            }
+            else if(str == "AnyArtisanProficiency")
+            {
+                res.ChoiceType = ToolProficiencyChoiceType.TYPE_ARTISAN_TOOL;
+            }
+            else
+            {
+                res.ChoiceType = ToolProficiencyChoiceType.TYPE_LIST;
+                res.AvailableChoices = new List<string>();
+                res.AvailableChoices.Add(str);
+            }
+
+
+            return res;
+        }
+
         public List<string> getAllAvailableChoices()
         {
             List<string> res = new List<string>();
@@ -37,6 +65,7 @@ namespace CharacterManager
             List<PlayerToolKit> ExistingToolKits = CharacterFactory.getAllToolSets();
             List<PlayerToolKit> musicalInstruments = ExistingToolKits.FindAll(t => t.ToolType == PlayerToolKit.PlayerToolType.TYPE_MUSICAL);
             List<PlayerToolKit> artisanTools = ExistingToolKits.FindAll(t => t.ToolType == PlayerToolKit.PlayerToolType.TYPE_ARTISAN);
+            List<PlayerToolKit> gamingTools = ExistingToolKits.FindAll(t => t.ToolType == PlayerToolKit.PlayerToolType.TYPE_GAMING);
 
             switch (ChoiceType)
             {
@@ -62,6 +91,12 @@ namespace CharacterManager
                         res.Add(t.ItemName);
                     }
                     foreach (PlayerToolKit t in artisanTools)
+                    {
+                        res.Add(t.ItemName);
+                    }
+                    break;
+                case ToolProficiencyChoiceType.TYPE_GAMING:
+                    foreach (PlayerToolKit t in gamingTools)
                     {
                         res.Add(t.ItemName);
                     }

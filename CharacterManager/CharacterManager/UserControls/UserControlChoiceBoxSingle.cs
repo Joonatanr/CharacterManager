@@ -72,4 +72,93 @@ namespace CharacterManager.UserControls
             return (allLanguages.Find(l => l.LanguageName == langString));
         }
     }
+
+
+    public class UserControlToolProficiencyChoiceVer2 : UserControlChoiceBoxSingle
+    {
+
+        private ToolProficiencyChoice _myChoice = null;
+
+        public UserControlToolProficiencyChoiceVer2() : base()
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Visible = true;
+
+            this.label1.Text = "Tool Proficiency";
+        }
+
+        public void setToolProficiencyChoice(ToolProficiencyChoice choice)
+        {
+            _myChoice = choice;
+            comboBox1.Items.Clear();
+            comboBox1.Enabled = true;
+            List<Items.PlayerToolKit> existingToolProficiencies = CharacterFactory.getAllToolSets();
+
+            switch (_myChoice.ChoiceType)
+            {
+                case ToolProficiencyChoice.ToolProficiencyChoiceType.TYPE_LIST:
+                    List<string> choices = _myChoice.getAllAvailableChoices();
+                    if (choices.Count == 1)
+                    {
+                        comboBox1.Items.Add(choices[0]);
+                        comboBox1.SelectedIndex = 0;
+                        comboBox1.Enabled = false;
+                    }
+                    else
+                    {
+                        foreach (string c in choices)
+                        {
+                            comboBox1.Items.Add(c);
+                        }
+                    }
+                    this.label1.Text = "Tool Proficiency";
+                    break;
+                case ToolProficiencyChoice.ToolProficiencyChoiceType.TYPE_MUSICAL_INSTRUMENT:
+                    foreach (Items.PlayerToolKit toolkit in existingToolProficiencies)
+                    {
+                        if (toolkit.ToolType == Items.PlayerToolKit.PlayerToolType.TYPE_MUSICAL)
+                        {
+                            comboBox1.Items.Add(toolkit.ItemName);
+                        }
+                    }
+                    this.label1.Text = "Any Musical instrument proficiency.";
+                    break;
+                case ToolProficiencyChoice.ToolProficiencyChoiceType.TYPE_ARTISAN_TOOL:
+                    foreach (Items.PlayerToolKit toolkit in existingToolProficiencies)
+                    {
+                        if (toolkit.ToolType == Items.PlayerToolKit.PlayerToolType.TYPE_ARTISAN)
+                        {
+                            comboBox1.Items.Add(toolkit.ItemName);
+                        }
+                    }
+                    this.label1.Text = "Any Artisan tool proficiency.";
+                    break;
+                case ToolProficiencyChoice.ToolProficiencyChoiceType.TYPE_ARTISAN_OR_MUSICAL:
+                    foreach (Items.PlayerToolKit toolkit in existingToolProficiencies)
+                    {
+                        if (toolkit.ToolType == Items.PlayerToolKit.PlayerToolType.TYPE_MUSICAL ||
+                            toolkit.ToolType == Items.PlayerToolKit.PlayerToolType.TYPE_ARTISAN)
+                        {
+                            comboBox1.Items.Add(toolkit.ItemName);
+                        }
+                    }
+                    this.label1.Text = "Any Artisan or Musical Proficiency";
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public string getSelectedToolProficiency()
+        {
+            if (comboBox1.SelectedIndex > -1)
+            {
+                return comboBox1.SelectedItem.ToString();
+            }
+            else
+            {
+                return "";
+            }
+        }
+    }
 }

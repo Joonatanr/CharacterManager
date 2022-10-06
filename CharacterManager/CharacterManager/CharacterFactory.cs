@@ -377,7 +377,7 @@ namespace CharacterManager
             if (str == "AnyGaming")
             {
                 res = new Items.PlayerItem();
-                res.ItemName = "AnyArtisans";
+                res.ItemName = "AnyGaming";
                 res.IsMultipleChoice = true;
                 return res;
             }

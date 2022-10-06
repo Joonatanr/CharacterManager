@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +42,7 @@ namespace CharacterManager.CharacterCreator
 
         private void setupChoices()
         {
-            groupBox1.Controls.Clear();
+            groupBoxClassAbilities.Controls.Clear();
             /* TODO : Investigate if clearing controls in this manner is a good way of doing things. */
 
             int yloc = 15;
@@ -93,8 +94,35 @@ namespace CharacterManager.CharacterCreator
                 /* Lets create a user control for each.*/
                 yloc = AddUserControlClassFeature(choice, yloc, _currentCharacter);
             }
+
+            /* Now lets set up tool proficiencies if any... */
+            if(_currentLevel == 1)
+            {
+                List<ToolProficiencyChoice> toolChoices = _selectedClass.AvailableToolProficiencies;
+                setupToolProficiencyChoices(toolChoices);
+            }
+
+            /* TODO : We might have abilities that could give us tool proficiencies... */
+            /* TODO : Maybe find a way to hide the tool proficiencies groupbox if there are none available? */
         }
 
+
+        private void setupToolProficiencyChoices(List<ToolProficiencyChoice> toolChoices)
+        {
+            groupBoxToolProficiencies.Controls.Clear();
+            int y = 15;
+
+            foreach(ToolProficiencyChoice choice in toolChoices)
+            {
+                UserControlToolProficiencyChoiceVer2 myControl = new UserControlToolProficiencyChoiceVer2();
+                myControl.setToolProficiencyChoice(choice);
+                myControl.Location = new Point(5, y);
+                y += myControl.Height;
+                y += 5;
+
+                groupBoxToolProficiencies.Controls.Add(myControl);
+            }
+        }
 
         /* Returns the next free Y position. */
         private int AddUserControlClassFeature(PlayerClassAbilityChoice choice, int yloc, PlayerCharacter Character)
@@ -104,9 +132,9 @@ namespace CharacterManager.CharacterCreator
             ctrl.Character = Character;
             ctrl.Location = new Point(5, yloc);
             ctrl.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
-            ctrl.Width = groupBox1.Width - 10;
+            ctrl.Width = groupBoxClassAbilities.Width - 10;
             ctrl.SelectedArcheTypeChanged = new UserControlClassFeature.SelectedArchetypeChangedListener(SelectedArchetypeChanged);
-            groupBox1.Controls.Add(ctrl);
+            groupBoxClassAbilities.Controls.Add(ctrl);
 
             yloc += ctrl.Height;
             yloc += 5;
@@ -125,7 +153,7 @@ namespace CharacterManager.CharacterCreator
 
             int LowerMostPosition = 0;
 
-            foreach(UserControl ctrl in groupBox1.Controls)
+            foreach(UserControl ctrl in groupBoxClassAbilities.Controls)
             {
                 if (ctrl is UserControlClassFeature)
                 {
@@ -145,7 +173,7 @@ namespace CharacterManager.CharacterCreator
 
             foreach(UserControlClassFeature ctrl in controlsToRemove)
             {
-                groupBox1.Controls.Remove(ctrl);
+                groupBoxClassAbilities.Controls.Remove(ctrl);
             }
 
             /* 2. Add new controls. */
@@ -163,7 +191,7 @@ namespace CharacterManager.CharacterCreator
         {
             List<PlayerAbility> res = new List<PlayerAbility>();
             
-            foreach(Control c in groupBox1.Controls)
+            foreach(Control c in groupBoxClassAbilities.Controls)
             {
                 if (c is UserControlClassFeature)
                 {
