@@ -123,4 +123,361 @@
 	</EquipmentChoiceList>
   </AvailableEquipment>
   
+  <SpellCasting>
+	<Description>You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations. See chapter 10 for the general rules of spellcasting and chapter 11 for the bard spell list.</Description>
+	<AttributeName>Spellcasting</AttributeName>
+	<MaximumCharges>0</MaximumCharges>
+	<IsToggle>false</IsToggle>
+	<SpellCastingAttribute>CHA</SpellCastingAttribute>
+	<NumberOfInitialCantrips>2</NumberOfInitialCantrips>
+	<NumberOfInitialLev1Spells>4</NumberOfInitialLev1Spells>
+	<SpellPreparation>PREPARATION_NONE</SpellPreparation>
+	
+	<AvailableSpells>
+		<!-- Cantrips-->
+		<string>Blade Ward</string>
+		<string>Dancing Lights</string>
+		<string>Friends</string>
+		<string>Light</string>
+		<string>Mage Hand</string>
+		<string>Mending</string>
+		<string>Message</string>
+		<string>Minor Illusion</string>
+		<string>Presdigitation</string>
+		<string>True Strike</string>
+		<string>Vicious Mockery</string>
+		
+		<!-- Level 1 spells-->
+		<string>Animal Friendship</string>
+		<string>Bane</string>
+		<string>Charm Person</string>
+		<string>Comprehend Languages</string>
+		<string>Cure Wounds</string>
+		<string>Detect Magic</string>
+		<string>Disguise Self</string>
+		<string>Dissonant Whispers</string>
+		<string>Faerie Fire</string>
+		<string>Feather Fall</string>
+		<string>Healing Word</string>
+		<string>Heroism</string>
+		<string>Identify</string>
+		<string>Illusory Script</string>
+		<string>Longstrider</string>
+		<string>Silent Image</string>
+		<string>Sleep</string>
+		<string>Speak With Animals</string>
+		<string>Tasha's Hideous Laughter</string>
+		<string>Thunderwave</string>
+		<string>Unseen Servant</string>
+		<!-- Level 2 spells-->
+
+	</AvailableSpells>
+	
+	<SpellslotPerLevel>
+		<!-- Level 1 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 2 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 3 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>2</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 4 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 5 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>2</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 6 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 7 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>1</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 8 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>2</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 9 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>1</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 10 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 11 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 12 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 13 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 14 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 15 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 16 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 17 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 18 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 19 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 20 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>2</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+	</SpellslotPerLevel>
+	
+	<NewSpellsLearnedAtLevelup>
+		<int>4</int>
+		<int>1</int>
+		<int>1</int>
+		<int>1</int>
+		<int>1</int>
+		<int>1</int>
+		<int>1</int>
+		<int>1</int>
+		<int>1</int>
+		<int>2</int>
+		<int>1</int>
+		<int>0</int>
+		<int>1</int>
+		<int>2</int>
+		<int>1</int>
+		<int>0</int>
+		<int>1</int>
+		<int>2</int>
+		<int>0</int>
+		<int>0</int>
+	</NewSpellsLearnedAtLevelup>
+	
+	<NewCantripsLearnedAtLevelup>
+		<int>2</int>
+		<int>0</int>
+		<int>0</int>
+		<int>1</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>1</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+	</NewCantripsLearnedAtLevelup>
+  </SpellCasting>
+  
+   <AvailableClassAbilitiesLevel1>
+	<PlayerClassAbilityChoice>
+      <Description>Bard Spellcasting</Description>
+      <ClassAbilityName>SpellCasting</ClassAbilityName>
+      <AvailableChoices>
+        <string>SpellCasting</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
+	<PlayerClassAbilityChoice>
+      <Description>You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6. Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.</Description>
+      <ClassAbilityName>Bardic Inspiration</ClassAbilityName>
+      <AvailableChoices>
+        <string>Bardic Inspiration</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
+  </AvailableClassAbilitiesLevel1>
+  
 </PlayerClass>

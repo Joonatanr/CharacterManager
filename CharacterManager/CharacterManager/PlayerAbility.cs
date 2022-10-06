@@ -43,6 +43,8 @@ namespace CharacterManager
         /* TODO : Implement this part. */
         public List<string> SpellsAddedByAbility = new List<string>();
 
+        public string ChargesBasedOnAbilityModifier = "NONE";
+
         [XmlIgnore]
         public virtual string DisplayedName { get { return Name; } } /* This should be used instead of the AttributeName*/
 
@@ -145,6 +147,13 @@ namespace CharacterManager
 
             /* Here we can resolve all possible upgrades. */
             resolveUpgrades();
+
+            /* Here we can also resolve cases where the total number of charges depend on player attributes. */
+            if (this.ChargesBasedOnAbilityModifier != "NONE")
+            {
+                int totalCharges = c.getModifier(ChargesBasedOnAbilityModifier);
+                this.MaximumCharges = totalCharges;
+            }
         }
 
         private void resolveUpgrades()

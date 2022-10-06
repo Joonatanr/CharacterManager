@@ -198,11 +198,14 @@ namespace CharacterManager.CharacterCreator
                 CreatedCharacter.KnownSpells = chosenSpellNames;
 
                 SpellSlotData dataForLevel1Spellslots = new SpellSlotData(0,0);
-                //dataForLevel1Spellslots.MaximumCount = SelectedClass.SpellslotPerLevel[0].getNumberOfSlotsPerLevel(1);
                 dataForLevel1Spellslots.MaximumCount = SelectedClass.getSpellSlotsForLevel(1, 1);
                 dataForLevel1Spellslots.ActiveCount = dataForLevel1Spellslots.MaximumCount;
                 CreatedCharacter.setSpellSlotData(1, dataForLevel1Spellslots);
                 CreatedCharacter.UpdateSpellModifiers();
+
+
+                /* We perform a long rest in order to make sure that all abilities are at full charge etc.. */
+                CreatedCharacter.PerformLongRest();
 
             }
             else

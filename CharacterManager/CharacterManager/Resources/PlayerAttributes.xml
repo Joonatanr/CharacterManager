@@ -676,6 +676,33 @@ the wolf makes you a leader of hunters.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
+<!-- Bard class abilities -->
+
+	<PlayerAbility>
+		<Name>Bardic Inspiration</Name>
+		<Description>You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a d6. Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Bardic Inspiration die, but must decide before the DM says whether the roll succeeds or fails. Once the Bardic Inspiration die is rolled, it is lost. A creature can have only one Bardic Inspiration die at a time.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<Dice>1d6</Dice>
+		<IsCombatAbility>false</IsCombatAbility>
+		<ChargesBasedOnAbilityModifier>CHA</ChargesBasedOnAbilityModifier>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<Dice>1d8</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>10</Level>
+				<Dice>1d10</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>15</Level>
+				<Dice>1d12</Dice>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+	</PlayerAbility>
+
 <!-- Wizard class abilities -->
 	<PlayerAbility>
 		<Name>Arcane Recovery</Name>
