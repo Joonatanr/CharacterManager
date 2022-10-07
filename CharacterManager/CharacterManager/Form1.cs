@@ -23,7 +23,7 @@ namespace CharacterManager
         public Form1()
         {
             InitializeComponent();
-            CharacterFactory.setErrorHandler(new TextBoxWriter(richTextBox1));
+            CharacterFactory.setErrorHandler(new TextBoxWriter(richTextBoxConsole));
             CharacterFactory.Initialize();
 
             userControlHitPoints1.HitPointsChangedListener = new UserControlHitPoints.HitPointsChanged(HitPointsChanged);
@@ -524,6 +524,23 @@ namespace CharacterManager
                         myAbility.RemainingCharges--;
                     }
                 }
+            }
+        }
+
+        private void buttonRollConsoleDice_Click(object sender, EventArgs e)
+        {
+            string rollResult;
+            dieRollTextBox1.Roll(out rollResult);
+            richTextBoxConsole.AppendText(rollResult + Environment.NewLine);
+        }
+
+        private void dieRollTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                string rollResult;
+                dieRollTextBox1.Roll(out rollResult);
+                richTextBoxConsole.AppendText(rollResult + Environment.NewLine);
             }
         }
     }
