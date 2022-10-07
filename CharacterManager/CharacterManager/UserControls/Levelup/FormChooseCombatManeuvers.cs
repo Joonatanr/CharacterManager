@@ -88,7 +88,9 @@ namespace CharacterManager.UserControls.Levelup
                         /* Simple sanity check */
                         PlayerManeuverAbility existingManeuverAbility = existingAbility as PlayerManeuverAbility;
                         List<CombatManeuver> existingManeuvers = existingManeuverAbility.ChosenManeuverObjects;
-                        userControlManeuverChoiceAvailableManeuvers.setFixedItemList(existingManeuvers);
+
+                        /* TODO : We might be able to replace maneuvers in some cases. */
+                        userControlManeuverChoiceAvailableManeuvers.setFixedItemList(existingManeuvers, 0);
                     }
                 }
             }

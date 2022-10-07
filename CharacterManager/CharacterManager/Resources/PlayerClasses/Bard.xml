@@ -503,4 +503,17 @@
     </PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel1>
   
+  <AvailableClassAbilitiesLevel2>
+	<PlayerClassAbilityChoice>
+      <AvailableChoices>
+        <string>Jack Of All Trades</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
+	<PlayerClassAbilityChoice>
+      <AvailableChoices>
+        <string>Song Of Rest</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
+  </AvailableClassAbilitiesLevel2>
+  
 </PlayerClass>

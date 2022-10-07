@@ -382,7 +382,6 @@ namespace CharacterManager.UserControls
                 /* First lets get a list of spells that are already known. */
                 List<PlayerSpell> KnownSpells = _myCharacter.GetKnownSpells();
 
-                /* TODO : We might have classes where spells can be switched when leveling up. */
                 /* TODO : Consider abilities that might add new spells. */
                 myForm.setFixedSpells(KnownSpells, selectedSpellcasting.SpellsReplacedAtLevelup[_myCharacter.Level - 1]);
 

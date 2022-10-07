@@ -70,8 +70,8 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
-            userControlSpellChoice1.setFixedSpellListList(_myLockedCantripList);
-            userControlSpellChoice2.setFixedSpellListList(_myLockedSpellList);
+            userControlSpellChoice1.setFixedSpellListList(_myLockedCantripList, 0);
+            userControlSpellChoice2.setFixedSpellListList(_myLockedSpellList, number_of_spells_replaced);
 
             /* TODO : Somehow take into account that sometimes we may be able to replace a number of spells in our fixed spell list. */
         }

@@ -702,6 +702,44 @@ the wolf makes you a leader of hunters.</Description>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
 		<RechargeAtShortRest>false</RechargeAtShortRest>
 	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Jack Of All Trades</Name>
+		<Description>Starting at 2nd level, you can add half your proficiency bonus, rounded down, to any ability check you make that doesn’t already include your proficiency bonus.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>false</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Song Of Rest</Name>
+		<Description>Beginning at 2nd level, you can use soothing music or
+oration to help revitalize your wounded allies during
+a short rest. If you or any friendly creatures who can
+hear your performance regain hit points at the end of
+the short rest, each of those creatures regains an extra
+1d6 hit points.
+
+The extra hit points increase when you reach certain
+levels in this class: to 1d8 at 9th level, to 1d 10 at 13th
+level, and to 1d 12 at 17th level.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<Dice>1d6</Dice>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<Dice>1d8</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>13</Level>
+				<Dice>1d10</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>17</Level>
+				<Dice>1d12</Dice>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
+		<IsCombatAbility>false</IsCombatAbility>
+	</PlayerAbility>
 
 <!-- Wizard class abilities -->
 	<PlayerAbility>

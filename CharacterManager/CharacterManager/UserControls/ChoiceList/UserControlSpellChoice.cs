@@ -12,14 +12,15 @@ namespace CharacterManager.UserControls
 {
     public class UserControlSpellChoice : UserControlBaseChoice<PlayerSpell>
     {        
-
-        /* TODO : Reimplement this property. */
         public bool IsMultipleLevel { get; set; } = false;
 
 
         /* Keeping this delegate to preserve the API */
         public delegate void SpellChoiceChangedListener(PlayerSpell Spell, bool isChosen);
         public event SpellChoiceChangedListener SpellSelectionChanged;
+
+        
+
 
         /* Keeping these public functions to keep external API mostly intact. */
         public void setSpellList(List<PlayerSpell> spells)
@@ -29,9 +30,9 @@ namespace CharacterManager.UserControls
 
      
         /* We add a fixed spell to the list that is always selected. */
-        public void setFixedSpellListList(List<PlayerSpell> spellList)
+        public void setFixedSpellListList(List<PlayerSpell> spellList, int number_of_replacements)
         {
-            setFixedItemList(spellList);
+            setFixedItemList(spellList, number_of_replacements);
         }
 
 

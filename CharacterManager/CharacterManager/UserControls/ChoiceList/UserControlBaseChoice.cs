@@ -46,6 +46,8 @@ namespace CharacterManager.UserControls
         protected List<ItemHandleControl<ItemType>> myControlList = new List<ItemHandleControl<ItemType>>();
         protected List<ItemType> myItemList = new List<ItemType>();
         protected List<ItemType> myLockedItemList = new List<ItemType>(); /* These are spells that are already chosen because they come from racial abilities etc... */
+        protected int number_of_fixed_replacements = 0;
+        protected int number_of_remaining_fixed_replacements = 0;
 
         public int RemainingAvailableChoices
         {
@@ -91,9 +93,11 @@ namespace CharacterManager.UserControls
             UpdateValues();
         }
 
-        public void setFixedItemList(List<ItemType> itemList)
+        public void setFixedItemList(List<ItemType> itemList, int number_of_replacements)
         {
             myLockedItemList = itemList;
+            number_of_fixed_replacements = number_of_replacements;
+            number_of_remaining_fixed_replacements = number_of_replacements;
             UpdateValues();
         }
 
@@ -130,6 +134,17 @@ namespace CharacterManager.UserControls
             foreach (ItemHandleControl<ItemType> control in myControlList)
             {
                 if (!control.isChecked)
+                {
+                    control.isEnabled = !isLock;
+                }
+            }
+        }
+
+        private void setFixedSelectionsLocked(Boolean isLock)
+        {
+            foreach (ItemHandleControl<ItemType> control in myControlList)
+            {
+                if(myLockedItemList.Contains(control.Item) && control.isChecked)
                 {
                     control.isEnabled = !isLock;
                 }
@@ -182,8 +197,17 @@ namespace CharacterManager.UserControls
 
                     if (myLockedItemList.Find(lockedItem => lockedItem.ItemName == myItemDictionary[index].ItemName) != null)
                     {
-                        //Spell is already learned because of racial attributes or otherwise.
-                        ctrl.IsLocked = true;
+                        /* Item such as a spell has already been learned. */
+                        /* Now things become more complex, because we might be able to replace some of these... */
+                        if (number_of_fixed_replacements == 0)
+                        {
+                            ctrl.IsLocked = true;
+                        }
+                        else
+                        {
+                            ctrl.ItemCheckedChanged += Ctrl_ItemCheckedChangedFromFixedlist;
+                            ctrl.isChecked = true;
+                        }
                     }
                     else
                     {
@@ -231,16 +255,21 @@ namespace CharacterManager.UserControls
             {
                 drawTextOnLine(gfx, myTextDictionary[index].str, index, myTextDictionary[index].font);
             }
-            
 
+            int lastLine = getNumberOfLines() - 2;
             if (IsAvailabilityCount)
             {
-                int lastLine = getNumberOfLines() - 2;
-                drawTextOnLine(gfx, "Available : " + _remainingAvailableChoices.ToString(), lastLine);
+                string finalString = "Available : " + _remainingAvailableChoices.ToString();
+                if (number_of_fixed_replacements > 0)
+                {
+                    finalString += "(Can Replace " + number_of_remaining_fixed_replacements + ")";
+                }
+                
+                drawTextOnLine(gfx, finalString, lastLine);
             }
         }
 
-        private void Ctrl_ItemCheckedChanged(ItemType spell, bool isChecked)
+        private void Ctrl_ItemCheckedChanged(ItemType item, bool isChecked)
         {
             if (isChecked)
             {
@@ -266,7 +295,62 @@ namespace CharacterManager.UserControls
 
             if (ItemSelectionChanged != null)
             {
-                ItemSelectionChanged(spell, isChecked);
+                ItemSelectionChanged(item, isChecked);
+            }
+        }
+
+        private void Ctrl_ItemCheckedChangedFromFixedlist(ItemType item, bool isChecked)
+        {
+            if (isChecked)
+            {
+                /* This is a little problematic. This means that the spell has been chosen to be replaced, but now we are selecting
+                 it again. We don't really have a way of determining which spell has been chosen instead of the replaced spell. 
+                Therefore we will have to reset the current choices. */
+
+                /* TODO */
+                _remainingAvailableChoices--;
+
+                if (_remainingAvailableChoices == 0)
+                {
+                    //We lock the ability to choose more spells...
+                    setSelectionsLocked(true);
+                }
+
+                if(number_of_fixed_replacements > 0)
+                {
+                    if (number_of_remaining_fixed_replacements < number_of_fixed_replacements)
+                    {
+                        number_of_remaining_fixed_replacements++;
+                        setFixedSelectionsLocked(false);
+                    }
+                }
+            }
+            else
+            {
+                if (number_of_remaining_fixed_replacements > 0)
+                {
+                    _remainingAvailableChoices++;
+                    if (_remainingAvailableChoices == 1)
+                    {
+                        //We unlock the ability to choose more spells.
+                        setSelectionsLocked(false);
+                    }
+                }
+
+                number_of_remaining_fixed_replacements--;
+
+                if (number_of_remaining_fixed_replacements == 0)
+                {
+                    /* No more spells can be replaced... */
+                    setFixedSelectionsLocked(true);
+                }
+            }
+
+            this.Invalidate();
+
+            if (ItemSelectionChanged != null)
+            {
+                ItemSelectionChanged(item, isChecked);
             }
         }
     }
