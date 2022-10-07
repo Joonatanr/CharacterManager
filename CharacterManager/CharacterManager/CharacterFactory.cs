@@ -708,6 +708,8 @@ namespace CharacterManager
             SpecialAttributeList.Add(new UnarmoredDefenseAbility());
             SpecialAttributeList.Add(new FastMovementAbility());
 
+            SpecialAttributeList.Add(new BardExpertiseAbility());
+
         }
 
         private static void logError(String err)

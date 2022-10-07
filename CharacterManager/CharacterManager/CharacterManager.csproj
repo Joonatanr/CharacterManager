@@ -190,6 +190,12 @@
     <Compile Include="UserControls\Levelup\FormChooseCombatManeuvers.Designer.cs">
       <DependentUpon>FormChooseCombatManeuvers.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Levelup\FormChooseSkillProfs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\Levelup\FormChooseSkillProfs.Designer.cs">
+      <DependentUpon>FormChooseSkillProfs.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Levelup\FormLevelup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,6 +402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Levelup\FormChooseCombatManeuvers.resx">
       <DependentUpon>FormChooseCombatManeuvers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Levelup\FormChooseSkillProfs.resx">
+      <DependentUpon>FormChooseSkillProfs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Levelup\FormLevelup.resx">
       <DependentUpon>FormLevelup.cs</DependentUpon>

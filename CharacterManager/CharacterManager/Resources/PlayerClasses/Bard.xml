@@ -516,4 +516,103 @@
     </PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel2>
   
+  <AvailableClassAbilitiesLevel3>
+	<PlayerClassAbilityChoice>
+		<Description>Bard College</Description>
+		<ClassAbilityName>Archetype</ClassAbilityName>
+		<AvailableChoices>
+			<string>College Of Lore</string>
+			<string>College Of Valor</string>
+		</AvailableChoices>
+	</PlayerClassAbilityChoice>
+	<PlayerClassAbilityChoice>
+      <AvailableChoices>
+        <string>Expertise(Bard)</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
+  </AvailableClassAbilitiesLevel3>
+  
+	<ArcheTypes>
+		<PlayerClassArchetype>
+			<Name>College Of Lore</Name>
+			<Description>Bards of the College of Lore know something about
+most things, collecting bits of knowledge from sources
+as diverse as scholarly tomes and peasant tales.
+Whether singing folk ballads in taverns or elaborate
+compositions in royal courts, these bards use their gifts
+to hold audiences spellbound. When the applause dies
+down, the audience members might find themselves
+questioning everything they held to be true, from their
+faith in the priesthood of the local temple to their
+loyalty to the king.
+
+The loyalty of these bards lies in the pursuit o f beauty
+and truth, not in fealty to a monarch or following the
+tenets of a deity. A noble who keeps such a bard as a
+herald or advisor knows that the bard w ould rather be
+honest than politic.
+
+The college’s members gather in libraries and
+sometimes in actual colleges, complete with classrooms
+and dormitories, to share their lore with one another.
+They also meet at festivals or affairs o f state, where they
+can expose corruption, unravel lies, and poke fun at selfimportant
+figures of authority.</Description>
+
+			<AvailableAbilitiesAtLevel3>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Bonus Proficiencies(College Of Lore)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Cutting Words</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel3>
+			
+			<AvailableAbilitiesAtLevel6>
+			</AvailableAbilitiesAtLevel6>
+			
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>College Of Valor</Name>
+			<Description>Bards of the College of Valor are daring skalds whose
+tales keep alive the memory of the great heroes of the
+past, and thereby inspire a new generation of heroes.
+These bards gather in mead halls or around great
+bonfires to sing the deeds of the mighty, both past
+and present. They travel the land to witness great
+events firsthand and to ensure that the memory of
+those events doesn’t pass from the world. With their 
+songs, they inspire others to reach the same heights of
+accomplishment as the heroes of old.</Description>
+
+			<AvailableAbilitiesAtLevel3>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Bonus Proficiencies(College Of Valor)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Combat Inspiration</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel3>
+		</PlayerClassArchetype>
+	</ArcheTypes>
+	
+	<AbilityScoreImprovementsAtLevels>
+		<int>4</int>
+		<int>6</int>
+		<int>8</int>
+		<int>12</int>
+		<int>14</int>
+		<int>16</int>
+		<int>19</int>
+	</AbilityScoreImprovementsAtLevels>
+  
 </PlayerClass>
