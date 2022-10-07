@@ -776,7 +776,7 @@ namespace CharacterManager.CharacterCreator
                 fixedPlayerSpells = fixedPlayerSpells.Union(SelectedSubRace.getPlayerSpells()).ToList();
             }
 
-            myChooseSpellsForm.setFixedSpells(fixedPlayerSpells);
+            myChooseSpellsForm.setFixedSpells(fixedPlayerSpells, 0);
         }
 
         private void updateSkillProficiencies()

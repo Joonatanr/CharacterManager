@@ -17,6 +17,7 @@ namespace CharacterManager.SpecialAttributes
 
         public int[] NewSpellsLearnedAtLevelup = new int[20];
         public int[] NewCantripsLearnedAtLevelup = new int[20];
+        public int[] SpellsReplacedAtLevelup = new int[20];
         public List<String> AvailableSpells = new List<String>();
 
         public SpellSlots_T[] SpellslotPerLevel = new SpellSlots_T[20]

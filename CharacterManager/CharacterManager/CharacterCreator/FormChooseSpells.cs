@@ -53,7 +53,7 @@ namespace CharacterManager.CharacterCreator
         }
 
 
-        public void setFixedSpells(List<PlayerSpell> spells)
+        public void setFixedSpells(List<PlayerSpell> spells, int number_of_spells_replaced)
         {
             _myLockedCantripList = new List<PlayerSpell>();
             _myLockedSpellList = new List<PlayerSpell>();
@@ -72,6 +72,8 @@ namespace CharacterManager.CharacterCreator
 
             userControlSpellChoice1.setFixedSpellListList(_myLockedCantripList);
             userControlSpellChoice2.setFixedSpellListList(_myLockedSpellList);
+
+            /* TODO : Somehow take into account that sometimes we may be able to replace a number of spells in our fixed spell list. */
         }
 
         public List<PlayerSpell> getChosenPlayerSpells()

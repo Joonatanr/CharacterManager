@@ -466,6 +466,29 @@
 		<int>0</int>
 		<int>0</int>
 	</NewCantripsLearnedAtLevelup>
+	
+	<SpellsReplacedAtLevelup>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+		<int>0</int>
+	</SpellsReplacedAtLevelup>
   </SpellCasting>
 
   

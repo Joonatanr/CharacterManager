@@ -384,7 +384,7 @@ namespace CharacterManager.UserControls
 
                 /* TODO : We might have classes where spells can be switched when leveling up. */
                 /* TODO : Consider abilities that might add new spells. */
-                myForm.setFixedSpells(KnownSpells);
+                myForm.setFixedSpells(KnownSpells, selectedSpellcasting.SpellsReplacedAtLevelup[_myCharacter.Level - 1]);
 
                 List<PlayerSpell> SpellsAvailableForLearning = selectedSpellcasting.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
 
