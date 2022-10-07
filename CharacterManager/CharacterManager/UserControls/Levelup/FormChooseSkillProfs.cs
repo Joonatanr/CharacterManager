@@ -14,8 +14,19 @@ namespace CharacterManager.UserControls.Levelup
     {
         private PlayerCharacter connectedCharacter = null;
         private int NumberOfNewSkillProficiencies = 0;
-        private int NumberOfNewSkillExpertise = 0;
 
+        public String LabelText
+        {
+            get
+            {
+                return textBox1.Text;
+            }
+
+            set
+            {
+                textBox1.Text = value;
+            }
+        }
 
         public FormChooseSkillProfs()
         {
@@ -31,15 +42,20 @@ namespace CharacterManager.UserControls.Levelup
             }
         }
 
-        public void setupChoices(int numberOfNewSkills, int numberOfNewExpertise)
+        public void setupChoices(int numberOfNewSkills)
         {
             NumberOfNewSkillProficiencies = numberOfNewSkills;
-            NumberOfNewSkillExpertise = numberOfNewExpertise;
 
             List<string> dummy = new List<string>();
 
             userControlSkillProficiencies1.setUpChoiceProficiencies(0, dummy, NumberOfNewSkillProficiencies);
         }
+
+        public void setupChoices(int numberOfNewSkills, List<string> AvailableSkills)
+        {
+            userControlSkillProficiencies1.setUpChoiceProficiencies(numberOfNewSkills, AvailableSkills, 0);
+        }
+
 
         private void updateDisplayedData()
         {

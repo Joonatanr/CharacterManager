@@ -32,6 +32,7 @@ namespace CharacterManager.UserControls.Levelup
             this.userControlSkillProficiencies1 = new CharacterManager.UserControls.UserControlSkillProficiencies();
             this.buttonOk = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // userControlSkillProficiencies1
@@ -62,17 +63,28 @@ namespace CharacterManager.UserControls.Levelup
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(294, 21);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(136, 103);
+            this.textBox1.TabIndex = 3;
+            // 
             // FormChooseSkillProfs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 589);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.userControlSkillProficiencies1);
             this.Name = "FormChooseSkillProfs";
             this.Text = "FormChooseSkillProfs";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -81,5 +93,6 @@ namespace CharacterManager.UserControls.Levelup
         private UserControlSkillProficiencies userControlSkillProficiencies1;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
