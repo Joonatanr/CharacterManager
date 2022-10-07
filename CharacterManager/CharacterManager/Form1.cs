@@ -20,6 +20,7 @@ namespace CharacterManager
     {
         private PlayerCharacter activeCharacter = null;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -351,12 +352,20 @@ namespace CharacterManager
                     weaponForm.AttackModifiers = attackModifiers;
                     weaponForm.DamageModifiers = damageModifiers;
                     weaponForm.setCharacter(activeCharacter);
+                    weaponForm.RollReporter = new FormWeaponAttack.RollResultHandler(handleRollReport);
 
                     weaponForm.Show();
                     
                     userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
                 }
             }
+        }
+
+
+        private void handleRollReport(string text, Color textColour, Boolean isBold, HorizontalAlignment alignment)
+        {
+            RichTextBoxExtensions.AppendFormattedText(richTextBoxConsole, text, textColour, isBold, alignment);
+            richTextBoxConsole.ScrollToCaret();
         }
 
         private void userControlWeaponsHandler1_WeaponEquipEvent(Items.PlayerWeapon w)
@@ -531,7 +540,7 @@ namespace CharacterManager
         {
             string rollResult;
             dieRollTextBox1.Roll(out rollResult);
-            richTextBoxConsole.AppendText(rollResult + Environment.NewLine);
+            richTextBoxConsole.AppendText("Manual roll : " + rollResult + Environment.NewLine);
         }
 
         private void dieRollTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -542,19 +551,6 @@ namespace CharacterManager
                 dieRollTextBox1.Roll(out rollResult);
                 richTextBoxConsole.AppendText(rollResult + Environment.NewLine);
             }
-        }
-    }
-
-    public static class RichTextBoxExtensions
-    {
-        public static void AppendText(this RichTextBox box, string text, Color color)
-        {
-            box.SelectionStart = box.TextLength;
-            box.SelectionLength = 0;
-
-            box.SelectionColor = color;
-            box.AppendText(text);
-            box.SelectionColor = box.ForeColor;
         }
     }
 
