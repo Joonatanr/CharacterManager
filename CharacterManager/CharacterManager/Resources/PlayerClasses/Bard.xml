@@ -170,7 +170,28 @@
 		<string>Thunderwave</string>
 		<string>Unseen Servant</string>
 		<!-- Level 2 spells-->
-
+		<string>Animal Messenger</string>
+		<string>Blindness/Deafness</string>
+		<string>Calm Emotions</string>
+		<string>Cloud of Daggers</string>
+		<string>Crown of Madness</string>
+		<string>Detect Thoughts</string>
+		<string>Enhance Ability</string>
+		<string>Enthrall</string>
+		<string>Heat Metal</string>
+		<string>Hold Person</string>
+		<string>Invisibility</string>
+		<string>Knock</string>
+		<string>Lesser Restoration</string>
+		<string>Locate Animals or Plants</string>
+		<string>Locate Object</string>
+		<string>Magic Mouth</string>
+		<string>Phantasmal Force</string>
+		<string>See Invisibility</string>
+		<string>Shatter</string>
+		<string>Silence</string>
+		<string>Suggestion</string>
+		<string>Zone Of Truth</string>
 	</AvailableSpells>
 	
 	<SpellslotPerLevel>

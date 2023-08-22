@@ -345,31 +345,6 @@ namespace CharacterManager
     /*********************************************************************************************/
 
     /******* Bard class abilities. ********/
-    public class BardExpertiseAbility : SpecialAttribute
-    {
-        private List<string> chosenExpertiseList = new List<string>();
-        
-        public BardExpertiseAbility()
-        {
-            this.Name = "Expertise(Bard)";
-        }
-
-        public override bool ExtraChoiceOptions(out string btnText, out UserControlClassFeature.ExtraChoiceEventHandler clickHandler)
-        {
-            btnText = "Choose Expertise.";
-            clickHandler = new ExtraChoiceEventHandler(handleExpertiseChoice);
-            return true;
-        }
-
-        public override void HandleAbilitySelected(PlayerCharacter c)
-        {
-            /* TODO */
-        }
-
-        private void handleExpertiseChoice(PlayerCharacter c)
-        {
-            /* TODO */
-        }
-    }
+    /* TODO */ 
 
 }

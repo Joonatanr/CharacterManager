@@ -39,11 +39,12 @@ namespace CharacterManager.UserControls.Proficiency
             // 
             // checkBoxProfSTR
             // 
-            this.checkBoxProfSTR.Location = new System.Drawing.Point(125, 2);
+            this.checkBoxProfSTR.Location = new System.Drawing.Point(126, 2);
             // 
             // textBoxStrSave
             // 
-            this.textBoxStrSave.Location = new System.Drawing.Point(67, 0);
+            this.textBoxStrSave.Location = new System.Drawing.Point(81, 0);
+            this.textBoxStrSave.Size = new System.Drawing.Size(40, 20);
             // 
             // checkBoxExpertise
             // 

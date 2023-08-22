@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CharacterManager.UserControls.Proficiency;
 
 namespace CharacterManager.UserControls
 {
     public partial class UserControlSkillProficiencies : UserControl
     {
-        private List<UserControlProficiency> skillProficiencyControlList = new List<UserControlProficiency>();
+        private List<UserControlSkillProficiency> skillProficiencyControlList = new List<UserControlSkillProficiency>();
         private int numberOfSkillsToChooseMax = 0;
         private int numberOfSkillsToChooseAnyMax = 0; //The number of skills proficiencies that can be any skill. This is rarely used, mostly only half-elves have this feature.
 
@@ -54,9 +55,9 @@ namespace CharacterManager.UserControls
             //Lets populate our list so we don't have to do this every time.
             foreach (Control c in groupBoxSkillProfs.Controls)
             {
-                if (c is UserControlProficiency)
+                if (c is UserControlSkillProficiency)
                 {
-                    UserControlProficiency profControl = (UserControlProficiency)c;
+                    UserControlSkillProficiency profControl = (UserControlSkillProficiency)c;
                     skillProficiencyControlList.Add(profControl);
                     profControl.ChangeListener = SkillProfCheckedChanged;
                 }
@@ -66,9 +67,9 @@ namespace CharacterManager.UserControls
         private void SkillProfCheckedChanged(String name)
         {
             //So we have manually checked a proficiency.
-            UserControlProficiency selectedControl = null;
+            UserControlSkillProficiency selectedControl = null;
 
-            foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+            foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
             {
                 if (ctrl.ProficiencyName == name)
                 {
@@ -97,7 +98,7 @@ namespace CharacterManager.UserControls
                     if (numberOfSkillsToChooseRemaining == 0 && (numberOfSkillsToChooseAnyRemaining == 0))
                     {
                         /* Make all choices that are NOT selected uneditable. */
-                        foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+                        foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
                         {
                             if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName))
                             {
@@ -117,7 +118,7 @@ namespace CharacterManager.UserControls
                     if (numberOfSkillsToChooseAnyRemaining == 0)
                     {
                         //No more wildcards left...
-                        foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+                        foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
                         {
                             //This should not affect any controls that can still be chosen with a class-derived proficiency, or those from background etc...
                             if ((!AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || numberOfSkillsToChooseRemaining == 0) && !ctrl.IsProficient())
@@ -167,7 +168,7 @@ namespace CharacterManager.UserControls
                 }
 
                 //Finally we update the controls based on what options we have left.
-                foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+                foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
                 {
                     if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || (numberOfSkillsToChooseAnyRemaining > 0))
                     {
@@ -194,7 +195,7 @@ namespace CharacterManager.UserControls
             currentConBonus = ConBonus;
             currentProfBonus = profBonus;
 
-            foreach (UserControlProficiency profControl in skillProficiencyControlList)
+            foreach (UserControlSkillProficiency profControl in skillProficiencyControlList)
             {
                 String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
                 profControl.setValueAndProficiency(getCurrentAttributeBonus(baseSkill), profControl.IsProficient(), currentProfBonus);
@@ -203,7 +204,7 @@ namespace CharacterManager.UserControls
 
         public void resetControls()
         {
-            foreach (UserControlProficiency profControl in skillProficiencyControlList)
+            foreach (UserControlSkillProficiency profControl in skillProficiencyControlList)
             {
                 profControl.setEditable(false);
                 String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
@@ -214,7 +215,7 @@ namespace CharacterManager.UserControls
 
         public bool setProficientAtSkill(string skill)
         {
-            UserControlProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == skill);
+            UserControlSkillProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == skill);
             if (ctrl != null)
             {
                 ctrl.setProficiency(true, 2);
@@ -230,7 +231,7 @@ namespace CharacterManager.UserControls
         {
             List<String> res = new List<String>();
 
-            foreach(UserControlProficiency prof in skillProficiencyControlList)
+            foreach(UserControlSkillProficiency prof in skillProficiencyControlList)
             {
                 if (prof.IsProficient())
                 {
@@ -245,7 +246,7 @@ namespace CharacterManager.UserControls
         //This is the skill bonus that is currently being displayed.
         public int getTotalSkillBonus(string skill)
         {
-            UserControlProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == skill);
+            UserControlSkillProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == skill);
             if (ctrl != null)
             {
                 return ctrl.getTotalProficiencyBonus();
@@ -267,7 +268,7 @@ namespace CharacterManager.UserControls
             updateLabelData();
 
             /* TODO : Might need to be in separate function. */
-            foreach (UserControlProficiency ctrl in skillProficiencyControlList)
+            foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
             {
                 if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || (numberOfSkillsToChooseAnyMax > 0))
                 {

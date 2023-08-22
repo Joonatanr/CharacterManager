@@ -46,6 +46,10 @@ namespace CharacterManager
 
         public string ChargesBasedOnAbilityModifier = "NONE";
 
+        /* Some abilities gain extra skill proficiencies or even expertise */
+        public int AdditionalProficiencyChoices { get; set; } = 0;
+        public int AdditionalExpertiseChoices { get; set; } = 0;
+
         [XmlIgnore]
         public virtual string DisplayedName { get { return Name; } } /* This should be used instead of the AttributeName*/
 

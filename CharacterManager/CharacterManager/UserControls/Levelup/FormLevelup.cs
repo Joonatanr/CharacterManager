@@ -1,6 +1,7 @@
 ﻿using CharacterManager.CharacterCreator;
 using CharacterManager.SpecialAttributes;
 using CharacterManager.Spells;
+using CharacterManager.UserControls.Levelup;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,11 @@ namespace CharacterManager.UserControls
 
         private List<PlayerAbility> SelectedPlayerAbilities = new List<PlayerAbility>();
         private List<string> SelectedSpellNames = new List<string>();
+
+        private bool isSettingInitialValuesForBaseAttributes = true;
+
+        private int numberOfSkillProfChoices = 0;
+        private int numberOfSkillExpertiseChoices = 0;
 
         public PlayerCharacter Character
         {
@@ -46,7 +52,7 @@ namespace CharacterManager.UserControls
             setupLevelUp();
         }
 
-        private bool isSettingInitialValuesForBaseAttributes = true;
+
 
         private void setupLevelUp()
         {
@@ -293,6 +299,7 @@ namespace CharacterManager.UserControls
             }
         }
 
+
         private void buttonSelectNewAbilities_Click(object sender, EventArgs e)
         {
             /* TODO : Decide on this -> If there are no choices, then is a form really necessary??? 
@@ -337,6 +344,21 @@ namespace CharacterManager.UserControls
                 }
                 
                 setCombinedAbilitiesDisplay();
+                setSkillProficiencyChoicesFromAbilities();
+            }
+        }
+
+
+
+        private void setSkillProficiencyChoicesFromAbilities()
+        {
+            numberOfSkillProfChoices = 0;
+            numberOfSkillExpertiseChoices = 0;
+
+            foreach (PlayerAbility ab in SelectedPlayerAbilities)
+            {
+                numberOfSkillProfChoices += ab.AdditionalProficiencyChoices;
+                numberOfSkillExpertiseChoices += ab.AdditionalExpertiseChoices;
             }
         }
 
@@ -467,6 +489,29 @@ namespace CharacterManager.UserControls
         private void numericUpDownCHA_ValueChanged(object sender, EventArgs e)
         {
             UpdateRemainingBaseAttributes();
+        }
+
+        private void buttonLearnSkillProfs_Click(object sender, EventArgs e)
+        {
+            /* TODO : Add expertises to the mix. */
+            
+            //if (numberOfSkillProfChoices > 0 || numberOfSkillExpertiseChoices > 0)
+            if(numberOfSkillProfChoices > 0)
+            {
+                FormChooseSkillProfs myForm = new FormChooseSkillProfs();
+                myForm.setCharacter(_myCharacter);
+                myForm.setupChoices(numberOfSkillProfChoices);
+                
+                myForm.ShowDialog();
+                if (myForm.DialogResult == DialogResult.OK)
+                {
+                    /* TODO */
+                }
+            }
+            else
+            {
+                MessageBox.Show("No new skill proficiencies for this level");
+            }
         }
     }
 }
