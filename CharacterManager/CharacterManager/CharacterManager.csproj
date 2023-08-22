@@ -290,13 +290,13 @@
     <Compile Include="UserControls\MainForm\UserControlMagicHandler.Designer.cs">
       <DependentUpon>UserControlMagicHandler.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlProficiency.cs">
+    <Compile Include="UserControls\Proficiency\UserControlProficiency.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlProficiency.Designer.cs">
+    <Compile Include="UserControls\Proficiency\UserControlProficiency.Designer.cs">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlProficiencyList.cs">
+    <Compile Include="UserControls\Proficiency\UserControlProficiencyList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UserControlSavingThrows.cs">
@@ -305,10 +305,10 @@
     <Compile Include="UserControls\UserControlSavingThrows.Designer.cs">
       <DependentUpon>UserControlSavingThrows.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlSkillProficiencies.cs">
+    <Compile Include="UserControls\Proficiency\UserControlSkillProficiencies.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlSkillProficiencies.Designer.cs">
+    <Compile Include="UserControls\Proficiency\UserControlSkillProficiencies.Designer.cs">
       <DependentUpon>UserControlSkillProficiencies.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ChoiceList\UserControlSpellChoice.cs">
@@ -332,10 +332,10 @@
     <Compile Include="UserControls\SpellIndicators\UserControlSpellSlotsArea.Designer.cs">
       <DependentUpon>UserControlSpellSlotsArea.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControlToolProficiencyChoice.cs">
+    <Compile Include="UserControls\Proficiency\UserControlToolProficiencyChoice.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControlToolProficiencyChoice.Designer.cs">
+    <Compile Include="UserControls\Proficiency\UserControlToolProficiencyChoice.Designer.cs">
       <DependentUpon>UserControlToolProficiencyChoice.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\MainForm\UserControlWeaponsHandler.cs">
@@ -451,13 +451,13 @@
     <EmbeddedResource Include="UserControls\MainForm\UserControlMagicHandler.resx">
       <DependentUpon>UserControlMagicHandler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlProficiency.resx">
+    <EmbeddedResource Include="UserControls\Proficiency\UserControlProficiency.resx">
       <DependentUpon>UserControlProficiency.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlSavingThrows.resx">
       <DependentUpon>UserControlSavingThrows.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlSkillProficiencies.resx">
+    <EmbeddedResource Include="UserControls\Proficiency\UserControlSkillProficiencies.resx">
       <DependentUpon>UserControlSkillProficiencies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\SpellIndicators\UserControlSpellSlotIndicator.resx">
@@ -469,7 +469,7 @@
     <EmbeddedResource Include="UserControls\SpellIndicators\UserControlSpellSlotsArea.resx">
       <DependentUpon>UserControlSpellSlotsArea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControlToolProficiencyChoice.resx">
+    <EmbeddedResource Include="UserControls\Proficiency\UserControlToolProficiencyChoice.resx">
       <DependentUpon>UserControlToolProficiencyChoice.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
