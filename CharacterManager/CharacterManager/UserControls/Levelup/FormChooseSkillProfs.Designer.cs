@@ -40,12 +40,12 @@ namespace CharacterManager.UserControls.Levelup
             this.userControlSkillProficiencies1.isSetDataVisible = true;
             this.userControlSkillProficiencies1.Location = new System.Drawing.Point(12, 12);
             this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";
-            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 529);
+            this.userControlSkillProficiencies1.Size = new System.Drawing.Size(276, 544);
             this.userControlSkillProficiencies1.TabIndex = 0;
             // 
             // buttonOk
             // 
-            this.buttonOk.Location = new System.Drawing.Point(12, 547);
+            this.buttonOk.Location = new System.Drawing.Point(12, 562);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 1;
@@ -55,7 +55,7 @@ namespace CharacterManager.UserControls.Levelup
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(93, 547);
+            this.buttonCancel.Location = new System.Drawing.Point(93, 562);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 2;
@@ -76,7 +76,7 @@ namespace CharacterManager.UserControls.Levelup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 589);
+            this.ClientSize = new System.Drawing.Size(442, 610);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);

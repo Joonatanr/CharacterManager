@@ -493,15 +493,13 @@ namespace CharacterManager.UserControls
 
         private void buttonLearnSkillProfs_Click(object sender, EventArgs e)
         {
-            /* TODO : Add expertises to the mix. */
-            
-            //if (numberOfSkillProfChoices > 0 || numberOfSkillExpertiseChoices > 0)
-            if(numberOfSkillProfChoices > 0)
+            if (numberOfSkillProfChoices > 0 || numberOfSkillExpertiseChoices > 0)
             {
                 FormChooseSkillProfs myForm = new FormChooseSkillProfs();
                 myForm.setCharacter(_myCharacter);
-                myForm.setupChoices(numberOfSkillProfChoices);
-                
+                myForm.setupProficiencyChoices(numberOfSkillProfChoices);
+                myForm.setupExpertiseChoices(numberOfSkillExpertiseChoices);
+
                 myForm.ShowDialog();
                 if (myForm.DialogResult == DialogResult.OK)
                 {

@@ -158,9 +158,16 @@ namespace CharacterManager.CharacterCreator
             return yloc;
         }
 
+        private PlayerClassArchetype currArchetype = null;
+
         private void SelectedArchetypeChanged(PlayerClassArchetype newArcheType)
-        {
-            /* TODO */
+        {   
+            /* Lets first check if we have not already selected this archetype. Combobox will fire even if same value is retained...*/
+            if (newArcheType == currArchetype)
+            {
+                return;
+            }
+
             /* First we need to get a new set of possible choices. */
             List<PlayerClassAbilityChoice> ArcheTypeChoices = newArcheType.getAbilityChoicesByLevel(_currentLevel);
             List<PlayerClassAbilityChoice> ExistingChoices =_selectedClass.getAvailableClassAbilities(_currentLevel);
@@ -169,13 +176,12 @@ namespace CharacterManager.CharacterCreator
 
             int LowerMostPosition = 0;
 
-            foreach(UserControl ctrl in groupBoxClassAbilities.Controls)
+            foreach (UserControl ctrl in groupBoxClassAbilities.Controls)
             {
                 if (ctrl is UserControlClassFeature)
                 {
                     UserControlClassFeature cast = (UserControlClassFeature)ctrl;
-                    if ((ArcheTypeChoices.Find(item => item.ClassAbilityName == cast.AbilityChoice.ClassAbilityName) == null) &&
-                       (ExistingChoices.Find(item => item.ClassAbilityName == cast.AbilityChoice.ClassAbilityName) == null))
+                    if  (ExistingChoices.Find(item => item.ClassAbilityName == cast.AbilityChoice.ClassAbilityName) == null)
                     {
                         /* We assume this control belongs to a previously selected Archetype and is no longer valid. */
                         controlsToRemove.Add(cast);
@@ -196,10 +202,12 @@ namespace CharacterManager.CharacterCreator
             /* Lets always add these to the end of the other controls. */
             int yloc = LowerMostPosition + 5;
 
-            foreach(PlayerClassAbilityChoice choice in ArcheTypeChoices)
+            foreach (PlayerClassAbilityChoice choice in ArcheTypeChoices)
             {
                 yloc = AddUserControlClassFeature(choice, yloc, _currentCharacter);
             }
+
+            currArchetype = newArcheType;
         }
 
 

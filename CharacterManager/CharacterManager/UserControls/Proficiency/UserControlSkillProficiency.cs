@@ -24,14 +24,10 @@ namespace CharacterManager.UserControls.Proficiency
                 _isExpertiseVisible = value;
                 if (_isExpertiseVisible == true)
                 {
-                    checkBoxExpertise.Enabled = true;
                     checkBoxExpertise.Visible = true;
                 }
                 else
                 {
-
-                    checkBoxExpertise.Checked = false;
-                    checkBoxExpertise.Enabled = false;
                     checkBoxExpertise.Visible = false;
                 }
             }
@@ -50,6 +46,41 @@ namespace CharacterManager.UserControls.Proficiency
         public bool IsExpertise()
         {
             return this.checkBoxExpertise.Checked;
+        }
+
+        public void setExpertiseStatus(bool isExpertise)
+        {
+            this.checkBoxExpertise.Checked = isExpertise;
+        }
+
+        public void setExpertiseEditable(bool isEditable)
+        {
+            if (isEditable)
+            {
+                checkBoxExpertise.Enabled = true;
+            }
+            else
+            {
+                checkBoxExpertise.Enabled = false;
+            }
+        }
+
+        private void checkBoxExpertise_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.checkBoxExpertise.AutoCheck)
+            {
+                /* Was changed manually. */
+                /* TODO */
+            }
+        }
+        protected override void checkBoxProficiency_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxExpertise.Checked && !checkBoxProficiency.Checked)
+            {
+                checkBoxExpertise.Checked = false;
+            }
+
+            base.checkBoxProficiency_CheckedChanged(sender, e);
         }
     }
 }

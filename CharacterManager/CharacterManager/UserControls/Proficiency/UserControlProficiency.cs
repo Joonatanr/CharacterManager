@@ -28,11 +28,11 @@ namespace CharacterManager
             {   _proficiencyName = value;
                 if (_proficiencyBase == null)
                 {
-                    this.label24.Text = _proficiencyName;
+                    this.labelDescription.Text = _proficiencyName;
                 }
                 else
                 {
-                    this.label24.Text = _proficiencyName + "("+ _proficiencyBase + ")";
+                    this.labelDescription.Text = _proficiencyName + "("+ _proficiencyBase + ")";
                 }
             }
         }
@@ -42,7 +42,7 @@ namespace CharacterManager
             set
             {
                 _proficiencyBase = value;
-                this.label24.Text = _proficiencyName + "(" + _proficiencyBase + ")";
+                this.labelDescription.Text = _proficiencyName + "(" + _proficiencyBase + ")";
             }
         }
 
@@ -66,21 +66,30 @@ namespace CharacterManager
 
             if (isProficient)
             {
-                checkBoxProfSTR.Checked = true;
+                checkBoxProficiency.Checked = true;
                 displayedValue += proficiencyBonus;
             }
             else
             {
-                checkBoxProfSTR.Checked = false;
+                checkBoxProficiency.Checked = false;
             }
 
-            textBoxStrSave.Text = displayedValue.ToString();
-            
+            string modifierText;
+            if (displayedValue >= 0)
+            {
+                modifierText = "+" + displayedValue.ToString();
+            }
+            else
+            {
+                modifierText = displayedValue.ToString();
+            }
+
+            textBoxModifier.Text = modifierText;
         }
 
         public void setValue(int baseValue)
         {
-            setValueAndProficiency(baseValue, checkBoxProfSTR.Checked, _proficiencyBonus);
+            setValueAndProficiency(baseValue, checkBoxProficiency.Checked, _proficiencyBonus);
         }
 
         public void setProficiency(bool isProficient, int proficiencyBonus)
@@ -93,18 +102,18 @@ namespace CharacterManager
             if (isEditable)
             {
                 this.BackColor = Color.White;
-                this.checkBoxProfSTR.AutoCheck = true;
+                this.checkBoxProficiency.AutoCheck = true;
             }
             else
             {
                 this.BackColor = originalColor;
-                this.checkBoxProfSTR.AutoCheck = false;
+                this.checkBoxProficiency.AutoCheck = false;
             }
         }
 
         public bool IsProficient()
         {
-            return this.checkBoxProfSTR.Checked;
+            return this.checkBoxProficiency.Checked;
         }
 
 
@@ -119,9 +128,9 @@ namespace CharacterManager
             return res;
         }
 
-        private void checkBoxProfSTR_CheckedChanged(object sender, EventArgs e)
+        protected virtual void checkBoxProficiency_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.checkBoxProfSTR.AutoCheck)
+            if (this.checkBoxProficiency.AutoCheck)
             {
                 //Was changed manually.
                 setValue(_baseValue);

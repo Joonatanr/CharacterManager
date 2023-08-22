@@ -42,7 +42,7 @@ namespace CharacterManager.UserControls.Levelup
             }
         }
 
-        public void setupChoices(int numberOfNewSkills)
+        public void setupProficiencyChoices(int numberOfNewSkills)
         {
             NumberOfNewSkillProficiencies = numberOfNewSkills;
 
@@ -51,9 +51,14 @@ namespace CharacterManager.UserControls.Levelup
             userControlSkillProficiencies1.setUpChoiceProficiencies(0, dummy, NumberOfNewSkillProficiencies);
         }
 
-        public void setupChoices(int numberOfNewSkills, List<string> AvailableSkills)
+        public void setupProficiencyChoices(int numberOfNewSkills, List<string> AvailableSkills)
         {
             userControlSkillProficiencies1.setUpChoiceProficiencies(numberOfNewSkills, AvailableSkills, 0);
+        }
+
+        public void setupExpertiseChoices(int numberOfNewExpertiseChoices)
+        {
+            userControlSkillProficiencies1.setUpChoiceExpertise(numberOfNewExpertiseChoices);
         }
 
 
@@ -70,6 +75,11 @@ namespace CharacterManager.UserControls.Levelup
             foreach (string skill in connectedCharacter.SkillProficiencies)
             {
                 userControlSkillProficiencies1.setProficientAtSkill(skill);
+            }
+
+            foreach(string skill in connectedCharacter.SkillExpertise)
+            {
+                userControlSkillProficiencies1.setExpertiseAtSkill(skill);
             }
         }
 

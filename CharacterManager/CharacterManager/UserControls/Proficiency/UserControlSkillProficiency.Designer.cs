@@ -32,19 +32,19 @@ namespace CharacterManager.UserControls.Proficiency
             this.checkBoxExpertise = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // label24
+            // labelDescription
             // 
-            this.label24.Size = new System.Drawing.Size(57, 16);
-            this.label24.Text = "Athletics";
+            this.labelDescription.Size = new System.Drawing.Size(57, 16);
+            this.labelDescription.Text = "Athletics";
             // 
             // checkBoxProfSTR
             // 
-            this.checkBoxProfSTR.Location = new System.Drawing.Point(126, 2);
+            this.checkBoxProficiency.Location = new System.Drawing.Point(126, 2);
             // 
-            // textBoxStrSave
+            // textBoxModifier
             // 
-            this.textBoxStrSave.Location = new System.Drawing.Point(81, 0);
-            this.textBoxStrSave.Size = new System.Drawing.Size(40, 20);
+            this.textBoxModifier.Location = new System.Drawing.Point(81, 0);
+            this.textBoxModifier.Size = new System.Drawing.Size(40, 20);
             // 
             // checkBoxExpertise
             // 
@@ -56,6 +56,7 @@ namespace CharacterManager.UserControls.Proficiency
             this.checkBoxExpertise.TabIndex = 33;
             this.checkBoxExpertise.Text = "exprt";
             this.checkBoxExpertise.UseVisualStyleBackColor = true;
+            this.checkBoxExpertise.CheckedChanged += new System.EventHandler(this.checkBoxExpertise_CheckedChanged);
             // 
             // UserControlSkillProficiency
             // 
@@ -64,9 +65,9 @@ namespace CharacterManager.UserControls.Proficiency
             this.Controls.Add(this.checkBoxExpertise);
             this.Name = "UserControlSkillProficiency";
             this.Size = new System.Drawing.Size(213, 20);
-            this.Controls.SetChildIndex(this.label24, 0);
-            this.Controls.SetChildIndex(this.textBoxStrSave, 0);
-            this.Controls.SetChildIndex(this.checkBoxProfSTR, 0);
+            this.Controls.SetChildIndex(this.labelDescription, 0);
+            this.Controls.SetChildIndex(this.textBoxModifier, 0);
+            this.Controls.SetChildIndex(this.checkBoxProficiency, 0);
             this.Controls.SetChildIndex(this.checkBoxExpertise, 0);
             this.ResumeLayout(false);
             this.PerformLayout();

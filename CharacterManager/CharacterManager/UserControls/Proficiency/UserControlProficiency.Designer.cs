@@ -28,51 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBoxProfSTR = new System.Windows.Forms.CheckBox();
-            this.textBoxStrSave = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
+            this.checkBoxProficiency = new System.Windows.Forms.CheckBox();
+            this.textBoxModifier = new System.Windows.Forms.TextBox();
+            this.labelDescription = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkBoxProfSTR
             // 
-            this.checkBoxProfSTR.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.checkBoxProfSTR.AutoCheck = false;
-            this.checkBoxProfSTR.AutoSize = true;
-            this.checkBoxProfSTR.Location = new System.Drawing.Point(128, 2);
-            this.checkBoxProfSTR.Name = "checkBoxProfSTR";
-            this.checkBoxProfSTR.Size = new System.Drawing.Size(44, 17);
-            this.checkBoxProfSTR.TabIndex = 32;
-            this.checkBoxProfSTR.Text = "prof";
-            this.checkBoxProfSTR.UseVisualStyleBackColor = true;
-            this.checkBoxProfSTR.CheckedChanged += new System.EventHandler(this.checkBoxProfSTR_CheckedChanged);
+            this.checkBoxProficiency.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.checkBoxProficiency.AutoCheck = false;
+            this.checkBoxProficiency.AutoSize = true;
+            this.checkBoxProficiency.Location = new System.Drawing.Point(128, 2);
+            this.checkBoxProficiency.Name = "checkBoxProfSTR";
+            this.checkBoxProficiency.Size = new System.Drawing.Size(44, 17);
+            this.checkBoxProficiency.TabIndex = 32;
+            this.checkBoxProficiency.Text = "prof";
+            this.checkBoxProficiency.UseVisualStyleBackColor = true;
+            this.checkBoxProficiency.CheckedChanged += new System.EventHandler(this.checkBoxProficiency_CheckedChanged);
             // 
-            // textBoxStrSave
+            // textBoxModifier
             // 
-            this.textBoxStrSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.textBoxStrSave.Location = new System.Drawing.Point(65, 0);
-            this.textBoxStrSave.Name = "textBoxStrSave";
-            this.textBoxStrSave.ReadOnly = true;
-            this.textBoxStrSave.Size = new System.Drawing.Size(52, 20);
-            this.textBoxStrSave.TabIndex = 31;
+            this.textBoxModifier.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxModifier.Location = new System.Drawing.Point(65, 0);
+            this.textBoxModifier.Name = "textBoxModifier";
+            this.textBoxModifier.ReadOnly = true;
+            this.textBoxModifier.Size = new System.Drawing.Size(52, 20);
+            this.textBoxModifier.TabIndex = 31;
             // 
-            // label24
+            // labelDescription
             // 
-            this.label24.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold);
-            this.label24.Location = new System.Drawing.Point(6, 2);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(30, 16);
-            this.label24.TabIndex = 30;
-            this.label24.Text = "STR";
+            this.labelDescription.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Font = new System.Drawing.Font("Microsoft Tai Le", 9F, System.Drawing.FontStyle.Bold);
+            this.labelDescription.Location = new System.Drawing.Point(6, 2);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(30, 16);
+            this.labelDescription.TabIndex = 30;
+            this.labelDescription.Text = "STR";
             // 
             // UserControlProficiency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.checkBoxProfSTR);
-            this.Controls.Add(this.textBoxStrSave);
-            this.Controls.Add(this.label24);
+            this.Controls.Add(this.checkBoxProficiency);
+            this.Controls.Add(this.textBoxModifier);
+            this.Controls.Add(this.labelDescription);
             this.Name = "UserControlProficiency";
             this.Size = new System.Drawing.Size(176, 20);
             this.ResumeLayout(false);
@@ -81,8 +81,8 @@
         }
 
         #endregion
-        protected System.Windows.Forms.Label label24;
-        protected System.Windows.Forms.CheckBox checkBoxProfSTR;
-        protected System.Windows.Forms.TextBox textBoxStrSave;
+        protected System.Windows.Forms.Label labelDescription;
+        protected System.Windows.Forms.CheckBox checkBoxProficiency;
+        protected System.Windows.Forms.TextBox textBoxModifier;
     }
 }

@@ -19,9 +19,12 @@ namespace CharacterManager.UserControls
 
         private int numberOfSkillsToChooseRemaining = 0;
         private int numberOfSkillsToChooseAnyRemaining = 0;
+
+        private int numberOfExpertiseToChooseMax = 0;
         
         private List<String> AvailableSkillsToChooseList = new List<String>();
         private List<String> LockedSkillProficiencies = new List<String>(); //These proficiencies come from either background or directly from race so they cannot be deselected.
+        private List<String> LockedSkillExpertise = new List<String>(); // These are already existing expertise modifiers that should not be modifiable. There probably aren't any use cases where a character can "forget" expertise at sth.
 
         private int currentProfBonus = 2;
 
@@ -44,7 +47,7 @@ namespace CharacterManager.UserControls
             set
             {
                 labelNumberOfProficienciesToChoose.Visible = value;
-                label15.Visible = false;
+                label15.Visible = value;
             }
         }
 
@@ -226,7 +229,31 @@ namespace CharacterManager.UserControls
             return false;
         }
 
-        
+        public bool setExpertiseAtSkill(string skill)
+        {
+            UserControlSkillProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == skill);
+            if (ctrl != null)
+            {
+                ctrl.setExpertiseStatus(true);
+                ctrl.setEditable(false);
+                ctrl.setExpertiseEditable(false);
+                LockedSkillExpertise.Add(skill);
+                /* Since we have at least one expertise available, then this should be made visible. */
+                setExpertiseVisible(true);
+                return true;
+            }
+
+            return false;
+        }
+
+        private void setExpertiseVisible(bool isVisible)
+        {
+            foreach (UserControlSkillProficiency prof in skillProficiencyControlList)
+            {
+                prof.IsExpertiseVisible = isVisible;
+            }
+        }
+
         public List<String> getAllSkillProficiencies()
         {
             List<String> res = new List<String>();
@@ -267,7 +294,6 @@ namespace CharacterManager.UserControls
 
             updateLabelData();
 
-            /* TODO : Might need to be in separate function. */
             foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
             {
                 if (AvailableSkillsToChooseList.Contains(ctrl.ProficiencyName) || (numberOfSkillsToChooseAnyMax > 0))
@@ -280,6 +306,18 @@ namespace CharacterManager.UserControls
             }
         }
 
+        public void setUpChoiceExpertise(int numberOfExpertiseToChoose)
+        {
+            if (numberOfExpertiseToChoose > 0)
+            {
+                numberOfExpertiseToChooseMax = numberOfExpertiseToChoose;
+
+                /* We have at least one expertise available, so lets set this column visible. */
+                setExpertiseVisible(true);
+            }
+            updateExpertiseLabelData();
+        }
+
         private void updateLabelData()
         {
             string profDescription = (numberOfSkillsToChooseRemaining + numberOfSkillsToChooseAnyRemaining).ToString();
@@ -289,6 +327,20 @@ namespace CharacterManager.UserControls
             }
 
             labelNumberOfProficienciesToChoose.Text = profDescription;
+        }
+
+        private void updateExpertiseLabelData()
+        {
+            if (numberOfExpertiseToChooseMax > 0)
+            {
+                labelNumberOfExpertiseAvailable.Visible = true;
+                /* TODO : Placeholder. */
+                labelNumberOfExpertiseAvailable.Text = numberOfExpertiseToChooseMax.ToString();
+            }
+            else
+            {
+                labelNumberOfExpertiseAvailable.Visible = false;
+            }
         }
 
         private int getCurrentAttributeBonus(String attrib)
