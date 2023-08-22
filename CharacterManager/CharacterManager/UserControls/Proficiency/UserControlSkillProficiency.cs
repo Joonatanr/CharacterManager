@@ -12,9 +12,44 @@ namespace CharacterManager.UserControls.Proficiency
 {
     public partial class UserControlSkillProficiency : UserControlProficiency
     {
-        public UserControlSkillProficiency()
+        public bool IsExpertiseVisible
+        {
+            get
+            {
+                return _isExpertiseVisible;
+            }
+
+            set
+            {
+                _isExpertiseVisible = value;
+                if (_isExpertiseVisible == true)
+                {
+                    checkBoxExpertise.Enabled = true;
+                    checkBoxExpertise.Visible = true;
+                }
+                else
+                {
+
+                    checkBoxExpertise.Checked = false;
+                    checkBoxExpertise.Enabled = false;
+                    checkBoxExpertise.Visible = false;
+                }
+            }
+        }
+
+
+        private bool _isExpertiseVisible = false;
+
+        public UserControlSkillProficiency() : base()
         {
             InitializeComponent();
+            /* By default the expertise box is not supposed to be visible. */
+            IsExpertiseVisible = false;
+        }
+
+        public bool IsExpertise()
+        {
+            return this.checkBoxExpertise.Checked;
         }
     }
 }

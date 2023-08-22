@@ -81,9 +81,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox checkBoxProfSTR;
-        private System.Windows.Forms.TextBox textBoxStrSave;
-        private System.Windows.Forms.Label label24;
+        protected System.Windows.Forms.Label label24;
+        protected System.Windows.Forms.CheckBox checkBoxProfSTR;
+        protected System.Windows.Forms.TextBox textBoxStrSave;
     }
 }

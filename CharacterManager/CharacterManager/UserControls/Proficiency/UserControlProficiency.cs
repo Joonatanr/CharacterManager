@@ -46,7 +46,7 @@ namespace CharacterManager
             }
         }
 
-        private Color originalColor;
+        protected Color originalColor;
 
         public delegate void ManuallyCheckedChangedListener(String name);
         public ManuallyCheckedChangedListener ChangeListener = null;
