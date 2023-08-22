@@ -12,11 +12,11 @@ namespace CharacterManager
 {
     public partial class UserControlProficiency : UserControl
     {
-        private String _proficiencyName = "";
-        private String _proficiencyBase = null;
+        protected String _proficiencyName = "";
+        protected String _proficiencyBase = null;
 
-        private int _baseValue = 0;
-        private int _proficiencyBonus = 0;
+        protected int _baseValue = 0;
+        protected int _proficiencyBonus = 0;
 
         public String ProficiencyName
         {
