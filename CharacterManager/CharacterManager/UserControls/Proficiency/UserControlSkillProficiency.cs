@@ -33,8 +33,10 @@ namespace CharacterManager.UserControls.Proficiency
             }
         }
 
+        public ManuallyCheckedChangedListener ExpertiseCheckedChanged = null;
 
         private bool _isExpertiseVisible = false;
+        private bool _isExpertiseEditable = false;
 
         public UserControlSkillProficiency() : base()
         {
@@ -55,7 +57,9 @@ namespace CharacterManager.UserControls.Proficiency
 
         public void setExpertiseEditable(bool isEditable)
         {
-            if (isEditable)
+            _isExpertiseEditable = isEditable;
+
+            if (isEditable && checkBoxProficiency.Checked)
             {
                 checkBoxExpertise.Enabled = true;
             }
@@ -69,8 +73,11 @@ namespace CharacterManager.UserControls.Proficiency
         {
             if (this.checkBoxExpertise.AutoCheck)
             {
-                /* Was changed manually. */
-                /* TODO */
+                if (ExpertiseCheckedChanged != null)
+                {
+                    ExpertiseCheckedChanged.Invoke(this);
+                }
+                setValue(_baseValue);
             }
         }
         protected override void checkBoxProficiency_CheckedChanged(object sender, EventArgs e)
@@ -78,9 +85,25 @@ namespace CharacterManager.UserControls.Proficiency
             if (checkBoxExpertise.Checked && !checkBoxProficiency.Checked)
             {
                 checkBoxExpertise.Checked = false;
+                checkBoxExpertise.Enabled = false;
+            }
+            else if(checkBoxProficiency.Checked && _isExpertiseEditable)
+            {
+                checkBoxExpertise.Enabled = true;
             }
 
             base.checkBoxProficiency_CheckedChanged(sender, e);
+        }
+
+        protected override int getBonusValue()
+        {
+            int res = base.getBonusValue();
+            if (IsExpertise())
+            {
+                /* We give double proficiency bonus here. */
+                res += _proficiencyBonus;
+            }
+            return res;
         }
     }
 }

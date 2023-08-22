@@ -21,6 +21,7 @@ namespace CharacterManager.UserControls
         private int numberOfSkillsToChooseAnyRemaining = 0;
 
         private int numberOfExpertiseToChooseMax = 0;
+        private int numberOfExpertiseToChooseRemaining = 0;
         
         private List<String> AvailableSkillsToChooseList = new List<String>();
         private List<String> LockedSkillProficiencies = new List<String>(); //These proficiencies come from either background or directly from race so they cannot be deselected.
@@ -63,30 +64,55 @@ namespace CharacterManager.UserControls
                     UserControlSkillProficiency profControl = (UserControlSkillProficiency)c;
                     skillProficiencyControlList.Add(profControl);
                     profControl.ChangeListener = SkillProfCheckedChanged;
+                    profControl.ExpertiseCheckedChanged = ExpertiseCheckedChanged;
                 }
             }
         }
 
-        private void SkillProfCheckedChanged(String name)
+        private void ExpertiseCheckedChanged(UserControlProficiency sender)
         {
-            //So we have manually checked a proficiency.
-            UserControlSkillProficiency selectedControl = null;
+            //So we have manually checked or unchecked  an expertise.
+            UserControlSkillProficiency selectedControl = (UserControlSkillProficiency)sender;
 
-            foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
+            if (selectedControl.IsExpertise())
             {
-                if (ctrl.ProficiencyName == name)
+                numberOfExpertiseToChooseRemaining--;
+                if (numberOfExpertiseToChooseRemaining == 0)
                 {
-                    selectedControl = ctrl;
-                    break;
+                    foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
+                    {
+                        if (!ctrl.IsExpertise())
+                        {
+                            ctrl.setExpertiseEditable(false);
+                        }
+                    }
                 }
             }
+            else
+            {
+                numberOfExpertiseToChooseRemaining++;
+                if (numberOfExpertiseToChooseRemaining == 1)
+                {
+                    foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
+                    {
+                        ctrl.setExpertiseEditable(true);
+                    }
+                }
+            }
+
+            updateExpertiseLabelData();
+        }
+
+        private void SkillProfCheckedChanged(UserControlProficiency sender)
+        {
+            //So we have manually checked a proficiency.
+            UserControlSkillProficiency selectedControl = (UserControlSkillProficiency)sender;
 
             if (selectedControl == null)
             {
                 //Something went really wrong...
                 return;
             }
-
 
             if (selectedControl.IsProficient())
             {
@@ -311,11 +337,21 @@ namespace CharacterManager.UserControls
             if (numberOfExpertiseToChoose > 0)
             {
                 numberOfExpertiseToChooseMax = numberOfExpertiseToChoose;
+                numberOfExpertiseToChooseRemaining = numberOfExpertiseToChoose;
 
                 /* We have at least one expertise available, so lets set this column visible. */
                 setExpertiseVisible(true);
+                
             }
             updateExpertiseLabelData();
+
+            foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
+            {
+                if (!LockedSkillExpertise.Contains(ctrl.ProficiencyName))
+                {
+                    ctrl.setExpertiseEditable(true);
+                }
+            }
         }
 
         private void updateLabelData()
@@ -334,8 +370,7 @@ namespace CharacterManager.UserControls
             if (numberOfExpertiseToChooseMax > 0)
             {
                 labelNumberOfExpertiseAvailable.Visible = true;
-                /* TODO : Placeholder. */
-                labelNumberOfExpertiseAvailable.Text = numberOfExpertiseToChooseMax.ToString();
+                labelNumberOfExpertiseAvailable.Text = numberOfExpertiseToChooseRemaining.ToString();
             }
             else
             {

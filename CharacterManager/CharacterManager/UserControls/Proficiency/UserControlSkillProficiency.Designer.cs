@@ -37,7 +37,7 @@ namespace CharacterManager.UserControls.Proficiency
             this.labelDescription.Size = new System.Drawing.Size(57, 16);
             this.labelDescription.Text = "Athletics";
             // 
-            // checkBoxProfSTR
+            // checkBoxProficiency
             // 
             this.checkBoxProficiency.Location = new System.Drawing.Point(126, 2);
             // 
@@ -50,6 +50,7 @@ namespace CharacterManager.UserControls.Proficiency
             // 
             this.checkBoxExpertise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxExpertise.AutoSize = true;
+            this.checkBoxExpertise.Enabled = false;
             this.checkBoxExpertise.Location = new System.Drawing.Point(167, 2);
             this.checkBoxExpertise.Name = "checkBoxExpertise";
             this.checkBoxExpertise.Size = new System.Drawing.Size(49, 17);

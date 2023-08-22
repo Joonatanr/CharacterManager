@@ -48,7 +48,7 @@ namespace CharacterManager
 
         protected Color originalColor;
 
-        public delegate void ManuallyCheckedChangedListener(String name);
+        public delegate void ManuallyCheckedChangedListener(UserControlProficiency ctrl);
         public ManuallyCheckedChangedListener ChangeListener = null;
 
         public UserControlProficiency()
@@ -58,23 +58,25 @@ namespace CharacterManager
 
         }
 
+
+
         public void setValueAndProficiency(int baseValue, bool isProficient, int proficiencyBonus)
         {
             _baseValue = baseValue;
             _proficiencyBonus = proficiencyBonus;
-            int displayedValue = _baseValue;
 
             if (isProficient)
             {
                 checkBoxProficiency.Checked = true;
-                displayedValue += proficiencyBonus;
             }
             else
             {
                 checkBoxProficiency.Checked = false;
             }
 
+            int displayedValue = getBonusValue();
             string modifierText;
+            
             if (displayedValue >= 0)
             {
                 modifierText = "+" + displayedValue.ToString();
@@ -119,7 +121,13 @@ namespace CharacterManager
 
         public int getTotalProficiencyBonus()
         {
+            return getBonusValue();
+        }
+
+        protected virtual int getBonusValue()
+        {
             int res = _baseValue;
+
             if (IsProficient())
             {
                 res += _proficiencyBonus;
@@ -128,13 +136,14 @@ namespace CharacterManager
             return res;
         }
 
+
         protected virtual void checkBoxProficiency_CheckedChanged(object sender, EventArgs e)
         {
             if (this.checkBoxProficiency.AutoCheck)
             {
                 //Was changed manually.
                 setValue(_baseValue);
-                ChangeListener?.Invoke(ProficiencyName);
+                ChangeListener?.Invoke(this);
             }
         }
     }
