@@ -104,6 +104,34 @@ namespace CharacterManager.UserControls
             }
         }
 
+        public int RollSkill(string skill, out string log)
+        {
+            log = "Error";
+            UserControlSkillProficiency ctrl = getControlFromSkillName(skill);
+            if (ctrl != null)
+            {
+                return ctrl.Roll(out log);
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+
+        private UserControlSkillProficiency getControlFromSkillName(string skill)
+        {
+            foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
+            {
+                if (ctrl.ProficiencyName.ToLower() == skill.ToLower())
+                {
+                    return ctrl;
+                }
+            }
+
+            return null;
+        }
+
         private void ExpertiseCheckedChanged(UserControlProficiency sender)
         {
             //So we have manually checked or unchecked  an expertise.

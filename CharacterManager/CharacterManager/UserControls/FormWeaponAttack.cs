@@ -224,5 +224,10 @@ namespace CharacterManager.UserControls
 
             richTextBoxRolls.ScrollToCaret();
         }
+
+        private void userControlAttackDieRolls_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

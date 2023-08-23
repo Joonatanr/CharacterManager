@@ -187,6 +187,7 @@ namespace CharacterManager.UserControls
             this.userControlAttackDieRolls.Size = new System.Drawing.Size(722, 27);
             this.userControlAttackDieRolls.TabIndex = 22;
             this.userControlAttackDieRolls.UserControlName = "Attack Roll:";
+            this.userControlAttackDieRolls.Load += new System.EventHandler(this.userControlAttackDieRolls_Load);
             // 
             // userControlDamageDieRoll
             // 

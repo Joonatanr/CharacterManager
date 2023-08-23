@@ -492,6 +492,14 @@ namespace CharacterManager
             myForm.ShowDialog();
         }
 
+        private void makeSkillRoll(string skill)
+        {
+            string textResult;
+            userControlSkillProficiencies1.RollSkill(skill, out textResult);
+            string finalResult = skill + " : " + textResult;
+            handleRollReport(finalResult + Environment.NewLine, Color.Black, false, HorizontalAlignment.Left);
+        }
+
         /* Just for debugging. TODO : Remove this. */
         private void button1_Click(object sender, EventArgs e)
         {
@@ -538,6 +546,97 @@ namespace CharacterManager
                 dieRollTextBox1.Roll(out rollResult);
                 richTextBoxConsole.AppendText(rollResult + Environment.NewLine);
             }
+        }
+
+        private void buttonRollAcrobatics_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Acrobatics");
+        }
+
+        private void buttonRollAnimalHandling_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Animal Handling");
+        }
+
+
+        private void buttonRollArcana_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Arcana");
+        }
+
+        private void buttonRollAthletics_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Athletics");
+        }
+
+        private void buttonRollDeception_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Deception");
+        }
+
+        private void buttonRollHistory_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("History");
+        }
+
+        private void buttonRollInsight_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Insight");
+        }
+
+        private void buttonRollIntimidation_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Intimidation");
+        }
+
+        private void buttonRollInvestigation_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Investigation");
+        }
+
+        private void buttonRollMedicine_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Medicine");
+        }
+
+        private void buttonRollNature_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Nature");
+        }
+
+        private void buttonRollPerception_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Perception");
+        }
+
+        private void buttonRollPerformance_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Performance");
+        }
+
+        private void buttonRollPersuasion_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Persuasion");
+        }
+
+        private void buttonRollReligion_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Religion");
+        }
+
+        private void buttonRolSleightOfHand_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Sleight Of Hand");
+        }
+
+        private void buttonRollStealth_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Stealth");
+        }
+
+        private void buttonRollSurvival_Click(object sender, EventArgs e)
+        {
+            makeSkillRoll("Survival");
         }
     }
 

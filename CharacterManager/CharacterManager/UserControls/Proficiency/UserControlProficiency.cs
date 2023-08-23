@@ -145,6 +145,16 @@ namespace CharacterManager
             return getBonusValueModifiers();
         }
 
+        public int Roll(out string log)
+        {
+            List<BonusValueModifier> myRollModifiers = new List<BonusValueModifier>();
+            BonusValueModifier baseDieModifier = new BonusValueModifier("base", "d20");
+            myRollModifiers.Add(baseDieModifier);
+            myRollModifiers.AddRange(getBonusValueModifiers());
+            DieRollEquation myRoll = BonusValueModifier.GetEquationFromList(myRollModifiers);
+            return myRoll.RollValue(out log);
+        }
+
         protected virtual List<BonusValueModifier> getBonusValueModifiers()
         {
             List<BonusValueModifier> res = new List<BonusValueModifier>();
