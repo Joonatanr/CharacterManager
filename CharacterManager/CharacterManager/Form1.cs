@@ -706,7 +706,17 @@ namespace CharacterManager
             makeSavingThrowRoll("CHA");
         }
 
+        private void buttonAddItems_Click(object sender, EventArgs e)
+        {
+            /* TODO : Placeholder */
+            FormAddItem myForm = new FormAddItem();
+            myForm.ShowDialog();
 
+            if (myForm.DialogResult == DialogResult.OK)
+            {
+                /* TODO */
+            }
+        }
     }
 
     /// <summary>

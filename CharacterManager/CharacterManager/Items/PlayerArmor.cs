@@ -25,10 +25,12 @@ namespace CharacterManager.Items
         public int MaxDexModifier;
         public Boolean IsEquipped = false;
 
+        /*
         public override string ToString()
         {
             return "Name : " + this.ItemName + "AC : " + this.ArmorClass.ToString();
         }
+        */
 
         public PlayerArmor Clone()
         {

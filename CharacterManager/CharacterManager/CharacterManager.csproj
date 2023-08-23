@@ -100,6 +100,12 @@
     <Compile Include="CharacterCreator\FormChooseEquipment.Designer.cs">
       <DependentUpon>FormChooseEquipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Items\FormAddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\FormAddItem.Designer.cs">
+      <DependentUpon>FormAddItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items\PlayerArmor.cs" />
     <Compile Include="Items\PlayerBaseItem.cs" />
     <Compile Include="Items\PlayerItem.cs" />
@@ -376,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CharacterCreator\FormChooseEquipment.resx">
       <DependentUpon>FormChooseEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\FormAddItem.resx">
+      <DependentUpon>FormAddItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
