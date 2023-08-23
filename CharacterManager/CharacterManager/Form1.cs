@@ -120,6 +120,7 @@ namespace CharacterManager
                 //11. Update armors.
                 userControlArmorHandler1.setArmorList(activeCharacter.CharacterArmors);
                 userControlArmorHandler1.ArmorEquipChanged = armorEquippedChanged;
+                userControlArmorHandler1.ArmorDropped = armorDropped;
                 updateArmorClass();
 
                 //12. Update general inventory.
@@ -175,6 +176,13 @@ namespace CharacterManager
             {
                 userControlInitiative.Value = bonus.ToString();
             }
+        }
+
+        private void armorDropped(PlayerArmor armor)
+        {
+            activeCharacter.DropArmor(armor);
+            userControlArmorHandler1.setArmorList(activeCharacter.CharacterArmors);
+            updateArmorClass();
         }
 
         private void armorEquippedChanged(PlayerArmor armor)

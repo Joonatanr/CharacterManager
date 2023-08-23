@@ -777,6 +777,18 @@ namespace CharacterManager
             }
         }
 
+        public void DropArmor(PlayerArmor a)
+        {
+            try
+            {
+                CharacterArmors.Remove(a);
+            }
+            catch (Exception)
+            {
+                /* TODO : Report error. */
+            }
+        }
+
         /*************************** Private functions **************************/
         private List<BonusValueModifier> getHitBonuses(PlayerWeapon w)
         {

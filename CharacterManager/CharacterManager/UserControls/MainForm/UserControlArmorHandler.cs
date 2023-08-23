@@ -16,9 +16,11 @@ namespace CharacterManager.UserControls
             public PlayerArmor armor;
             public InfoButton infoBtn;
             public CustomButton EquipButton;
+            public CustomButton DropButton;
 
             public delegate void ArmorEquippedChangedHandler(PlayerArmor armor, Boolean updateOthers);
             public ArmorEquippedChangedHandler EquippedChangedHandler;
+            public ArmorEquippedChangedHandler ArmorDroppedHandler;
 
             public ArmorControlData(PlayerArmor a)
             {
@@ -29,6 +31,12 @@ namespace CharacterManager.UserControls
                 EquipButton.ButtonText = "Equip";
                 EquipButton.Font = new Font("Arial", 8.0f);
                 EquipButton.Click += new System.EventHandler(EquipButton_Click);
+
+                DropButton = new CustomButton();
+                DropButton.Size = new Size(40, 16);
+                DropButton.ButtonText = "Drop";
+                DropButton.Font = new Font("Arial", 8.0f);
+                DropButton.Click += DropButton_Click;
             }
 
 
@@ -64,6 +72,26 @@ namespace CharacterManager.UserControls
                     EquippedChangedHandler?.Invoke(armor, true);
                 }
             }
+
+            private void DropButton_Click(object sender, EventArgs e)
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to drop " + armor.DisplayedName, "Drop armor", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    /* If we are currently equipping this armor, then first unequip. */
+                    if (armor.IsEquipped)
+                    {
+                        setEquipped(false);
+                        armor.IsEquipped = false;
+                        EquippedChangedHandler?.Invoke(armor, false);
+                        ArmorDroppedHandler?.Invoke(armor, false);
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    /* Do nothing */
+                }
+            }
         }
 
 
@@ -72,6 +100,7 @@ namespace CharacterManager.UserControls
 
         public delegate void ArmorEquipChangedHandler(PlayerArmor armor);
         public ArmorEquipChangedHandler ArmorEquipChanged;
+        public ArmorEquipChangedHandler ArmorDropped;
 
         public UserControlArmorHandler() : base()
         {
@@ -117,6 +146,11 @@ namespace CharacterManager.UserControls
                 myData.EquippedChangedHandler = ArmorEquippedChanged;
                 this.Controls.Add(myData.EquipButton);
 
+                /* 3. Set up the Drop button. */
+                myData.DropButton.Location = new Point(0, y + 3);
+                myData.ArmorDroppedHandler += HandleDrop;
+                this.Controls.Add(myData.DropButton);
+
                 /* Finish up.. */
                 y += lineInterval;
                 mainList.Add(myData);
@@ -154,6 +188,11 @@ namespace CharacterManager.UserControls
             ArmorEquipChanged?.Invoke(armor);
         }
 
+        private void HandleDrop(PlayerArmor armor, Boolean updateOthers)
+        {
+            ArmorDropped?.Invoke(armor);
+        }
+
         protected override void drawData(Graphics gfx, Font font)
         {
             int y = 0;
@@ -164,7 +203,7 @@ namespace CharacterManager.UserControls
 
             foreach (PlayerArmor a in armorList)
             {
-                drawTextOnLine(gfx, a.ItemName, y);
+                drawTextOnLine(gfx, "        " + a.ItemName, y);
                 y++;
             }
         }
