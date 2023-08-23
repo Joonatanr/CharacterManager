@@ -17,6 +17,7 @@ namespace CharacterManager.UserControls
             public InfoButton infoBtn;
             public CustomButton AttackBtn;
             public CustomButton EquipButton;
+            public CustomButton DropButton;
 
             public delegate void WeaponButtonClickedHandler(PlayerWeapon w);
             public event WeaponButtonClickedHandler WeaponAttackClicked;
@@ -36,8 +37,18 @@ namespace CharacterManager.UserControls
                 AttackBtn.Size = new Size(40, 17);
                 AttackBtn.ButtonText = "Attack";
                 AttackBtn.Click += new System.EventHandler(AttackBtn_Click);
+
+                DropButton = new CustomButton();
+                DropButton.Size = new Size(40, 16);
+                DropButton.ButtonText = "Drop";
+                DropButton.Font = new Font("Arial", 8.0f);
+                DropButton.Click += DropButton_Click;
             }
 
+            private void DropButton_Click(object sender, EventArgs e)
+            {
+                MessageBox.Show("Drop test");
+            }
 
             public void setEquipped(Boolean isEquipped, Boolean isTwoHanded)
             {
@@ -161,6 +172,10 @@ namespace CharacterManager.UserControls
                 myData.setEquipped(w.IsEquipped, w.IsEquippedTwoHanded);
                 this.Controls.Add(myData.EquipButton);
 
+                /* 4. Set up the Drop button. */
+                myData.DropButton.Location = new Point(0, y + 3);
+                this.Controls.Add(myData.DropButton);
+
                 /* Finish up.. */
                 y += lineInterval;
                 mainList.Add(myData);
@@ -197,7 +212,8 @@ namespace CharacterManager.UserControls
 
             foreach (PlayerWeapon w in weaponList)
             {
-                drawTextOnLine(gfx, w.ItemName, y);
+                /* Dirt hack for the drop button... */
+                drawTextOnLine(gfx, "        " + w.ItemName, y);
                 y++;
             }
         }
