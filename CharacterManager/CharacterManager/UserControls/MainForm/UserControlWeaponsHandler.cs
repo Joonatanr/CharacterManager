@@ -22,6 +22,7 @@ namespace CharacterManager.UserControls
             public delegate void WeaponButtonClickedHandler(PlayerWeapon w);
             public event WeaponButtonClickedHandler WeaponAttackClicked;
             public event WeaponButtonClickedHandler WeaponEquipClicked;
+            public event WeaponButtonClickedHandler WeaponDroppedClicked;
 
             public WeaponControlData(PlayerWeapon w)
             {
@@ -47,7 +48,15 @@ namespace CharacterManager.UserControls
 
             private void DropButton_Click(object sender, EventArgs e)
             {
-                MessageBox.Show("Drop test");
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to drop " + weapon.DisplayedName, "Drop weapon", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    WeaponDroppedClicked?.Invoke(weapon);
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    /* Do nothing */
+                }
             }
 
             public void setEquipped(Boolean isEquipped, Boolean isTwoHanded)
@@ -124,6 +133,7 @@ namespace CharacterManager.UserControls
         public delegate void weaponEventHandler(PlayerWeapon w);
         public event weaponEventHandler WeaponAttackEvent;
         public event weaponEventHandler WeaponEquipEvent;
+        public event weaponEventHandler WeaponDropEvent;
 
 
         public void setWeaponList(List<PlayerWeapon> wList)
@@ -174,6 +184,7 @@ namespace CharacterManager.UserControls
 
                 /* 4. Set up the Drop button. */
                 myData.DropButton.Location = new Point(0, y + 3);
+                myData.WeaponDroppedClicked += HandleDrop;
                 this.Controls.Add(myData.DropButton);
 
                 /* Finish up.. */
@@ -196,6 +207,12 @@ namespace CharacterManager.UserControls
             /* Pass the event outside of the control. */
             WeaponAttackEvent?.Invoke(w);
         }
+
+        private void HandleDrop(PlayerWeapon w)
+        {
+            WeaponDropEvent?.Invoke(w);
+        }
+
 
         private void HandleEquip(PlayerWeapon w)
         {

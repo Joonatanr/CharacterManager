@@ -1,0 +1,336 @@
+<PlayerCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SkillProficiencies>
+    <string>Survival</string>
+    <string>Persuasion</string>
+    <string>Performance</string>
+    <string>Nature</string>
+    <string>Investigation</string>
+    <string>Insight</string>
+    <string>Acrobatics</string>
+    <string>Stealth</string>
+    <string>Perception</string>
+    <string>History</string>
+  </SkillProficiencies>
+  <SkillExpertise>
+    <string>Persuasion</string>
+    <string>Performance</string>
+  </SkillExpertise>
+  <Languages>
+    <string>Common</string>
+    <string>Elvish</string>
+    <string>Draconic</string>
+    <string>Sylvan</string>
+  </Languages>
+  <WeaponProficiencies>
+    <string>Hand Crossbow</string>
+    <string>Longsword</string>
+    <string>Rapier</string>
+    <string>Shortsword</string>
+    <string>Simple Weapons</string>
+  </WeaponProficiencies>
+  <ArmorProficiencies>
+    <string>Light Armor</string>
+  </ArmorProficiencies>
+  <ToolProficiencies>
+    <string>Alchemist’s Supplies</string>
+    <string>Bagpipes</string>
+    <string>Lute</string>
+    <string>Lyre</string>
+  </ToolProficiencies>
+  <SavingThrowProficiencies>
+    <string>DEX</string>
+    <string>CHA</string>
+  </SavingThrowProficiencies>
+  <CharacterAbilities>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Darkvision</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Fey Ancestry</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Spellcasting</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Bardic Inspiration</AbilityName>
+      <RemainingCharges>3</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Jack Of All Trades</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Song Of Rest</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>College Of Lore</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Expertise(Bard)</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Cutting Words</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+    </PlayerAbilityDescriptor>
+  </CharacterAbilities>
+  <CharacterWeapons>
+    <PlayerWeapon>
+      <ItemName>Longsword</ItemName>
+      <Weight>3</Weight>
+      <Cost>15</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>false</IsAmmunition>
+      <IsFinesse>false</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>false</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>false</IsThrown>
+      <IsTwoHanded>false</IsTwoHanded>
+      <IsVersatile>true</IsVersatile>
+      <IsRanged>false</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Martial</Type>
+      <Range>
+        <NormalRange>0</NormalRange>
+        <LongRange>0</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d8</DamageValue>
+        <Type>Slashing</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <DamageValue>1d10</DamageValue>
+        <Type>Slashing</Type>
+      </TwoHandedDamage>
+      <IsEquipped>true</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType />
+    </PlayerWeapon>
+    <PlayerWeapon>
+      <ItemName>Dagger</ItemName>
+      <Weight>1</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>false</IsAmmunition>
+      <IsFinesse>true</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>true</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>true</IsThrown>
+      <IsTwoHanded>false</IsTwoHanded>
+      <IsVersatile>false</IsVersatile>
+      <IsRanged>false</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Simple</Type>
+      <Range>
+        <NormalRange>20</NormalRange>
+        <LongRange>60</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d4</DamageValue>
+        <Type>Piercing</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <Type>Bludgeoning</Type>
+      </TwoHandedDamage>
+      <IsEquipped>false</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType />
+    </PlayerWeapon>
+  </CharacterWeapons>
+  <CharacterArmors>
+    <PlayerArmor>
+      <ItemName>Leather</ItemName>
+      <Weight>10</Weight>
+      <Cost>10</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ArmorClass>11</ArmorClass>
+      <Type>Light</Type>
+      <IsShield>false</IsShield>
+      <MinStrength>0</MinStrength>
+      <IsStealthDisadvantage>false</IsStealthDisadvantage>
+      <IsDexterityModifier>true</IsDexterityModifier>
+      <MaxDexModifier>20</MaxDexModifier>
+      <IsEquipped>true</IsEquipped>
+    </PlayerArmor>
+  </CharacterArmors>
+  <CharacterGeneralEquipment>
+    <PlayerItem
+      xsi:type="PlayerToolKit">
+      <Description>Musical Instrument</Description>
+      <ItemName>Bagpipes</ItemName>
+      <Weight>5</Weight>
+      <Cost>30</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ToolType>TYPE_MUSICAL</ToolType>
+    </PlayerItem>
+    <PlayerItem
+      xsi:type="PlayerToolKit">
+      <Description />
+      <ItemName>Glassblower's Tools</ItemName>
+      <Weight>5</Weight>
+      <Cost>30</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ToolType>TYPE_ARTISAN</ToolType>
+    </PlayerItem>
+    <PlayerItem
+      xsi:type="ItemContainer">
+      <Description> Includes a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit.</Description>
+      <ItemName>Entertainer's Pack</ItemName>
+      <Weight>1</Weight>
+      <Cost>12</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ContainedItems>
+        <ContainerContent>
+          <Name>Backpack</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Bedroll</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Costume</Name>
+          <Quantity>2</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Candle</Name>
+          <Quantity>5</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Rations</Name>
+          <Quantity>5</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Waterskin</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Disguise Kit</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+      </ContainedItems>
+    </PlayerItem>
+    <PlayerItem>
+      <ItemName>Letter of introduction from your guild</ItemName>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <ItemName>Traveller's Clothes</ItemName>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+  </CharacterGeneralEquipment>
+  <CharacterSpellCastingStatus>
+    <KnownSpells>
+      <string>Mending</string>
+      <string>Message</string>
+      <string>Charm Person</string>
+      <string>Dissonant Whispers</string>
+      <string>Faerie Fire</string>
+      <string>Healing Word</string>
+      <string>Sleep</string>
+      <string>Heat Metal</string>
+    </KnownSpells>
+    <PreparedSpells />
+    <SpellCastingAbility>CHA</SpellCastingAbility>
+    <SpellAbilityModifier>3</SpellAbilityModifier>
+    <Level1SpellSlots>
+      <MaximumCount>4</MaximumCount>
+      <ActiveCount>4</ActiveCount>
+    </Level1SpellSlots>
+    <Level2SpellSlots>
+      <MaximumCount>2</MaximumCount>
+      <ActiveCount>2</ActiveCount>
+    </Level2SpellSlots>
+    <Level3SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level3SpellSlots>
+    <Level4SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level4SpellSlots>
+    <Level5SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level5SpellSlots>
+    <Level6SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level6SpellSlots>
+    <Level7SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level7SpellSlots>
+    <Level8SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level8SpellSlots>
+    <Level9SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level9SpellSlots>
+  </CharacterSpellCastingStatus>
+  <Level>3</Level>
+  <ProficiencyBonus>2</ProficiencyBonus>
+  <ExperiencePoints>900</ExperiencePoints>
+  <MaxHitPoints>25</MaxHitPoints>
+  <Speed>30</Speed>
+  <Size>
+    <height>0</height>
+    <weight>0</weight>
+    <sizeType>Tiny</sizeType>
+  </Size>
+  <Alignment>NeutralGood</Alignment>
+  <MainRaceName>Half-Elf</MainRaceName>
+  <ClassName>Bard</ClassName>
+  <SubClassName>College Of Lore</SubClassName>
+  <BaseAttributes>
+    <STR>10</STR>
+    <DEX>14</DEX>
+    <INT>12</INT>
+    <CHA>17</CHA>
+    <CON>15</CON>
+    <WIS>8</WIS>
+  </BaseAttributes>
+  <CharacterName>TestBard</CharacterName>
+  <CurrentHitPoints>25</CurrentHitPoints>
+</PlayerCharacter>

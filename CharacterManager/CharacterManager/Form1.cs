@@ -349,6 +349,12 @@ namespace CharacterManager
         }
 
 
+        private void userControlWeaponsHandler1_WeaponDropEvent(PlayerWeapon w)
+        {
+            activeCharacter.DropWeapon(w);
+            userControlWeaponsHandler1.setWeaponList(activeCharacter.CharacterWeapons);
+        }
+
         private void handleRollReport(string text, Color textColour, Boolean isBold, HorizontalAlignment alignment)
         {
             RichTextBoxExtensions.AppendFormattedText(richTextBoxConsole, text, textColour, isBold, alignment);
@@ -677,6 +683,8 @@ namespace CharacterManager
         {
             makeSavingThrowRoll("CHA");
         }
+
+
     }
 
     /// <summary>

@@ -765,6 +765,18 @@ namespace CharacterManager
             CharacterSkillBonuseUpdated?.Invoke(this);
         }
 
+        public void DropWeapon(PlayerWeapon w)
+        {
+            try
+            {
+                CharacterWeapons.Remove(w);
+            }
+            catch (Exception)
+            {
+                /* TODO : Report error. */
+            }
+        }
+
         /*************************** Private functions **************************/
         private List<BonusValueModifier> getHitBonuses(PlayerWeapon w)
         {
