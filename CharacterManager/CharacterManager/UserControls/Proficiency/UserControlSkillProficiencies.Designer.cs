@@ -33,20 +33,20 @@
             this.labelExpertise = new System.Windows.Forms.Label();
             this.labelNumberOfProficienciesToChoose = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.userControlProficiency18 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency15 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency17 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency14 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency16 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency13 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency12 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency11 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency10 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency9 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency8 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency7 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency6 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.userControlProficiency5 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencySurvival = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyReligion = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyStealth = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyPersuasion = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencySleightOfHand = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyPerformance = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyPerception = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyNature = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyMedicine = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyInvestigation = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyIntimidation = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyInsight = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyHistory = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
+            this.userControlProficiencyDeception = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
             this.userControlProficiencyAthletics = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
             this.userControlProficiencyArcana = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
             this.userControlProficiencyAnimalHandling = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
@@ -63,20 +63,20 @@
             this.groupBoxSkillProfs.Controls.Add(this.labelExpertise);
             this.groupBoxSkillProfs.Controls.Add(this.labelNumberOfProficienciesToChoose);
             this.groupBoxSkillProfs.Controls.Add(this.label15);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency18);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency15);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency17);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency14);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency16);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency13);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency12);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency11);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency10);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency9);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency8);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency7);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency6);
-            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiency5);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencySurvival);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyReligion);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyStealth);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyPersuasion);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencySleightOfHand);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyPerformance);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyPerception);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyNature);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyMedicine);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyInvestigation);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyIntimidation);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyInsight);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyHistory);
+            this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyDeception);
             this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyAthletics);
             this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyArcana);
             this.groupBoxSkillProfs.Controls.Add(this.userControlProficiencyAnimalHandling);
@@ -125,173 +125,173 @@
             this.label15.TabIndex = 34;
             this.label15.Text = "Proficiencies Available";
             // 
-            // userControlProficiency18
+            // userControlProficiencySurvival
             // 
-            this.userControlProficiency18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencySurvival.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency18.IsExpertiseVisible = false;
-            this.userControlProficiency18.Location = new System.Drawing.Point(6, 473);
-            this.userControlProficiency18.Name = "userControlProficiency18";
-            this.userControlProficiency18.ProficiencyBaseSkill = "Wis";
-            this.userControlProficiency18.ProficiencyName = "Survival";
-            this.userControlProficiency18.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency18.TabIndex = 33;
+            this.userControlProficiencySurvival.IsExpertiseVisible = false;
+            this.userControlProficiencySurvival.Location = new System.Drawing.Point(6, 473);
+            this.userControlProficiencySurvival.Name = "userControlProficiencySurvival";
+            this.userControlProficiencySurvival.ProficiencyBaseSkill = "Wis";
+            this.userControlProficiencySurvival.ProficiencyName = "Survival";
+            this.userControlProficiencySurvival.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencySurvival.TabIndex = 33;
             // 
-            // userControlProficiency15
+            // userControlProficiencyReligion
             // 
-            this.userControlProficiency15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyReligion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency15.IsExpertiseVisible = false;
-            this.userControlProficiency15.Location = new System.Drawing.Point(6, 392);
-            this.userControlProficiency15.Name = "userControlProficiency15";
-            this.userControlProficiency15.ProficiencyBaseSkill = "Int";
-            this.userControlProficiency15.ProficiencyName = "Religion";
-            this.userControlProficiency15.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency15.TabIndex = 30;
+            this.userControlProficiencyReligion.IsExpertiseVisible = false;
+            this.userControlProficiencyReligion.Location = new System.Drawing.Point(6, 392);
+            this.userControlProficiencyReligion.Name = "userControlProficiencyReligion";
+            this.userControlProficiencyReligion.ProficiencyBaseSkill = "Int";
+            this.userControlProficiencyReligion.ProficiencyName = "Religion";
+            this.userControlProficiencyReligion.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyReligion.TabIndex = 30;
             // 
-            // userControlProficiency17
+            // userControlProficiencyStealth
             // 
-            this.userControlProficiency17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyStealth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency17.IsExpertiseVisible = false;
-            this.userControlProficiency17.Location = new System.Drawing.Point(6, 446);
-            this.userControlProficiency17.Name = "userControlProficiency17";
-            this.userControlProficiency17.ProficiencyBaseSkill = "Dex";
-            this.userControlProficiency17.ProficiencyName = "Stealth";
-            this.userControlProficiency17.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency17.TabIndex = 32;
+            this.userControlProficiencyStealth.IsExpertiseVisible = false;
+            this.userControlProficiencyStealth.Location = new System.Drawing.Point(6, 446);
+            this.userControlProficiencyStealth.Name = "userControlProficiencyStealth";
+            this.userControlProficiencyStealth.ProficiencyBaseSkill = "Dex";
+            this.userControlProficiencyStealth.ProficiencyName = "Stealth";
+            this.userControlProficiencyStealth.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyStealth.TabIndex = 32;
             // 
-            // userControlProficiency14
+            // userControlProficiencyPersuasion
             // 
-            this.userControlProficiency14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyPersuasion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency14.IsExpertiseVisible = false;
-            this.userControlProficiency14.Location = new System.Drawing.Point(6, 365);
-            this.userControlProficiency14.Name = "userControlProficiency14";
-            this.userControlProficiency14.ProficiencyBaseSkill = "Cha";
-            this.userControlProficiency14.ProficiencyName = "Persuasion";
-            this.userControlProficiency14.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency14.TabIndex = 29;
+            this.userControlProficiencyPersuasion.IsExpertiseVisible = false;
+            this.userControlProficiencyPersuasion.Location = new System.Drawing.Point(6, 365);
+            this.userControlProficiencyPersuasion.Name = "userControlProficiencyPersuasion";
+            this.userControlProficiencyPersuasion.ProficiencyBaseSkill = "Cha";
+            this.userControlProficiencyPersuasion.ProficiencyName = "Persuasion";
+            this.userControlProficiencyPersuasion.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyPersuasion.TabIndex = 29;
             // 
-            // userControlProficiency16
+            // userControlProficiencySleightOfHand
             // 
-            this.userControlProficiency16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencySleightOfHand.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency16.IsExpertiseVisible = false;
-            this.userControlProficiency16.Location = new System.Drawing.Point(6, 419);
-            this.userControlProficiency16.Name = "userControlProficiency16";
-            this.userControlProficiency16.ProficiencyBaseSkill = "Dex";
-            this.userControlProficiency16.ProficiencyName = "Sleight of Hand";
-            this.userControlProficiency16.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency16.TabIndex = 31;
+            this.userControlProficiencySleightOfHand.IsExpertiseVisible = false;
+            this.userControlProficiencySleightOfHand.Location = new System.Drawing.Point(6, 419);
+            this.userControlProficiencySleightOfHand.Name = "userControlProficiencySleightOfHand";
+            this.userControlProficiencySleightOfHand.ProficiencyBaseSkill = "Dex";
+            this.userControlProficiencySleightOfHand.ProficiencyName = "Sleight of Hand";
+            this.userControlProficiencySleightOfHand.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencySleightOfHand.TabIndex = 31;
             // 
-            // userControlProficiency13
+            // userControlProficiencyPerformance
             // 
-            this.userControlProficiency13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyPerformance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency13.IsExpertiseVisible = false;
-            this.userControlProficiency13.Location = new System.Drawing.Point(6, 338);
-            this.userControlProficiency13.Name = "userControlProficiency13";
-            this.userControlProficiency13.ProficiencyBaseSkill = "Cha";
-            this.userControlProficiency13.ProficiencyName = "Performance";
-            this.userControlProficiency13.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency13.TabIndex = 28;
+            this.userControlProficiencyPerformance.IsExpertiseVisible = false;
+            this.userControlProficiencyPerformance.Location = new System.Drawing.Point(6, 338);
+            this.userControlProficiencyPerformance.Name = "userControlProficiencyPerformance";
+            this.userControlProficiencyPerformance.ProficiencyBaseSkill = "Cha";
+            this.userControlProficiencyPerformance.ProficiencyName = "Performance";
+            this.userControlProficiencyPerformance.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyPerformance.TabIndex = 28;
             // 
-            // userControlProficiency12
+            // userControlProficiencyPerception
             // 
-            this.userControlProficiency12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyPerception.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency12.IsExpertiseVisible = false;
-            this.userControlProficiency12.Location = new System.Drawing.Point(6, 311);
-            this.userControlProficiency12.Name = "userControlProficiency12";
-            this.userControlProficiency12.ProficiencyBaseSkill = "Wis";
-            this.userControlProficiency12.ProficiencyName = "Perception";
-            this.userControlProficiency12.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency12.TabIndex = 27;
+            this.userControlProficiencyPerception.IsExpertiseVisible = false;
+            this.userControlProficiencyPerception.Location = new System.Drawing.Point(6, 311);
+            this.userControlProficiencyPerception.Name = "userControlProficiencyPerception";
+            this.userControlProficiencyPerception.ProficiencyBaseSkill = "Wis";
+            this.userControlProficiencyPerception.ProficiencyName = "Perception";
+            this.userControlProficiencyPerception.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyPerception.TabIndex = 27;
             // 
-            // userControlProficiency11
+            // userControlProficiencyNature
             // 
-            this.userControlProficiency11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyNature.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency11.IsExpertiseVisible = false;
-            this.userControlProficiency11.Location = new System.Drawing.Point(6, 284);
-            this.userControlProficiency11.Name = "userControlProficiency11";
-            this.userControlProficiency11.ProficiencyBaseSkill = "Int";
-            this.userControlProficiency11.ProficiencyName = "Nature";
-            this.userControlProficiency11.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency11.TabIndex = 26;
+            this.userControlProficiencyNature.IsExpertiseVisible = false;
+            this.userControlProficiencyNature.Location = new System.Drawing.Point(6, 284);
+            this.userControlProficiencyNature.Name = "userControlProficiencyNature";
+            this.userControlProficiencyNature.ProficiencyBaseSkill = "Int";
+            this.userControlProficiencyNature.ProficiencyName = "Nature";
+            this.userControlProficiencyNature.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyNature.TabIndex = 26;
             // 
-            // userControlProficiency10
+            // userControlProficiencyMedicine
             // 
-            this.userControlProficiency10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyMedicine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency10.IsExpertiseVisible = false;
-            this.userControlProficiency10.Location = new System.Drawing.Point(6, 257);
-            this.userControlProficiency10.Name = "userControlProficiency10";
-            this.userControlProficiency10.ProficiencyBaseSkill = "Wis";
-            this.userControlProficiency10.ProficiencyName = "Medicine";
-            this.userControlProficiency10.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency10.TabIndex = 25;
+            this.userControlProficiencyMedicine.IsExpertiseVisible = false;
+            this.userControlProficiencyMedicine.Location = new System.Drawing.Point(6, 257);
+            this.userControlProficiencyMedicine.Name = "userControlProficiencyMedicine";
+            this.userControlProficiencyMedicine.ProficiencyBaseSkill = "Wis";
+            this.userControlProficiencyMedicine.ProficiencyName = "Medicine";
+            this.userControlProficiencyMedicine.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyMedicine.TabIndex = 25;
             // 
-            // userControlProficiency9
+            // userControlProficiencyInvestigation
             // 
-            this.userControlProficiency9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyInvestigation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency9.IsExpertiseVisible = false;
-            this.userControlProficiency9.Location = new System.Drawing.Point(6, 230);
-            this.userControlProficiency9.Name = "userControlProficiency9";
-            this.userControlProficiency9.ProficiencyBaseSkill = "Int";
-            this.userControlProficiency9.ProficiencyName = "Investigation";
-            this.userControlProficiency9.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency9.TabIndex = 24;
+            this.userControlProficiencyInvestigation.IsExpertiseVisible = false;
+            this.userControlProficiencyInvestigation.Location = new System.Drawing.Point(6, 230);
+            this.userControlProficiencyInvestigation.Name = "userControlProficiencyInvestigation";
+            this.userControlProficiencyInvestigation.ProficiencyBaseSkill = "Int";
+            this.userControlProficiencyInvestigation.ProficiencyName = "Investigation";
+            this.userControlProficiencyInvestigation.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyInvestigation.TabIndex = 24;
             // 
-            // userControlProficiency8
+            // userControlProficiencyIntimidation
             // 
-            this.userControlProficiency8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyIntimidation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency8.IsExpertiseVisible = false;
-            this.userControlProficiency8.Location = new System.Drawing.Point(6, 203);
-            this.userControlProficiency8.Name = "userControlProficiency8";
-            this.userControlProficiency8.ProficiencyBaseSkill = "Cha";
-            this.userControlProficiency8.ProficiencyName = "Intimidation";
-            this.userControlProficiency8.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency8.TabIndex = 23;
+            this.userControlProficiencyIntimidation.IsExpertiseVisible = false;
+            this.userControlProficiencyIntimidation.Location = new System.Drawing.Point(6, 203);
+            this.userControlProficiencyIntimidation.Name = "userControlProficiencyIntimidation";
+            this.userControlProficiencyIntimidation.ProficiencyBaseSkill = "Cha";
+            this.userControlProficiencyIntimidation.ProficiencyName = "Intimidation";
+            this.userControlProficiencyIntimidation.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyIntimidation.TabIndex = 23;
             // 
-            // userControlProficiency7
+            // userControlProficiencyInsight
             // 
-            this.userControlProficiency7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyInsight.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency7.IsExpertiseVisible = false;
-            this.userControlProficiency7.Location = new System.Drawing.Point(6, 176);
-            this.userControlProficiency7.Name = "userControlProficiency7";
-            this.userControlProficiency7.ProficiencyBaseSkill = "Wis";
-            this.userControlProficiency7.ProficiencyName = "Insight";
-            this.userControlProficiency7.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency7.TabIndex = 22;
+            this.userControlProficiencyInsight.IsExpertiseVisible = false;
+            this.userControlProficiencyInsight.Location = new System.Drawing.Point(6, 176);
+            this.userControlProficiencyInsight.Name = "userControlProficiencyInsight";
+            this.userControlProficiencyInsight.ProficiencyBaseSkill = "Wis";
+            this.userControlProficiencyInsight.ProficiencyName = "Insight";
+            this.userControlProficiencyInsight.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyInsight.TabIndex = 22;
             // 
-            // userControlProficiency6
+            // userControlProficiencyHistory
             // 
-            this.userControlProficiency6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyHistory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency6.IsExpertiseVisible = false;
-            this.userControlProficiency6.Location = new System.Drawing.Point(6, 149);
-            this.userControlProficiency6.Name = "userControlProficiency6";
-            this.userControlProficiency6.ProficiencyBaseSkill = "Int";
-            this.userControlProficiency6.ProficiencyName = "History";
-            this.userControlProficiency6.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency6.TabIndex = 21;
+            this.userControlProficiencyHistory.IsExpertiseVisible = false;
+            this.userControlProficiencyHistory.Location = new System.Drawing.Point(6, 149);
+            this.userControlProficiencyHistory.Name = "userControlProficiencyHistory";
+            this.userControlProficiencyHistory.ProficiencyBaseSkill = "Int";
+            this.userControlProficiencyHistory.ProficiencyName = "History";
+            this.userControlProficiencyHistory.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyHistory.TabIndex = 21;
             // 
-            // userControlProficiency5
+            // userControlProficiencyDeception
             // 
-            this.userControlProficiency5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlProficiencyDeception.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlProficiency5.IsExpertiseVisible = false;
-            this.userControlProficiency5.Location = new System.Drawing.Point(6, 122);
-            this.userControlProficiency5.Name = "userControlProficiency5";
-            this.userControlProficiency5.ProficiencyBaseSkill = "Cha";
-            this.userControlProficiency5.ProficiencyName = "Deception";
-            this.userControlProficiency5.Size = new System.Drawing.Size(257, 20);
-            this.userControlProficiency5.TabIndex = 20;
+            this.userControlProficiencyDeception.IsExpertiseVisible = false;
+            this.userControlProficiencyDeception.Location = new System.Drawing.Point(6, 122);
+            this.userControlProficiencyDeception.Name = "userControlProficiencyDeception";
+            this.userControlProficiencyDeception.ProficiencyBaseSkill = "Cha";
+            this.userControlProficiencyDeception.ProficiencyName = "Deception";
+            this.userControlProficiencyDeception.Size = new System.Drawing.Size(257, 20);
+            this.userControlProficiencyDeception.TabIndex = 20;
             // 
             // userControlProficiencyAthletics
             // 
@@ -359,20 +359,20 @@
         private System.Windows.Forms.GroupBox groupBoxSkillProfs;
         private System.Windows.Forms.Label labelNumberOfProficienciesToChoose;
         private System.Windows.Forms.Label label15;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency18;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency15;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency17;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency14;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency16;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency13;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency12;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency11;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency10;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency9;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency8;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency7;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency6;
-        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiency5;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencySurvival;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyReligion;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyStealth;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyPersuasion;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencySleightOfHand;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyPerformance;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyPerception;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyNature;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyMedicine;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyInvestigation;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyIntimidation;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyInsight;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyHistory;
+        private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyDeception;
         private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyAthletics;
         private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyArcana;
         private UserControls.Proficiency.UserControlSkillProficiency userControlProficiencyAnimalHandling;

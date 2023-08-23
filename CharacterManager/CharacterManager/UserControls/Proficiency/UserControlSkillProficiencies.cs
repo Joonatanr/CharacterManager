@@ -39,6 +39,8 @@ namespace CharacterManager.UserControls
         public delegate void UpdatedProficiencyValuesListener();
         public UpdatedProficiencyValuesListener checkedChangedListener = null;
 
+        private PlayerCharacter _connectedCharacter = null;
+
         public Boolean isSetDataVisible
         {
             get
@@ -51,6 +53,39 @@ namespace CharacterManager.UserControls
                 label15.Visible = value;
             }
         }
+
+        public Boolean IsCombinedProfExpertiseDisplay
+        {
+            get
+            {
+                return _isCombinedProfExpertiseDisplay;
+            }
+
+            set
+            {
+                _isCombinedProfExpertiseDisplay = value;
+                userControlProficiencyAcrobatics.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyAnimalHandling.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyArcana.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyAthletics.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyDeception.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyHistory.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyInsight.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyIntimidation.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyInvestigation.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyMedicine.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyNature.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyPerception.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyPerformance.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyPersuasion.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencyReligion.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencySleightOfHand.IsCombinedProfExpertiseDisplay = value;
+                userControlProficiencySurvival.IsCombinedProfExpertiseDisplay = value;
+            }
+        }
+
+
+        private bool _isCombinedProfExpertiseDisplay = false;
 
         public UserControlSkillProficiencies()
         {
@@ -214,6 +249,30 @@ namespace CharacterManager.UserControls
             checkedChangedListener?.Invoke();
         }
 
+
+        public void ConnectToPlayerCharacter(PlayerCharacter c)
+        {
+            _connectedCharacter = c;
+
+            updateSkillProficiencyFields(_connectedCharacter.getModifier("STR"),
+                                         _connectedCharacter.getModifier("DEX"),
+                                         _connectedCharacter.getModifier("INT"),
+                                         _connectedCharacter.getModifier("WIS"),
+                                         _connectedCharacter.getModifier("CHA"),
+                                         _connectedCharacter.getModifier("CON"),
+                                         _connectedCharacter.ProficiencyBonus);
+
+            foreach (string skill in _connectedCharacter.SkillProficiencies)
+            {
+                setProficientAtSkill(skill);
+            }
+
+            foreach(string skill in _connectedCharacter.SkillExpertise)
+            {
+                setExpertiseAtSkill(skill);
+            }
+        }
+
         public void updateSkillProficiencyFields(int strBonus, int dexBonus, int IntBonus, int WisBonus, int ChaBonus, int ConBonus, int profBonus)
         {
             currentStrBonus = strBonus;
@@ -227,7 +286,8 @@ namespace CharacterManager.UserControls
             foreach (UserControlSkillProficiency profControl in skillProficiencyControlList)
             {
                 String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
-                profControl.setValueAndProficiency(getCurrentAttributeBonus(baseSkill), profControl.IsProficient(), currentProfBonus);
+                BonusValueModifier BaseSkillBonus = new BonusValueModifier(baseSkill, getCurrentAttributeBonus(baseSkill));
+                profControl.setValueAndProficiency(BaseSkillBonus, profControl.IsProficient(), currentProfBonus);
             }
         }
 
@@ -237,7 +297,8 @@ namespace CharacterManager.UserControls
             {
                 profControl.setEditable(false);
                 String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
-                profControl.setValueAndProficiency(getCurrentAttributeBonus(baseSkill), false, currentProfBonus);
+                BonusValueModifier BaseSkillBonus = new BonusValueModifier(baseSkill, getCurrentAttributeBonus(baseSkill));
+                profControl.setValueAndProficiency(BaseSkillBonus, profControl.IsProficient(), currentProfBonus);
             }
             LockedSkillProficiencies = new List<string>();
         }
@@ -302,7 +363,7 @@ namespace CharacterManager.UserControls
             UserControlSkillProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == skill);
             if (ctrl != null)
             {
-                return ctrl.getTotalProficiencyBonus();
+                return BonusValueModifier.getTotalValueFromList(ctrl.getTotalModifiers());
             }
 
             return 0;

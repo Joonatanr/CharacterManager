@@ -683,6 +683,7 @@
             // 
             // userControlSkillProficiencies1
             // 
+            this.userControlSkillProficiencies1.IsCombinedProfExpertiseDisplay = true;
             this.userControlSkillProficiencies1.isSetDataVisible = false;
             this.userControlSkillProficiencies1.Location = new System.Drawing.Point(153, 201);
             this.userControlSkillProficiencies1.Name = "userControlSkillProficiencies1";

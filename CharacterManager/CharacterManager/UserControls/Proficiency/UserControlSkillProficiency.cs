@@ -33,10 +33,27 @@ namespace CharacterManager.UserControls.Proficiency
             }
         }
 
+        public bool IsCombinedProfExpertiseDisplay
+        {
+            get
+            {
+                return _isCombinedProfExpertiseDisplay;
+            }
+
+            set
+            {
+                _isCombinedProfExpertiseDisplay = value;
+                UpdateCombinedProficiencyText();
+            }
+        }
+
+
         public ManuallyCheckedChangedListener ExpertiseCheckedChanged = null;
 
         private bool _isExpertiseVisible = false;
         private bool _isExpertiseEditable = false;
+        private bool _isCombinedProfExpertiseDisplay = false;
+
 
         public UserControlSkillProficiency() : base()
         {
@@ -53,6 +70,24 @@ namespace CharacterManager.UserControls.Proficiency
         public void setExpertiseStatus(bool isExpertise)
         {
             this.checkBoxExpertise.Checked = isExpertise;
+            if (_isCombinedProfExpertiseDisplay)
+            {
+                UpdateCombinedProficiencyText();
+
+            }
+        }
+
+        private void UpdateCombinedProficiencyText()
+        {
+            if (checkBoxExpertise.Checked)
+            {
+                /* TODO : Maybe highlight the text somehow in case of expertise? */
+                checkBoxProficiency.Text = "exprt";
+            }
+            else
+            {
+                checkBoxProficiency.Text = "prof";
+            }
         }
 
         public void setExpertiseEditable(bool isEditable)
@@ -95,13 +130,14 @@ namespace CharacterManager.UserControls.Proficiency
             base.checkBoxProficiency_CheckedChanged(sender, e);
         }
 
-        protected override int getBonusValue()
+        protected override List<BonusValueModifier> getBonusValueModifiers()
         {
-            int res = base.getBonusValue();
+            List<BonusValueModifier> res = base.getBonusValueModifiers();
             if (IsExpertise())
             {
                 /* We give double proficiency bonus here. */
-                res += _proficiencyBonus;
+                //res += _proficiencyBonus;
+                res.Add(new BonusValueModifier("expertise", _proficiencyBonus));
             }
             return res;
         }

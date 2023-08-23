@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.checkBoxProficiency = new System.Windows.Forms.CheckBox();
             this.textBoxModifier = new System.Windows.Forms.TextBox();
             this.labelDescription = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
-            // checkBoxProfSTR
+            // checkBoxProficiency
             // 
             this.checkBoxProficiency.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.checkBoxProficiency.AutoCheck = false;
             this.checkBoxProficiency.AutoSize = true;
             this.checkBoxProficiency.Location = new System.Drawing.Point(128, 2);
-            this.checkBoxProficiency.Name = "checkBoxProfSTR";
+            this.checkBoxProficiency.Name = "checkBoxProficiency";
             this.checkBoxProficiency.Size = new System.Drawing.Size(44, 17);
             this.checkBoxProficiency.TabIndex = 32;
             this.checkBoxProficiency.Text = "prof";
@@ -84,5 +86,6 @@
         protected System.Windows.Forms.Label labelDescription;
         protected System.Windows.Forms.CheckBox checkBoxProficiency;
         protected System.Windows.Forms.TextBox textBoxModifier;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

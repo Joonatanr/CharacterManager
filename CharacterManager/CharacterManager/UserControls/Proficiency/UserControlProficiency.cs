@@ -15,7 +15,7 @@ namespace CharacterManager
         protected String _proficiencyName = "";
         protected String _proficiencyBase = null;
 
-        protected int _baseValue = 0;
+        protected BonusValueModifier _baseValue = new BonusValueModifier("None", 0);
         protected int _proficiencyBonus = 0;
 
         public String ProficiencyName
@@ -58,9 +58,8 @@ namespace CharacterManager
 
         }
 
-
-
-        public void setValueAndProficiency(int baseValue, bool isProficient, int proficiencyBonus)
+        //public void setValueAndProficiency(int baseValue, bool isProficient, int proficiencyBonus)
+        public void setValueAndProficiency(BonusValueModifier baseValue, bool isProficient, int proficiencyBonus)
         {
             _baseValue = baseValue;
             _proficiencyBonus = proficiencyBonus;
@@ -74,7 +73,11 @@ namespace CharacterManager
                 checkBoxProficiency.Checked = false;
             }
 
-            int displayedValue = getBonusValue();
+            //int displayedValue = getBonusValue();
+            List<BonusValueModifier> modifiers = getBonusValueModifiers();
+            int displayedValue = BonusValueModifier.getTotalValueFromList(modifiers);
+            toolTip1.SetToolTip(textBoxModifier, BonusValueModifier.getToolTipStringFromList(modifiers));
+
             string modifierText;
             
             if (displayedValue >= 0)
@@ -89,7 +92,7 @@ namespace CharacterManager
             textBoxModifier.Text = modifierText;
         }
 
-        public void setValue(int baseValue)
+        public void setValue(BonusValueModifier baseValue)
         {
             setValueAndProficiency(baseValue, checkBoxProficiency.Checked, _proficiencyBonus);
         }
@@ -119,18 +122,21 @@ namespace CharacterManager
         }
 
 
-        public int getTotalProficiencyBonus()
+        public List<BonusValueModifier> getTotalModifiers()
         {
-            return getBonusValue();
+            return getBonusValueModifiers();
         }
 
-        protected virtual int getBonusValue()
+        protected virtual List<BonusValueModifier> getBonusValueModifiers()
         {
-            int res = _baseValue;
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
+                
+            res.Add(_baseValue);
 
             if (IsProficient())
             {
-                res += _proficiencyBonus;
+                //res += _proficiencyBonus;
+                res.Add(new BonusValueModifier("Prof. bonus", _proficiencyBonus));
             }
 
             return res;

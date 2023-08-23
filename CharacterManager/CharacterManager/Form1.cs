@@ -82,6 +82,9 @@ namespace CharacterManager
                 userControlSavingThrows1.setValue(activeCharacter.getModifier("CHA"), activeCharacter.isSavingThrowProficientIn("CHA"), activeCharacter.ProficiencyBonus, "CHA");
 
                 //4. Update skill bonuses.
+
+                userControlSkillProficiencies1.ConnectToPlayerCharacter(activeCharacter);
+#if false
                 userControlSkillProficiencies1.updateSkillProficiencyFields(activeCharacter.getModifier("STR"),
                                                                             activeCharacter.getModifier("DEX"),
                                                                             activeCharacter.getModifier("INT"),
@@ -94,9 +97,7 @@ namespace CharacterManager
                 {
                     userControlSkillProficiencies1.setProficientAtSkill(skill);
                 }
-
-
-
+#endif
 
                 //6. Update Player alignment.
                 String alignmentString = activeCharacter.Alignment.ToString();

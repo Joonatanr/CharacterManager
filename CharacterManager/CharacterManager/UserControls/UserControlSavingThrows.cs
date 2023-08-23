@@ -22,22 +22,22 @@ namespace CharacterManager.UserControls
             switch (type)
             {
                 case ("STR"):
-                    userControlProficiencySTR.setValueAndProficiency(value, isProficient, proficiencyBonus);
+                    userControlProficiencySTR.setValueAndProficiency(new BonusValueModifier("STR", value), isProficient, proficiencyBonus);
                     break;
                 case ("INT"):
-                    userControlProficiencyINT.setValueAndProficiency(value, isProficient, proficiencyBonus);
+                    userControlProficiencyINT.setValueAndProficiency(new BonusValueModifier("INT", value), isProficient, proficiencyBonus);
                     break;
                 case ("DEX"):
-                    userControlProficiencyDEX.setValueAndProficiency(value, isProficient, proficiencyBonus);
+                    userControlProficiencyDEX.setValueAndProficiency(new BonusValueModifier("DEX", value), isProficient, proficiencyBonus);
                     break;
                 case ("CON"):
-                    userControlProficiencyCON.setValueAndProficiency(value, isProficient, proficiencyBonus);
+                    userControlProficiencyCON.setValueAndProficiency(new BonusValueModifier("CON", value), isProficient, proficiencyBonus);
                     break;
                 case ("WIS"):
-                    userControlProficiencyWIS.setValueAndProficiency(value, isProficient, proficiencyBonus);
+                    userControlProficiencyWIS.setValueAndProficiency(new BonusValueModifier("WIS", value), isProficient, proficiencyBonus);
                     break;
                 case ("CHA"):
-                    userControlProficiencyCHA.setValueAndProficiency(value, isProficient, proficiencyBonus);
+                    userControlProficiencyCHA.setValueAndProficiency(new BonusValueModifier("CHA", value), isProficient, proficiencyBonus);
                     break;
                 default:
                     break;
