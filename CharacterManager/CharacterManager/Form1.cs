@@ -125,6 +125,7 @@ namespace CharacterManager
 
                 //12. Update general inventory.
                 userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
+                userControlEquipmentHandler1.ItemDropEvent = itemDropped;
 
                 //13. Update initiative bonus.
                 updateInitiativeBonus();
@@ -176,6 +177,12 @@ namespace CharacterManager
             {
                 userControlInitiative.Value = bonus.ToString();
             }
+        }
+
+        private void itemDropped(PlayerItem item)
+        {
+            activeCharacter.DropItem(item);
+            userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
         }
 
         private void armorDropped(PlayerArmor armor)

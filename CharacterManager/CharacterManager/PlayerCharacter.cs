@@ -789,6 +789,18 @@ namespace CharacterManager
             }
         }
 
+        public void DropItem(PlayerItem item)
+        {
+            try
+            {
+                CharacterGeneralEquipment.Remove(item);
+            }
+            catch (Exception)
+            {
+                /* TODO : Report error. */
+            }
+        }
+
         /*************************** Private functions **************************/
         private List<BonusValueModifier> getHitBonuses(PlayerWeapon w)
         {
