@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBoxSkillProfs = new System.Windows.Forms.GroupBox();
+            this.labelNumberOfExpertiseAvailable = new System.Windows.Forms.Label();
+            this.labelExpertise = new System.Windows.Forms.Label();
             this.labelNumberOfProficienciesToChoose = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.userControlProficiency18 = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
@@ -49,8 +51,6 @@
             this.userControlProficiencyArcana = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
             this.userControlProficiencyAnimalHandling = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
             this.userControlProficiencyAcrobatics = new CharacterManager.UserControls.Proficiency.UserControlSkillProficiency();
-            this.labelExpertise = new System.Windows.Forms.Label();
-            this.labelNumberOfExpertiseAvailable = new System.Windows.Forms.Label();
             this.groupBoxSkillProfs.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,24 @@
             this.groupBoxSkillProfs.TabIndex = 20;
             this.groupBoxSkillProfs.TabStop = false;
             this.groupBoxSkillProfs.Text = "Skill Proficiencies";
+            // 
+            // labelNumberOfExpertiseAvailable
+            // 
+            this.labelNumberOfExpertiseAvailable.AutoSize = true;
+            this.labelNumberOfExpertiseAvailable.Location = new System.Drawing.Point(133, 516);
+            this.labelNumberOfExpertiseAvailable.Name = "labelNumberOfExpertiseAvailable";
+            this.labelNumberOfExpertiseAvailable.Size = new System.Drawing.Size(13, 13);
+            this.labelNumberOfExpertiseAvailable.TabIndex = 37;
+            this.labelNumberOfExpertiseAvailable.Text = "0";
+            // 
+            // labelExpertise
+            // 
+            this.labelExpertise.AutoSize = true;
+            this.labelExpertise.Location = new System.Drawing.Point(5, 516);
+            this.labelExpertise.Name = "labelExpertise";
+            this.labelExpertise.Size = new System.Drawing.Size(96, 13);
+            this.labelExpertise.TabIndex = 36;
+            this.labelExpertise.Text = "Expertise Available";
             // 
             // labelNumberOfProficienciesToChoose
             // 
@@ -322,24 +340,6 @@
             this.userControlProficiencyAcrobatics.ProficiencyName = "Acrobatics";
             this.userControlProficiencyAcrobatics.Size = new System.Drawing.Size(257, 20);
             this.userControlProficiencyAcrobatics.TabIndex = 6;
-            // 
-            // labelExpertise
-            // 
-            this.labelExpertise.AutoSize = true;
-            this.labelExpertise.Location = new System.Drawing.Point(5, 516);
-            this.labelExpertise.Name = "labelExpertise";
-            this.labelExpertise.Size = new System.Drawing.Size(96, 13);
-            this.labelExpertise.TabIndex = 36;
-            this.labelExpertise.Text = "Expertise Available";
-            // 
-            // labelNumberOfExpertiseAvailable
-            // 
-            this.labelNumberOfExpertiseAvailable.AutoSize = true;
-            this.labelNumberOfExpertiseAvailable.Location = new System.Drawing.Point(133, 516);
-            this.labelNumberOfExpertiseAvailable.Name = "labelNumberOfExpertiseAvailable";
-            this.labelNumberOfExpertiseAvailable.Size = new System.Drawing.Size(13, 13);
-            this.labelNumberOfExpertiseAvailable.TabIndex = 37;
-            this.labelNumberOfExpertiseAvailable.Text = "0";
             // 
             // UserControlSkillProficiencies
             // 
