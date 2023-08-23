@@ -120,7 +120,7 @@ namespace CharacterManager.UserControls
 
             foreach (PlayerItem i in GeneralEquipmentList)
             {
-                drawTextOnLine(gfx, "        " + i.getDisplayedName(), y);
+                drawTextOnLine(gfx, i.getDisplayedName(), 40, y,FontStyle.Regular, this.Width - 80);
                 y++;
             }
         }

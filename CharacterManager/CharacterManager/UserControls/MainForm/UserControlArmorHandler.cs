@@ -203,7 +203,8 @@ namespace CharacterManager.UserControls
 
             foreach (PlayerArmor a in armorList)
             {
-                drawTextOnLine(gfx, "        " + a.ItemName, y);
+                //drawTextOnLine(gfx, "        " + a.ItemName, y);
+                drawTextOnLine(gfx, a.getDisplayedName(), 40, y, FontStyle.Regular, this.Width - 80);
                 y++;
             }
         }

@@ -124,6 +124,29 @@ namespace CharacterManager.UserControls
             maxLine = Math.Max(maxLine, lineNum + 2);
         }
 
+
+        protected void drawTextOnLine(Graphics gfx, String text, int xOffset, int lineNum, FontStyle style, int MaxStringWidth)
+        {
+            int FontSize = 12;
+
+            Font f;
+            /* Lets try to dynamically reduce the size of the font if it is too large for the area.*/
+            SizeF textSize;
+
+            do
+            {
+                f = new Font("Arial", FontSize, style);
+                /* Lets try to dynamically reduce the size of the font if it is too large for the area.*/
+                textSize = gfx.MeasureString(text, f);
+                FontSize--;
+            } while (textSize.Width > MaxStringWidth && FontSize > 2);
+
+            Point sPoint = new Point(1 + xOffset, (lineInterval * (lineNum)) + 3);
+            gfx.DrawString(text, f, new SolidBrush(Color.Black), sPoint);
+
+            maxLine = Math.Max(maxLine, lineNum + 2);
+        }
+
         protected void drawTextOnLine(Graphics gfx, String text, int lineNum, Font font)
         {
             int margin;
