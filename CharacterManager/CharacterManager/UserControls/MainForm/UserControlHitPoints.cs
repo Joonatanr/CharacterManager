@@ -20,6 +20,31 @@ namespace CharacterManager.UserControls
         public delegate void HitPointsChanged(int hp);
         public HitPointsChanged HitPointsChangedListener = null;
 
+        public int CurrentHitPoints
+        {
+            get
+            {
+                return _currHitPoints;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    _currHitPoints = 0;
+                }
+                else if (value < MaxHitPoints)
+                {
+                    _currHitPoints = value;
+                }
+                else
+                {
+                    //_currHitPoints = MaxHitPoints;
+                    /* Sometimes there can be more HP than max */
+                    _currHitPoints = value;
+                }
+                this.Invalidate();
+            }
+        }
 
         public UserControlHitPoints() : base()
         {
@@ -46,31 +71,7 @@ namespace CharacterManager.UserControls
 
         }
 
-        public int CurrentHitPoints
-        {
-            get
-            {
-                return _currHitPoints;
-            }
-            set
-            {
-                if (value < 0)
-                {
-                    _currHitPoints = 0;
-                }
-                else if(value < MaxHitPoints)
-                {
-                    _currHitPoints = value;
-                }
-                else
-                {
-                    //_currHitPoints = MaxHitPoints;
-                    /* Sometimes there can be more HP than max */
-                    _currHitPoints = value;
-                } 
-                this.Invalidate();
-            }
-        }
+
         
 
         protected override void drawData(Graphics gfx)

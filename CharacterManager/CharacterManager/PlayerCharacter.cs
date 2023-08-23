@@ -98,6 +98,11 @@ namespace CharacterManager
         public List<PlayerWeapon> CharacterWeapons = new List<PlayerWeapon>();
         public List<PlayerArmor> CharacterArmors = new List<PlayerArmor>();
         public List<PlayerItem> CharacterGeneralEquipment = new List<PlayerItem>();
+        public int GoldPieces;
+        public int ElectrumPieces;
+        public int CopperPieces;
+        public int SilverPieces;
+        public int PlatinumPieces;
 
         public CharacterSpellcastingStatus CharacterSpellCastingStatus = new CharacterSpellcastingStatus();
 

@@ -127,6 +127,13 @@ namespace CharacterManager
                 userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
                 userControlEquipmentHandler1.ItemDropEvent = itemDropped;
 
+                //12.1 Update general currency.
+                userControlCurrencyElectrum.CurrencyAmount = activeCharacter.ElectrumPieces;
+                userControlCurrencyGold.CurrencyAmount = activeCharacter.GoldPieces;
+                userControlCurrencyCopper.CurrencyAmount = activeCharacter.CopperPieces;
+                userControlCurrencyPlatinum.CurrencyAmount = activeCharacter.PlatinumPieces;
+                userControlCurrencySilver.CurrencyAmount = activeCharacter.SilverPieces;
+
                 //13. Update initiative bonus.
                 updateInitiativeBonus();
 

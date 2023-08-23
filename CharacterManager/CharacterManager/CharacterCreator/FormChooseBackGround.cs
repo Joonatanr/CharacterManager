@@ -85,6 +85,18 @@ namespace CharacterManager
             return res;
         }
 
+        public int getInitialGoldAmount()
+        {
+            int res = 0;
+
+            if(_selectedBackGround != null)
+            {
+                res = _selectedBackGround.Gold;
+            }
+
+            return res;
+        }
+
         public List<Language> getAllSelectedLanguages()
         {
             List<Language> res = new List<Language>();

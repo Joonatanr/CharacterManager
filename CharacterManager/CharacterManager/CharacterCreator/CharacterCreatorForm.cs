@@ -185,6 +185,9 @@ namespace CharacterManager.CharacterCreator
                 /* 10.3 Add generic Equipment and tools. */
                 CreatedCharacter.CharacterGeneralEquipment = userControlGenericEquipmentList1.getAllGeneralEquipment();
 
+                /* 10.4 Add gold provided by background */
+                CreatedCharacter.GoldPieces = myChooseBackGroundForm.getInitialGoldAmount();
+
                 /* 11 Add spells */
                 /* TODO : If a class knows all available spells, then we should add all of these. */
                 List<PlayerSpell> chosenSpells = myChooseSpellsForm.getChosenPlayerSpells();
