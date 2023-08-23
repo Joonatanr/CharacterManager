@@ -27,6 +27,9 @@ namespace CharacterManager.UserControls
         private int numberOfSkillProfChoices = 0;
         private int numberOfSkillExpertiseChoices = 0;
 
+        private List<string> newSelectedProficiencies = new List<string>();
+        private List<string> newSelectedExpertise = new List<string>();
+
         public PlayerCharacter Character
         {
             set
@@ -173,6 +176,9 @@ namespace CharacterManager.UserControls
             /* Some abilities might just fire once and they will not be added to the abilities list. */
 
             /* TODO : Some abilities might add things like proficiencies, languages etc. TODO : Handle this here. */
+            _myCharacter.SkillProficiencies.AddRange(newSelectedProficiencies);
+            _myCharacter.SkillExpertise.AddRange(newSelectedExpertise);
+
             foreach(PlayerAbility selectedAbility in SelectedPlayerAbilities)
             {
                 selectedAbility.HandleAbilitySelected(_myCharacter);
@@ -355,6 +361,9 @@ namespace CharacterManager.UserControls
             numberOfSkillProfChoices = 0;
             numberOfSkillExpertiseChoices = 0;
 
+            newSelectedExpertise = new List<string>();
+            newSelectedProficiencies = new List<string>();
+
             foreach (PlayerAbility ab in SelectedPlayerAbilities)
             {
                 numberOfSkillProfChoices += ab.AdditionalProficiencyChoices;
@@ -503,7 +512,24 @@ namespace CharacterManager.UserControls
                 myForm.ShowDialog();
                 if (myForm.DialogResult == DialogResult.OK)
                 {
-                    /* TODO */
+                    List<string> AllProficiencies = myForm.getAllSelectedSkillProficiencies();
+                    List<string> AllExpertise = myForm.getAllSelectedSkillExpertise();
+
+                    foreach(string prof in AllProficiencies)
+                    {
+                        if (!_myCharacter.SkillProficiencies.Contains(prof))
+                        {
+                            newSelectedProficiencies.Add(prof);
+                        }
+                    }
+
+                    foreach (string prof in AllExpertise)
+                    {
+                        if (!_myCharacter.SkillExpertise.Contains(prof))
+                        {
+                            newSelectedExpertise.Add(prof);
+                        }
+                    }
                 }
             }
             else

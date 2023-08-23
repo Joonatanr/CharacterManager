@@ -39,6 +39,9 @@
             this.richTextBoxConsole = new System.Windows.Forms.RichTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
+            this.buttonIntSaveRoll = new System.Windows.Forms.Button();
+            this.buttonRollDexSave = new System.Windows.Forms.Button();
+            this.buttonRollSTRSave = new System.Windows.Forms.Button();
             this.buttonRollSurvival = new System.Windows.Forms.Button();
             this.buttonRollStealth = new System.Windows.Forms.Button();
             this.buttonRolSleightOfHand = new System.Windows.Forms.Button();
@@ -110,6 +113,9 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.buttonConSaveRoll = new System.Windows.Forms.Button();
+            this.buttonWisSaveRoll = new System.Windows.Forms.Button();
+            this.buttonChaSaveRoll = new System.Windows.Forms.Button();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -242,6 +248,12 @@
             // tabPageCharacter
             // 
             this.tabPageCharacter.BackColor = System.Drawing.Color.White;
+            this.tabPageCharacter.Controls.Add(this.buttonChaSaveRoll);
+            this.tabPageCharacter.Controls.Add(this.buttonWisSaveRoll);
+            this.tabPageCharacter.Controls.Add(this.buttonConSaveRoll);
+            this.tabPageCharacter.Controls.Add(this.buttonIntSaveRoll);
+            this.tabPageCharacter.Controls.Add(this.buttonRollDexSave);
+            this.tabPageCharacter.Controls.Add(this.buttonRollSTRSave);
             this.tabPageCharacter.Controls.Add(this.buttonRollSurvival);
             this.tabPageCharacter.Controls.Add(this.buttonRollStealth);
             this.tabPageCharacter.Controls.Add(this.buttonRolSleightOfHand);
@@ -282,6 +294,36 @@
             this.tabPageCharacter.Size = new System.Drawing.Size(1067, 834);
             this.tabPageCharacter.TabIndex = 0;
             this.tabPageCharacter.Text = "Character";
+            // 
+            // buttonIntSaveRoll
+            // 
+            this.buttonIntSaveRoll.Location = new System.Drawing.Point(350, 72);
+            this.buttonIntSaveRoll.Name = "buttonIntSaveRoll";
+            this.buttonIntSaveRoll.Size = new System.Drawing.Size(76, 23);
+            this.buttonIntSaveRoll.TabIndex = 67;
+            this.buttonIntSaveRoll.Text = "Roll";
+            this.buttonIntSaveRoll.UseVisualStyleBackColor = true;
+            this.buttonIntSaveRoll.Click += new System.EventHandler(this.buttonIntSaveRoll_Click);
+            // 
+            // buttonRollDexSave
+            // 
+            this.buttonRollDexSave.Location = new System.Drawing.Point(350, 96);
+            this.buttonRollDexSave.Name = "buttonRollDexSave";
+            this.buttonRollDexSave.Size = new System.Drawing.Size(76, 23);
+            this.buttonRollDexSave.TabIndex = 66;
+            this.buttonRollDexSave.Text = "Roll";
+            this.buttonRollDexSave.UseVisualStyleBackColor = true;
+            this.buttonRollDexSave.Click += new System.EventHandler(this.buttonRollDexSave_Click);
+            // 
+            // buttonRollSTRSave
+            // 
+            this.buttonRollSTRSave.Location = new System.Drawing.Point(350, 48);
+            this.buttonRollSTRSave.Name = "buttonRollSTRSave";
+            this.buttonRollSTRSave.Size = new System.Drawing.Size(76, 23);
+            this.buttonRollSTRSave.TabIndex = 65;
+            this.buttonRollSTRSave.Text = "Roll";
+            this.buttonRollSTRSave.UseVisualStyleBackColor = true;
+            this.buttonRollSTRSave.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // buttonRollSurvival
             // 
@@ -978,6 +1020,36 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
+            // buttonConSaveRoll
+            // 
+            this.buttonConSaveRoll.Location = new System.Drawing.Point(350, 120);
+            this.buttonConSaveRoll.Name = "buttonConSaveRoll";
+            this.buttonConSaveRoll.Size = new System.Drawing.Size(76, 23);
+            this.buttonConSaveRoll.TabIndex = 68;
+            this.buttonConSaveRoll.Text = "Roll";
+            this.buttonConSaveRoll.UseVisualStyleBackColor = true;
+            this.buttonConSaveRoll.Click += new System.EventHandler(this.buttonConSaveRoll_Click);
+            // 
+            // buttonWisSaveRoll
+            // 
+            this.buttonWisSaveRoll.Location = new System.Drawing.Point(350, 144);
+            this.buttonWisSaveRoll.Name = "buttonWisSaveRoll";
+            this.buttonWisSaveRoll.Size = new System.Drawing.Size(76, 23);
+            this.buttonWisSaveRoll.TabIndex = 69;
+            this.buttonWisSaveRoll.Text = "Roll";
+            this.buttonWisSaveRoll.UseVisualStyleBackColor = true;
+            this.buttonWisSaveRoll.Click += new System.EventHandler(this.buttonWisSaveRoll_Click);
+            // 
+            // buttonChaSaveRoll
+            // 
+            this.buttonChaSaveRoll.Location = new System.Drawing.Point(350, 169);
+            this.buttonChaSaveRoll.Name = "buttonChaSaveRoll";
+            this.buttonChaSaveRoll.Size = new System.Drawing.Size(76, 23);
+            this.buttonChaSaveRoll.TabIndex = 70;
+            this.buttonChaSaveRoll.Text = "Roll";
+            this.buttonChaSaveRoll.UseVisualStyleBackColor = true;
+            this.buttonChaSaveRoll.Click += new System.EventHandler(this.buttonChaSaveRoll_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1099,6 +1171,12 @@
         private System.Windows.Forms.Button buttonRollDeception;
         private System.Windows.Forms.Button buttonRollAthletics;
         private System.Windows.Forms.Button buttonRollArcana;
+        private System.Windows.Forms.Button buttonRollSTRSave;
+        private System.Windows.Forms.Button buttonRollDexSave;
+        private System.Windows.Forms.Button buttonIntSaveRoll;
+        private System.Windows.Forms.Button buttonChaSaveRoll;
+        private System.Windows.Forms.Button buttonWisSaveRoll;
+        private System.Windows.Forms.Button buttonConSaveRoll;
     }
 }
 

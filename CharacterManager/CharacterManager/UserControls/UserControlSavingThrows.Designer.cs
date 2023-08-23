@@ -58,8 +58,6 @@
             // 
             // userControlProficiencyCHA
             // 
-            this.userControlProficiencyCHA.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlProficiencyCHA.Location = new System.Drawing.Point(3, 142);
             this.userControlProficiencyCHA.Name = "userControlProficiencyCHA";
             this.userControlProficiencyCHA.ProficiencyBaseSkill = null;
@@ -69,8 +67,6 @@
             // 
             // userControlProficiencyDEX
             // 
-            this.userControlProficiencyDEX.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlProficiencyDEX.Location = new System.Drawing.Point(3, 67);
             this.userControlProficiencyDEX.Name = "userControlProficiencyDEX";
             this.userControlProficiencyDEX.ProficiencyBaseSkill = null;
@@ -80,8 +76,6 @@
             // 
             // userControlProficiencyWIS
             // 
-            this.userControlProficiencyWIS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlProficiencyWIS.Location = new System.Drawing.Point(3, 117);
             this.userControlProficiencyWIS.Name = "userControlProficiencyWIS";
             this.userControlProficiencyWIS.ProficiencyBaseSkill = null;
@@ -91,8 +85,6 @@
             // 
             // userControlProficiencyINT
             // 
-            this.userControlProficiencyINT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlProficiencyINT.Location = new System.Drawing.Point(3, 42);
             this.userControlProficiencyINT.Name = "userControlProficiencyINT";
             this.userControlProficiencyINT.ProficiencyBaseSkill = null;
@@ -102,8 +94,6 @@
             // 
             // userControlProficiencyCON
             // 
-            this.userControlProficiencyCON.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlProficiencyCON.Location = new System.Drawing.Point(3, 92);
             this.userControlProficiencyCON.Name = "userControlProficiencyCON";
             this.userControlProficiencyCON.ProficiencyBaseSkill = null;
@@ -113,8 +103,6 @@
             // 
             // userControlProficiencySTR
             // 
-            this.userControlProficiencySTR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlProficiencySTR.Location = new System.Drawing.Point(3, 17);
             this.userControlProficiencySTR.Name = "userControlProficiencySTR";
             this.userControlProficiencySTR.ProficiencyBaseSkill = null;

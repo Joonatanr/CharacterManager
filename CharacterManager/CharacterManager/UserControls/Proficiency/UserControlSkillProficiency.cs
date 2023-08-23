@@ -120,11 +120,15 @@ namespace CharacterManager.UserControls.Proficiency
             if (checkBoxExpertise.Checked && !checkBoxProficiency.Checked)
             {
                 checkBoxExpertise.Checked = false;
-                checkBoxExpertise.Enabled = false;
             }
             else if(checkBoxProficiency.Checked && _isExpertiseEditable)
             {
                 checkBoxExpertise.Enabled = true;
+            }
+
+            if (!checkBoxProficiency.Checked)
+            {
+                checkBoxExpertise.Enabled = false;
             }
 
             base.checkBoxProficiency_CheckedChanged(sender, e);

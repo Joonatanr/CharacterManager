@@ -43,5 +43,28 @@ namespace CharacterManager.UserControls
                     break;
             }
         }
+
+
+        public int RollSavingThrow(string type, out string log)
+        {
+            switch (type)
+            {
+                case ("STR"):
+                    return userControlProficiencySTR.Roll(out log);
+                case ("INT"):
+                    return userControlProficiencyINT.Roll(out log);
+                case ("DEX"):
+                    return userControlProficiencyDEX.Roll(out log);
+                case ("CON"):
+                    return userControlProficiencyCON.Roll(out log);
+                case ("WIS"):
+                    return userControlProficiencyWIS.Roll(out log);
+                case ("CHA"):
+                    return userControlProficiencyCHA.Roll(out log);
+                default:
+                    log = "Error";
+                    return 0;
+            }
+        }
     }
 }

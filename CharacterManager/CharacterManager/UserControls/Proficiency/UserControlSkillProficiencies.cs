@@ -310,7 +310,7 @@ namespace CharacterManager.UserControls
                 try
                 {
                     List<BonusValueModifier> modifiers = c.BonusValues.CharacterSkillBonusesFromAbilities[skillName];
-                    ctrl.ExtraModifiers = modifiers;
+                    ctrl.setExtraModifiers(modifiers);
                 }
                 catch (Exception)
                 {
@@ -407,6 +407,20 @@ namespace CharacterManager.UserControls
             return res;
         }
         
+        public List<String> getAllSkillExpertise()
+        {
+            List<String> res = new List<String>();
+
+            foreach (UserControlSkillProficiency prof in skillProficiencyControlList)
+            {
+                if (prof.IsExpertise())
+                {
+                    res.Add(prof.ProficiencyName);
+                }
+            }
+
+            return res;
+        }
 
         //This is the skill bonus that is currently being displayed.
         public int getTotalSkillBonus(string skill)

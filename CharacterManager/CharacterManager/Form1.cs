@@ -638,6 +638,45 @@ namespace CharacterManager
         {
             makeSkillRoll("Survival");
         }
+
+
+        private void makeSavingThrowRoll(string save)
+        {
+            string textResult;
+            userControlSavingThrows1.RollSavingThrow(save, out textResult);
+            string finalResult = save + " save" + " : " + textResult;
+            handleRollReport(finalResult + Environment.NewLine, Color.Black, false, HorizontalAlignment.Left);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            makeSavingThrowRoll("STR");
+        }
+
+        private void buttonRollDexSave_Click(object sender, EventArgs e)
+        {
+            makeSavingThrowRoll("DEX");
+        }
+
+        private void buttonIntSaveRoll_Click(object sender, EventArgs e)
+        {
+            makeSavingThrowRoll("INT");
+        }
+
+        private void buttonConSaveRoll_Click(object sender, EventArgs e)
+        {
+            makeSavingThrowRoll("CON");
+        }
+
+        private void buttonWisSaveRoll_Click(object sender, EventArgs e)
+        {
+            makeSavingThrowRoll("WIS");
+        }
+
+        private void buttonChaSaveRoll_Click(object sender, EventArgs e)
+        {
+            makeSavingThrowRoll("CHA");
+        }
     }
 
     /// <summary>

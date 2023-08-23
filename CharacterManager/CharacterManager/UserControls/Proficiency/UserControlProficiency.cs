@@ -19,17 +19,11 @@ namespace CharacterManager
         protected int _proficiencyBonus = 0;
 
         private List<BonusValueModifier> _extraModifiers = new List<BonusValueModifier>();
-        public List<BonusValueModifier> ExtraModifiers
+
+        public void setExtraModifiers(List<BonusValueModifier> modifiers)
         {
-            get
-            {
-                return _extraModifiers;
-            }
-            set
-            {
-                _extraModifiers = value;
-                UpdateDisplayedData();
-            }
+            _extraModifiers = modifiers;
+            UpdateDisplayedData();
         }
 
         public String ProficiencyName

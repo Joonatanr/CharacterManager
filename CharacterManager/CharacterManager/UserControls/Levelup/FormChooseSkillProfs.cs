@@ -61,6 +61,16 @@ namespace CharacterManager.UserControls.Levelup
             userControlSkillProficiencies1.setUpChoiceExpertise(numberOfNewExpertiseChoices);
         }
 
+        public List<string> getAllSelectedSkillProficiencies()
+        {
+            return userControlSkillProficiencies1.getAllSkillProficiencies();
+        }
+
+        public List<string> getAllSelectedSkillExpertise()
+        {
+            return userControlSkillProficiencies1.getAllSkillExpertise();
+        }
+
 
         private void updateDisplayedData()
         {
