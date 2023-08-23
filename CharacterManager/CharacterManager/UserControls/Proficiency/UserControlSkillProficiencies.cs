@@ -377,7 +377,10 @@ namespace CharacterManager.UserControls
                 ctrl.setExpertiseEditable(false);
                 LockedSkillExpertise.Add(skill);
                 /* Since we have at least one expertise available, then this should be made visible. */
-                setExpertiseVisible(true);
+                if (!IsCombinedProfExpertiseDisplay) 
+                { 
+                    setExpertiseVisible(true);
+                }
                 return true;
             }
 
