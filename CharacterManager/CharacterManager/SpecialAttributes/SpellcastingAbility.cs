@@ -64,16 +64,16 @@ namespace CharacterManager.SpecialAttributes
             List<PlayerSpell> res = new List<PlayerSpell>();
 
             int MaxLevelSpellSlot = 0;
-            SpellSlots_T slots = SpellslotPerLevel[playerLevel];
+            SpellSlots_T slots = SpellslotPerLevel[playerLevel - 1];
             for (int x = 0; x <= 9; x++)
             {
                 if (slots.getNumberOfSlotsPerLevel(x) > 0)
                 {
-                    MaxLevelSpellSlot = Math.Max(MaxLevelSpellSlot, slots.getNumberOfSlotsPerLevel(x));
+                    MaxLevelSpellSlot = Math.Max(MaxLevelSpellSlot, x);
                 }
             }
 
-            for (int x = 0; x < MaxLevelSpellSlot; x++)
+            for (int x = 0; x <= MaxLevelSpellSlot; x++)
             {
                 List<PlayerSpell> spellsOfLevel = GetAvailableSpells(x);
                 res.AddRange(spellsOfLevel);

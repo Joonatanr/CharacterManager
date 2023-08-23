@@ -84,22 +84,8 @@ namespace CharacterManager
                 //4. Update skill bonuses.
 
                 userControlSkillProficiencies1.ConnectToPlayerCharacter(activeCharacter);
-#if false
-                userControlSkillProficiencies1.updateSkillProficiencyFields(activeCharacter.getModifier("STR"),
-                                                                            activeCharacter.getModifier("DEX"),
-                                                                            activeCharacter.getModifier("INT"),
-                                                                            activeCharacter.getModifier("WIS"),
-                                                                            activeCharacter.getModifier("CHA"),
-                                                                            activeCharacter.getModifier("CON"),
-                                                                            activeCharacter.ProficiencyBonus);
 
-                foreach(string skill in activeCharacter.SkillProficiencies)
-                {
-                    userControlSkillProficiencies1.setProficientAtSkill(skill);
-                }
-#endif
-
-                //6. Update Player alignment.
+                //5. Update Player alignment.
                 String alignmentString = activeCharacter.Alignment.ToString();
                 for(int x = 1; x < alignmentString.Length; x++)
                 {
@@ -110,13 +96,13 @@ namespace CharacterManager
                     }
                 }
 
-                //7. Update Hit Points.
+                //6. Update Hit Points.
                 UpdateHitPoints();
 
-                //8. Update character alignment.
+                //7. Update character alignment.
                 textBoxAlignment.Text = alignmentString;
 
-                //9. Update character abilities.
+                //8. Update character abilities.
                 UpdateCharacterAbilities();
 
                 //9.1 Update Weapon and armor Proficiencies.

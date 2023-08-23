@@ -267,9 +267,27 @@ namespace CharacterManager.UserControls
                 setProficientAtSkill(skill);
             }
 
-            foreach(string skill in _connectedCharacter.SkillExpertise)
+            foreach (string skill in _connectedCharacter.SkillExpertise)
             {
                 setExpertiseAtSkill(skill);
+            }
+
+            /* Handle any extra bonuses that might come from abilityies. */
+            c.UpdateSkillBonusFromAbilities();
+
+            /* Now lets add these extra modifiers... */
+            foreach (UserControlSkillProficiency ctrl in skillProficiencyControlList)
+            {
+                string skillName = ctrl.ProficiencyName;
+                try
+                {
+                    List<BonusValueModifier> modifiers = c.BonusValues.CharacterSkillBonusesFromAbilities[skillName];
+                    ctrl.ExtraModifiers = modifiers;
+                }
+                catch (Exception)
+                {
+                    /* Member does not exist, so no bonus values for this skill.  */
+                }
             }
         }
 
@@ -283,6 +301,22 @@ namespace CharacterManager.UserControls
             currentConBonus = ConBonus;
             currentProfBonus = profBonus;
 
+            updateControlInformation();
+        }
+
+        public void resetControls()
+        {
+            foreach (UserControlSkillProficiency profControl in skillProficiencyControlList)
+            {
+                profControl.setEditable(false);
+            }
+
+            updateControlInformation();
+            LockedSkillProficiencies = new List<string>();
+        }
+
+        private void updateControlInformation()
+        {
             foreach (UserControlSkillProficiency profControl in skillProficiencyControlList)
             {
                 String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
@@ -291,17 +325,6 @@ namespace CharacterManager.UserControls
             }
         }
 
-        public void resetControls()
-        {
-            foreach (UserControlSkillProficiency profControl in skillProficiencyControlList)
-            {
-                profControl.setEditable(false);
-                String baseSkill = profControl.ProficiencyBaseSkill.ToUpper();
-                BonusValueModifier BaseSkillBonus = new BonusValueModifier(baseSkill, getCurrentAttributeBonus(baseSkill));
-                profControl.setValueAndProficiency(BaseSkillBonus, profControl.IsProficient(), currentProfBonus);
-            }
-            LockedSkillProficiencies = new List<string>();
-        }
 
         public bool setProficientAtSkill(string skill)
         {

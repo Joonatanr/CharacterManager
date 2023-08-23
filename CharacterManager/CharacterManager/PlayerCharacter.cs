@@ -61,7 +61,7 @@ namespace CharacterManager
             "Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation",
             "Medicine","Nature","Perception","Performance","Persuasion","Religion","Sleight Of Hand","Stealth","Survival",
         };
-        
+
 
         private CharacterBaseAttributes _baseAttributes;
         private PlayerRace MainRace; //This contains the actual object of the race of the character. 
@@ -303,6 +303,8 @@ namespace CharacterManager
 
         public event PlayerEvent CharacterHPChanged;
         public event PlayerEvent CharacterAbilityStatsUpdated;
+
+        public event PlayerEvent CharacterSkillBonuseUpdated;
 
         public PlayerCharacter()
         {
@@ -573,6 +575,7 @@ namespace CharacterManager
 
             CharacterHPChanged = null;
             CharacterAbilityStatsUpdated = null;
+            CharacterSkillBonuseUpdated = null;
         }
 
         private void abilityUsed(PlayerAbility ability)
@@ -754,6 +757,12 @@ namespace CharacterManager
             res.AddRange(WeaponProficiencies);
             res.AddRange(ArmorProficiencies);
             return res;
+        }
+
+        public void UpdateSkillBonusFromAbilities()
+        {
+            BonusValues.CharacterSkillBonusesFromAbilities = new Dictionary<string, List<BonusValueModifier>>();
+            CharacterSkillBonuseUpdated?.Invoke(this);
         }
 
         /*************************** Private functions **************************/

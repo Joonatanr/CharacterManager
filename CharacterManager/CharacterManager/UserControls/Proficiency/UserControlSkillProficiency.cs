@@ -136,9 +136,9 @@ namespace CharacterManager.UserControls.Proficiency
             if (IsExpertise())
             {
                 /* We give double proficiency bonus here. */
-                //res += _proficiencyBonus;
                 res.Add(new BonusValueModifier("expertise", _proficiencyBonus));
             }
+
             return res;
         }
     }

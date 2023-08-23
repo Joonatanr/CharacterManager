@@ -18,6 +18,20 @@ namespace CharacterManager
         protected BonusValueModifier _baseValue = new BonusValueModifier("None", 0);
         protected int _proficiencyBonus = 0;
 
+        private List<BonusValueModifier> _extraModifiers = new List<BonusValueModifier>();
+        public List<BonusValueModifier> ExtraModifiers
+        {
+            get
+            {
+                return _extraModifiers;
+            }
+            set
+            {
+                _extraModifiers = value;
+                UpdateDisplayedData();
+            }
+        }
+
         public String ProficiencyName
         {
             get
@@ -73,13 +87,17 @@ namespace CharacterManager
                 checkBoxProficiency.Checked = false;
             }
 
-            //int displayedValue = getBonusValue();
+            UpdateDisplayedData();
+        }
+
+        private void UpdateDisplayedData()
+        {
             List<BonusValueModifier> modifiers = getBonusValueModifiers();
             int displayedValue = BonusValueModifier.getTotalValueFromList(modifiers);
             toolTip1.SetToolTip(textBoxModifier, BonusValueModifier.getToolTipStringFromList(modifiers));
 
             string modifierText;
-            
+
             if (displayedValue >= 0)
             {
                 modifierText = "+" + displayedValue.ToString();
@@ -135,8 +153,12 @@ namespace CharacterManager
 
             if (IsProficient())
             {
-                //res += _proficiencyBonus;
                 res.Add(new BonusValueModifier("Prof. bonus", _proficiencyBonus));
+            }
+
+            foreach (BonusValueModifier modifier in _extraModifiers)
+            {
+                res.Add(modifier);
             }
 
             return res;

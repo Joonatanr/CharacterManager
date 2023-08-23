@@ -345,6 +345,44 @@ namespace CharacterManager
     /*********************************************************************************************/
 
     /******* Bard class abilities. ********/
-    /* TODO */ 
+    public class JackOfAllTradesAbility : SpecialAttribute
+    {
+        public JackOfAllTradesAbility()
+        {
+            this.Name = "Jack Of All Trades";
+        }
 
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.CharacterSkillBonuseUpdated += C_CharacterSkillBonusUpdated;
+        }
+
+        private void C_CharacterSkillBonusUpdated(PlayerCharacter c)
+        {
+            String[] CharacterSkillProficiencies = new String[]
+            {
+                "Acrobatics","Animal Handling","Arcana","Athletics","Deception","History","Insight","Intimidation","Investigation",
+                "Medicine","Nature","Perception","Performance","Persuasion","Religion","Sleight Of Hand","Stealth","Survival",
+            };
+
+            BonusValueModifier HalfProfBonusMod = new BonusValueModifier("Half Prof (Jack of All Trades)", c.ProficiencyBonus / 2);
+
+            foreach(string skill in CharacterSkillProficiencies)
+            {
+                if (!c.SkillProficiencies.Contains(skill))
+                {
+                    if (c.BonusValues.CharacterSkillBonusesFromAbilities.Keys.Contains(skill))
+                    {
+                        c.BonusValues.CharacterSkillBonusesFromAbilities[skill].Add(HalfProfBonusMod);
+                    }
+                    else
+                    {
+                        List<BonusValueModifier> myList = new List<BonusValueModifier>();
+                        myList.Add(HalfProfBonusMod);
+                        c.BonusValues.CharacterSkillBonusesFromAbilities.Add(skill, myList);
+                    }
+                }
+            }
+        }
+    }
 }

@@ -21,6 +21,9 @@ namespace CharacterManager
         /* Values that might be accessed during levelup. */
         public List<BonusValueModifier> HitPointLevelupModifiers = new List<BonusValueModifier>();
 
+        /* Abilities might give extra bonus to ability check modifiers. */
+        public Dictionary<String, List<BonusValueModifier>> CharacterSkillBonusesFromAbilities = new Dictionary<string, List<BonusValueModifier>>();
+
         public int AttackRollBonus
         {
             get
