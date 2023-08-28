@@ -28,7 +28,24 @@ namespace CharacterManager
             CharacterFactory.Initialize();
 
             userControlHitPoints1.HitPointsChangedListener = new UserControlHitPoints.HitPointsChanged(HitPointsChanged);
+            
+            userControlCurrencyCopper.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
+            userControlCurrencySilver.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
+            userControlCurrencyGold.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
+            userControlCurrencyElectrum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
+            userControlCurrencyPlatinum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
+        }
 
+        private void GoldChanged(int amount)
+        {
+            if(activeCharacter != null)
+            {
+                activeCharacter.CopperPieces = userControlCurrencyCopper.CurrencyAmount;
+                activeCharacter.SilverPieces = userControlCurrencySilver.CurrencyAmount;
+                activeCharacter.GoldPieces = userControlCurrencyGold.CurrencyAmount;
+                activeCharacter.ElectrumPieces = userControlCurrencyElectrum.CurrencyAmount;
+                activeCharacter.PlatinumPieces = userControlCurrencyPlatinum.CurrencyAmount;
+            }
         }
 
 

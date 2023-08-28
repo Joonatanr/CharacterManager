@@ -45,6 +45,10 @@ namespace CharacterManager.UserControls.MainForm
         private bool isEditing = false;
         private string EditingText = "";
 
+
+        public delegate void CurrencyAmountChangedListener(int amount);
+        public CurrencyAmountChangedListener CurrencyAmountChanged;
+
         public UserControlCurrency() : base()
         {
             InitializeComponent();
@@ -121,7 +125,7 @@ namespace CharacterManager.UserControls.MainForm
                 }
                 else
                 {
-                    /* Replace HP value. */
+                    /* Replace current value. */
                     int value;
                     if (int.TryParse(EditingText, out value))
                     {
@@ -131,6 +135,10 @@ namespace CharacterManager.UserControls.MainForm
             }
 
             isEditing = false;
+            if(CurrencyAmountChanged != null)
+            {
+                CurrencyAmountChanged.Invoke(CurrencyAmount);
+            }
             this.Invalidate();
         }
 
