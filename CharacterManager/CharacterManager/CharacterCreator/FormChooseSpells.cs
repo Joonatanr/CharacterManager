@@ -89,6 +89,16 @@ namespace CharacterManager.CharacterCreator
             return res;
         }
 
+        public bool IsAllSpellsChosen()
+        {
+            if (userControlSpellChoice1.RemainingAvailableChoices > 0 || userControlSpellChoice2.RemainingAvailableChoices > 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         private void updateNumberOfChoices()
         {
             userControlSpellChoice1.MaximumAvailableChoices = NumberOfCantripsToChoose;

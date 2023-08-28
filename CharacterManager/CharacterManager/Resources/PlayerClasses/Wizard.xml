@@ -177,6 +177,36 @@
 		<string>Spider Climb</string>
 		<string>Suggestion</string>
 		<string>Web</string>
+		<!-- Level 3 spells-->
+		<string>Animate Dead</string>
+		<string>Bestow Curse</string>
+        <string>Blink</string>
+        <string>Clairvoyance</string>
+        <string>Counterspell</string>
+        <string>Dispel Magic</string>
+        <string>Fear</string>
+        <string>Feign Death</string>
+        <string>Fireball</string>
+        <string>Fly</string>
+        <string>Gaseous Form</string>
+        <string>Glyph Of Warding</string>
+        <string>Haste</string>
+        <string>Hypnotic Pattern</string>
+        <string>Leomund’s Tiny Hut</string>
+        <string>Lightning Bolt</string>
+        <string>Magic Circle</string>
+        <string>Major Image</string>
+        <string>Nondetection</string>
+        <string>Phantom Steed</string>
+        <string>Protection from Energy</string>
+        <string>Remove Curse</string>
+        <string>Sending</string>
+        <string>Sleet Storm</string>
+        <string>Slow</string>
+        <string>Stinking Cloud</string>
+        <string>Tongues</string>
+        <string>Vampiric Touch</string>
+        <string>Water Breathing</string>
 	</AvailableSpells>
 	<SpellslotPerLevel>
 		<!-- Level 1 -->

@@ -190,6 +190,15 @@ namespace CharacterManager.CharacterCreator
 
                 /* 11 Add spells */
                 /* TODO : If a class knows all available spells, then we should add all of these. */
+                if (SelectedClass.SpellCasting != null)
+                {
+                    if (!myChooseSpellsForm.IsAllSpellsChosen() || (isSelectedSpellsFormOpened == false))
+                    {
+                        msg = "Not all available spells have been chosen!";
+                        return false;
+                    }
+                }
+
                 List<PlayerSpell> chosenSpells = myChooseSpellsForm.getChosenPlayerSpells();
                 List<String> chosenSpellNames = new List<String>();
 
@@ -231,7 +240,6 @@ namespace CharacterManager.CharacterCreator
             else
             {
                 MessageBox.Show(msg);
-                handleErrorData();
             }   
         }
 
@@ -964,6 +972,9 @@ namespace CharacterManager.CharacterCreator
                     /* Reset all equipment choices. */
                     myChooseEquipmentForm = new FormChooseEquipment();
                     updateEquipmentList();
+
+                    /* We need to choose out spells before closing the form. */
+                    isSelectedSpellsFormOpened = false;
                 }
             }
         }
@@ -1041,6 +1052,7 @@ namespace CharacterManager.CharacterCreator
         }
 
         /* TODO : This is just a hack to ensure that we do not reset spell selection every time the form is reopened. */
+        private bool isSelectedSpellsFormOpened = false;
         private PlayerClass currentClassForSpellcasting = null;
 
         private void buttonChooseSpells_Click(object sender, EventArgs e)
@@ -1077,6 +1089,7 @@ namespace CharacterManager.CharacterCreator
                 myChooseSpellsForm.setSpellChoices(AvailableSpells, NumberOfCantripsToChoose, NumberOfSpellsToChoose);
 
                 currentClassForSpellcasting = SelectedClass;
+                isSelectedSpellsFormOpened = true;
             }
 
             if (myChooseSpellsForm.ShowDialog() == DialogResult.OK)
