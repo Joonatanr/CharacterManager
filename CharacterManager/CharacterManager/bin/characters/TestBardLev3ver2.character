@@ -216,7 +216,26 @@
       <MagicalBonus>1</MagicalBonus>
     </PlayerWeapon>
   </CharacterWeapons>
-  <CharacterArmors />
+  <CharacterArmors>
+    <PlayerArmor>
+      <Description>A decently made piece of leather armor that is reinforced with metal studs.</Description>
+      <ItemName>Studded Leather</ItemName>
+      <Weight>13</Weight>
+      <Cost>45</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ArmorClass>12</ArmorClass>
+      <Type>Light</Type>
+      <IsShield>false</IsShield>
+      <MinStrength>0</MinStrength>
+      <IsStealthDisadvantage>false</IsStealthDisadvantage>
+      <IsDexterityModifier>true</IsDexterityModifier>
+      <MaxDexModifier>20</MaxDexModifier>
+      <IsEquipped>true</IsEquipped>
+      <IsMagical>false</IsMagical>
+      <MagicalAcBonus>0</MagicalAcBonus>
+    </PlayerArmor>
+  </CharacterArmors>
   <CharacterGeneralEquipment>
     <PlayerItem
       xsi:type="PlayerToolKit">

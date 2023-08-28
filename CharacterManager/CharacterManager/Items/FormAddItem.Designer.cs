@@ -39,11 +39,15 @@ namespace CharacterManager.Items
             this.label3 = new System.Windows.Forms.Label();
             this.listBoxMisc = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBoxItemName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.richTextBoxItemDescription = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.richTextBoxItemDescription = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxItemName = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOk
@@ -136,6 +140,7 @@ namespace CharacterManager.Items
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.richTextBoxItemDescription);
             this.groupBox2.Controls.Add(this.label4);
@@ -147,12 +152,22 @@ namespace CharacterManager.Items
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "General Item Properties";
             // 
-            // textBoxItemName
+            // label5
             // 
-            this.textBoxItemName.Location = new System.Drawing.Point(84, 19);
-            this.textBoxItemName.Name = "textBoxItemName";
-            this.textBoxItemName.Size = new System.Drawing.Size(455, 20);
-            this.textBoxItemName.TabIndex = 0;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Description";
+            // 
+            // richTextBoxItemDescription
+            // 
+            this.richTextBoxItemDescription.Location = new System.Drawing.Point(19, 66);
+            this.richTextBoxItemDescription.Name = "richTextBoxItemDescription";
+            this.richTextBoxItemDescription.Size = new System.Drawing.Size(520, 96);
+            this.richTextBoxItemDescription.TabIndex = 2;
+            this.richTextBoxItemDescription.Text = "";
             // 
             // label4
             // 
@@ -163,22 +178,38 @@ namespace CharacterManager.Items
             this.label4.TabIndex = 1;
             this.label4.Text = "Item Name";
             // 
-            // richTextBoxItemDescription
+            // textBoxItemName
             // 
-            this.richTextBoxItemDescription.Location = new System.Drawing.Point(19, 66);
-            this.richTextBoxItemDescription.Name = "richTextBoxItemDescription";
-            this.richTextBoxItemDescription.Size = new System.Drawing.Size(520, 96);
-            this.richTextBoxItemDescription.TabIndex = 2;
-            this.richTextBoxItemDescription.Text = "";
+            this.textBoxItemName.Location = new System.Drawing.Point(84, 19);
+            this.textBoxItemName.Name = "textBoxItemName";
+            this.textBoxItemName.Size = new System.Drawing.Size(455, 20);
+            this.textBoxItemName.TabIndex = 0;
             // 
-            // label5
+            // groupBox3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Description";
+            this.groupBox3.Controls.Add(this.textBoxPrice);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Location = new System.Drawing.Point(19, 168);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(520, 150);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(402, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Price";
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(439, 13);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(75, 20);
+            this.textBoxPrice.TabIndex = 1;
             // 
             // FormAddItem
             // 
@@ -200,6 +231,8 @@ namespace CharacterManager.Items
             this.Text = "FormAddItem";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,5 +254,8 @@ namespace CharacterManager.Items
         private System.Windows.Forms.RichTextBox richTextBoxItemDescription;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxItemName;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -111,6 +111,13 @@ namespace CharacterManager.Items
             /* Here we update the item's general properties. */
             currentItem.ItemName = textBoxItemName.Text;
             currentItem.Description = richTextBoxItemDescription.Text;
+
+            int cost;
+            if (int.TryParse(textBoxPrice.Text, out cost) == true)
+            {
+                currentItem.Cost = cost;
+            }
+
             SelectedItem = currentItem;
             
             this.DialogResult = DialogResult.OK;
@@ -160,6 +167,7 @@ namespace CharacterManager.Items
             if (listBoxMisc.SelectedIndex > -1)
             {
                 groupBox1.Controls.Clear();
+                currentItem = (PlayerItem)listBoxMisc.SelectedItem;
                 updateItemDisplayedData();
                 listBoxArmor.SelectedIndex = -1;
                 listBoxWeapons.SelectedIndex = -1;
@@ -173,6 +181,7 @@ namespace CharacterManager.Items
             groupBox1.Controls.Clear();
             textBoxItemName.Text = currentItem.ItemName;
             richTextBoxItemDescription.Text = currentItem.Description;
+            textBoxPrice.Text = currentItem.Cost.ToString();
         }
     }
 }

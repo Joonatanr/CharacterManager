@@ -722,9 +722,8 @@ namespace CharacterManager
             makeSavingThrowRoll("CHA");
         }
 
-        private void buttonAddItems_Click(object sender, EventArgs e)
+        private void handleAddItems()
         {
-            /* TODO : Placeholder */
             FormAddItem myForm = new FormAddItem();
             myForm.ShowDialog();
 
@@ -753,11 +752,24 @@ namespace CharacterManager
                             UpdateGeneralEquipmentDisplay();
                         }
                     }
-
-
                 }
-                /* TODO */
             }
+        }
+
+        private void buttonAddItems_Click(object sender, EventArgs e)
+        {
+            handleAddItems();
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            handleAddItems();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            handleAddItems();
         }
     }
 
