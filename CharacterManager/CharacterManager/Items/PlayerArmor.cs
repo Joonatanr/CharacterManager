@@ -11,9 +11,11 @@ namespace CharacterManager.Items
     {
         public enum ArmorType
         {
+            None,
             Light,
             Medium,
             Heavy,
+            Shield
         }
 
         public int ArmorClass;
@@ -24,6 +26,8 @@ namespace CharacterManager.Items
         public Boolean IsDexterityModifier;
         public int MaxDexModifier;
         public Boolean IsEquipped = false;
+        public Boolean IsMagical = false;
+        public int MagicalAcBonus = 0;
 
         /*
         public override string ToString()

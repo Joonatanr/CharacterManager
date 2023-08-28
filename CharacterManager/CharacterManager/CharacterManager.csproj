@@ -111,6 +111,12 @@
     <Compile Include="Items\PlayerItem.cs" />
     <Compile Include="Items\PlayerToolKit.cs" />
     <Compile Include="Items\PlayerWeapon.cs" />
+    <Compile Include="Items\UserControlArmorCustomizer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Items\UserControlArmorCustomizer.Designer.cs">
+      <DependentUpon>UserControlArmorCustomizer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items\UserControlWeaponCustomizer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Items\FormAddItem.resx">
       <DependentUpon>FormAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\UserControlArmorCustomizer.resx">
+      <DependentUpon>UserControlArmorCustomizer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Items\UserControlWeaponCustomizer.resx">
       <DependentUpon>UserControlWeaponCustomizer.cs</DependentUpon>

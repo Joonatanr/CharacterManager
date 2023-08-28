@@ -397,7 +397,7 @@ namespace CharacterManager
             /* Add ability and proficiency bonuses */
             List<BonusValueModifier> hitbonuses = getHitBonuses(w);
             attackModifiers.AddRange(hitbonuses);
-            /* TODO : Add any magical bonuses. */
+            /* Add magical bonuses. */
             BonusValueModifier magicalAttackBonus = w.getMagicalAttackBonus();
             if (magicalAttackBonus != null)
             {
