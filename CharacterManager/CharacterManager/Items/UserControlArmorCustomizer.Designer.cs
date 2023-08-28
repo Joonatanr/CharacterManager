@@ -30,28 +30,28 @@ namespace CharacterManager.Items
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButtonHeavy = new System.Windows.Forms.RadioButton();
-            this.radioButtonMedium = new System.Windows.Forms.RadioButton();
-            this.radioButtonLight = new System.Windows.Forms.RadioButton();
-            this.radioButtonShield = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBoxBaseArmorClass = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxIsStealthDisadv = new System.Windows.Forms.CheckBox();
             this.textBoxMinStrengthScore = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBoxIsStealthDisadv = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBoxIsDexModifier = new System.Windows.Forms.CheckBox();
-            this.textBoxMaxDexModifier = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBoxIsMagical = new System.Windows.Forms.CheckBox();
-            this.textBoxMagicalAcBonus = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBoxMagicalAcBonus = new System.Windows.Forms.TextBox();
+            this.checkBoxIsMagical = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxMaxDexModifier = new System.Windows.Forms.TextBox();
+            this.checkBoxIsDexModifier = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButtonShield = new System.Windows.Forms.RadioButton();
+            this.radioButtonLight = new System.Windows.Forms.RadioButton();
+            this.radioButtonMedium = new System.Windows.Forms.RadioButton();
+            this.radioButtonHeavy = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -68,62 +68,27 @@ namespace CharacterManager.Items
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // groupBox2
+            // groupBox4
             // 
-            this.groupBox2.Controls.Add(this.radioButtonShield);
-            this.groupBox2.Controls.Add(this.radioButtonLight);
-            this.groupBox2.Controls.Add(this.radioButtonMedium);
-            this.groupBox2.Controls.Add(this.radioButtonHeavy);
-            this.groupBox2.Location = new System.Drawing.Point(245, 7);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(115, 94);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Armor Type";
+            this.groupBox4.Controls.Add(this.textBoxBaseArmorClass);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.checkBoxIsStealthDisadv);
+            this.groupBox4.Controls.Add(this.textBoxMinStrengthScore);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Location = new System.Drawing.Point(6, 7);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(233, 94);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
             // 
-            // radioButtonHeavy
+            // textBoxBaseArmorClass
             // 
-            this.radioButtonHeavy.AutoSize = true;
-            this.radioButtonHeavy.Location = new System.Drawing.Point(6, 13);
-            this.radioButtonHeavy.Name = "radioButtonHeavy";
-            this.radioButtonHeavy.Size = new System.Drawing.Size(56, 17);
-            this.radioButtonHeavy.TabIndex = 0;
-            this.radioButtonHeavy.TabStop = true;
-            this.radioButtonHeavy.Text = "Heavy";
-            this.radioButtonHeavy.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonMedium
-            // 
-            this.radioButtonMedium.AutoSize = true;
-            this.radioButtonMedium.Location = new System.Drawing.Point(6, 31);
-            this.radioButtonMedium.Name = "radioButtonMedium";
-            this.radioButtonMedium.Size = new System.Drawing.Size(62, 17);
-            this.radioButtonMedium.TabIndex = 1;
-            this.radioButtonMedium.TabStop = true;
-            this.radioButtonMedium.Text = "Medium";
-            this.radioButtonMedium.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonLight
-            // 
-            this.radioButtonLight.AutoSize = true;
-            this.radioButtonLight.Location = new System.Drawing.Point(6, 49);
-            this.radioButtonLight.Name = "radioButtonLight";
-            this.radioButtonLight.Size = new System.Drawing.Size(48, 17);
-            this.radioButtonLight.TabIndex = 2;
-            this.radioButtonLight.TabStop = true;
-            this.radioButtonLight.Text = "Light";
-            this.radioButtonLight.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonShield
-            // 
-            this.radioButtonShield.AutoSize = true;
-            this.radioButtonShield.Location = new System.Drawing.Point(6, 68);
-            this.radioButtonShield.Name = "radioButtonShield";
-            this.radioButtonShield.Size = new System.Drawing.Size(54, 17);
-            this.radioButtonShield.TabIndex = 3;
-            this.radioButtonShield.TabStop = true;
-            this.radioButtonShield.Text = "Shield";
-            this.radioButtonShield.UseVisualStyleBackColor = true;
+            this.textBoxBaseArmorClass.Location = new System.Drawing.Point(118, 19);
+            this.textBoxBaseArmorClass.Name = "textBoxBaseArmorClass";
+            this.textBoxBaseArmorClass.Size = new System.Drawing.Size(109, 20);
+            this.textBoxBaseArmorClass.TabIndex = 2;
+            this.textBoxBaseArmorClass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBaseArmorClass_KeyPress);
+            this.textBoxBaseArmorClass.Leave += new System.EventHandler(this.textBoxBaseArmorClass_Leave);
             // 
             // label1
             // 
@@ -134,29 +99,6 @@ namespace CharacterManager.Items
             this.label1.TabIndex = 1;
             this.label1.Text = "Base Armor Class";
             // 
-            // textBoxBaseArmorClass
-            // 
-            this.textBoxBaseArmorClass.Location = new System.Drawing.Point(118, 19);
-            this.textBoxBaseArmorClass.Name = "textBoxBaseArmorClass";
-            this.textBoxBaseArmorClass.Size = new System.Drawing.Size(109, 20);
-            this.textBoxBaseArmorClass.TabIndex = 2;
-            // 
-            // textBoxMinStrengthScore
-            // 
-            this.textBoxMinStrengthScore.Location = new System.Drawing.Point(118, 45);
-            this.textBoxMinStrengthScore.Name = "textBoxMinStrengthScore";
-            this.textBoxMinStrengthScore.Size = new System.Drawing.Size(109, 20);
-            this.textBoxMinStrengthScore.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Minimum STR score";
-            // 
             // checkBoxIsStealthDisadv
             // 
             this.checkBoxIsStealthDisadv.AutoSize = true;
@@ -166,6 +108,25 @@ namespace CharacterManager.Items
             this.checkBoxIsStealthDisadv.TabIndex = 5;
             this.checkBoxIsStealthDisadv.Text = "Causes Stealth Disadv.";
             this.checkBoxIsStealthDisadv.UseVisualStyleBackColor = true;
+            this.checkBoxIsStealthDisadv.CheckedChanged += new System.EventHandler(this.checkBoxIsStealthDisadv_CheckedChanged);
+            // 
+            // textBoxMinStrengthScore
+            // 
+            this.textBoxMinStrengthScore.Location = new System.Drawing.Point(118, 45);
+            this.textBoxMinStrengthScore.Name = "textBoxMinStrengthScore";
+            this.textBoxMinStrengthScore.Size = new System.Drawing.Size(109, 20);
+            this.textBoxMinStrengthScore.TabIndex = 3;
+            this.textBoxMinStrengthScore.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMinStrengthScore_KeyPress);
+            this.textBoxMinStrengthScore.Leave += new System.EventHandler(this.textBoxMinStrengthScore_Leave);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(5, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Minimum STR score";
             // 
             // groupBox3
             // 
@@ -182,44 +143,23 @@ namespace CharacterManager.Items
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Modifiers";
             // 
-            // checkBoxIsDexModifier
+            // label4
             // 
-            this.checkBoxIsDexModifier.AutoSize = true;
-            this.checkBoxIsDexModifier.Location = new System.Drawing.Point(9, 19);
-            this.checkBoxIsDexModifier.Name = "checkBoxIsDexModifier";
-            this.checkBoxIsDexModifier.Size = new System.Drawing.Size(114, 17);
-            this.checkBoxIsDexModifier.TabIndex = 0;
-            this.checkBoxIsDexModifier.Text = "Uses DEX modifier";
-            this.checkBoxIsDexModifier.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(196, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Magic AC Bonus";
             // 
-            // textBoxMaxDexModifier
+            // textBoxMagicalAcBonus
             // 
-            this.textBoxMaxDexModifier.Location = new System.Drawing.Point(118, 36);
-            this.textBoxMaxDexModifier.Name = "textBoxMaxDexModifier";
-            this.textBoxMaxDexModifier.Size = new System.Drawing.Size(64, 20);
-            this.textBoxMaxDexModifier.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Max DEX modifier";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.textBoxBaseArmorClass);
-            this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.checkBoxIsStealthDisadv);
-            this.groupBox4.Controls.Add(this.textBoxMinStrengthScore);
-            this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(6, 7);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(233, 94);
-            this.groupBox4.TabIndex = 7;
-            this.groupBox4.TabStop = false;
+            this.textBoxMagicalAcBonus.Location = new System.Drawing.Point(288, 36);
+            this.textBoxMagicalAcBonus.Name = "textBoxMagicalAcBonus";
+            this.textBoxMagicalAcBonus.Size = new System.Drawing.Size(60, 20);
+            this.textBoxMagicalAcBonus.TabIndex = 4;
+            this.textBoxMagicalAcBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMagicalAcBonus_KeyPress);
+            this.textBoxMagicalAcBonus.Leave += new System.EventHandler(this.textBoxMagicalAcBonus_Leave);
             // 
             // checkBoxIsMagical
             // 
@@ -230,22 +170,97 @@ namespace CharacterManager.Items
             this.checkBoxIsMagical.TabIndex = 3;
             this.checkBoxIsMagical.Text = "Magical";
             this.checkBoxIsMagical.UseVisualStyleBackColor = true;
+            this.checkBoxIsMagical.CheckedChanged += new System.EventHandler(this.checkBoxIsMagical_CheckedChanged);
             // 
-            // textBoxMagicalAcBonus
+            // label3
             // 
-            this.textBoxMagicalAcBonus.Location = new System.Drawing.Point(288, 36);
-            this.textBoxMagicalAcBonus.Name = "textBoxMagicalAcBonus";
-            this.textBoxMagicalAcBonus.Size = new System.Drawing.Size(60, 20);
-            this.textBoxMagicalAcBonus.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(5, 39);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Max DEX modifier";
             // 
-            // label4
+            // textBoxMaxDexModifier
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(196, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Magic AC Bonus";
+            this.textBoxMaxDexModifier.Location = new System.Drawing.Point(118, 36);
+            this.textBoxMaxDexModifier.Name = "textBoxMaxDexModifier";
+            this.textBoxMaxDexModifier.Size = new System.Drawing.Size(64, 20);
+            this.textBoxMaxDexModifier.TabIndex = 1;
+            this.textBoxMaxDexModifier.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMaxDexModifier_KeyPress);
+            this.textBoxMaxDexModifier.Leave += new System.EventHandler(this.textBoxMaxDexModifier_Leave);
+            // 
+            // checkBoxIsDexModifier
+            // 
+            this.checkBoxIsDexModifier.AutoSize = true;
+            this.checkBoxIsDexModifier.Location = new System.Drawing.Point(9, 19);
+            this.checkBoxIsDexModifier.Name = "checkBoxIsDexModifier";
+            this.checkBoxIsDexModifier.Size = new System.Drawing.Size(114, 17);
+            this.checkBoxIsDexModifier.TabIndex = 0;
+            this.checkBoxIsDexModifier.Text = "Uses DEX modifier";
+            this.checkBoxIsDexModifier.UseVisualStyleBackColor = true;
+            this.checkBoxIsDexModifier.CheckedChanged += new System.EventHandler(this.checkBoxIsDexModifier_CheckedChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButtonShield);
+            this.groupBox2.Controls.Add(this.radioButtonLight);
+            this.groupBox2.Controls.Add(this.radioButtonMedium);
+            this.groupBox2.Controls.Add(this.radioButtonHeavy);
+            this.groupBox2.Location = new System.Drawing.Point(245, 7);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(115, 94);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Armor Type";
+            // 
+            // radioButtonShield
+            // 
+            this.radioButtonShield.AutoSize = true;
+            this.radioButtonShield.Location = new System.Drawing.Point(6, 68);
+            this.radioButtonShield.Name = "radioButtonShield";
+            this.radioButtonShield.Size = new System.Drawing.Size(54, 17);
+            this.radioButtonShield.TabIndex = 3;
+            this.radioButtonShield.TabStop = true;
+            this.radioButtonShield.Text = "Shield";
+            this.radioButtonShield.UseVisualStyleBackColor = true;
+            this.radioButtonShield.CheckedChanged += new System.EventHandler(this.radioButtonShield_CheckedChanged);
+            // 
+            // radioButtonLight
+            // 
+            this.radioButtonLight.AutoSize = true;
+            this.radioButtonLight.Location = new System.Drawing.Point(6, 49);
+            this.radioButtonLight.Name = "radioButtonLight";
+            this.radioButtonLight.Size = new System.Drawing.Size(48, 17);
+            this.radioButtonLight.TabIndex = 2;
+            this.radioButtonLight.TabStop = true;
+            this.radioButtonLight.Text = "Light";
+            this.radioButtonLight.UseVisualStyleBackColor = true;
+            this.radioButtonLight.CheckedChanged += new System.EventHandler(this.radioButtonLight_CheckedChanged);
+            // 
+            // radioButtonMedium
+            // 
+            this.radioButtonMedium.AutoSize = true;
+            this.radioButtonMedium.Location = new System.Drawing.Point(6, 31);
+            this.radioButtonMedium.Name = "radioButtonMedium";
+            this.radioButtonMedium.Size = new System.Drawing.Size(62, 17);
+            this.radioButtonMedium.TabIndex = 1;
+            this.radioButtonMedium.TabStop = true;
+            this.radioButtonMedium.Text = "Medium";
+            this.radioButtonMedium.UseVisualStyleBackColor = true;
+            this.radioButtonMedium.CheckedChanged += new System.EventHandler(this.radioButtonMedium_CheckedChanged);
+            // 
+            // radioButtonHeavy
+            // 
+            this.radioButtonHeavy.AutoSize = true;
+            this.radioButtonHeavy.Location = new System.Drawing.Point(6, 13);
+            this.radioButtonHeavy.Name = "radioButtonHeavy";
+            this.radioButtonHeavy.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonHeavy.TabIndex = 0;
+            this.radioButtonHeavy.TabStop = true;
+            this.radioButtonHeavy.Text = "Heavy";
+            this.radioButtonHeavy.UseVisualStyleBackColor = true;
+            this.radioButtonHeavy.CheckedChanged += new System.EventHandler(this.radioButtonHeavy_CheckedChanged);
             // 
             // UserControlArmorCustomizer
             // 
@@ -255,12 +270,12 @@ namespace CharacterManager.Items
             this.Name = "UserControlArmorCustomizer";
             this.Size = new System.Drawing.Size(372, 191);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -18,6 +18,7 @@ namespace CharacterManager.Items
         private PlayerItem currentItem;
 
         private UserControlWeaponCustomizer myWeaponProperties = null;
+        private UserControlArmorCustomizer myArmorProperties = null;
 
         public PlayerItem SelectedItem = null;
 
@@ -55,6 +56,22 @@ namespace CharacterManager.Items
             foreach (PlayerArmor a in myArmor)
             {
                 listBoxArmor.Items.Add(a);
+                PlayerArmor PlusOne = a.Clone();
+                PlusOne.IsMagical = true;
+                PlusOne.MagicalAcBonus = 1;
+                PlusOne.ItemName += " +1";
+                PlayerArmor PlusTwo = a.Clone();
+                PlusTwo.IsMagical = true;
+                PlusTwo.MagicalAcBonus = 2;
+                PlusTwo.ItemName += " +2";
+                PlayerArmor PlusThree = a.Clone();
+                PlusThree.IsMagical = true;
+                PlusThree.MagicalAcBonus = 3;
+                PlusThree.ItemName += " +3";
+
+                listBoxArmor.Items.Add(PlusOne);
+                listBoxArmor.Items.Add(PlusTwo);
+                listBoxArmor.Items.Add(PlusThree);
             }
 
             foreach (PlayerItem i in myMiscItems)
@@ -75,7 +92,10 @@ namespace CharacterManager.Items
             }
             else if(currentItem is PlayerArmor)
             {
-                /* TODO */
+                if (myArmorProperties != null)
+                {
+                    currentItem = myArmorProperties.getConnectedItem();
+                }
             }
             else
             {
@@ -123,8 +143,13 @@ namespace CharacterManager.Items
         {
             if (listBoxArmor.SelectedIndex > -1)
             {
-                groupBox1.Controls.Clear();
+                currentItem = (PlayerItem)listBoxArmor.SelectedItem;
                 updateItemDisplayedData();
+                myArmorProperties = new UserControlArmorCustomizer();
+                myArmorProperties.Location = new Point(5, 10);
+                myArmorProperties.setConnectedItem((PlayerArmor)currentItem);
+                groupBox1.Controls.Add(myArmorProperties);
+
                 listBoxWeapons.SelectedIndex = -1;
                 listBoxMisc.SelectedIndex = -1;
             }

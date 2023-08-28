@@ -408,7 +408,6 @@ namespace CharacterManager
             /* First lets get the base damage. */
             List<BonusValueModifier> baseDamageValues = w.getBaseDamageModifiers();
             damageModifiers.AddRange(baseDamageValues);
-            //damageModifiers.Add(new BonusValueModifier("base damage", w.getBaseDamage()));
 
            /* Now lets get the damage bonuses from abilities */
 

@@ -82,12 +82,6 @@ namespace CharacterManager.Items
         public Boolean IsMagical = false;
         public int MagicalBonus = 0;
 
-        public int rollDamage(out String log)
-        {
-            DieRollEquation value = new DieRollEquation(Damage.DamageValue);
-            return value.RollValue(out log);
-        }
-
         public override string getExtendedDescription()
         {
             String res = ItemName + ":\n";
@@ -124,23 +118,6 @@ namespace CharacterManager.Items
             }
         }
 
-        /*
-        public String getBaseDamage()
-        {
-            String res = "";
-
-            if (IsVersatile && IsEquippedTwoHanded)
-            {
-                res += TwoHandedDamage.DamageValue;
-            }
-            else
-            {
-                res += Damage.DamageValue;
-            }
-
-            return res;
-        }
-        */
 
         public List<BonusValueModifier> getBaseDamageModifiers()
         {
