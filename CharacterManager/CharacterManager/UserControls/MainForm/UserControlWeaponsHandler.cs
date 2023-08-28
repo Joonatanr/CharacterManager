@@ -229,9 +229,7 @@ namespace CharacterManager.UserControls
 
             foreach (PlayerWeapon w in weaponList)
             {
-                /* Dirt hack for the drop button... */
-                //drawTextOnLine(gfx, "        " + w.ItemName, y);
-                drawTextOnLine(gfx, w.getDisplayedName(), 40, y, FontStyle.Regular, this.Width - 80);
+                drawTextOnLine(gfx, w.getDisplayedName(), 40, y, FontStyle.Regular, this.Width - 200);
 
                 y++;
             }

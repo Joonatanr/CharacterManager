@@ -96,6 +96,8 @@
             this.toolStripButtonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonLoad = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.dieRollTextBox1 = new CharacterManager.UserControls.DieRollTextBox();
             this.userControlCurrencyPlatinum = new CharacterManager.UserControls.MainForm.UserControlCurrency();
             this.userControlCurrencyElectrum = new CharacterManager.UserControls.MainForm.UserControlCurrency();
@@ -123,8 +125,6 @@
             this.AttributeDisplayDEX = new CharacterManager.UserControlAttributeDisplay();
             this.AttributeDisplayCON = new CharacterManager.UserControlAttributeDisplay();
             this.userControlMagicHandler1 = new CharacterManager.UserControls.UserControlMagicHandler();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -568,7 +568,7 @@
             // 
             // buttonAddItems
             // 
-            this.buttonAddItems.Location = new System.Drawing.Point(206, 3);
+            this.buttonAddItems.Location = new System.Drawing.Point(206, 0);
             this.buttonAddItems.Name = "buttonAddItems";
             this.buttonAddItems.Size = new System.Drawing.Size(127, 23);
             this.buttonAddItems.TabIndex = 34;
@@ -883,6 +883,26 @@
             this.toolStripButtonLoad.Text = "Load";
             this.toolStripButtonLoad.Click += new System.EventHandler(this.toolStripButtonLoad_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(205, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 23);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Add Item(s)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(201, 1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(127, 23);
+            this.button2.TabIndex = 36;
+            this.button2.Text = "Add Item(s)";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // dieRollTextBox1
             // 
             this.dieRollTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -1138,26 +1158,6 @@
             this.userControlMagicHandler1.Name = "userControlMagicHandler1";
             this.userControlMagicHandler1.Size = new System.Drawing.Size(1054, 828);
             this.userControlMagicHandler1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(205, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 23);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Add Item(s)";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(201, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 23);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Add Item(s)";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Form1
             // 
