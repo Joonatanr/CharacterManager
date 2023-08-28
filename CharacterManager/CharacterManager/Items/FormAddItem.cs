@@ -56,6 +56,13 @@ namespace CharacterManager.Items
         {
             if (listBoxWeapons.SelectedIndex > -1)
             {
+                groupBox1.Controls.Clear();
+                UserControlWeaponCustomizer myWeaponProperties = new UserControlWeaponCustomizer();
+                myWeaponProperties.Location = new Point(5, 10);
+                groupBox1.Controls.Add(myWeaponProperties);
+
+
+                /* TODO : Connect the actual weapon. */
                 listBoxArmor.SelectedIndex = -1;
                 listBoxMisc.SelectedIndex = -1;
             }
@@ -65,6 +72,7 @@ namespace CharacterManager.Items
         {
             if (listBoxArmor.SelectedIndex > -1)
             {
+                groupBox1.Controls.Clear();
                 listBoxWeapons.SelectedIndex = -1;
                 listBoxMisc.SelectedIndex = -1;
             }
@@ -74,6 +82,7 @@ namespace CharacterManager.Items
         {
             if (listBoxMisc.SelectedIndex > -1)
             {
+                groupBox1.Controls.Clear();
                 listBoxArmor.SelectedIndex = -1;
                 listBoxWeapons.SelectedIndex = -1;
             }

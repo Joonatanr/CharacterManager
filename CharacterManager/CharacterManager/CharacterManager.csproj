@@ -111,6 +111,12 @@
     <Compile Include="Items\PlayerItem.cs" />
     <Compile Include="Items\PlayerToolKit.cs" />
     <Compile Include="Items\PlayerWeapon.cs" />
+    <Compile Include="Items\UserControlWeaponCustomizer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Items\UserControlWeaponCustomizer.Designer.cs">
+      <DependentUpon>UserControlWeaponCustomizer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Language.cs" />
     <Compile Include="PlayerAbility.cs" />
     <Compile Include="PlayerAbilityDescriptor.cs" />
@@ -385,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Items\FormAddItem.resx">
       <DependentUpon>FormAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items\UserControlWeaponCustomizer.resx">
+      <DependentUpon>UserControlWeaponCustomizer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

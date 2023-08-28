@@ -61,9 +61,14 @@ namespace CharacterManager.Items
 
         public WeaponDamage Damage;
         public WeaponDamage TwoHandedDamage;
+        public List<WeaponDamage> ExtraDamage = new List<WeaponDamage>(); /* Some weapons can do an extra 1d4 radiant/fire/cold damage etc. */
         public Boolean      IsEquipped = false;
         public Boolean IsEquippedTwoHanded = false;
         public String AmmoType = string.Empty;
+
+        /* For +X weapons */
+        public Boolean IsMagical = false;
+        public int MagicalBonus = 0;
 
         public int rollDamage(out String log)
         {

@@ -67,12 +67,12 @@ namespace CharacterManager.Items
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.AutoSize = true;
             this.groupBox1.Location = new System.Drawing.Point(174, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(478, 606);
+            this.groupBox1.Size = new System.Drawing.Size(545, 212);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // listBoxWeapons
             // 
@@ -132,7 +132,7 @@ namespace CharacterManager.Items
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 630);
+            this.ClientSize = new System.Drawing.Size(731, 630);
             this.Controls.Add(this.listBoxMisc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listBoxArmor);
@@ -142,6 +142,7 @@ namespace CharacterManager.Items
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonOk);
+            this.MinimumSize = new System.Drawing.Size(747, 669);
             this.Name = "FormAddItem";
             this.Text = "FormAddItem";
             this.ResumeLayout(false);
