@@ -30,6 +30,7 @@ namespace CharacterManager
         private static List<Items.PlayerWeapon> WeaponList;
         private static List<Items.PlayerItem> GenericItemList;
         private static List<Items.PlayerToolKit> ToolKitItemList;
+        private static List<Items.PlayerItem> MagicItemList;
         private static List<Language> LanguageList;
         private static List<CombatManeuver> CombatManeuverList;
 
@@ -96,6 +97,7 @@ namespace CharacterManager
                 parseArmorFromXml("Resources/PlayerItems/PlayerArmor.xml");
                 parseWeaponsFromXml("Resources/PlayerItems/PlayerWeapon.xml");
                 parseToolkitsFromXml("Resources/PlayerItems/PlayerTools.xml");
+                parseMagicItemsFromXml("Resources/PlayerItems/MagicItems.xml");
                 parseLanguagesFromXml("Resources/Languages.xml");
                 parseCombatManeuversFromXml("Resources/CombatManeuvers.xml");
                 parseSpellsFromXml("Resources/PlayerSpells.xml");
@@ -180,6 +182,11 @@ namespace CharacterManager
             if (res == null)
             {
                 res = ToolKitItemList.Find(t => t.ItemName == name);
+            }
+
+            if (res == null)
+            {
+                res = MagicItemList.Find(t => t.ItemName == name);
             }
 
             return res;
@@ -281,6 +288,11 @@ namespace CharacterManager
         public static List<PlayerToolKit> getAllToolSets()
         {
             return ToolKitItemList;
+        }
+
+        public static List<PlayerItem> getAllMagicItems()
+        {
+            return MagicItemList;
         }
 
 
@@ -615,6 +627,22 @@ namespace CharacterManager
                 StreamReader file = new System.IO.StreamReader(filepath);
 
                 ToolKitItemList = (List<Items.PlayerToolKit>)reader.Deserialize(file);
+                file.Close();
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to open file : " + ex.Message);
+            }
+        }
+
+        private static void parseMagicItemsFromXml(String filepath)
+        {
+            try
+            {
+                XmlSerializer reader = new XmlSerializer(typeof(List<Items.PlayerItem>));
+                StreamReader file = new System.IO.StreamReader(filepath);
+
+                MagicItemList = (List<Items.PlayerItem>)reader.Deserialize(file);
                 file.Close();
             }
             catch (Exception ex)

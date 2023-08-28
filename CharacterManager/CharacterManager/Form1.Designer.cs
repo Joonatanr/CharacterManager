@@ -714,7 +714,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(159, 11);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(906, 69);
+            this.groupBox2.Size = new System.Drawing.Size(886, 69);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
@@ -739,7 +739,7 @@
             // buttonAddXp
             // 
             this.buttonAddXp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddXp.Location = new System.Drawing.Point(842, 37);
+            this.buttonAddXp.Location = new System.Drawing.Point(822, 37);
             this.buttonAddXp.Name = "buttonAddXp";
             this.buttonAddXp.Size = new System.Drawing.Size(58, 23);
             this.buttonAddXp.TabIndex = 22;
@@ -750,7 +750,7 @@
             // textBoxXP
             // 
             this.textBoxXP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxXP.Location = new System.Drawing.Point(735, 40);
+            this.textBoxXP.Location = new System.Drawing.Point(715, 40);
             this.textBoxXP.Name = "textBoxXP";
             this.textBoxXP.ReadOnly = true;
             this.textBoxXP.Size = new System.Drawing.Size(101, 20);
@@ -759,7 +759,7 @@
             // textBoxAlignment
             // 
             this.textBoxAlignment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAlignment.Location = new System.Drawing.Point(735, 15);
+            this.textBoxAlignment.Location = new System.Drawing.Point(715, 15);
             this.textBoxAlignment.Name = "textBoxAlignment";
             this.textBoxAlignment.ReadOnly = true;
             this.textBoxAlignment.Size = new System.Drawing.Size(101, 20);
@@ -770,7 +770,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(597, 40);
+            this.label5.Location = new System.Drawing.Point(577, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 17);
             this.label5.TabIndex = 19;
@@ -781,7 +781,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(597, 16);
+            this.label4.Location = new System.Drawing.Point(577, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 17);
             this.label4.TabIndex = 18;

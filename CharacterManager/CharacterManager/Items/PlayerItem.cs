@@ -10,6 +10,8 @@ namespace CharacterManager.Items
     [Serializable]
     [XmlInclude(typeof(ItemContainer))]
     [XmlInclude(typeof(PlayerToolKit))]
+    [XmlInclude(typeof(PlayerArmor))]
+    [XmlInclude(typeof(PlayerWeapon))]
     public class PlayerItem : PlayerBaseItem
     {
         public float Weight;

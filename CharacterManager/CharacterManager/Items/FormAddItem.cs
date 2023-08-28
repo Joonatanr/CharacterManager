@@ -15,6 +15,7 @@ namespace CharacterManager.Items
         private List<PlayerWeapon> myWeapons;
         private List<PlayerArmor> myArmor;
         private List<PlayerItem> myMiscItems;
+        private List<PlayerItem> myMagicItems;
         private PlayerItem currentItem;
 
         private UserControlWeaponCustomizer myWeaponProperties = null;
@@ -29,6 +30,7 @@ namespace CharacterManager.Items
             myWeapons = CharacterFactory.getAllWeapons();
             myArmor = CharacterFactory.getAllArmor();
             myMiscItems = CharacterFactory.getAllGenericItems();
+            myMagicItems = CharacterFactory.getAllMagicItems();
             
             foreach(PlayerWeapon w in myWeapons)
             {
@@ -75,6 +77,11 @@ namespace CharacterManager.Items
             }
 
             foreach (PlayerItem i in myMiscItems)
+            {
+                listBoxMisc.Items.Add(i);
+            }
+
+            foreach(PlayerItem i in myMagicItems)
             {
                 listBoxMisc.Items.Add(i);
             }
@@ -136,10 +143,7 @@ namespace CharacterManager.Items
             {
                 currentItem = (PlayerItem)listBoxWeapons.SelectedItem;
                 updateItemDisplayedData();
-                myWeaponProperties = new UserControlWeaponCustomizer();
-                myWeaponProperties.Location = new Point(5, 10);
-                myWeaponProperties.setConnectedItem((PlayerWeapon)currentItem);
-                groupBox1.Controls.Add(myWeaponProperties);
+                setWeaponDisplay();
 
                 listBoxArmor.SelectedIndex = -1;
                 listBoxMisc.SelectedIndex = -1;
@@ -152,10 +156,7 @@ namespace CharacterManager.Items
             {
                 currentItem = (PlayerItem)listBoxArmor.SelectedItem;
                 updateItemDisplayedData();
-                myArmorProperties = new UserControlArmorCustomizer();
-                myArmorProperties.Location = new Point(5, 10);
-                myArmorProperties.setConnectedItem((PlayerArmor)currentItem);
-                groupBox1.Controls.Add(myArmorProperties);
+                setArmorDisplay();
 
                 listBoxWeapons.SelectedIndex = -1;
                 listBoxMisc.SelectedIndex = -1;
@@ -169,6 +170,17 @@ namespace CharacterManager.Items
                 groupBox1.Controls.Clear();
                 currentItem = (PlayerItem)listBoxMisc.SelectedItem;
                 updateItemDisplayedData();
+
+                /* Magic items might be armor or weapons as well... */
+                if (currentItem is PlayerArmor)
+                {
+                    setArmorDisplay();
+                }
+                else if(currentItem is PlayerWeapon)
+                {
+                    setWeaponDisplay();
+                }
+
                 listBoxArmor.SelectedIndex = -1;
                 listBoxWeapons.SelectedIndex = -1;
             }
@@ -182,6 +194,22 @@ namespace CharacterManager.Items
             textBoxItemName.Text = currentItem.ItemName;
             richTextBoxItemDescription.Text = currentItem.Description;
             textBoxPrice.Text = currentItem.Cost.ToString();
+        }
+
+        private void setWeaponDisplay()
+        {
+            myWeaponProperties = new UserControlWeaponCustomizer();
+            myWeaponProperties.Location = new Point(5, 10);
+            myWeaponProperties.setConnectedItem((PlayerWeapon)currentItem);
+            groupBox1.Controls.Add(myWeaponProperties);
+        }
+
+        private void setArmorDisplay()
+        {
+            myArmorProperties = new UserControlArmorCustomizer();
+            myArmorProperties.Location = new Point(5, 10);
+            myArmorProperties.setConnectedItem((PlayerArmor)currentItem);
+            groupBox1.Controls.Add(myArmorProperties);
         }
     }
 }
