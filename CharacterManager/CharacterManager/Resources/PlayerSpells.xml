@@ -7650,7 +7650,7 @@ from the inside.</Description>
     <ItemName>Leomund's Tiny Hut</ItemName>
     <SpellName>Leomund's Tiny Hut</SpellName>
     <School>Evocation</School>
-    <SpellLevel>0</SpellLevel>
+    <SpellLevel>3</SpellLevel>
     <SpellRange>0</SpellRange>
     <SpellDuration>4800</SpellDuration>
     <IsUntilDispelled>false</IsUntilDispelled>
