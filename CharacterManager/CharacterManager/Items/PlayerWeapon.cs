@@ -91,8 +91,14 @@ namespace CharacterManager.Items
         public override string getExtendedDescription()
         {
             String res = ItemName + ":\n";
-            res += "Base damage : " + Damage.DamageValue + " " + Damage.Type + " damage\n";
-
+            if (IsMagical)
+            {
+                res += "Base damage : " + Damage.DamageValue + " " + " + " + MagicalBonus.ToString() + " " + Damage.Type + " damage\n";
+            }
+            else
+            {
+                res += "Base damage : " + Damage.DamageValue + " " + Damage.Type + " damage\n";
+            }
             return res;
         }
 
@@ -118,6 +124,7 @@ namespace CharacterManager.Items
             }
         }
 
+        /*
         public String getBaseDamage()
         {
             String res = "";
@@ -132,6 +139,46 @@ namespace CharacterManager.Items
             }
 
             return res;
+        }
+        */
+
+        public List<BonusValueModifier> getBaseDamageModifiers()
+        {
+            /* Here we return all the base damage modifiers that are derived from the weapon itself, but not things like STR and DEX bonus etc. */
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
+            
+            if (IsVersatile && IsEquippedTwoHanded)
+            {
+                res.Add(new BonusValueModifier("Base Damage (2H)" , TwoHandedDamage.DamageValue));
+            }
+            else
+            {
+                res.Add(new BonusValueModifier("Base Damage", Damage.DamageValue));
+            }
+
+            if (IsMagical)
+            {
+                res.Add(new BonusValueModifier("Magical", MagicalBonus));
+            }
+
+            if (!string.IsNullOrEmpty(ExtraDamage.DamageValue))
+            {
+                res.Add(new BonusValueModifier(ExtraDamage.Type.ToString(), ExtraDamage.DamageValue));
+            }
+
+            return res;
+        }
+
+        public BonusValueModifier getMagicalAttackBonus()
+        {
+            if (IsMagical)
+            {
+                return new BonusValueModifier("Magical Bonus", MagicalBonus);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public PlayerWeapon Clone()

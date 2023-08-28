@@ -394,15 +394,23 @@ namespace CharacterManager
            /* We begin with a simple d20 always. */
            attackModifiers.Add(new BonusValueModifier("base", "1d20"));
            
-           /* Add ability and proficiency bonuses */
-           List<BonusValueModifier> hitbonuses = getHitBonuses(w);
-           attackModifiers.AddRange(hitbonuses);
+            /* Add ability and proficiency bonuses */
+            List<BonusValueModifier> hitbonuses = getHitBonuses(w);
+            attackModifiers.AddRange(hitbonuses);
+            /* TODO : Add any magical bonuses. */
+            BonusValueModifier magicalAttackBonus = w.getMagicalAttackBonus();
+            if (magicalAttackBonus != null)
+            {
+                attackModifiers.Add(magicalAttackBonus);
+            }
 
-           /* Now we look at the damage bonus. */
-           /* First lets get the base damage. */
-           damageModifiers.Add(new BonusValueModifier("base damage", w.getBaseDamage()));
+            /* Now we look at the damage bonus. */
+            /* First lets get the base damage. */
+            List<BonusValueModifier> baseDamageValues = w.getBaseDamageModifiers();
+            damageModifiers.AddRange(baseDamageValues);
+            //damageModifiers.Add(new BonusValueModifier("base damage", w.getBaseDamage()));
 
-           /* Now lets get the damage bonuses */
+           /* Now lets get the damage bonuses from abilities */
 
            List<BonusValueModifier> damageBonuses = getDamageBonus(w);
            damageModifiers.AddRange(damageBonuses);
