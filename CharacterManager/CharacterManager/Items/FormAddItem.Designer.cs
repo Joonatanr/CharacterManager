@@ -38,6 +38,12 @@ namespace CharacterManager.Items
             this.listBoxArmor = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.listBoxMisc = new System.Windows.Forms.ListBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxItemName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.richTextBoxItemDescription = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonOk
@@ -70,7 +76,7 @@ namespace CharacterManager.Items
             this.groupBox1.AutoSize = true;
             this.groupBox1.Location = new System.Drawing.Point(174, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(545, 212);
+            this.groupBox1.Size = new System.Drawing.Size(545, 276);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -128,11 +134,58 @@ namespace CharacterManager.Items
             this.listBoxMisc.TabIndex = 9;
             this.listBoxMisc.SelectedIndexChanged += new System.EventHandler(this.listBoxMisc_SelectedIndexChanged);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.richTextBoxItemDescription);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.textBoxItemName);
+            this.groupBox2.Location = new System.Drawing.Point(174, 294);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(545, 324);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "General Item Properties";
+            // 
+            // textBoxItemName
+            // 
+            this.textBoxItemName.Location = new System.Drawing.Point(84, 19);
+            this.textBoxItemName.Name = "textBoxItemName";
+            this.textBoxItemName.Size = new System.Drawing.Size(455, 20);
+            this.textBoxItemName.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Item Name";
+            // 
+            // richTextBoxItemDescription
+            // 
+            this.richTextBoxItemDescription.Location = new System.Drawing.Point(19, 66);
+            this.richTextBoxItemDescription.Name = "richTextBoxItemDescription";
+            this.richTextBoxItemDescription.Size = new System.Drawing.Size(520, 96);
+            this.richTextBoxItemDescription.TabIndex = 2;
+            this.richTextBoxItemDescription.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 46);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Description";
+            // 
             // FormAddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 630);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.listBoxMisc);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.listBoxArmor);
@@ -145,6 +198,8 @@ namespace CharacterManager.Items
             this.MinimumSize = new System.Drawing.Size(747, 669);
             this.Name = "FormAddItem";
             this.Text = "FormAddItem";
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,5 +216,10 @@ namespace CharacterManager.Items
         private System.Windows.Forms.ListBox listBoxArmor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listBoxMisc;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox richTextBoxItemDescription;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxItemName;
     }
 }

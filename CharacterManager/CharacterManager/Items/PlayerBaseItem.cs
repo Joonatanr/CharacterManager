@@ -12,7 +12,7 @@ namespace CharacterManager.Items
     /* Idea is that this should be the topmost class of any spell, maneuver, even weapon, armor, and other item. 
      Basically it just contains  a displayed name and a Description */
 
-    public abstract class PlayerBaseItem
+    public abstract class PlayerBaseItem : ICloneable
     {
         public virtual string Description { get; set; }
         public virtual string ItemName { get; set; }
@@ -24,6 +24,11 @@ namespace CharacterManager.Items
             {
                 return ItemName;
             }
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
 
         public virtual void ShowDescription()

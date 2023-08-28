@@ -115,17 +115,14 @@ namespace CharacterManager
                 userControlLanguageProficiencies.setProficiencylist(activeCharacter.Languages);
 
                 //10. Update weapons.
-                userControlWeaponsHandler1.setWeaponList(activeCharacter.CharacterWeapons);
+                UpdateWeaponDisplay();
 
                 //11. Update armors.
-                userControlArmorHandler1.setArmorList(activeCharacter.CharacterArmors);
-                userControlArmorHandler1.ArmorEquipChanged = armorEquippedChanged;
-                userControlArmorHandler1.ArmorDropped = armorDropped;
-                updateArmorClass();
+                UpdateArmorDisplay();
 
                 //12. Update general inventory.
-                userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
-                userControlEquipmentHandler1.ItemDropEvent = itemDropped;
+                UpdateGeneralEquipmentDisplay();
+
 
                 //12.1 Update general currency.
                 userControlCurrencyElectrum.CurrencyAmount = activeCharacter.ElectrumPieces;
@@ -160,6 +157,25 @@ namespace CharacterManager
 
                 userControlSpeed.setBonusValueModifiers(totalSpeedModifiers);
             }
+        }
+
+        private void UpdateWeaponDisplay()
+        {
+            userControlWeaponsHandler1.setWeaponList(activeCharacter.CharacterWeapons);
+        }
+
+        private void UpdateArmorDisplay()
+        {
+            userControlArmorHandler1.setArmorList(activeCharacter.CharacterArmors);
+            userControlArmorHandler1.ArmorEquipChanged = armorEquippedChanged;
+            userControlArmorHandler1.ArmorDropped = armorDropped;
+            updateArmorClass();
+        }
+
+        private void UpdateGeneralEquipmentDisplay()
+        {
+            userControlEquipmentHandler1.setGeneralEquipmentList(activeCharacter.CharacterGeneralEquipment);
+            userControlEquipmentHandler1.ItemDropEvent = itemDropped;
         }
 
         private void UpdateHitPoints()
@@ -714,6 +730,32 @@ namespace CharacterManager
 
             if (myForm.DialogResult == DialogResult.OK)
             {
+                if (activeCharacter != null)
+                {
+                    PlayerItem addedItem = myForm.SelectedItem;
+
+                    if (addedItem != null)
+                    {
+                        if (addedItem is PlayerWeapon)
+                        {
+                            activeCharacter.CharacterWeapons.Add((PlayerWeapon)addedItem);
+                            UpdateWeaponDisplay();
+
+                        }
+                        else if (addedItem is PlayerArmor)
+                        {
+                            activeCharacter.CharacterArmors.Add((PlayerArmor)addedItem);
+                            UpdateArmorDisplay();
+                        }
+                        else
+                        {
+                            activeCharacter.CharacterGeneralEquipment.Add(addedItem);
+                            UpdateGeneralEquipmentDisplay();
+                        }
+                    }
+
+
+                }
                 /* TODO */
             }
         }

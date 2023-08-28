@@ -32,9 +32,20 @@ namespace CharacterManager.Items
 
         public enum DamageType
         {
+            None,
             Bludgeoning,
             Piercing,
             Slashing,
+            Acid,
+            Cold,
+            Fire,
+            Force,
+            Lightning,
+            Necrotic,
+            Poison,
+            Psychic,
+            Radiant,
+            Thunder
         };
 
         public struct WeaponDamage
@@ -61,7 +72,8 @@ namespace CharacterManager.Items
 
         public WeaponDamage Damage;
         public WeaponDamage TwoHandedDamage;
-        public List<WeaponDamage> ExtraDamage = new List<WeaponDamage>(); /* Some weapons can do an extra 1d4 radiant/fire/cold damage etc. */
+        //public List<WeaponDamage> ExtraDamage = new List<WeaponDamage>(); /* Some weapons can do an extra 1d4 radiant/fire/cold damage etc. */
+        public WeaponDamage ExtraDamage;
         public Boolean      IsEquipped = false;
         public Boolean IsEquippedTwoHanded = false;
         public String AmmoType = string.Empty;

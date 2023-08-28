@@ -33,9 +33,9 @@ namespace CharacterManager.Items
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBoxIsFinesse = new System.Windows.Forms.CheckBox();
             this.groupBoxWeight = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButtonHeavy = new System.Windows.Forms.RadioButton();
+            this.radioButtonNormal = new System.Windows.Forms.RadioButton();
+            this.radioButtonLight = new System.Windows.Forms.RadioButton();
             this.checkBoxLoading = new System.Windows.Forms.CheckBox();
             this.checkBoxIsThrown = new System.Windows.Forms.CheckBox();
             this.checkBoxTwoHanded = new System.Windows.Forms.CheckBox();
@@ -50,8 +50,8 @@ namespace CharacterManager.Items
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButtonMartial = new System.Windows.Forms.RadioButton();
+            this.radioButtonSimple = new System.Windows.Forms.RadioButton();
             this.textBoxReach = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -69,10 +69,11 @@ namespace CharacterManager.Items
             this.comboBoxExtraDamage = new System.Windows.Forms.ComboBox();
             this.textBoxExtraDamage = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxIsMagical = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxMagicalBonus = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBoxWeight.SuspendLayout();
             this.groupBoxRanged.SuspendLayout();
@@ -91,6 +92,7 @@ namespace CharacterManager.Items
             this.checkBoxIsAmmunition.TabIndex = 0;
             this.checkBoxIsAmmunition.Text = "Ammunition";
             this.checkBoxIsAmmunition.UseVisualStyleBackColor = true;
+            this.checkBoxIsAmmunition.CheckedChanged += new System.EventHandler(this.checkBoxIsAmmunition_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -105,7 +107,7 @@ namespace CharacterManager.Items
             this.groupBox1.Controls.Add(this.groupBoxWeight);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(535, 303);
+            this.groupBox1.Size = new System.Drawing.Size(535, 257);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Weapon Specific Properties";
@@ -119,52 +121,56 @@ namespace CharacterManager.Items
             this.checkBoxIsFinesse.TabIndex = 1;
             this.checkBoxIsFinesse.Text = "Finesse";
             this.checkBoxIsFinesse.UseVisualStyleBackColor = true;
+            this.checkBoxIsFinesse.CheckedChanged += new System.EventHandler(this.checkBoxIsFinesse_CheckedChanged);
             // 
             // groupBoxWeight
             // 
             this.groupBoxWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxWeight.Controls.Add(this.radioButton3);
-            this.groupBoxWeight.Controls.Add(this.radioButton2);
-            this.groupBoxWeight.Controls.Add(this.radioButton1);
+            this.groupBoxWeight.Controls.Add(this.radioButtonLight);
+            this.groupBoxWeight.Controls.Add(this.radioButtonNormal);
+            this.groupBoxWeight.Controls.Add(this.radioButtonHeavy);
             this.groupBoxWeight.Location = new System.Drawing.Point(289, 121);
             this.groupBoxWeight.Name = "groupBoxWeight";
-            this.groupBoxWeight.Size = new System.Drawing.Size(117, 93);
+            this.groupBoxWeight.Size = new System.Drawing.Size(117, 130);
             this.groupBoxWeight.TabIndex = 2;
             this.groupBoxWeight.TabStop = false;
             this.groupBoxWeight.Text = "Weapon Size Type";
             // 
-            // radioButton1
+            // radioButtonHeavy
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(56, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Heavy";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonHeavy.AutoSize = true;
+            this.radioButtonHeavy.Location = new System.Drawing.Point(6, 19);
+            this.radioButtonHeavy.Name = "radioButtonHeavy";
+            this.radioButtonHeavy.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonHeavy.TabIndex = 0;
+            this.radioButtonHeavy.TabStop = true;
+            this.radioButtonHeavy.Text = "Heavy";
+            this.radioButtonHeavy.UseVisualStyleBackColor = true;
+            this.radioButtonHeavy.CheckedChanged += new System.EventHandler(this.radioButtonHeavy_CheckedChanged);
             // 
-            // radioButton2
+            // radioButtonNormal
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Normal";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonNormal.AutoSize = true;
+            this.radioButtonNormal.Location = new System.Drawing.Point(6, 42);
+            this.radioButtonNormal.Name = "radioButtonNormal";
+            this.radioButtonNormal.Size = new System.Drawing.Size(58, 17);
+            this.radioButtonNormal.TabIndex = 1;
+            this.radioButtonNormal.TabStop = true;
+            this.radioButtonNormal.Text = "Normal";
+            this.radioButtonNormal.UseVisualStyleBackColor = true;
+            this.radioButtonNormal.CheckedChanged += new System.EventHandler(this.radioButtonNormal_CheckedChanged);
             // 
-            // radioButton3
+            // radioButtonLight
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 65);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(48, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Light";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButtonLight.AutoSize = true;
+            this.radioButtonLight.Location = new System.Drawing.Point(6, 65);
+            this.radioButtonLight.Name = "radioButtonLight";
+            this.radioButtonLight.Size = new System.Drawing.Size(48, 17);
+            this.radioButtonLight.TabIndex = 2;
+            this.radioButtonLight.TabStop = true;
+            this.radioButtonLight.Text = "Light";
+            this.radioButtonLight.UseVisualStyleBackColor = true;
+            this.radioButtonLight.CheckedChanged += new System.EventHandler(this.radioButtonLight_CheckedChanged);
             // 
             // checkBoxLoading
             // 
@@ -175,6 +181,7 @@ namespace CharacterManager.Items
             this.checkBoxLoading.TabIndex = 3;
             this.checkBoxLoading.Text = "Loading";
             this.checkBoxLoading.UseVisualStyleBackColor = true;
+            this.checkBoxLoading.CheckedChanged += new System.EventHandler(this.checkBoxLoading_CheckedChanged);
             // 
             // checkBoxIsThrown
             // 
@@ -185,6 +192,7 @@ namespace CharacterManager.Items
             this.checkBoxIsThrown.TabIndex = 4;
             this.checkBoxIsThrown.Text = "Thrown";
             this.checkBoxIsThrown.UseVisualStyleBackColor = true;
+            this.checkBoxIsThrown.CheckedChanged += new System.EventHandler(this.checkBoxIsThrown_CheckedChanged);
             // 
             // checkBoxTwoHanded
             // 
@@ -195,6 +203,7 @@ namespace CharacterManager.Items
             this.checkBoxTwoHanded.TabIndex = 5;
             this.checkBoxTwoHanded.Text = "Two-Handed";
             this.checkBoxTwoHanded.UseVisualStyleBackColor = true;
+            this.checkBoxTwoHanded.CheckedChanged += new System.EventHandler(this.checkBoxTwoHanded_CheckedChanged);
             // 
             // checkBoxIsVersatile
             // 
@@ -205,6 +214,7 @@ namespace CharacterManager.Items
             this.checkBoxIsVersatile.TabIndex = 6;
             this.checkBoxIsVersatile.Text = "Versatile";
             this.checkBoxIsVersatile.UseVisualStyleBackColor = true;
+            this.checkBoxIsVersatile.CheckedChanged += new System.EventHandler(this.checkBoxIsVersatile_CheckedChanged);
             // 
             // checkBoxIsReach
             // 
@@ -215,6 +225,7 @@ namespace CharacterManager.Items
             this.checkBoxIsReach.TabIndex = 7;
             this.checkBoxIsReach.Text = "Reach";
             this.checkBoxIsReach.UseVisualStyleBackColor = true;
+            this.checkBoxIsReach.CheckedChanged += new System.EventHandler(this.checkBoxIsReach_CheckedChanged);
             // 
             // groupBoxRanged
             // 
@@ -246,6 +257,7 @@ namespace CharacterManager.Items
             this.checkBoxRanged.TabIndex = 5;
             this.checkBoxRanged.Text = "Ranged?";
             this.checkBoxRanged.UseVisualStyleBackColor = true;
+            this.checkBoxRanged.CheckedChanged += new System.EventHandler(this.checkBoxRanged_CheckedChanged);
             // 
             // textBoxNormalRange
             // 
@@ -253,6 +265,7 @@ namespace CharacterManager.Items
             this.textBoxNormalRange.Name = "textBoxNormalRange";
             this.textBoxNormalRange.Size = new System.Drawing.Size(53, 20);
             this.textBoxNormalRange.TabIndex = 6;
+            this.textBoxNormalRange.TextChanged += new System.EventHandler(this.textBoxNormalRange_TextChanged);
             // 
             // label1
             // 
@@ -278,6 +291,7 @@ namespace CharacterManager.Items
             this.textBoxLongRange.Name = "textBoxLongRange";
             this.textBoxLongRange.Size = new System.Drawing.Size(53, 20);
             this.textBoxLongRange.TabIndex = 8;
+            this.textBoxLongRange.TextChanged += new System.EventHandler(this.textBoxLongRange_TextChanged);
             // 
             // groupBox2
             // 
@@ -311,7 +325,7 @@ namespace CharacterManager.Items
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(6, 121);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(277, 176);
+            this.groupBox3.Size = new System.Drawing.Size(277, 130);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Weapon Damage";
@@ -319,36 +333,38 @@ namespace CharacterManager.Items
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.radioButton5);
-            this.groupBox4.Controls.Add(this.radioButton6);
+            this.groupBox4.Controls.Add(this.radioButtonMartial);
+            this.groupBox4.Controls.Add(this.radioButtonSimple);
             this.groupBox4.Location = new System.Drawing.Point(412, 121);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(117, 93);
+            this.groupBox4.Size = new System.Drawing.Size(117, 57);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Weapon Type";
             // 
-            // radioButton5
+            // radioButtonMartial
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(6, 42);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(56, 17);
-            this.radioButton5.TabIndex = 1;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Martial";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButtonMartial.AutoSize = true;
+            this.radioButtonMartial.Location = new System.Drawing.Point(6, 33);
+            this.radioButtonMartial.Name = "radioButtonMartial";
+            this.radioButtonMartial.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonMartial.TabIndex = 1;
+            this.radioButtonMartial.TabStop = true;
+            this.radioButtonMartial.Text = "Martial";
+            this.radioButtonMartial.UseVisualStyleBackColor = true;
+            this.radioButtonMartial.CheckedChanged += new System.EventHandler(this.radioButtonMartial_CheckedChanged);
             // 
-            // radioButton6
+            // radioButtonSimple
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 19);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(56, 17);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Simple";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButtonSimple.AutoSize = true;
+            this.radioButtonSimple.Location = new System.Drawing.Point(6, 14);
+            this.radioButtonSimple.Name = "radioButtonSimple";
+            this.radioButtonSimple.Size = new System.Drawing.Size(56, 17);
+            this.radioButtonSimple.TabIndex = 0;
+            this.radioButtonSimple.TabStop = true;
+            this.radioButtonSimple.Text = "Simple";
+            this.radioButtonSimple.UseVisualStyleBackColor = true;
+            this.radioButtonSimple.CheckedChanged += new System.EventHandler(this.radioButtonSimple_CheckedChanged);
             // 
             // textBoxReach
             // 
@@ -356,6 +372,7 @@ namespace CharacterManager.Items
             this.textBoxReach.Name = "textBoxReach";
             this.textBoxReach.Size = new System.Drawing.Size(55, 20);
             this.textBoxReach.TabIndex = 8;
+            this.textBoxReach.TextChanged += new System.EventHandler(this.textBoxReach_TextChanged);
             // 
             // label3
             // 
@@ -381,6 +398,8 @@ namespace CharacterManager.Items
             this.textBoxBaseDamage.Name = "textBoxBaseDamage";
             this.textBoxBaseDamage.Size = new System.Drawing.Size(51, 20);
             this.textBoxBaseDamage.TabIndex = 1;
+            this.textBoxBaseDamage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBaseDamage_KeyPress);
+            this.textBoxBaseDamage.Leave += new System.EventHandler(this.textBoxBaseDamage_Leave);
             // 
             // comboBoxBaseDamageType
             // 
@@ -389,6 +408,7 @@ namespace CharacterManager.Items
             this.comboBoxBaseDamageType.Name = "comboBoxBaseDamageType";
             this.comboBoxBaseDamageType.Size = new System.Drawing.Size(91, 21);
             this.comboBoxBaseDamageType.TabIndex = 2;
+            this.comboBoxBaseDamageType.SelectedIndexChanged += new System.EventHandler(this.comboBoxBaseDamageType_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -415,6 +435,7 @@ namespace CharacterManager.Items
             this.comboBox2HDamage.Name = "comboBox2HDamage";
             this.comboBox2HDamage.Size = new System.Drawing.Size(91, 21);
             this.comboBox2HDamage.TabIndex = 6;
+            this.comboBox2HDamage.SelectedIndexChanged += new System.EventHandler(this.comboBox2HDamage_SelectedIndexChanged);
             // 
             // textBox2HDamage
             // 
@@ -422,6 +443,9 @@ namespace CharacterManager.Items
             this.textBox2HDamage.Name = "textBox2HDamage";
             this.textBox2HDamage.Size = new System.Drawing.Size(51, 20);
             this.textBox2HDamage.TabIndex = 5;
+            this.textBox2HDamage.TextChanged += new System.EventHandler(this.textBox2HDamage_TextChanged);
+            this.textBox2HDamage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2HDamage_KeyPress);
+            this.textBox2HDamage.Leave += new System.EventHandler(this.textBox2HDamage_Leave);
             // 
             // label7
             // 
@@ -438,11 +462,12 @@ namespace CharacterManager.Items
             this.textBoxAmmoType.Name = "textBoxAmmoType";
             this.textBoxAmmoType.Size = new System.Drawing.Size(53, 20);
             this.textBoxAmmoType.TabIndex = 10;
+            this.textBoxAmmoType.TextChanged += new System.EventHandler(this.textBoxAmmoType_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(104, 71);
+            this.label8.Location = new System.Drawing.Point(104, 65);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 13);
             this.label8.TabIndex = 11;
@@ -451,7 +476,7 @@ namespace CharacterManager.Items
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(87, 86);
+            this.label9.Location = new System.Drawing.Point(87, 80);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 13);
             this.label9.TabIndex = 12;
@@ -473,6 +498,7 @@ namespace CharacterManager.Items
             this.comboBoxExtraDamage.Name = "comboBoxExtraDamage";
             this.comboBoxExtraDamage.Size = new System.Drawing.Size(91, 21);
             this.comboBoxExtraDamage.TabIndex = 10;
+            this.comboBoxExtraDamage.SelectedIndexChanged += new System.EventHandler(this.comboBoxExtraDamage_SelectedIndexChanged);
             // 
             // textBoxExtraDamage
             // 
@@ -480,6 +506,8 @@ namespace CharacterManager.Items
             this.textBoxExtraDamage.Name = "textBoxExtraDamage";
             this.textBoxExtraDamage.Size = new System.Drawing.Size(51, 20);
             this.textBoxExtraDamage.TabIndex = 9;
+            this.textBoxExtraDamage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxExtraDamage_KeyPress);
+            this.textBoxExtraDamage.Leave += new System.EventHandler(this.textBoxExtraDamage_Leave);
             // 
             // label11
             // 
@@ -490,43 +518,57 @@ namespace CharacterManager.Items
             this.label11.TabIndex = 8;
             this.label11.Text = "Extra Damage";
             // 
-            // checkBox1
+            // checkBoxIsMagical
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(107, 17);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Magical Weapon";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxIsMagical.AutoSize = true;
+            this.checkBoxIsMagical.Location = new System.Drawing.Point(6, 19);
+            this.checkBoxIsMagical.Name = "checkBoxIsMagical";
+            this.checkBoxIsMagical.Size = new System.Drawing.Size(107, 17);
+            this.checkBoxIsMagical.TabIndex = 12;
+            this.checkBoxIsMagical.Text = "Magical Weapon";
+            this.checkBoxIsMagical.UseVisualStyleBackColor = true;
+            this.checkBoxIsMagical.CheckedChanged += new System.EventHandler(this.checkBoxIsMagical_CheckedChanged);
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label13);
             this.groupBox5.Controls.Add(this.label12);
-            this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Controls.Add(this.checkBox1);
-            this.groupBox5.Location = new System.Drawing.Point(289, 220);
+            this.groupBox5.Controls.Add(this.textBoxMagicalBonus);
+            this.groupBox5.Controls.Add(this.checkBoxIsMagical);
+            this.groupBox5.Location = new System.Drawing.Point(412, 177);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(240, 77);
+            this.groupBox5.Size = new System.Drawing.Size(117, 74);
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Magical Properties";
             // 
-            // textBox1
+            // textBoxMagicalBonus
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 20);
-            this.textBox1.TabIndex = 13;
+            this.textBoxMagicalBonus.Location = new System.Drawing.Point(6, 42);
+            this.textBoxMagicalBonus.Name = "textBoxMagicalBonus";
+            this.textBoxMagicalBonus.Size = new System.Drawing.Size(44, 20);
+            this.textBoxMagicalBonus.TabIndex = 13;
+            this.textBoxMagicalBonus.TextChanged += new System.EventHandler(this.textBoxMagicalBonus_TextChanged);
+            this.textBoxMagicalBonus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMagicalBonus_KeyPress);
+            this.textBoxMagicalBonus.Leave += new System.EventHandler(this.textBoxMagicalBonus_Leave);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 45);
+            this.label12.Location = new System.Drawing.Point(56, 39);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 13);
+            this.label12.Size = new System.Drawing.Size(37, 13);
             this.label12.TabIndex = 14;
-            this.label12.Text = "Bonus (+1, +2. +3)";
+            this.label12.Text = "Bonus";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(52, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(61, 13);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "(+1, +2. +3)";
             // 
             // UserControlWeaponCustomizer
             // 
@@ -534,7 +576,7 @@ namespace CharacterManager.Items
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "UserControlWeaponCustomizer";
-            this.Size = new System.Drawing.Size(541, 309);
+            this.Size = new System.Drawing.Size(541, 263);
             this.groupBox1.ResumeLayout(false);
             this.groupBoxWeight.ResumeLayout(false);
             this.groupBoxWeight.PerformLayout();
@@ -557,9 +599,9 @@ namespace CharacterManager.Items
         private System.Windows.Forms.CheckBox checkBoxIsAmmunition;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBoxWeight;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonLight;
+        private System.Windows.Forms.RadioButton radioButtonNormal;
+        private System.Windows.Forms.RadioButton radioButtonHeavy;
         private System.Windows.Forms.CheckBox checkBoxIsFinesse;
         private System.Windows.Forms.GroupBox groupBoxRanged;
         private System.Windows.Forms.CheckBox checkBoxIsThrown;
@@ -575,8 +617,8 @@ namespace CharacterManager.Items
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButtonMartial;
+        private System.Windows.Forms.RadioButton radioButtonSimple;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxReach;
         private System.Windows.Forms.Label label5;
@@ -594,9 +636,10 @@ namespace CharacterManager.Items
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxAmmoType;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBoxIsMagical;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxMagicalBonus;
+        private System.Windows.Forms.Label label13;
     }
 }
