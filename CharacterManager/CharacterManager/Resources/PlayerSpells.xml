@@ -5505,12 +5505,12 @@ being w orn or carried, and it sheds bright light in a
 the damage increases by 1d6 for each slot level above 2nd.</AtHigherLevels>
     <School>Conjuration</School>
     <SpellLevel>2</SpellLevel>
-    <SpellRange>0</SpellRange>
+    <SpellRange>60</SpellRange>
     <SpellDuration>10</SpellDuration>
     <IsUntilDispelled>false</IsUntilDispelled>
     <AoeSize>0</AoeSize>
     <AoeType>AOE_TYPE_NONE</AoeType>
-    <RangeType>RANGE_TYPE_NONE</RangeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
     <CastingTime>CASTING_TIME_ACTION</CastingTime>
     <CastingTimePeriod>0</CastingTimePeriod>
     <IsVerbalComponent>true</IsVerbalComponent>
