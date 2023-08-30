@@ -26,10 +26,10 @@ This spell’s damage increases by 1d6 when you reach
     <IsRitual>false</IsRitual>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d6</DiceAtLevel0>
+    <DiceAtLevel1>2d6</DiceAtLevel1>
+    <DiceAtLevel2>3d6</DiceAtLevel2>
+    <DiceAtLevel3>4d6</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -90,6 +90,7 @@ awakens you if you are sleeping. An audible alarm produces
 the sound of a hand bell for 10 seconds within 60 feet.</Description>
     <ItemName>Alarm</ItemName>
     <SpellName>Alarm</SpellName>
+    <AtHigherLevels />
     <School>Abjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>30</SpellRange>
@@ -919,16 +920,16 @@ spell slot of 2nd level or higher, the damage increases by
     <IsRitual>false</IsRitual>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel0>0</DiceAtLevel0>
+    <DiceAtLevel1>2d6</DiceAtLevel1>
+    <DiceAtLevel2>3d6</DiceAtLevel2>
+    <DiceAtLevel3>4d6</DiceAtLevel3>
+    <DiceAtLevel4>5d6</DiceAtLevel4>
+    <DiceAtLevel5>6d6</DiceAtLevel5>
+    <DiceAtLevel6>7d6</DiceAtLevel6>
+    <DiceAtLevel7>8d6</DiceAtLevel7>
+    <DiceAtLevel8>9d6</DiceAtLevel8>
+    <DiceAtLevel9>10d6</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1012,7 +1013,7 @@ to 0 hit points.</Description>
     <Description>By casting gem-inlaid sticks, rolling dragon bones,
 laying out ornate cards, or employing some other
 divining tool, you receive an omen from an otherworldly
-entity about the results o f a specific course o f action that
+entity about the results of a specific course o f action that
 you plan to take within the next 30 minutes. The DM
 chooses from the following possible omens:
 
@@ -1032,6 +1033,7 @@ percent chance for each casting after the first that you
 get a random reading. The DM makes this roll in secret.</Description>
     <ItemName>Augury</ItemName>
     <SpellName>Augury</SpellName>
+    <AtHigherLevels />
     <School>Divination</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -1308,7 +1310,7 @@ space is occupied.</Description>
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
-    <DiceAtLevel5 />
+    <DiceAtLevel5>5d10</DiceAtLevel5>
     <DiceAtLevel6 />
     <DiceAtLevel7 />
     <DiceAtLevel8 />
@@ -1413,6 +1415,7 @@ and death saving throws, and regains the maximum
 number of hit points possible from any healing.</Description>
     <ItemName>Beacon Of Hope</ItemName>
     <SpellName>Beacon Of Hope</SpellName>
+    <AtHigherLevels />
     <School>Abjuration</School>
     <SpellLevel>3</SpellLevel>
     <SpellRange>30</SpellRange>
@@ -1623,11 +1626,11 @@ level above 5th.</AtHigherLevels>
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel5>4d8</DiceAtLevel5>
+    <DiceAtLevel6>6d8</DiceAtLevel6>
+    <DiceAtLevel7>8d8</DiceAtLevel7>
+    <DiceAtLevel8>10d8</DiceAtLevel8>
+    <DiceAtLevel9>12d8</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1643,7 +1646,7 @@ creatures behind it, and its space is difficult terrain.
 When a creature enters the w all’s area for the first
 time on a turn or starts its turn there, the creature must
 make a Dexterity saving throw. On a failed save, the
-creature takes 6 d10 slashing damage. On a successful
+creature takes 6d10 slashing damage. On a successful
 save, the creature takes half as much damage.</Description>
     <ItemName>Blade Barrier</ItemName>
     <SpellName>Blade Barrier</SpellName>
@@ -1671,7 +1674,7 @@ save, the creature takes half as much damage.</Description>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
-    <DiceAtLevel6 />
+    <DiceAtLevel6>6d10</DiceAtLevel6>
     <DiceAtLevel7 />
     <DiceAtLevel8 />
     <DiceAtLevel9 />
@@ -1742,7 +1745,7 @@ creature for each slot level above 1st.</AtHigherLevels>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent>a sprinkling of holy water</MaterialComponent>
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
+    <DiceAtLevel1>1d4</DiceAtLevel1>
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
@@ -1792,12 +1795,12 @@ spell slot o f 5th level or higher, the damage increases by
     <DiceAtLevel1 />
     <DiceAtLevel2 />
     <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel4>8d8</DiceAtLevel4>
+    <DiceAtLevel5>9d8</DiceAtLevel5>
+    <DiceAtLevel6>10d8</DiceAtLevel6>
+    <DiceAtLevel7>11d8</DiceAtLevel7>
+    <DiceAtLevel8>12d8</DiceAtLevel8>
+    <DiceAtLevel9>13d8</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1809,7 +1812,7 @@ must succeed on a Constitution saving throw or be
 blinded until the spell ends.
 
 A creature blinded by this spell makes another
-Constitution saving throw at the end o f each o f its turns.
+Constitution saving throw at the end of each of its turns.
 On a successful save, it is no longer blinded.</Description>
     <ItemName>Blinding Smite</ItemName>
     <SpellName>Blinding Smite</SpellName>
@@ -1834,7 +1837,7 @@ On a successful save, it is no longer blinded.</Description>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel3>3d8</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -1852,7 +1855,7 @@ turns, the target can make a Constitution saving throw.
 On a success, the spell ends.</Description>
     <ItemName>Blindness/Deafness</ItemName>
     <SpellName>Blindness/Deafness</SpellName>
-    <AtHigherLevels>When you cast this spell using a spell slot o f 3rd level 
+    <AtHigherLevels>When you cast this spell using a spell slot  of 3rd level 
 or higher, you can target one additional creature for 
 each slot level above 2nd.</AtHigherLevels>
     <School>Necromancy</School>
@@ -1885,8 +1888,8 @@ each slot level above 2nd.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>Roll a d20 at the end of each o f your turns for the
-duration of the spell. On a roll o f 11 or higher, you
+    <Description>Roll a d20 at the end of each of your turns for the
+duration of the spell. On a roll of 11 or higher, you
 vanish from your current plane of existence and appear
 in the Ethereal Plane (the spell fails and the casting is
 wasted if you were already on that plane). At the start of
@@ -1928,7 +1931,7 @@ have the ability to do so.</Description>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel3>1d20</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -2008,14 +2011,14 @@ each slot level above 2nd.</AtHigherLevels>
     <MaterialComponent />
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel2>2d6</DiceAtLevel2>
+    <DiceAtLevel3>3d6</DiceAtLevel3>
+    <DiceAtLevel4>4d6</DiceAtLevel4>
+    <DiceAtLevel5>5d6</DiceAtLevel5>
+    <DiceAtLevel6>6d6</DiceAtLevel6>
+    <DiceAtLevel7>7d6</DiceAtLevel7>
+    <DiceAtLevel8>8d6</DiceAtLevel8>
+    <DiceAtLevel9>9d6</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2047,15 +2050,15 @@ the damage increases by 1d6 for each slot level above 1st.</AtHigherLevels>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>3d6</DiceAtLevel1>
+    <DiceAtLevel2>4d6</DiceAtLevel2>
+    <DiceAtLevel3>5d6</DiceAtLevel3>
+    <DiceAtLevel4>6d6</DiceAtLevel4>
+    <DiceAtLevel5>7d6</DiceAtLevel5>
+    <DiceAtLevel6>8d6</DiceAtLevel6>
+    <DiceAtLevel7>9d6</DiceAtLevel7>
+    <DiceAtLevel8>10d6</DiceAtLevel8>
+    <DiceAtLevel9>11d6</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2105,13 +2108,13 @@ slot level above 3rd.</AtHigherLevels>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel3>3d10</DiceAtLevel3>
+    <DiceAtLevel4>4d10</DiceAtLevel4>
+    <DiceAtLevel5>5d10</DiceAtLevel5>
+    <DiceAtLevel6>6d10</DiceAtLevel6>
+    <DiceAtLevel7>7d10</DiceAtLevel7>
+    <DiceAtLevel8>8d10</DiceAtLevel8>
+    <DiceAtLevel9>9d10</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2168,7 +2171,7 @@ again, unless the DM rules otherwise.</Description>
     <Description>You create a bolt of lightning that arcs toward a target of
 your choice that you can see within range. Three bolts
 then leap from that target to as many as three other
-targets, each o f which must be within 30 feet o f the first
+targets, each of which must be within 30 feet of the first
 target. A target can be a creature or an object and can
 be targeted by only one of the bolts.
 
@@ -2204,7 +2207,7 @@ level above 6th.</AtHigherLevels>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
-    <DiceAtLevel6 />
+    <DiceAtLevel6>10d8</DiceAtLevel6>
     <DiceAtLevel7 />
     <DiceAtLevel8 />
     <DiceAtLevel9 />
@@ -2268,6 +2271,7 @@ This spell’s damage increases by 1d8 when you reach
 5th level (2d8), 11th level (3d8), and 17th level (4d8).</Description>
     <ItemName>Chill Touch</ItemName>
     <SpellName>Chill Touch</SpellName>
+    <AtHigherLevels />
     <School>Necromancy</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>120</SpellRange>
@@ -2283,12 +2287,12 @@ This spell’s damage increases by 1d8 when you reach
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d8</DiceAtLevel0>
+    <DiceAtLevel1>2d8</DiceAtLevel1>
+    <DiceAtLevel2>3d8</DiceAtLevel2>
+    <DiceAtLevel3>4d8</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -2324,18 +2328,18 @@ spell slot of 2nd level or higher, the damage increases by
     <IsMaterialComponent>true</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent>a diamond worth at least 50 gp</MaterialComponent>
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>3d8</DiceAtLevel1>
+    <DiceAtLevel2>4d8</DiceAtLevel2>
+    <DiceAtLevel3>5d8</DiceAtLevel3>
+    <DiceAtLevel4>6d8</DiceAtLevel4>
+    <DiceAtLevel5>7d8</DiceAtLevel5>
+    <DiceAtLevel6>8d8</DiceAtLevel6>
+    <DiceAtLevel7>9d8</DiceAtLevel7>
+    <DiceAtLevel8>10d8</DiceAtLevel8>
+    <DiceAtLevel9>11d8</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2372,15 +2376,15 @@ slot level above 6th.</AtHigherLevels>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel6>8d6</DiceAtLevel6>
+    <DiceAtLevel7>10d6</DiceAtLevel7>
+    <DiceAtLevel8>12d6</DiceAtLevel8>
+    <DiceAtLevel9>14d6</DiceAtLevel9>
     <MaterialCost>500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
     <Description>Divine energy radiates from you, distorting and
-diffusing magical energy within 30 feet o f you. Until
+diffusing magical energy within 30 feet of you. Until
 the spell ends, the sphere moves with you, centered on
 you. For the duration, each friendly creature in the area
 (including you) has advantage on saving throws against
@@ -2598,15 +2602,15 @@ the damage increases by 1d8 for each slot level above 5th.</AtHigherLevels>
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel5>5d8</DiceAtLevel5>
+    <DiceAtLevel6>6d8</DiceAtLevel6>
+    <DiceAtLevel7>7d8</DiceAtLevel7>
+    <DiceAtLevel8>8d8</DiceAtLevel8>
+    <DiceAtLevel9>9d8</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>A dazzling array of flashing, colored light springs from your hand. Roll 6 d10; 
+    <Description>A dazzling array of flashing, colored light springs from your hand. Roll 6d10; 
 the total is how many hit points of creatures this spell can effect. Creatures 
 in a 15-foot cone originating from you are affected in ascending order of 
 their current hit points (ignoring unconscious creatures and creatures that can’t see).
@@ -2638,15 +2642,15 @@ for each slot level above 1st</AtHigherLevels>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent>a pinch of powder or sand that is colored red, yellow, and blue</MaterialComponent>
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>6d10</DiceAtLevel1>
+    <DiceAtLevel2>8d10</DiceAtLevel2>
+    <DiceAtLevel3>10d10</DiceAtLevel3>
+    <DiceAtLevel4>12d10</DiceAtLevel4>
+    <DiceAtLevel5>14d10</DiceAtLevel5>
+    <DiceAtLevel6>16d10</DiceAtLevel6>
+    <DiceAtLevel7>18d10</DiceAtLevel7>
+    <DiceAtLevel8>20d10</DiceAtLevel8>
+    <DiceAtLevel9>22d20</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2904,7 +2908,7 @@ that isn’t part of a written language</Description>
   </PlayerSpell>
   <PlayerSpell>
     <Description>Creatures of your choice that you can see within range
-and that can hear you must make a W isdom saving
+and that can hear you must make a Wisdom saving
 throw. A target automatically succeeds on this saving
 throw if it can’t be charmed. On a failed save, a target
 is affected by this spell. Until the spell ends, you can
@@ -2985,11 +2989,11 @@ spell slot o f 6th level or higher, the damage increases by
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel5>8d8</DiceAtLevel5>
+    <DiceAtLevel6>9d8</DiceAtLevel6>
+    <DiceAtLevel7>10d8</DiceAtLevel7>
+    <DiceAtLevel8>11d8</DiceAtLevel8>
+    <DiceAtLevel9>12d8</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3111,7 +3115,7 @@ with a 7th-level slot, and four times as many with a
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>You throw a nonmagical w eapon or fire a piece of
+    <Description>You throw a nonmagical weapon or fire a piece of
 nonmagical ammunition into the air to create a cone
 of identical weapons that shoot forward and then
 disappear. Each creature in a 60-foot cone must succeed
@@ -3142,7 +3146,7 @@ the weapon or ammunition used as a component.</Description>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel3>3d8</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -3521,9 +3525,10 @@ the DM might instead offer a short phrase as an answer.</Description>
   <PlayerSpell>
     <Description>Your touch inflicts disease. Make a melee spell attack
 against a creature within your reach. On a hit, you afflict
-the creature with a disease o f your choice from any o f
+the creature with a disease of your choice from any of
 the ones described below.
-At the end o f each o f the target’s turns, it must make
+
+At the end of each o f the target’s turns, it must make
 a Constitution saving throw. After failing three of
 these saving throws, the disease’s effects last for the
 duration, and the creature stops making these saves.
@@ -4178,7 +4183,7 @@ when it hits with a w eapon attack.</Description>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel3>1d4</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -4188,7 +4193,7 @@ when it hits with a w eapon attack.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>A creature you touch regains a number o f hit points
+    <Description>A creature you touch regains a number of hit points
 equal to 1d8 + your spellcasting ability modifier. This
 spell has no effect on undead or constructs.</Description>
     <ItemName>Cure Wounds</ItemName>
