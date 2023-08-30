@@ -100,6 +100,7 @@ namespace SpellEditor
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxLevel0Dice = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.checkBoxIsAttackRoll = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
@@ -406,6 +407,7 @@ namespace SpellEditor
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.checkBoxIsAttackRoll);
             this.groupBox4.Controls.Add(this.checkBoxDurationUntilDispelled);
             this.groupBox4.Controls.Add(this.checkBoxRitual);
             this.groupBox4.Controls.Add(this.checkBoxConcentration);
@@ -434,7 +436,7 @@ namespace SpellEditor
             // checkBoxRitual
             // 
             this.checkBoxRitual.AutoSize = true;
-            this.checkBoxRitual.Location = new System.Drawing.Point(199, 75);
+            this.checkBoxRitual.Location = new System.Drawing.Point(183, 75);
             this.checkBoxRitual.Name = "checkBoxRitual";
             this.checkBoxRitual.Size = new System.Drawing.Size(56, 19);
             this.checkBoxRitual.TabIndex = 20;
@@ -896,6 +898,17 @@ namespace SpellEditor
             this.label16.TabIndex = 0;
             this.label16.Text = "Level 0";
             // 
+            // checkBoxIsAttackRoll
+            // 
+            this.checkBoxIsAttackRoll.AutoSize = true;
+            this.checkBoxIsAttackRoll.Location = new System.Drawing.Point(183, 94);
+            this.checkBoxIsAttackRoll.Name = "checkBoxIsAttackRoll";
+            this.checkBoxIsAttackRoll.Size = new System.Drawing.Size(83, 19);
+            this.checkBoxIsAttackRoll.TabIndex = 25;
+            this.checkBoxIsAttackRoll.Text = "Attack Roll";
+            this.checkBoxIsAttackRoll.UseVisualStyleBackColor = true;
+            this.checkBoxIsAttackRoll.CheckedChanged += new System.EventHandler(this.checkBoxIsAttackRoll_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1009,6 +1022,7 @@ namespace SpellEditor
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBoxLevel0Dice;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox checkBoxIsAttackRoll;
     }
 }
 

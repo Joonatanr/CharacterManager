@@ -76,6 +76,7 @@ namespace CharacterManager.Spells
 
         public Boolean IsConcentration;
         public Boolean IsRitual = false;
+        public Boolean IsAttackRoll = false;
 
         public String MaterialComponent = "";
 

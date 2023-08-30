@@ -206,6 +206,8 @@ namespace SpellEditor
             textBoxLevel7Dice.Text = spell.DiceAtLevel7;
             textBoxLevel8Dice.Text = spell.DiceAtLevel8;
             textBoxLevel9Dice.Text = spell.DiceAtLevel9;
+
+            checkBoxIsAttackRoll.Checked = spell.IsAttackRoll;
         }
 
 
@@ -720,6 +722,18 @@ namespace SpellEditor
             if (selectedSpell != null)
             {
                 selectedSpell.DiceAtLevel9 = textBoxLevel9Dice.Text;
+            }
+        }
+
+        private void checkBoxIsAttackRoll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                if (selectedSpell.IsAttackRoll != checkBoxIsAttackRoll.Checked)
+                {
+                    selectedSpell.IsAttackRoll = checkBoxIsAttackRoll.Checked;
+                    setSpellDataAsModified();
+                }
             }
         }
     }
