@@ -195,6 +195,17 @@ namespace SpellEditor
 
             checkBoxConcentration.Checked = spell.IsConcentration;
             checkBoxRitual.Checked = spell.IsRitual;
+
+            textBoxLevel0Dice.Text = spell.DiceAtLevel0;
+            textBoxLevel1Dice.Text = spell.DiceAtLevel1;
+            textBoxLevel2Dice.Text = spell.DiceAtLevel2;
+            textBoxLevel3Dice.Text = spell.DiceAtLevel3;
+            textBoxLevel4Dice.Text = spell.DiceAtLevel4;
+            textBoxLevel5Dice.Text = spell.DiceAtLevel5;
+            textBoxLevel6Dice.Text = spell.DiceAtLevel6;
+            textBoxLevel7Dice.Text = spell.DiceAtLevel7;
+            textBoxLevel8Dice.Text = spell.DiceAtLevel8;
+            textBoxLevel9Dice.Text = spell.DiceAtLevel9;
         }
 
 
@@ -218,7 +229,32 @@ namespace SpellEditor
         {
             if (!String.IsNullOrEmpty(LoadedFilePath))
             {
-                /* Keep it simple for now. */
+                int DieRollParseErrorCount = 0;
+
+                foreach(PlayerSpell sp in SpellList)
+                {
+                    string[] dice_array = sp.getDiceAsArray();
+
+                    for (int x = 0; x <= 9; x++)
+                    {
+                        if (!string.IsNullOrEmpty(dice_array[x]))
+                        {
+                            try
+                            {
+                                CharacterManager.DieRollEquation.parseComponentListFromString(dice_array[x]);
+                            }
+                            catch (Exception)
+                            {
+                                DieRollParseErrorCount++;
+                                if (DieRollParseErrorCount < 10)
+                                {
+                                    MessageBox.Show("Could not parse Spell " + sp.SpellName + " dice equation: " + dice_array[x]);
+                                }
+                            }
+                        }
+                    }
+                }
+
                 try
                 {
                     XmlSerializer writer = new XmlSerializer(typeof(List<PlayerSpell>));
@@ -607,6 +643,84 @@ namespace SpellEditor
             }
         }
 
+        private void textBoxLevel0Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel0 = textBoxLevel0Dice.Text;
+            }
+        }
 
+        private void textBoxLevel1Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel1 = textBoxLevel1Dice.Text;
+            }
+        }
+
+        private void textBoxLevel2Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel2 = textBoxLevel2Dice.Text;
+            }
+        }
+
+        private void textBoxLevel3Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel3 = textBoxLevel3Dice.Text;
+            }
+        }
+
+        private void textBoxLevel4Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel4 = textBoxLevel4Dice.Text;
+            }
+        }
+
+        private void textBoxLevel5Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel5 = textBoxLevel5Dice.Text;
+            }
+        }
+
+        private void textBoxLevel6Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel6 = textBoxLevel6Dice.Text;
+            }
+        }
+
+        private void textBoxLevel7Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel7 = textBoxLevel7Dice.Text;
+            }
+        }
+
+        private void textBoxLevel8Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel8 = textBoxLevel8Dice.Text;
+            }
+        }
+
+        private void textBoxLevel9Dice_TextChanged(object sender, EventArgs e)
+        {
+            if (selectedSpell != null)
+            {
+                selectedSpell.DiceAtLevel9 = textBoxLevel9Dice.Text;
+            }
+        }
     }
 }

@@ -200,6 +200,24 @@ namespace CharacterManager.Spells
             }
         }
 
+        public string[] getDiceAsArray()
+        {
+            string[] res = new string[10];
+
+            res[0] = DiceAtLevel0;
+            res[1] = DiceAtLevel1;
+            res[2] = DiceAtLevel2;
+            res[3] = DiceAtLevel3;
+            res[4] = DiceAtLevel4;
+            res[5] = DiceAtLevel5;
+            res[6] = DiceAtLevel6;
+            res[7] = DiceAtLevel7;
+            res[8] = DiceAtLevel8;
+            res[9] = DiceAtLevel9;
+
+            return res;
+        }
+
         public override void ShowDescription(object [] args)
         {
             Spellcard card = new Spellcard();

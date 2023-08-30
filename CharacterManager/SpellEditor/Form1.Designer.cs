@@ -79,6 +79,27 @@ namespace SpellEditor
             this.textBoxSpellName = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.textBoxLevel9Dice = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBoxLevel8Dice = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBoxLevel7Dice = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBoxLevel6Dice = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBoxLevel5Dice = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBoxLevel4Dice = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxLevel3Dice = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxLevel2Dice = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBoxLevel1Dice = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxLevel0Dice = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
@@ -94,6 +115,7 @@ namespace SpellEditor
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSpellRange)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).BeginInit();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonLoad
@@ -117,9 +139,9 @@ namespace SpellEditor
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(604, 12);
+            this.listBox1.Location = new System.Drawing.Point(758, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(262, 574);
+            this.listBox1.Size = new System.Drawing.Size(210, 574);
             this.listBox1.TabIndex = 2;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -143,7 +165,7 @@ namespace SpellEditor
             this.groupBox1.Controls.Add(this.textBoxSpellName);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(585, 574);
+            this.groupBox1.Size = new System.Drawing.Size(560, 574);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spell Data";
@@ -393,7 +415,7 @@ namespace SpellEditor
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Location = new System.Drawing.Point(272, 226);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(307, 116);
+            this.groupBox4.Size = new System.Drawing.Size(282, 116);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Casting Time";
@@ -442,7 +464,7 @@ namespace SpellEditor
             0,
             0});
             this.numericUpDownCastingTime.Name = "numericUpDownCastingTime";
-            this.numericUpDownCastingTime.Size = new System.Drawing.Size(198, 23);
+            this.numericUpDownCastingTime.Size = new System.Drawing.Size(173, 23);
             this.numericUpDownCastingTime.TabIndex = 19;
             this.numericUpDownCastingTime.ValueChanged += new System.EventHandler(this.numericUpDownCastingTime_ValueChanged);
             // 
@@ -453,7 +475,7 @@ namespace SpellEditor
             this.comboBoxCastingTimeType.FormattingEnabled = true;
             this.comboBoxCastingTimeType.Location = new System.Drawing.Point(103, 22);
             this.comboBoxCastingTimeType.Name = "comboBoxCastingTimeType";
-            this.comboBoxCastingTimeType.Size = new System.Drawing.Size(198, 23);
+            this.comboBoxCastingTimeType.Size = new System.Drawing.Size(173, 23);
             this.comboBoxCastingTimeType.TabIndex = 16;
             this.comboBoxCastingTimeType.SelectedIndexChanged += new System.EventHandler(this.comboBoxCastingTimeType_SelectedIndexChanged);
             // 
@@ -485,7 +507,7 @@ namespace SpellEditor
             this.groupBox3.Controls.Add(this.numericUpDownSpellRange);
             this.groupBox3.Location = new System.Drawing.Point(272, 45);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(307, 77);
+            this.groupBox3.Size = new System.Drawing.Size(282, 77);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Spell Range";
@@ -515,7 +537,7 @@ namespace SpellEditor
             this.comboBoxRangeType.FormattingEnabled = true;
             this.comboBoxRangeType.Location = new System.Drawing.Point(85, 48);
             this.comboBoxRangeType.Name = "comboBoxRangeType";
-            this.comboBoxRangeType.Size = new System.Drawing.Size(216, 23);
+            this.comboBoxRangeType.Size = new System.Drawing.Size(191, 23);
             this.comboBoxRangeType.TabIndex = 12;
             this.comboBoxRangeType.SelectedIndexChanged += new System.EventHandler(this.comboBoxRangeType_SelectedIndexChanged);
             // 
@@ -530,7 +552,7 @@ namespace SpellEditor
             0,
             0});
             this.numericUpDownSpellRange.Name = "numericUpDownSpellRange";
-            this.numericUpDownSpellRange.Size = new System.Drawing.Size(216, 23);
+            this.numericUpDownSpellRange.Size = new System.Drawing.Size(191, 23);
             this.numericUpDownSpellRange.TabIndex = 11;
             this.numericUpDownSpellRange.ValueChanged += new System.EventHandler(this.numericUpDownSpellRange_ValueChanged);
             // 
@@ -544,7 +566,7 @@ namespace SpellEditor
             this.groupBox2.Controls.Add(this.comboBoxAoeType);
             this.groupBox2.Location = new System.Drawing.Point(272, 122);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(307, 100);
+            this.groupBox2.Size = new System.Drawing.Size(282, 100);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "AOE Effects";
@@ -560,7 +582,7 @@ namespace SpellEditor
             0,
             0});
             this.numericUpDownAoeSize.Name = "numericUpDownAoeSize";
-            this.numericUpDownAoeSize.Size = new System.Drawing.Size(198, 23);
+            this.numericUpDownAoeSize.Size = new System.Drawing.Size(173, 23);
             this.numericUpDownAoeSize.TabIndex = 15;
             this.numericUpDownAoeSize.ValueChanged += new System.EventHandler(this.numericUpDownAoeSize_ValueChanged);
             // 
@@ -589,7 +611,7 @@ namespace SpellEditor
             this.comboBoxAoeType.FormattingEnabled = true;
             this.comboBoxAoeType.Location = new System.Drawing.Point(103, 22);
             this.comboBoxAoeType.Name = "comboBoxAoeType";
-            this.comboBoxAoeType.Size = new System.Drawing.Size(198, 23);
+            this.comboBoxAoeType.Size = new System.Drawing.Size(173, 23);
             this.comboBoxAoeType.TabIndex = 0;
             this.comboBoxAoeType.SelectedIndexChanged += new System.EventHandler(this.comboBoxAoeType_SelectedIndexChanged);
             // 
@@ -599,7 +621,7 @@ namespace SpellEditor
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxAtHigherLevels.Location = new System.Drawing.Point(112, 475);
             this.richTextBoxAtHigherLevels.Name = "richTextBoxAtHigherLevels";
-            this.richTextBoxAtHigherLevels.Size = new System.Drawing.Size(467, 81);
+            this.richTextBoxAtHigherLevels.Size = new System.Drawing.Size(442, 81);
             this.richTextBoxAtHigherLevels.TabIndex = 5;
             this.richTextBoxAtHigherLevels.Text = "";
             this.richTextBoxAtHigherLevels.TextChanged += new System.EventHandler(this.richTextBoxAtHigherLevels_TextChanged);
@@ -630,7 +652,7 @@ namespace SpellEditor
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxSpellDescription.Location = new System.Drawing.Point(112, 349);
             this.richTextBoxSpellDescription.Name = "richTextBoxSpellDescription";
-            this.richTextBoxSpellDescription.Size = new System.Drawing.Size(467, 117);
+            this.richTextBoxSpellDescription.Size = new System.Drawing.Size(442, 117);
             this.richTextBoxSpellDescription.TabIndex = 2;
             this.richTextBoxSpellDescription.Text = "";
             this.richTextBoxSpellDescription.TextChanged += new System.EventHandler(this.richTextBoxSpellDescription_TextChanged);
@@ -650,7 +672,7 @@ namespace SpellEditor
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSpellName.Location = new System.Drawing.Point(99, 16);
             this.textBoxSpellName.Name = "textBoxSpellName";
-            this.textBoxSpellName.Size = new System.Drawing.Size(480, 23);
+            this.textBoxSpellName.Size = new System.Drawing.Size(455, 23);
             this.textBoxSpellName.TabIndex = 0;
             // 
             // buttonSave
@@ -667,7 +689,7 @@ namespace SpellEditor
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.Location = new System.Drawing.Point(604, 592);
+            this.buttonAdd.Location = new System.Drawing.Point(893, 592);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(75, 35);
             this.buttonAdd.TabIndex = 5;
@@ -675,11 +697,211 @@ namespace SpellEditor
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.textBoxLevel9Dice);
+            this.groupBox8.Controls.Add(this.label25);
+            this.groupBox8.Controls.Add(this.textBoxLevel8Dice);
+            this.groupBox8.Controls.Add(this.label24);
+            this.groupBox8.Controls.Add(this.textBoxLevel7Dice);
+            this.groupBox8.Controls.Add(this.label23);
+            this.groupBox8.Controls.Add(this.textBoxLevel6Dice);
+            this.groupBox8.Controls.Add(this.label22);
+            this.groupBox8.Controls.Add(this.textBoxLevel5Dice);
+            this.groupBox8.Controls.Add(this.label21);
+            this.groupBox8.Controls.Add(this.textBoxLevel4Dice);
+            this.groupBox8.Controls.Add(this.label20);
+            this.groupBox8.Controls.Add(this.textBoxLevel3Dice);
+            this.groupBox8.Controls.Add(this.label19);
+            this.groupBox8.Controls.Add(this.textBoxLevel2Dice);
+            this.groupBox8.Controls.Add(this.label18);
+            this.groupBox8.Controls.Add(this.textBoxLevel1Dice);
+            this.groupBox8.Controls.Add(this.label17);
+            this.groupBox8.Controls.Add(this.textBoxLevel0Dice);
+            this.groupBox8.Controls.Add(this.label16);
+            this.groupBox8.Location = new System.Drawing.Point(579, 12);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(173, 574);
+            this.groupBox8.TabIndex = 6;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Dice";
+            // 
+            // textBoxLevel9Dice
+            // 
+            this.textBoxLevel9Dice.Location = new System.Drawing.Point(55, 282);
+            this.textBoxLevel9Dice.Name = "textBoxLevel9Dice";
+            this.textBoxLevel9Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel9Dice.TabIndex = 19;
+            this.textBoxLevel9Dice.TextChanged += new System.EventHandler(this.textBoxLevel9Dice_TextChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 285);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(43, 15);
+            this.label25.TabIndex = 18;
+            this.label25.Text = "Level 9";
+            // 
+            // textBoxLevel8Dice
+            // 
+            this.textBoxLevel8Dice.Location = new System.Drawing.Point(55, 253);
+            this.textBoxLevel8Dice.Name = "textBoxLevel8Dice";
+            this.textBoxLevel8Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel8Dice.TabIndex = 17;
+            this.textBoxLevel8Dice.TextChanged += new System.EventHandler(this.textBoxLevel8Dice_TextChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 256);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 15);
+            this.label24.TabIndex = 16;
+            this.label24.Text = "Level 8";
+            // 
+            // textBoxLevel7Dice
+            // 
+            this.textBoxLevel7Dice.Location = new System.Drawing.Point(55, 224);
+            this.textBoxLevel7Dice.Name = "textBoxLevel7Dice";
+            this.textBoxLevel7Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel7Dice.TabIndex = 15;
+            this.textBoxLevel7Dice.TextChanged += new System.EventHandler(this.textBoxLevel7Dice_TextChanged);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 227);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(43, 15);
+            this.label23.TabIndex = 14;
+            this.label23.Text = "Level 7";
+            // 
+            // textBoxLevel6Dice
+            // 
+            this.textBoxLevel6Dice.Location = new System.Drawing.Point(55, 195);
+            this.textBoxLevel6Dice.Name = "textBoxLevel6Dice";
+            this.textBoxLevel6Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel6Dice.TabIndex = 13;
+            this.textBoxLevel6Dice.TextChanged += new System.EventHandler(this.textBoxLevel6Dice_TextChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 198);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(43, 15);
+            this.label22.TabIndex = 12;
+            this.label22.Text = "Level 6";
+            // 
+            // textBoxLevel5Dice
+            // 
+            this.textBoxLevel5Dice.Location = new System.Drawing.Point(55, 166);
+            this.textBoxLevel5Dice.Name = "textBoxLevel5Dice";
+            this.textBoxLevel5Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel5Dice.TabIndex = 11;
+            this.textBoxLevel5Dice.TextChanged += new System.EventHandler(this.textBoxLevel5Dice_TextChanged);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 169);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(43, 15);
+            this.label21.TabIndex = 10;
+            this.label21.Text = "Level 5";
+            // 
+            // textBoxLevel4Dice
+            // 
+            this.textBoxLevel4Dice.Location = new System.Drawing.Point(55, 137);
+            this.textBoxLevel4Dice.Name = "textBoxLevel4Dice";
+            this.textBoxLevel4Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel4Dice.TabIndex = 9;
+            this.textBoxLevel4Dice.TextChanged += new System.EventHandler(this.textBoxLevel4Dice_TextChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 140);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(43, 15);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "Level 4";
+            // 
+            // textBoxLevel3Dice
+            // 
+            this.textBoxLevel3Dice.Location = new System.Drawing.Point(55, 108);
+            this.textBoxLevel3Dice.Name = "textBoxLevel3Dice";
+            this.textBoxLevel3Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel3Dice.TabIndex = 7;
+            this.textBoxLevel3Dice.TextChanged += new System.EventHandler(this.textBoxLevel3Dice_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(6, 111);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(43, 15);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Level 3";
+            // 
+            // textBoxLevel2Dice
+            // 
+            this.textBoxLevel2Dice.Location = new System.Drawing.Point(55, 79);
+            this.textBoxLevel2Dice.Name = "textBoxLevel2Dice";
+            this.textBoxLevel2Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel2Dice.TabIndex = 5;
+            this.textBoxLevel2Dice.TextChanged += new System.EventHandler(this.textBoxLevel2Dice_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 82);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(43, 15);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Level 2";
+            // 
+            // textBoxLevel1Dice
+            // 
+            this.textBoxLevel1Dice.Location = new System.Drawing.Point(55, 50);
+            this.textBoxLevel1Dice.Name = "textBoxLevel1Dice";
+            this.textBoxLevel1Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel1Dice.TabIndex = 3;
+            this.textBoxLevel1Dice.TextChanged += new System.EventHandler(this.textBoxLevel1Dice_TextChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 53);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(43, 15);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Level 1";
+            // 
+            // textBoxLevel0Dice
+            // 
+            this.textBoxLevel0Dice.Location = new System.Drawing.Point(55, 21);
+            this.textBoxLevel0Dice.Name = "textBoxLevel0Dice";
+            this.textBoxLevel0Dice.Size = new System.Drawing.Size(112, 23);
+            this.textBoxLevel0Dice.TabIndex = 1;
+            this.textBoxLevel0Dice.TextChanged += new System.EventHandler(this.textBoxLevel0Dice_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(43, 15);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Level 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 639);
+            this.ClientSize = new System.Drawing.Size(980, 639);
+            this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.groupBox1);
@@ -709,6 +931,8 @@ namespace SpellEditor
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAoeSize)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -764,6 +988,27 @@ namespace SpellEditor
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox checkBoxDurationUntilDispelled;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TextBox textBoxLevel9Dice;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBoxLevel8Dice;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBoxLevel7Dice;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBoxLevel6Dice;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBoxLevel5Dice;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBoxLevel4Dice;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBoxLevel3Dice;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBoxLevel2Dice;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBoxLevel1Dice;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBoxLevel0Dice;
+        private System.Windows.Forms.Label label16;
     }
 }
 

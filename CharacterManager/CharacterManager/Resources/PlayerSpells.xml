@@ -25,6 +25,16 @@ This spell’s damage increases by 1d6 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -52,6 +62,16 @@ increase by an additional 5 for each slot level above 2nd.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a tiny strip of white cloth</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -84,6 +104,16 @@ the sound of a hand bell for 10 seconds within 60 feet.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -139,6 +169,16 @@ make using it.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -170,6 +210,16 @@ additional beast for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>A morsel of food</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -213,6 +263,16 @@ increases by 48 hours for each slot level above 2nd.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>A morsel of food</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -263,6 +323,16 @@ can’t activate, wield, or otherwise benefit from any of its equipment.</Descri
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -318,6 +388,16 @@ from a different corpse or pile of bones.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a drop of blood, a piece of flesh,</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -392,6 +472,16 @@ additional objects for each slot level above 5th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -425,6 +515,16 @@ pass through the barrier, the spell ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -506,6 +606,16 @@ nullify each other.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of powdered iron or iron filings</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -573,6 +683,16 @@ affected again.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>either a lump of alum soaked in vinegar for the antipathy effect or a drop of honey for the sympathy effect</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -606,6 +726,16 @@ inch in diameter.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of bat fur</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -648,6 +778,16 @@ faces in a different direction.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -682,6 +822,16 @@ locks on it increases by 10.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>gold dust worth at least 25gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -711,6 +861,16 @@ both the temporary hit points and the cold damage increase by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a cup of water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -742,6 +902,16 @@ spell slot of 2nd level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -808,6 +978,16 @@ to 0 hit points.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>for each creature you affect with this spell, you must provide one jacinth worth at least 1000GP and one ornately carved bar of silver worth at least 100gp, all of which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -850,6 +1030,16 @@ get a random reading. The DM makes this roll in secret.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>specially marked sticks, bones,or similar tokens w orth at least 25 gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -878,6 +1068,16 @@ when it starts its turn in the aura with 0 hit points.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -908,6 +1108,16 @@ frightened, paralyzed, poisoned, and stunned.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -934,6 +1144,16 @@ cause one creature in the aura (including you) to regain
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -973,6 +1193,16 @@ it w as charmed.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>an agate worth at least 1,000 gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1003,6 +1233,16 @@ additional creature for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a drop of blood</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1038,6 +1278,16 @@ space is occupied.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1080,6 +1330,16 @@ additional creature for each slot level above 4th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>an item distasteful to the target</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1106,6 +1366,16 @@ of armor it is wearing.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a handful of oak bark</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1132,6 +1402,16 @@ number of hit points possible from any healing.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1162,6 +1442,16 @@ own surroundings.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1213,6 +1503,16 @@ that doesn’t require concentration.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1287,6 +1587,16 @@ level above 5th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>an eggshell and a snakeskin glove</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1323,6 +1633,16 @@ save, the creature takes half as much damage.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1348,6 +1668,16 @@ dealt by weapon attacks.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1377,6 +1707,16 @@ creature for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a sprinkling of holy water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1413,6 +1753,16 @@ spell slot o f 5th level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1445,6 +1795,16 @@ On a successful save, it is no longer blinded.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1475,6 +1835,16 @@ each slot level above 2nd.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1517,6 +1887,16 @@ have the ability to do so.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1544,6 +1924,16 @@ with truesight.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1576,6 +1966,16 @@ each slot level above 2nd.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1605,6 +2005,16 @@ the damage increases by 1d6 for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1650,6 +2060,16 @@ slot level above 3rd.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1689,6 +2109,16 @@ again, unless the DM rules otherwise.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1724,6 +2154,16 @@ level above 6th.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of fur; a piece of amber,glass, or a crystal rod; and three silver pins</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1758,6 +2198,16 @@ you target them.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1789,6 +2239,16 @@ This spell’s damage increases by 1d8 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1819,6 +2279,16 @@ spell slot of 2nd level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a diamond worth at least 50 gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1848,6 +2318,16 @@ slot level above 6th.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>the powder o f a crushed black pearl worth at least 500gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1880,6 +2360,16 @@ no damage if it succeeds on the saving throw.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1916,6 +2406,16 @@ luminous, intangible orb about the size of your fist.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a focus worth at least 100 gp, either a jeweled horn for hearing or a glass eye for seeing</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1954,6 +2454,16 @@ is elsewhere.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>Diamond worth at least 1000gp and at least 1 cubic inch of flesh to be cloned, which the spell consumes, and a vessel worth at least 2000GP that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground or crystal container filled with salt water </MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1983,6 +2493,16 @@ its turn there.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a sliver of glass</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2020,6 +2540,16 @@ the damage increases by 1d8 for each slot level above 5th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2053,6 +2583,16 @@ for each slot level above 1st</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of powder or sand that is colored red, yellow, and blue</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2106,6 +2646,16 @@ you target them.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2143,6 +2693,16 @@ answer. The DM makes this roll in secret.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>incense and a vial of holy water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2186,6 +2746,16 @@ nearby towns.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2223,6 +2793,16 @@ than 30 feet away from the target.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2251,6 +2831,16 @@ that isn’t part of a written language</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a pinch of soot and salt</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2287,6 +2877,16 @@ opportunity attacks to move in the designated direction.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2319,6 +2919,16 @@ spell slot o f 6th level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small crystal or glass cone</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2368,6 +2978,16 @@ by 5 feet for each slot level above 4th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>three nut shells</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2415,6 +3035,16 @@ with a 7th-level slot, and four times as many with a
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2445,6 +3075,16 @@ the weapon or ammunition used as a component.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>one piece of ammunition or a thrown weapon</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2480,6 +3120,16 @@ you summon a celestial of challenge rating 5 or lower.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2526,6 +3176,16 @@ increases by 1 for each slot level above 5th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>burning incense for air, soft clay for earth, sulfur and phosphorus fire, or water and sand for water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2573,6 +3233,16 @@ increases by 1 for each slot level above 6th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2618,6 +3288,16 @@ many with an 8th-level slot.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2650,6 +3330,16 @@ same as that of the ammunition or weapon.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>one piece of ammunition or one thrown weapon</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2695,6 +3385,16 @@ many with an 8th-level slot.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>one holly berry per creature summoned</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2735,6 +3435,16 @@ the DM might instead offer a short phrase as an answer.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2799,6 +3509,16 @@ stunned until the end o f its next turn.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2840,6 +3560,16 @@ ever not on your person.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a statuette of yourself carved from ivory and decorated with gems worth at least 1500gp.</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2866,6 +3596,16 @@ not smothered or quenched.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>ruby dust worth 50gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>50</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2946,6 +3686,16 @@ damage occurs each round it remains in the vortex.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a drop of water and a pinch of dust</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3011,6 +3761,16 @@ Stage Condition
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>(burning incense and bits of earth and wood mixed in water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3043,6 +3803,16 @@ spell slot you used.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3071,6 +3841,16 @@ doesn’t go bad.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3106,6 +3886,16 @@ each slot level above 1st.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a drop o f water if creating water or a few grains o f sand if destroying it</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3162,6 +3952,16 @@ or two mummies.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>one clay pot filled with grave dirt, one clay pot filled with brackish water, and one 150gp black onyx stone for each corpse</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>150</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3207,6 +4007,16 @@ the cube increases by 5 feet for each slot level above 5th.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a tiny piece of matter of the same type of item you plan to create</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3245,6 +4055,16 @@ of each o f its turns. On a success, the spell ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3272,6 +4092,16 @@ when it hits with a w eapon attack.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3299,6 +4129,16 @@ spell slot of 2nd level or higher, the healing increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3330,6 +4170,16 @@ spell, and a light winks out if it exceeds the spell’s range.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3365,6 +4215,16 @@ created the light is dispelled.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>bat fur and a drop of pitch or piece of coal</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3389,6 +4249,16 @@ darkvision out to a range of 60 feet.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>either a pinch of dried carrot or an agate</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3423,6 +4293,16 @@ spell that created the darkness is dispelled.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3455,6 +4335,16 @@ the target, and the spell ends.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3505,6 +4395,16 @@ increases by 1d6 for each slot level above 7th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a tiny ball of bat guano and sulphur</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3545,6 +4445,16 @@ connect to its demiplane instead.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3574,6 +4484,16 @@ knocked prone.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3605,6 +4525,16 @@ of lead, or 3 feet of wood or dirt.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3635,6 +4565,16 @@ of lead, or 3 feet of wood or dirt.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3664,6 +4604,16 @@ of lead, or 3 feet of wood or dirt.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a yew leaf</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3725,6 +4675,16 @@ be within range.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a copper piece</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3762,6 +4722,16 @@ teleport you.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3805,6 +4775,16 @@ spell save DC.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3849,6 +4829,16 @@ spell slot of 7th level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a lodestone and a pinch of dust</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3894,6 +4884,16 @@ and fey are sent to the Feywild</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>holy water or powdered silver and iron</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3925,6 +4925,16 @@ equal to or less than the level o f the spell slot you used.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3963,6 +4973,16 @@ spell slot of 2nd level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3999,6 +5019,16 @@ random reading. The DM makes this roll in secret.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>incense and a sacrificial offering appropriate to your religion, together worth at least 25gp which the spell consumes.</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4023,6 +5053,16 @@ radiant damage on a hit.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4063,6 +5103,16 @@ means short of a wish spell.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4116,6 +5166,16 @@ concentration, up to 8 hours.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4166,6 +5226,16 @@ the duration is concentration, up to 8 hours</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4219,6 +5289,16 @@ concentration, up to 8 hours.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4261,6 +5341,16 @@ the sapphire ends this spell’s effect.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a sapphire worth 1000gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4317,6 +5407,16 @@ makes its saving throw with disadvantage.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a handful of sand, a dab of ink, and a writing quill plucked from a sleeping bird</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4357,6 +5457,16 @@ small campfire.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4423,6 +5533,16 @@ damage and doesn’t fall prone or become buried.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of dirt, a piece of rock, and a lump of clay</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4452,6 +5572,16 @@ a separate attack roll for each beam.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4484,6 +5614,16 @@ increases to 3d4.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4532,6 +5672,16 @@ additional creature for each slot level above 2nd</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>fur or a feather from a beast</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4586,6 +5736,16 @@ damage (this can’t reduce the damage below 1).</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4623,6 +5783,16 @@ for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4658,6 +5828,16 @@ When the spell ends, the conjured plants wilt away</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4692,6 +5872,16 @@ incapacitated or can no longer speak.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4749,6 +5939,16 @@ when you cast the spell.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4787,6 +5987,16 @@ against your spell save DC. On a success, it frees itself.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a piece of tentacle from a giant octopus or squid</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4812,6 +6022,16 @@ the Dash action.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4859,6 +6079,16 @@ the effect ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4901,6 +6131,16 @@ artisan’s tools used to craft such objects.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4915,6 +6155,7 @@ has advantage if the attacker can see it, and the affected
 creature or object can’t benefit from being invisible.</Description>
     <ItemName>Faerie Fire</ItemName>
     <SpellName>Faerie Fire</SpellName>
+    <AtHigherLevels />
     <School>Evocation</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>60</SpellRange>
@@ -4931,6 +6172,16 @@ creature or object can’t benefit from being invisible.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4958,6 +6209,16 @@ temporary hit points for each slot level above 1st.
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small amount of alcohol or distilled spirits</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4992,6 +6253,16 @@ On a successful save, the spell ends for that creature.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a white feather or the heart of a hen</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5018,6 +6289,16 @@ on its feet, and the spell ends for that creature.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small feather or piece of down</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5056,6 +6337,16 @@ The spell can also be ended by greater restoration, heal, or wish.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a handful of clay, crystal, glass or mineral spheres</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5090,6 +6381,16 @@ effect until the spell ends.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a pinch of graveyard dirt</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5133,6 +6434,16 @@ it. If the spell requires an attack roll, you use your attack modifier for the r
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>10 gp worth of charcoal,incense, and herbs that must be consumed by fire in a brass brazier</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5186,6 +6497,16 @@ from its bond at any time, causing it to disappear.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5222,6 +6543,16 @@ necessarily the safest route) to the destination.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a set of divinatory tools -- such as bones, ivory sticks, cards, teeth or carved runes --- worth 100gp and an object from the location you wish to find</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5256,6 +6587,16 @@ general nature o f the danger posed by a trap you sense.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5287,6 +6628,16 @@ of its ability.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5314,6 +6665,16 @@ worn or carried. This spell’s damage increases by 1d10 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5349,6 +6710,16 @@ shield, or 2d8 cold damage from a cold shield.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of phosphorus or a firefly</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5383,6 +6754,16 @@ by this spell.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5415,17 +6796,17 @@ the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a tiny ball of bat guano and sulfur</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3>8d6</DiceAtLevel3>
+    <DiceAtLevel4>9d6</DiceAtLevel4>
+    <DiceAtLevel5>10d6</DiceAtLevel5>
+    <DiceAtLevel6>11d6</DiceAtLevel6>
+    <DiceAtLevel7>12d6</DiceAtLevel7>
+    <DiceAtLevel8>13d6</DiceAtLevel8>
+    <DiceAtLevel9>14d6</DiceAtLevel9>
     <MaterialCost>0</MaterialCost>
-	<DiceAtLevel0></DiceAtLevel0>
-	<DiceAtLevel1></DiceAtLevel1>
-	<DiceAtLevel2></DiceAtLevel2>
-	<DiceAtLevel3>8d6</DiceAtLevel3>
-	<DiceAtLevel4>9d6</DiceAtLevel4>
-	<DiceAtLevel5>10d6</DiceAtLevel5>
-	<DiceAtLevel6>11d6</DiceAtLevel6>
-	<DiceAtLevel7>12d6</DiceAtLevel7>
-	<DiceAtLevel8>13d6</DiceAtLevel8>
-	<DiceAtLevel9>14d6</DiceAtLevel9>
   </PlayerSpell>
   <PlayerSpell>
     <Description>You evoke a fiery blade in your free hand. The blade is
@@ -5460,6 +6841,16 @@ spell slot of 4th level or higher, the damage increases by
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>leaf of sumac</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5491,6 +6882,16 @@ higher, the fire damage or the radiant damage
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of sulfur</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5529,6 +6930,16 @@ the damage increases by 1d6 for each slot level above 2nd.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of tallow, a pinch of brimstone, and a dusting of powdered iron</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5572,6 +6983,16 @@ until the effect is removed.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of lime, water, and earth</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5601,6 +7022,16 @@ additional creature for each slot level above 3rd.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a wing feather from any bird</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5630,6 +7061,16 @@ increases by 20 feet for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5679,6 +7120,16 @@ on the last casting.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a sprinkling of holy water, rate incense, and powdered ruby worth at least 1000pg</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5730,6 +7181,16 @@ This spell can’t be dispelled by dispel magic.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>ruby dust worth 1500gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5760,6 +7221,16 @@ its duration ends.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a hummingbird feather</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5792,6 +7263,16 @@ movement or attacks.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a leather strap, bound around the arm or a similar appendage</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5821,6 +7302,16 @@ depending on the nature o f your interaction with it.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5862,6 +7353,16 @@ with. The target can’t attack or cast spells.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5908,6 +7409,16 @@ might leave, attack you, or help you.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a diamond worth at least 5000gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>5000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5953,6 +7464,16 @@ mentioned above.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5982,6 +7503,16 @@ limit of spells such as raise dead.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6022,6 +7553,16 @@ might have the sam e statistics as a giant wasp.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6048,6 +7589,16 @@ are being truthful.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6084,6 +7635,16 @@ for each slot level above 6th.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a glass or crystal bead that shatters when the spell ends</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6170,6 +7731,16 @@ the glyph of warding.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>incense and powdered diamond worth at least 200gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>200</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6200,6 +7771,16 @@ consum ed within 24 hours of the casting of this spell.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a sprig of mistletoe</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6231,6 +7812,16 @@ on each o f your turns.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6260,6 +7851,16 @@ or fall prone.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of pork rind or butter</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6284,6 +7885,16 @@ invisible as long as it is on the target’s person.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6315,6 +7926,16 @@ cursed magic item
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>diamond dust worth at least 100gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6348,6 +7969,16 @@ vanishes when it has dealt a total of 60 damage.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6428,6 +8059,16 @@ for one year.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a burning incense, a small measure of brimstone and oil, a knotted string, a small amount of umber hulk blood, and a small silver rod worth at least 10gp.</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>10</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6453,6 +8094,16 @@ or after making the ability check. The spell then ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6485,6 +8136,16 @@ spell slot of 2nd level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6526,6 +8187,16 @@ line blasts from you.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a legume seed</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6559,6 +8230,16 @@ the damage increases by 1d10 for each slot level above 1st
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6643,6 +8324,16 @@ com m on language.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>herbs, oils, and incense worth at least 1000gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6682,6 +8373,16 @@ im age superim posed on the terrain.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a stone, a twig and a bit of green plant</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6713,6 +8414,16 @@ maximum to return to norm al before that time passes.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6745,6 +8456,16 @@ sw eeps over it.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a shaving of licorice root</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6774,6 +8495,16 @@ increases by 10 for each slot level above 6th.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6801,6 +8532,16 @@ or higher, the healing increases by 1d4 for each slot level above 1st.</AtHigher
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6837,6 +8578,16 @@ the damage increases by 1d8 for each slot level above 2nd.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a piece of iron and a flame</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6869,6 +8620,16 @@ spell slot of 2nd level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6904,6 +8665,16 @@ benefits last for 24 hours.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a gem -encrusted bow l worth at least 1000gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6936,6 +8707,16 @@ each slot level above 1st.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6974,6 +8755,16 @@ your concentration on the spell for up to 24 hours.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>the petrified eye of a newt</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7006,6 +8797,16 @@ you target them.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small, straight piece of iron</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7036,6 +8837,16 @@ you target them.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small, straight piece of iron</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7069,6 +8880,16 @@ the spell ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a tiny reliquary worth at least 1000gp containing a sared relic, such as a scrap of cloth from a sain't robe or a piece of parchment from a religious text</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7105,6 +8926,16 @@ otherworldly tentacles rub against it.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pickled octopus tentacle</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7138,6 +8969,16 @@ your concentration on the spell for up to 24 hours.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7172,6 +9013,16 @@ creature out of its stupor.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a glowing stick of incense or a crystal vial filled with phosphorescent material</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7204,6 +9055,16 @@ increases by 1d8 for each slot level above 4th.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of dust and a few drops of water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7236,6 +9097,16 @@ you learn what spells, if any, are currently affecting it.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pearl worth at least 100 gp and an owl feather</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7276,6 +9147,16 @@ A creature with truesight can read the hidden message.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a lead-based ink worth at least 10gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7370,6 +9251,16 @@ is immediately freed from its binding.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a vellum depiction or a carved statuette in the likeness of the target, and a special component that varies according to the version of the spell you choose, worth at least 500gp per Hit Die of the target</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7408,6 +9299,16 @@ of your turns.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7434,6 +9335,16 @@ spell slot of 2nd level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7470,6 +9381,16 @@ or higher, the damage increases by
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a few grains of sugar, some kernsl of grain, and a smear of fat</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7497,6 +9418,16 @@ you can target one additional creature for each slot level above 2nd.</AtHigherL
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>an eyelash encased in gum arabic</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7520,6 +9451,16 @@ tripled until the spell ends.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a grasshopper’s hind leg</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7557,6 +9498,16 @@ far away as 300 feet, emanates from the target object.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7596,6 +9547,16 @@ only with the sacred word Rudnogg on the lips.”</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>an incense worth at least 250gp, which the spell consumes, and four ivory strips worth at least 50gp each.</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>450</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7636,6 +9597,16 @@ Plane, it is irretrievably lost.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>an exquisite chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth at least 5,000 gp, and a Tiny replica made from the same materials worth at least 50 gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>5050</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7675,6 +9646,16 @@ from the inside.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a small crystal bead</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7699,6 +9680,16 @@ deafened, paralyzed, or poisoned.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7738,6 +9729,16 @@ ground if it is still aloft</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>either a small leather loop or a piece of golden wire bent into a cup shape with a long shank on one end.</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7768,6 +9769,16 @@ saving throw to avoid the spell.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7807,6 +9818,16 @@ level above 3rd.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7837,6 +9858,16 @@ the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of fur and a rod of amber, crystal, or glass</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7864,6 +9895,16 @@ if any are present.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a bit of fur from a bloodhound</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7901,6 +9942,16 @@ the creature.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of fur from a bloodhound</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7936,6 +9987,16 @@ and the object.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a forked twig</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7962,6 +10023,16 @@ additional creature for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of dirt</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7988,6 +10059,16 @@ armor or if you dismiss the spell as an action.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a piece of cured leather</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8020,6 +10101,16 @@ more than 10 pounds.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8067,6 +10158,16 @@ the duration increases by 1 hour for each slot level above 3rd.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>holy water or powdered silver and iron worth at least 100 gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8135,6 +10236,16 @@ When the spell ends, the container is destroyed.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a gem, crystal, reliquary, or some other ornamental container worth at least 500 gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8164,6 +10275,16 @@ more dart for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8211,6 +10332,16 @@ object or when a silver bell rings within 30 feet o f it.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a small bit of honeycomb and jade dust worth at least 10gp, which the spell consumes.</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>10</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8238,6 +10369,16 @@ slot of 6th level or higher, the bonus increases to +3.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8292,6 +10433,16 @@ dispelled, without requiring your concentration.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of fleece</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8321,6 +10472,16 @@ the healing increases by 1d8 for each slot level above 5th.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8350,6 +10511,16 @@ effect on undead or constructs.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8378,6 +10549,16 @@ spell slot o f 4th level or higher, the healing increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8429,6 +10610,16 @@ year and a day.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a snake’s tongue and either a bit of honeycomb or a drop of sweet oil</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8463,6 +10654,16 @@ unoccupied space.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8508,6 +10709,16 @@ closest to where you first entered.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8539,6 +10750,16 @@ the damage (both initial and later) increases by 1d4
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>powdered rhubarb leaf and an adder's stomach</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8568,6 +10789,16 @@ such an object.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8600,6 +10831,16 @@ through openings.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8633,6 +10874,16 @@ flammable objects that aren’t being worn or carried.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8660,6 +10911,16 @@ target’s mind or to gain information about the target.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8703,6 +10964,16 @@ the creature
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8749,6 +11020,16 @@ interact with the illusion.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8793,6 +11074,16 @@ if it can perceive illusions as false, as with truesight.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8829,6 +11120,16 @@ own surroundings.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8852,6 +11153,16 @@ feet to an unoccupied space that you can see.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8916,6 +11227,16 @@ or any time in the creature’s past (9th level).</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8957,6 +11278,16 @@ spell slot of 3rd level or higher, the damage increases by
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>several seeds of any moonseed plant and a piece of opalescent feldspar</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8997,6 +11328,16 @@ On a hit, it deals 4d8 piercing damage.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a tiny silver whistle, a piece of bone and a thread</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9050,6 +11391,16 @@ spaces nearest to the entrance.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a miniature portal carved from ivory, a small piece of polished marble, and a tiny silver spoon, each item worth at least 5gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>5</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9096,6 +11447,16 @@ on one side by using a spell slot o f 5th level.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9129,6 +11490,16 @@ target or a different one.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a miniature platinum sword with a grip and pommel of copper and zinc, worth 250gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>250</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9178,6 +11549,16 @@ growth. The moved earth carries any plants along with it.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>an iron blade and a small bag containing a mixture of soils - clay, loam and sand</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9205,6 +11586,16 @@ scrying sensors.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of diamond dust worth 25gp sprinkled over the target, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9254,6 +11645,16 @@ type or o f that alignment.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small square of silk</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9304,6 +11705,16 @@ spell slot o f 7th level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small crystal sphere</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9349,6 +11760,16 @@ without harming anything inside it.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a hemispherical piece of clear crystal and a matching hemispherical piece of gum arabic</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9383,6 +11804,16 @@ the spell ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9411,6 +11842,16 @@ behind no tracks or other traces o f its passage.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>ashes from a burned leaf of mistletoe and a sprig of spruce</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9443,6 +11884,16 @@ which you cast the spell.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of sesame seeds</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9501,6 +11952,16 @@ as a type appropriate to the illusion.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of fleece</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9534,6 +11995,16 @@ spell slot of 5th level or higher, the damage increases by
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9571,6 +12042,16 @@ an action to dismiss it or if the steed takes any damage.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9637,6 +12118,16 @@ points awarded.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9686,6 +12177,16 @@ day with a 9th-level spell slot.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a jewel worth at least 1000GP, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9734,6 +12235,16 @@ current plane of existence.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a forked, metal rod worth at least 250GP, attuned to a particular plane of existence</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>250</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9770,6 +12281,16 @@ yield twice the normal amount o f food when harvested.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9798,6 +12319,16 @@ This spell’s damage increases by 1d12 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9849,6 +12380,16 @@ from any of its equipment.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a caterpillar cocoon</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9876,6 +12417,16 @@ or constructs.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9901,6 +12452,16 @@ Otherwise, the spell has no effect.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9930,6 +12491,16 @@ save, this stunning effect ends.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9958,6 +12529,16 @@ undead or constructs.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10004,6 +12585,16 @@ and you can dismiss such an effect as an action
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10067,6 +12658,16 @@ more, rerolling any 8.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10171,6 +12772,16 @@ magical effects.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10207,6 +12818,16 @@ This spell’s damage increases by 1d8 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10257,6 +12878,16 @@ sounds hollow to the creature.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of fleece and jade dust worth at least 25gp</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10305,6 +12936,16 @@ sounds hollow to the creature.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10329,6 +12970,16 @@ fire, lightning, or thunder.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10362,6 +13013,16 @@ relevant effect.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>holy water or powdered silver and iron, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10391,6 +13052,16 @@ poison damage.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10415,6 +13086,16 @@ purified and rendered free of poison and disease.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10458,6 +13139,16 @@ the penalty is reduced by 1 until it disappears.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a diamond worth at least 500gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10491,6 +13182,16 @@ of existence.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a piece of eggshell from two different kinds of creatures</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10521,6 +13222,16 @@ success, the spell ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10550,6 +13261,16 @@ The spell’s damage increases by 1d8 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10580,6 +13301,16 @@ spell slot of 2nd level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10611,6 +13342,16 @@ to the stump.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a prayer wheel and holy water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10663,6 +13404,16 @@ the new one and changes its racial traits accordingly.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>rare oils and unguents worth at least 1000gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10688,6 +13439,16 @@ the object so it can be removed or discarded.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10714,6 +13475,16 @@ spell then ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a miniature cloak</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10758,6 +13529,16 @@ and saving throws.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a diamond worth at least 1000gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10796,6 +13577,16 @@ creatures fall back down.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a lodestone and iron filings</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10821,6 +13612,16 @@ old age, nor can it restore any missing body parts.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a diamond worth 300gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>300</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10861,6 +13662,16 @@ when the spell ends.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>powdered corn extract and a twisted loop of parchment</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10889,6 +13700,16 @@ The spell’s damage increases by 1d8 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10919,6 +13740,16 @@ that affects an enemy creature, this spell ends.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small silver mirror</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10946,6 +13777,16 @@ you create one additional ray for each slot level above 2nd.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10997,6 +13838,16 @@ doesn’t move.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a focus worth at least 1000gp, such as a crystal ball, a silver mirror, or a font filled with holy water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11032,6 +13883,16 @@ the attack increases by 1d6 for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11058,6 +13919,16 @@ and translucent.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of talb and a small sprinkling of powdered silver</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11107,6 +13978,16 @@ target is disguised.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11140,6 +14021,16 @@ the message doesn’t arrive.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a short piece of fine copper wire</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11178,6 +14069,16 @@ takes any damage.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a powder composed of diamond, emerald, ruby and sapphire dust worth at least 5000GP, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>5000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11247,6 +14148,16 @@ one, your hit points remain at their current value.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a jade circlet worth at least 1500gp, which you must place on your head before you cast the spell.</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11282,6 +14193,16 @@ the damage increases by 1d8 for each slot level above 2nd.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a chip of mica</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11309,6 +14230,16 @@ and you take no damage from magic missile.
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11334,6 +14265,16 @@ for the duration.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small parchment with a bit of holy text written on it</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11363,6 +14304,16 @@ of the weapon.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>mistletoe, a shamrock leaf, and a club or quarterstaff</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11393,6 +14344,16 @@ The spell’s damage increases by 1d8 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11421,6 +14382,16 @@ impossible there.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11462,6 +14433,16 @@ can see through the image.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of fleece</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11510,6 +14491,16 @@ instantly destroyed.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>snow or ice in quantities sufficient to make a life-size copy of the duplicated creature, some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1500gp, sprinkled over the duplicate and consumed by the spell</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11553,6 +14544,16 @@ each slot level above 1st.</AtHigherLevels>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of fine sand, rose petals, or a cricket</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11587,6 +14588,16 @@ throw against your spell save DC or lose concentration.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of dust and a few drops of water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11629,6 +14640,16 @@ successful save, the effect ends for it.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a drop of molasses</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11653,6 +14674,16 @@ undead or constructs.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11683,6 +14714,16 @@ DM’s discretion.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11730,6 +14771,16 @@ spell to release a restrained creature.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11767,6 +14818,16 @@ died, and can’t speculate about future events.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>burning incense</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11793,6 +14854,16 @@ equal to its walking speed.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a drop of bitumen and a spider</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11824,6 +14895,16 @@ terrain as hazardous before entering it.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>seven sharp thorns or seven small twigs, each sharpened to a point</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11862,6 +14943,16 @@ level above 3rd.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a holy symbol</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11901,6 +14992,16 @@ the damage increases by 1d8 for every two slot levels above the 2nd.</AtHigherLe
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11930,6 +15031,16 @@ can't take reactions, until the end of its next turn.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11966,6 +15077,16 @@ miles per hour) disperses it after 1 round.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a rotten egg or several skunk cabbage leaves</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11996,6 +15117,16 @@ and a latch, but finer mechanical detail isn’t possible.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>soft clay, which must be worked into roughly the desired shape of the stone object</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12021,6 +15152,16 @@ slashing damage.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>diamond dust worth 100gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12080,6 +15221,16 @@ whether mundane or magical.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12125,6 +15276,16 @@ the spell ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a snake's tongue and either a bit of honeycomb or a drop of sweet oil</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12161,6 +15322,16 @@ dim light for an additional 30 feet. This light is sunlight.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a magnifying glass</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12196,6 +15367,16 @@ created by a spell.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>fire and a piece of sunstone</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12229,6 +15410,16 @@ the quiver leaves your possession, the spell ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a quiver containing at least one piece of ammunition</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12331,6 +15522,16 @@ throw and becomes stunned for 1 minute on a failed save.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>mercury, phosphorus and powdered diamond and opal with a total value of at least 1000gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12366,6 +15567,16 @@ of the truth.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12400,6 +15611,16 @@ it’s triggered by damage. On a success, the spell ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>tiny tarts and a feather that is waved in the air</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12457,6 +15678,16 @@ contents from a vial.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12492,6 +15723,16 @@ sensory messages you send to it.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pair of linked silver rings</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12587,6 +15828,16 @@ can occur, dealing damage each time).</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12635,6 +15886,16 @@ cast the spell in this way.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>rare chalks and inks infused with precious gems, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>50</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12674,6 +15935,16 @@ the spell ends.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a drop of mercury</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12716,6 +15987,16 @@ dismiss such an effect as an action.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12746,6 +16027,16 @@ This spell’s damage increases by 1d6 w hen you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>the stem of a plant with thorns</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12774,6 +16065,16 @@ from you and knocked prone.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12808,6 +16109,16 @@ spell slot of 2nd level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12840,6 +16151,16 @@ In addition, the spell ends if you move to a place more than
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12866,6 +16187,16 @@ what it says.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small clay model of a ziggurat</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12894,6 +16225,16 @@ using 5 feet o f movement.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12928,6 +16269,16 @@ for the duration. You must end each turn outside a tree.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13002,6 +16353,16 @@ and it returns to its normal form.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a drop of mercury, a dollop of gum arabic, an a wisp of smoke</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13037,6 +16398,16 @@ unoccupied space you choose within 10 feet o f you.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a sprinkle of holy water and diamonds worth at least 25000gp, which the spell consumes</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>100000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13063,6 +16434,16 @@ range of 120 feet.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>an ointment for the eyes that costs 25gp; is made from mushroom powder, saffron and fat; and is consumed by the spell</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13089,6 +16470,16 @@ this spell hasn’t ended.
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13138,6 +16529,16 @@ of the area falls to the ground.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13178,6 +16579,16 @@ the spell ends.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a piece of string and a bit of wood</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13219,6 +16630,16 @@ spell slot o f 5th level or higher, the damage increases by
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small piece of phosphorus</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13260,6 +16681,16 @@ blocking ethereal travel through the wall.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pinch of powder made by crushing a clear gemstone</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13309,6 +16740,16 @@ air increases by 1d6, for each slot level above 6th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small piece of quartz</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13368,6 +16809,16 @@ the spell ends.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a small block of granite</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13413,6 +16864,16 @@ increase by 1d8 for each slot level above 6th.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a handful of thorns</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13443,6 +16904,16 @@ the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13477,6 +16948,16 @@ as an action.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a pair of platinum rings worth at least 50gp each, which you and the target must wear for the duration</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13502,6 +16983,16 @@ mode of respiration.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a short reed or piece of straw</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13534,6 +17025,16 @@ rate o f 60 feet per round.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>true</IsRitual>
     <MaterialComponent>a piece of cork</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13577,6 +17078,16 @@ damage to any creature that starts its turn in the fire.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a bit of spiderweb</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13611,6 +17122,16 @@ spell ends for that creature.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13642,6 +17163,16 @@ This spell’s damage increases by 1d4 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13679,6 +17210,16 @@ after 1 minute, the creature falls the remaining distance.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>fire and holy water</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13721,6 +17262,16 @@ can’t pass through it.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a tiny fan and a feather of exotic origin</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13807,6 +17358,16 @@ cast wish ever again if you suffer this stress.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13841,6 +17402,16 @@ increases by 1d12 for each slot level above 1st.</AtHigherLevels>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a twig from a tree that has been struck by lightning</MaterialComponent>
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13875,6 +17446,16 @@ your deity, the spell has no effect.</Description>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13904,6 +17485,16 @@ save DC to steel its resolve and end this spell.</Description>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
 </ArrayOfPlayerSpell>

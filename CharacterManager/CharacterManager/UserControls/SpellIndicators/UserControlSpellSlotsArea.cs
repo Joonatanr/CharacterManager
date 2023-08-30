@@ -21,8 +21,15 @@ namespace CharacterManager.UserControls
 
         public void updateSpellSlotDisplay()
         {
-            /* TODO : Placeholder. */
             userControlSpellSlotRow1.UpdateSpellSlotRowData();
+            userControlSpellSlotRow2.UpdateSpellSlotRowData();
+            userControlSpellSlotRow3.UpdateSpellSlotRowData();
+            userControlSpellSlotRow4.UpdateSpellSlotRowData();
+            userControlSpellSlotRow5.UpdateSpellSlotRowData();
+            userControlSpellSlotRow6.UpdateSpellSlotRowData();
+            userControlSpellSlotRow7.UpdateSpellSlotRowData();
+            userControlSpellSlotRow8.UpdateSpellSlotRowData();
+            userControlSpellSlotRow9.UpdateSpellSlotRowData();
         }
 
         public void setSpellSlotData(int level, SpellSlotData data)
