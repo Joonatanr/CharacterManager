@@ -18,6 +18,8 @@ namespace CharacterManager.UserControls
         public delegate void ItemCheckedChangedListener(ItemControlType item, bool isChecked);
         public event ItemCheckedChangedListener ItemCheckedChanged;
 
+        public object[] ItemDescriptionArgs = null;
+
         public Boolean isChecked 
         { 
             get 
@@ -72,7 +74,7 @@ namespace CharacterManager.UserControls
 
         private void Btn_Click(object sender, EventArgs e)
         {
-            this.Item.ShowDescription();
+            this.Item.ShowDescription(ItemDescriptionArgs);
         }
     }
 }

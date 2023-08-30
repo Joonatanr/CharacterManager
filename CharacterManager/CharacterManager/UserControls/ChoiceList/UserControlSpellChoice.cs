@@ -14,12 +14,25 @@ namespace CharacterManager.UserControls
     {        
         public bool IsMultipleLevel { get; set; } = false;
 
+        private bool _isCastingInfoEnabled = false;
+        
+        public bool IsCastingInfoEnabled
+        {
+            get
+            {
+                return _isCastingInfoEnabled;
+            }
+            set
+            {
+                _isCastingInfoEnabled = value;
+                ItemDescriptionArgs[0] = _isCastingInfoEnabled;
+            }
+        }
+
 
         /* Keeping this delegate to preserve the API */
         public delegate void SpellChoiceChangedListener(PlayerSpell Spell, bool isChosen);
         public event SpellChoiceChangedListener SpellSelectionChanged;
-
-        
 
 
         /* Keeping these public functions to keep external API mostly intact. */
@@ -55,6 +68,7 @@ namespace CharacterManager.UserControls
         public UserControlSpellChoice() : base()
         {
             ItemSelectionChanged += new ItemChoiceChangedListener(SpellSelectionChangedHandler);
+            ItemDescriptionArgs = new object[1];
         }
 
         protected override void setItemPositions(List<PlayerSpell> items, out Dictionary<int, PlayerSpell> itemDictionary, out Dictionary<int, StringContainer> textDictionary)

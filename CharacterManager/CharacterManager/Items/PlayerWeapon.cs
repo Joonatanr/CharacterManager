@@ -9,8 +9,6 @@ namespace CharacterManager.Items
     [Serializable]
     public class PlayerWeapon : PlayerItem
     {
-
-        
         public struct WeaponRange
         {
             public int NormalRange;

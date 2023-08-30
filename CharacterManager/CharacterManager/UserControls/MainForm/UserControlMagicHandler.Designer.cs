@@ -95,6 +95,7 @@ namespace CharacterManager.UserControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlKnownSpells.IsAvailabilityCount = true;
             this.userControlKnownSpells.IsBorder = true;
+            this.userControlKnownSpells.IsCastingInfoEnabled = true;
             this.userControlKnownSpells.IsCheckBoxed = true;
             this.userControlKnownSpells.IsMultipleLevel = true;
             this.userControlKnownSpells.Location = new System.Drawing.Point(3, 3);
@@ -112,6 +113,7 @@ namespace CharacterManager.UserControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlPreparedSpells.IsAvailabilityCount = false;
             this.userControlPreparedSpells.IsBorder = true;
+            this.userControlPreparedSpells.IsCastingInfoEnabled = false;
             this.userControlPreparedSpells.IsCheckBoxed = false;
             this.userControlPreparedSpells.IsMultipleLevel = false;
             this.userControlPreparedSpells.Location = new System.Drawing.Point(3, 3);
@@ -145,6 +147,7 @@ namespace CharacterManager.UserControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlCantripList.IsAvailabilityCount = false;
             this.userControlCantripList.IsBorder = true;
+            this.userControlCantripList.IsCastingInfoEnabled = false;
             this.userControlCantripList.IsCheckBoxed = false;
             this.userControlCantripList.IsMultipleLevel = false;
             this.userControlCantripList.Location = new System.Drawing.Point(5, 3);

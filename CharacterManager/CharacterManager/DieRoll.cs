@@ -11,6 +11,7 @@ namespace CharacterManager
     {
         public abstract int getValue(out String log);
 
+
         public static DieRollComponent parseFromString(string str)
         {
             /* Lets see if component contains a d. */

@@ -101,7 +101,7 @@ namespace CharacterManager.UserControls
             }
         }
 
-        /* TODO : Test this. */
+       
         protected void drawRectangleOnLine(Graphics gfx, int lineNum, Color rectColor)
         {
             Point sPoint = new Point(1, (lineInterval * (lineNum)) + 3);

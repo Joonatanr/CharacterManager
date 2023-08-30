@@ -31,7 +31,7 @@ namespace CharacterManager.Items
             return this.MemberwiseClone();
         }
 
-        public virtual void ShowDescription()
+        public virtual void ShowDescription(object [] args)
         {
             MessageBox.Show(ItemName + Environment.NewLine + Environment.NewLine + Description);
         }

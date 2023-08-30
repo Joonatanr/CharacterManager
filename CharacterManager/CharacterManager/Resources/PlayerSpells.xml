@@ -5416,6 +5416,16 @@ the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
     <IsRitual>false</IsRitual>
     <MaterialComponent>a tiny ball of bat guano and sulfur</MaterialComponent>
     <MaterialCost>0</MaterialCost>
+	<DiceAtLevel0></DiceAtLevel0>
+	<DiceAtLevel1></DiceAtLevel1>
+	<DiceAtLevel2></DiceAtLevel2>
+	<DiceAtLevel3>8d6</DiceAtLevel3>
+	<DiceAtLevel4>9d6</DiceAtLevel4>
+	<DiceAtLevel5>10d6</DiceAtLevel5>
+	<DiceAtLevel6>11d6</DiceAtLevel6>
+	<DiceAtLevel7>12d6</DiceAtLevel7>
+	<DiceAtLevel8>13d6</DiceAtLevel8>
+	<DiceAtLevel9>14d6</DiceAtLevel9>
   </PlayerSpell>
   <PlayerSpell>
     <Description>You evoke a fiery blade in your free hand. The blade is

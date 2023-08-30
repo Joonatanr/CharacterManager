@@ -109,6 +109,17 @@ namespace CharacterManager.UserControls
             userControlSpellSlotsArea1.setSpellSlotData(stat);
         }
 
+        public bool IsSpellSlotsAvailableOfLevel(int level)
+        {
+            if (level == 0)
+            {
+                return true;
+            }
+
+            CharacterSpellcastingStatus.SpellSlotData data = myStat.getSpellSlotDataForLevel(level);
+            return (data.ActiveCount > 0) ? true : false;
+        }
+
         public void UpdateAllDisplayedData()
         {
             /* TODO : This is a placeholder. */

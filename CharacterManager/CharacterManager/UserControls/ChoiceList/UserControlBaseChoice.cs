@@ -49,6 +49,8 @@ namespace CharacterManager.UserControls
         protected int number_of_fixed_replacements = 0;
         protected int number_of_remaining_fixed_replacements = 0;
 
+        public object[] ItemDescriptionArgs = null;
+
         public int RemainingAvailableChoices
         {
             get { return _remainingAvailableChoices; }
@@ -185,6 +187,7 @@ namespace CharacterManager.UserControls
                 iBtn.Size = new Size(40, 18);
                 iBtn.ButtonText = "Info";
                 ItemHandleControl<ItemType> ctrl = new ItemHandleControl<ItemType>(myItemDictionary[index], iBtn);
+                ctrl.ItemDescriptionArgs = this.ItemDescriptionArgs;
                 myControlList.Add(ctrl);
 
                 AddButtonOnLine(iBtn, index - 1, 3); /*TODO : Looks like adding controls begins with line index 1, but text uses index 0... <sigh>*/

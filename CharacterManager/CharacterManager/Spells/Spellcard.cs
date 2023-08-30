@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,29 @@ namespace CharacterManager.Spells
             "9th level",
         };
 
+        private bool _isCastingInfoVisible = false;
+        public bool IsCastingInfoVisible
+        {
+            get
+            {
+                return _isCastingInfoVisible;
+            }
+
+            set
+            {
+                _isCastingInfoVisible = value;
+                if (_isCastingInfoVisible)
+                {
+                    groupBoxCasting.Enabled = true;
+                    groupBoxCasting.Visible = true;
+                }
+                else
+                {
+                    groupBoxCasting.Enabled = false;
+                    groupBoxCasting.Visible = false;
+                }
+            }
+        }
 
         public Spellcard()
         {
@@ -258,6 +282,16 @@ namespace CharacterManager.Spells
 
             /*7. Update description. */
             updateDescription();
+
+            /*8. Update the Casting info. */
+            if (this.IsCastingInfoVisible)
+            {
+                /* TODO : Implement special handling for cantrips. */
+                numericUpDown1.Minimum = this.mySpell.SpellLevel;
+                numericUpDown1.Maximum = 9; /* TODO : Placeholder. */
+
+                numericUpDown1.Value = numericUpDown1.Minimum;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -298,6 +332,48 @@ namespace CharacterManager.Spells
             }
 
             return res;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            int selectedLevel = (int)numericUpDown1.Value;
+            List<DieRollComponent> myComponents = mySpell.getDiceForSpellLevel(selectedLevel);
+            
+            if (myComponents != null)
+            {
+                dieRollTextBox1.Text = DieRollEquation.createStringFromDieRollComponents(myComponents, true); 
+            }
+            else
+            {
+                dieRollTextBox1.Text = "";    
+            }
+        }
+
+        private void buttonRollDice_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string output;
+                if (!string.IsNullOrEmpty(dieRollTextBox1.Text)) 
+                { 
+                    dieRollTextBox1.Roll(out output);
+                    richTextBox1.AppendText(output + Environment.NewLine);
+                    richTextBox1.ScrollToCaret();
+                    GlobalMagicEvents.ReportMagicRoll(mySpell.SpellName + " : " + output);
+                }
+            }
+            catch (Exception) 
+            { 
+             
+            }
+        }
+
+        private void buttonCast_Click(object sender, EventArgs e)
+        {
+            if (GlobalMagicEvents.CastSpell(mySpell, (int)numericUpDown1.Value) == false)
+            {
+                MessageBox.Show("No level " + (int)numericUpDown1.Value + " spell slots remaining");
+            }
         }
     }
 

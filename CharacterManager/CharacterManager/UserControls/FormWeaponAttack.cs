@@ -17,8 +17,8 @@ namespace CharacterManager.UserControls
         private PlayerWeapon _weapon;
         private PlayerCharacter _connectedCharacter = null;
 
-        public delegate void RollResultHandler(string text, Color textColour, Boolean isBold, HorizontalAlignment alignment);
-        public RollResultHandler RollReporter;
+        
+        public DieRollTextBox.RollResultHandler RollReporter;
 
         public PlayerWeapon Weapon
         {

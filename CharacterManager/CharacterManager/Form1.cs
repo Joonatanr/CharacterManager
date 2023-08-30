@@ -12,6 +12,7 @@ using System.Xml;
 using System.Xml.Serialization;
 using CharacterManager.CharacterCreator;
 using CharacterManager.Items;
+using CharacterManager.Spells;
 using CharacterManager.UserControls;
 
 namespace CharacterManager
@@ -19,7 +20,6 @@ namespace CharacterManager
     public partial class Form1 : Form
     {
         private PlayerCharacter activeCharacter = null;
-
 
         public Form1()
         {
@@ -34,6 +34,13 @@ namespace CharacterManager
             userControlCurrencyGold.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
             userControlCurrencyElectrum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
             userControlCurrencyPlatinum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
+            GlobalMagicEvents.MagicDiceRolledListener = handleRollReport;
+            GlobalMagicEvents.SpellSlotLevelAvailableChecker = isSpellSlotWithLevelAvailable;
+        }
+
+        private bool isSpellSlotWithLevelAvailable(int level)
+        {
+            return userControlMagicHandler1.IsSpellSlotsAvailableOfLevel(level);
         }
 
         private void GoldChanged(int amount)
@@ -394,7 +401,7 @@ namespace CharacterManager
                     weaponForm.AttackModifiers = attackModifiers;
                     weaponForm.DamageModifiers = damageModifiers;
                     weaponForm.setCharacter(activeCharacter);
-                    weaponForm.RollReporter = new FormWeaponAttack.RollResultHandler(handleRollReport);
+                    weaponForm.RollReporter = new DieRollTextBox.RollResultHandler(handleRollReport);
 
                     weaponForm.Show();
                     

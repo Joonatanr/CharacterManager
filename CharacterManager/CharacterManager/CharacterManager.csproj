@@ -148,6 +148,7 @@
     <Compile Include="SpecialAttributes\SpecialAttribute.cs" />
     <Compile Include="SpecialAttributes\SpellcastingAbility.cs" />
     <Compile Include="Spells\CharacterSpellcastingStatus.cs" />
+    <Compile Include="Spells\GlobalMagicEvents.cs" />
     <Compile Include="Spells\PlayerSpell.cs" />
     <Compile Include="Spells\Spellcard.cs">
       <SubType>Form</SubType>

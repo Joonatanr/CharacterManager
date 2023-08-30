@@ -8,12 +8,12 @@ using System.Xml.Serialization;
 
 namespace CharacterManager.Spells
 {
-    
+
     /* Lets do some magic. :) */
     [Serializable]
     public class PlayerSpell : PlayerBaseItem
     {
-        
+
         public enum CastingTimeEnum
         {
             CASTING_TIME_ACTION,
@@ -31,7 +31,7 @@ namespace CharacterManager.Spells
             AOE_TYPE_LINE,
             AOE_TYPE_SQUARE,
         }
-        
+
         public enum SpellRangeType
         {
             RANGE_TYPE_SELF,
@@ -78,6 +78,17 @@ namespace CharacterManager.Spells
         public Boolean IsRitual = false;
 
         public String MaterialComponent = "";
+
+        public string DiceAtLevel0 = "";
+        public string DiceAtLevel1 = "";
+        public string DiceAtLevel2 = "";
+        public string DiceAtLevel3 = "";
+        public string DiceAtLevel4 = "";
+        public string DiceAtLevel5 = "";
+        public string DiceAtLevel6 = "";
+        public string DiceAtLevel7 = "";
+        public string DiceAtLevel8 = "";
+        public string DiceAtLevel9 = "";
 
         [XmlIgnore]
         public Boolean IsModified = false; /* Used only by the SpellEditor. */
@@ -127,9 +138,80 @@ namespace CharacterManager.Spells
             return res;
         }
 
-        public override void ShowDescription()
+        private string getDiceForLevel(int spellLevel)
+        {
+            /* Const size arrays really are a pain in C# for some reason...*/
+            switch (spellLevel)
+            {
+                case (0):
+                    return DiceAtLevel0;
+                case (1):
+                    return DiceAtLevel1;
+                case (2):
+                    return DiceAtLevel2;
+                case (3):
+                    return DiceAtLevel3;
+                case (4):
+                    return DiceAtLevel4;
+                case (5):
+                    return DiceAtLevel5;
+                case (6):
+                    return DiceAtLevel6;
+                case (7):
+                    return DiceAtLevel7;
+                case (8):
+                    return DiceAtLevel8;
+                case (9):
+                    return DiceAtLevel9;
+            }
+
+            return null;
+        }
+
+        public List<DieRollComponent> getDiceForSpellLevel(int level)
+        {
+            string dice = "";
+            string str;
+
+            for (int x = 0; x <= level; x++)
+            {
+                str = getDiceForLevel(x);
+                if (!string.IsNullOrEmpty(str))
+                {
+                    dice = str;
+                }
+            }
+
+            if (string.IsNullOrEmpty(dice))
+            {
+                return null;
+            }
+            else
+            {
+                try
+                {
+                    List<DieRollComponent> res = DieRollEquation.parseComponentListFromString(dice);
+                    return res;
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            }
+        }
+
+        public override void ShowDescription(object [] args)
         {
             Spellcard card = new Spellcard();
+            
+            if(args.Length > 0)
+            {
+                if(args[0] is bool)
+                {
+                    card.IsCastingInfoVisible = (bool)args[0];
+                }
+            }
+            
             card.setSpell(this);
             card.ShowDialog();
         }
