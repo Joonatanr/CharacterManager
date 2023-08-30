@@ -208,6 +208,7 @@ namespace SpellEditor
             textBoxLevel9Dice.Text = spell.DiceAtLevel9;
 
             checkBoxIsAttackRoll.Checked = spell.IsAttackRoll;
+            checkBoxAddAbilityModToDice.Checked = spell.IsSpellCastingModifierAddedToDice;
         }
 
 
@@ -641,7 +642,7 @@ namespace SpellEditor
             {
                 Spellcard card = new Spellcard();
                 card.setSpell(selectedSpell);
-                card.ShowDialog();
+                card.Show();
             }
         }
 
@@ -732,6 +733,18 @@ namespace SpellEditor
                 if (selectedSpell.IsAttackRoll != checkBoxIsAttackRoll.Checked)
                 {
                     selectedSpell.IsAttackRoll = checkBoxIsAttackRoll.Checked;
+                    setSpellDataAsModified();
+                }
+            }
+        }
+
+        private void checkBoxAddAbilityModToDice_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                if (selectedSpell.IsSpellCastingModifierAddedToDice != checkBoxAddAbilityModToDice.Checked)
+                {
+                    selectedSpell.IsSpellCastingModifierAddedToDice = checkBoxAddAbilityModToDice.Checked;
                     setSpellDataAsModified();
                 }
             }

@@ -364,6 +364,11 @@ namespace CharacterManager.Spells
         {
             int selectedLevel = (int)numericUpDown1.Value;
             List<DieRollComponent> myComponents = mySpell.getDiceForSpellLevel(selectedLevel);
+
+            if (mySpell.IsSpellCastingModifierAddedToDice)
+            {
+                myComponents.Add(new DieRollConstant(GlobalMagicEvents.GetSpellcastingAbilityModifier()));
+            }
             
             if (myComponents != null)
             {

@@ -38,8 +38,7 @@ namespace CharacterManager
             GlobalMagicEvents.MagicDiceRolledListener = handleRollReport;
             GlobalMagicEvents.SpellSlotLevelAvailableChecker = isSpellSlotWithLevelAvailable;
             GlobalMagicEvents.CastSpellExternal = handleCastSpell;
-            GlobalMagicEvents.GetSpellCasterLevelExternal = new GlobalMagicEvents.GetSpellCasterDataDelegate(getSpellCasterLevel);
-            GlobalMagicEvents.GetSpellCasterAttackBonusExternal = new GlobalMagicEvents.GetSpellCasterDataDelegate(getSpellCasterAttackBonus);
+            GlobalMagicEvents.GetActiveCharacterExternal = getActiveCharacter;
         }
 
         private bool isSpellSlotWithLevelAvailable(int level)
@@ -54,29 +53,10 @@ namespace CharacterManager
             userControlMagicHandler1.UpdateAllDisplayedData();
         }
 
-        private int getSpellCasterLevel()
+        private PlayerCharacter getActiveCharacter()
         {
-            /* TODO : This will currently only work properly for full casters it is presumed... */
-            if (activeCharacter != null)
-            {
-                return activeCharacter.Level;
-            }
-            else
-            {
-                return 0;
-            }
+            return activeCharacter;
         }
-
-        private int getSpellCasterAttackBonus()
-        {
-            if(activeCharacter == null)
-            {
-                return 0;
-            }
-
-            return activeCharacter.CharacterSpellCastingStatus.SpellAttackBonus;
-        }
-
 
         private void GoldChanged(int amount)
         {

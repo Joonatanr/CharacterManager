@@ -21,9 +21,8 @@ namespace CharacterManager.Spells
         public delegate void SpendSpellSlotListener(PlayerSpell spell, int level);
         public static SpendSpellSlotListener CastSpellExternal = null;
 
-        public delegate int GetSpellCasterDataDelegate();
-        public static GetSpellCasterDataDelegate GetSpellCasterLevelExternal = null;
-        public static GetSpellCasterDataDelegate GetSpellCasterAttackBonusExternal = null;
+        public delegate PlayerCharacter GetSpellCasterDataDelegate();
+        public static GetSpellCasterDataDelegate GetActiveCharacterExternal;
 
         public static void ReportMagicRoll(string rollresult)
         {
@@ -35,13 +34,33 @@ namespace CharacterManager.Spells
 
         public static int GetSpellAttackBonus()
         {
-            if (GetSpellCasterAttackBonusExternal == null)
+            if (GetActiveCharacterExternal == null)
             {
                 return 0;
             }
             else
             {
-                return GetSpellCasterAttackBonusExternal();
+                PlayerCharacter c = GetActiveCharacterExternal();
+                return c.CharacterSpellCastingStatus.SpellAttackBonus;
+            }
+        }
+
+        public static int GetSpellcastingAbilityModifier()
+        {
+            if (GetActiveCharacterExternal == null)
+            {
+                return 0;
+            }
+            else
+            {
+                PlayerCharacter c = GetActiveCharacterExternal();
+                
+                if (c == null)
+                {
+                    return 0;
+                }
+
+                return c.CharacterSpellCastingStatus.SpellAbilityModifier;
             }
         }
 
@@ -79,9 +98,20 @@ namespace CharacterManager.Spells
 
         public static int GetSpellCasterLevel()
         {
-            if(GetSpellCasterLevelExternal != null)
+            if (GetActiveCharacterExternal == null)
             {
-                return GetSpellCasterLevelExternal();
+                return 0;
+            }
+            else
+            {
+                PlayerCharacter c = GetActiveCharacterExternal();
+                
+                if(c == null)
+                {
+                    return 0;
+                }
+                
+                return c.Level;
             }
 
             return 0;

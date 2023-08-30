@@ -90,6 +90,7 @@ namespace CharacterManager.Spells
         public string DiceAtLevel7 = "";
         public string DiceAtLevel8 = "";
         public string DiceAtLevel9 = "";
+        public bool IsSpellCastingModifierAddedToDice = false;
 
         [XmlIgnore]
         public Boolean IsModified = false; /* Used only by the SpellEditor. */
@@ -232,7 +233,7 @@ namespace CharacterManager.Spells
             }
             
             card.setSpell(this);
-            card.ShowDialog();
+            card.Show();
         }
     }
 }

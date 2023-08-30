@@ -54,6 +54,7 @@ namespace SpellEditor
             this.checkBoxSomaticComponent = new System.Windows.Forms.CheckBox();
             this.checkBoxVerbalComponent = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBoxIsAttackRoll = new System.Windows.Forms.CheckBox();
             this.checkBoxDurationUntilDispelled = new System.Windows.Forms.CheckBox();
             this.checkBoxRitual = new System.Windows.Forms.CheckBox();
             this.checkBoxConcentration = new System.Windows.Forms.CheckBox();
@@ -100,7 +101,7 @@ namespace SpellEditor
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxLevel0Dice = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.checkBoxIsAttackRoll = new System.Windows.Forms.CheckBox();
+            this.checkBoxAddAbilityModToDice = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
@@ -422,6 +423,17 @@ namespace SpellEditor
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Casting Time";
             // 
+            // checkBoxIsAttackRoll
+            // 
+            this.checkBoxIsAttackRoll.AutoSize = true;
+            this.checkBoxIsAttackRoll.Location = new System.Drawing.Point(183, 94);
+            this.checkBoxIsAttackRoll.Name = "checkBoxIsAttackRoll";
+            this.checkBoxIsAttackRoll.Size = new System.Drawing.Size(83, 19);
+            this.checkBoxIsAttackRoll.TabIndex = 25;
+            this.checkBoxIsAttackRoll.Text = "Attack Roll";
+            this.checkBoxIsAttackRoll.UseVisualStyleBackColor = true;
+            this.checkBoxIsAttackRoll.CheckedChanged += new System.EventHandler(this.checkBoxIsAttackRoll_CheckedChanged);
+            // 
             // checkBoxDurationUntilDispelled
             // 
             this.checkBoxDurationUntilDispelled.AutoSize = true;
@@ -701,6 +713,7 @@ namespace SpellEditor
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.checkBoxAddAbilityModToDice);
             this.groupBox8.Controls.Add(this.textBoxLevel9Dice);
             this.groupBox8.Controls.Add(this.label25);
             this.groupBox8.Controls.Add(this.textBoxLevel8Dice);
@@ -898,16 +911,16 @@ namespace SpellEditor
             this.label16.TabIndex = 0;
             this.label16.Text = "Level 0";
             // 
-            // checkBoxIsAttackRoll
+            // checkBoxAddAbilityModToDice
             // 
-            this.checkBoxIsAttackRoll.AutoSize = true;
-            this.checkBoxIsAttackRoll.Location = new System.Drawing.Point(183, 94);
-            this.checkBoxIsAttackRoll.Name = "checkBoxIsAttackRoll";
-            this.checkBoxIsAttackRoll.Size = new System.Drawing.Size(83, 19);
-            this.checkBoxIsAttackRoll.TabIndex = 25;
-            this.checkBoxIsAttackRoll.Text = "Attack Roll";
-            this.checkBoxIsAttackRoll.UseVisualStyleBackColor = true;
-            this.checkBoxIsAttackRoll.CheckedChanged += new System.EventHandler(this.checkBoxIsAttackRoll_CheckedChanged);
+            this.checkBoxAddAbilityModToDice.AutoSize = true;
+            this.checkBoxAddAbilityModToDice.Location = new System.Drawing.Point(6, 311);
+            this.checkBoxAddAbilityModToDice.Name = "checkBoxAddAbilityModToDice";
+            this.checkBoxAddAbilityModToDice.Size = new System.Drawing.Size(113, 19);
+            this.checkBoxAddAbilityModToDice.TabIndex = 20;
+            this.checkBoxAddAbilityModToDice.Text = "Add Ability Mod\r\n";
+            this.checkBoxAddAbilityModToDice.UseVisualStyleBackColor = true;
+            this.checkBoxAddAbilityModToDice.CheckedChanged += new System.EventHandler(this.checkBoxAddAbilityModToDice_CheckedChanged);
             // 
             // Form1
             // 
@@ -1023,6 +1036,7 @@ namespace SpellEditor
         private System.Windows.Forms.TextBox textBoxLevel0Dice;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox checkBoxIsAttackRoll;
+        private System.Windows.Forms.CheckBox checkBoxAddAbilityModToDice;
     }
 }
 
