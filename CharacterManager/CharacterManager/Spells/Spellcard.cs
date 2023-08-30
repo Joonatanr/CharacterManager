@@ -410,6 +410,23 @@ namespace CharacterManager.Spells
             {
                 if (checkBoxCombinedCastRoll.Checked)
                 {
+                    if (mySpell.IsAttackRoll)
+                    {
+                        string output;
+
+                        int attackBonus = GlobalMagicEvents.GetSpellAttackBonus();
+                        DieRollComponent d20 = DieRollComponent.parseFromString("d20");
+                        DieRollConstant bonus = new DieRollConstant(attackBonus);
+                        DieRollEquation myEquation = new DieRollEquation();
+                        myEquation.DieRollComponents.Add(d20);
+                        myEquation.DieRollComponents.Add(bonus);
+                        myEquation.RollValue(out output);
+                        string report = "Spell Attack roll: " + output;
+                        richTextBox1.AppendText(report + Environment.NewLine);
+                        richTextBox1.ScrollToCaret();
+                        GlobalMagicEvents.ReportMagicRoll(report);
+
+                    }
                     rollDice();
                 }
             }

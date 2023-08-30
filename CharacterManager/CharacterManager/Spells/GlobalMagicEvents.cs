@@ -21,14 +21,27 @@ namespace CharacterManager.Spells
         public delegate void SpendSpellSlotListener(PlayerSpell spell, int level);
         public static SpendSpellSlotListener CastSpellExternal = null;
 
-        public delegate int GetSpellCasterLevelDelegate();
-        public static GetSpellCasterLevelDelegate GetSpellCasterLevelExternal = null;
+        public delegate int GetSpellCasterDataDelegate();
+        public static GetSpellCasterDataDelegate GetSpellCasterLevelExternal = null;
+        public static GetSpellCasterDataDelegate GetSpellCasterAttackBonusExternal = null;
 
         public static void ReportMagicRoll(string rollresult)
         {
             if (MagicDiceRolledListener != null)
             {
                 MagicDiceRolledListener.Invoke(rollresult + Environment.NewLine, Color.Blue, true, System.Windows.Forms.HorizontalAlignment.Left);
+            }
+        }
+
+        public static int GetSpellAttackBonus()
+        {
+            if (GetSpellCasterAttackBonusExternal == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return GetSpellCasterAttackBonusExternal();
             }
         }
 

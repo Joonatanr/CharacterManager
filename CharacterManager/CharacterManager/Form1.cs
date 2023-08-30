@@ -38,7 +38,8 @@ namespace CharacterManager
             GlobalMagicEvents.MagicDiceRolledListener = handleRollReport;
             GlobalMagicEvents.SpellSlotLevelAvailableChecker = isSpellSlotWithLevelAvailable;
             GlobalMagicEvents.CastSpellExternal = handleCastSpell;
-            GlobalMagicEvents.GetSpellCasterLevelExternal = new GlobalMagicEvents.GetSpellCasterLevelDelegate(getSpellCasterLevel);
+            GlobalMagicEvents.GetSpellCasterLevelExternal = new GlobalMagicEvents.GetSpellCasterDataDelegate(getSpellCasterLevel);
+            GlobalMagicEvents.GetSpellCasterAttackBonusExternal = new GlobalMagicEvents.GetSpellCasterDataDelegate(getSpellCasterAttackBonus);
         }
 
         private bool isSpellSlotWithLevelAvailable(int level)
@@ -65,6 +66,17 @@ namespace CharacterManager
                 return 0;
             }
         }
+
+        private int getSpellCasterAttackBonus()
+        {
+            if(activeCharacter == null)
+            {
+                return 0;
+            }
+
+            return activeCharacter.CharacterSpellCastingStatus.SpellAttackBonus;
+        }
+
 
         private void GoldChanged(int amount)
         {
