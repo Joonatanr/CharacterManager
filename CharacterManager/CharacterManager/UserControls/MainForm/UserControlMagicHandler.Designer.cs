@@ -147,7 +147,7 @@ namespace CharacterManager.UserControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlCantripList.IsAvailabilityCount = false;
             this.userControlCantripList.IsBorder = true;
-            this.userControlCantripList.IsCastingInfoEnabled = false;
+            this.userControlCantripList.IsCastingInfoEnabled = true;
             this.userControlCantripList.IsCheckBoxed = false;
             this.userControlCantripList.IsMultipleLevel = false;
             this.userControlCantripList.Location = new System.Drawing.Point(5, 3);

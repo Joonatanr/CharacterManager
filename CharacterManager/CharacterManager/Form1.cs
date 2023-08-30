@@ -37,7 +37,8 @@ namespace CharacterManager
             
             GlobalMagicEvents.MagicDiceRolledListener = handleRollReport;
             GlobalMagicEvents.SpellSlotLevelAvailableChecker = isSpellSlotWithLevelAvailable;
-            GlobalMagicEvents.SpendSpellSlot = handleCastSpell;
+            GlobalMagicEvents.CastSpellExternal = handleCastSpell;
+            GlobalMagicEvents.GetSpellCasterLevelExternal = new GlobalMagicEvents.GetSpellCasterLevelDelegate(getSpellCasterLevel);
         }
 
         private bool isSpellSlotWithLevelAvailable(int level)
@@ -49,8 +50,20 @@ namespace CharacterManager
         {
             /* TODO : Might add some kind of spell effects etc.. For now we will just reduce the spell slots. */
             activeCharacter.CharacterSpellCastingStatus.SpendSpellSlot(level);
-            //userControlMagicHandler1.setCharSpellcastingStatus(this.activeCharacter.CharacterSpellCastingStatus);
             userControlMagicHandler1.UpdateAllDisplayedData();
+        }
+
+        private int getSpellCasterLevel()
+        {
+            /* TODO : This will currently only work properly for full casters it is presumed... */
+            if (activeCharacter != null)
+            {
+                return activeCharacter.Level;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         private void GoldChanged(int amount)

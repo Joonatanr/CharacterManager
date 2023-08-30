@@ -19,7 +19,10 @@ namespace CharacterManager.Spells
         public static IsSpellSlotWithLevelAvailable SpellSlotLevelAvailableChecker = null;
 
         public delegate void SpendSpellSlotListener(PlayerSpell spell, int level);
-        public static SpendSpellSlotListener SpendSpellSlot = null;
+        public static SpendSpellSlotListener CastSpellExternal = null;
+
+        public delegate int GetSpellCasterLevelDelegate();
+        public static GetSpellCasterLevelDelegate GetSpellCasterLevelExternal = null;
 
         public static void ReportMagicRoll(string rollresult)
         {
@@ -36,13 +39,19 @@ namespace CharacterManager.Spells
 
         public static bool CastSpell(PlayerSpell spell, int level)
         {
+            if(spell.SpellLevel == 0)
+            {
+                CastSpellExternal.Invoke(spell, 0);
+                return true;
+            }
+            
             if (SpellSlotLevelAvailableChecker != null)
             {
                 if (SpellSlotLevelAvailableChecker(level) == true)
                 {
-                    if (SpendSpellSlot != null)
+                    if (CastSpellExternal != null)
                     {
-                        SpendSpellSlot.Invoke(spell, level);
+                        CastSpellExternal.Invoke(spell, level);
                     }
                     return true;
                 }
@@ -53,6 +62,16 @@ namespace CharacterManager.Spells
             }
 
             return false;
+        }
+
+        public static int GetSpellCasterLevel()
+        {
+            if(GetSpellCasterLevelExternal != null)
+            {
+                return GetSpellCasterLevelExternal();
+            }
+
+            return 0;
         }
     }
 }

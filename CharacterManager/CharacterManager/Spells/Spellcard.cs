@@ -286,11 +286,37 @@ namespace CharacterManager.Spells
             /*8. Update the Casting info. */
             if (this.IsCastingInfoVisible)
             {
-                /* TODO : Implement special handling for cantrips. */
-                numericUpDown1.Minimum = this.mySpell.SpellLevel;
-                numericUpDown1.Maximum = 9; /* TODO : Placeholder. */
+                if (mySpell.SpellLevel == 0)
+                {
+                    numericUpDown1.Minimum = 0;
+                    int spellcasterLevel = GlobalMagicEvents.GetSpellCasterLevel();
+                    /* We do a hack for cantrips... */
+                    if(spellcasterLevel < 5)
+                    {
+                        numericUpDown1.Maximum = 0;
+                    }else if(spellcasterLevel < 11)
+                    {
+                        numericUpDown1.Maximum = 1;
+                    }else if(spellcasterLevel < 17)
+                    {
+                        numericUpDown1.Maximum = 2;
+                    }
+                    else
+                    {
+                        numericUpDown1.Maximum = 3;
+                    }
 
-                numericUpDown1.Value = numericUpDown1.Minimum;
+
+                    numericUpDown1.Value = numericUpDown1.Maximum;
+                    numericUpDown1.Enabled = false;
+                }
+                else
+                {
+                    numericUpDown1.Minimum = this.mySpell.SpellLevel;
+                    numericUpDown1.Maximum = 9; /* TODO : Placeholder. */
+                    numericUpDown1.Value = numericUpDown1.Minimum;
+                    numericUpDown1.Enabled = true;
+                }
             }
         }
 
@@ -351,28 +377,41 @@ namespace CharacterManager.Spells
 
         private void buttonRollDice_Click(object sender, EventArgs e)
         {
+            rollDice();
+        }
+
+        private void rollDice()
+        {
             try
             {
                 string output;
-                if (!string.IsNullOrEmpty(dieRollTextBox1.Text)) 
-                { 
+                if (!string.IsNullOrEmpty(dieRollTextBox1.Text))
+                {
                     dieRollTextBox1.Roll(out output);
                     richTextBox1.AppendText(output + Environment.NewLine);
                     richTextBox1.ScrollToCaret();
                     GlobalMagicEvents.ReportMagicRoll(mySpell.SpellName + " : " + output);
                 }
             }
-            catch (Exception) 
-            { 
-             
+            catch (Exception)
+            {
+
             }
         }
+
 
         private void buttonCast_Click(object sender, EventArgs e)
         {
             if (GlobalMagicEvents.CastSpell(mySpell, (int)numericUpDown1.Value) == false)
             {
                 MessageBox.Show("No level " + (int)numericUpDown1.Value + " spell slots remaining");
+            }
+            else
+            {
+                if (checkBoxCombinedCastRoll.Checked)
+                {
+                    rollDice();
+                }
             }
         }
     }

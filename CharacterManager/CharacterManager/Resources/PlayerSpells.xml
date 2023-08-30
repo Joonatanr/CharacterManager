@@ -6665,10 +6665,10 @@ worn or carried. This spell’s damage increases by 1d10 when you reach
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d10</DiceAtLevel0>
+    <DiceAtLevel1>2d10</DiceAtLevel1>
+    <DiceAtLevel2>3d10</DiceAtLevel2>
+    <DiceAtLevel3>4d10</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
