@@ -179,5 +179,17 @@ namespace CharacterManager.Spells
                 data.ActiveCount = data.MaximumCount;
             }
         }
+
+        public void SpendSpellSlot(int level)
+        {
+            SpellSlotData data = getSpellSlotDataForLevel(level);
+            if(data != null)
+            {
+                if (data.ActiveCount > 0)
+                {
+                    data.ActiveCount--;
+                }
+            }
+        }
     }
 }

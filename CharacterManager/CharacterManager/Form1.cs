@@ -34,13 +34,23 @@ namespace CharacterManager
             userControlCurrencyGold.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
             userControlCurrencyElectrum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
             userControlCurrencyPlatinum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
+            
             GlobalMagicEvents.MagicDiceRolledListener = handleRollReport;
             GlobalMagicEvents.SpellSlotLevelAvailableChecker = isSpellSlotWithLevelAvailable;
+            GlobalMagicEvents.SpendSpellSlot = handleCastSpell;
         }
 
         private bool isSpellSlotWithLevelAvailable(int level)
         {
             return userControlMagicHandler1.IsSpellSlotsAvailableOfLevel(level);
+        }
+
+        private void handleCastSpell(PlayerSpell spell, int level)
+        {
+            /* TODO : Might add some kind of spell effects etc.. For now we will just reduce the spell slots. */
+            activeCharacter.CharacterSpellCastingStatus.SpendSpellSlot(level);
+            //userControlMagicHandler1.setCharSpellcastingStatus(this.activeCharacter.CharacterSpellCastingStatus);
+            userControlMagicHandler1.UpdateAllDisplayedData();
         }
 
         private void GoldChanged(int amount)

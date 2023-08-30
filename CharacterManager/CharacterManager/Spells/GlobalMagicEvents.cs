@@ -18,6 +18,9 @@ namespace CharacterManager.Spells
         public delegate bool IsSpellSlotWithLevelAvailable(int level);
         public static IsSpellSlotWithLevelAvailable SpellSlotLevelAvailableChecker = null;
 
+        public delegate void SpendSpellSlotListener(PlayerSpell spell, int level);
+        public static SpendSpellSlotListener SpendSpellSlot = null;
+
         public static void ReportMagicRoll(string rollresult)
         {
             if (MagicDiceRolledListener != null)
@@ -37,6 +40,10 @@ namespace CharacterManager.Spells
             {
                 if (SpellSlotLevelAvailableChecker(level) == true)
                 {
+                    if (SpendSpellSlot != null)
+                    {
+                        SpendSpellSlot.Invoke(spell, level);
+                    }
                     return true;
                 }
                 else

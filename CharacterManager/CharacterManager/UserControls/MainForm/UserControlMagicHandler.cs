@@ -122,7 +122,6 @@ namespace CharacterManager.UserControls
 
         public void UpdateAllDisplayedData()
         {
-            /* TODO : This is a placeholder. */
             userControlSpellSlotsArea1.updateSpellSlotDisplay();
         }
 
