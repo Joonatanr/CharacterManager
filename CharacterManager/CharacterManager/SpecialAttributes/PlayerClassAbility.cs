@@ -437,5 +437,27 @@ namespace CharacterManager
             }
         }
     }
+
+    public class SneakAttack : SpecialAttribute
+    {
+        public SneakAttack()
+        {
+            this.Name = "Sneak Attack";
+        }
+        
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += C_AttackRoll;
+        }
+
+        private void C_AttackRoll(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (this.IsActive)
+            {
+                BonusValueModifier sneakAttackBonus = new BonusValueModifier("Sneak Attack", this.Dice);
+                c.BonusValues.AttackDamageBonusModifiers.Add(sneakAttackBonus);
+            }
+        }
+    }
 }
 

@@ -54,10 +54,6 @@ namespace CharacterManager.UserControls
                 btn.Click += Use_Click;
             }
 
-            private void Btn_Click(object sender, EventArgs e)
-            {
-                throw new NotImplementedException();
-            }
 
             private void HandleRemainingChargesChanged(int value)
             {
@@ -227,7 +223,7 @@ namespace CharacterManager.UserControls
 
                 if (IsSlotsVisible) 
                 {
-                    if (attrib.MaximumCharges > 0)
+                    if (attrib.MaximumCharges > 0 || attrib.IsToggle)
                     {
                         /* Lets add the use button. */
                         CustomButton useButton = new CustomButton();

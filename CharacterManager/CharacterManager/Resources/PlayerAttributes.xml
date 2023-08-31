@@ -825,6 +825,7 @@ gain levels in this class, as shown in the Sneak Attack
 colum n of the Rogue table.</Description>
 		<IsHidden>false</IsHidden>
 		<IsCombatAbility>true</IsCombatAbility>
+		<IsToggle>true</IsToggle>
 		<Dice>1d6</Dice>
 		<Upgrades>
 			<PlayerAbilityUpgrade>
