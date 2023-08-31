@@ -289,7 +289,7 @@ namespace CharacterManager.Spells
                 if (mySpell.SpellLevel == 0)
                 {
                     numericUpDown1.Minimum = 0;
-                    int spellcasterLevel = GlobalMagicEvents.GetSpellCasterLevel();
+                    int spellcasterLevel = GlobalEvents.GetSpellCasterLevel();
                     /* We do a hack for cantrips... */
                     if(spellcasterLevel < 5)
                     {
@@ -367,7 +367,7 @@ namespace CharacterManager.Spells
 
             if (mySpell.IsSpellCastingModifierAddedToDice)
             {
-                myComponents.Add(new DieRollConstant(GlobalMagicEvents.GetSpellcastingAbilityModifier()));
+                myComponents.Add(new DieRollConstant(GlobalEvents.GetSpellcastingAbilityModifier()));
             }
             
             if (myComponents != null)
@@ -395,7 +395,7 @@ namespace CharacterManager.Spells
                     dieRollTextBox1.Roll(out output);
                     richTextBox1.AppendText(output + Environment.NewLine);
                     richTextBox1.ScrollToCaret();
-                    GlobalMagicEvents.ReportMagicRoll(mySpell.SpellName + " : " + output);
+                    GlobalEvents.ReportMagicRoll(mySpell.SpellName + " : " + output);
                 }
             }
             catch (Exception)
@@ -407,7 +407,7 @@ namespace CharacterManager.Spells
 
         private void buttonCast_Click(object sender, EventArgs e)
         {
-            if (GlobalMagicEvents.CastSpell(mySpell, (int)numericUpDown1.Value) == false)
+            if (GlobalEvents.CastSpell(mySpell, (int)numericUpDown1.Value) == false)
             {
                 MessageBox.Show("No level " + (int)numericUpDown1.Value + " spell slots remaining");
             }
@@ -419,7 +419,7 @@ namespace CharacterManager.Spells
                     {
                         string output;
 
-                        int attackBonus = GlobalMagicEvents.GetSpellAttackBonus();
+                        int attackBonus = GlobalEvents.GetSpellAttackBonus();
                         DieRollComponent d20 = DieRollComponent.parseFromString("d20");
                         DieRollConstant bonus = new DieRollConstant(attackBonus);
                         DieRollEquation myEquation = new DieRollEquation();
@@ -429,7 +429,7 @@ namespace CharacterManager.Spells
                         string report = "Spell Attack roll: " + output;
                         richTextBox1.AppendText(report + Environment.NewLine);
                         richTextBox1.ScrollToCaret();
-                        GlobalMagicEvents.ReportMagicRoll(report);
+                        GlobalEvents.ReportMagicRoll(report);
 
                     }
                     rollDice();

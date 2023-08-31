@@ -35,10 +35,10 @@ namespace CharacterManager
             userControlCurrencyElectrum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
             userControlCurrencyPlatinum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
             
-            GlobalMagicEvents.MagicDiceRolledListener = handleRollReport;
-            GlobalMagicEvents.SpellSlotLevelAvailableChecker = isSpellSlotWithLevelAvailable;
-            GlobalMagicEvents.CastSpellExternal = handleCastSpell;
-            GlobalMagicEvents.GetActiveCharacterExternal = getActiveCharacter;
+            GlobalEvents.MagicDiceRolledListener = handleRollReport;
+            GlobalEvents.SpellSlotLevelAvailableChecker = isSpellSlotWithLevelAvailable;
+            GlobalEvents.CastSpellExternal = handleCastSpell;
+            GlobalEvents.GetActiveCharacterExternal = getActiveCharacter;
         }
 
         private bool isSpellSlotWithLevelAvailable(int level)

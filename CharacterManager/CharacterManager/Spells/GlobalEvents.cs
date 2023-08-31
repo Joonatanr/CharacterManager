@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CharacterManager.Spells
 {
-    public static class GlobalMagicEvents
+    public static class GlobalEvents
     {
         /* The idea is that instead of a million callbacks we would have one global instance of a class that handles
          spell casting between different form instances. Lets experiment with this a little. */
