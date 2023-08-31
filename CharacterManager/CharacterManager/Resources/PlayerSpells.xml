@@ -8575,12 +8575,12 @@ the damage increases by 1d10 for each slot level above 1st
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
+    <DiceAtLevel1>1d10</DiceAtLevel1>
+    <DiceAtLevel2>2d10</DiceAtLevel2>
+    <DiceAtLevel3>3d10</DiceAtLevel3>
+    <DiceAtLevel4>4d10</DiceAtLevel4>
+    <DiceAtLevel5>5d10</DiceAtLevel5>
+    <DiceAtLevel6>6d10</DiceAtLevel6>
     <DiceAtLevel7 />
     <DiceAtLevel8 />
     <DiceAtLevel9 />
@@ -8770,7 +8770,7 @@ maximum to return to norm al before that time passes.</Description>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
-    <DiceAtLevel6 />
+    <DiceAtLevel6>14d6</DiceAtLevel6>
     <DiceAtLevel7 />
     <DiceAtLevel8 />
     <DiceAtLevel9 />
@@ -8889,16 +8889,16 @@ or higher, the healing increases by 1d4 for each slot level above 1st.</AtHigher
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <DiceAtLevel1>1d4</DiceAtLevel1>
+    <DiceAtLevel2>2d4</DiceAtLevel2>
+    <DiceAtLevel3>3d4</DiceAtLevel3>
+    <DiceAtLevel4>4d4</DiceAtLevel4>
+    <DiceAtLevel5>5d4</DiceAtLevel5>
+    <DiceAtLevel6>6d4</DiceAtLevel6>
+    <DiceAtLevel7>7d4</DiceAtLevel7>
+    <DiceAtLevel8>8d4</DiceAtLevel8>
+    <DiceAtLevel9>9d4</DiceAtLevel9>
+    <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8938,14 +8938,14 @@ the damage increases by 1d8 for each slot level above 2nd.</AtHigherLevels>
     <MaterialComponent>a piece of iron and a flame</MaterialComponent>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel2>2d8</DiceAtLevel2>
+    <DiceAtLevel3>3d8</DiceAtLevel3>
+    <DiceAtLevel4>4d8</DiceAtLevel4>
+    <DiceAtLevel5>5d8</DiceAtLevel5>
+    <DiceAtLevel6>6d8</DiceAtLevel6>
+    <DiceAtLevel7>7d8</DiceAtLevel7>
+    <DiceAtLevel8>8d8</DiceAtLevel8>
+    <DiceAtLevel9>9d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -8981,15 +8981,15 @@ spell slot of 2nd level or higher, the damage increases by
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>2d10</DiceAtLevel1>
+    <DiceAtLevel2>3d10</DiceAtLevel2>
+    <DiceAtLevel3>4d10</DiceAtLevel3>
+    <DiceAtLevel4>5d10</DiceAtLevel4>
+    <DiceAtLevel5>6d10</DiceAtLevel5>
+    <DiceAtLevel6>7d10</DiceAtLevel6>
+    <DiceAtLevel7>8d10</DiceAtLevel7>
+    <DiceAtLevel8>9d10</DiceAtLevel8>
+    <DiceAtLevel9>10d0</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -9003,7 +9003,7 @@ other creatures can partake of the feast.
 A creature that partakes of the feast gains several
 benefits. The creature is cured of all diseases and
 poison, becomes immune to poison and being
-frightened, and makes all W isdom saving throws with
+frightened, and makes all Wisdom saving throws with
 advantage. Its hit point maximum also increases by
 2d10, and it gains the sam e number of hit points. These
 benefits last for 24 hours.</Description>
@@ -9033,7 +9033,7 @@ benefits last for 24 hours.</Description>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
-    <DiceAtLevel6 />
+    <DiceAtLevel6>2d10</DiceAtLevel6>
     <DiceAtLevel7 />
     <DiceAtLevel8 />
     <DiceAtLevel9 />
@@ -9045,7 +9045,7 @@ benefits last for 24 hours.</Description>
 Until the spell ends, the creature is immune to being
 frightened and gains tem porary hit points equal to
 your spellcasting ability modifier at the start of each
-o f its turns. W hen the spell ends, the target loses any
+of its turns. W hen the spell ends, the target loses any
 remaining temporary hit points from this spell.
 
 </Description>
@@ -9122,7 +9122,7 @@ your concentration on the spell for up to 24 hours.</AtHigherLevels>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent>the petrified eye of a newt</MaterialComponent>
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
+    <DiceAtLevel1>1d6</DiceAtLevel1>
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
@@ -9303,7 +9303,7 @@ otherworldly tentacles rub against it.</Description>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel3>2d6</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -9346,7 +9346,7 @@ your concentration on the spell for up to 24 hours.</AtHigherLevels>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
+    <DiceAtLevel1>1d6</DiceAtLevel1>
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
@@ -9359,17 +9359,17 @@ your concentration on the spell for up to 24 hours.</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>You create a twisting pattern of colors that w eaves
+    <Description>You create a twisting pattern of colors that weaves
 through the air inside a 30-foot cube within range.
 The pattern appears for a moment and vanishes. Each
 creature in the area w ho sees the pattern must make
 a Wisdom saving throw. On a failed save, the creature
-becom es charm ed for the duration. W hile charm ed
+becom es charm ed for the duration. While charm ed
 by this spell, the creature is incapacitated and has
 a speed of 0.
 
 The spell ends for an affected creature if it takes any
-damage or if som eone else uses an action to shake the
+damage or if someone else uses an action to shake the
 creature out of its stupor.</Description>
     <ItemName>Hypnotic Pattern</ItemName>
     <SpellName>Hypnotic Pattern</SpellName>
@@ -9439,12 +9439,12 @@ increases by 1d8 for each slot level above 4th.</AtHigherLevels>
     <DiceAtLevel1 />
     <DiceAtLevel2 />
     <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel4>2d8+4d6</DiceAtLevel4>
+    <DiceAtLevel5>3d8+4d6</DiceAtLevel5>
+    <DiceAtLevel6>4d8+4d6</DiceAtLevel6>
+    <DiceAtLevel7>5d8+4d6</DiceAtLevel7>
+    <DiceAtLevel8>6d8+4d6</DiceAtLevel8>
+    <DiceAtLevel9>7d8+4d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -9462,6 +9462,7 @@ If you instead touch a creature throughout the casting,
 you learn what spells, if any, are currently affecting it.</Description>
     <ItemName>Identify</ItemName>
     <SpellName>Identify</SpellName>
+    <AtHigherLevels />
     <School>Divination</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -9695,7 +9696,7 @@ of your turns.</Description>
     <DiceAtLevel5 />
     <DiceAtLevel6 />
     <DiceAtLevel7 />
-    <DiceAtLevel8 />
+    <DiceAtLevel8>10d8</DiceAtLevel8>
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
@@ -9723,18 +9724,18 @@ spell slot of 2nd level or higher, the damage increases by
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>3d10</DiceAtLevel1>
+    <DiceAtLevel2>4d10</DiceAtLevel2>
+    <DiceAtLevel3>5d10</DiceAtLevel3>
+    <DiceAtLevel4>6d10</DiceAtLevel4>
+    <DiceAtLevel5>7d10</DiceAtLevel5>
+    <DiceAtLevel6>8d10</DiceAtLevel6>
+    <DiceAtLevel7>9d10</DiceAtLevel7>
+    <DiceAtLevel8>10d10</DiceAtLevel8>
+    <DiceAtLevel9>11d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -9747,7 +9748,7 @@ area is difficult terrain.
 
 When the area appears, each creature in it must
 make a Constitution saving throw. A creature takes
-4 d10 piercing damage on a failed save, or half as much
+4d10 piercing damage on a failed save, or half as much
 damage on a successful one. A creature must also make
 this saving throw when it enters the spell’s area for the
 first time on a turn or ends its turn there.</Description>
@@ -9778,11 +9779,11 @@ or higher, the damage increases by
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel5>4d10</DiceAtLevel5>
+    <DiceAtLevel6>5d10</DiceAtLevel6>
+    <DiceAtLevel7>6d10</DiceAtLevel7>
+    <DiceAtLevel8>7d10</DiceAtLevel8>
+    <DiceAtLevel9>8d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -9830,6 +9831,7 @@ you can target one additional creature for each slot level above 2nd.</AtHigherL
 tripled until the spell ends.</Description>
     <ItemName>Jump</ItemName>
     <SpellName>Jump</SpellName>
+    <AtHigherLevels />
     <School>Transmutation</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -10194,7 +10196,7 @@ saving throw to avoid the spell.</Description>
   </PlayerSpell>
   <PlayerSpell>
     <Description>The next time you make a ranged weapon attack during
-the spell’s duration, the w eapon’s ammunition, or the
+the spell’s duration, the weapon’s ammunition, or the
 weapon itself if it’s a thrown weapon, transforms into
 a bolt of lightning. Make the attack roll as normal. The
 target takes 4d8 lightning damage on a hit, or half
@@ -10233,13 +10235,13 @@ level above 3rd.</AtHigherLevels>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel3>4d8</DiceAtLevel3>
+    <DiceAtLevel4>5d8</DiceAtLevel4>
+    <DiceAtLevel5>6d8</DiceAtLevel5>
+    <DiceAtLevel6>7d8</DiceAtLevel6>
+    <DiceAtLevel7>8d8</DiceAtLevel7>
+    <DiceAtLevel8>9d8</DiceAtLevel8>
+    <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -10275,13 +10277,13 @@ the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel3>8d6</DiceAtLevel3>
+    <DiceAtLevel4>9d6</DiceAtLevel4>
+    <DiceAtLevel5>10d6</DiceAtLevel5>
+    <DiceAtLevel6>11d6</DiceAtLevel6>
+    <DiceAtLevel7>12d6</DiceAtLevel7>
+    <DiceAtLevel8>13d6</DiceAtLevel8>
+    <DiceAtLevel9>14d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -10461,11 +10463,12 @@ additional creature for each slot level above 1st.</AtHigherLevels>
   <PlayerSpell>
     <Description>You touch a willing creature who isn’t wearing armor,
 and a protective magical force surrounds it until the
-spell ends. The target’s base AC becom es 13 + its
+spell ends. The target’s base AC becomes 13 + its
 Dexterity modifier. The spell ends if the target dons
 armor or if you dismiss the spell as an action.</Description>
     <ItemName>Mage Armor</ItemName>
     <SpellName>Mage Armor</SpellName>
+    <AtHigherLevels />
     <School>Abjuration</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -10510,6 +10513,7 @@ The hand can’t attack, activate magic items, or carry
 more than 10 pounds.</Description>
     <ItemName>Mage Hand</ItemName>
     <SpellName>Mage Hand</SpellName>
+    <AtHigherLevels />
     <School>Conjuration</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>30</SpellRange>
@@ -10547,7 +10551,7 @@ that you can see within range. Glowing runes appear
 wherever the cylinder intersects with the floor or
 other surface.
 
-Choose one or m ore of the following types of
+Choose one or more of the following types of
 creatures: celestials, elementals, fey, fiends, or undead.
 The circle affects a creature of the chosen type in the
 following ways:
@@ -10649,6 +10653,7 @@ and within 100 feet. Otherwise, that creature dies.
 When the spell ends, the container is destroyed.</Description>
     <ItemName>Magic Jar</ItemName>
     <SpellName>Magic Jar</SpellName>
+    <AtHigherLevels />
     <School>Necromancy</School>
     <SpellLevel>6</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -10708,15 +10713,15 @@ more dart for each slot level above 1st.</AtHigherLevels>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>3d4+3</DiceAtLevel1>
+    <DiceAtLevel2>4d4+4</DiceAtLevel2>
+    <DiceAtLevel3>5d4+5</DiceAtLevel3>
+    <DiceAtLevel4>6d4+6</DiceAtLevel4>
+    <DiceAtLevel5>7d4+7</DiceAtLevel5>
+    <DiceAtLevel6>8d4+8</DiceAtLevel6>
+    <DiceAtLevel7>9d4+9</DiceAtLevel7>
+    <DiceAtLevel8>10d4+10</DiceAtLevel8>
+    <DiceAtLevel9>11d4+11</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -10749,6 +10754,7 @@ speak when any creature moves within 30 feet o f the
 object or when a silver bell rings within 30 feet o f it.</Description>
     <ItemName>Magic Mouth</ItemName>
     <SpellName>Magic Mouth</SpellName>
+    <AtHigherLevels />
     <School>Illusion</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>30</SpellRange>
@@ -10917,12 +10923,12 @@ the healing increases by 1d8 for each slot level above 5th.</AtHigherLevels>
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <DiceAtLevel5>3d8</DiceAtLevel5>
+    <DiceAtLevel6>4d8</DiceAtLevel6>
+    <DiceAtLevel7>5d8</DiceAtLevel7>
+    <DiceAtLevel8>6d8</DiceAtLevel8>
+    <DiceAtLevel9>7d8</DiceAtLevel9>
+    <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10974,7 +10980,7 @@ This spell has no effect on undead or constructs.</Description>
     <ItemName>Mass Healing Word</ItemName>
     <SpellName>Mass Healing Word</SpellName>
     <AtHigherLevels>When you cast this spell using a
-spell slot o f 4th level or higher, the healing increases by
+spell slot of 4th level or higher, the healing increases by
 1d4 for each slot level above 3rd.</AtHigherLevels>
     <School>Evocation</School>
     <SpellLevel>3</SpellLevel>
@@ -10996,14 +11002,14 @@ spell slot o f 4th level or higher, the healing increases by
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <DiceAtLevel3>1d4</DiceAtLevel3>
+    <DiceAtLevel4>2d4</DiceAtLevel4>
+    <DiceAtLevel5>3d4</DiceAtLevel5>
+    <DiceAtLevel6>4d4</DiceAtLevel6>
+    <DiceAtLevel7>5d4</DiceAtLevel7>
+    <DiceAtLevel8>6d4</DiceAtLevel8>
+    <DiceAtLevel9>7d4</DiceAtLevel9>
+    <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11174,7 +11180,7 @@ closest to where you first entered.</Description>
   </PlayerSpell>
   <PlayerSpell>
     <Description>A shimmering green arrow streaks toward a target
-within range and bursts in a spray o f acid. Make a
+within range and bursts in a spray of acid. Make a
 ranged spell attack against the target. On a hit, the
 target takes 4d4 acid damage immediately and 2d4 acid
 damage at the end o f its next turn. On a miss, the arrow
@@ -11200,18 +11206,18 @@ the damage (both initial and later) increases by 1d4
     <IsMaterialComponent>true</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent>powdered rhubarb leaf and an adder's stomach</MaterialComponent>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel2>4d4+2d4</DiceAtLevel2>
+    <DiceAtLevel3>5d4+3d4</DiceAtLevel3>
+    <DiceAtLevel4>6d4+4d4</DiceAtLevel4>
+    <DiceAtLevel5>7d4+5d4</DiceAtLevel5>
+    <DiceAtLevel6>8d4+6d4</DiceAtLevel6>
+    <DiceAtLevel7>9d4+7d4</DiceAtLevel7>
+    <DiceAtLevel8>10d4+8d4</DiceAtLevel8>
+    <DiceAtLevel9>11d4+9d4</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -11226,6 +11232,7 @@ or construct, but the spell can’t restore magic to
 such an object.</Description>
     <ItemName>Mending</ItemName>
     <SpellName>Mending</SpellName>
+    <AtHigherLevels />
     <School>Transmutation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -11341,7 +11348,7 @@ flammable objects that aren’t being worn or carried.</Description>
     <DiceAtLevel6 />
     <DiceAtLevel7 />
     <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel9>20d6+20d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -11350,7 +11357,7 @@ flammable objects that aren’t being worn or carried.</Description>
 immune to psychic damage, any effect that would sense
 its emotions or read its thoughts, divination spells, and
 the charmed condition. The spell even foils wish spells
-and spells or effects o f similar power used to affect the
+and spells or effects of similar power used to affect the
 target’s mind or to gain information about the target.</Description>
     <ItemName>Mind Blank</ItemName>
     <SpellName>Mind Blank</SpellName>
@@ -11555,7 +11562,7 @@ if it can perceive illusions as false, as with truesight.</Description>
   </PlayerSpell>
   <PlayerSpell>
     <Description>You become invisible at the same time that an illusory
-double o f you appears where you are standing. The
+double of you appears where you are standing. The
 double lasts for the duration, but the invisibility ends if
 you attack or cast a spell.
 
@@ -11713,7 +11720,7 @@ or any time in the creature’s past (9th level).</AtHigherLevels>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>A silvery beam o f pale light shines down in a 5-footradius,
+    <Description>A silvery beam of pale light shines down in a 5-footradius,
 40-foot-high cylinder centered on a point within
 range. Until the spell ends, dim light fills the cylinder.
 When a creature enters the spell’s area for the first
@@ -11732,9 +11739,9 @@ On each of your turns after you cast this spell, you can
 use an action to move the beam 60 feet in any direction.</Description>
     <ItemName>Moonbeam</ItemName>
     <SpellName>Moonbeam</SpellName>
-    <AtHigherLevels>W hen you cast this spell using a
+    <AtHigherLevels>When you cast this spell using a
 spell slot of 3rd level or higher, the damage increases by
-1dlO for each slot level above 2nd.</AtHigherLevels>
+1d10 for each slot level above 2nd.</AtHigherLevels>
     <School>Evocation</School>
     <SpellLevel>2</SpellLevel>
     <SpellRange>120</SpellRange>
@@ -11754,14 +11761,14 @@ spell slot of 3rd level or higher, the damage increases by
     <MaterialComponent>several seeds of any moonseed plant and a piece of opalescent feldspar</MaterialComponent>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel2>2d10</DiceAtLevel2>
+    <DiceAtLevel3>3d10</DiceAtLevel3>
+    <DiceAtLevel4>4d10</DiceAtLevel4>
+    <DiceAtLevel5>5d10</DiceAtLevel5>
+    <DiceAtLevel6>6d10</DiceAtLevel6>
+    <DiceAtLevel7>7d10</DiceAtLevel7>
+    <DiceAtLevel8>8d10</DiceAtLevel8>
+    <DiceAtLevel9>9d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -11970,7 +11977,7 @@ target or a different one.</Description>
     <IsMaterialComponent>true</IsMaterialComponent>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent>a miniature platinum sword with a grip and pommel of copper and zinc, worth 250gp</MaterialComponent>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
@@ -11979,14 +11986,14 @@ target or a different one.</Description>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
-    <DiceAtLevel7 />
+    <DiceAtLevel7>3d10</DiceAtLevel7>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>250</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>Choose an area o f terrain no larger than 40 feet on a
+    <Description>Choose an area of terrain no larger than 40 feet on a
 side within range. You can reshape dirt, sand, or clay
 in the area in any manner you choose for the duration.
 You can raise or lower the area’s elevation, create or fill
@@ -12147,14 +12154,14 @@ type or o f that alignment.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>A frigid globe o f cold energy streaks from your fingertips
+    <Description>A frigid globe of cold energy streaks from your fingertips
 to a point of your choice within range, where it explodes
 in a 60-foot-radius sphere. Each creature within the
 area must make a Constitution saving throw. On a
 failed save, a creature takes 10d6 cold damage. On a
 successful save, it takes half as much damage.
 
-If the globe strikes a body o f water or a liquid that is
+If the globe strikes a body of water or a liquid that is
 principally water (not including water-based creatures),
 it freezes the liquid to a depth o f 6 inches over an area
 30 feet square. This ice lasts for 1 minute. Creatures
@@ -12201,16 +12208,16 @@ spell slot o f 7th level or higher, the damage increases by
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel6>10d6</DiceAtLevel6>
+    <DiceAtLevel7>11d6</DiceAtLevel7>
+    <DiceAtLevel8>12d6</DiceAtLevel8>
+    <DiceAtLevel9>13d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
     <Description>A sphere o f shimmering force encloses a creature
-or object o f Large size or smaller within range. An
+or object of Large size or smaller within range. An
 unwilling creature must make a Dexterity saving
 throw. On a failed save, the creature is enclosed for
 the duration.
@@ -12276,7 +12283,7 @@ dance without leaving its space and has disadvantage
 on Dexterity saving throws and attack rolls. While
 the target is affected by this spell, other creatures
 have advantage on attack rolls against it. As an
-action, a dancing creature makes a W isdom saving
+action, a dancing creature makes a Wisdom saving
 throw to regain control of itself. On a successful save,
 the spell ends.</Description>
     <ItemName>Otto's Irresistible Dance</ItemName>
@@ -12396,7 +12403,7 @@ which you cast the spell.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>You craft an illusion that takes root in the mind o f a
+    <Description>You craft an illusion that takes root in the mind of a
 creature that you can see within range. The target must
 make an Intelligence saving throw. On a failed save, you
 create a phantasmal object, creature, or other visible
@@ -12454,7 +12461,7 @@ as a type appropriate to the illusion.</Description>
     <MaterialComponent>a bit of fleece</MaterialComponent>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
+    <DiceAtLevel2>1d6</DiceAtLevel2>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
@@ -12473,13 +12480,13 @@ must make a Wisdom saving throw. On a failed save,
 the target becomes frightened for the duration. At the
 start of each o f the target’s turns before the spell ends,
 the target must succeed on a W isdom saving throw
-or take 4 d10 psychic damage. On a successful save,
+or take 4d10 psychic damage. On a successful save,
 the spell ends.</Description>
     <ItemName>Phantasmal Killer</ItemName>
     <SpellName>Phantasmal Killer</SpellName>
     <AtHigherLevels>When you cast this spell using a
 spell slot of 5th level or higher, the damage increases by
-1dlO for each slot level above 4th.</AtHigherLevels>
+1d10 for each slot level above 4th.</AtHigherLevels>
     <School>Illusion</School>
     <SpellLevel>4</SpellLevel>
     <SpellRange>120</SpellRange>
@@ -12501,12 +12508,12 @@ spell slot of 5th level or higher, the damage increases by
     <DiceAtLevel1 />
     <DiceAtLevel2 />
     <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel4>4d10</DiceAtLevel4>
+    <DiceAtLevel5>5d10</DiceAtLevel5>
+    <DiceAtLevel6>6d10</DiceAtLevel6>
+    <DiceAtLevel7>7d10</DiceAtLevel7>
+    <DiceAtLevel8>8d10</DiceAtLevel8>
+    <DiceAtLevel9>9d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -12516,7 +12523,7 @@ the ground in an unoccupied space o f your choice
 within range. You decide the creature’s appearance,
 but it is equipped with a saddle, bit, and bridle. Any
 of the equipment created by the spell vanishes in a
-puff o f smoke if it is carried more than 10 feet away
+puff of smoke if it is carried more than 10 feet away
 from the steed.
 
 For the duration, you or a creature you choose can
@@ -12833,10 +12840,10 @@ This spell’s damage increases by 1d12 when you reach
     <IsRitual>false</IsRitual>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d12</DiceAtLevel0>
+    <DiceAtLevel1>2d12</DiceAtLevel1>
+    <DiceAtLevel2>3d12</DiceAtLevel2>
+    <DiceAtLevel3>4d12</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -12910,7 +12917,7 @@ from any of its equipment.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>A wave o f healing energy washes over the creature
+    <Description>A wave of healing energy washes over the creature
 you touch. The target regains all its hit points. If the
 creature is charmed, frightened, paralyzed, or stunned,
 the condition ends. If the creature is prone, it can use its
@@ -13055,15 +13062,15 @@ undead or constructs.</Description>
     <MaterialComponent />
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <DiceAtLevel2>2d8</DiceAtLevel2>
+    <DiceAtLevel3>3d8</DiceAtLevel3>
+    <DiceAtLevel4>4d8</DiceAtLevel4>
+    <DiceAtLevel5>5d8</DiceAtLevel5>
+    <DiceAtLevel6>6d8</DiceAtLevel6>
+    <DiceAtLevel7>7d8</DiceAtLevel7>
+    <DiceAtLevel8>8d8</DiceAtLevel8>
+    <DiceAtLevel9>9d8</DiceAtLevel9>
+    <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13193,7 +13200,7 @@ more, rerolling any 8.</Description>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
-    <DiceAtLevel7 />
+    <DiceAtLevel7>10d6</DiceAtLevel7>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
@@ -13350,10 +13357,10 @@ This spell’s damage increases by 1d8 when you reach
     <IsRitual>false</IsRitual>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d8</DiceAtLevel0>
+    <DiceAtLevel1>2d8</DiceAtLevel1>
+    <DiceAtLevel2>3d8</DiceAtLevel2>
+    <DiceAtLevel3>4d8</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -13699,8 +13706,8 @@ the penalty is reduced by 1 until it disappears.</Description>
     <MaterialCost>500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>You forge a telepathic link among up to eight w illing
-creatures o f your choice within range, psychically
+    <Description>You forge a telepathic link among up to eight willing
+creatures of your choice within range, psychically
 linking each creature to all the others for the duration.
 
 Creatures with Intelligence scores of 2 or less aren’t
@@ -13770,7 +13777,7 @@ success, the spell ends.</Description>
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
     <DiceAtLevel1 />
@@ -13811,12 +13818,12 @@ The spell’s damage increases by 1d8 when you reach
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d8</DiceAtLevel0>
+    <DiceAtLevel1>2d8</DiceAtLevel1>
+    <DiceAtLevel2>3d8</DiceAtLevel2>
+    <DiceAtLevel3>4d8</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -13853,18 +13860,18 @@ spell slot of 2nd level or higher, the damage increases by
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>2d8</DiceAtLevel1>
+    <DiceAtLevel2>3d8</DiceAtLevel2>
+    <DiceAtLevel3>4d8</DiceAtLevel3>
+    <DiceAtLevel4>5d8</DiceAtLevel4>
+    <DiceAtLevel5>6d8</DiceAtLevel5>
+    <DiceAtLevel6>7d8</DiceAtLevel6>
+    <DiceAtLevel7>8d8</DiceAtLevel7>
+    <DiceAtLevel8>9d8</DiceAtLevel8>
+    <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -13872,7 +13879,7 @@ spell slot of 2nd level or higher, the damage increases by
     <Description>You touch a creature and stimulate its natural healing
 ability. The target regains 4d8 + 15 hit points. For the
 duration of the spell, the target regains 1 hit point at the
-start of each o f its turns (10 hit points each minute).
+start of each of its turns (10 hit points each minute).
 
 The target’s severed body members (fingers, legs,
 tails, and so on), if any, are restored after 2 minutes.
@@ -13881,6 +13888,7 @@ the spell instantaneously causes the limb to knit
 to the stump.</Description>
     <ItemName>Regenerate</ItemName>
     <SpellName>Regenerate</SpellName>
+    <AtHigherLevels />
     <School>Transmutation</School>
     <SpellLevel>7</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -13905,14 +13913,14 @@ to the stump.</Description>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
-    <DiceAtLevel7 />
+    <DiceAtLevel7>4d8+15</DiceAtLevel7>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>You touch a dead humanoid or a piece o f a dead
+    <Description>You touch a dead humanoid or a piece of a dead
 humanoid. Provided that the creature has been dead no
 longer than 10 days, the spell forms a new adult body
 for it and then calls the soul to enter that body. If the
@@ -14037,7 +14045,7 @@ spell then ends.</Description>
     <IsRitual>false</IsRitual>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent>a miniature cloak</MaterialComponent>
-    <DiceAtLevel0 />
+    <DiceAtLevel0>1d4</DiceAtLevel0>
     <DiceAtLevel1 />
     <DiceAtLevel2 />
     <DiceAtLevel3 />
@@ -14052,7 +14060,7 @@ spell then ends.</Description>
   </PlayerSpell>
   <PlayerSpell>
     <Description>You touch a dead creature that has been dead for no
-more than a century, that didn’t die o f old age, and that
+more than a century, that didn’t die of old age, and that
 isn’t undead. If its soul is free and willing, the target
 returns to life with all its hit points.
 
@@ -14122,7 +14130,7 @@ or creature reaches the top o f the area without striking
 anything, it remains there, oscillating slightly, for
 the duration.
 
-At the end o f the duration, affected objects and
+At the end of the duration, affected objects and
 creatures fall back down.</Description>
     <ItemName>Reverse Gravity</ItemName>
     <SpellName>Reverse Gravity</SpellName>
@@ -14194,7 +14202,7 @@ old age, nor can it restore any missing body parts.</Description>
     <MaterialCost>300</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>You touch a length o f rope that is up to 60 feet long.
+    <Description>You touch a length of rope that is up to 60 feet long.
 One end of the rope then rises into the air until the
 whole rope hangs perpendicular to the ground. At the
 upper end o f the rope, an invisible entrance opens to an
@@ -14272,10 +14280,10 @@ The spell’s damage increases by 1d8 when you reach
     <IsRitual>false</IsRitual>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d8</DiceAtLevel0>
+    <DiceAtLevel1>2d8</DiceAtLevel1>
+    <DiceAtLevel2>3d8</DiceAtLevel2>
+    <DiceAtLevel3>4d8</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -14289,7 +14297,7 @@ The spell’s damage increases by 1d8 when you reach
     <Description>You ward a creature within range against attack. Until
 the spell ends, any creature who targets the warded
 creature with an attack or a harmful spell must first
-make a W isdom saving throw. On a failed save, the
+make a Wisdom saving throw. On a failed save, the
 creature must choose a new target or lose the attack
 or spell. This spell doesn’t protect the warded creature
 from area effects, such as the explosion of a fireball.
@@ -14328,7 +14336,7 @@ that affects an enemy creature, this spell ends.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>You create three rays o f fire and hurl them at targets
+    <Description>You create three rays of fire and hurl them at targets
 within range. You can hurl them at one target or several.
 Make a ranged spell attack for each ray. On a hit, the
 target takes 2d6 fire damage.</Description>
@@ -14351,11 +14359,11 @@ you create one additional ray for each slot level above 2nd.</AtHigherLevels>
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
+    <DiceAtLevel2>2d6</DiceAtLevel2>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
@@ -14464,15 +14472,15 @@ the attack increases by 1d6 for each slot level above 1st.</AtHigherLevels>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>1d6</DiceAtLevel1>
+    <DiceAtLevel2>2d6</DiceAtLevel2>
+    <DiceAtLevel3>3d6</DiceAtLevel3>
+    <DiceAtLevel4>4d6</DiceAtLevel4>
+    <DiceAtLevel5>5d6</DiceAtLevel5>
+    <DiceAtLevel6>6d6</DiceAtLevel6>
+    <DiceAtLevel7>7d6</DiceAtLevel7>
+    <DiceAtLevel8>8d6</DiceAtLevel8>
+    <DiceAtLevel9>9d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -14787,14 +14795,14 @@ the damage increases by 1d8 for each slot level above 2nd.</AtHigherLevels>
     <MaterialComponent>a chip of mica</MaterialComponent>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel2>3d8</DiceAtLevel2>
+    <DiceAtLevel3>4d8</DiceAtLevel3>
+    <DiceAtLevel4>5d8</DiceAtLevel4>
+    <DiceAtLevel5>6d8</DiceAtLevel5>
+    <DiceAtLevel6>7d8</DiceAtLevel6>
+    <DiceAtLevel7>8d8</DiceAtLevel7>
+    <DiceAtLevel8>9d8</DiceAtLevel8>
+    <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -14942,12 +14950,12 @@ The spell’s damage increases by 1d8 when you reach
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d8</DiceAtLevel0>
+    <DiceAtLevel1>2d8</DiceAtLevel1>
+    <DiceAtLevel2>3d8</DiceAtLevel2>
+    <DiceAtLevel3>4d8</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -15153,15 +15161,15 @@ each slot level above 1st.</AtHigherLevels>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent>a pinch of fine sand, rose petals, or a cricket</MaterialComponent>
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>5d8</DiceAtLevel1>
+    <DiceAtLevel2>6d8</DiceAtLevel2>
+    <DiceAtLevel3>7d8</DiceAtLevel3>
+    <DiceAtLevel4>8d8</DiceAtLevel4>
+    <DiceAtLevel5>9d8</DiceAtLevel5>
+    <DiceAtLevel6>10d8</DiceAtLevel6>
+    <DiceAtLevel7>11d8</DiceAtLevel7>
+    <DiceAtLevel8>12d8</DiceAtLevel8>
+    <DiceAtLevel9>13d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -15181,6 +15189,7 @@ creature must make a successful Constitution saving
 throw against your spell save DC or lose concentration.</Description>
     <ItemName>Sleet Storm</ItemName>
     <SpellName>Sleet Storm</SpellName>
+    <AtHigherLevels />
     <School>Conjuration</School>
     <SpellLevel>3</SpellLevel>
     <SpellRange>150</SpellRange>
@@ -15495,7 +15504,7 @@ within range twists and sprouts hard spikes and thorns.
 The area becomes difficult terrain for the duration.
 When a creature moves into or within the area, it takes
 2d4 piercing damage for every 5 feet it travels.
-The transformation o f the ground is camouflaged to
+The transformation of the ground is camouflaged to
 look natural. Any creature that can’t see the area at the
 time the spell is cast must make a Wisdom (Perception)
 check against your spell save DC to recognize the
@@ -15503,7 +15512,7 @@ terrain as hazardous before entering it.</Description>
     <ItemName>Spike Growth</ItemName>
     <SpellName>Spike Growth</SpellName>
     <School>Transmutation</School>
-    <SpellLevel>0</SpellLevel>
+    <SpellLevel>2</SpellLevel>
     <SpellRange>150</SpellRange>
     <SpellDuration>100</SpellDuration>
     <IsUntilDispelled>false</IsUntilDispelled>
@@ -15521,7 +15530,7 @@ terrain as hazardous before entering it.</Description>
     <MaterialComponent>seven sharp thorns or seven small twigs, each sharpened to a point</MaterialComponent>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
+    <DiceAtLevel2>2d4</DiceAtLevel2>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
@@ -15572,13 +15581,13 @@ level above 3rd.</AtHigherLevels>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel3>3d8</DiceAtLevel3>
+    <DiceAtLevel4>4d8</DiceAtLevel4>
+    <DiceAtLevel5>5d8</DiceAtLevel5>
+    <DiceAtLevel6>6d8</DiceAtLevel6>
+    <DiceAtLevel7>7d8</DiceAtLevel7>
+    <DiceAtLevel8>8d8</DiceAtLevel8>
+    <DiceAtLevel9>9d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -15595,7 +15604,7 @@ weapon up to 20 feet and repeat the attack against a
 creature within 5 feet o f it.
 
 The weapon can take whatever form you choose.
-Clerics o f deities who are associated with a particular
+Clerics of deities who are associated with a particular
 weapon (as St. Cuthbert is known for his mace
 and Thor for his hammer) make this spell’s effect
 resemble that weapon.</Description>
@@ -15618,19 +15627,19 @@ the damage increases by 1d8 for every two slot levels above the 2nd.</AtHigherLe
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
     <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <DiceAtLevel2>1d8</DiceAtLevel2>
+    <DiceAtLevel3>2d8</DiceAtLevel3>
+    <DiceAtLevel4>3d8</DiceAtLevel4>
+    <DiceAtLevel5>4d8</DiceAtLevel5>
+    <DiceAtLevel6>5d8</DiceAtLevel6>
+    <DiceAtLevel7>6d8</DiceAtLevel7>
+    <DiceAtLevel8>7d8</DiceAtLevel8>
+    <DiceAtLevel9>8d8</DiceAtLevel9>
+    <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15665,7 +15674,7 @@ can't take reactions, until the end of its next turn.</Description>
     <DiceAtLevel1 />
     <DiceAtLevel2 />
     <DiceAtLevel3 />
-    <DiceAtLevel4 />
+    <DiceAtLevel4>4d6</DiceAtLevel4>
     <DiceAtLevel5 />
     <DiceAtLevel6 />
     <DiceAtLevel7 />
@@ -15803,7 +15812,7 @@ slashing damage.</Description>
   </PlayerSpell>
   <PlayerSpell>
     <Description>A churning storm cloud forms, centered on a point you
-can see and spreading to a radius o f 360 feet. Lightning
+can see and spreading to a radius of 360 feet. Lightning
 flashes in the area, thunder booms, and strong winds
 roar. Each creature under the cloud (no more than 5,000
 feet beneath the cloud) when it appears must make a
@@ -15970,7 +15979,7 @@ dim light for an additional 30 feet. This light is sunlight.</Description>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
-    <DiceAtLevel6 />
+    <DiceAtLevel6>6d8</DiceAtLevel6>
     <DiceAtLevel7 />
     <DiceAtLevel8 />
     <DiceAtLevel9 />
@@ -15987,7 +15996,7 @@ as much damage and isn’t blinded by this spell. Undead
 and oozes have disadvantage on this saving throw.
 
 A creature blinded by this spell makes another
-Constitution saving throw at the end of each o f its turns.
+Constitution saving throw at the end of each of its turns.
 On a successful save, it is no longer blinded.
 
 This spell dispels any darkness in its area that was
@@ -16019,7 +16028,7 @@ created by a spell.</Description>
     <DiceAtLevel5 />
     <DiceAtLevel6 />
     <DiceAtLevel7 />
-    <DiceAtLevel8 />
+    <DiceAtLevel8>12d6</DiceAtLevel8>
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
@@ -16307,7 +16316,7 @@ make an ability check with your spellcasting ability
 contested by that creature’s Strength check. If you
 succeed, you pull the object away from that creature and
 can move it up to 30 feet in any direction but not beyond
-the range o f this spell.
+the range of this spell.
 You can exert fine control on objects with your
 telekinetic grip, such as manipulating a simple tool,
 opening a door or a container, stowing or retrieving
@@ -16611,7 +16620,7 @@ the spell ends.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>You manifest a minor wonder, a sign o f supernatural
+    <Description>You manifest a minor wonder, a sign of supernatural
 power, within range. You create one o f the following
 magical effects within range:
 
@@ -16691,12 +16700,12 @@ This spell’s damage increases by 1d6 w hen you reach
     <IsMaterialComponent>true</IsMaterialComponent>
     <IsConcentration>false</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent>the stem of a plant with thorns</MaterialComponent>
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d6</DiceAtLevel0>
+    <DiceAtLevel1>2d6</DiceAtLevel1>
+    <DiceAtLevel2>3d6</DiceAtLevel2>
+    <DiceAtLevel3>4d6</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -16734,7 +16743,7 @@ from you and knocked prone.</Description>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
+    <DiceAtLevel1>2d6</DiceAtLevel1>
     <DiceAtLevel2 />
     <DiceAtLevel3 />
     <DiceAtLevel4 />
@@ -16780,15 +16789,15 @@ spell slot of 2nd level or higher, the damage increases by
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>2d8</DiceAtLevel1>
+    <DiceAtLevel2>3d8</DiceAtLevel2>
+    <DiceAtLevel3>4d8</DiceAtLevel3>
+    <DiceAtLevel4>5d8</DiceAtLevel4>
+    <DiceAtLevel5>6d8</DiceAtLevel5>
+    <DiceAtLevel6>7d8</DiceAtLevel6>
+    <DiceAtLevel7>8d8</DiceAtLevel7>
+    <DiceAtLevel8>9d8</DiceAtLevel8>
+    <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -16806,6 +16815,7 @@ In addition, the spell ends if you move to a place more than
 1,000 feet from the location where you cast it.</Description>
     <ItemName>Time Stop</ItemName>
     <SpellName>Time Stop</SpellName>
+    <AtHigherLevels />
     <School>Transmutation</School>
     <SpellLevel>9</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -17326,12 +17336,12 @@ spell slot o f 5th level or higher, the damage increases by
     <DiceAtLevel1 />
     <DiceAtLevel2 />
     <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel4>5d8</DiceAtLevel4>
+    <DiceAtLevel5>6d8</DiceAtLevel5>
+    <DiceAtLevel6>7d8</DiceAtLevel6>
+    <DiceAtLevel7>8d8</DiceAtLevel7>
+    <DiceAtLevel8>9d8</DiceAtLevel8>
+    <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -17341,8 +17351,8 @@ point you choose within range. The wall appears in
 any orientation you choose, as a horizontal or vertical
 barrier or at an angle. It can be free floating or resting
 on a solid surface. You can form it into a hemispherical
-dome or a sphere with a radius o f up to 10 feet, or you
-can shape a flat surface made up o f ten 10-foot-by-
+dome or a sphere with a radius of up to 10 feet, or you
+can shape a flat surface made up of ten 10-foot-by-
 10-foot panels. Each panel must b e contiguous with
 another panel. In any form, the wall is 1/4 inch thick.
 It lasts for the duration. If the wall cuts through a
@@ -17389,24 +17399,24 @@ blocking ethereal travel through the wall.</Description>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>You create a wall o f ice on a solid surface within range.
+    <Description>You create a wall of ice on a solid surface within range.
 You can form it into a hemispherical dome or a sphere
 with a radius of up to 10 feet, or you can shape a flat
-surface made up o f ten 10-foot-square panels. Each
+surface made up of ten 10-foot-square panels. Each
 panel must be contiguous with another panel. In any
 form, the wall is 1 foot thick and lasts for the duration.
 
 If the wall cuts through a creature’s space when it
 appears, the creature within its area is pushed to one
-side o f the wall and must make a Dexterity saving throw.
+side of the wall and must make a Dexterity saving throw.
 On a failed save, the creature takes 10d6 cold damage,
 or half as much damage on a successful save.
 
 The wall is an object that can be damaged and thus
 breached. It has AC 12 and 30 hit points per 10-foot
 section, and it is vulnerable to fire damage. Reducing
-a 10-foot section o f wall to 0 hit points destroys it and
-leaves behind a sheet o f frigid air in the space the wall
+a 10-foot section of wall to 0 hit points destroys it and
+leaves behind a sheet of frigid air in the space the wall
 occupied. 
 
 A creature moving through the sheet of frigid
@@ -17442,10 +17452,10 @@ air increases by 1d6, for each slot level above 6th.</AtHigherLevels>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel6>10d6+5d6</DiceAtLevel6>
+    <DiceAtLevel7>12d6+6d6</DiceAtLevel7>
+    <DiceAtLevel8>14d6+7d6</DiceAtLevel8>
+    <DiceAtLevel9>16d6+8d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -17570,10 +17580,10 @@ increase by 1d8 for each slot level above 6th.</AtHigherLevels>
     <DiceAtLevel3 />
     <DiceAtLevel4 />
     <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel6>7d8</DiceAtLevel6>
+    <DiceAtLevel7>8d8</DiceAtLevel7>
+    <DiceAtLevel8>9d8</DiceAtLevel8>
+    <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -17604,18 +17614,18 @@ the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
     <IsMaterialComponent>false</IsMaterialComponent>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent />
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel3>3d8</DiceAtLevel3>
+    <DiceAtLevel4>4d8</DiceAtLevel4>
+    <DiceAtLevel5>5d8</DiceAtLevel5>
+    <DiceAtLevel6>6d8</DiceAtLevel6>
+    <DiceAtLevel7>7d8</DiceAtLevel7>
+    <DiceAtLevel8>8d8</DiceAtLevel8>
+    <DiceAtLevel9>9d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -17811,7 +17821,7 @@ save, a creature becomes frightened for the duration.
 
 The illusion calls on the creature’s deepest fears,
 manifesting its worst nightmares as an implacable
-threat. At the start o f each o f the frightened creature’s
+threat. At the start o f each of the frightened creature’s
 turns, it must succeed on a Wisdom saving throw or
 take 4 d10 psychic damage. On a successful save, the
 spell ends for that creature.</Description>
@@ -17843,7 +17853,7 @@ spell ends for that creature.</Description>
     <DiceAtLevel6 />
     <DiceAtLevel7 />
     <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel9>4d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
@@ -17877,10 +17887,10 @@ This spell’s damage increases by 1d4 when you reach
     <IsRitual>false</IsRitual>
     <IsAttackRoll>false</IsAttackRoll>
     <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel0>1d4</DiceAtLevel0>
+    <DiceAtLevel1>2d4</DiceAtLevel1>
+    <DiceAtLevel2>3d4</DiceAtLevel2>
+    <DiceAtLevel3>4d4</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -17983,7 +17993,7 @@ can’t pass through it.</Description>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel3>3d8</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
@@ -18122,18 +18132,18 @@ increases by 1d12 for each slot level above 1st.</AtHigherLevels>
     <IsMaterialComponent>true</IsMaterialComponent>
     <IsConcentration>true</IsConcentration>
     <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
+    <IsAttackRoll>true</IsAttackRoll>
     <MaterialComponent>a twig from a tree that has been struck by lightning</MaterialComponent>
     <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
+    <DiceAtLevel1>1d12</DiceAtLevel1>
+    <DiceAtLevel2>2d12</DiceAtLevel2>
+    <DiceAtLevel3>3d12</DiceAtLevel3>
+    <DiceAtLevel4>4d12</DiceAtLevel4>
+    <DiceAtLevel5>5d12</DiceAtLevel5>
+    <DiceAtLevel6>6d12</DiceAtLevel6>
+    <DiceAtLevel7>7d12</DiceAtLevel7>
+    <DiceAtLevel8>8d12</DiceAtLevel8>
+    <DiceAtLevel9>9d12</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
