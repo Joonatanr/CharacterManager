@@ -28,7 +28,7 @@ namespace CharacterManager.Spells
         {
             if (MagicDiceRolledListener != null)
             {
-                MagicDiceRolledListener.Invoke(rollresult + Environment.NewLine, Color.Blue, true, System.Windows.Forms.HorizontalAlignment.Left);
+                MagicDiceRolledListener.Invoke(rollresult + Environment.NewLine, Color.Blue, false, System.Windows.Forms.HorizontalAlignment.Left);
             }
         }
 
