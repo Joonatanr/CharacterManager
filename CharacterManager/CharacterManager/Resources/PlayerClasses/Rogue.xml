@@ -13,7 +13,12 @@
 		<string>Light Armor</string>
 	</ArmorProficiencies>
 	<AvailableToolProficiencies>
-		<string>Thieves' Tools</string>
+		<ToolProficiencyChoice>
+			<ChoiceType>TYPE_LIST</ChoiceType>
+			<AvailableChoices>
+				<string>Thieves' Tools</string>
+			</AvailableChoices>
+		</ToolProficiencyChoice>
 	</AvailableToolProficiencies>
 	<SavingThrowProficiencies>
 		<string>DEX</string>
@@ -98,7 +103,7 @@
 		<EquipmentChoiceList>
 			<optionA>
 				<EquipmentChoice>
-					<Equipment>Leather Armor</Equipment>
+					<Equipment>Leather</Equipment>
 					<Quantity>1</Quantity>
 				</EquipmentChoice>
 				<EquipmentChoice>
@@ -119,11 +124,7 @@
 	<AvailableClassAbilitiesLevel1>
 	
 		<PlayerClassAbilityChoice>
-			<Description>At 1st level, choose two of your skill proficiencies, or
-one of your skill proficiencies and your proficiency with
-thieves’ tools. Your proficiency bonus is doubled for any
-ability check you make that uses either of the chosen
-proficiencies.
+			<Description>At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves’ tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.
 At 6th level, you can choose two more of your
 proficiencies (in skills or with thieves’ tools) to gain
 this benefit.</Description>

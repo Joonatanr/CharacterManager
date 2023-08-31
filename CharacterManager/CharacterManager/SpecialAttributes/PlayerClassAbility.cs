@@ -401,7 +401,9 @@ namespace CharacterManager
         Things are made more complex by the ability to choose expertise in Thieves' Tools as well as in any
         skill.
         */
-        
+
+        private PlayerCharacter connectedCharacter = null;
+
         public RogueExpertise()
         {
             this.Name = "Expertise(Rogue)";
@@ -409,32 +411,74 @@ namespace CharacterManager
 
         public override void InitializeSubscriptions(PlayerCharacter c)
         {
-            //c.CharacterSkillBonuseUpdated += C_CharacterSkillBonusUpdated;
             c.CharacterFinalize += C_CharacterCreated;
         }
 
         private void C_CharacterCreated(PlayerCharacter c)
         {
-            /* TODO : Lets first create a simple implementation and forget about the possibility of choosing expertise in Thieves
-            Tools. Once this works fine, then we can add the extra complexity of being able to choose proficiency in Thieves Tools.*/
+            if (c.ToolExpertise.Contains("Thieves Tools")) 
+            {
+                /* Then we have no other choice. */
+                FormChooseSkillProfs myForm = new FormChooseSkillProfs();
+
+                myForm.setCharacter(connectedCharacter);
+                myForm.setupProficiencyChoices(0);
+                myForm.setupExpertiseChoices(2);
+
+                myForm.ShowDialog();
+                if (myForm.DialogResult == DialogResult.OK)
+                {
+                    List<string> AllExpertise = myForm.getAllSelectedSkillExpertise();
+                    foreach (string expertise in AllExpertise)
+                    {
+                        if (!connectedCharacter.SkillExpertise.Contains(expertise))
+                        {
+                            connectedCharacter.SkillExpertise.Add(expertise);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                FormBinaryChoice myMainForm = new FormBinaryChoice();
+                myMainForm.Desription = this.Description;
+                myMainForm.ChoiceOne = "Thieves Tools exprt + 1 skill";
+                myMainForm.ChoiceTwo = "2 skill expertise";
+                myMainForm.ChoiceDialog = ShowChoiceDialog;
+                connectedCharacter = c;
+
+                myMainForm.ShowDialog();
+            }
+        }
+
+        private bool ShowChoiceDialog(int choice_ix)
+        {
             FormChooseSkillProfs myForm = new FormChooseSkillProfs();
 
-            myForm.setCharacter(c);
+            myForm.setCharacter(connectedCharacter);
             myForm.setupProficiencyChoices(0);
-            myForm.setupExpertiseChoices(2);
+            myForm.setupExpertiseChoices(choice_ix);
 
             myForm.ShowDialog();
             if (myForm.DialogResult == DialogResult.OK)
             {
                 List<string> AllExpertise = myForm.getAllSelectedSkillExpertise();
-                foreach(string expertise in AllExpertise)
+                foreach (string expertise in AllExpertise)
                 {
-                    if (!c.SkillExpertise.Contains(expertise))
+                    if (!connectedCharacter.SkillExpertise.Contains(expertise))
                     {
-                        c.SkillExpertise.Add(expertise);
+                        connectedCharacter.SkillExpertise.Add(expertise);
                     }
                 }
+
+                if (choice_ix == 1)
+                {
+                    connectedCharacter.ToolExpertise.Add("Thieves Tools");
+                }
+
+                return true;
             }
+            return false;
         }
     }
 

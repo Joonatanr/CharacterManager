@@ -79,6 +79,7 @@ namespace CharacterManager
 
         public List<String> SkillProficiencies = new List<String>();
         public List<String> SkillExpertise = new List<String>();
+        public List<String> ToolExpertise = new List<string>();
         public List<String> Languages = new List<String>();
         public List<String> WeaponProficiencies = new List<String>();
         public List<String> ArmorProficiencies = new List<String>();

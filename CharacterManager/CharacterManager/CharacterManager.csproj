@@ -191,6 +191,12 @@
     <Compile Include="UserControls\FormAddXp.Designer.cs">
       <DependentUpon>FormAddXp.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\FormBinaryChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\FormBinaryChoice.Designer.cs">
+      <DependentUpon>FormBinaryChoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\FormUseCombatManeuver.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormAddXp.resx">
       <DependentUpon>FormAddXp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FormBinaryChoice.resx">
+      <DependentUpon>FormBinaryChoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormUseCombatManeuver.resx">
       <DependentUpon>FormUseCombatManeuver.cs</DependentUpon>
