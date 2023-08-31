@@ -13,5 +13,6 @@ namespace CharacterManager
 
         public string Dice = null;
         public int MaximumCharges = 0;
+        public string AdditionalDescription = "";
     }
 }

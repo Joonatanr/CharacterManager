@@ -193,6 +193,13 @@ namespace CharacterManager
             {
                 this.MaximumCharges = upgrade.MaximumCharges;
             }
+
+            if (!string.IsNullOrEmpty(upgrade.AdditionalDescription))
+            {
+                this.Description += Environment.NewLine;
+                this.Description += Environment.NewLine;
+                this.Description += upgrade.AdditionalDescription;
+            }
         }
 
         /// <summary>

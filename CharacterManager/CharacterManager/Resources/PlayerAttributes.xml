@@ -602,6 +602,10 @@ You can also end your rage on your turn as a bonus action. Once you have raged t
 				<Level>3</Level>
 				<MaximumCharges>3</MaximumCharges>
 			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>6</Level>
+				<MaximumCharges>4</MaximumCharges>
+			</PlayerAbilityUpgrade>
 		</Upgrades>
 	</PlayerAbility>
 		
@@ -634,6 +638,16 @@ after this one. When your rage ends, you suffer one level
 of exhaustion (as described in appendix A).</Description>
 		<IsCombatAbility>true</IsCombatAbility>
 		<IsToggle>true</IsToggle>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>6</Level>
+				<AdditionalDescription>Mindless Rage :
+Beginning at 6th level, you can’t be charmed or
+frightened while raging. If you are charmed or
+frightened when you enter your rage, the effect is
+suspended for the duration of the rage.</AdditionalDescription>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
 	</PlayerAbility>
 	
 	<PlayerAbility>
