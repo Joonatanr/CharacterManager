@@ -116,7 +116,6 @@ namespace CharacterManager
             }
         }
 
-        /* TODO : We really need to get started with this. */
         public delegate void PlayerAbilityValueChanged(int value);
         public delegate void PlayerAbilityIsActiveChanged(bool isActive);
         public delegate void PlayerAbilityUsedListener(PlayerAbility ability);

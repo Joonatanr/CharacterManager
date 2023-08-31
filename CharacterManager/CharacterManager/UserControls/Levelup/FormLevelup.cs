@@ -134,6 +134,15 @@ namespace CharacterManager.UserControls
             int newLevel = _myCharacter.Level;
             List<PlayerClassAbilityChoice> abilityChoices = _myCharacter.GetPlayerClass().getAvailableClassAbilities(newLevel);
 
+            if (_myCharacter != null)
+            {
+                PlayerClassArchetype existing = _myCharacter.GetSelectedArchetype();
+                if (existing != null)
+                {
+                    abilityChoices.AddRange(existing.getAbilityChoicesByLevel(_myCharacter.Level));
+                }
+            }
+
             if (abilityChoices.Count > 0)
             {
                 /* We set up the current abilities. */

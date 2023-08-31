@@ -772,6 +772,20 @@ namespace CharacterManager
         }
 
 
+        public PlayerClassArchetype GetSelectedArchetype()
+        {
+            /* TODO : This does not currently take into account possible multiclassing. */
+            foreach(PlayerAbility ability in CharacterAbilitiesObjectList)
+            {
+                if(ability is PlayerClassArchetype)
+                {
+                    return (PlayerClassArchetype)ability;
+                }
+            }
+
+            return null;
+        }
+
         public List<string> getAllWeaponAndArmorProficiencies()
         {
             List<string> res = new List<string>();

@@ -685,6 +685,32 @@ the wolf makes you a leader of hunters.</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
+		<Name>Bear Totem Aspect</Name>
+		<Description>You gain the might of a bear. Your carrying
+capacity (including maximum load and maximum lift)
+is doubled, and you have advantage on Strength checks
+made to push, pull, lift, or break objects.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Eagle Totem Aspect</Name>
+		<Description>You gain the eyesight of an eagle. You can
+see up to 1 mile away with no difficulty, able to discern
+even fine details as though looking at something no
+more than 100 feet away from you. Additionally, dim
+light doesn't impose disadvantage on your Wisdom
+(Perception) checks.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Wolf Totem Aspect</Name>
+		<Description>You gain the hunting sensibilities of a wolf. You
+can track other creatures while traveling at a fast pace,
+and you can move stealthily while traveling at a normal
+pace (see chapter 8 for rules on travel pace).</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
 		<Name>Fast Movement</Name>
 		<Description>Starting at 5th level, your speed increases by 10 feet while you aren’t wearing heavy armor.</Description>
 		<MaximumCharges>0</MaximumCharges>

@@ -201,6 +201,20 @@ bright yellow.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel3>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<Description>At 6th level, you gain a maagical benefit based on the
+totem animal of your choice. You can choose the same
+animal you selected at 3rd level or a different one.</Description>
+					<ClassAbilityName>Aspect of the Beast</ClassAbilityName>
+					<AvailableChoices>
+						<string>Bear Totem Aspect</string>
+						<string>Eagle Totem Aspect</string>
+						<string>Wolf Totem Aspect</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	
