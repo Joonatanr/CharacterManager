@@ -16,7 +16,7 @@ namespace CharacterManager.SpecialAttributes
 
         public override void InitializeSubscriptions(PlayerCharacter c)
         {
-            c.CharacterCreated += setHitPoints;
+            c.CharacterExtraAttributesUpdated += setHitPoints;
             c.CharacterLevelup += setHitPointBonusForLevelup;
         }
 

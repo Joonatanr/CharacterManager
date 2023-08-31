@@ -234,6 +234,7 @@ namespace CharacterManager.CharacterCreator
             String msg;
             if (CreateCharacter(out msg))
             {
+                CreatedCharacter.FinalizeCharacterCreation();
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -511,7 +512,7 @@ namespace CharacterManager.CharacterCreator
             //Final step, we resolve the special attributes. For this we need to try and create a test character.
             if (CreateCharacter(out msg) == true && CreatedCharacter != null)
             {
-                CreatedCharacter.finalizeCharacterCreation();
+                CreatedCharacter.UpdateCharacterExtraAttributes();
 
                 //So now we should have a proper character. But we might have changed some displayed data.
                 /* TODO : A bit of a chicken and egg problem. Basically we should update all field that might be affected by the special abilities.*/

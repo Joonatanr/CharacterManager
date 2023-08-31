@@ -8,6 +8,7 @@ using CharacterManager.CharacterCreator;
 using CharacterManager.Items;
 using CharacterManager.SpecialAttributes;
 using CharacterManager.UserControls;
+using CharacterManager.UserControls.Levelup;
 using static CharacterManager.CharacterCreator.UserControlClassFeature;
 
 namespace CharacterManager
@@ -105,7 +106,7 @@ namespace CharacterManager
         private void AddAttackBonus(PlayerCharacter c, PlayerWeapon w)
         {
             Boolean isOnlyOneEquipped = true;
-            foreach(PlayerWeapon weapon in c.CharacterWeapons)
+            foreach (PlayerWeapon weapon in c.CharacterWeapons)
             {
                 if (weapon.IsEquipped && weapon != w)
                 {
@@ -153,7 +154,7 @@ namespace CharacterManager
         }
 
         public override bool UseAbilitySpecial()
-        {            
+        {
             FormUseAbility myForm = new FormUseAbility();
 
             /* TODO : Can't we get this in some other manner??? The ability itself should have the description... */
@@ -206,7 +207,7 @@ namespace CharacterManager
     public class StudentOfWarAbility : SpecialAttribute
     {
         private string chosenAbility = null;
-        
+
         public StudentOfWarAbility()
         {
             this.Name = "Student Of War";
@@ -239,7 +240,7 @@ namespace CharacterManager
 
             List<string> availableChoices = new List<string>();
 
-            foreach(PlayerToolKit toolkit in allToolProficiencies)
+            foreach (PlayerToolKit toolkit in allToolProficiencies)
             {
                 if (!existingToolProficiencies.Contains(toolkit.ItemName))
                 {
@@ -279,11 +280,11 @@ namespace CharacterManager
             if (this.IsActive)
             {
                 int bonus = 2;
-                if (c.Level >= 9 && c.Level < 16) 
+                if (c.Level >= 9 && c.Level < 16)
                 {
                     bonus = 3;
                 }
-                else if(c.Level >= 16)
+                else if (c.Level >= 16)
                 {
                     bonus = 4;
                 }
@@ -367,7 +368,7 @@ namespace CharacterManager
 
             BonusValueModifier HalfProfBonusMod = new BonusValueModifier("Half Prof (Jack of All Trades)", c.ProficiencyBonus / 2);
 
-            foreach(string skill in CharacterSkillProficiencies)
+            foreach (string skill in CharacterSkillProficiencies)
             {
                 if (!c.SkillProficiencies.Contains(skill))
                 {
@@ -385,4 +386,56 @@ namespace CharacterManager
             }
         }
     }
+
+
+    /*********************************************************************************************/
+
+    /******* Rogue class abilities. ********/
+    public class RogueExpertise : SpecialAttribute
+    {
+        /* This ability should affect character creation. It is too specific so lets
+           give the user this ability as the final step in creating a rogue. 
+        
+        Additionally it should affect levelling up at 6th level. 
+        
+        Things are made more complex by the ability to choose expertise in Thieves' Tools as well as in any
+        skill.
+        */
+        
+        public RogueExpertise()
+        {
+            this.Name = "Expertise(Rogue)";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            //c.CharacterSkillBonuseUpdated += C_CharacterSkillBonusUpdated;
+            c.CharacterFinalize += C_CharacterCreated;
+        }
+
+        private void C_CharacterCreated(PlayerCharacter c)
+        {
+            /* TODO : Lets first create a simple implementation and forget about the possibility of choosing expertise in Thieves
+            Tools. Once this works fine, then we can add the extra complexity of being able to choose proficiency in Thieves Tools.*/
+            FormChooseSkillProfs myForm = new FormChooseSkillProfs();
+
+            myForm.setCharacter(c);
+            myForm.setupProficiencyChoices(0);
+            myForm.setupExpertiseChoices(2);
+
+            myForm.ShowDialog();
+            if (myForm.DialogResult == DialogResult.OK)
+            {
+                List<string> AllExpertise = myForm.getAllSelectedSkillExpertise();
+                foreach(string expertise in AllExpertise)
+                {
+                    if (!c.SkillExpertise.Contains(expertise))
+                    {
+                        c.SkillExpertise.Add(expertise);
+                    }
+                }
+            }
+        }
+    }
 }
+

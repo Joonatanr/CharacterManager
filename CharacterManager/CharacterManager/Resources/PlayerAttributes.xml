@@ -792,6 +792,97 @@ but before knowing whether it hits or misses.</Description>
 		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 
+<!-- Rogue class abilities -->
+
+
+	<PlayerAbility>
+		<Name>Expertise(Rogue)</Name>
+		<Description>At 1st level, choose two of your skill proficiencies, or
+one of your skill proficiencies and your proficiency with
+thieves’ tools. Your proficiency bonus is doubled for any
+ability check you make that uses either of the chosen
+proficiencies.
+At 6th level, you can choose two more of your
+proficiencies (in skills or with thieves’ tools) to gain
+this benefit.</Description>
+		<IsHidden>true</IsHidden>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Sneak Attack</Name>
+		<Description>Beginning at 1st level, you know how to strike subtly
+and exploit a foe’s distraction. Once per turn, you can
+deal an extra 1d6 damage to one creature you hit with
+an attack if you have advantage on the attack roll. The
+attack must use a finesse or a ranged weapon.
+You don’t need advantage on the attack roll if another
+enemy of the target is within 5 feet of it, that enemy
+isn’t incapacitated, and you don’t have disadvantage on
+the attack roll.
+
+The amount of the extra damage increases as you
+gain levels in this class, as shown in the Sneak Attack
+colum n of the Rogue table.</Description>
+		<IsHidden>false</IsHidden>
+		<IsCombatAbility>true</IsCombatAbility>
+		<Dice>1d6</Dice>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>3</Level>
+				<Dice>2d6</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<Dice>3d6</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>7</Level>
+				<Dice>4d6</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<Dice>5d6</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>11</Level>
+				<Dice>6d6</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>13</Level>
+				<Dice>7d6</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>15</Level>
+				<Dice>8d6</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>17</Level>
+				<Dice>9d6</Dice>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>19</Level>
+				<Dice>10d6</Dice>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Thieves' Cant</Name>
+		<Description>During your rogue training you learned thieves’ cant, a
+secret mix of dialect, jargon, and code that allows you to
+hide messages in seem ingly normal conversation. Only
+another creature that knows thieves’ cant understands
+such messages. It takes four tim es longer to convey such
+a message than it does to speak the sam e idea plainly.
+In addition, you understand a set of secret signs and
+sym bols used to convey short, simple m essages, such
+as whether an area is dangerous or the territory of a
+thieves’ guild, whether loot is nearby, or whether the. 
+people in an area are easy marks or will provide a safe
+house for thieves on the run.</Description>
+	</PlayerAbility>
+	
+	
 <!-- Wizard class abilities -->
 	<PlayerAbility>
 		<Name>Arcane Recovery</Name>

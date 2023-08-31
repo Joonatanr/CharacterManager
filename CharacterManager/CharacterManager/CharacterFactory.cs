@@ -737,6 +737,8 @@ namespace CharacterManager
             SpecialAttributeList.Add(new FastMovementAbility());
 
             SpecialAttributeList.Add(new JackOfAllTradesAbility());
+
+            SpecialAttributeList.Add(new RogueExpertise());
         }
 
         private static void logError(String err)

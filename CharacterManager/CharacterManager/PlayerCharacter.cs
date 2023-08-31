@@ -303,7 +303,9 @@ namespace CharacterManager
         public event PlayerAttackEvent AttackRoll;      /* This one is for setting up the attack roll.      */
         public event PlayerAttackEvent AttackRollMade;  /* This one is for after the attack roll is made.   */
 
-        public event PlayerEvent CharacterCreated;
+        public event PlayerEvent CharacterExtraAttributesUpdated;
+        public event PlayerEvent CharacterFinalize;
+
         public event PlayerEvent CharacterLevelup;
 
         public event PlayerEvent CharacterHPChanged;
@@ -334,10 +336,15 @@ namespace CharacterManager
             this._baseAttributes = attrib;
         }
 
-        public void finalizeCharacterCreation()
+        public void UpdateCharacterExtraAttributes()
         {
             /* Should be called only when creating a new character. */
-            CharacterCreated?.Invoke(this);
+            CharacterExtraAttributesUpdated?.Invoke(this);
+        }
+
+        public void FinalizeCharacterCreation()
+        {
+            CharacterFinalize?.Invoke(this);
         }
 
         public void setupCharacterLevelup()
@@ -582,12 +589,13 @@ namespace CharacterManager
             ArmorDonned = null;
             AttackRoll = null;
             AttackRollMade = null;
-            CharacterCreated = null;
+            CharacterExtraAttributesUpdated = null;
             CharacterLevelup = null;
 
             CharacterHPChanged = null;
             CharacterAbilityStatsUpdated = null;
             CharacterSkillBonuseUpdated = null;
+            CharacterFinalize = null;
         }
 
         private void abilityUsed(PlayerAbility ability)

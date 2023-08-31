@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlayerClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PlayerClassName>Rogue</PlayerClassName>
+	<HitDie>8</HitDie>
+	<WeaponProficiencies>
+		<string>Simple Weapons</string>
+		<string>Hand Crossbow</string>
+		<string>Longsword</string>
+		<string>Rapier</string>
+		<string>Shortsword</string>
+	</WeaponProficiencies>
+	<ArmorProficiencies>
+		<string>Light Armor</string>
+	</ArmorProficiencies>
+	<AvailableToolProficiencies>
+		<string>Thieves' Tools</string>
+	</AvailableToolProficiencies>
+	<SavingThrowProficiencies>
+		<string>DEX</string>
+		<string>INT</string>
+	</SavingThrowProficiencies>
+	<AvailableSkillProficiencies>
+		<string>Acrobatics</string>
+		<string>Athletics</string>
+		<string>Deception</string>
+		<string>Insight</string>
+		<string>Intimidation</string>
+		<string>Investigation</string>
+		<string>Perception</string>
+		<string>Performance</string>
+		<string>Persuasion</string>
+		<string>Sleight Of Hand</string>
+		<string>Stealth</string>
+	</AvailableSkillProficiencies>
+	<NumberOfSkillsToChoose>4</NumberOfSkillsToChoose>
+	
+	<AvailableEquipment>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Rapier</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Shortsword</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+			<optionC />
+			<optionD />
+		</EquipmentChoiceList>
+		
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Shortbow</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>Arrow</Equipment>
+					<Quantity>20</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Shortsword</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+			<optionC />
+			<optionD />
+		</EquipmentChoiceList>
+		
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Burglar's Pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Dungeoneer's Pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+			<optionC>
+				<EquipmentChoice>
+					<Equipment>Explorer's Pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionC>
+			<optionD />
+		</EquipmentChoiceList>
+		
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Leather Armor</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>Dagger</Equipment>
+					<Quantity>2</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>Thieves' Tools</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB />
+			<optionC />
+			<optionD />
+		</EquipmentChoiceList>
+	</AvailableEquipment>
+	
+	<AvailableClassAbilitiesLevel1>
+	
+		<PlayerClassAbilityChoice>
+			<Description>At 1st level, choose two of your skill proficiencies, or
+one of your skill proficiencies and your proficiency with
+thieves’ tools. Your proficiency bonus is doubled for any
+ability check you make that uses either of the chosen
+proficiencies.
+At 6th level, you can choose two more of your
+proficiencies (in skills or with thieves’ tools) to gain
+this benefit.</Description>
+		<ClassAbilityName>Expertise(Rogue)</ClassAbilityName>
+		<AvailableChoices>
+			<string>Expertise(Rogue)</string>
+		</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	
+		<PlayerClassAbilityChoice>
+			<Description>Beginning at 1st level, you know how to strike subtly
+and exploit a foe’s distraction. Once per turn, you can
+deal an extra 1d6 damage to one creature you hit with
+an attack if you have advantage on the attack roll. The
+attack must use a finesse or a ranged weapon.
+You don’t need advantage on the attack roll if another
+enemy of the target is within 5 feet of it, that enemy
+isn’t incapacitated, and you don’t have disadvantage on
+the attack roll.
+
+The amount of the extra damage increases as you
+gain levels in this class, as shown in the Sneak Attack
+colum nof the Rogue table.</Description>
+			<ClassAbilityName>Sneak Attack</ClassAbilityName>
+			<AvailableChoices>
+				<string>Sneak Attack</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+		
+		<PlayerClassAbilityChoice>
+			<Description>During your rogue training you learned thieves’ cant, a
+secret mix of dialect, jargon, and code that allows you to
+hide messages in seem ingly normal conversation. Only
+another creature that knows thieves’ cant understands
+such messages. It takes four tim es longer to convey such
+a message than it does to speak the sam e idea plainly.
+In addition, you understand a set of secret signs and
+sym bols used to convey short, simple m essages, such
+as whether an area is dangerous or the territory of a
+thieves’ guild, whether loot is nearby, or whether the. 
+people in an area are easy marks or will provide a safe
+house for thieves on the run.</Description>
+			<ClassAbilityName>Thieves' Cant</ClassAbilityName>
+			<AvailableChoices>
+				<string>Thieves' Cant</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+  </AvailableClassAbilitiesLevel1>
+  
+  	<!-- Level 2 -->
+</PlayerClass>
