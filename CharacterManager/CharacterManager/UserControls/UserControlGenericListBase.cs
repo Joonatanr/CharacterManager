@@ -127,7 +127,7 @@ namespace CharacterManager.UserControls
 
         protected void drawTextOnLine(Graphics gfx, String text, int xOffset, int lineNum, FontStyle style, int MaxStringWidth)
         {
-            int FontSize = 12;
+            float FontSize = 12;
 
             Font f;
             /* Lets try to dynamically reduce the size of the font if it is too large for the area.*/
@@ -138,7 +138,7 @@ namespace CharacterManager.UserControls
                 f = new Font("Arial", FontSize, style);
                 /* Lets try to dynamically reduce the size of the font if it is too large for the area.*/
                 textSize = gfx.MeasureString(text, f);
-                FontSize--;
+                FontSize-= 0.25f;
             } while (textSize.Width > MaxStringWidth && FontSize > 2);
 
             Point sPoint = new Point(1 + xOffset, (lineInterval * (lineNum)) + 3);

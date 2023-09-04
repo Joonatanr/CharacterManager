@@ -319,7 +319,7 @@ namespace CharacterManager.UserControls
                 foreach (PlayerAbility attrib in listOfAttributes)
                 {
                     /* TODO : This is currently a really poor way of implementing. Need to refactor this. */
-                    AttributeControlData cData = listOfAttributeControls.Find(t => t.Attribute == attrib);
+                    //AttributeControlData cData = listOfAttributeControls.Find(t => t.Attribute == attrib);
                     if (attrib.IsToggle)
                     {
                         if (attrib.IsActive)
@@ -328,7 +328,8 @@ namespace CharacterManager.UserControls
                         }
                     }
 
-                    drawTextOnLine(gfx, attrib.DisplayedName, 0, y, FontStyle.Regular, this.Width - (cData.RightMarginForText));
+                    //drawTextOnLine(gfx, attrib.DisplayedName, 0, y, FontStyle.Regular, this.Width - (cData.RightMarginForText));
+                    drawTextOnLine(gfx, attrib.DisplayedName, 0, y, FontStyle.Regular, this.Width - 110);
                     y++;
                 }
             }

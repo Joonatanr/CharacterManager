@@ -236,8 +236,6 @@ namespace CharacterManager.UserControls
 
             _myCharacter.setCharacterAbilitiesList(resultAbilities, true);
 
-
-
             foreach (PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
             {
                 ability.RemainingCharges = ability.MaximumCharges;

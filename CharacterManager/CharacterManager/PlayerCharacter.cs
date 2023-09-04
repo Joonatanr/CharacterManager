@@ -566,6 +566,7 @@ namespace CharacterManager
         {
             CharacterAbilitiesObjectList = abilityList;
             resetAllSubscriptions();
+            this.BonusValues = new CharacterBonusValues();
 
             if (overwriteDescriptors)
             {
