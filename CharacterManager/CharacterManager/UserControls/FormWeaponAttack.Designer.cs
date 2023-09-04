@@ -43,6 +43,7 @@ namespace CharacterManager.UserControls
             this.userControlCombatAbilitiesList = new CharacterManager.UserControls.UserControlGenericAbilitiesList();
             this.userControlAttackDieRolls = new CharacterManager.UserControls.UserControlDieRollBonusValuesHandler();
             this.userControlDamageDieRoll = new CharacterManager.UserControls.UserControlDieRollBonusValuesHandler();
+            this.checkBoxIsCritical = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -198,6 +199,18 @@ namespace CharacterManager.UserControls
             this.userControlDamageDieRoll.Size = new System.Drawing.Size(722, 27);
             this.userControlDamageDieRoll.TabIndex = 21;
             this.userControlDamageDieRoll.UserControlName = "Damage Roll:";
+            this.userControlDamageDieRoll.Load += new System.EventHandler(this.userControlDamageDieRoll_Load);
+            // 
+            // checkBoxIsCritical
+            // 
+            this.checkBoxIsCritical.AutoSize = true;
+            this.checkBoxIsCritical.Location = new System.Drawing.Point(544, 105);
+            this.checkBoxIsCritical.Name = "checkBoxIsCritical";
+            this.checkBoxIsCritical.Size = new System.Drawing.Size(57, 17);
+            this.checkBoxIsCritical.TabIndex = 26;
+            this.checkBoxIsCritical.Text = "Critical";
+            this.checkBoxIsCritical.UseVisualStyleBackColor = true;
+            this.checkBoxIsCritical.CheckedChanged += new System.EventHandler(this.checkBoxIsCritical_CheckedChanged);
             // 
             // FormWeaponAttack
             // 
@@ -205,6 +218,7 @@ namespace CharacterManager.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CharacterManager.Properties.Resources.old_paper_texture;
             this.ClientSize = new System.Drawing.Size(1013, 509);
+            this.Controls.Add(this.checkBoxIsCritical);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.userControlAttackDieRolls);
@@ -244,5 +258,6 @@ namespace CharacterManager.UserControls
         private System.Windows.Forms.PictureBox pictureBox1;
         private UserControlGenericAbilitiesList userControlCombatAbilitiesList;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox checkBoxIsCritical;
     }
 }

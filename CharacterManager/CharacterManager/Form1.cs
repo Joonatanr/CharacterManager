@@ -420,7 +420,7 @@ namespace CharacterManager
 
                 if (isAttackOk)
                 {
-                    activeCharacter.getWeaponAttackModifiers(w, out attackModifiers, out damageModifiers);
+                    activeCharacter.getWeaponAttackModifiers(w, out attackModifiers, out damageModifiers, false);
          
                     weaponForm.Weapon = w;
                     weaponForm.AttackModifiers = attackModifiers;

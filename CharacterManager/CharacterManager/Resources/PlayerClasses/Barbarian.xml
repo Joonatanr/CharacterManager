@@ -156,6 +156,18 @@ you must finish a long rest before you can rage again.</Description>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel7>
 	
+	<!-- Level 8 -->
+	
+	<!-- Level 9 -->
+	<AvailableClassAbilitiesLevel9>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Brutal Critical</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel9>
+	
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Path Of The Berserker</Name>

@@ -128,17 +128,22 @@ namespace CharacterManager.UserControls
 
         private void CombatAbilityActiveChangedHandler(bool isActive)
         {
-            /* Lets refresh out attack modifiers then... */
+            updateWeaponModifiers();
+        }
+
+        private void updateWeaponModifiers() 
+        {
+            List<BonusValueModifier> attackModifiers;
+            List<BonusValueModifier> damageModifiers;
+
             if (_connectedCharacter != null)
             {
-                List<BonusValueModifier> attackModifiers;
-                List<BonusValueModifier> damageModifiers;
-
-                _connectedCharacter.getWeaponAttackModifiers(Weapon, out attackModifiers, out damageModifiers);
+                _connectedCharacter.getWeaponAttackModifiers(Weapon, out attackModifiers, out damageModifiers, checkBoxIsCritical.Checked);
                 AttackModifiers = attackModifiers;
                 DamageModifiers = damageModifiers;
             }
         }
+
 
         private void CombatAbilityUsedHandler(PlayerAbility ability)
         {
@@ -227,7 +232,17 @@ namespace CharacterManager.UserControls
 
         private void userControlAttackDieRolls_Load(object sender, EventArgs e)
         {
+            /* TODO : Remove this. */
+        }
 
+        private void userControlDamageDieRoll_Load(object sender, EventArgs e)
+        {
+            /* TODO : Remove this. */
+        }
+
+        private void checkBoxIsCritical_CheckedChanged(object sender, EventArgs e)
+        {
+            updateWeaponModifiers();
         }
     }
 }

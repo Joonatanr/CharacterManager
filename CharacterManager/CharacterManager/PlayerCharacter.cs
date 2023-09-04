@@ -392,7 +392,7 @@ namespace CharacterManager
         }
 
         
-        public void getWeaponAttackModifiers(PlayerWeapon w, out List<BonusValueModifier> attackModifiers, out List<BonusValueModifier> damageModifiers)
+        public void getWeaponAttackModifiers(PlayerWeapon w, out List<BonusValueModifier> attackModifiers, out List<BonusValueModifier> damageModifiers, bool isCritical)
         {
             attackModifiers = new List<BonusValueModifier>();
             damageModifiers = new List<BonusValueModifier>();
@@ -415,12 +415,15 @@ namespace CharacterManager
             /* Now we look at the damage bonus. */
             /* First lets get the base damage. */
             List<BonusValueModifier> baseDamageValues = w.getBaseDamageModifiers();
+            
+            if (isCritical)
+            {
+                damageModifiers.AddRange(baseDamageValues);
+            }
+
             damageModifiers.AddRange(baseDamageValues);
 
-           /* Now lets get the damage bonuses from abilities */
 
-           List<BonusValueModifier> damageBonuses = getDamageBonus(w);
-           damageModifiers.AddRange(damageBonuses);
 
            /* We add all miscallenous bonuses from abilities and such. */
            BonusValues.ResetAttackModifiers();
@@ -428,6 +431,14 @@ namespace CharacterManager
 
            attackModifiers.AddRange(BonusValues.AttackRollBonusModifiers);
            damageModifiers.AddRange(BonusValues.AttackDamageBonusModifiers);
+           if (isCritical)
+           {
+                damageModifiers.AddRange(BonusValues.ExtraCriticalDamageModifiers);
+           }
+
+            /* Now lets get the damage bonuses from abilities */
+            List<BonusValueModifier> damageBonuses = getDamageBonus(w);
+            damageModifiers.AddRange(damageBonuses);
         }
 
         public void performAttackRoll(PlayerWeapon w, out List<int> criticals)

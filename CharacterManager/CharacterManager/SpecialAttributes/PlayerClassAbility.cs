@@ -342,6 +342,36 @@ namespace CharacterManager
         }
     }
 
+    public class BrutalCriticalAbility : SpecialAttribute
+    {
+        public BrutalCriticalAbility()
+        {
+            this.Name = "Brutal Critical";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += C_AttackRoll;
+        }
+
+        private void C_AttackRoll(PlayerCharacter c, PlayerWeapon w)
+        {
+            string dieString = w.Damage.DamageValue;
+            DieRollComponent damageDie = DieRollComponent.parseFromString(dieString);
+            if(c.Level < 13)
+            {
+                c.BonusValues.ExtraCriticalDamageModifiers.Add(new BonusValueModifier("Brutal critical", damageDie));
+            }
+            else if(c.Level < 17)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+    }
 
     /*********************************************************************************************/
 

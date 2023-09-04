@@ -328,7 +328,6 @@ namespace CharacterManager.UserControls
                         }
                     }
 
-                    //drawTextOnLine(gfx, attrib.DisplayedName, y);
                     drawTextOnLine(gfx, attrib.DisplayedName, 0, y, FontStyle.Regular, this.Width - (cData.RightMarginForText));
                     y++;
                 }

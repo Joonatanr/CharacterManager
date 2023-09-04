@@ -735,6 +735,7 @@ namespace CharacterManager
             SpecialAttributeList.Add(new RageAbility());
             SpecialAttributeList.Add(new UnarmoredDefenseAbility());
             SpecialAttributeList.Add(new FastMovementAbility());
+            SpecialAttributeList.Add(new BrutalCriticalAbility());
 
             SpecialAttributeList.Add(new JackOfAllTradesAbility());
 

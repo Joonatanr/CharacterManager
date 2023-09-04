@@ -17,6 +17,7 @@ namespace CharacterManager
 
         public string AttackNoteString = string.Empty;
         public List<int> ExtraCritValues = new List<int>();
+        public List<BonusValueModifier> ExtraCriticalDamageModifiers = new List<BonusValueModifier>();
 
         /* Values that might be accessed during levelup. */
         public List<BonusValueModifier> HitPointLevelupModifiers = new List<BonusValueModifier>();
@@ -71,6 +72,7 @@ namespace CharacterManager
             AttackNoteString = "";
             AttackRollBonusModifiers = new List<BonusValueModifier>();
             AttackDamageBonusModifiers = new List<BonusValueModifier>();
+            ExtraCriticalDamageModifiers = new List<BonusValueModifier>();
         }
 
         internal void ResetLevelUpModifiers()

@@ -52,6 +52,12 @@ namespace CharacterManager
             this.modifierDieRoll = dieRoll;
         }
 
+        public BonusValueModifier(string desc, DieRollComponent dieRoll)
+        {
+            this.modifierName = desc;
+            this.modifierDieRoll = dieRoll;
+        }
+
         public string getBonusValueString()
         {
             return modifierDieRoll.ToString();
