@@ -86,20 +86,6 @@ namespace CharacterManager.CharacterCreator
                 archetypeChoice.setAbilityChoices(archeTypeList);
             }
 
-            /* This is probably the wrong place for this. */
-#if false
-            /* Check if our existing archetype gives new choices at this level. */
-            /* Major TODO */
-            if(_currentCharacter != null)
-            {
-                PlayerClassArchetype existing = _currentCharacter.GetSelectedArchetype();
-                if (existing != null)
-                {
-                    choicesList.AddRange(existing.getAbilityChoicesByLevel(_currentLevel));
-                }
-            }
-#endif
-
             /* Adding the actual user controls. */
             foreach (PlayerClassAbilityChoice choice in choicesList)
             {

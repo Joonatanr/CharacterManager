@@ -141,6 +141,11 @@ namespace CharacterManager.UserControls
                 {
                     abilityChoices.AddRange(existing.getAbilityChoicesByLevel(_myCharacter.Level));
                 }
+
+                foreach(PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
+                {
+                    abilityChoices.AddRange(ability.GetUpgradeChoicesForLevel(_myCharacter.Level));
+                }
             }
 
             if (abilityChoices.Count > 0)
@@ -209,7 +214,14 @@ namespace CharacterManager.UserControls
             }
 
             List<PlayerAbility> resultAbilities = _myCharacter.CharacterAbilitiesObjectList;
-            resultAbilities.AddRange(SelectedPlayerAbilities);
+
+            foreach (PlayerAbility newAbility in SelectedPlayerAbilities) 
+            {
+                if (!resultAbilities.Contains(newAbility))
+                {
+                    resultAbilities.Add(newAbility);
+                }
+            }
 
             /* We might have selected a new Archetype. Lets update the Subclass property here. */
             foreach (PlayerAbility ability in SelectedPlayerAbilities)
@@ -328,7 +340,6 @@ namespace CharacterManager.UserControls
             {
                 /* We don't add the new abilities to the character yet. This we will do when levelup is finalized. */
 
-                //SelectedPlayerAbilities = myForm.getAllSelectedAbilities();
                 List<PlayerAbility> _selectedAbilities = myForm.getAllSelectedAbilities();
                 SelectedPlayerAbilities = new List<PlayerAbility>();
 

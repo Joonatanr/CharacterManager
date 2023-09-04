@@ -98,7 +98,27 @@ namespace CharacterManager
             return true;
         }
 
-        
+
+        /* So somehow we should return a list of new maneuvers through this interface.... */
+        public override List<PlayerClassAbilityChoice> GetUpgradeChoicesForLevel(int level)
+        {
+            List<PlayerClassAbilityChoice> res = new List<PlayerClassAbilityChoice>();
+            if (getAvailableChoicesAtLevel(level) > 0)
+            {
+                PlayerClassAbilityChoice choice = new PlayerClassAbilityChoice();
+                choice.ClassAbilityName = this.Name;
+                choice.Description = this.Description;
+                choice.AvailableChoices.Add(this.Name);
+                res.Add(choice);
+                /* TODO : WIP */
+
+            }
+
+            res.AddRange(base.GetUpgradeChoicesForLevel(level));
+            return res;
+        }
+
+
         public int getAvailableChoicesAtLevel(int level)
         {
             switch (level)

@@ -226,6 +226,15 @@ namespace CharacterManager
         }
 
 
+        public virtual List<PlayerClassAbilityChoice> GetUpgradeChoicesForLevel(int level)
+        {
+            /* The idea is that some abilities might present choices when upgrading them. For example the selection
+            of new combat maneuvers, replacing some thing etc. 
+            By default we return an empty list. */
+            List<PlayerClassAbilityChoice> res = new List<PlayerClassAbilityChoice>();
+            return res;
+        }
+
         public Boolean UseAbility()
         {
             bool res = true;

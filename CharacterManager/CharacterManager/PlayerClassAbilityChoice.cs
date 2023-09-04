@@ -31,7 +31,7 @@ namespace CharacterManager
                 _classAbilityName = value;
             }
         }
-        public List<string> AvailableChoices { get; set; }
+        public List<string> AvailableChoices { get; set; } = new List<string>();
 
         /* This part is basically defined in C#, so no way to really parse. */
         [XmlIgnore]
