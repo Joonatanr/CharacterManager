@@ -716,6 +716,16 @@ pace (see chapter 8 for rules on travel pace).</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<Name>Feral Instinct</Name>
+		<Description>By 7th level, your instincts are so honed that you have advantage on initiative rolls. 
+Additionally, if you are surprised at the beginning of 
+combat and aren’t incapacitated, you can act normally 
+on your first turn, but only if you enter your rage before
+doing anything else on that turn</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	
 <!-- Bard class abilities -->
 
 	<PlayerAbility>

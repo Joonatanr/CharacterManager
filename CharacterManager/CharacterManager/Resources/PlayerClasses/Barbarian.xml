@@ -145,6 +145,17 @@ you must finish a long rest before you can rage again.</Description>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel5>
 	
+	<!-- Level 6 -->
+	
+	<!-- Level 7 -->
+	<AvailableClassAbilitiesLevel7>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Feral Instinct</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel7>
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Path Of The Berserker</Name>

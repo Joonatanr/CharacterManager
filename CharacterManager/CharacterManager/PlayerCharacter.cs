@@ -699,20 +699,7 @@ namespace CharacterManager
             else
             {
                 /* We are wearing armor. */
-                BonusValues.AcBonusModifiers.Add(new BonusValueModifier(wornArmor.getDisplayedName(), wornArmor.ArmorClass));
-
-
-                if (wornArmor.IsDexterityModifier)
-                {
-                    int dexBonus = getModifier("DEX");
-
-                    if (wornArmor.MaxDexModifier > 0)
-                    {
-                        dexBonus = Math.Min(dexBonus, wornArmor.MaxDexModifier);
-                    }
-
-                    BonusValues.AcBonusModifiers.Add(new BonusValueModifier("DEX bonus", dexBonus));
-                }
+                BonusValues.AcBonusModifiers.AddRange(wornArmor.GetAcModifiers(getModifier("DEX")));
 
                 if (wornArmor.Type == PlayerArmor.ArmorType.Heavy)
                 {

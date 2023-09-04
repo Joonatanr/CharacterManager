@@ -40,5 +40,31 @@ namespace CharacterManager.Items
         {
             return (PlayerArmor)this.MemberwiseClone();
         }
+
+        public List<BonusValueModifier> GetAcModifiers(int DexModifier)
+        {
+            /* We are wearing armor. */
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
+            res.Add(new BonusValueModifier(this.getDisplayedName(), this.ArmorClass));
+
+
+            if (this.IsDexterityModifier)
+            {
+                int dexBonus = DexModifier;
+                if (this.MaxDexModifier > 0)
+                {
+                    dexBonus = Math.Min(dexBonus, this.MaxDexModifier);
+                }
+
+                res.Add(new BonusValueModifier("DEX bonus", dexBonus));
+            }
+
+            if (this.MagicalAcBonus != 0)
+            {
+                res.Add(new BonusValueModifier("Magical", this.MagicalAcBonus));
+            }
+
+            return res;
+        }
     }
 }
