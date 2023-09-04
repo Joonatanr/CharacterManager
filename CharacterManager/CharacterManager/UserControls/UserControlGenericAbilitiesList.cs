@@ -43,6 +43,34 @@ namespace CharacterManager.UserControls
 
             private int numberOfSpellSlots;
 
+
+            /* TODO : WIP */
+            public int RightMarginForText
+            {
+                get
+                {
+                    int res = 0;
+                    res += ButtonInfo.Width + 3;
+
+                    if(UseButton != null)
+                    {
+                        res += UseButton.Width + 2;
+                        res++;
+                    }
+
+                    if (slotArray != null)
+                    {
+                        foreach (UserControlSpellSlotIndicator slot in slotArray)
+                        {
+                            res += slot.Width;
+                            res += 1;
+                        }
+                    }
+
+                    return res;
+                }
+            }
+
             public AttributeControlData(PlayerAbility _attribute)
             {
                 Attribute = _attribute;
@@ -290,6 +318,8 @@ namespace CharacterManager.UserControls
             {
                 foreach (PlayerAbility attrib in listOfAttributes)
                 {
+                    /* TODO : This is currently a really poor way of implementing. Need to refactor this. */
+                    AttributeControlData cData = listOfAttributeControls.Find(t => t.Attribute == attrib);
                     if (attrib.IsToggle)
                     {
                         if (attrib.IsActive)
@@ -297,8 +327,9 @@ namespace CharacterManager.UserControls
                             drawRectangleOnLine(gfx, y, Color.Orange);
                         }
                     }
-                    
-                    drawTextOnLine(gfx, attrib.DisplayedName, y);
+
+                    //drawTextOnLine(gfx, attrib.DisplayedName, y);
+                    drawTextOnLine(gfx, attrib.DisplayedName, 0, y, FontStyle.Regular, this.Width - (cData.RightMarginForText));
                     y++;
                 }
             }
