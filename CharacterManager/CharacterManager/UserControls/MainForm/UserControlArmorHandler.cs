@@ -94,8 +94,6 @@ namespace CharacterManager.UserControls
             }
         }
 
-
-        private List<PlayerArmor> armorList = new List<PlayerArmor>();
         private List<ArmorControlData> mainList = new List<ArmorControlData>();
 
         public delegate void ArmorEquipChangedHandler(PlayerArmor armor);
@@ -109,7 +107,7 @@ namespace CharacterManager.UserControls
 
         public void setArmorList(List<PlayerArmor> aList)
         {
-            armorList = aList;
+            SetListData(aList);
             setupButtons();
             this.Invalidate();
         }
@@ -130,29 +128,27 @@ namespace CharacterManager.UserControls
             }
 
 
-            int y = lineInterval;
+            int y = 1;
             mainList = new List<ArmorControlData>();
-            foreach (PlayerArmor a in armorList)
+            foreach (PlayerArmor a in myItemList)
             {
                 ArmorControlData myData = new ArmorControlData(a);
 
                 /* 1. Set up the info button. */
-                myData.infoBtn.Location = new Point(this.Width - 43, y + 3);
                 this.Controls.Add(myData.infoBtn);
+                AddControlOnLine(myData.infoBtn, y, 0, false);
 
                 /* 2. Set up the Equip button. */
-                myData.EquipButton.Location = new Point((myData.infoBtn.Left - 1) - myData.EquipButton.Width, y + 3);
                 myData.setEquipped(a.IsEquipped);
                 myData.EquippedChangedHandler = ArmorEquippedChanged;
-                this.Controls.Add(myData.EquipButton);
+                AddControlOnLine(myData.EquipButton, y, 0, false);
 
                 /* 3. Set up the Drop button. */
-                myData.DropButton.Location = new Point(0, y + 3);
                 myData.ArmorDroppedHandler += HandleDrop;
-                this.Controls.Add(myData.DropButton);
+                AddControlOnLine(myData.DropButton, y, 0, true);
 
                 /* Finish up.. */
-                y += lineInterval;
+                y++;
                 mainList.Add(myData);
             }
         }

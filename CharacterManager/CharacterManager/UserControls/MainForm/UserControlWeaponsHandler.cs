@@ -137,7 +137,7 @@ namespace CharacterManager.UserControls
 
         public void setWeaponList(List<PlayerWeapon> wList)
         {
-            this.myItemList = wList;
+            SetListData(wList);
             setupButtons();
             this.DoubleBuffered = true;
             this.Invalidate();
@@ -159,37 +159,35 @@ namespace CharacterManager.UserControls
             }
 
 
-            int y = lineInterval;
+            int y = 1;
             mainList = new List<WeaponControlData>();
             foreach (PlayerWeapon w in myItemList)
             {
                 WeaponControlData myData = new WeaponControlData(w);
 
                 /* 1. Set up the attack button. */
-                myData.AttackBtn.Location = new Point(this.Width - 43, y + 3);
                 myData.WeaponAttackClicked += HandleAttack;
                 myData.WeaponEquipClicked += HandleEquip;
-                this.Controls.Add(myData.AttackBtn);
-
+                AddControlOnLine(myData.AttackBtn, y, 0, false);
 
                 /* 2. Set up the info button. */
                 myData.infoBtn.Location = new Point((myData.AttackBtn.Left - 1) - myData.AttackBtn.Width, y + 3);
-                this.Controls.Add(myData.infoBtn);
+                AddControlOnLine(myData.infoBtn, y, 0, false);
 
                 /* 3. Set up the Equip button. */
-                myData.EquipButton.Location = new Point((myData.infoBtn.Left - 1) - myData.EquipButton.Width, y + 3);
                 myData.setEquipped(w.IsEquipped, w.IsEquippedTwoHanded);
-                this.Controls.Add(myData.EquipButton);
+                AddControlOnLine(myData.EquipButton, y, 0, false);
 
                 /* 4. Set up the Drop button. */
-                myData.DropButton.Location = new Point(0, y + 3);
                 myData.WeaponDroppedClicked += HandleDrop;
-                this.Controls.Add(myData.DropButton);
+                AddControlOnLine(myData.DropButton, y, 0, true);
 
                 /* Finish up.. */
-                y += lineInterval;
+                y++;
                 mainList.Add(myData);
             }
+
+            this.Invalidate();
         }
 
 

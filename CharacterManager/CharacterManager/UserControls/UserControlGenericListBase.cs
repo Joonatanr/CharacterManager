@@ -20,6 +20,9 @@ namespace CharacterManager.UserControls
         protected int originalHeight;
         protected int maxLine;
 
+        protected Dictionary<int, int> LeftMargin = new Dictionary<int, int>();
+        protected Dictionary<int, int> RightMargin = new Dictionary<int, int>();
+
         /* TODO : We have to start from somewhere. */
         protected List<ListItemType> myItemList = new List<ListItemType>();
 
@@ -73,13 +76,50 @@ namespace CharacterManager.UserControls
             originalHeight = this.Height;
         }
 
-
-        protected void AddControlOnLine(Control c, int lineNum, int xOffset)
+        public void SetListData(List<ListItemType> data)
         {
-            int y = lineInterval;
+            myItemList = data;
+
+            /* We reset any previous margin data. */
+            LeftMargin = new Dictionary<int, int>();
+            RightMargin = new Dictionary<int, int>();
+        }
+
+        protected void AddControlOnLine(Control c, int lineNum, int xOffset, bool isLeftSide)
+        {
+            int y = 0;
             y += lineNum * lineInterval;
 
-            c.Location = new Point((this.Width - (3 + c.Width)) - xOffset, y + 3);
+            int leftLineMargin;
+            int rightLineMargin;
+
+            if (LeftMargin.TryGetValue(lineNum, out leftLineMargin) == false)
+            {
+                leftLineMargin = 0;
+            }
+
+            if(RightMargin.TryGetValue(lineNum, out rightLineMargin) == false)
+            {
+                rightLineMargin = 0;
+            }
+
+            if (isLeftSide)
+            {
+                leftLineMargin += xOffset;
+                c.Location = new Point(leftLineMargin, y + 3);
+                leftLineMargin += c.Width + 1;
+            }
+            else
+            {
+                /* By default we add controls on the right side. */
+                rightLineMargin += c.Width + 1;
+                rightLineMargin += xOffset;
+                c.Location = new Point(this.Width - rightLineMargin, y + 3);
+            }
+
+            LeftMargin[lineNum] = leftLineMargin;
+            RightMargin[lineNum] = rightLineMargin;
+
             this.Controls.Add(c);
         }
 
@@ -121,7 +161,20 @@ namespace CharacterManager.UserControls
 
         protected virtual void drawDisplayedDataSingleItem(Graphics gfx, Font font, int line, ListItemType item)
         {
-            drawTextOnLine(gfx, item.getDisplayedName(), 40, line, FontStyle.Regular, this.Width - 200);
+            int leftLineMargin;
+            int rightLineMargin;
+
+            if (LeftMargin.TryGetValue(line, out leftLineMargin) == false)
+            {
+                leftLineMargin = 0;
+            }
+
+            if (RightMargin.TryGetValue(line, out rightLineMargin) == false)
+            {
+                rightLineMargin = 0;
+            }
+
+            drawTextOnLine(gfx, item.getDisplayedName(), leftLineMargin + 1, line, FontStyle.Regular, this.Width - (rightLineMargin + 1));
         }
 
         /****************************************************************/

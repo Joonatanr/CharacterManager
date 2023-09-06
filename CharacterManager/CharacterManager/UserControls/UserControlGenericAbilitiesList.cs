@@ -44,33 +44,6 @@ namespace CharacterManager.UserControls
             private int numberOfSpellSlots;
 
 
-            /* TODO : WIP */
-            public int RightMarginForText
-            {
-                get
-                {
-                    int res = 0;
-                    res += ButtonInfo.Width + 3;
-
-                    if(UseButton != null)
-                    {
-                        res += UseButton.Width + 2;
-                        res++;
-                    }
-
-                    if (slotArray != null)
-                    {
-                        foreach (UserControlSpellSlotIndicator slot in slotArray)
-                        {
-                            res += slot.Width;
-                            res += 1;
-                        }
-                    }
-
-                    return res;
-                }
-            }
-
             public AttributeControlData(PlayerAbility _attribute)
             {
                 Attribute = _attribute;
@@ -220,7 +193,7 @@ namespace CharacterManager.UserControls
 
         public void setAttributeList(List<PlayerAbility> target)
         {
-            myItemList = target;
+            SetListData(target);
             listOfAttributeControls = new List<AttributeControlData>();
 
             List<Control> myListToRemove = new List<Control>();
@@ -312,27 +285,6 @@ namespace CharacterManager.UserControls
             //Lets draw a descriptive text.
             drawTextOnLine(gfx, Title, 0, font);
             base.drawDisplayedData(gfx, font);
-
-#if false
-            int y = 2;
-            if (listOfAttributes != null)
-            {
-                foreach (PlayerAbility attrib in listOfAttributes)
-                {
-                    /* TODO : This is currently a really poor way of implementing. Need to refactor this. */
-                    if (attrib.IsToggle)
-                    {
-                        if (attrib.IsActive)
-                        {
-                            drawRectangleOnLine(gfx, y, Color.Orange);
-                        }
-                    }
-
-                    drawTextOnLine(gfx, attrib.DisplayedName, 0, y, FontStyle.Regular, this.Width - 110);
-                    y++;
-                }
-            }
-#endif
         }
 
         protected override void drawDisplayedDataSingleItem(Graphics gfx, Font font, int line, PlayerAbility item)

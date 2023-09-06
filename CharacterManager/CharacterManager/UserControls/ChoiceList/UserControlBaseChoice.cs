@@ -217,7 +217,7 @@ namespace CharacterManager.UserControls
                         //We only add the external listener if this control is going to be modified by the user.
                         ctrl.ItemCheckedChanged += Ctrl_ItemCheckedChanged;
                     }
-                    AddControlOnLine(myCheckBox, index - 1, 3 + iBtn.Width);
+                    AddControlOnLine(myCheckBox, index - 1, 3 + iBtn.Width, false);
                 }
             }
 

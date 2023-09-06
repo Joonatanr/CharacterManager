@@ -48,8 +48,6 @@ namespace CharacterManager.UserControls
             }
         }
         
-            
-        private List<PlayerItem> GeneralEquipmentList = new List<PlayerItem>();
         private List<GeneralEquipmentControlData> mainList = new List<GeneralEquipmentControlData>();
 
         public delegate void ItemButtonClickedHandler(PlayerItem i);
@@ -64,7 +62,7 @@ namespace CharacterManager.UserControls
 
         public void setGeneralEquipmentList(List<PlayerItem> eList)
         {
-            GeneralEquipmentList = eList;
+            SetListData(eList);
             setupButtons();
             this.DoubleBuffered = true;
             this.Invalidate();
@@ -72,7 +70,7 @@ namespace CharacterManager.UserControls
 
         public void setupButtons()
         {
-            int y = lineInterval;
+            int y = 1;
 
             //Lets remove any old buttons.
             List<Control> myListToRemove = new List<Control>();
@@ -86,21 +84,19 @@ namespace CharacterManager.UserControls
                 this.Controls.Remove(c);
             }
 
-            foreach (PlayerItem item in GeneralEquipmentList)
+            foreach (PlayerItem item in myItemList)
             {
                 GeneralEquipmentControlData myData = new GeneralEquipmentControlData(item);
-                
+
                 /* 1. Set up the info button. */
-                myData.infoBtn.Location = new Point(this.Right - (myData.infoBtn.Width + 2), y + 3);
-                this.Controls.Add(myData.infoBtn);
+                AddControlOnLine(myData.infoBtn, y, 0, false);
 
                 /* 2. Set up the Drop button. */
-                myData.DropButton.Location = new Point(0, y + 3);
                 myData.ItemDropClicked += HandleDrop;
-                this.Controls.Add(myData.DropButton);
+                AddControlOnLine(myData.DropButton, y, 0, true);
 
                 /* Finish up.. */
-                y += lineInterval;
+                y++;
                 mainList.Add(myData);
             }
         }
@@ -112,17 +108,9 @@ namespace CharacterManager.UserControls
 
         protected override void drawDisplayedData(Graphics gfx, Font font)
         {
-            int y = 0;
-
             //Lets draw a descriptive text.
-            drawTextOnLine(gfx, "Inventory:", y, FontStyle.Bold);
-            y++;
-
-            foreach (PlayerItem i in GeneralEquipmentList)
-            {
-                drawTextOnLine(gfx, i.getDisplayedName(), 40, y,FontStyle.Regular, this.Width - 80);
-                y++;
-            }
+            drawTextOnLine(gfx, "Inventory:", 0, FontStyle.Bold);
+            base.drawDisplayedData(gfx, font);
         }
     }
 }
