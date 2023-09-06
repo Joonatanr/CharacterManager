@@ -48,9 +48,6 @@ namespace CharacterManager
         public int AdditionalProficiencyChoices { get; set; } = 0;
         public int AdditionalExpertiseChoices { get; set; } = 0;
 
-        [XmlIgnore]
-        public virtual string DisplayedName { get { return Name; } } /* This should be used instead of the AttributeName*/
-
         private int _remainingCharges = 0;
         [XmlIgnore]
         public int RemainingCharges

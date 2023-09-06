@@ -110,7 +110,7 @@ namespace CharacterManager.UserControls
             ItemDropEvent?.Invoke(i);
         }
 
-        protected override void drawData(Graphics gfx, Font font)
+        protected override void drawDisplayedData(Graphics gfx, Font font)
         {
             int y = 0;
 

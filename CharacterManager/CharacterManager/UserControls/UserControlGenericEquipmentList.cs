@@ -32,16 +32,6 @@ namespace CharacterManager.UserControls
             this.Invalidate();
         }
 
-        /* TODO : Returns all items regardless of type. */
-        public List<PlayerItem> getEquipmentList()
-        {
-            List<PlayerItem> res = new List<PlayerItem>();
-
-            /* TODO : This is a bit of a mess, maybe we should keep all items separately??? */
-
-            return res;
-        }
-
         public List<PlayerWeapon> getWeaponList()
         {
             return wList;
@@ -174,7 +164,7 @@ namespace CharacterManager.UserControls
             }
         }
 
-        protected override void drawData(Graphics gfx, Font font)
+        protected override void drawDisplayedData(Graphics gfx, Font font)
         {
             int y = 1;
             

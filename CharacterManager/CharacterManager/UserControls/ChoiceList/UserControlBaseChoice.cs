@@ -250,7 +250,7 @@ namespace CharacterManager.UserControls
         }
 
 
-        protected override void drawData(Graphics gfx, Font font)
+        protected override void drawDisplayedData(Graphics gfx, Font font)
         {
             drawTextOnLine(gfx, _titleString, 0, FontStyle.Bold);
 
@@ -259,7 +259,7 @@ namespace CharacterManager.UserControls
                 drawTextOnLine(gfx, myTextDictionary[index].str, index, myTextDictionary[index].font);
             }
 
-            int lastLine = getNumberOfLines() - 2;
+            int lastLine = getNumberOfVisibleLines() - 2;
             if (IsAvailabilityCount)
             {
                 string finalString = "Available : " + _remainingAvailableChoices.ToString();

@@ -127,7 +127,6 @@ namespace CharacterManager.UserControls
             }
         }
 
-        private List<PlayerWeapon> weaponList = new List<PlayerWeapon>();
         private List<WeaponControlData> mainList = new List<WeaponControlData>();
 
         public delegate void weaponEventHandler(PlayerWeapon w);
@@ -138,7 +137,7 @@ namespace CharacterManager.UserControls
 
         public void setWeaponList(List<PlayerWeapon> wList)
         {
-            this.weaponList = wList;
+            this.myItemList = wList;
             setupButtons();
             this.DoubleBuffered = true;
             this.Invalidate();
@@ -162,7 +161,7 @@ namespace CharacterManager.UserControls
 
             int y = lineInterval;
             mainList = new List<WeaponControlData>();
-            foreach (PlayerWeapon w in weaponList)
+            foreach (PlayerWeapon w in myItemList)
             {
                 WeaponControlData myData = new WeaponControlData(w);
 
@@ -219,20 +218,11 @@ namespace CharacterManager.UserControls
             WeaponEquipEvent?.Invoke(w);
         }
 
-        protected override void drawData(Graphics gfx, Font font)
+        protected override void drawDisplayedData(Graphics gfx, Font font)
         {
-            int y = 0;
-
             //Lets draw a descriptive text.
-            drawTextOnLine(gfx, "Weapons:", y, FontStyle.Bold);
-            y++;
-
-            foreach (PlayerWeapon w in weaponList)
-            {
-                drawTextOnLine(gfx, w.getDisplayedName(), 40, y, FontStyle.Regular, this.Width - 200);
-
-                y++;
-            }
+            drawTextOnLine(gfx, "Weapons:", 0, FontStyle.Bold);
+            base.drawDisplayedData(gfx, font);
         }
     }
 }

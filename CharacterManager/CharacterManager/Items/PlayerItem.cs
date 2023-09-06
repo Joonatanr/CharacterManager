@@ -28,7 +28,7 @@ namespace CharacterManager.Items
         }
 
 
-        public virtual String getDisplayedName()
+        public override String getDisplayedName()
         {
             String res = Name;
             if(this.Quantity > 1)

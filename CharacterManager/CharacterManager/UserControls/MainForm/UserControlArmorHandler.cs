@@ -193,19 +193,11 @@ namespace CharacterManager.UserControls
             ArmorDropped?.Invoke(armor);
         }
 
-        protected override void drawData(Graphics gfx, Font font)
+        protected override void drawDisplayedData(Graphics gfx, Font font)
         {
-            int y = 0;
-
             //Lets draw a descriptive text.
-            drawTextOnLine(gfx, "Armor:", y, FontStyle.Bold);
-            y++;
-
-            foreach (PlayerArmor a in armorList)
-            {
-                drawTextOnLine(gfx, a.getDisplayedName(), 40, y, FontStyle.Regular, this.Width - 130);
-                y++;
-            }
-        }
+            drawTextOnLine(gfx, "Armor:", 0, FontStyle.Bold);
+            base.drawDisplayedData(gfx, font);
+       }
     }
 }

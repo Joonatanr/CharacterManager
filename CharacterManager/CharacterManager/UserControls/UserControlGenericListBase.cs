@@ -20,6 +20,9 @@ namespace CharacterManager.UserControls
         protected int originalHeight;
         protected int maxLine;
 
+        /* TODO : We have to start from somewhere. */
+        protected List<ListItemType> myItemList = new List<ListItemType>();
+
         protected class InfoButton : CustomButton
         {
             private String infoString;
@@ -70,6 +73,60 @@ namespace CharacterManager.UserControls
             originalHeight = this.Height;
         }
 
+
+        protected void AddControlOnLine(Control c, int lineNum, int xOffset)
+        {
+            int y = lineInterval;
+            y += lineNum * lineInterval;
+
+            c.Location = new Point((this.Width - (3 + c.Width)) - xOffset, y + 3);
+            this.Controls.Add(c);
+        }
+
+        protected void AddSpellSlotOnLine(UserControlSpellSlotIndicator slot, int lineNum, int xloc)
+        {
+            int y = lineInterval;
+            y += lineNum * lineInterval;
+
+            slot.Location = new Point(xloc, y + 4);
+            this.Controls.Add(slot);
+        }
+
+
+        protected void AddButtonOnLine(CustomButton btn, int lineNum, int xOffset)
+        {
+            int y = lineInterval;
+            y += lineNum * lineInterval;
+
+            btn.Location = new Point((this.Width - (3 + btn.Width)) - xOffset, y + 3);
+            this.Controls.Add(btn);
+        }
+
+        protected int getNumberOfVisibleLines()
+        {
+            return this.Height / (lineInterval);
+        }
+
+        protected virtual void drawDisplayedData(Graphics gfx, Font font)
+        {
+            int y = 1;
+
+            foreach (ListItemType i in myItemList)
+            {
+                /* TODO : We need to implement taking into account the room occupied by different controls, but that will take time. */
+                drawDisplayedDataSingleItem(gfx, font, y, i);
+                y++;
+            }
+        }
+
+        protected virtual void drawDisplayedDataSingleItem(Graphics gfx, Font font, int line, ListItemType item)
+        {
+            drawTextOnLine(gfx, item.getDisplayedName(), 40, line, FontStyle.Regular, this.Width - 200);
+        }
+
+        /****************************************************************/
+        /* Graphical Functions */
+        /****************************************************************/
         protected override void OnPaint(PaintEventArgs pea)
         {
             base.OnPaint(pea);
@@ -93,10 +150,10 @@ namespace CharacterManager.UserControls
 
             Font myFont = new Font("Arial", 14);
 
-            drawData(gfx, myFont);
+            drawDisplayedData(gfx, myFont);
 
             /* A crude automatic resizing mechanism... */
-            if (getNumberOfLines() < maxLine) 
+            if (getNumberOfVisibleLines() < maxLine) 
             {
                 this.Height = ((maxLine + 1) * lineInterval) + 4;
             }
@@ -165,46 +222,6 @@ namespace CharacterManager.UserControls
 
             maxLine = Math.Max(maxLine, lineNum + 2);
         }
-
-        protected void AddControlOnLine(Control c, int lineNum, int xOffset)
-        {
-            int y = lineInterval;
-            y += lineNum * lineInterval;
-
-            c.Location = new Point((this.Width - (3 + c.Width)) - xOffset, y + 3);
-            this.Controls.Add(c);
-        }
-
-        protected void AddSpellSlotOnLine(UserControlSpellSlotIndicator slot, int lineNum, int xloc)
-        {
-            int y = lineInterval;
-            y += lineNum * lineInterval;
-
-            slot.Location = new Point(xloc, y + 4);
-            this.Controls.Add(slot);
-        }
-
-
-        protected void AddButtonOnLine(CustomButton btn, int lineNum, int xOffset)
-        {
-            int y = lineInterval;
-            y += lineNum * lineInterval;          
-  
-            btn.Location = new Point((this.Width - (3 + btn.Width)) - xOffset, y + 3);
-            this.Controls.Add(btn);
-        }
-
-
-        protected virtual void drawData(Graphics gfx, Font font)
-        {
-            /* No data to draw in base class. */
-        }
-
-        protected int getNumberOfLines()
-        {
-            return this.Height / (lineInterval);
-        }
-
 
         private void drawBackGround(Graphics gfx)
         {

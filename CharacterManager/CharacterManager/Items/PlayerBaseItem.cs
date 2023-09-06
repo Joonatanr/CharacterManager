@@ -35,5 +35,10 @@ namespace CharacterManager.Items
         {
             MessageBox.Show(Name + Environment.NewLine + Environment.NewLine + Description);
         }
+
+        public virtual String getDisplayedName()
+        {
+            return this.Name;
+        }
     }
 }

@@ -208,9 +208,8 @@ namespace CharacterManager.UserControls
 
         public String Title { get; set; } = "Abilities:";
 
-        private List<PlayerAbility> listOfAttributes = new List<PlayerAbility>();
+        //private List<PlayerAbility> listOfAttributes = new List<PlayerAbility>();
         private List<AttributeControlData> listOfAttributeControls = new List<AttributeControlData>();
-
 
         public Boolean IsSlotsVisible { get; set; } = false;
 
@@ -221,7 +220,7 @@ namespace CharacterManager.UserControls
 
         public void setAttributeList(List<PlayerAbility> target)
         {
-            listOfAttributes = target;
+            myItemList = target;
             listOfAttributeControls = new List<AttributeControlData>();
 
             List<Control> myListToRemove = new List<Control>();
@@ -239,7 +238,7 @@ namespace CharacterManager.UserControls
 
 
             int y = 1;
-            foreach (PlayerAbility attrib in listOfAttributes)
+            foreach (PlayerAbility attrib in myItemList)
             {
                 AttributeControlData cData = new AttributeControlData(attrib);
 
@@ -308,18 +307,19 @@ namespace CharacterManager.UserControls
             ability.RemainingCharges = cnt;
         }
 
-        protected override void drawData(Graphics gfx, Font font)
+        protected override void drawDisplayedData(Graphics gfx, Font font)
         {
             //Lets draw a descriptive text.
             drawTextOnLine(gfx, Title, 0, font);
+            base.drawDisplayedData(gfx, font);
 
+#if false
             int y = 2;
             if (listOfAttributes != null)
             {
                 foreach (PlayerAbility attrib in listOfAttributes)
                 {
                     /* TODO : This is currently a really poor way of implementing. Need to refactor this. */
-                    //AttributeControlData cData = listOfAttributeControls.Find(t => t.Attribute == attrib);
                     if (attrib.IsToggle)
                     {
                         if (attrib.IsActive)
@@ -328,11 +328,23 @@ namespace CharacterManager.UserControls
                         }
                     }
 
-                    //drawTextOnLine(gfx, attrib.DisplayedName, 0, y, FontStyle.Regular, this.Width - (cData.RightMarginForText));
                     drawTextOnLine(gfx, attrib.DisplayedName, 0, y, FontStyle.Regular, this.Width - 110);
                     y++;
                 }
             }
+#endif
+        }
+
+        protected override void drawDisplayedDataSingleItem(Graphics gfx, Font font, int line, PlayerAbility item)
+        {
+            if (item.IsToggle)
+            {
+                if (item.IsActive)
+                {
+                    drawRectangleOnLine(gfx, line, Color.Orange);
+                }
+            }
+            base.drawDisplayedDataSingleItem(gfx, font, line, item);
         }
     }
 }
