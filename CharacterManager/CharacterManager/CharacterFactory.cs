@@ -167,26 +167,26 @@ namespace CharacterManager
                 throw new Exception("Error : Character Factory not initialized.");
             }
 
-            res = WeaponList.Find(w => w.ItemName == name);
+            res = WeaponList.Find(w => w.Name == name);
 
             if (res == null)
             {
-                res = ArmorList.Find(a => a.ItemName == name);
+                res = ArmorList.Find(a => a.Name == name);
             }
 
             if (res == null)
             {
-                res = GenericItemList.Find(i => i.ItemName == name);
+                res = GenericItemList.Find(i => i.Name == name);
             }
 
             if (res == null)
             {
-                res = ToolKitItemList.Find(t => t.ItemName == name);
+                res = ToolKitItemList.Find(t => t.Name == name);
             }
 
             if (res == null)
             {
-                res = MagicItemList.Find(t => t.ItemName == name);
+                res = MagicItemList.Find(t => t.Name == name);
             }
 
             return res;
@@ -351,7 +351,7 @@ namespace CharacterManager
             if (str == "AnyMartialMelee")
             {
                 res = new Items.PlayerWeapon();
-                res.ItemName = "AnyMartialMelee"; //Special case.
+                res.Name = "AnyMartialMelee"; //Special case.
                 res.IsMultipleChoice = true;
                 return res;
             }
@@ -359,7 +359,7 @@ namespace CharacterManager
             if (str == "AnyMartial")
             {
                 res = new Items.PlayerWeapon();
-                res.ItemName = "AnyMartial"; //Special case.
+                res.Name = "AnyMartial"; //Special case.
                 res.IsMultipleChoice = true;
                 return res;
             }
@@ -367,7 +367,7 @@ namespace CharacterManager
             if (str == "AnySimple")
             {
                 res = new Items.PlayerWeapon();
-                res.ItemName = "AnySimple"; //Special case.
+                res.Name = "AnySimple"; //Special case.
                 res.IsMultipleChoice = true;
                 return res;
             }
@@ -375,21 +375,21 @@ namespace CharacterManager
             if (str == "AnyArtisans")
             {
                 res = new Items.PlayerItem();
-                res.ItemName = "AnyArtisans";
+                res.Name = "AnyArtisans";
                 res.IsMultipleChoice = true;
                 return res;
             }
             if (str == "AnyMusical")
             {
                 res = new Items.PlayerItem();
-                res.ItemName = "AnyMusical";
+                res.Name = "AnyMusical";
                 res.IsMultipleChoice = true;
                 return res;
             }
             if (str == "AnyGaming")
             {
                 res = new Items.PlayerItem();
-                res.ItemName = "AnyGaming";
+                res.Name = "AnyGaming";
                 res.IsMultipleChoice = true;
                 return res;
             }

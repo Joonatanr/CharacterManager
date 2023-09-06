@@ -1,6 +1,6 @@
 ﻿<ArrayOfPlayerToolKit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<PlayerToolKit>
-		<ItemName>Alchemist’s Supplies</ItemName>
+		<Name>Alchemist’s Supplies</Name>
 		<Description></Description>
 		<Weight>8</Weight>
 		<Cost>50</Cost>
@@ -8,7 +8,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Brewer’s Supplies</ItemName>
+		<Name>Brewer’s Supplies</Name>
 		<Description></Description>
 		<Weight>9</Weight>
 		<Cost>20</Cost>
@@ -16,7 +16,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Calligrapher’s Supplies</ItemName>
+		<Name>Calligrapher’s Supplies</Name>
 		<Description></Description>
 		<Weight>5</Weight>
 		<Cost>10</Cost>
@@ -24,7 +24,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Carpenter’s Tools</ItemName>
+		<Name>Carpenter’s Tools</Name>
 		<Description></Description>
 		<Weight>6</Weight>
 		<Cost>8</Cost>
@@ -32,7 +32,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Cartographer’s Tools</ItemName>
+		<Name>Cartographer’s Tools</Name>
 		<Description></Description>
 		<Weight>6</Weight>
 		<Cost>15</Cost>
@@ -40,7 +40,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Cobbler’s Tools</ItemName>
+		<Name>Cobbler’s Tools</Name>
 		<Description></Description>
 		<Weight>5</Weight>
 		<Cost>5</Cost>
@@ -48,7 +48,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Cook's Utensils</ItemName>
+		<Name>Cook's Utensils</Name>
 		<Description></Description>
 		<Weight>8</Weight>
 		<Cost>1</Cost>
@@ -56,7 +56,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Glassblower's Tools</ItemName>
+		<Name>Glassblower's Tools</Name>
 		<Description></Description>
 		<Weight>5</Weight>
 		<Cost>30</Cost>
@@ -64,7 +64,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Jeweler's Tools</ItemName>
+		<Name>Jeweler's Tools</Name>
 		<Description></Description>
 		<Weight>2</Weight>
 		<Cost>25</Cost>
@@ -72,7 +72,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Leatherworker's Tools</ItemName>
+		<Name>Leatherworker's Tools</Name>
 		<Description></Description>
 		<Cost>5</Cost>
 		<Weight>5</Weight>
@@ -80,7 +80,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Mason's Tools</ItemName>
+		<Name>Mason's Tools</Name>
 		<Description></Description>
 		<Cost>10</Cost>
 		<Weight>8</Weight>
@@ -88,7 +88,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Painter's Supplies</ItemName>
+		<Name>Painter's Supplies</Name>
 		<Description></Description>
 		<Cost>10</Cost>
 		<Weight>5</Weight>
@@ -96,7 +96,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Potter's Tools</ItemName>
+		<Name>Potter's Tools</Name>
 		<Description></Description>
 		<Cost>10</Cost>
 		<Weight>3</Weight>
@@ -104,7 +104,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Smith's Tools</ItemName>
+		<Name>Smith's Tools</Name>
 		<Description></Description>
 		<Cost>20</Cost>
 		<Weight>8</Weight>
@@ -112,7 +112,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Tinker's Tools</ItemName>
+		<Name>Tinker's Tools</Name>
 		<Description></Description>
 		<Cost>50</Cost>
 		<Weight>10</Weight>
@@ -120,7 +120,7 @@
 	</PlayerToolKit>
 
 	<PlayerToolKit>
-		<ItemName>Weaver's Tools</ItemName>
+		<Name>Weaver's Tools</Name>
 		<Description></Description>
 		<Cost>1</Cost>
 		<Weight>5</Weight>
@@ -128,7 +128,7 @@
 	</PlayerToolKit>
 
 	<PlayerToolKit>
-		<ItemName>Woodcarver's Tools</ItemName>
+		<Name>Woodcarver's Tools</Name>
 		<Description></Description>
 		<Cost>1</Cost>
 		<Weight>5</Weight>
@@ -136,7 +136,7 @@
 	</PlayerToolKit>
 
 	<PlayerToolKit>
-		<ItemName>Disguise Kit</ItemName>
+		<Name>Disguise Kit</Name>
 		<Description>This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise.</Description>
 		<Cost>25</Cost>
 		<Weight>3</Weight>
@@ -144,7 +144,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Forgery Kit</ItemName>
+		<Name>Forgery Kit</Name>
 		<Description>This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document.</Description>
 		<Cost>15</Cost>
 		<Weight>5</Weight>
@@ -152,7 +152,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Dice Set</ItemName>
+		<Name>Dice Set</Name>
 		<Description></Description>
 		<Cost>0.1</Cost>
 		<Weight>0</Weight>
@@ -160,7 +160,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Dragonchess Set</ItemName>
+		<Name>Dragonchess Set</Name>
 		<Description></Description>
 		<Cost>1</Cost>
 		<Weight>0.5</Weight>
@@ -168,7 +168,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Playing Card Set</ItemName>
+		<Name>Playing Card Set</Name>
 		<Description></Description>
 		<Cost>0.5</Cost>
 		<Weight>0</Weight>
@@ -176,7 +176,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Three-Dragon Ante Set</ItemName>
+		<Name>Three-Dragon Ante Set</Name>
 		<Description></Description>
 		<Cost>1</Cost>
 		<Weight>0</Weight>
@@ -184,7 +184,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Herbalism Kit</ItemName>
+		<Name>Herbalism Kit</Name>
 		<Description>This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing. </Description>
 		<Weight>3</Weight>
 		<Cost>5</Cost>
@@ -192,7 +192,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Bagpipes</ItemName>
+		<Name>Bagpipes</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>5</Weight>
 		<Cost>30</Cost>
@@ -200,7 +200,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Drum</ItemName>
+		<Name>Drum</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>3</Weight>
 		<Cost>6</Cost>
@@ -208,7 +208,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Dulcimer</ItemName>
+		<Name>Dulcimer</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>10</Weight>
 		<Cost>25</Cost>
@@ -216,7 +216,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Flute</ItemName>
+		<Name>Flute</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>1</Weight>
 		<Cost>2</Cost>
@@ -224,7 +224,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Lute</ItemName>
+		<Name>Lute</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>2</Weight>
 		<Cost>35</Cost>
@@ -232,7 +232,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Lyre</ItemName>
+		<Name>Lyre</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>2</Weight>
 		<Cost>30</Cost>
@@ -240,7 +240,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Horn</ItemName>
+		<Name>Horn</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>2</Weight>
 		<Cost>3</Cost>
@@ -248,7 +248,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Pan Flute</ItemName>
+		<Name>Pan Flute</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>2</Weight>
 		<Cost>12</Cost>
@@ -256,7 +256,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Shawn</ItemName>
+		<Name>Shawn</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>1</Weight>
 		<Cost>2</Cost>
@@ -264,7 +264,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Viol</ItemName>
+		<Name>Viol</Name>
 		<Description>Musical Instrument</Description>
 		<Weight>1</Weight>
 		<Cost>30</Cost>
@@ -272,7 +272,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Navigator's Tools</ItemName>
+		<Name>Navigator's Tools</Name>
 		<Description>This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea.</Description>
 		<Cost>25</Cost>
 		<Weight>2</Weight>
@@ -280,7 +280,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Poisoner's Kit</ItemName>
+		<Name>Poisoner's Kit</Name>
 		<Description>A poisoner’s kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons. </Description>
 		<Cost>50</Cost>
 		<Weight>2</Weight>
@@ -288,7 +288,7 @@
 	</PlayerToolKit>
 	
 	<PlayerToolKit>
-		<ItemName>Thieves' Tools</ItemName>
+		<Name>Thieves' Tools</Name>
 		<Description>This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.</Description>
 		<Cost>25</Cost>
 		<Weight>1</Weight>

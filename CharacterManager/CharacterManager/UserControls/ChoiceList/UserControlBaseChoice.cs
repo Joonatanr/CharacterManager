@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace CharacterManager.UserControls
 {
-    public abstract class UserControlBaseChoice <ItemType> : UserControlGenericListBase where ItemType : PlayerBaseItem 
+    public abstract class UserControlBaseChoice <ItemType> : UserControlGenericListBase<ItemType> where ItemType : PlayerBaseItem
     {
         /* Properties */
         private String _titleString = "Items:";
@@ -108,7 +108,7 @@ namespace CharacterManager.UserControls
         {
             foreach (ItemHandleControl<ItemType> ctrl in myControlList)
             {
-                if (ctrl.Item.ItemName == item)
+                if (ctrl.Item.Name == item)
                 {
                     ctrl.isChecked = isSelected;
                     break;
@@ -156,7 +156,7 @@ namespace CharacterManager.UserControls
         public bool removeItemFromList(ItemType item)
         {
             bool res;
-            ItemType toRemove = myItemList.Find(s => s.ItemName == item.ItemName);
+            ItemType toRemove = myItemList.Find(s => s.Name == item.Name);
 
             if (toRemove == null)
             {
@@ -198,7 +198,7 @@ namespace CharacterManager.UserControls
                     myCheckBox.Size = new Size(16, 16);
                     ctrl.setCheckBox(myCheckBox);
 
-                    if (myLockedItemList.Find(lockedItem => lockedItem.ItemName == myItemDictionary[index].ItemName) != null)
+                    if (myLockedItemList.Find(lockedItem => lockedItem.Name == myItemDictionary[index].Name) != null)
                     {
                         /* Item such as a spell has already been learned. */
                         /* Now things become more complex, because we might be able to replace some of these... */

@@ -40,13 +40,13 @@ namespace CharacterManager.Items
                 PlayerWeapon PlusOne = w.Clone();
                 PlusOne.IsMagical = true;
                 PlusOne.MagicalBonus = 1;
-                PlusOne.ItemName += " +1";
+                PlusOne.Name += " +1";
                 PlayerWeapon PlusTwo = w.Clone();
                 PlusTwo.IsMagical = true;
                 PlusTwo.MagicalBonus = 2;
-                PlusTwo.ItemName += " +2";
+                PlusTwo.Name += " +2";
                 PlayerWeapon PlusThree = w.Clone();
-                PlusThree.ItemName += " +3";
+                PlusThree.Name += " +3";
                 PlusThree.IsMagical = true;
                 PlusThree.MagicalBonus = 3;
 
@@ -61,15 +61,15 @@ namespace CharacterManager.Items
                 PlayerArmor PlusOne = a.Clone();
                 PlusOne.IsMagical = true;
                 PlusOne.MagicalAcBonus = 1;
-                PlusOne.ItemName += " +1";
+                PlusOne.Name += " +1";
                 PlayerArmor PlusTwo = a.Clone();
                 PlusTwo.IsMagical = true;
                 PlusTwo.MagicalAcBonus = 2;
-                PlusTwo.ItemName += " +2";
+                PlusTwo.Name += " +2";
                 PlayerArmor PlusThree = a.Clone();
                 PlusThree.IsMagical = true;
                 PlusThree.MagicalAcBonus = 3;
-                PlusThree.ItemName += " +3";
+                PlusThree.Name += " +3";
 
                 listBoxArmor.Items.Add(PlusOne);
                 listBoxArmor.Items.Add(PlusTwo);
@@ -116,7 +116,7 @@ namespace CharacterManager.Items
             }
 
             /* Here we update the item's general properties. */
-            currentItem.ItemName = textBoxItemName.Text;
+            currentItem.Name = textBoxItemName.Text;
             currentItem.Description = richTextBoxItemDescription.Text;
 
             int cost;
@@ -191,7 +191,7 @@ namespace CharacterManager.Items
         {
             /* We clear any extra data that might still be displayed. */
             groupBox1.Controls.Clear();
-            textBoxItemName.Text = currentItem.ItemName;
+            textBoxItemName.Text = currentItem.Name;
             richTextBoxItemDescription.Text = currentItem.Description;
             textBoxPrice.Text = currentItem.Cost.ToString();
         }

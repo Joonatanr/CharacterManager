@@ -30,7 +30,7 @@ namespace CharacterManager.UserControls
             set
             {
                 _weapon = value;
-                string weaponName = _weapon.ItemName;
+                string weaponName = _weapon.Name;
                
                 if (_weapon.IsVersatile)
                 {
@@ -56,7 +56,7 @@ namespace CharacterManager.UserControls
                 labelWeaponName.Text = weaponName;
 
                 /* Lets see if a picture exists for our weapon */
-                string fileName = _weapon.ItemName.Replace(",", "");
+                string fileName = _weapon.Name.Replace(",", "");
                 string imgName = "Resources/Pictures/" + fileName + ".png";
                 if (File.Exists(imgName))
                 {

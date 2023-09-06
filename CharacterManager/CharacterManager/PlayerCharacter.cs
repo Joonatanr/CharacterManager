@@ -554,7 +554,7 @@ namespace CharacterManager
             }
 
 
-            if (WeaponProficiencies.Contains(w.ItemName))
+            if (WeaponProficiencies.Contains(w.Name))
             {
                 return true;
             }
@@ -935,7 +935,7 @@ namespace CharacterManager
             {
                 if (w.AmmoType != "")
                 {
-                    PlayerItem ammoItem = CharacterGeneralEquipment.Find(i => i.ItemName == w.AmmoType);
+                    PlayerItem ammoItem = CharacterGeneralEquipment.Find(i => i.Name == w.AmmoType);
 
                     if (ammoItem == null)
                     {

@@ -82,7 +82,7 @@ namespace CharacterManager.Items
 
         public override string getExtendedDescription()
         {
-            String res = ItemName + ":\n";
+            String res = Name + ":\n";
             if (IsMagical)
             {
                 res += "Base damage : " + Damage.DamageValue + " " + " + " + MagicalBonus.ToString() + " " + Damage.Type + " damage\n";

@@ -1,6 +1,6 @@
 ﻿<ArrayOfPlayerArmor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<PlayerArmor>
-		<ItemName>Leather</ItemName>
+		<Name>Leather</Name>
 		<Weight>10</Weight>
 		<ArmorClass>11</ArmorClass>
 		<Cost>10</Cost>
@@ -9,7 +9,7 @@
 		<Type>Light</Type>
 	</PlayerArmor>
 	<PlayerArmor>
-		<ItemName>Padded</ItemName>
+		<Name>Padded</Name>
 		<Weight>8</Weight>
 		<ArmorClass>11</ArmorClass>
 		<Cost>5</Cost>
@@ -19,7 +19,7 @@
 		<Type>Light</Type>
 	</PlayerArmor>
 	<PlayerArmor>
-		<ItemName>Studded Leather</ItemName>
+		<Name>Studded Leather</Name>
 		<Weight>13</Weight>
 		<ArmorClass>12</ArmorClass>
 		<Cost>45</Cost>
@@ -29,7 +29,7 @@
 	</PlayerArmor>
 	
 	<PlayerArmor>
-		<ItemName>Breastplate</ItemName>
+		<Name>Breastplate</Name>
 		<Weight>20</Weight>
 		<ArmorClass>14</ArmorClass>
 		<Cost>400</Cost>
@@ -38,7 +38,7 @@
 		<Type>Medium</Type>
 	</PlayerArmor>
 	<PlayerArmor>
-		<ItemName>Chain Shirt</ItemName>
+		<Name>Chain Shirt</Name>
 		<Weight>20</Weight>
 		<ArmorClass>13</ArmorClass>
 		<Cost>50</Cost>
@@ -47,7 +47,7 @@
 		<Type>Medium</Type>
 	</PlayerArmor>
 	<PlayerArmor>
-		<ItemName>Half Plate</ItemName>
+		<Name>Half Plate</Name>
 		<Weight>40</Weight>
 		<ArmorClass>15</ArmorClass>
 		<Cost>750</Cost>
@@ -57,7 +57,7 @@
 		<IsStealthDisadvantage>true</IsStealthDisadvantage>
 	</PlayerArmor>
 	<PlayerArmor>
-		<ItemName>Hide</ItemName>
+		<Name>Hide</Name>
 		<Weight>12</Weight>
 		<ArmorClass>12</ArmorClass>
 		<Cost>10</Cost>
@@ -66,7 +66,7 @@
 		<Type>Medium</Type>
 	</PlayerArmor>
 	<PlayerArmor>
-		<ItemName>Scale Mail</ItemName>
+		<Name>Scale Mail</Name>
 		<Weight>45</Weight>
 		<ArmorClass>14</ArmorClass>
 		<Cost>50</Cost>
@@ -77,7 +77,7 @@
 	</PlayerArmor>
 	
 	<PlayerArmor>
-		<ItemName>Chain Mail</ItemName>
+		<Name>Chain Mail</Name>
 		<Weight>55</Weight>
 		<ArmorClass>16</ArmorClass>
 		<Cost>75</Cost>
@@ -87,7 +87,7 @@
 		<MinStrength>13</MinStrength>
 	</PlayerArmor>
 	<PlayerArmor>
-		<ItemName>Plate</ItemName>
+		<Name>Plate</Name>
 		<Weight>65</Weight>
 		<ArmorClass>18</ArmorClass>
 		<Cost>1500</Cost>
@@ -97,7 +97,7 @@
 		<MinStrength>15</MinStrength>
 	</PlayerArmor>
 	<PlayerArmor>
-		<ItemName>Ring Mail</ItemName>
+		<Name>Ring Mail</Name>
 		<Weight>65</Weight>
 		<ArmorClass>14</ArmorClass>
 		<Cost>30</Cost>
@@ -106,7 +106,7 @@
 		<IsStealthDisadvantage>true</IsStealthDisadvantage>
 	</PlayerArmor>
 	<PlayerArmor>
-		<ItemName>Splint</ItemName>
+		<Name>Splint</Name>
 		<Weight>60</Weight>
 		<ArmorClass>17</ArmorClass>
 		<Cost>200</Cost>
@@ -117,7 +117,7 @@
 	</PlayerArmor>
 	
 	<PlayerArmor>
-		<ItemName>Shield</ItemName>
+		<Name>Shield</Name>
 		<Weight>6</Weight>
 		<ArmorClass>2</ArmorClass>
 		<Cost>10</Cost>

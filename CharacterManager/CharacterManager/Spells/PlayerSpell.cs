@@ -45,7 +45,7 @@ namespace CharacterManager.Spells
 
         public String SpellName;
 
-        public override string ItemName
+        public override string Name
         {
             get
             {

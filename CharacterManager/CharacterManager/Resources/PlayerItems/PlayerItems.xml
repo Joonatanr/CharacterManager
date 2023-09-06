@@ -1,28 +1,28 @@
 ﻿<ArrayOfPlayerItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <!-- Ammunition -->
 	<PlayerItem>
-		<ItemName>Arrows</ItemName>
+		<Name>Arrows</Name>
 		<Description>Ammunition for bows and shortbows</Description>
 		<Weight>0.05</Weight>
 		<Cost>0.05</Cost>
 		<IsAmmo>true</IsAmmo>
 	</PlayerItem>	
 	<PlayerItem>
-		<ItemName>Bolts</ItemName>
+		<Name>Bolts</Name>
 		<Description>Ammunition for crossbows</Description>
 		<Weight>0.075</Weight>
 		<Cost>0.05</Cost>
 		<IsAmmo>true</IsAmmo>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Blowgun Needles</ItemName>
+		<Name>Blowgun Needles</Name>
 		<Description>Ammunition for blowguns</Description>
 		<Weight>0.05</Weight>
 		<Cost>0.05</Cost>
 		<IsAmmo>true</IsAmmo>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Sling Bullets</ItemName>
+		<Name>Sling Bullets</Name>
 		<Description>Ammunition for slings</Description>
 		<Weight>0.05</Weight>
 		<Cost>0.002</Cost>
@@ -33,181 +33,181 @@
 
 <!-- Generic Items -->
 	<PlayerItem>
-		<ItemName>Abacus</ItemName>
+		<Name>Abacus</Name>
 		<Description>Simple tool for calculations.</Description>
 		<Weight>2</Weight>
 		<Cost>2</Cost>
 	</PlayerItem>
 	<PlayerItem>	
-		<ItemName>Acid</ItemName>
+		<Name>Acid</Name>
 		<Description>As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage. </Description>
 		<Weight>1</Weight>
 		<Cost>25.0</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Alchemist’s Fire</ItemName>
+		<Name>Alchemist’s Fire</Name>
 		<Description>This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames. </Description>
 		<Weight>1</Weight>
 		<Cost>50.0</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Antitoxin</ItemName>
+		<Name>Antitoxin</Name>
 		<Description> A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs. </Description>
 		<Weight>1</Weight>
 		<Cost>50.0</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Arcane Focus</ItemName>
+		<Name>Arcane Focus</Name>
 		<Description>  An arcane focus is a special item— an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or som e similar item— designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus. </Description>
 		<Weight>1</Weight>
 		<Cost>10.0</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Backpack</ItemName>
+		<Name>Backpack</Name>
 		<Description>Used to carry equipment</Description>
 		<Weight>5</Weight>
 		<Cost>2</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Ball Bearings</ItemName>
+		<Name>Ball Bearings</Name>
 		<Description>  As an action, you can spill these tiny metal balls from their pouch to cover a level area 10 feet square. A creature moving across the covered area must succeed on a DC 10 Dexterity saving throw or fall prone. A creature moving through the area at half speed doesn’t need to make the saving throw. 1000 in one bag  </Description>
 		<Weight>2</Weight>
 		<Cost>1.0</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Block and Tackle</ItemName>
+		<Name>Block and Tackle</Name>
 		<Description>A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift. </Description>
 		<Weight>5</Weight>
 		<Cost>1</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Caltrops</ItemName>
+		<Name>Caltrops</Name>
 		<Description> As an action, you can spread a single bag of caltrops to cover a 5-foot-square area. Any creature that enters the area must succeed on a DC 15 Dexterity saving throw or stop moving and take 1 piercing damage. Until the creature regains at least 1 hit point, its walking speed is reduced by 10 feet. A creature moving through the area at half speed doesn’t need to make the saving throw. (20 in bag) </Description>
 		<Weight>2</Weight>
 		<Cost>1</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Candle</ItemName>
+		<Name>Candle</Name>
 		<Description> For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet.</Description>
 		<Weight>0</Weight>
 		<Cost>0.01</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Chain</ItemName>
+		<Name>Chain</Name>
 		<Description> A chain has 10 hit points. It can be burst with a successful DC 20 Strength check. (10 feet)</Description>
 		<Weight>10</Weight>
 		<Cost>5</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Climber’s Kit. </ItemName>
+		<Name>Climber’s Kit. </Name>
 		<Description>A climber’s kit includes special pitons, boot tips, gloves, and a harness. You can use the climber’s kit as an action to anchor yourself; when you do, you can’t fall more than 25 feet from the point where you anchored yourself, and you can't climb more than 25 feet away from that point without undoing the anchor.</Description>
 		<Weight>12</Weight>
 		<Cost>25</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Component Pouch</ItemName>
+		<Name>Component Pouch</Name>
 		<Description>A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description). </Description>
 		<Weight>2</Weight>
 		<Cost>25</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Crowbar</ItemName>
+		<Name>Crowbar</Name>
 		<Description>Using a crowbar grants advantage to Strength checks where the crowbar’s leverage can be applied.</Description>
 		<Weight>10</Weight>
 		<Cost>2</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Druidic Focus</ItemName>
+		<Name>Druidic Focus</Name>
 		<Description>A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus.</Description>
 		<Weight>0</Weight>
 		<Cost>10</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Fishing Tackle</ItemName>
+		<Name>Fishing Tackle</Name>
 		<Description> This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting. </Description>
 		<Weight>4</Weight>
 		<Cost>1</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Healer's Kit</ItemName>
+		<Name>Healer's Kit</Name>
 		<Description>This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check. </Description>
 		<Weight>3</Weight>
 		<Cost>5</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Holy Symbol</ItemName>
+		<Name>Holy Symbol</Name>
 		<Description> A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus, as described in chapter 10. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.  </Description>
 		<Weight>2</Weight>
 		<Cost>5</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Holy Water</ItemName>
+		<Name>Holy Water</Name>
 		<Description> As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged attack against a target creature, treating the holy water as an improvised weapon. If the target is a fiend or undead, it takes 2d6 radiant damage. A cleric or paladin may create holy water by performing a special ritual. The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot. </Description>
 		<Weight>1</Weight>
 		<Cost>25</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Pitons</ItemName>
+		<Name>Pitons</Name>
 		<Description>A piton is a steel spike with an eye through which you can loop a rope.</Description>
 		<Weight>0.25</Weight>
 		<Cost>0.05</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Hooded Lantern</ItemName>
+		<Name>Hooded Lantern</Name>
 		<Description>A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.</Description>
 		<Weight>2</Weight>
 		<Cost>5</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Bullseye Lantern</ItemName>
+		<Name>Bullseye Lantern</Name>
 		<Description>A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. </Description>
 		<Weight>2</Weight>
 		<Cost>5</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Hunting Trap</ItemName>
+		<Name>Hunting Trap</Name>
 		<Description>When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet long). A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature. </Description>
 		<Weight>25</Weight>
 		<Cost>5</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Lamp</ItemName>
+		<Name>Lamp</Name>
 		<Description>A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.</Description>
 		<Weight>1</Weight>
 		<Cost>0.5</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Oil Flask</ItemName>
+		<Name>Oil Flask</Name>
 		<Description>Oil usually comes in a clay flask that holds 1 pint. As an action, you can splash the oil in this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. Make a ranged attack against a target creature or object, treating the oil as an improvised weapon. On a hit, the target is covered in oil. If the target takes any fire damage before the oil dries (after 1 minute), the target takes an additional 5 fire damage from the burning oil. You can also pour a flask of oil on the ground to cover a 5-foot-square area, provided that the surface is level. If lit, the oil burns for 2 rounds and deals 5 fire damage to any creature that enters the area or ends its turn in the area. A creature can take this damage only once per turn.</Description>
 		<Weight>1</Weight>
 		<Cost>0.1</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Rations</ItemName>
+		<Name>Rations</Name>
 		<Description> Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</Description>
 		<Weight>2</Weight>
 		<Cost>0.5</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Rope</ItemName>
+		<Name>Rope</Name>
 		<Description>Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</Description>
 		<Weight>1</Weight>
 		<Cost>10</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Tinderbox</ItemName>
+		<Name>Tinderbox</Name>
 		<Description>This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch—or anything else with abundant, exposed fuel—takes an action. Lighting any other fire takes 1 minute.</Description>
 		<Weight>1</Weight>
 		<Cost>10</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Torch</ItemName>
+		<Name>Torch</Name>
 		<Description>A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.</Description>
 		<Weight>1</Weight>
 		<Cost>0.01</Cost>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Mess Kit</ItemName>
+		<Name>Mess Kit</Name>
 		<Description>This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl.</Description>
 		<Weight>1</Weight>
 		<Cost>0.2</Cost>
@@ -215,7 +215,7 @@
 	
 <!-- Packs and containers -->
 	<PlayerItem xsi:type="ItemContainer">
-		<ItemName>Burglar's Pack</ItemName>
+		<Name>Burglar's Pack</Name>
 		<Description>Includes a backpack, a bag of 1,000 ball bearings, 10 feet of string, a bell, 5 candles, a crowbar, a hammer, 10 pitons, a hooded lantern, 2 flasks of oil, 5 days rations, a tinderbox, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
 		<Weight>5</Weight>
 		<Cost>16.0</Cost>
@@ -280,7 +280,7 @@
 	</PlayerItem>
 	
 	<PlayerItem xsi:type="ItemContainer">
-		<ItemName>Diplomat's Pack</ItemName>
+		<Name>Diplomat's Pack</Name>
 		<Description>Includes a chest, 2 cases for maps and scrolls, a set of fine clothes, a bottle of ink, an ink pen, a lamp, 2 flasks of oil, 5 sheets of paper, a vial of perfume, sealing wax, and soap. </Description>
 		<Weight>1</Weight>
 		<Cost>39</Cost>
@@ -333,7 +333,7 @@
 	</PlayerItem>
 	
 	<PlayerItem xsi:type="ItemContainer">
-		<ItemName>Dungeoneer's Pack</ItemName>
+		<Name>Dungeoneer's Pack</Name>
 		<Description>Includes a backpack, a crowbar, a hammer, 10 pitons, 10 torches, a tinderbox, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it</Description>
 		<Weight>1</Weight>
 		<Cost>12</Cost>
@@ -374,7 +374,7 @@
 	</PlayerItem>
 	
 	<PlayerItem xsi:type="ItemContainer">
-		<ItemName>Entertainer's Pack</ItemName>
+		<Name>Entertainer's Pack</Name>
 		<Description> Includes a backpack, a bedroll, 2 costumes, 5 candles, 5 days of rations, a waterskin, and a disguise kit.</Description>
 		<Weight>1</Weight>
 		<Cost>12</Cost>
@@ -411,7 +411,7 @@
 	</PlayerItem>
 	
 	<PlayerItem xsi:type="ItemContainer">
-		<ItemName>Explorer's Pack</ItemName>
+		<Name>Explorer's Pack</Name>
 		<Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
 		<Weight>10</Weight>
 		<Cost>10</Cost>
@@ -452,7 +452,7 @@
 	</PlayerItem>
 	
 	<PlayerItem xsi:type="ItemContainer">
-		<ItemName>Scholar's Pack</ItemName>
+		<Name>Scholar's Pack</Name>
 		<Description>Includes a backpack, a book of lore, a bottle of ink, an ink pen, 10 sheets of parchment, a little bag of sand, and a small knife.</Description>
 		<Weight>10</Weight>
 		<Cost>40</Cost>
@@ -489,7 +489,7 @@
 	</PlayerItem>
 	
 	<PlayerItem xsi:type="ItemContainer">
-		<ItemName>Case, Crossbow Bolt</ItemName>
+		<Name>Case, Crossbow Bolt</Name>
 		<Description>This wooden case can hold up to twenty crossbow bolts. </Description>
 		<Weight>10</Weight>
 		<Cost>5</Cost>
@@ -502,7 +502,7 @@
 	</PlayerItem>
 	
 	<PlayerItem xsi:type="ItemContainer">
-		<ItemName>Case, Map or Scroll</ItemName>
+		<Name>Case, Map or Scroll</Name>
 		<Description>This cylindrical leather case can hold up to ten rolled-up sheets of paper or five rolled-up sheets of parchment.</Description>
 		<Weight>1</Weight>
 		<Cost>1</Cost>

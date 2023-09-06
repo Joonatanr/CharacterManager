@@ -61,7 +61,7 @@
     <PlayerItem
       xsi:type="PlayerToolKit">
       <Description />
-      <ItemName>Glassblower's Tools</ItemName>
+      <Name>Glassblower's Tools</Name>
       <Weight>5</Weight>
       <Cost>30</Cost>
       <Quantity>1</Quantity>
@@ -69,21 +69,21 @@
       <ToolType>TYPE_ARTISAN</ToolType>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Shovel</ItemName>
+      <Name>Shovel</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Iron Pot</ItemName>
+      <Name>Iron Pot</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Common Clothes</ItemName>
+      <Name>Common Clothes</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>

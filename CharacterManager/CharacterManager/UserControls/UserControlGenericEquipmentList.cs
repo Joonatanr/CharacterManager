@@ -9,7 +9,7 @@ using CharacterManager.Items;
 
 namespace CharacterManager.UserControls
 {
-    public class UserControlGenericEquipmentList : UserControlGenericListBase
+    public class UserControlGenericEquipmentList : UserControlGenericListBase<PlayerItem>
     {
         /* This one might be updated separately... */
         private List<PlayerToolKit> toolList = new List<PlayerToolKit>();
@@ -220,7 +220,7 @@ namespace CharacterManager.UserControls
 
         private void drawEquipmentString(Graphics gfx, PlayerItem item, int line)
         {
-            String str = item.ItemName;
+            String str = item.Name;
 
             if (item.Quantity > 1)
             {

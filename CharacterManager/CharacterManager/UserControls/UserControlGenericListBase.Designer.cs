@@ -1,6 +1,6 @@
 ﻿namespace CharacterManager.UserControls
 {
-    partial class UserControlGenericListBase
+    partial class UserControlGenericListBase<ListItemType>
     {
         /// <summary> 
         /// Required designer variable.

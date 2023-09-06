@@ -27,7 +27,7 @@ namespace CharacterManager
             {
                 /* We are dealing with a custom object, but that is actually OK. */
                 res = new Items.PlayerItem();
-                res.ItemName = Equipment;
+                res.Name = Equipment;
                 res.Description = Description;
                 res.Quantity = Quantity;
             }

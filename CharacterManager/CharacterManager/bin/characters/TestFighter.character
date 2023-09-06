@@ -54,7 +54,7 @@
   </CharacterAbilities>
   <CharacterWeapons>
     <PlayerWeapon>
-      <ItemName>Longsword</ItemName>
+      <Name>Longsword</Name>
       <Weight>3</Weight>
       <Cost>15</Cost>
       <Quantity>1</Quantity>
@@ -88,7 +88,7 @@
       <AmmoType />
     </PlayerWeapon>
     <PlayerWeapon>
-      <ItemName>Rapier</ItemName>
+      <Name>Rapier</Name>
       <Weight>2</Weight>
       <Cost>25</Cost>
       <Quantity>1</Quantity>
@@ -121,7 +121,7 @@
       <AmmoType />
     </PlayerWeapon>
     <PlayerWeapon>
-      <ItemName>Crossbow, Light</ItemName>
+      <Name>Crossbow, Light</Name>
       <Weight>5</Weight>
       <Cost>25</Cost>
       <Quantity>1</Quantity>
@@ -156,7 +156,7 @@
   </CharacterWeapons>
   <CharacterArmors>
     <PlayerArmor>
-      <ItemName>Chain Mail</ItemName>
+      <Name>Chain Mail</Name>
       <Weight>55</Weight>
       <Cost>75</Cost>
       <Quantity>1</Quantity>
@@ -174,7 +174,7 @@
   <CharacterGeneralEquipment>
     <PlayerItem>
       <Description>Ammunition for crossbows</Description>
-      <ItemName>Bolts</ItemName>
+      <Name>Bolts</Name>
       <Weight>0.075</Weight>
       <Cost>0.05</Cost>
       <Quantity>20</Quantity>
@@ -183,7 +183,7 @@
     <PlayerItem
       xsi:type="ItemContainer">
       <Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
-      <ItemName>Explorer's Pack</ItemName>
+      <Name>Explorer's Pack</Name>
       <Weight>10</Weight>
       <Cost>10</Cost>
       <Quantity>1</Quantity>
@@ -224,21 +224,21 @@
       </ContainedItems>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Fine Clothes</ItemName>
+      <Name>Fine Clothes</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Signet Ring</ItemName>
+      <Name>Signet Ring</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Scroll of Pedigree</ItemName>
+      <Name>Scroll of Pedigree</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>

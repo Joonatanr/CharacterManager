@@ -1,6 +1,6 @@
 <ArrayOfPlayerItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<PlayerItem xsi:type="PlayerArmor">
-		<ItemName>Adamantine Armor(Full Plate)</ItemName>
+		<Name>Adamantine Armor(Full Plate)</Name>
 		<Description>This suit of armor is reinforced with adamantine, one
 of the hardest substances in existence. While you're
 wearing it, any critical hit against you becomes a
@@ -14,7 +14,7 @@ normal hit.</Description>
 		<MinStrength>15</MinStrength>
 	</PlayerItem>
 	<PlayerItem>
-		<ItemName>Alchemy Jug</ItemName>
+		<Name>Alchemy Jug</Name>
 		<Description>This ceramic jug appears to be able to hold a gallon
 of liquid and weighs 12 pounds whether full or empty.
 Sloshing sounds can be heard from within the jug when

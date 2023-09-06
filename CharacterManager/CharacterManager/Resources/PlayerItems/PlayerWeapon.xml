@@ -1,7 +1,7 @@
 ﻿<ArrayOfPlayerWeapon xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <!-- Simple Weapons -->	
 	<PlayerWeapon>
-		<ItemName>Club</ItemName>
+		<Name>Club</Name>
 		<Weight>2</Weight>
 		<IsLight>true</IsLight>
 		<Damage>
@@ -11,7 +11,7 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
-		<ItemName>Dagger</ItemName>
+		<Name>Dagger</Name>
 		<Weight>1</Weight>
 		<IsFinesse>true</IsFinesse>
 		<IsLight>true</IsLight>
@@ -27,7 +27,7 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
-		<ItemName>Greatclub</ItemName>
+		<Name>Greatclub</Name>
 		<Cost>0.2</Cost>
 		<Weight>10</Weight>
 		<IsTwoHanded>true</IsTwoHanded>
@@ -38,7 +38,7 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
-		<ItemName>Handaxe</ItemName>
+		<Name>Handaxe</Name>
 		<Cost>5</Cost>
 		<Weight>2</Weight>
 		<IsLight>true</IsLight>
@@ -54,7 +54,7 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
-		<ItemName>Javelin</ItemName>
+		<Name>Javelin</Name>
 		<Cost>0.5</Cost>
 		<Weight>2</Weight>
 		<IsThrown>true</IsThrown>
@@ -69,7 +69,7 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
-		<ItemName>Light Hammer</ItemName>
+		<Name>Light Hammer</Name>
 		<Cost>0.2</Cost>
 		<Weight>2</Weight>
 		<IsThrown>true</IsThrown>
@@ -85,7 +85,7 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
-		<ItemName>Mace</ItemName>
+		<Name>Mace</Name>
 		<Cost>5</Cost>
 		<Weight>4</Weight>
 		<Damage>
@@ -95,7 +95,7 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
-		<ItemName>Quarterstaff</ItemName>
+		<Name>Quarterstaff</Name>
 		<Cost>0.2</Cost>
 		<Weight>4</Weight>
 		<IsVersatile>true</IsVersatile>
@@ -110,7 +110,7 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
-		<ItemName>Sickle</ItemName>
+		<Name>Sickle</Name>
 		<Cost>1</Cost>
 		<Weight>2</Weight>
 		<IsLight>true</IsLight>
@@ -121,7 +121,7 @@
 		<Type>Simple</Type>
 	</PlayerWeapon>
 	<PlayerWeapon>
-		<ItemName>Spear</ItemName>
+		<Name>Spear</Name>
 		<Cost>1</Cost>
 		<Weight>3</Weight>
 		<IsThrown>true</IsThrown>
@@ -145,7 +145,7 @@
 
 <!-- Simple Ranged Weapons -->
 	<PlayerWeapon>
-		<ItemName>Crossbow, Light</ItemName>
+		<Name>Crossbow, Light</Name>
 		<Cost>25</Cost>
 		<Weight>5</Weight>
 		<IsAmmunition>true</IsAmmunition>
@@ -165,7 +165,7 @@
 	</PlayerWeapon>
 	
 	<PlayerWeapon>
-		<ItemName>Dart</ItemName>
+		<Name>Dart</Name>
 		<Cost>0.05</Cost>
 		<Weight>0.4</Weight>
 		<IsAmmunition>true</IsAmmunition>
@@ -184,7 +184,7 @@
 	</PlayerWeapon>
 	
 	<PlayerWeapon>
-		<ItemName>Shortbow</ItemName>
+		<Name>Shortbow</Name>
 		<Cost>25</Cost>
 		<Weight>2</Weight>
 		<IsAmmunition>true</IsAmmunition>
@@ -203,7 +203,7 @@
 	</PlayerWeapon>
 	
 	<PlayerWeapon>
-		<ItemName>Sling</ItemName>
+		<Name>Sling</Name>
 		<Cost>0.1</Cost>
 		<Weight>0.01</Weight>
 		<IsAmmunition>true</IsAmmunition>
@@ -224,7 +224,7 @@
 
 <!-- Martial Melee Weapons -->
 <PlayerWeapon>
-	<ItemName>Battleaxe</ItemName>
+	<Name>Battleaxe</Name>
 	<Cost>10</Cost>
 	<Weight>4</Weight>
 	<IsVersatile>true</IsVersatile>
@@ -240,7 +240,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Flail</ItemName>
+	<Name>Flail</Name>
 	<Cost>10</Cost>
 	<Weight>2</Weight>
 	<Damage>
@@ -251,7 +251,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Glaive</ItemName>
+	<Name>Glaive</Name>
 	<Cost>20</Cost>
 	<Weight>6</Weight>
 	<IsHeavy>true</IsHeavy>
@@ -265,7 +265,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Greataxe</ItemName>
+	<Name>Greataxe</Name>
 	<Cost>30</Cost>
 	<Weight>7</Weight>
 	<IsHeavy>true</IsHeavy>
@@ -278,7 +278,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Greatsword</ItemName>
+	<Name>Greatsword</Name>
 	<Cost>50</Cost>
 	<Weight>6</Weight>
 	<IsHeavy>true</IsHeavy>
@@ -291,7 +291,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Halberd</ItemName>
+	<Name>Halberd</Name>
 	<Cost>20</Cost>
 	<Weight>6</Weight>
 	<IsHeavy>true</IsHeavy>
@@ -305,7 +305,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Lance</ItemName>
+	<Name>Lance</Name>
 	<Description>You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted.</Description>
 	<Cost>10</Cost>
 	<Weight>6</Weight>
@@ -318,7 +318,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Longsword</ItemName>
+	<Name>Longsword</Name>
 	<Cost>15</Cost>
 	<Weight>3</Weight>
 	<IsVersatile>true</IsVersatile>
@@ -334,7 +334,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Maul</ItemName>
+	<Name>Maul</Name>
 	<Cost>10</Cost>
 	<Weight>10</Weight>
 	<Damage>
@@ -347,7 +347,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Morningstar</ItemName>
+	<Name>Morningstar</Name>
 	<Cost>15</Cost>
 	<Weight>10</Weight>
 	<Damage>
@@ -358,7 +358,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Pike</ItemName>
+	<Name>Pike</Name>
 	<Cost>5</Cost>
 	<Weight>18</Weight>
 	<Damage>
@@ -372,7 +372,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Rapier</ItemName>
+	<Name>Rapier</Name>
 	<Cost>25</Cost>
 	<Weight>2</Weight>
 	<Damage>
@@ -384,7 +384,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Scimitar</ItemName>
+	<Name>Scimitar</Name>
 	<Cost>25</Cost>
 	<Weight>3</Weight>
 	<Damage>
@@ -397,7 +397,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Shortsword</ItemName>
+	<Name>Shortsword</Name>
 	<Cost>10</Cost>
 	<Weight>2</Weight>
 	<Damage>
@@ -410,7 +410,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Trident</ItemName>
+	<Name>Trident</Name>
 	<Cost>5</Cost>
 	<Weight>4</Weight>
 	<Damage>
@@ -426,7 +426,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>War Pick</ItemName>
+	<Name>War Pick</Name>
 	<Cost>5</Cost>
 	<Weight>2</Weight>
 	<Damage>
@@ -437,7 +437,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Warhammer</ItemName>
+	<Name>Warhammer</Name>
 	<Cost>15</Cost>
 	<Weight>2</Weight>
 	<Damage>
@@ -453,7 +453,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Whip</ItemName>
+	<Name>Whip</Name>
 	<Cost>2</Cost>
 	<Weight>1</Weight>
 	<Damage>
@@ -468,7 +468,7 @@
 
 <!-- Martial Ranged Weapons -->
 <PlayerWeapon>
-	<ItemName>Blowgun</ItemName>
+	<Name>Blowgun</Name>
 	<Cost>10</Cost>
 	<Weight>1</Weight>
 	<IsAmmunition>true</IsAmmunition>
@@ -487,7 +487,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Crossbow, Hand</ItemName>
+	<Name>Crossbow, Hand</Name>
 	<Cost>75</Cost>
 	<Weight>3</Weight>
 	<IsAmmunition>true</IsAmmunition>
@@ -507,7 +507,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Crossbow, Heavy</ItemName>
+	<Name>Crossbow, Heavy</Name>
 	<Cost>50</Cost>
 	<Weight>18</Weight>
 	<IsAmmunition>true</IsAmmunition>
@@ -528,7 +528,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Longbow</ItemName>
+	<Name>Longbow</Name>
 	<Cost>50</Cost>
 	<Weight>2</Weight>
 	<IsAmmunition>true</IsAmmunition>
@@ -547,7 +547,7 @@
 </PlayerWeapon>
 
 <PlayerWeapon>
-	<ItemName>Net</ItemName>
+	<Name>Net</Name>
 	<Cost>1</Cost>
 	<Weight>3</Weight>
 	<IsRanged>true</IsRanged>

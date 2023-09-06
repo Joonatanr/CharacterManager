@@ -55,7 +55,7 @@ namespace CharacterManager.UserControls
             List<PlayerItem> multipleChoiceItems = new List<PlayerItem>();
             String displayedText;
 
-            if (_equipment.ItemName == "AnyMartialMelee")
+            if (_equipment.Name == "AnyMartialMelee")
             {
                 List<PlayerWeapon> wList = CharacterFactory.getAllWeapons();
 
@@ -69,7 +69,7 @@ namespace CharacterManager.UserControls
                 displayedText = "Any Martial Melee Weapon";
                 isMultipleChoice = true;
             }
-            else if (_equipment.ItemName == "AnyMartial")
+            else if (_equipment.Name == "AnyMartial")
             {
                 List<PlayerWeapon> wList = CharacterFactory.getAllWeapons();
 
@@ -83,7 +83,7 @@ namespace CharacterManager.UserControls
                 displayedText = "Any Martial Weapon";
                 isMultipleChoice = true;
             }
-            else if (_equipment.ItemName == "AnySimple")
+            else if (_equipment.Name == "AnySimple")
             {
                 List<PlayerWeapon> wList = CharacterFactory.getAllWeapons();
 
@@ -97,7 +97,7 @@ namespace CharacterManager.UserControls
                 displayedText = "Any Simple Weapon";
                 isMultipleChoice = true;
             }
-            else if (_equipment.ItemName == "AnyArtisans")
+            else if (_equipment.Name == "AnyArtisans")
             {
                 List<PlayerToolKit> tools = CharacterFactory.getAllToolSets();
 
@@ -112,7 +112,7 @@ namespace CharacterManager.UserControls
                 displayedText = "Any Artisan's Tool";
                 isMultipleChoice = true;
             }
-            else if (_equipment.ItemName == "AnyMusical")
+            else if (_equipment.Name == "AnyMusical")
             {
                 List<PlayerToolKit> tools = CharacterFactory.getAllToolSets();
 
@@ -127,7 +127,7 @@ namespace CharacterManager.UserControls
                 displayedText = "Any musical instrument";
                 isMultipleChoice = true;
             }
-            else if (_equipment.ItemName == "AnyGaming")
+            else if (_equipment.Name == "AnyGaming")
             {
                 List<PlayerToolKit> tools = CharacterFactory.getAllToolSets();
 
@@ -159,7 +159,7 @@ namespace CharacterManager.UserControls
                 comboBox1.Items.Clear();
                 foreach (PlayerItem item in multipleChoiceItems)
                 {
-                    comboBox1.Items.Add(item.ItemName);
+                    comboBox1.Items.Add(item.Name);
                 }
                 comboBox1.Visible = true;
             }

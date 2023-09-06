@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CharacterManager.Items;
 
 namespace CharacterManager.UserControls
 {
-    public partial class UserControlGenericListBase : UserControl
+    public partial class UserControlGenericListBase<ListItemType> : UserControl where ListItemType : PlayerBaseItem
     {
         public Boolean IsBorder { get; set; }
-        protected const int lineInterval = 18; /* TODO : Make this into public property and test. */
+        protected const int lineInterval = 18;
         protected static int buttonNumber = 0;
 
         protected int originalHeight;

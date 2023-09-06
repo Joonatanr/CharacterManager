@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.Items;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,7 +8,12 @@ using System.Threading.Tasks;
 
 namespace CharacterManager.UserControls
 {
-    public class UserControlProficiencyList : UserControlGenericListBase
+    public class PlayerProficiency : PlayerBaseItem
+    {
+        /* TODO : Move this to a separate file. */
+    }
+    
+    public class UserControlProficiencyList : UserControlGenericListBase<PlayerProficiency>
     {
         private string _titleString = "Proficiencies";
         

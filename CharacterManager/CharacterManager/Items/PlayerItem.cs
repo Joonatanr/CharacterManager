@@ -24,13 +24,13 @@ namespace CharacterManager.Items
 
         public PlayerItem()
         {
-            this.ItemName = "UNKNOWN";
+            this.Name = "UNKNOWN";
         }
 
 
         public virtual String getDisplayedName()
         {
-            String res = ItemName;
+            String res = Name;
             if(this.Quantity > 1)
             {
                 res += "(" + Quantity.ToString() + ")";
@@ -43,34 +43,34 @@ namespace CharacterManager.Items
         {
             String res;
 
-            if (this.ItemName == "AnyMartialMelee")
+            if (this.Name == "AnyMartialMelee")
             {
                 res = "Any Martial Melee Weapon";
                 IsMultipleChoice = true;
             }
-            else if (this.ItemName == "AnyMartial")
+            else if (this.Name == "AnyMartial")
             {
                 res = "Any Martial Weapon";
                 IsMultipleChoice = true;
             }
-            else if (this.ItemName == "AnySimple")
+            else if (this.Name == "AnySimple")
             {
                 List<PlayerWeapon> wList = CharacterFactory.getAllWeapons();
                 res = "Any Simple Weapon";
                 IsMultipleChoice = true;
             }
-            else if (this.ItemName == "AnyArtisans")
+            else if (this.Name == "AnyArtisans")
             {
                 res = "Any Artisan's Tool";
                 IsMultipleChoice = true;
             }
-            else if (this.ItemName == "AnyMusical")
+            else if (this.Name == "AnyMusical")
             {
                 List<PlayerToolKit> tools = CharacterFactory.getAllToolSets();
                 res = "Any musical instrument";
                 IsMultipleChoice = true;
             }
-            else if (this.ItemName == "AnyGaming")
+            else if (this.Name == "AnyGaming")
             {
                 List<PlayerToolKit> tools = CharacterFactory.getAllToolSets();
 
@@ -79,7 +79,7 @@ namespace CharacterManager.Items
             }
             else
             {
-                res = ItemName;
+                res = Name;
                 if(Quantity > 1)
                 {
                     res += "(" + Quantity.ToString() + ")"; 

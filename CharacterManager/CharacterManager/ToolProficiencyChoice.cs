@@ -76,29 +76,29 @@ namespace CharacterManager
                 case ToolProficiencyChoiceType.TYPE_MUSICAL_INSTRUMENT:
                     foreach(PlayerToolKit t in musicalInstruments)
                     {
-                        res.Add(t.ItemName);
+                        res.Add(t.Name);
                     }
                     break;
                 case ToolProficiencyChoiceType.TYPE_ARTISAN_TOOL:
                     foreach (PlayerToolKit t in artisanTools)
                     {
-                        res.Add(t.ItemName);
+                        res.Add(t.Name);
                     }
                     break;
                 case ToolProficiencyChoiceType.TYPE_ARTISAN_OR_MUSICAL:
                     foreach (PlayerToolKit t in musicalInstruments)
                     {
-                        res.Add(t.ItemName);
+                        res.Add(t.Name);
                     }
                     foreach (PlayerToolKit t in artisanTools)
                     {
-                        res.Add(t.ItemName);
+                        res.Add(t.Name);
                     }
                     break;
                 case ToolProficiencyChoiceType.TYPE_GAMING:
                     foreach (PlayerToolKit t in gamingTools)
                     {
-                        res.Add(t.ItemName);
+                        res.Add(t.Name);
                     }
                     break;
                 default:

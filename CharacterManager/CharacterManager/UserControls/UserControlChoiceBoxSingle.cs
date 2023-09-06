@@ -119,7 +119,7 @@ namespace CharacterManager.UserControls
                     {
                         if (toolkit.ToolType == Items.PlayerToolKit.PlayerToolType.TYPE_MUSICAL)
                         {
-                            comboBox1.Items.Add(toolkit.ItemName);
+                            comboBox1.Items.Add(toolkit.Name);
                         }
                     }
                     this.label1.Text = "Any Musical instrument proficiency.";
@@ -129,7 +129,7 @@ namespace CharacterManager.UserControls
                     {
                         if (toolkit.ToolType == Items.PlayerToolKit.PlayerToolType.TYPE_ARTISAN)
                         {
-                            comboBox1.Items.Add(toolkit.ItemName);
+                            comboBox1.Items.Add(toolkit.Name);
                         }
                     }
                     this.label1.Text = "Any Artisan tool proficiency.";
@@ -140,7 +140,7 @@ namespace CharacterManager.UserControls
                         if (toolkit.ToolType == Items.PlayerToolKit.PlayerToolType.TYPE_MUSICAL ||
                             toolkit.ToolType == Items.PlayerToolKit.PlayerToolType.TYPE_ARTISAN)
                         {
-                            comboBox1.Items.Add(toolkit.ItemName);
+                            comboBox1.Items.Add(toolkit.Name);
                         }
                     }
                     this.label1.Text = "Any Artisan or Musical Proficiency";

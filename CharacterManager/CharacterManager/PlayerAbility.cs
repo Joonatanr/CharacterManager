@@ -1,4 +1,5 @@
-﻿using CharacterManager.UserControls;
+﻿using CharacterManager.Items;
+using CharacterManager.UserControls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,8 @@ using static CharacterManager.CharacterCreator.UserControlClassFeature;
 namespace CharacterManager
 {
     [Serializable]
-    public class PlayerAbility
+    public class PlayerAbility : PlayerBaseItem
     {
-        public string Description { get; set; }
-        public string Name { get; set; }
-
         public bool IsCombatAbility { get; set; } = false;
 
         [XmlIgnore]

@@ -49,7 +49,7 @@ namespace CharacterManager.Items
                 {
                     //Lets allow custom items here, some items are really too basic (such as a piece of string etc..) to have a corresponding XML variable.
                     PlayerItem custom = new PlayerItem();
-                    custom.ItemName = content.Name;
+                    custom.Name = content.Name;
                     custom.Quantity = content.Quantity;
                     if (content.Description == null)
                     {

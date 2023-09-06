@@ -15,14 +15,14 @@ namespace CharacterManager.Items
     public abstract class PlayerBaseItem : ICloneable
     {
         public virtual string Description { get; set; }
-        public virtual string ItemName { get; set; }
+        public virtual string Name { get; set; }
 
         [XmlIgnore]
         public virtual string DisplayedName
         {
             get
             {
-                return ItemName;
+                return Name;
             }
         }
 
@@ -33,7 +33,7 @@ namespace CharacterManager.Items
 
         public virtual void ShowDescription(object [] args)
         {
-            MessageBox.Show(ItemName + Environment.NewLine + Environment.NewLine + Description);
+            MessageBox.Show(Name + Environment.NewLine + Environment.NewLine + Description);
         }
     }
 }

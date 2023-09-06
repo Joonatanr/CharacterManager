@@ -66,7 +66,7 @@
   </CharacterAbilities>
   <CharacterWeapons>
     <PlayerWeapon>
-      <ItemName>Greataxe</ItemName>
+      <Name>Greataxe</Name>
       <Weight>7</Weight>
       <Cost>30</Cost>
       <Quantity>1</Quantity>
@@ -99,7 +99,7 @@
       <AmmoType />
     </PlayerWeapon>
     <PlayerWeapon>
-      <ItemName>Spear</ItemName>
+      <Name>Spear</Name>
       <Weight>3</Weight>
       <Cost>1</Cost>
       <Quantity>1</Quantity>
@@ -133,7 +133,7 @@
       <AmmoType />
     </PlayerWeapon>
     <PlayerWeapon>
-      <ItemName>Javelin</ItemName>
+      <Name>Javelin</Name>
       <Weight>2</Weight>
       <Cost>0.5</Cost>
       <Quantity>1</Quantity>
@@ -166,7 +166,7 @@
       <AmmoType />
     </PlayerWeapon>
     <PlayerWeapon>
-      <ItemName>Quarterstaff</ItemName>
+      <Name>Quarterstaff</Name>
       <Weight>4</Weight>
       <Cost>0.2</Cost>
       <Quantity>1</Quantity>
@@ -200,7 +200,7 @@
       <AmmoType />
     </PlayerWeapon>
     <PlayerWeapon>
-      <ItemName>Javelin</ItemName>
+      <Name>Javelin</Name>
       <Weight>2</Weight>
       <Cost>0.5</Cost>
       <Quantity>1</Quantity>
@@ -233,7 +233,7 @@
       <AmmoType />
     </PlayerWeapon>
     <PlayerWeapon>
-      <ItemName>Javelin</ItemName>
+      <Name>Javelin</Name>
       <Weight>2</Weight>
       <Cost>0.5</Cost>
       <Quantity>1</Quantity>
@@ -266,7 +266,7 @@
       <AmmoType />
     </PlayerWeapon>
     <PlayerWeapon>
-      <ItemName>Javelin</ItemName>
+      <Name>Javelin</Name>
       <Weight>2</Weight>
       <Cost>0.5</Cost>
       <Quantity>1</Quantity>
@@ -304,7 +304,7 @@
     <PlayerItem
       xsi:type="ItemContainer">
       <Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
-      <ItemName>Explorer's Pack</ItemName>
+      <Name>Explorer's Pack</Name>
       <Weight>10</Weight>
       <Cost>10</Cost>
       <Quantity>1</Quantity>
@@ -346,7 +346,7 @@
     </PlayerItem>
     <PlayerItem>
       <Description>When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet long). A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature. </Description>
-      <ItemName>Hunting Trap</ItemName>
+      <Name>Hunting Trap</Name>
       <Weight>25</Weight>
       <Cost>5</Cost>
       <Quantity>1</Quantity>
@@ -354,14 +354,14 @@
     </PlayerItem>
     <PlayerItem>
       <Description>A trophy from an animal you killed</Description>
-      <ItemName>Trophy</ItemName>
+      <Name>Trophy</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Traveller's Clothes</ItemName>
+      <Name>Traveller's Clothes</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>

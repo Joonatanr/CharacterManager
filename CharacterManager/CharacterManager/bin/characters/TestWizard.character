@@ -57,7 +57,7 @@
   </CharacterAbilities>
   <CharacterWeapons>
     <PlayerWeapon>
-      <ItemName>Quarterstaff</ItemName>
+      <Name>Quarterstaff</Name>
       <Weight>4</Weight>
       <Cost>0.2</Cost>
       <Quantity>1</Quantity>
@@ -96,7 +96,7 @@
     <PlayerItem
       xsi:type="PlayerToolKit">
       <Description>This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing. </Description>
-      <ItemName>Herbalism Kit</ItemName>
+      <Name>Herbalism Kit</Name>
       <Weight>3</Weight>
       <Cost>5</Cost>
       <Quantity>1</Quantity>
@@ -105,7 +105,7 @@
     </PlayerItem>
     <PlayerItem>
       <Description>  An arcane focus is a special item— an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or som e similar item— designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus. </Description>
-      <ItemName>Arcane Focus</ItemName>
+      <Name>Arcane Focus</Name>
       <Weight>1</Weight>
       <Cost>10</Cost>
       <Quantity>1</Quantity>
@@ -114,7 +114,7 @@
     <PlayerItem
       xsi:type="ItemContainer">
       <Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
-      <ItemName>Explorer's Pack</ItemName>
+      <Name>Explorer's Pack</Name>
       <Weight>10</Weight>
       <Cost>10</Cost>
       <Quantity>1</Quantity>
@@ -155,28 +155,28 @@
       </ContainedItems>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Spellbook</ItemName>
+      <Name>Spellbook</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Scroll case</ItemName>
+      <Name>Scroll case</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Winter blanket</ItemName>
+      <Name>Winter blanket</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <ItemName>Common Clothes</ItemName>
+      <Name>Common Clothes</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>

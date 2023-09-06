@@ -9,7 +9,7 @@ using CharacterManager.Items;
 
 namespace CharacterManager.UserControls
 {
-    public class UserControlWeaponsHandler : UserControlGenericListBase
+    public class UserControlWeaponsHandler : UserControlGenericListBase<PlayerWeapon>
     {
         private class WeaponControlData
         {

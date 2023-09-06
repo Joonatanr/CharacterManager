@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CharacterManager.UserControls
 {
-    public partial class UserControlGenericAbilitiesList : UserControlGenericListBase
+    public partial class UserControlGenericAbilitiesList : UserControlGenericListBase<PlayerAbility>
     {
         private class AttributeControlData
         {

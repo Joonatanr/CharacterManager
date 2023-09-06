@@ -242,11 +242,11 @@ namespace CharacterManager
 
             foreach (PlayerToolKit toolkit in allToolProficiencies)
             {
-                if (!existingToolProficiencies.Contains(toolkit.ItemName))
+                if (!existingToolProficiencies.Contains(toolkit.Name))
                 {
                     if (toolkit.ToolType == PlayerToolKit.PlayerToolType.TYPE_ARTISAN)
                     {
-                        availableChoices.Add(toolkit.ItemName);
+                        availableChoices.Add(toolkit.Name);
                     }
                 }
             }
