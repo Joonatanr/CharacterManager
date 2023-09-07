@@ -24,7 +24,7 @@ namespace CharacterManager.UserControls
             {
                 _myAbility = value;
                 labelAbilityName.Text = _myAbility.Name;
-                customRTBDescription.Text = _myAbility.Description;
+                customRTBDescription.Text = _myAbility.GetExtendedDescription();
             }
         }
         

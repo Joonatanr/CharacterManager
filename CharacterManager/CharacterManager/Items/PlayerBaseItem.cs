@@ -15,6 +15,7 @@ namespace CharacterManager.Items
     public abstract class PlayerBaseItem : ICloneable
     {
         public virtual string Description { get; set; }
+
         public virtual string Name { get; set; }
 
         [XmlIgnore]

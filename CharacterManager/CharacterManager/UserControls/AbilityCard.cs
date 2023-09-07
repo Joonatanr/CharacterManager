@@ -27,7 +27,7 @@ namespace CharacterManager.UserControls
 
         private void updateDisplayedData()
         {
-            customRTBDescription.Text = _myAbility.Description;
+            customRTBDescription.Text = _myAbility.GetExtendedDescription();
             if (!string.IsNullOrEmpty(_myAbility.Dice))
             {
                 dieRollTextBox1.DieRollObject = new DieRollEquation(_myAbility.Dice);

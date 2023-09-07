@@ -39,6 +39,9 @@ namespace CharacterManager
         public Boolean IsHidden { get; set; } = false; /* If true, then this ability should not be displayed in a list. In fact it will be applied once and then "forgotten". */
         public List<PlayerAbilityUpgrade> Upgrades { get; set; }
 
+        [XmlIgnore]
+        public List<string> UpgradeDescriptions = new List<string>();
+
         /* TODO : Implement this part. */
         public List<string> SpellsAddedByAbility = new List<string>();
 
@@ -164,11 +167,27 @@ namespace CharacterManager
             }
         }
 
+        public string GetExtendedDescription()
+        {
+            string res = string.Copy(Description);
+
+            foreach(string upgrade in UpgradeDescriptions)
+            {
+                res += upgrade;
+            }
+
+            return res;
+        }
+
         private void resolveUpgrades()
         {
             if (_connectedCharacter != null)
             {
                 int level = _connectedCharacter.Level;
+
+                /* There is a problem here.. Some upgrades might already have been applied (such as during levelling up. 
+So we get to an issue where upgrades to the description are added multiple times. */
+                UpgradeDescriptions = new List<string>();
 
                 if (Upgrades != null)
                 {
@@ -199,9 +218,12 @@ namespace CharacterManager
 
             if (!string.IsNullOrEmpty(upgrade.AdditionalDescription))
             {
-                this.Description += Environment.NewLine;
-                this.Description += Environment.NewLine;
-                this.Description += upgrade.AdditionalDescription;
+                string fullString = "";
+                
+                fullString += Environment.NewLine;
+                fullString += Environment.NewLine;
+                fullString += upgrade.AdditionalDescription;
+                UpgradeDescriptions.Add(fullString);
             }
         }
 
