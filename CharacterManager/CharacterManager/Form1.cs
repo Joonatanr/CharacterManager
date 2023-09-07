@@ -835,6 +835,19 @@ namespace CharacterManager
         {
             handleAddItems();
         }
+        
+        private void buttonRollInitiative_Click(object sender, EventArgs e)
+        {
+            if (activeCharacter != null)
+            {
+                List<BonusValueModifier> rollMods = activeCharacter.GetInitiativeRollModifiers();
+                DieRollEquation myEquation = BonusValueModifier.GetEquationFromList(rollMods);
+                string rollResult;
+                myEquation.RollValue(out rollResult);
+
+                handleRollReport("Initiative : " + rollResult + Environment.NewLine, Color.Black, false, HorizontalAlignment.Left);
+            }
+        }
     }
 
     /// <summary>

@@ -313,6 +313,7 @@ namespace CharacterManager
         public event PlayerEvent CharacterAbilityStatsUpdated;
 
         public event PlayerEvent CharacterSkillBonuseUpdated;
+        public event PlayerEvent InitiativeRollMade;
 
         public PlayerCharacter()
         {
@@ -833,6 +834,22 @@ namespace CharacterManager
             {
                 /* TODO : Report error. */
             }
+        }
+
+        public List<BonusValueModifier> GetInitiativeRollModifiers()
+        {
+            /* TODO : There could be bonus values to initiative rolls provided by abilities etc. */
+            if (InitiativeRollMade!= null)
+            {
+                InitiativeRollMade.Invoke(this);
+            }
+
+            /* TODO : Certain abilities could give advantage for initiative rolls. Should we consider that? */
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
+            res.Add (new BonusValueModifier("base", "d20"));
+            res.Add(new BonusValueModifier("DEX bonus", getModifier("DEX")));
+
+            return res;
         }
 
         /*************************** Private functions **************************/
