@@ -167,6 +167,16 @@ you must finish a long rest before you can rage again.</Description>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel9>
 	
+	<!-- Level 10 -->
+	<!-- Level 11 -->
+	<AvailableClassAbilitiesLevel10>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Relentless Rage</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel10>
+	
 	
 	<ArcheTypes>
 		<PlayerClassArchetype>
@@ -184,6 +194,22 @@ heedless of your own health or well-being.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel3>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Mindless Rage</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Intimidating Presence</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
 
 		</PlayerClassArchetype>
 		
@@ -238,6 +264,14 @@ animal you selected at 3rd level or a different one.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Spirit Walker</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	

@@ -590,7 +590,22 @@ namespace CharacterManager
             string textResult;
             userControlSkillProficiencies1.RollSkill(skill, out textResult);
             string finalResult = skill + " : " + textResult;
-            handleRollReport(finalResult + Environment.NewLine, Color.Black, false, HorizontalAlignment.Left);
+
+            Color RollReportColor = Color.Black;
+            bool isBold = false;
+
+            if (finalResult.Contains("(D20)1 "))
+            {
+                isBold = true;
+                RollReportColor = Color.Red;
+            }
+            else if (finalResult.Contains("(D20)20"))
+            {
+                isBold = true;
+                RollReportColor = Color.Green;
+            }
+
+            handleRollReport(finalResult + Environment.NewLine, RollReportColor, isBold, HorizontalAlignment.Left);
         }
 
         /* Just for debugging. TODO : Remove this. */

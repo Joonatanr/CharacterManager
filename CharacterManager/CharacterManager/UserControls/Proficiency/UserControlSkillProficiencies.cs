@@ -359,7 +359,14 @@ namespace CharacterManager.UserControls
             UserControlSkillProficiency ctrl = skillProficiencyControlList.Find(c => c.ProficiencyName == skill);
             if (ctrl != null)
             {
-                ctrl.setProficiency(true, 2);
+                if (_connectedCharacter != null)
+                {
+                    ctrl.setProficiency(true, _connectedCharacter.ProficiencyBonus);
+                }
+                else
+                {
+                    ctrl.setProficiency(true, 2);
+                }
                 LockedSkillProficiencies.Add(skill); //This should not be deselectable by the user.
                 return true;
             }
