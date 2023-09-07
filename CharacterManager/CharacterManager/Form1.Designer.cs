@@ -611,6 +611,8 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel7.AutoScroll = true;
             this.panel7.Controls.Add(this.userControlLanguageProficiencies);
             this.panel7.Location = new System.Drawing.Point(779, 671);
@@ -620,6 +622,8 @@
             // 
             // userControlLanguageProficiencies
             // 
+            this.userControlLanguageProficiencies.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.userControlLanguageProficiencies.IsBorder = true;
             this.userControlLanguageProficiencies.Location = new System.Drawing.Point(3, 1);
             this.userControlLanguageProficiencies.Name = "userControlLanguageProficiencies";
@@ -629,6 +633,8 @@
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel6.AutoScroll = true;
             this.panel6.Controls.Add(this.buttonAddItems);
             this.panel6.Controls.Add(this.userControlEquipmentHandler1);
@@ -649,6 +655,8 @@
             // 
             // userControlEquipmentHandler1
             // 
+            this.userControlEquipmentHandler1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.userControlEquipmentHandler1.IsBorder = true;
             this.userControlEquipmentHandler1.Location = new System.Drawing.Point(3, 3);
             this.userControlEquipmentHandler1.Name = "userControlEquipmentHandler1";

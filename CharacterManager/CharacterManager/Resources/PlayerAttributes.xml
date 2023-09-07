@@ -624,6 +624,12 @@ DC resets to 10.
 				<MaximumCharges>5</MaximumCharges>
 			</PlayerAbilityUpgrade>
 			<PlayerAbilityUpgrade>
+				<Level>15</Level>
+				<AdditionalDescription>Beginning at 15th level, your rage is so fierce that
+it ends early only if you fall unconscious or if you
+choose to end it.</AdditionalDescription>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
 				<Level>17</Level>
 				<MaximumCharges>6</MaximumCharges>
 			</PlayerAbilityUpgrade>
@@ -695,6 +701,16 @@ to extend the duration of this effect on the frightened</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
+		<Name>Retaliation</Name>
+		<Description>Starting at 14th level, when you take damage from
+a creature that is within 5 feet of you. you can use
+your reaction to make a melee weapon attack against
+that creature.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
 		<Name>Spirit Seeker</Name>
 		<Description>Yours is a path that seeks attunement with the natural
 world, giving you a kinship with beasts. At 3rd level when
@@ -755,6 +771,32 @@ pace (see chapter 8 for rules on travel pace).</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
+		<Name>Bear Totemic Attunement</Name>
+		<Description>While you’re raging, any creature within 5 feet
+o f you that’s hostile to you has disadvantage on attack
+rolls against targets other than you or another character
+with this feature. An enemy is im mune to this effect if it
+can’t see or hear you or if it can’t be frightened</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Eagle Totemic Attunement</Name>
+		<Description>While raging, you have a flying speed equal to
+your current walking speed. This benefit works only in
+short bursts; you fall if you end your turn in the air and
+nothing else is holding you aloft.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Wolf Totemic Attunement</Name>
+		<Description>While you’re raging, you can use a bonus action
+on your turn to knock a Large or smaller creature prone
+when you hit it with melee weapon attack.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
 		<Name>Spirit Walker</Name>
 		<Description>At 10th level, you can cast the commune with nature
 spell, but only as a ritual. When you do so, a spiritual
@@ -803,6 +845,36 @@ DC resets to 10.</Description>
 		<MaximumCharges>0</MaximumCharges>
 		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Persistent Rage</Name>
+		<Description>Beginning at 15th level, your rage is so fierce that
+it ends early only if you fall unconscious or if you
+choose to end it.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Indomitable Might</Name>
+		<Description>Beginning at 18th level, if your total for a Strength
+check is less than your Strength score, you can use that
+score in place of the total.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>false</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Primal Champion</Name>
+		<Description>At 20th level, you embody the power of the wilds. Your
+Strength and Constitution scores increase by 4. Your
+maximum for those scores is now 24.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>false</IsCombatAbility>
+		<StrIncrease>4</StrIncrease>
+		<ConIncrease>4</ConIncrease>
+	</PlayerAbility>
+
 	
 <!-- Bard class abilities -->
 

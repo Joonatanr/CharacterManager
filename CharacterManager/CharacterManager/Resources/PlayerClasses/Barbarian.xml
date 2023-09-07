@@ -169,14 +169,57 @@ you must finish a long rest before you can rage again.</Description>
 	
 	<!-- Level 10 -->
 	<!-- Level 11 -->
-	<AvailableClassAbilitiesLevel10>
+	<AvailableClassAbilitiesLevel11>
 		<PlayerClassAbilityChoice>
 			<AvailableChoices>
 				<string>Relentless Rage</string>
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
-	</AvailableClassAbilitiesLevel10>
+	</AvailableClassAbilitiesLevel11>
+	<!-- Level 12 -->
+	<!-- Nothing but ability score improvement here. -->
 	
+	<!-- Level 13 -->
+	<!-- Brutal Critical is improved, but this is handled in the source code. -->
+	
+	<!-- Level 14 -->
+	<!-- Path Feature -->
+	
+	<!-- Level 15 -->
+	<AvailableClassAbilitiesLevel15>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Persistent Rage</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel15>
+	
+	<!-- Level 16 -->
+	<!-- Ability Score Improvement -->
+	
+	<!-- Level 17 -->
+	<!-- Brutal Critical is improved, but this is handled in the source code. -->
+	
+	<!-- Level 18 -->
+	<AvailableClassAbilitiesLevel18>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Indomitable Might</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel18>
+	
+	<!-- Level 19 -->
+	<!-- Ability Score Improvement -->
+	
+	<!-- Level 20 -->
+	<AvailableClassAbilitiesLevel20>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Primal Champion</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel20>
 	
 	<ArcheTypes>
 		<PlayerClassArchetype>
@@ -210,6 +253,14 @@ heedless of your own health or well-being.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Retaliation</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
 
 		</PlayerClassArchetype>
 		
@@ -272,6 +323,20 @@ animal you selected at 3rd level or a different one.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel10>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<Description>At 14th level, you gain a magical benefit based on a
+totem animal of your choice. You can choose the same
+animal you selected previously or a different one.</Description>
+					<ClassAbilityName>Totemic Attunement</ClassAbilityName>
+					<AvailableChoices>
+						<string>Bear Totemic Attunement</string>
+						<string>Eagle Totemic Attunement</string>
+						<string>Wolf Totemic Attunement</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	

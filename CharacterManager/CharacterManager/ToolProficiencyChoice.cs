@@ -54,7 +54,6 @@ namespace CharacterManager
                 res.AvailableChoices.Add(str);
             }
 
-
             return res;
         }
 

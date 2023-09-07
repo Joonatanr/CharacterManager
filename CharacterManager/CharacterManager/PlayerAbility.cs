@@ -48,6 +48,15 @@ namespace CharacterManager
         public int AdditionalProficiencyChoices { get; set; } = 0;
         public int AdditionalExpertiseChoices { get; set; } = 0;
 
+        /* Some abilities might increase base attributes. */
+        public int StrIncrease = 0;
+        public int DexIncrease = 0;
+        public int WisIncrease = 0;
+        public int ConIncrease = 0;
+        public int ChaIncrease = 0;
+        public int IntIncrease = 0;
+
+
         private int _remainingCharges = 0;
         [XmlIgnore]
         public int RemainingCharges
@@ -331,6 +340,12 @@ namespace CharacterManager
         public virtual void HandleAbilitySelected(PlayerCharacter c)
         {
             /* Can be overridden by abilities. */
+            c.StrengthAttribute += StrIncrease;
+            c.DexAttribute += DexIncrease;
+            c.ConAttribute += ConIncrease;
+            c.CharAttribute += ChaIncrease;
+            c.IntAttribute += IntIncrease;
+            c.WisAttribute += WisIncrease;
         }
 
         public virtual void HandleInfoButtonClicked(object sender, EventArgs e)
