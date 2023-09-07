@@ -116,7 +116,6 @@ namespace CharacterManager.UserControls
                     }
                 }
 
-
                 itemDictionary = itemLocations;
                 textDictionary = textLocations;
             }

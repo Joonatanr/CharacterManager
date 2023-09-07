@@ -44,7 +44,6 @@ namespace CharacterManager.UserControls
         }
 
         protected List<ItemHandleControl<ItemType>> myControlList = new List<ItemHandleControl<ItemType>>();
-        protected List<ItemType> myItemList = new List<ItemType>();
         protected List<ItemType> myLockedItemList = new List<ItemType>(); /* These are spells that are already chosen because they come from racial abilities etc... */
         protected int number_of_fixed_replacements = 0;
         protected int number_of_remaining_fixed_replacements = 0;
@@ -217,7 +216,7 @@ namespace CharacterManager.UserControls
                         //We only add the external listener if this control is going to be modified by the user.
                         ctrl.ItemCheckedChanged += Ctrl_ItemCheckedChanged;
                     }
-                    AddControlOnLine(myCheckBox, index - 1, 3 + iBtn.Width, false);
+                    AddControlOnLine(myCheckBox, index, 3 + iBtn.Width, false);
                 }
             }
 
