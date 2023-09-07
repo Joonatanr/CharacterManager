@@ -145,6 +145,16 @@ namespace CharacterManager.UserControls
                     }
                     this.label1.Text = "Any Artisan or Musical Proficiency";
                     break;
+                case ToolProficiencyChoice.ToolProficiencyChoiceType.TYPE_GAMING:
+                    foreach (Items.PlayerToolKit toolkit in existingToolProficiencies)
+                    {
+                        if (toolkit.ToolType == Items.PlayerToolKit.PlayerToolType.TYPE_GAMING)
+                        {
+                            comboBox1.Items.Add(toolkit.Name);
+                        }
+                    }
+                    this.label1.Text = "Any Gaming Set Proficiency";
+                    break;
                 default:
                     break;
             }
