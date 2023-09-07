@@ -123,23 +123,15 @@ namespace CharacterManager.UserControls
             this.Controls.Add(c);
         }
 
-        protected void AddSpellSlotOnLine(UserControlSpellSlotIndicator slot, int lineNum, int xloc)
+        protected void AddSpellSlotOnLine(UserControlSpellSlotIndicator slot, int lineNum, int xOffset)
         {
-            int y = lineInterval;
-            y += lineNum * lineInterval;
-
-            slot.Location = new Point(xloc, y + 4);
-            this.Controls.Add(slot);
+            AddControlOnLine(slot, lineNum, xOffset, false);
         }
 
 
         protected void AddButtonOnLine(CustomButton btn, int lineNum, int xOffset)
         {
-            int y = lineInterval;
-            y += lineNum * lineInterval;
-
-            btn.Location = new Point((this.Width - (3 + btn.Width)) - xOffset, y + 3);
-            this.Controls.Add(btn);
+            AddControlOnLine(btn, lineNum, xOffset, false);
         }
 
         protected int getNumberOfVisibleLines()

@@ -176,6 +176,8 @@ namespace CharacterManager.UserControls
         {
             this.Controls.Clear(); /* Remove any existing controls. */
             myControlList = new List<ItemHandleControl<ItemType>>();
+            LeftMargin = new Dictionary<int, int>();
+            RightMargin = new Dictionary<int, int>();
 
             List<ItemType> combinedItemList = myItemList.Union(myLockedItemList).ToList();
             setItemPositions(combinedItemList, out myItemDictionary, out myTextDictionary);
@@ -189,7 +191,7 @@ namespace CharacterManager.UserControls
                 ctrl.ItemDescriptionArgs = this.ItemDescriptionArgs;
                 myControlList.Add(ctrl);
 
-                AddButtonOnLine(iBtn, index - 1, 3); /*TODO : Looks like adding controls begins with line index 1, but text uses index 0... <sigh>*/
+                AddButtonOnLine(iBtn, index, 3);
 
                 if (IsCheckBoxed)
                 {
@@ -216,7 +218,7 @@ namespace CharacterManager.UserControls
                         //We only add the external listener if this control is going to be modified by the user.
                         ctrl.ItemCheckedChanged += Ctrl_ItemCheckedChanged;
                     }
-                    AddControlOnLine(myCheckBox, index, 3 + iBtn.Width, false);
+                    AddControlOnLine(myCheckBox, index, 3, false);
                 }
             }
 

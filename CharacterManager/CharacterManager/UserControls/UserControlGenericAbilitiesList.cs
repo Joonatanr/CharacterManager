@@ -243,7 +243,7 @@ namespace CharacterManager.UserControls
                         {
                             useButton.ButtonText = "Use";
                         }
-                        AddButtonOnLine(useButton, y, myBtn.Width + 1);
+                        AddButtonOnLine(useButton, y, 1);
 
                         cData.setUseButton(useButton);
                         cData.changeAbilityChargesManually = SpellSlotIndicatorChangedManuallyHandler;
@@ -254,7 +254,7 @@ namespace CharacterManager.UserControls
                         for (int x = 0; x < attrib.MaximumCharges; x++)
                         {
                             UserControlSpellSlotIndicator slotIndicator = new UserControlSpellSlotIndicator();
-                            AddSpellSlotOnLine(slotIndicator, y, useButton.Left - (((x + 1) * slotIndicator.Width) + 6));
+                            AddSpellSlotOnLine(slotIndicator, y, 1);
                             arr[x] = slotIndicator;
                         }
 
