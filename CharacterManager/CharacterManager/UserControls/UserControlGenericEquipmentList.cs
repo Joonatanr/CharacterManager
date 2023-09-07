@@ -73,9 +73,11 @@ namespace CharacterManager.UserControls
 
         private void updateInfoButtons()
         {
-            /* TODO : This obviously isn't a very good solution, but maybe it will be OK??? */
             //Lets remove any old buttons.
             List<Control> myListToRemove = new List<Control>();
+            LeftMargin = new Dictionary<int, int>();
+            RightMargin = new Dictionary<int, int>();
+
             foreach (Control c in this.Controls)
             {
                 if (c is InfoButton)
@@ -90,7 +92,7 @@ namespace CharacterManager.UserControls
             }
 
             //Lets test adding a button for each piece of equipment.
-            int y = 2;
+            int y = 3;
 
             foreach (PlayerWeapon w in wList)
             {
@@ -210,14 +212,8 @@ namespace CharacterManager.UserControls
 
         private void drawEquipmentString(Graphics gfx, PlayerItem item, int line)
         {
-            String str = item.Name;
-
-            if (item.Quantity > 1)
-            {
-                str = str + "(" + item.Quantity.ToString() + ")";
-            }
-
-            drawTextOnLine(gfx, str, line);
+            Font myFont = new Font("Arial", 14);
+            drawDisplayedDataSingleItem(gfx, myFont, line, item);
         }
     }
 }

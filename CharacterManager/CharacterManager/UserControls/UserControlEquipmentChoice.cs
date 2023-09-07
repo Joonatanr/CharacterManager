@@ -89,7 +89,7 @@ namespace CharacterManager.UserControls
 
                         yloc += singleControl.Height;
                         yloc += 1;
-                        EdgeOfControl = singleControl.Right;
+                        EdgeOfControl = singleControl.Right;  
                     }
 
 
@@ -103,6 +103,9 @@ namespace CharacterManager.UserControls
                     myControlList.Add(pair);
                 }
             }
+
+            this.Width = numberOfChoices * 180;
+            this.Invalidate();
         }
     }
 }

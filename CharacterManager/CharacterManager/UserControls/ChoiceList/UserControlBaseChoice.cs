@@ -311,7 +311,6 @@ namespace CharacterManager.UserControls
                  it again. We don't really have a way of determining which spell has been chosen instead of the replaced spell. 
                 Therefore we will have to reset the current choices. */
 
-                /* TODO */
                 _remainingAvailableChoices--;
 
                 if (_remainingAvailableChoices == 0)

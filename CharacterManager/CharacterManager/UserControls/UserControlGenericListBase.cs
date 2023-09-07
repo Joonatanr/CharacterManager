@@ -23,7 +23,6 @@ namespace CharacterManager.UserControls
         protected Dictionary<int, int> LeftMargin = new Dictionary<int, int>();
         protected Dictionary<int, int> RightMargin = new Dictionary<int, int>();
 
-        /* TODO : We have to start from somewhere. */
         protected List<ListItemType> myItemList = new List<ListItemType>();
 
         protected class InfoButton : CustomButton
@@ -85,7 +84,17 @@ namespace CharacterManager.UserControls
             RightMargin = new Dictionary<int, int>();
         }
 
-        protected void AddControlOnLine(Control c, int lineNum, int xOffset, bool isLeftSide)
+        /// <summary>
+        /// This is the primary function for adding controls on a linge. The function is automatically designed
+        /// to take care of the margins for any given line. This should make sure that the inner text of any line
+        /// does not overlap with any controls.
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="lineNum"></param>
+        /// <param name="xOffset"></param>
+        /// <param name="yOffset"></param>
+        /// <param name="isLeftSide"></param>
+        protected void AddControlOnLine(Control c, int lineNum, int xOffset, int yOffset, bool isLeftSide)
         {
             int y = 0;
             y += lineNum * lineInterval;
@@ -98,7 +107,7 @@ namespace CharacterManager.UserControls
                 leftLineMargin = 0;
             }
 
-            if(RightMargin.TryGetValue(lineNum, out rightLineMargin) == false)
+            if (RightMargin.TryGetValue(lineNum, out rightLineMargin) == false)
             {
                 rightLineMargin = 0;
             }
@@ -114,7 +123,7 @@ namespace CharacterManager.UserControls
                 /* By default we add controls on the right side. */
                 rightLineMargin += c.Width + 1;
                 rightLineMargin += xOffset;
-                c.Location = new Point(this.Width - rightLineMargin, y + 3);
+                c.Location = new Point(this.Width - rightLineMargin, y + yOffset);
             }
 
             LeftMargin[lineNum] = leftLineMargin;
@@ -123,9 +132,21 @@ namespace CharacterManager.UserControls
             this.Controls.Add(c);
         }
 
+        /// <summary>
+        /// This overload only takes the xOffset. Default y offset is set to 3. 
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="lineNum"></param>
+        /// <param name="xOffset"></param>
+        /// <param name="isLeftSide"></param>
+        protected void AddControlOnLine(Control c, int lineNum, int xOffset, bool isLeftSide)
+        {
+            AddControlOnLine(c, lineNum, xOffset, 3, isLeftSide);
+        }
+
         protected void AddSpellSlotOnLine(UserControlSpellSlotIndicator slot, int lineNum, int xOffset)
         {
-            AddControlOnLine(slot, lineNum, xOffset, false);
+            AddControlOnLine(slot, lineNum, xOffset, 4 ,false);
         }
 
 
@@ -145,7 +166,6 @@ namespace CharacterManager.UserControls
 
             foreach (ListItemType i in myItemList)
             {
-                /* TODO : We need to implement taking into account the room occupied by different controls, but that will take time. */
                 drawDisplayedDataSingleItem(gfx, font, y, i);
                 y++;
             }

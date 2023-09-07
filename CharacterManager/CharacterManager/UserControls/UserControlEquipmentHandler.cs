@@ -11,7 +11,6 @@ namespace CharacterManager.UserControls
 {
     public class UserControlEquipmentHandler : UserControlGenericListBase<PlayerItem>
     {
-        /* TODO : Obviously we need to set up proper polymorphism to get this working in a good way. But let it be for now. */
         private class GeneralEquipmentControlData
         {
             public PlayerItem item;

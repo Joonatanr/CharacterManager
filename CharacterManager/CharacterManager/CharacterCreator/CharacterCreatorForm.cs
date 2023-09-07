@@ -246,8 +246,6 @@ namespace CharacterManager.CharacterCreator
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            /* TODO */
-
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
@@ -433,7 +431,6 @@ namespace CharacterManager.CharacterCreator
 
         private void updateAllDisplayedData()
         {
-            //TODO : Create a base attribute display class. 
             //1. Lets begin with the selected race and subrace
             if (SelectedMainRace != null)
             {
@@ -999,11 +996,11 @@ namespace CharacterManager.CharacterCreator
                 return;
             }
 
-            if (myChooseEquipmentForm.SelectedClass != SelectedClass)
+            if (myChooseEquipmentForm.getSelectedClass() != SelectedClass)
             {
                 /* We reset the data in this case. */
                 myChooseEquipmentForm = new FormChooseEquipment();
-                myChooseEquipmentForm.SelectedClass = SelectedClass;
+                myChooseEquipmentForm.setSelectedClass(SelectedClass);
             }
             
             if (myChooseEquipmentForm.ShowDialog() == DialogResult.OK)
