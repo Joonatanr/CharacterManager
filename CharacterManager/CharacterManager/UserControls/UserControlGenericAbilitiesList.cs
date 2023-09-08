@@ -243,7 +243,7 @@ namespace CharacterManager.UserControls
 
                 if (IsSlotsVisible) 
                 {
-                    if (attrib.MaximumCharges > 0 || attrib.IsToggle)
+                    if (attrib.MaximumCharges > 0 || attrib.IsToggle || attrib.IsUsable)
                     {
                         /* Lets add the use button. */
                         CustomButton useButton = new CustomButton();

@@ -50,6 +50,7 @@ namespace CharacterManager.Spells
                     groupBoxCasting.Enabled = false;
                     groupBoxCasting.Visible = false;
                 }
+                UpdateVisualComponents();
             }
         }
 
@@ -74,26 +75,36 @@ namespace CharacterManager.Spells
 
         private void updateSpellName()
         {
-            labelSpellName.Text = mySpell.DisplayedName;
+            if (mySpell != null)
+            {
+                labelSpellName.Text = mySpell.DisplayedName;
+            }
+            else
+            {
+                labelSpellName.Text = "Unknown";
+            }
         }
 
         private void updateSpellTypeDescription()
         {
-            String txt;
-            if (mySpell.SpellLevel <= 9)
+            String txt = "";
+            if (mySpell != null)
             {
-                txt = numberStrings[mySpell.SpellLevel];
-            }
-            else
-            {
-                txt = "Unknown";
-            }
+                if (mySpell.SpellLevel <= 9)
+                {
+                    txt = numberStrings[mySpell.SpellLevel];
+                }
+                else
+                {
+                    txt = "Unknown";
+                }
 
-            txt += " " + mySpell.School;
+                txt += " " + mySpell.School;
 
-            if (mySpell.IsRitual)
-            {
-                txt += " (ritual)";
+                if (mySpell.IsRitual)
+                {
+                    txt += " (ritual)";
+                }
             }
 
             labelSpellType.Text = txt;
@@ -101,25 +112,32 @@ namespace CharacterManager.Spells
 
         private void updateCastingTime()
         {
-            switch (mySpell.CastingTime)
+            if (mySpell != null)
             {
-                case PlayerSpell.CastingTimeEnum.CASTING_TIME_ACTION:
-                    labelCastingTime.Text = "1 action";
-                    break;
-                case PlayerSpell.CastingTimeEnum.CASTING_TIME_BONUS_ACTION:
-                    labelCastingTime.Text = "1 bonus action";
-                    break;
-                case PlayerSpell.CastingTimeEnum.CASTING_TIME_PERIOD:
-                    String periodTxt = "";
-                    periodTxt += getDurationString(mySpell.CastingTimePeriod);
-                    labelCastingTime.Text = periodTxt;
-                    break;
-                case PlayerSpell.CastingTimeEnum.CASTING_TIME_REACTION:
-                    labelCastingTime.Text = "Reaction";
-                    break;
-                default:
-                    labelCastingTime.Text = "UNKNOWN";
-                    break;
+                switch (mySpell.CastingTime)
+                {
+                    case PlayerSpell.CastingTimeEnum.CASTING_TIME_ACTION:
+                        labelCastingTime.Text = "1 action";
+                        break;
+                    case PlayerSpell.CastingTimeEnum.CASTING_TIME_BONUS_ACTION:
+                        labelCastingTime.Text = "1 bonus action";
+                        break;
+                    case PlayerSpell.CastingTimeEnum.CASTING_TIME_PERIOD:
+                        String periodTxt = "";
+                        periodTxt += getDurationString(mySpell.CastingTimePeriod);
+                        labelCastingTime.Text = periodTxt;
+                        break;
+                    case PlayerSpell.CastingTimeEnum.CASTING_TIME_REACTION:
+                        labelCastingTime.Text = "Reaction";
+                        break;
+                    default:
+                        labelCastingTime.Text = "UNKNOWN";
+                        break;
+                }
+            }
+            else
+            {
+                labelCastingTime.Text = "UNKNOWN";
             }
         }
 
@@ -145,38 +163,45 @@ namespace CharacterManager.Spells
 
         private void updateRange()
         {
-            if (mySpell.SpellRange == 0) 
+            if (mySpell != null)
             {
-                if(mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_SELF)
+                if (mySpell.SpellRange == 0)
                 {
-                    string txt = "Self";
-                    
-                    if (mySpell.AoeType == PlayerSpell.AreaOfEffectType.AOE_TYPE_CONE)
+                    if (mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_SELF)
                     {
-                        txt += "(" + mySpell.AoeSize.ToString() + "-ft cone)";
-                    }
-                    else if(mySpell.AoeType == PlayerSpell.AreaOfEffectType.AOE_TYPE_SPHERE)
-                    {
-                        txt += "(" + mySpell.AoeSize.ToString() + "-ft sphere)";
-                    }
-                    else if (mySpell.AoeType == PlayerSpell.AreaOfEffectType.AOE_TYPE_CUBE)
-                    {
-                        txt += "(" + mySpell.AoeSize.ToString() + "-ft cube)";
-                    }
+                        string txt = "Self";
 
-                    labelRange.Text = txt;
-                }
-                else if(mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_TOUCH)
-                {
-                    labelRange.Text = "Touch";
-                }
-                else if(mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_UNLIMITED)
-                {
-                    labelRange.Text = "Unlimited";
-                }
-                else if(mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_SIGHT)
-                {
-                    labelRange.Text = "Sight";
+                        if (mySpell.AoeType == PlayerSpell.AreaOfEffectType.AOE_TYPE_CONE)
+                        {
+                            txt += "(" + mySpell.AoeSize.ToString() + "-ft cone)";
+                        }
+                        else if (mySpell.AoeType == PlayerSpell.AreaOfEffectType.AOE_TYPE_SPHERE)
+                        {
+                            txt += "(" + mySpell.AoeSize.ToString() + "-ft sphere)";
+                        }
+                        else if (mySpell.AoeType == PlayerSpell.AreaOfEffectType.AOE_TYPE_CUBE)
+                        {
+                            txt += "(" + mySpell.AoeSize.ToString() + "-ft cube)";
+                        }
+
+                        labelRange.Text = txt;
+                    }
+                    else if (mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_TOUCH)
+                    {
+                        labelRange.Text = "Touch";
+                    }
+                    else if (mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_UNLIMITED)
+                    {
+                        labelRange.Text = "Unlimited";
+                    }
+                    else if (mySpell.RangeType == PlayerSpell.SpellRangeType.RANGE_TYPE_SIGHT)
+                    {
+                        labelRange.Text = "Sight";
+                    }
+                    else
+                    {
+                        labelRange.Text = getRangeText(mySpell.SpellRange);
+                    }
                 }
                 else
                 {
@@ -185,33 +210,37 @@ namespace CharacterManager.Spells
             }
             else
             {
-                labelRange.Text = getRangeText(mySpell.SpellRange);
+                labelRange.Text = "Unknown";
             }
         }
 
         private void updateComponents()
         {
             String compString = "";
-            if (mySpell.IsVerbalComponent)
+            
+            if (mySpell != null)
             {
-                compString += "V ";
-            }
+                if (mySpell.IsVerbalComponent)
+                {
+                    compString += "V ";
+                }
 
-            if (mySpell.IsSomaticComponent)
-            {
-                compString += "S ";
-            }
+                if (mySpell.IsSomaticComponent)
+                {
+                    compString += "S ";
+                }
 
-            if (mySpell.IsMaterialComponent)
-            {
-                compString += "M ";
-            }
+                if (mySpell.IsMaterialComponent)
+                {
+                    compString += "M ";
+                }
 
-            if(mySpell.IsMaterialComponent && !string.IsNullOrEmpty(mySpell.MaterialComponent))
-            {
-                compString += " (";
-                compString += mySpell.MaterialComponent;
-                compString += ")";
+                if (mySpell.IsMaterialComponent && !string.IsNullOrEmpty(mySpell.MaterialComponent))
+                {
+                    compString += " (";
+                    compString += mySpell.MaterialComponent;
+                    compString += ")";
+                }
             }
 
             labelComponents.Text = compString;
@@ -219,26 +248,29 @@ namespace CharacterManager.Spells
 
         private void updateDuration()
         {
-            String durString;
+            String durString = "";
 
-            if (this.mySpell.IsUntilDispelled)
+            if (mySpell != null)
             {
-                durString = "Until dispelled";
-            }
-            else 
-            { 
-
-                if (mySpell.SpellDuration > 0)
+                if (this.mySpell.IsUntilDispelled)
                 {
-                    durString = getDurationString(mySpell.SpellDuration);
-                    if (mySpell.IsConcentration)
-                    {
-                        durString = "Concentration, up to " + durString;
-                    }
+                    durString = "Until dispelled";
                 }
                 else
                 {
-                    durString = "Instantaneous";
+
+                    if (mySpell.SpellDuration > 0)
+                    {
+                        durString = getDurationString(mySpell.SpellDuration);
+                        if (mySpell.IsConcentration)
+                        {
+                            durString = "Concentration, up to " + durString;
+                        }
+                    }
+                    else
+                    {
+                        durString = "Instantaneous";
+                    }
                 }
             }
 
@@ -247,16 +279,23 @@ namespace CharacterManager.Spells
 
         private void updateDescription()
         {
-            richTextBoxDescription.Text = mySpell.Description;
-            richTextBoxDescription.AppendText("\r\n\r\n");
-            if (!string.IsNullOrEmpty(mySpell.AtHigherLevels)) 
+            if (mySpell != null)
             {
-                string str = "At higher Levels:";
-                string str1 = Environment.NewLine + mySpell.AtHigherLevels;
-                int length = richTextBoxDescription.Text.Length;
-                richTextBoxDescription.AppendText((Convert.ToString((str + str1) + "\r") + "\n"));
-                richTextBoxDescription.Select(length, str.Length);
-                richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
+                richTextBoxDescription.Text = mySpell.Description;
+                richTextBoxDescription.AppendText("\r\n\r\n");
+                if (!string.IsNullOrEmpty(mySpell.AtHigherLevels))
+                {
+                    string str = "At higher Levels:";
+                    string str1 = Environment.NewLine + mySpell.AtHigherLevels;
+                    int length = richTextBoxDescription.Text.Length;
+                    richTextBoxDescription.AppendText((Convert.ToString((str + str1) + "\r") + "\n"));
+                    richTextBoxDescription.Select(length, str.Length);
+                    richTextBoxDescription.SelectionFont = new Font(richTextBoxDescription.Font, FontStyle.Bold);
+                }
+            }
+            else
+            {
+                richTextBoxDescription.Text = "Empty";
             }
         }
 
@@ -286,36 +325,41 @@ namespace CharacterManager.Spells
             /*8. Update the Casting info. */
             if (this.IsCastingInfoVisible)
             {
-                if (mySpell.SpellLevel == 0)
+                if (mySpell != null)
                 {
-                    numericUpDown1.Minimum = 0;
-                    int spellcasterLevel = GlobalEvents.GetSpellCasterLevel();
-                    /* We do a hack for cantrips... */
-                    if(spellcasterLevel < 5)
+                    if (mySpell.SpellLevel == 0)
                     {
-                        numericUpDown1.Maximum = 0;
-                    }else if(spellcasterLevel < 11)
-                    {
-                        numericUpDown1.Maximum = 1;
-                    }else if(spellcasterLevel < 17)
-                    {
-                        numericUpDown1.Maximum = 2;
+                        numericUpDown1.Minimum = 0;
+                        int spellcasterLevel = GlobalEvents.GetSpellCasterLevel();
+                        /* We do a hack for cantrips... */
+                        if (spellcasterLevel < 5)
+                        {
+                            numericUpDown1.Maximum = 0;
+                        }
+                        else if (spellcasterLevel < 11)
+                        {
+                            numericUpDown1.Maximum = 1;
+                        }
+                        else if (spellcasterLevel < 17)
+                        {
+                            numericUpDown1.Maximum = 2;
+                        }
+                        else
+                        {
+                            numericUpDown1.Maximum = 3;
+                        }
+
+
+                        numericUpDown1.Value = numericUpDown1.Maximum;
+                        numericUpDown1.Enabled = false;
                     }
                     else
                     {
-                        numericUpDown1.Maximum = 3;
+                        numericUpDown1.Minimum = this.mySpell.SpellLevel;
+                        numericUpDown1.Maximum = 9; /* TODO : Placeholder. */
+                        numericUpDown1.Value = numericUpDown1.Minimum;
+                        numericUpDown1.Enabled = true;
                     }
-
-
-                    numericUpDown1.Value = numericUpDown1.Maximum;
-                    numericUpDown1.Enabled = false;
-                }
-                else
-                {
-                    numericUpDown1.Minimum = this.mySpell.SpellLevel;
-                    numericUpDown1.Maximum = 9; /* TODO : Placeholder. */
-                    numericUpDown1.Value = numericUpDown1.Minimum;
-                    numericUpDown1.Enabled = true;
                 }
             }
         }

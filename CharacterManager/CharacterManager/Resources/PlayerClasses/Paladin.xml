@@ -166,10 +166,26 @@ later get to choose again.</Description>
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
 		<PlayerClassAbilityChoice>
-			<Description>Paladin Spellcasting</Description>
+			<Description>By 2nd level, you have learned to draw on divine
+magic through meditation and prayer to cast spells as
+a cleric does. S ee chapter 10 for the general rules of
+spellcasting and chapter 11 for the paladin spell list.</Description>
 			<ClassAbilityName>SpellCasting</ClassAbilityName>
 				<AvailableChoices>
 					<string>SpellCasting</string>
+				</AvailableChoices>
+		</PlayerClassAbilityChoice>
+		<PlayerClassAbilityChoice>
+			<ClassAbilityName>Divine Smite</ClassAbilityName>
+				<Description>Starting at 2nd level, when you hit a creature with a
+melee weapon attack, you can expend one paladin spell
+slot to deal radiant damage to the target, in addition to
+the weapon’s damage. The extra damage is 2d8 for a
+1st-level spell slot, plus 1d8 for each spell level higher
+than 1st, to a maximum of 5d8. The damage increases
+by 1d8 if the target is an undead or a fiend.</Description>
+				<AvailableChoices>
+					<string>Divine Smite</string>
 				</AvailableChoices>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel2>

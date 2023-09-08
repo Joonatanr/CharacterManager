@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using CharacterManager.CharacterCreator;
 using CharacterManager.Items;
 using CharacterManager.SpecialAttributes;
+using CharacterManager.Spells;
 using CharacterManager.UserControls;
 using CharacterManager.UserControls.Levelup;
 using static CharacterManager.CharacterCreator.UserControlClassFeature;
@@ -531,6 +532,41 @@ namespace CharacterManager
                 BonusValueModifier sneakAttackBonus = new BonusValueModifier("Sneak Attack", this.Dice);
                 c.BonusValues.AttackDamageBonusModifiers.Add(sneakAttackBonus);
             }
+        }
+    }
+
+
+    /*********************************************************************************************/
+
+    /******* Paladin class abilities. ********/
+    public class DivineSmite : SpecialAttribute
+    {
+        public DivineSmite()
+        {
+            this.Name = "Divine Smite";
+        }
+
+        public override bool UseAbilitySpecial()
+        {
+            if (_connectedCharacter != null)
+            {
+                /* For all intents and purposes Divine Smite functions as a spell. Lets try to treat it just like one. */
+                PlayerSpell dummy = new PlayerSpell("Divine Smite");
+                dummy.Description = this.GetExtendedDescription();
+                dummy.SpellLevel = 1;
+
+                dummy.DiceAtLevel1 = "2d8";
+                dummy.DiceAtLevel2 = "3d8";
+                dummy.DiceAtLevel3 = "4d8";
+                dummy.DiceAtLevel4 = "5d8";
+
+                Spellcard card = new Spellcard();
+                card.IsCastingInfoVisible = true;
+                card.setSpell(dummy);
+                card.ShowDialog();
+            }
+
+            return true;
         }
     }
 }

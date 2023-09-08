@@ -32,6 +32,7 @@ namespace CharacterManager
         }
         
         public Boolean IsToggle { get; set; } = false; /* Can the ability be toggled on or off. */
+        public Boolean IsUsable { get; set; } = false; /* Can the ability be used? (as opposed to a passive ability) */
         public Boolean RechargeAtShortRest { get; set; } = false;
         public Boolean RechargeAtLongRest { get; set; } = false;
         public string Dice { get; set; } /* A lot of playerabilities have some kind of diceroll associated with it. */
@@ -328,7 +329,6 @@ So we get to an issue where upgrades to the description are added multiple times
                     AbilityUsed.Invoke(this);
                 }
             }
-            /* TODO : Create another method for overwriting. This one should be universal for all abilities. */
 
             return res;
         }

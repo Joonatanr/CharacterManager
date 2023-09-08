@@ -749,6 +749,8 @@ namespace CharacterManager
 
             SpecialAttributeList.Add(new RogueExpertise());
             SpecialAttributeList.Add(new SneakAttack());
+
+            SpecialAttributeList.Add(new DivineSmite());
         }
 
         private static void logError(String err)
