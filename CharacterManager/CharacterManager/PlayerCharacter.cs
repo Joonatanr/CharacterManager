@@ -509,8 +509,6 @@ namespace CharacterManager
 
         internal void PerformShortRest()
         {
-            /* TODO : Allow the spending of hit dice. */
-
             foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
             {
                 if (ability.RechargeAtShortRest)
@@ -723,6 +721,7 @@ namespace CharacterManager
             isHeavyArmorWorn = false;
             isShieldWorn = false;
             PlayerArmor wornArmor = null;
+            PlayerArmor wornShield = null;
 
             BonusValues.AcBonusModifiers = new List<BonusValueModifier>();
 
@@ -740,6 +739,7 @@ namespace CharacterManager
                         else
                         {
                             isShieldWorn = true;
+                            wornShield = armor;
                         }
                     }
                     else
@@ -777,8 +777,7 @@ namespace CharacterManager
 
             if (isShieldWorn)
             {
-                /* TODO : Take shield armor bonus into account (could be +1 shield for example). */
-                BonusValues.AcBonusModifiers.Add(new BonusValueModifier("Shield", 2));
+                BonusValues.AcBonusModifiers.AddRange(wornShield.GetAcModifiers(getModifier("DEX")));
             }
 
             /* Fire the event. */
