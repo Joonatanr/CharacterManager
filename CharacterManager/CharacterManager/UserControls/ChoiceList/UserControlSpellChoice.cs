@@ -121,6 +121,17 @@ namespace CharacterManager.UserControls
             }
         }
 
+        protected override string getInfoButtonLabel()
+        {
+            if (IsCastingInfoEnabled)
+            {
+                return "Cast";
+            }
+            else
+            {
+                return base.getInfoButtonLabel();
+            }
+        }
 
         private void SpellSelectionChangedHandler(PlayerSpell spell, bool isChosen)
         {

@@ -172,6 +172,11 @@ namespace CharacterManager.UserControls
             return res;
         }
 
+        protected virtual string getInfoButtonLabel()
+        {
+            return "Info";
+        }
+
         protected void UpdateValues()
         {
             this.Controls.Clear(); /* Remove any existing controls. */
@@ -186,7 +191,7 @@ namespace CharacterManager.UserControls
             {
                 CustomButton iBtn = new CustomButton();
                 iBtn.Size = new Size(40, 18);
-                iBtn.ButtonText = "Info";
+                iBtn.ButtonText = getInfoButtonLabel();
                 ItemHandleControl<ItemType> ctrl = new ItemHandleControl<ItemType>(myItemDictionary[index], iBtn);
                 ctrl.ItemDescriptionArgs = this.ItemDescriptionArgs;
                 myControlList.Add(ctrl);
