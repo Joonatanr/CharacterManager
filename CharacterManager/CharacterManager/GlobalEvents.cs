@@ -12,8 +12,7 @@ namespace CharacterManager.Spells
     {
         /* The idea is that instead of a million callbacks we would have one global instance of a class that handles
          spell casting between different form instances. Lets experiment with this a little. */
-
-        public static DieRollTextBox.RollResultHandler MagicDiceRolledListener = null;
+        public static DieRollTextBox.RollResultHandler GlobalRollListener = null;
         
         public delegate bool IsSpellSlotWithLevelAvailable(int level);
         public static IsSpellSlotWithLevelAvailable SpellSlotLevelAvailableChecker = null;
@@ -26,9 +25,17 @@ namespace CharacterManager.Spells
 
         public static void ReportMagicRoll(string rollresult)
         {
-            if (MagicDiceRolledListener != null)
+            if (GlobalRollListener != null)
             {
-                MagicDiceRolledListener.Invoke(rollresult + Environment.NewLine, Color.Blue, false, System.Windows.Forms.HorizontalAlignment.Left);
+                GlobalRollListener.Invoke(rollresult + Environment.NewLine, Color.Blue, false, System.Windows.Forms.HorizontalAlignment.Left);
+            }
+        }
+
+        public static void ReportRollGlobal(string rollresult, Color c, bool isBold)
+        {
+            if(GlobalRollListener!= null)
+            {
+                GlobalRollListener.Invoke(rollresult + Environment.NewLine, c, isBold, System.Windows.Forms.HorizontalAlignment.Left);
             }
         }
 

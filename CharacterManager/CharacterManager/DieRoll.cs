@@ -173,6 +173,11 @@ namespace CharacterManager
             myComponents = new List<DieRollComponent>();
         }
 
+        public void Add(DieRollComponent comp)
+        {
+            myComponents.Add(comp);
+        }
+
         public DieRollEquation(String val)
         {
             this.DieRollString = val;

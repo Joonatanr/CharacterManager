@@ -35,7 +35,7 @@ namespace CharacterManager
             userControlCurrencyElectrum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
             userControlCurrencyPlatinum.CurrencyAmountChanged = new UserControls.MainForm.UserControlCurrency.CurrencyAmountChangedListener(GoldChanged);
             
-            GlobalEvents.MagicDiceRolledListener = handleRollReport;
+            GlobalEvents.GlobalRollListener = handleRollReport;
             GlobalEvents.SpellSlotLevelAvailableChecker = isSpellSlotWithLevelAvailable;
             GlobalEvents.CastSpellExternal = handleCastSpell;
             GlobalEvents.GetActiveCharacterExternal = getActiveCharacter;
@@ -533,6 +533,10 @@ namespace CharacterManager
         {
             activeCharacter.PerformShortRest();
             UpdateCharacterAbilities();
+
+            FormUseHitDice myForm = new FormUseHitDice();
+            myForm.setConnectedCharacter(activeCharacter);
+            myForm.ShowDialog();
         }
 
         private void HitPointsChanged(int hp)

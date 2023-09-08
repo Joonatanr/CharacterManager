@@ -304,6 +304,14 @@ namespace CharacterManager
             }
         }
 
+        public int HitDieType
+        {
+            get
+            {
+                return GetPlayerClass().HitDie;
+            }
+        }
+
 
         private String _name;
 
@@ -509,6 +517,36 @@ namespace CharacterManager
                 {
                     ability.RemainingCharges = ability.MaximumCharges;
                 }
+            }
+        }
+
+        internal bool RollHitDie(out string RollResult)
+        {
+            if (CurrentHitPoints >= MaxHitPoints)
+            {
+                RollResult = "Already at maximum HP";
+                return false;
+            }
+            
+            if (CurrentHitDice > 0)
+            {
+                int myDie = GetPlayerClass().HitDie;
+                DieRoll myDieRoll = new DieRoll(1, myDie);
+                DieRollConstant myConBonus = new DieRollConstant(getModifier("CON"));
+                DieRollEquation myEquation = new DieRollEquation();
+                myEquation.Add(myDieRoll);
+                myEquation.Add(myConBonus);
+
+                int total = myEquation.RollValue(out RollResult);
+
+                CurrentHitPoints = Math.Min(MaxHitPoints, CurrentHitPoints + total);
+                CurrentHitDice--;
+                return true;
+            }
+            else
+            {
+                RollResult = "No hit Dies left";
+                return false;
             }
         }
 

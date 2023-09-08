@@ -203,6 +203,12 @@
     <Compile Include="UserControls\FormUseCombatManeuver.Designer.cs">
       <DependentUpon>FormUseCombatManeuver.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\FormUseHitDice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\FormUseHitDice.Designer.cs">
+      <DependentUpon>FormUseHitDice.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\GenericListChoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\FormUseCombatManeuver.resx">
       <DependentUpon>FormUseCombatManeuver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\FormUseHitDice.resx">
+      <DependentUpon>FormUseHitDice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\GenericListChoiceForm.resx">
       <DependentUpon>GenericListChoiceForm.cs</DependentUpon>
