@@ -42,13 +42,29 @@ namespace CharacterManager.UserControls
             format.LineAlignment = StringAlignment.Center;
 
             //Draw the info label.
-            Rectangle labelRect = new Rectangle(0, 0, Width, 20);
+            Rectangle labelRect = new Rectangle(0, this.Height - 20, Width, 20);
             Font font = new Font(
                 fontFamily,
                 12,
                 FontStyle.Bold,
                 GraphicsUnit.Pixel);
             gfx.DrawString(text, font, new SolidBrush(Color.Black), labelRect, format);
+        }
+
+        protected void drawDataStringInCenter(Graphics gfx, string str, int FontSize)
+        {
+            FontFamily fontFamily = new FontFamily("Arial");
+            Font font = new Font(
+               fontFamily,
+               FontSize,
+               FontStyle.Bold,
+               GraphicsUnit.Pixel);
+
+            StringFormat format = new StringFormat(StringFormatFlags.NoClip);
+            format.Alignment = StringAlignment.Center;
+            format.LineAlignment = StringAlignment.Center;
+
+            gfx.DrawString(str, font, new SolidBrush(Color.Black), new Rectangle(0, 0, Width, Height), format);
         }
 
         protected virtual void drawData(Graphics gfx)

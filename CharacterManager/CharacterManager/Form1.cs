@@ -231,6 +231,10 @@ namespace CharacterManager
         {
             userControlHitPoints1.MaxHitPoints = activeCharacter.MaxHitPoints;
             userControlHitPoints1.CurrentHitPoints = activeCharacter.CurrentHitPoints;
+
+            userControlhitDice1.RemainingHitDice = activeCharacter.CurrentHitDice;
+            userControlhitDice1.MaxHitDice = activeCharacter.Level;
+            userControlhitDice1.DieType = activeCharacter.GetPlayerClass().HitDie;
         }
 
         private void UpdateCharacterAbilities()
@@ -318,10 +322,16 @@ namespace CharacterManager
         {
             activeCharacter = c;
             c.CharacterHPChanged += characterHpChangedListener;
+            c.CharacterHitDieChanged += C_CharacterHitDieChanged;
             updateCharacterAttributes();
 
             /* Set up listener functions */
             /* TODO */
+        }
+
+        private void C_CharacterHitDieChanged(PlayerCharacter c)
+        {
+            UpdateHitPoints();
         }
 
         /*********************** Listener functions ***********************/

@@ -261,6 +261,9 @@
     <Compile Include="UserControls\MainForm\UserControlCurrency.Designer.cs">
       <DependentUpon>UserControlCurrency.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MainForm\UserControlhitDice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\Proficiency\UserControlSkillProficiency.cs">
       <SubType>UserControl</SubType>
     </Compile>

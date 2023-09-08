@@ -83,7 +83,6 @@ namespace CharacterManager.UserControls
                FontStyle.Bold,
                GraphicsUnit.Pixel);
 
-            //gfx.DrawString(_attributeValue.ToString(), font, new SolidBrush(Color.Black), new PointF(panel1.Left, panel1.Top));
             StringFormat format = new StringFormat(StringFormatFlags.NoClip);
             format.Alignment = StringAlignment.Center;
             format.LineAlignment = StringAlignment.Center;
@@ -92,16 +91,15 @@ namespace CharacterManager.UserControls
 
             if (isEditing)
             {
-                gfx.DrawString(" " + EditingText + CursorString, font, new SolidBrush(Color.Black), new Rectangle(0, 5, Width, Height - 5), format);
+                gfx.DrawString(" " + EditingText + CursorString, font, new SolidBrush(Color.Black), new Rectangle(0, 0, Width, Height), format);
             }
             else
             {
-                gfx.DrawString(CurrentHitPoints.ToString() + "/" + MaxHitPoints.ToString(), font, new SolidBrush(Color.Black), new Rectangle(0, 5, Width, Height - 5), format);
+                gfx.DrawString(CurrentHitPoints.ToString() + "/" + MaxHitPoints.ToString(), font, new SolidBrush(Color.Black), new Rectangle(0, 0, Width, Height), format);
             }
 
             
             drawLabel(gfx, "Hit Points");
-
         }
 
         private void startEditing()

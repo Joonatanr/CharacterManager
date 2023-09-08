@@ -41,23 +41,11 @@ namespace CharacterManager.UserControls
 
         protected override void drawData(Graphics gfx)
         {
-            FontFamily fontFamily = new FontFamily("Arial");
-            Font font = new Font(
-               fontFamily,
-               32,
-               FontStyle.Bold,
-               GraphicsUnit.Pixel);
-
-            //gfx.DrawString(_attributeValue.ToString(), font, new SolidBrush(Color.Black), new PointF(panel1.Left, panel1.Top));
-            StringFormat format = new StringFormat(StringFormatFlags.NoClip);
-            format.Alignment = StringAlignment.Center;
-            format.LineAlignment = StringAlignment.Center;
-
-            gfx.DrawString(_value, font, new SolidBrush(Color.Black), new Rectangle(0, 5, Width, Height - 5), format);
-
+            drawDataStringInCenter(gfx, _value, 32);
             drawLabel(gfx, _label);
-
         }
+
+
 
         private void InitializeComponent()
         {

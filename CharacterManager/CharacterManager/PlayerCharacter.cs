@@ -118,6 +118,7 @@ namespace CharacterManager
         public int MaxHitPoints;
         public int Speed = 0;
         private int _CurrentHitPoints;
+        private int _CurrentHitDice;
 
         public PlayerSize Size;
         public PlayerAlignment Alignment;
@@ -290,6 +291,19 @@ namespace CharacterManager
             }
         }
 
+        public int CurrentHitDice
+        {
+            get
+            {
+                return _CurrentHitDice;
+            }
+            set
+            {
+                _CurrentHitDice = value;
+                CharacterHitDieChanged?.Invoke(this);
+            }
+        }
+
 
         private String _name;
 
@@ -308,6 +322,7 @@ namespace CharacterManager
         public event PlayerEvent CharacterLevelup;
 
         public event PlayerEvent CharacterHPChanged;
+        public event PlayerEvent CharacterHitDieChanged;
         public event PlayerEvent CharacterAbilityStatsUpdated;
 
         public event PlayerEvent CharacterSkillBonuseUpdated;
@@ -478,6 +493,10 @@ namespace CharacterManager
 
             /* 3. Restore spell points. */
             this.CharacterSpellCastingStatus.RechargeAllSpellSlots();
+
+            /* 4. Restore half of total hit Dice. */
+            int addition = Math.Max (1, Level / 2);
+            CurrentHitDice = Math.Min(Level, CurrentHitDice + addition);
         }
 
         internal void PerformShortRest()
