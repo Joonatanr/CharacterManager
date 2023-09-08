@@ -40,9 +40,9 @@ namespace CharacterManager.UserControls
             public DisplayDataChangedHandler DisplayDataChanged;
 
             public UserControlSpellSlotIndicator [] slotArray;
-
             private int numberOfSpellSlots;
 
+            private NumericUpDown LargeIndicator = null;
 
             public AttributeControlData(PlayerAbility _attribute)
             {
@@ -60,7 +60,15 @@ namespace CharacterManager.UserControls
             {
                 int active_cnt = value;
 
-                if (slotArray != null) 
+                if (LargeIndicator != null)
+                {
+                    /* We have to check this in order not to get stuck in an infinite loop of callbacks. */
+                    if(LargeIndicator.Value != value)
+                    {
+                        LargeIndicator.Value = value;
+                    }
+                }
+                else if (slotArray != null) 
                 {
                     for (int x = 0; x < slotArray.Length; x++)
                     {
@@ -90,6 +98,18 @@ namespace CharacterManager.UserControls
                 }
 
                 setNumberOfSpellSlotsActive(Attribute.RemainingCharges);
+            }
+
+
+            public void setSpellSlotsLargeIndicator(NumericUpDown ctrl)
+            {
+                LargeIndicator = ctrl;
+                ctrl.ValueChanged += Ctrl_ValueChanged;
+            }
+
+            private void Ctrl_ValueChanged(object sender, EventArgs e)
+            {
+                Attribute.RemainingCharges = (int)LargeIndicator.Value;
             }
 
             /// <summary>
@@ -249,16 +269,31 @@ namespace CharacterManager.UserControls
                         cData.changeAbilityChargesManually = SpellSlotIndicatorChangedManuallyHandler;
                         cData.DisplayDataChanged = new AttributeControlData.DisplayDataChangedHandler(handleDisplayDataChanged);
 
-                        UserControlSpellSlotIndicator [] arr = new UserControlSpellSlotIndicator[attrib.MaximumCharges];
-
-                        for (int x = 0; x < attrib.MaximumCharges; x++)
+                        if (attrib.MaximumCharges <= 5)
                         {
-                            UserControlSpellSlotIndicator slotIndicator = new UserControlSpellSlotIndicator();
-                            AddSpellSlotOnLine(slotIndicator, y, 1);
-                            arr[x] = slotIndicator;
-                        }
+                            UserControlSpellSlotIndicator[] arr = new UserControlSpellSlotIndicator[attrib.MaximumCharges];
 
-                        cData.setSpellSlots(arr, attrib.MaximumCharges);
+                            for (int x = 0; x < attrib.MaximumCharges; x++)
+                            {
+                                UserControlSpellSlotIndicator slotIndicator = new UserControlSpellSlotIndicator();
+                                AddSpellSlotOnLine(slotIndicator, y, 1);
+                                arr[x] = slotIndicator;
+                            }
+
+                            cData.setSpellSlots(arr, attrib.MaximumCharges);
+                        }
+                        else
+                        {
+                            /* We need to use a more compact control here. */
+                            /* TODO : Lets at one point create dedicated user control for this, but until then lets use an ordinaru numericupdpown */
+                            NumericUpDown LargeAmountControl = new NumericUpDown();
+                            LargeAmountControl.Minimum = 0;
+                            LargeAmountControl.Maximum = attrib.MaximumCharges;
+                            LargeAmountControl.Value = attrib.RemainingCharges;
+                            LargeAmountControl.Width = 60;
+                            AddControlOnLine(LargeAmountControl, y, 0, 2, false);
+                            cData.setSpellSlotsLargeIndicator(LargeAmountControl);
+                        }
                     }
                 }
 
