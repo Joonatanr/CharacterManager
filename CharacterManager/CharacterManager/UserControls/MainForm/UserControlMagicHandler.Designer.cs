@@ -113,7 +113,7 @@ namespace CharacterManager.UserControls
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlPreparedSpells.IsAvailabilityCount = false;
             this.userControlPreparedSpells.IsBorder = true;
-            this.userControlPreparedSpells.IsCastingInfoEnabled = false;
+            this.userControlPreparedSpells.IsCastingInfoEnabled = true;
             this.userControlPreparedSpells.IsCheckBoxed = false;
             this.userControlPreparedSpells.IsMultipleLevel = false;
             this.userControlPreparedSpells.Location = new System.Drawing.Point(3, 3);

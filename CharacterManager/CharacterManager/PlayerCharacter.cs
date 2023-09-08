@@ -14,7 +14,6 @@ namespace CharacterManager
     [Serializable]
     public class PlayerCharacter
     {
-        /* This is just for very initial testing. */
         public struct CharacterBaseAttributes
         {
             public int STR;
@@ -25,7 +24,6 @@ namespace CharacterManager
             public int WIS;
         }
 
-        /* TODO : Maybe this can be done differently... */
         public enum PlayerAlignment
         {
             LawfulGood,
