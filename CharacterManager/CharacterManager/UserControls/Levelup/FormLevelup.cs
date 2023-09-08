@@ -263,9 +263,21 @@ namespace CharacterManager.UserControls
             /* Update spell data. */
             if (_myCharacter.SpellCasting != null)
             {
-                /* Update the spell selections. */
-                _myCharacter.KnownSpells = SelectedSpellNames;
+                if (_myCharacter.SpellCasting.IsAllSpellsAvailable)
+                {
+                    List<PlayerSpell> allSpells = _myCharacter.SpellCasting.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
 
+                    _myCharacter.KnownSpells = new List<string>();
+                    foreach (PlayerSpell sp in allSpells)
+                    {
+                        _myCharacter.KnownSpells.Add(sp.SpellName);
+                    }
+                }
+                else
+                {
+                    /* Update the spell selections. */
+                    _myCharacter.KnownSpells = SelectedSpellNames;
+                }
                 /* Update spell slot amount. */
                 SpellSlots_T slotsForThisLevel = _myCharacter.SpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);
                 
@@ -274,6 +286,7 @@ namespace CharacterManager.UserControls
                     int numberOfSlots = slotsForThisLevel.getNumberOfSlotsPerLevel(SpellLevel);
                     _myCharacter.setSpellSlotData(SpellLevel, new CharacterSpellcastingStatus.SpellSlotData(numberOfSlots, numberOfSlots));
                 }
+
             }
 
             /* Update proficiency bonus... Pretty straightforward this one. */
@@ -359,7 +372,8 @@ namespace CharacterManager.UserControls
                 {
                     if(selected.Name.ToLower() == "spellcasting")
                     {
-                        SelectedPlayerAbilities.Add(CharacterFactory.GetSpellCastingAbilityOfClass(pClass.PlayerClassName, sClass.ArcheTypeName));
+                        /* We need to determine if the spellcasting came from an archetype or not. Half casters might get spellcasting at second level. */
+                        SelectedPlayerAbilities.Add(CharacterFactory.GetSpellCastingAbilityOfClass(pClass, sClass));
                     }
                     else
                     {
@@ -426,6 +440,13 @@ namespace CharacterManager.UserControls
             /* TODO - First we do a naive implementation. Not taking into account that selected abilities might give the PC a spellcasting ability.  */
             if (selectedSpellcasting != null)
             {
+                if (selectedSpellcasting.IsAllSpellsAvailable)
+                {
+                    /* This is going to be really fun when implementing multiclassing.... */
+                    MessageBox.Show("With current class, all spells are available");
+                    return;
+                }
+
                 FormChooseSpells myForm = new FormChooseSpells();
 
                 /* First lets get a list of spells that are already known. */

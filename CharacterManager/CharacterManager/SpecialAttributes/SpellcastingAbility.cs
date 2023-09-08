@@ -53,6 +53,9 @@ namespace CharacterManager.SpecialAttributes
 
         public SpellPreparationType SpellPreparation = SpellPreparationType.PREPARATION_NONE;
 
+        /* Some classes, like the paladin and cleric do not learn spells, but they have their whole spell list always available. */
+        public bool IsAllSpellsAvailable = false;
+
         public SpellcastingAbility()
         {
             this.Name = "Spellcasting";

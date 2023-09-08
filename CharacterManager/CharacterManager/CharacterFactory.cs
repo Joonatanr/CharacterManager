@@ -303,8 +303,21 @@ namespace CharacterManager
         /// <param name="className"></param>
         /// <param name="subClassName"></param>
         /// <returns></returns>
-        public static SpellcastingAbility GetSpellCastingAbilityOfClass(string className, string subClassName)
+        public static SpellcastingAbility GetSpellCastingAbilityOfClass(PlayerClass mainClass, PlayerClassArchetype subClass)
         {
+            if(mainClass == null)
+            {
+                return null;
+            }
+            
+            string className = mainClass.PlayerClassName;
+            string subClassName = "";
+
+            if(subClass != null)
+            {
+                subClassName = subClass.ArcheTypeName;
+            }
+            
             if (string.IsNullOrEmpty(className))
             {
                 return null;
@@ -446,12 +459,7 @@ namespace CharacterManager
                 if (attribDesc.AbilityName.ToLower() == "spellcasting")
                 {
                     /* We search for this from the class description instead. */ 
-                    string subClassName = null;
-                    if(pSubclass != null)
-                    {
-                        subClassName = pSubclass.ArcheTypeName;
-                    }
-                    member = CharacterFactory.GetSpellCastingAbilityOfClass(pClass.PlayerClassName, subClassName);
+                    member = CharacterFactory.GetSpellCastingAbilityOfClass(pClass, pSubclass);
                 }
                 else
                 {

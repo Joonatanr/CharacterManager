@@ -589,7 +589,7 @@ namespace CharacterManager
                 if (obj is SpellcastingAbility || obj.Name.ToLower() == "spellcasting")
                 {
                     /* This character has a spellcasting ability. In the future we may have multiclassing and therefore more than one. */
-                    _mySpellcastingAbility = CharacterFactory.GetSpellCastingAbilityOfClass(this.ClassName, this.SubClassName);
+                    _mySpellcastingAbility = CharacterFactory.GetSpellCastingAbilityOfClass(this.GetPlayerClass(), this.GetSelectedArchetype());
                 }
             }
         }
