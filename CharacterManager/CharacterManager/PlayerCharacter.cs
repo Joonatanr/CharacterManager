@@ -656,13 +656,17 @@ namespace CharacterManager
             ArmorDonned = null;
             AttackRoll = null;
             AttackRollMade = null;
+
             CharacterExtraAttributesUpdated = null;
+            CharacterFinalize = null;
             CharacterLevelup = null;
 
             CharacterHPChanged = null;
+            CharacterHitDieChanged = null;
             CharacterAbilityStatsUpdated = null;
+
             CharacterSkillBonuseUpdated = null;
-            CharacterFinalize = null;
+            InitiativeRollMade = null;
         }
 
         private void abilityUsed(PlayerAbility ability)
