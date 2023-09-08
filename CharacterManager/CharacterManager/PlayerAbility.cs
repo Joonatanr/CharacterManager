@@ -45,7 +45,14 @@ namespace CharacterManager
         /* TODO : Implement this part. */
         public List<string> SpellsAddedByAbility = new List<string>();
 
+        /* Often abilities have charges that are equal to an attribute modifier (such as charges based on CHA mod) */
         public string ChargesBasedOnAbilityModifier = "NONE";
+        /* Some abilities have charges that are equal to an attribute modifier +1, (such as charges equal to CHA mod +1 ) */
+        public bool IsPlusOneAddedToChargeBasedOnModifier = false;
+
+        public bool ChargesBasedOnLevel = false;
+        public int ChargesBasedOnLevelMultiplies = 1;
+
 
         /* Some abilities gain extra skill proficiencies or even expertise */
         public int AdditionalProficiencyChoices { get; set; } = 0;
@@ -163,6 +170,18 @@ namespace CharacterManager
             if (this.ChargesBasedOnAbilityModifier != "NONE")
             {
                 int totalCharges = c.getModifier(ChargesBasedOnAbilityModifier);
+                
+                if (IsPlusOneAddedToChargeBasedOnModifier)
+                {
+                    totalCharges++;
+                }
+
+                this.MaximumCharges = totalCharges;
+            }
+            else if (ChargesBasedOnLevel)
+            {
+                int totalCharges = c.Level;
+                totalCharges *= ChargesBasedOnLevelMultiplies;
                 this.MaximumCharges = totalCharges;
             }
         }

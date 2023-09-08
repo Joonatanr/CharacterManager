@@ -489,6 +489,55 @@
 	</PlayerItem>
 	
 	<PlayerItem xsi:type="ItemContainer">
+		<Name>Priest's Pack</Name>
+		<Description>Includes a backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, and a waterskin.</Description>
+		<Weight>10</Weight>
+		<Cost>19</Cost>
+		<ContainedItems>
+			<ContainerContent>
+				<Name>Backpack</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Blanket</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Candle</Name>
+				<Quantity>10</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Tinderbox</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Alms Box</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Block of Incense</Name>
+				<Quantity>2</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Censer</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Vestments</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Rations</Name>
+				<Quantity>2</Quantity>
+			</ContainerContent>
+			<ContainerContent>
+				<Name>Waterskin</Name>
+				<Quantity>1</Quantity>
+			</ContainerContent>
+		</ContainedItems>
+	</PlayerItem>
+	
+	<PlayerItem xsi:type="ItemContainer">
 		<Name>Case, Crossbow Bolt</Name>
 		<Description>This wooden case can hold up to twenty crossbow bolts. </Description>
 		<Weight>10</Weight>
