@@ -7,6 +7,7 @@
     <string>Arcana</string>
   </SkillProficiencies>
   <SkillExpertise />
+  <ToolExpertise />
   <Languages>
     <string>Common</string>
     <string>Elvish</string>
@@ -36,48 +37,56 @@
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
+      <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
       <AbilityName>Fey Ancestry</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
+      <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
       <AbilityName>Trance</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
+      <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
       <AbilityName>Arcane Recovery</AbilityName>
       <RemainingCharges>1</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
+      <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
       <AbilityName>Spellcasting</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
+      <SubType>(Wizard)</SubType>
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
       <AbilityName>School Of Enchantment</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
+      <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
       <AbilityName>Enchantment Savant</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
+      <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
       <AbilityName>Hypnotic Gaze</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
+      <SubType />
     </PlayerAbilityDescriptor>
   </CharacterAbilities>
   <CharacterWeapons>
@@ -244,7 +253,7 @@
       <string>Mage Hand</string>
       <string>Mending</string>
       <string>Presdigitation</string>
-	  <string>Fire Bolt</string>
+      <string>Fire Bolt</string>
       <string>Burning Hands</string>
       <string>Chromatic Orb</string>
       <string>Comprehend Languages</string>
@@ -335,4 +344,5 @@
   </BaseAttributes>
   <CharacterName>Eleria</CharacterName>
   <CurrentHitPoints>22</CurrentHitPoints>
+  <CurrentHitDice>0</CurrentHitDice>
 </PlayerCharacter>

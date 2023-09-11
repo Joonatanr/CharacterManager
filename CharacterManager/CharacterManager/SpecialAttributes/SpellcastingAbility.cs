@@ -82,6 +82,17 @@ namespace CharacterManager.SpecialAttributes
                 res.AddRange(spellsOfLevel);
             }
 
+            /* We have a rather special case with eldritch knight at level 8, 14 and 20, where all spells from the wizard spell list are available. */
+            if (this.SubType == "(Eldritch Knight)")
+            {
+                if (playerLevel == 8 || playerLevel == 14 || playerLevel == 20)
+                {
+                    PlayerClass wizardClass = CharacterFactory.getPlayerClassByName("Wizard");
+                    SpellcastingAbility wizardSpellcasting = CharacterFactory.GetSpellCastingAbilityOfClass(wizardClass, null);
+                    res.AddRange(wizardSpellcasting.GetSpellsThatCanBeLearnedAtLevel((playerLevel + 1) / 3));
+                }
+            }
+
             return res;
         }
 

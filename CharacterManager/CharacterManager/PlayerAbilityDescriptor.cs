@@ -17,6 +17,10 @@ namespace CharacterManager
         /* Some abilities have options that can be chosen. These need a storage variable. */
         public List<string> Options1 = new List<string>();
 
+        /* We use this mostly for describing spellcasting abilities and in the future for differentiating between them if we
+         ever begin to implement multiclassing. */
+        public string SubType = "";
+
         [XmlIgnore]
         public PlayerAbility ConnectedObject = null;
 

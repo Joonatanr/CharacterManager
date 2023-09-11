@@ -296,6 +296,13 @@ namespace CharacterManager
         }
 
 
+        public static SpellcastingAbility GetSpellCastingAbilityOfClass(string mainClassName, string subClassName)
+        {
+            PlayerClass mainClass = CharacterFactory.getPlayerClassByName(mainClassName);
+            PlayerClassArchetype subClass = CharacterFactory.getPlayerSubClassByName(mainClassName, subClassName);
+            return GetSpellCastingAbilityOfClass(mainClass, subClass);
+        }
+        
         /// <summary>
         /// Returns the spellcasting ablity of a class and subclass. Since these are static, then they are returned by the
         /// characterfactory.
@@ -305,48 +312,18 @@ namespace CharacterManager
         /// <returns></returns>
         public static SpellcastingAbility GetSpellCastingAbilityOfClass(PlayerClass mainClass, PlayerClassArchetype subClass)
         {
-            if(mainClass == null)
-            {
-                return null;
-            }
-            
-            string className = mainClass.PlayerClassName;
-            string subClassName = "";
-
-            if(subClass != null)
-            {
-                subClassName = subClass.ArcheTypeName;
-            }
-            
-            if (string.IsNullOrEmpty(className))
+            if (mainClass == null)
             {
                 return null;
             }
 
-            PlayerClass pc = getPlayerClassByName(className);
-
-            if (pc != null)
+            if (mainClass.SpellCasting != null)
             {
-                if (pc.SpellCasting != null)
-                {
-                    return pc.SpellCasting;
-                }
-                else if(!string.IsNullOrEmpty(subClassName))
-                {
-                    PlayerClassArchetype aType = getPlayerSubClassByName(className, subClassName);
-                    if(aType != null)
-                    {
-                        return aType.SpellCasting;
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
-                else
-                {
-                    return null;
-                }
+                return mainClass.SpellCasting;
+            }
+            else if (subClass != null)
+            {
+                return subClass.SpellCasting;
             }
             else
             {

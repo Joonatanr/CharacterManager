@@ -14,6 +14,9 @@ namespace CharacterManager
     [Serializable]
     public class PlayerAbility : PlayerBaseItem
     {
+        /* We use this mostly for describing spellcasting abilities and in the future for differentiating between them if we
+           ever begin to implement multiclassing. */
+        public string SubType = "";
         public bool IsCombatAbility { get; set; } = false;
 
         [XmlIgnore]
@@ -346,6 +349,7 @@ So we get to an issue where upgrades to the description are added multiple times
             desc.AbilityName = this.Name;
             desc.RemainingCharges = this.RemainingCharges;
             desc.IsActive = this.IsActive;
+            desc.SubType = this.SubType;
             desc.ConnectedObject = this;
 
             return desc;
@@ -356,13 +360,13 @@ So we get to an issue where upgrades to the description are added multiple times
             desc.ConnectedObject = this;
             this.RemainingCharges = desc.RemainingCharges;
             this.IsActive = desc.IsActive;
+            this.SubType = desc.SubType;
             this.ResolveOptions(desc.Options1);
-
         }
 
         public virtual void InitializeSubscriptions(PlayerCharacter c)
         {
-            /* TODO - This will be overwritten by special abilities. */
+            /* This can be overwritten by special abilities. */
         }
 
         public virtual bool ExtraChoiceOptions(out string btnText, out ExtraChoiceEventHandler clickHandler)

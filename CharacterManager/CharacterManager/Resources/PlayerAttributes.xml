@@ -606,6 +606,25 @@ break the bond with one of the other two.</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
+		<Name>War Magic</Name>
+		<Description>Beginning at 7th level, when you use your action to
+cast a cantrip, you can make one weapon attack as a
+bonus action.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>18</Level>
+				<AdditionalDescription>Improved War Magic:
+				
+Starting at 18th level, when you use your action to
+cast a spell, you can m ake one weapon attack as a
+bonus action.</AdditionalDescription>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
 		<Name>Multiattack x2</Name>
 		<Description>You can attack twice, instead of
 once, whenever you take the Attack action on your turn.</Description>

@@ -316,17 +316,16 @@ namespace CharacterManager
         private void LoadCharacter(PlayerCharacter c)
         {
             activeCharacter = c;
-            c.CharacterHPChanged += characterHpChangedListener;
-            c.CharacterHitDieChanged += C_CharacterHitDieChanged;
-            updateCharacterAttributes();
 
             /* Set up listener functions */
-            /* TODO */
+            setupListenerFunctions();
+            updateCharacterAttributes();
         }
 
-        private void C_CharacterHitDieChanged(PlayerCharacter c)
+        private void setupListenerFunctions()
         {
-            UpdateHitPoints();
+            activeCharacter.CharacterHPChanged += characterHpChangedListener;
+            activeCharacter.CharacterHitDieChanged += C_CharacterHitDieChanged;
         }
 
         /*********************** Listener functions ***********************/
@@ -336,6 +335,10 @@ namespace CharacterManager
             UpdateHitPoints();
         }
 
+        private void C_CharacterHitDieChanged(PlayerCharacter c)
+        {
+            UpdateHitPoints();
+        }
         /*************** Button functions *************/
 
         private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
@@ -351,8 +354,6 @@ namespace CharacterManager
             if (f2.ShowDialog() == DialogResult.OK)
             {
                 LoadCharacter(f2.CreatedCharacter);
-                
-
             }
         }
 
@@ -518,10 +519,13 @@ namespace CharacterManager
         private void buttonLongRest_Click(object sender, EventArgs e)
         {
             /* TODO */
-            activeCharacter.PerformLongRest();
-            /* TODO : Maybe we can do this with a listener function? */
-            UpdateCharacterAbilities();
-            userControlMagicHandler1.UpdateAllDisplayedData();
+            if (activeCharacter != null)
+            {
+                activeCharacter.PerformLongRest();
+                /* TODO : Maybe we can do this with a listener function? */
+                UpdateCharacterAbilities();
+                userControlMagicHandler1.UpdateAllDisplayedData();
+            }
         }
 
         private void buttonShortRest_Click(object sender, EventArgs e)
@@ -574,7 +578,8 @@ namespace CharacterManager
                         activeCharacter.Level = myXpForm.CurrentLevel;
                         activeCharacter.BonusValues.ResetLevelUpModifiers();
                         handleLevelUpCharacter();
-                        updateCharacterAttributes();
+
+                        LoadCharacter(activeCharacter);
                     }
 
                     this.textBoxXP.Text = activeCharacter.ExperiencePoints.ToString();
@@ -585,8 +590,6 @@ namespace CharacterManager
 
         private void handleLevelUpCharacter()
         {
-            /* TODO : Level up. */
-            /* This is simply a placeholder. */
             /* Call this first to setup the level up process. */
             activeCharacter.setupCharacterLevelup();
 

@@ -87,6 +87,7 @@
   <SpellCasting>
     <Description>As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power. See chapter 10 for the general rules of spellcasting and chapter 11 for the wizard spell list.</Description>
     <AttributeName>Spellcasting</AttributeName>
+	<SubType>(Wizard)</SubType>
     <MaximumCharges>0</MaximumCharges>
     <IsToggle>false</IsToggle>
     <SpellCastingAttribute>INT</SpellCastingAttribute>
@@ -198,7 +199,7 @@
         <string>Major Image</string>
         <string>Nondetection</string>
         <string>Phantom Steed</string>
-        <string>Protection from Energy</string>
+        <string>Protection From Energy</string>
         <string>Remove Curse</string>
         <string>Sending</string>
         <string>Sleet Storm</string>
@@ -207,6 +208,118 @@
         <string>Tongues</string>
         <string>Vampiric Touch</string>
         <string>Water Breathing</string>
+		<!-- Level 4 spells-->
+		<string>Arcane Eye</string>
+		<string>Banishment</string>
+		<string>Blight</string>
+		<string>Confusion</string>
+		<string>Conjure Minor Elementals</string>
+		<string>Control Water</string>
+		<string>Dimension Door</string>
+		<string>Evard's Black Tentacles</string>
+		<string>Fabricate</string>
+		<string>Fire Shield</string>
+		<string>Greater Invisibility</string>
+		<string>Hallucinatory Terrain</string>
+		<string>Ice Storm</string>
+		<string>Leomund's Secret Chest</string>
+		<string>Locate Creature</string>
+		<string>Mordenkainen's Faithful Hound</string>
+		<string>Mordenkainen's Private Sanctum</string>
+		<string>Otiluke's Resilient Sphere</string>
+		<string>Phantasmal Killer</string>
+		<string>Polymorph</string>
+		<string>Stone Shape</string>
+		<string>Stoneskin</string>
+		<string>Wall Of Fire</string>
+		<!-- Level 5 spells-->
+		<string>Animate Objects</string>
+		<string>Bigby's Hand</string>
+		<string>Cloudkill</string>
+		<string>Cone Of Cold</string>
+		<string>Conjure Elemental</string>
+		<string>Contact Other Plane</string>
+		<string>Creation</string>
+		<string>Dominate Person</string>
+		<string>Dream</string>
+		<string>Geas</string>
+		<string>Hold Monster</string>
+		<string>Legend Lore</string>
+		<string>Mislead</string>
+		<string>Modify Memory</string>
+		<string>Passwall</string>
+		<string>Planar Binding</string>
+		<string>Rary's Telepathic Bond</string>
+		<string>Scrying</string>
+		<string>Seeming</string>
+		<string>Telekinesis</string>
+		<string>Teleportation Circle</string>
+		<string>Wall Of Force</string>
+		<string>Wall Of Stone</string>
+		<!-- Level 6 spells-->
+		<string>Arcane Gate</string>
+		<string>Chain Lightning</string>
+		<string>Circle Of Death</string>
+		<string>Contingency</string>
+		<string>Create Undead</string>
+		<string>Disintegrate</string>
+		<string>Drawmij's Instant Summons</string>
+		<string>Eyebite</string>
+		<string>Flesh To Stone</string>
+		<string>Globe Of Invulnerability</string>
+		<string>Guards And Wards</string>
+		<string>Magic Jar</string>
+		<string>Mass Suggestion</string>
+		<string>Move Earth</string>
+		<string>Otiluke's Freezing Sphere</string>
+		<string>Otto's Irresistible Dance</string>
+		<string>Programmed Illusion</string>
+		<string>Sunbeam</string>
+		<string>True Seeing</string>
+		<string>Wall Of Ice</string>
+		<!-- Level 7 spells-->
+		<string>Delayed Blast Fireball</string>
+		<string>Etherealness</string>
+		<string>Finger Of Death</string>
+		<string>Forcecage</string>
+		<string>Mirage Arcane</string>
+		<string>Mordenkainen's Magnificent Mansion</string>
+		<string>Mordenkainen's Sword</string>
+		<string>Plane Shift</string>
+		<string>Prismatic Spray</string>
+		<string>Project Image</string>
+		<string>Reverse Gravity</string>
+		<string>Sequester</string>
+		<string>Simulacrum</string>
+		<string>Symbol</string>
+		<string>Teleport</string>
+		<!-- Level 8 spells-->
+		<string>Antimagic Field</string>
+		<string>Antipathy/Sympathy</string>
+		<string>Clone</string>
+		<string>Control Weather</string>
+		<string>Demiplane</string>
+		<string>Dominate Monster</string>
+		<string>Feeblemind</string>
+		<string>Incendiary Cloud</string>
+		<string>Maze</string>
+		<string>Mind Blank</string>
+		<string>Power Word Stun</string>
+		<string>Sunburst</string>
+		<string>Telepathy</string>
+		<!-- Level 9 spells-->
+		<string>Astral Projection</string>
+		<string>Foresight</string>
+		<string>Gate</string>
+		<string>Imprisonment</string>
+		<string>Meteor Swarm</string>
+		<string>Power Word Kill</string>
+		<string>Prismatic Wall</string>
+		<string>Shapechange</string>
+		<string>Time Stop</string>
+		<string>True Polymorph</string>
+		<string>Weird</string>
+		<string>Wish</string>
 	</AvailableSpells>
 	<SpellslotPerLevel>
 		<!-- Level 1 -->
