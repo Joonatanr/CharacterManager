@@ -143,8 +143,8 @@ namespace CharacterManager.CharacterCreator
         private int AddUserControlClassFeature(PlayerClassAbilityChoice choice, int yloc, PlayerCharacter Character)
         {
             UserControlClassFeature ctrl = new UserControlClassFeature();
-            ctrl.AbilityChoice = choice;
             ctrl.Character = Character;
+            ctrl.AbilityChoice = choice;
             ctrl.Location = new Point(5, yloc);
             ctrl.Anchor = (AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left);
             ctrl.Width = groupBoxClassAbilities.Width - 10;

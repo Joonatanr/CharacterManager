@@ -467,10 +467,42 @@ these spells.</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
+		<Name>Indomitable</Name>
+		<Description>Beginning at 9th level, you can reroll a saving throw that
+you fail. If you do so, you must use the new roll, and you
+can’t use this feature again until you finish a long rest.
+You can use this feature twice between long rests
+starting at 13th level and three times between long rests
+starting at 17th level.</Description>
+		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<IsCombatAbility>true</IsCombatAbility>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>13</Level>
+				<MaximumCharges>2</MaximumCharges>
+			</PlayerAbilityUpgrade>
+			<PlayerAbilityUpgrade>
+				<Level>17</Level>
+				<MaximumCharges>3</MaximumCharges>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
 		<Name>Improved Critical</Name>
 		<Description>Beginning when you choose this archetype at 3rd
 level, your weapon attacks score a critical hit on a
 roll of 19 or 20.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Superior Critical</Name>
+		<Description>Starting at 15th level, your weapon attacks score a
+critical hit on a roll of 18-20.</Description>
 		<MaximumCharges>0</MaximumCharges>
 		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
@@ -625,10 +657,30 @@ bonus action.</AdditionalDescription>
 	</PlayerAbility>
 	
 	<PlayerAbility>
+		<Name>Eldritch Strike</Name>
+		<Description>At 10th level, you learn how to make your weapon
+strikes undercut a creature’s resistance to your spells.
+When you hit a creature with a weapon attack, that
+creature has disadvantage on the next saving throw
+it makes against a spell you cast before the end of
+your next turn.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
 		<Name>Multiattack x2</Name>
 		<Description>You can attack twice, instead of
 once, whenever you take the Attack action on your turn.</Description>
 		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Multiattack x3</Name>
+		<Description>The number of attacks increases to three when you
+reach 11th level in this class</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+		<ReplacesAbility>Multiattack x2</ReplacesAbility>
 	</PlayerAbility>
 	
 <!-- Barbarian class abilities -->

@@ -272,6 +272,10 @@ namespace CharacterManager
         {
             /* We also strike a critical on 19, so lets add it to the list */
             c.BonusValues.ExtraCritValues.Add(19);
+            if(c.Level >= 15)
+            {
+                c.BonusValues.ExtraCritValues.Add(18);
+            }
         }
     }
 

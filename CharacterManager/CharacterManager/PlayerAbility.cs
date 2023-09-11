@@ -19,6 +19,10 @@ namespace CharacterManager
         public string SubType = "";
         public bool IsCombatAbility { get; set; } = false;
 
+        /* Some abilities replace others completely. Usually this is the case with some specific upgrades.
+         For example this is the case with multiattack x2 being replaced by multiattack x3. */
+        public string ReplacesAbility = "";
+
         [XmlIgnore]
         private int _maximumCharges = 0; /* Maximum uses 0 indicates a passive ability. */
         public int MaximumCharges

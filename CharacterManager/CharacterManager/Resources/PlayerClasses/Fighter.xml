@@ -180,6 +180,30 @@
 	<!-- Level 7 -->
 	<!-- Martial Archetype feature -->
 	
+	<!-- Level 8 -->
+	<!-- Ability score improvement -->
+	
+	<!-- Level 9 -->
+	<AvailableClassAbilitiesLevel9>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Indomitable</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel9>
+	
+	<!-- Level 10 -->
+	<!-- Martial Archetype feature -->
+	
+	<!-- Level 11 -->
+	<AvailableClassAbilitiesLevel11>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Multiattack x3</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel11>
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Battle Master</Name>
@@ -236,8 +260,29 @@ devastating blows.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel7>
-			
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<Description>At 10th level, you can choose a second option from the Fighting Style class feature.</Description>
+					<ClassAbilityName>Additional Fighting Style</ClassAbilityName>
+					<AvailableChoices>
+						<string>Archery Fighting Style</string>
+						<string>Defense Fighting Style</string>
+						<string>Dueling Fighting Style</string>
+						<string>Great Weapon Fighting Style</string>
+						<string>Protection Fighting Style</string>
+						<string>Two-Weapon Fighting Style</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
+		<AvailableAbilitiesAtLevel15>
+			<PlayerClassAbilityChoice>
+				<AvailableChoices>
+					<string>Superior Critical</string>
+				</AvailableChoices>
+			</PlayerClassAbilityChoice>
+		</AvailableAbilitiesAtLevel15>
 		</PlayerClassArchetype>
+		
 		<PlayerClassArchetype>
 			<Name>Eldritch Knight</Name>
 			<Description>The archetypal Eldritch Knight combines the martial
@@ -273,6 +318,13 @@ instead of keeping them in a spellbook.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel7>
+			<AvailableAbilitiesAtLevel10>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Eldritch Strike</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel10>
 			
 			<SpellCasting>
 				<Description>When you reach 3rd level, you augment your martial

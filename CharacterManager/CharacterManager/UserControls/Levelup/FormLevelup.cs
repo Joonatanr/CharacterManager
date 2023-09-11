@@ -208,7 +208,7 @@ namespace CharacterManager.UserControls
                 }
             }
 
-            foreach(PlayerAbility Hidden in HiddenAbilities)
+            foreach (PlayerAbility Hidden in HiddenAbilities)
             {
                 SelectedPlayerAbilities.Remove(Hidden);
             }
@@ -231,6 +231,19 @@ namespace CharacterManager.UserControls
                 {
                     _myCharacter.SubClassName = _myArchetype.Name;
                     break; /* Lets assume that there is no way to select more than one archetype at a time... */
+                }
+            }
+
+            /* We could have abilities that replace other abilities. */
+            foreach (PlayerAbility ability in SelectedPlayerAbilities)
+            {
+                if (!string.IsNullOrEmpty(ability.ReplacesAbility))
+                {
+                    PlayerAbility toRemove = resultAbilities.Find(a => a.Name == ability.ReplacesAbility);
+                    if(toRemove != null)
+                    {
+                        resultAbilities.Remove(toRemove);
+                    }
                 }
             }
 

@@ -51,7 +51,24 @@ namespace CharacterManager.CharacterCreator
         private void updateAbilityChoice()
         {
             /* First create an object list. */
-            _abilitiesList =_abilityChoice.getAllClassAbilityChoices();
+            if (Character != null)
+            {
+                List<PlayerAbility> allAbilities = _abilityChoice.getAllClassAbilityChoices();
+                _abilitiesList = new List<PlayerAbility>();
+
+                /* Check that we don't add options for things that already exist, such as fighting styles etc. */
+                foreach (PlayerAbility ability in allAbilities)
+                {
+                    if (Character.CharacterAbilities.Find(a => (a.AbilityName == ability.Name) && (a.SubType == ability.SubType)) == null)
+                    {
+                        _abilitiesList.Add(ability);
+                    }
+                }
+            }
+            else
+            {
+                _abilitiesList = _abilityChoice.getAllClassAbilityChoices();
+            }
 
             /* Update the ability choice visual data. */
             /* 1. Update the description of the ability. */
