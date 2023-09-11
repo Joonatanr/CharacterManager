@@ -204,6 +204,39 @@
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel11>
 	
+	<!-- Level 12 -->
+	<!-- Ability Score Improvement -->
+	
+	<!-- Level 13 -->
+	<!-- Indomitable - 2 uses. -->
+	
+	<!-- Level 14 -->
+	<!-- Ability Score Improvement -->
+	
+	<!-- Level 15 -->
+	<!-- Martial Archetype Feature -->
+	
+	<!-- Level 16 -->
+	<!-- Ability Score Improvement -->
+	
+	<!-- Level 17 -->
+	<!-- Action Surge - 2 uses, Indomitable - 3 uses. -->
+	
+	<!-- Level 18 -->
+	<!-- Martial Archetype Feature -->
+	
+	<!-- Level 19 -->
+	<!-- Ability Score Improvement -->
+	
+	<!-- Level 20 -->
+	<AvailableClassAbilitiesLevel20>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Multiattack x4</string>
+			</AvailableChoices>
+	</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel20>
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Battle Master</Name>
@@ -281,6 +314,13 @@ devastating blows.</Description>
 				</AvailableChoices>
 			</PlayerClassAbilityChoice>
 		</AvailableAbilitiesAtLevel15>
+		<AvailableAbilitiesAtLevel18>
+			<PlayerClassAbilityChoice>
+				<AvailableChoices>
+					<string>Survivor</string>
+				</AvailableChoices>
+			</PlayerClassAbilityChoice>
+		</AvailableAbilitiesAtLevel18>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>

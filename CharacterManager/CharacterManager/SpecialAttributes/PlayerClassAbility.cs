@@ -335,6 +335,30 @@ namespace CharacterManager
         }
     }
 
+    public class SurvivorAbility : SpecialAttribute
+    {
+        public SurvivorAbility()
+        {
+            this.Name = "Survivor";
+        }
+
+        public override bool UseAbilitySpecial()
+        {
+            if (_connectedCharacter != null)
+            {
+                /* We just add the HP, since there is not really any way to detect if a turn has ended. 
+                 Lets check the half HP rule though...*/
+                if(_connectedCharacter.CurrentHitPoints <= (_connectedCharacter.MaxHitPoints / 2) && (_connectedCharacter.CurrentHitPoints > 0))
+                {
+                    int value = 5 + _connectedCharacter.getModifier("CON");
+                    _connectedCharacter.CurrentHitPoints += value;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    }
     /*********************************************************************************************/
 
     /******* Barbarian class abilities. ********/

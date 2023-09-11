@@ -464,6 +464,12 @@ these spells.</Description>
 		<RechargeAtShortRest>true</RechargeAtShortRest>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
 		<IsCombatAbility>true</IsCombatAbility>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>17</Level>
+				<MaximumCharges>2</MaximumCharges>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -518,6 +524,18 @@ distance you can cover increases by a number of feet
 equal to your Strength modifier.</Description>
 		<MaximumCharges>0</MaximumCharges>
 		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Survivor</Name>
+		<Description>At 18th level, you attain the pinnacle of resilience in
+battle. At the start of each of your turns, you regain hit
+points equal to 5 + your Constitution modifier if you
+have no m ore than half of your hit points left. You don’t
+gain this benefit if you have 0 hit points.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
+		<IsUsable>true</IsUsable>
 	</PlayerAbility>
 	
 	<PlayerAbility xsi:type="PlayerManeuverAbility">
@@ -650,7 +668,7 @@ bonus action.</Description>
 				<AdditionalDescription>Improved War Magic:
 				
 Starting at 18th level, when you use your action to
-cast a spell, you can m ake one weapon attack as a
+cast a spell, you can make one weapon attack as a
 bonus action.</AdditionalDescription>
 			</PlayerAbilityUpgrade>
 		</Upgrades>
@@ -681,6 +699,14 @@ once, whenever you take the Attack action on your turn.</Description>
 reach 11th level in this class</Description>
 		<IsCombatAbility>true</IsCombatAbility>
 		<ReplacesAbility>Multiattack x2</ReplacesAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Multiattack x4</Name>
+		<Description>The number of attacks increases to four when you
+reach 20th level in this class</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+		<ReplacesAbility>Multiattack x3</ReplacesAbility>
 	</PlayerAbility>
 	
 <!-- Barbarian class abilities -->
