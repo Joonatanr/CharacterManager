@@ -1242,7 +1242,7 @@ spell into your spellbook is halved.</Description>
 		<Description>Starting at 2nd level, you can weave magic around
 yourself for protection. When you cast an abjuration
 spell of 1st level or higher, you can simultaneously use a
-strand of the spell’s magic to create a magical ward on
+strand of the spell's magic to create a magical ward on
 yourself that lasts until you finish a long rest. The ward
 has hit points equal to twice your wizard level + your
 Intelligence modifier. Whenever you take damage, the
@@ -1254,6 +1254,19 @@ abjuration spell of 1st level or higher, the ward regains a
 number of hit points equal to twice the level of the spell.
 Once you create the ward, you can't create it again
 until you finish a long rest.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>6</Level>
+				<AdditionalDescription>Projected Ward:
+				
+Starting at 6th level, when a creature that you can see
+within 30 feet of you takes damage, you can use your
+reaction to cause your Arcane Ward to absorb that
+damage. If this damage reduces the ward to 0 hit points,
+the warded creature takes any remaining damage.</AdditionalDescription>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
 	</PlayerAbility>
 	
 	<PlayerAbility>

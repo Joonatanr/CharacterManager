@@ -251,7 +251,7 @@ namespace CharacterManager.UserControls
 
             foreach (PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
             {
-                ability.RemainingCharges = ability.MaximumCharges;
+                ability.HandleInit();
             }
 
             /* Check if CON score has been raised. NOTE that this is a special case. */

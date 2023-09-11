@@ -175,23 +175,55 @@ namespace CharacterManager
             resolveUpgrades();
 
             /* Here we can also resolve cases where the total number of charges depend on player attributes. */
+            this.MaximumCharges = GetMaximumCharges(c);
+        }
+
+        public virtual void HandleLongRest()
+        {
+            if (this.RechargeAtLongRest)
+            {
+                this.RemainingCharges = this.MaximumCharges;
+            }
+        }
+
+        public virtual void HandleShortRest()
+        {
+            if (this.RechargeAtShortRest)
+            {
+                this.RemainingCharges = this.MaximumCharges;
+            }
+        }
+
+        public virtual void HandleInit()
+        {
+            if (this.MaximumCharges > 0)
+            {
+                this.RemainingCharges = this.MaximumCharges;
+            }
+        }
+
+        protected virtual int GetMaximumCharges(PlayerCharacter c)
+        {
+            /* Here we can also resolve cases where the total number of charges depend on player attributes. */
             if (this.ChargesBasedOnAbilityModifier != "NONE")
             {
                 int totalCharges = c.getModifier(ChargesBasedOnAbilityModifier);
-                
+
                 if (IsPlusOneAddedToChargeBasedOnModifier)
                 {
                     totalCharges++;
                 }
 
-                this.MaximumCharges = totalCharges;
+                return totalCharges;
             }
             else if (ChargesBasedOnLevel)
             {
                 int totalCharges = c.Level;
                 totalCharges *= ChargesBasedOnLevelMultiplies;
-                this.MaximumCharges = totalCharges;
+                return totalCharges;
             }
+
+            return this.MaximumCharges;
         }
 
         public string GetExtendedDescription()

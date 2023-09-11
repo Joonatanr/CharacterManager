@@ -474,6 +474,65 @@ namespace CharacterManager
 
     /*********************************************************************************************/
 
+    /******* Wizard class abilities. ********/
+
+    public class ArcaneWardAbility : SpecialAttribute
+    {
+        /* TODO : Consider that when loading or saving, then this data will be lost. Maybe that's OK for now. */
+        private bool isInitialCast = true;
+        
+        public ArcaneWardAbility()
+        {
+            this.Name = "Arcane Ward";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.CharacterSpellCast += C_CharacterSpellCast;
+        }
+
+        /// <summary>
+        /// In this case, we always begin with an empty arcane ward. 
+        /// </summary>
+        public override void HandleInit()
+        {
+            this.RemainingCharges = 0;
+        }
+
+        public override void HandleLongRest()
+        {
+            isInitialCast = true;
+            this.RemainingCharges = 0;
+        }
+
+        private void C_CharacterSpellCast(PlayerCharacter c, PlayerSpell sp, int level)
+        {
+            if (sp.School == "Abjuration")
+            {
+                if (isInitialCast)
+                {
+                    this.RemainingCharges = GetMaximumCharges(c);
+                    isInitialCast = false;
+                }
+                else
+                {
+                    /* We restore some charges based on the spell's level.*/
+                    this.RemainingCharges = Math.Min(this.MaximumCharges, this.RemainingCharges + (level * 2));
+                }
+            }
+        }
+
+        protected override int GetMaximumCharges(PlayerCharacter c)
+        {
+            int res = c.Level * 2;
+            res += c.getModifier("INT");
+
+            return res;
+        }
+    }
+
+    /*********************************************************************************************/
+
     /******* Bard class abilities. ********/
     public class JackOfAllTradesAbility : SpecialAttribute
     {

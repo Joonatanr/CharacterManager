@@ -59,7 +59,7 @@ namespace CharacterManager
         private void handleCastSpell(PlayerSpell spell, int level)
         {
             /* TODO : Might add some kind of spell effects etc.. For now we will just reduce the spell slots. */
-            activeCharacter.CharacterSpellCastingStatus.SpendSpellSlot(level);
+            activeCharacter.CastSpell(spell, level);
             userControlMagicHandler1.UpdateAllDisplayedData();
         }
 

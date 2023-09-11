@@ -337,6 +337,9 @@ namespace CharacterManager
         public event PlayerEvent CharacterSavingThrowBonusUpdated;
         public event PlayerEvent InitiativeRollMade;
 
+        public delegate void PlayerSpellEvent(PlayerCharacter c, PlayerSpell sp, int level);
+        public event PlayerSpellEvent CharacterSpellCast;
+
         public PlayerCharacter()
         {
             this._name = "UNKNOWN";
@@ -494,10 +497,7 @@ namespace CharacterManager
             /* 2. Recharge lost abilities. */
             foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
             {
-                if (ability.RechargeAtLongRest)
-                {
-                    ability.RemainingCharges = ability.MaximumCharges;
-                }
+                ability.HandleLongRest();
             }
 
             /* 3. Restore spell points. */
@@ -512,10 +512,7 @@ namespace CharacterManager
         {
             foreach (PlayerAbility ability in CharacterAbilitiesObjectList)
             {
-                if (ability.RechargeAtShortRest)
-                {
-                    ability.RemainingCharges = ability.MaximumCharges;
-                }
+                ability.HandleShortRest();
             }
         }
 
@@ -632,7 +629,7 @@ namespace CharacterManager
             {
                 if (overwriteDescriptors)
                 {
-                    obj.RemainingCharges = obj.MaximumCharges;
+                    obj.HandleInit();
                     CharacterAbilities.Add(obj.ConvertToDescriptor());
                 }
                 obj.connectToCharacter(this);
@@ -967,6 +964,15 @@ namespace CharacterManager
             res.Add(new BonusValueModifier("DEX bonus", getModifier("DEX")));
 
             return res;
+        }
+
+        public void CastSpell(PlayerSpell spell, int level)
+        {
+            if (CharacterSpellCastingStatus != null)
+            {
+                CharacterSpellCast?.Invoke(this, spell, level);
+                CharacterSpellCastingStatus.SpendSpellSlot(level);
+            }
         }
 
         /*************************** Private functions **************************/

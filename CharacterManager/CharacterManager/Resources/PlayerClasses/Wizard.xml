@@ -634,7 +634,7 @@
 	</SpellsReplacedAtLevelup>
   </SpellCasting>
 
-  
+  <!-- Level 1 -->
   <AvailableClassAbilitiesLevel1>
     <PlayerClassAbilityChoice>
       <Description>You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher. For example, if you’re a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover eithe  a 2nd-level spell slot or two 1st-level spell slots.</Description>
@@ -652,6 +652,7 @@
     </PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel1>
   
+  <!-- Level 2 -->
   <AvailableClassAbilitiesLevel2>
 		<PlayerClassAbilityChoice>
 			<Description>Arcane Tradition</Description>
@@ -669,8 +670,17 @@
 		</PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel2>
   
+  <!-- Level 3 -->
   <AvailableClassAbilitiesLevel3>
   </AvailableClassAbilitiesLevel3>
+  
+  <!-- Level 4 -->
+  <!-- Ability Score Improvement -->
+  
+  <!-- Level 5 -->
+  
+  <!-- Level 6 -->
+  <!-- Arcane Tradition Feature -->
   
   <ArcheTypes>
 		<PlayerClassArchetype>
