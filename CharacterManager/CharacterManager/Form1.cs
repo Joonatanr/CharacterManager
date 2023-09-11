@@ -123,12 +123,7 @@ namespace CharacterManager
                 this.AttributeDisplayCHA.AttributeValue = activeCharacter.CharAttribute;
 
                 //3. Update saving throws.
-                userControlSavingThrows1.setValue(activeCharacter.getModifier("STR"), activeCharacter.isSavingThrowProficientIn("STR"), activeCharacter.ProficiencyBonus, "STR");
-                userControlSavingThrows1.setValue(activeCharacter.getModifier("INT"), activeCharacter.isSavingThrowProficientIn("INT"), activeCharacter.ProficiencyBonus, "INT");
-                userControlSavingThrows1.setValue(activeCharacter.getModifier("DEX"), activeCharacter.isSavingThrowProficientIn("DEX"), activeCharacter.ProficiencyBonus, "DEX");
-                userControlSavingThrows1.setValue(activeCharacter.getModifier("CON"), activeCharacter.isSavingThrowProficientIn("CON"), activeCharacter.ProficiencyBonus, "CON");
-                userControlSavingThrows1.setValue(activeCharacter.getModifier("WIS"), activeCharacter.isSavingThrowProficientIn("WIS"), activeCharacter.ProficiencyBonus, "WIS");
-                userControlSavingThrows1.setValue(activeCharacter.getModifier("CHA"), activeCharacter.isSavingThrowProficientIn("CHA"), activeCharacter.ProficiencyBonus, "CHA");
+                userControlSavingThrows1.connectToPlayerCharacter(activeCharacter);
 
                 //4. Update skill bonuses.
 

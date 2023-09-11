@@ -334,6 +334,7 @@ namespace CharacterManager
         public event PlayerEvent CharacterAbilityStatsUpdated;
 
         public event PlayerEvent CharacterSkillBonuseUpdated;
+        public event PlayerEvent CharacterSavingThrowBonusUpdated;
         public event PlayerEvent InitiativeRollMade;
 
         public PlayerCharacter()
@@ -666,6 +667,7 @@ namespace CharacterManager
             CharacterAbilityStatsUpdated = null;
 
             CharacterSkillBonuseUpdated = null;
+            CharacterSavingThrowBonusUpdated = null;
             InitiativeRollMade = null;
         }
 
@@ -701,10 +703,61 @@ namespace CharacterManager
             }
         }
 
+        public List<BonusValueModifier> GetSavingThrowModifiers(string attribute)
+        {
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
+            BonusValueModifier baseMod = new BonusValueModifier(attribute, this.getModifier(attribute));
+            res.Add(baseMod);
+           
+            if (isSavingThrowProficientIn(attribute)) 
+            {
+                BonusValueModifier proficiencyMod = new BonusValueModifier("prof. bonus", ProficiencyBonus);
+                res.Add(proficiencyMod);
+            }
+
+            BonusValues.CharacterSavingThrowBonusesFromAbilities = new Dictionary<string, List<BonusValueModifier>>();
+            CharacterSavingThrowBonusUpdated?.Invoke(this);
+            try
+            {
+                res.AddRange(BonusValues.CharacterSavingThrowBonusesFromAbilities[attribute]);
+            }
+            catch (Exception)
+            {
+                /* Nothing to do here. If the dictionary does not contain the desired key, then no action. */
+            }
+
+            return res;
+        }
+
+        /// <summary>
+        /// We need an extra function for this, because proficiency is displayed with separate visual elements. 
+        /// </summary>
+        /// <param name="attribute"></param>
+        /// <returns></returns>
+        public List<BonusValueModifier> GetSavingThrowExtraModifiers(string attribute)
+        {
+            List<BonusValueModifier> res = new List<BonusValueModifier>();
+
+            BonusValues.CharacterSavingThrowBonusesFromAbilities = new Dictionary<string, List<BonusValueModifier>>();
+            CharacterSavingThrowBonusUpdated?.Invoke(this);
+            try
+            {
+                res.AddRange(BonusValues.CharacterSavingThrowBonusesFromAbilities[attribute]);
+            }
+            catch (Exception)
+            {
+                /* Nothing to do here. If the dictionary does not contain the desired key, then no action. */
+            }
+
+            return res;
+        }
+
+
         public bool isSavingThrowProficientIn(string attribute)
         {
             return (this.SavingThrowProficiencies.Contains(attribute));
         }
+        
 
         public bool isSkillProficientIn(string skill)
         {
@@ -856,6 +909,12 @@ namespace CharacterManager
         {
             BonusValues.CharacterSkillBonusesFromAbilities = new Dictionary<string, List<BonusValueModifier>>();
             CharacterSkillBonuseUpdated?.Invoke(this);
+        }
+
+        public void UpdateSavingThrowBonusFromAbilities()
+        {
+            BonusValues.CharacterSavingThrowBonusesFromAbilities = new Dictionary<string, List<BonusValueModifier>>();
+            CharacterSavingThrowBonusUpdated?.Invoke(this);
         }
 
         public void DropWeapon(PlayerWeapon w)

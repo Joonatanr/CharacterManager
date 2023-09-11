@@ -739,6 +739,7 @@ namespace CharacterManager
             SpecialAttributeList.Add(new SecondWindAbility());
             SpecialAttributeList.Add(new StudentOfWarAbility());
             SpecialAttributeList.Add(new ImprovedCriticalAbility());
+            SpecialAttributeList.Add(new RemarkableAthleteAbility());
 
             SpecialAttributeList.Add(new RageAbility());
             SpecialAttributeList.Add(new UnarmoredDefenseAbility());

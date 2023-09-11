@@ -486,7 +486,8 @@ namespace CharacterManager.CharacterCreator
             //4. Update hit point values.
             UpdateHitPoints(true);
 
-            //5. Update saving throw values.
+            //5. Update saving throws.
+            // Update saving throw values. Could be special abilities that modify these as well.
             updateSavingThrowFields();
 
             //6. Update skill proficiency values.
@@ -515,7 +516,7 @@ namespace CharacterManager.CharacterCreator
                 /* TODO : A bit of a chicken and egg problem. Basically we should update all field that might be affected by the special abilities.*/
                 currentMaxHp = CreatedCharacter.MaxHitPoints;
                 
-                /* These might have been changed by special attributes. TODO : Probably there are other special attributes to take into account.. */
+                /* These might have been changed by special attributes. */
                 UpdateHitPoints(false);
             }
         }
@@ -698,13 +699,19 @@ namespace CharacterManager.CharacterCreator
 
         private void updateSavingThrowFields()
         {
-            // TODO : Should make the saving throw display into a separate class altogether.
-            userControlSavingThrows1.setValue(getCurrentAttributeBonus("STR"), isCharacterSaveProfIn("STR"), 2, "STR");
-            userControlSavingThrows1.setValue(getCurrentAttributeBonus("INT"), isCharacterSaveProfIn("INT"), 2, "INT");
-            userControlSavingThrows1.setValue(getCurrentAttributeBonus("DEX"), isCharacterSaveProfIn("DEX"), 2, "DEX");
-            userControlSavingThrows1.setValue(getCurrentAttributeBonus("CON"), isCharacterSaveProfIn("CON"), 2, "CON");
-            userControlSavingThrows1.setValue(getCurrentAttributeBonus("WIS"), isCharacterSaveProfIn("WIS"), 2, "WIS");
-            userControlSavingThrows1.setValue(getCurrentAttributeBonus("CHA"), isCharacterSaveProfIn("CHA"), 2, "CHA");
+            if (CreatedCharacter != null)
+            {
+                userControlSavingThrows1.connectToPlayerCharacter(CreatedCharacter);
+            }
+            else
+            {
+                userControlSavingThrows1.setValue(getCurrentAttributeBonus("STR"), isCharacterSaveProfIn("STR"), 2, "STR");
+                userControlSavingThrows1.setValue(getCurrentAttributeBonus("INT"), isCharacterSaveProfIn("INT"), 2, "INT");
+                userControlSavingThrows1.setValue(getCurrentAttributeBonus("DEX"), isCharacterSaveProfIn("DEX"), 2, "DEX");
+                userControlSavingThrows1.setValue(getCurrentAttributeBonus("CON"), isCharacterSaveProfIn("CON"), 2, "CON");
+                userControlSavingThrows1.setValue(getCurrentAttributeBonus("WIS"), isCharacterSaveProfIn("WIS"), 2, "WIS");
+                userControlSavingThrows1.setValue(getCurrentAttributeBonus("CHA"), isCharacterSaveProfIn("CHA"), 2, "CHA");
+            }
         }
 
         private void updateEquipmentList()

@@ -475,6 +475,19 @@ roll of 19 or 20.</Description>
 		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<Name>Remarkable Athlete</Name>
+		<Description>Starting at 7th level, you can add half your proficiency
+bonus (round up) to any Strength, Dexterity, or
+Constitution check you make that doesn’t already use
+your proficiency bonus.
+In addition, when you make a running long jump, the
+distance you can cover increases by a number of feet
+equal to your Strength modifier.</Description>
+		<MaximumCharges>0</MaximumCharges>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
 	<PlayerAbility xsi:type="PlayerManeuverAbility">
 		<Name>Combat Superiority</Name>
 		<Description>When you choose this archetype at 3rd level, you
@@ -548,6 +561,25 @@ your Strength or Dexterity modifier (your choice)</Description>
 		<Description>At 3rd level, you gain proficiency with one type of
 artisan’s tools of your choice.</Description>
 		<IsHidden>true</IsHidden>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Know Your Enemy</Name>
+		<Description>Starting at 7th level, if you spend at least 1 minute
+observing or interacting with another creature outside
+combat, you can learn certain information about its
+capabilities compared to your own. The DM tells you if
+the creature is your equal, superior, or inferior in regard
+to two of the following characteristics of your choice:
+
+• Strength score
+• Dexterity score
+• Constitution score
+• Armor Class
+• Current hit points
+• Total class levels (if any)
+• Fighter class levels (if any)</Description>
+		<IsHidden>false</IsHidden>
 	</PlayerAbility>
 	
 	<PlayerAbility>

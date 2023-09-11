@@ -24,7 +24,7 @@ namespace CharacterManager
 
         /* Abilities might give extra bonus to ability check modifiers. */
         public Dictionary<String, List<BonusValueModifier>> CharacterSkillBonusesFromAbilities = new Dictionary<string, List<BonusValueModifier>>();
-
+        public Dictionary<String, List<BonusValueModifier>> CharacterSavingThrowBonusesFromAbilities = new Dictionary<string, List<BonusValueModifier>>();
         public int AttackRollBonus
         {
             get

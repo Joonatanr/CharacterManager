@@ -88,6 +88,77 @@ namespace CharacterManager
         }
     }
 
+    public class RemarkableAthleteAbility : SpecialAttribute
+    {
+        public RemarkableAthleteAbility()
+        {
+            this.Name = "Remarkable Athlete";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.CharacterSkillBonuseUpdated += C_CharacterSkillBonusUpdated;
+            c.CharacterSavingThrowBonusUpdated += C_CharacterSavingThrowBonusUpdated;
+        }
+
+        private void C_CharacterSavingThrowBonusUpdated(PlayerCharacter c)
+        {
+            if (!c.isSavingThrowProficientIn("STR"))
+            {
+                if (!c.BonusValues.CharacterSavingThrowBonusesFromAbilities.Keys.Contains("STR"))
+                {
+                    c.BonusValues.CharacterSavingThrowBonusesFromAbilities.Add("STR", new List<BonusValueModifier>());
+                }
+                c.BonusValues.CharacterSavingThrowBonusesFromAbilities["STR"].Add(new BonusValueModifier("Remarkable Athlete", (c.ProficiencyBonus + 1) / 2));
+            }
+
+            if (!c.isSavingThrowProficientIn("DEX")) 
+            {
+                if (!c.BonusValues.CharacterSavingThrowBonusesFromAbilities.Keys.Contains("DEX"))
+                {
+                    c.BonusValues.CharacterSavingThrowBonusesFromAbilities.Add("DEX", new List<BonusValueModifier>());
+                }
+                c.BonusValues.CharacterSavingThrowBonusesFromAbilities["DEX"].Add(new BonusValueModifier("Remarkable Athlete", (c.ProficiencyBonus + 1) / 2));
+            }
+            
+            if (!c.isSavingThrowProficientIn("CON")) 
+            { 
+                if (!c.BonusValues.CharacterSavingThrowBonusesFromAbilities.Keys.Contains("CON"))
+                {
+                    c.BonusValues.CharacterSavingThrowBonusesFromAbilities.Add("CON", new List<BonusValueModifier>());
+                }
+                c.BonusValues.CharacterSavingThrowBonusesFromAbilities["CON"].Add(new BonusValueModifier("Remarkable Athlete", (c.ProficiencyBonus + 1) / 2));
+            }
+        }
+
+        private void C_CharacterSkillBonusUpdated(PlayerCharacter c)
+        {
+            String[] CharacterSkillProficiencies = new String[]
+            {
+                "Acrobatics", "Athletics", "Sleight Of Hand","Stealth",
+            };
+
+            BonusValueModifier HalfProfBonusMod = new BonusValueModifier("Remarkable Athlete", (c.ProficiencyBonus + 1) / 2);
+
+            foreach (string skill in CharacterSkillProficiencies)
+            {
+                if (!c.SkillProficiencies.Contains(skill))
+                {
+                    if (c.BonusValues.CharacterSkillBonusesFromAbilities.Keys.Contains(skill))
+                    {
+                        c.BonusValues.CharacterSkillBonusesFromAbilities[skill].Add(HalfProfBonusMod);
+                    }
+                    else
+                    {
+                        List<BonusValueModifier> myList = new List<BonusValueModifier>();
+                        myList.Add(HalfProfBonusMod);
+                        c.BonusValues.CharacterSkillBonusesFromAbilities.Add(skill, myList);
+                    }
+                }
+            }
+        }
+    }
+
     public class FightingStyleDueling : SpecialAttribute
     {
         public override string DisplayedName { get { return "Dueling Fighting Style"; } }
@@ -117,8 +188,7 @@ namespace CharacterManager
 
             if (isOnlyOneEquipped && (w.IsEquippedTwoHanded == false))
             {
-                //c.BonusValues.AttackRollBonus += 2;
-                c.BonusValues.AttackRollBonusModifiers.Add(new BonusValueModifier("Dueling Fighting Style", 2));
+                c.BonusValues.AttackDamageBonusModifiers.Add(new BonusValueModifier("Dueling Fighting Style", 2));
             }
         }
     }
