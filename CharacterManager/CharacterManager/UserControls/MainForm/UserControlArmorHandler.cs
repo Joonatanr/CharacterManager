@@ -40,7 +40,7 @@ namespace CharacterManager.UserControls
             }
 
 
-            public void setEquipped(Boolean isEquipped)
+            public void setEquippedVisualIndication(Boolean isEquipped)
             {
                 if (isEquipped)
                 {
@@ -60,14 +60,14 @@ namespace CharacterManager.UserControls
             {
                 if (armor.IsEquipped)
                 {
-                    setEquipped(false);
+                    setEquippedVisualIndication(false);
                     armor.IsEquipped = false;
                     EquippedChangedHandler?.Invoke(armor, false);
                     
                 }
                 else
                 {
-                    setEquipped(true);
+                    setEquippedVisualIndication(true);
                     armor.IsEquipped = true;
                     EquippedChangedHandler?.Invoke(armor, true);
                 }
@@ -81,7 +81,7 @@ namespace CharacterManager.UserControls
                     /* If we are currently equipping this armor, then first unequip. */
                     if (armor.IsEquipped)
                     {
-                        setEquipped(false);
+                        setEquippedVisualIndication(false);
                         armor.IsEquipped = false;
                         EquippedChangedHandler?.Invoke(armor, false);
                         ArmorDroppedHandler?.Invoke(armor, false);
@@ -139,7 +139,7 @@ namespace CharacterManager.UserControls
                 AddControlOnLine(myData.infoBtn, y, 0, false);
 
                 /* 2. Set up the Equip button. */
-                myData.setEquipped(a.IsEquipped);
+                myData.setEquippedVisualIndication(a.IsEquipped);
                 myData.EquippedChangedHandler = ArmorEquippedChanged;
                 AddControlOnLine(myData.EquipButton, y, 0, false);
 
@@ -157,7 +157,7 @@ namespace CharacterManager.UserControls
         {
             foreach(ArmorControlData acdata in mainList) 
             {
-                acdata.setEquipped(acdata.armor.IsEquipped);
+                acdata.setEquippedVisualIndication(acdata.armor.IsEquipped);
             }
         }
 
@@ -175,7 +175,8 @@ namespace CharacterManager.UserControls
                     {
                         if ((cData.armor != armor) && (!cData.armor.IsShield))
                         {
-                            cData.setEquipped(false);
+                            cData.setEquippedVisualIndication(false);
+                            cData.armor.IsEquipped = false;
                         }
                     }
                 }
