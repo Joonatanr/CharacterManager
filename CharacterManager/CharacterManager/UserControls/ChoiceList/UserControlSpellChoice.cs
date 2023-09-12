@@ -67,6 +67,7 @@ namespace CharacterManager.UserControls
 
         public UserControlSpellChoice() : base()
         {
+            this.DoubleBuffered = true;
             ItemSelectionChanged += new ItemChoiceChangedListener(SpellSelectionChangedHandler);
             ItemDescriptionArgs = new object[1];
         }

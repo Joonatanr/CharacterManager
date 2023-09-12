@@ -179,6 +179,7 @@ namespace CharacterManager.UserControls
 
         protected void UpdateValues()
         {
+            this.SuspendLayout();
             this.Controls.Clear(); /* Remove any existing controls. */
             myControlList = new List<ItemHandleControl<ItemType>>();
             LeftMargin = new Dictionary<int, int>();
@@ -232,6 +233,7 @@ namespace CharacterManager.UserControls
                 setSelectionsLocked(true);
             }
 
+            this.ResumeLayout();
             this.Invalidate();
         }
 
