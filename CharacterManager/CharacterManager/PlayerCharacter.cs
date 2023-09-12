@@ -955,10 +955,22 @@ namespace CharacterManager
             }
         }
 
-        internal void ConvertAllCurrencyToGold()
+        public void ConvertAllCurrencyToGold()
         {
             _myCurrency.ConvertToGoldPieces();
             CurrencyChanged?.Invoke(this);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns>True if we had enough gold, false otherwise </returns>
+        public bool SpendGold(double amount)
+        {
+            bool res = _myCurrency.SpendAmountOfGold(amount);
+            CurrencyChanged?.Invoke(this);
+            return res;
         }
 
         public List<BonusValueModifier> GetInitiativeRollModifiers()

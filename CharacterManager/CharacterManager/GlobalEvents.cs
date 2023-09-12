@@ -90,6 +90,25 @@ namespace CharacterManager.Spells
             }
         }
 
+        public static bool SpendGoldGlobal(double amount)
+        {
+            if (GetActiveCharacterExternal == null)
+            {
+                return false;
+            }
+            else
+            {
+                PlayerCharacter c = GetActiveCharacterExternal();
+
+                if (c == null)
+                {
+                    return false;
+                }
+
+                return c.SpendGold(amount);
+            }
+        }
+
         public static bool CastSpell(PlayerSpell spell)
         {
             return CastSpell(spell, spell.SpellLevel);

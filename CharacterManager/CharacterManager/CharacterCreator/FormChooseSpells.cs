@@ -206,13 +206,48 @@ namespace CharacterManager.CharacterCreator
 
         private void buttonOK_Click(object sender, EventArgs e)
         {
-            if (userControlSpellChoice1.RemainingAvailableChoices > 0 || userControlSpellChoice2.RemainingAvailableChoices > 0)
+            if (_isSpellCostDisplayed)
             {
-                MessageBox.Show("Not all spells have been selected!");
+                /* Special case. */
+                /* First we try to pay the cost if applicable. */
+                if (checkBoxAutoSpendGold.Checked)
+                {
+                    /* TODO : Spend the gold. */
+                    if (GlobalEvents.SpendGoldGlobal(_totalCopyCost) == false)
+                    {
+                        if (MessageBox.Show("Not enough gold. Ignore cost?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            this.DialogResult = DialogResult.OK;
+                            this.Close();
+                        }
+                        else
+                        {
+                            // user clicked no
+                        }
+                    }
+                    else
+                    {
+                        /* Gold has been spent.*/
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
-            
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            else
+            {
+                if (userControlSpellChoice1.RemainingAvailableChoices > 0 || userControlSpellChoice2.RemainingAvailableChoices > 0)
+                {
+                    MessageBox.Show("Not all spells have been selected!");
+                }
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
 
         private void buttonCancel_Click(object sender, EventArgs e)

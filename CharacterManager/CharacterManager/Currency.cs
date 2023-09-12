@@ -27,11 +27,7 @@ namespace CharacterManager
         public void ConvertToGoldPieces()
         {
             /* The idea is to convert the whole stack to GP and leave fractions of copper and silver over. */
-            int totalCopperPieces = CopperPieces;
-            totalCopperPieces += SilverPieces * 10;
-            totalCopperPieces += GoldPieces * 100;
-            totalCopperPieces += ElectrumPieces * 500;
-            totalCopperPieces += PlatinumPieces * 1000;
+            int totalCopperPieces = GetTotalAmountOfCopperPieces();
 
             this.CopperPieces = totalCopperPieces % 10;
             totalCopperPieces -= this.CopperPieces;
@@ -44,6 +40,49 @@ namespace CharacterManager
             this.PlatinumPieces = 0;
             this.ElectrumPieces = 0;
         }
+        
+        public bool SpendAmountOfGold(double gold)
+        {
+            int totalCopperPiecesSpend = (int)(gold * 100);
+            int totalCopperPiecesExisting = GetTotalAmountOfCopperPieces();
+            int remainingCopperPieces = 0;
 
+            if (totalCopperPiecesExisting < totalCopperPiecesSpend)
+            {
+                return false;
+            }
+            else
+            {
+                remainingCopperPieces = totalCopperPiecesExisting - totalCopperPiecesSpend;
+                this.CopperPieces = remainingCopperPieces % 10;
+                remainingCopperPieces /= 10;
+                this.SilverPieces = remainingCopperPieces % 10;
+                remainingCopperPieces /= 10;
+                this.GoldPieces = remainingCopperPieces;
+
+                /* Could be that we might want to preserve these somehow.... TODO : Consider more complex approach. */
+                this.PlatinumPieces = 0;
+                this.ElectrumPieces = 0;
+
+                return true;
+            }
+        }
+
+        public double GetTotalAmountOfGoldPieces()
+        {
+            return (double)GetTotalAmountOfCopperPieces() / 100;
+        }
+
+
+        public int GetTotalAmountOfCopperPieces()
+        {
+            int totalCopperPieces = CopperPieces;
+            totalCopperPieces += SilverPieces * 10;
+            totalCopperPieces += GoldPieces * 100;
+            totalCopperPieces += ElectrumPieces * 500;
+            totalCopperPieces += PlatinumPieces * 1000;
+
+            return totalCopperPieces;
+        }
     }
 }
