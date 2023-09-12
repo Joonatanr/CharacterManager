@@ -343,6 +343,7 @@ namespace CharacterManager
 
         public delegate void PlayerSpellEvent(PlayerCharacter c, PlayerSpell sp, int level);
         public event PlayerSpellEvent CharacterSpellCast;
+        public event PlayerSpellEvent CharacterSetupCastingForSpell;
 
         public PlayerCharacter()
         {
@@ -996,6 +997,20 @@ namespace CharacterManager
                 CharacterSpellCast?.Invoke(this, spell, level);
                 CharacterSpellCastingStatus.SpendSpellSlot(level);
             }
+        }
+
+        /// <summary>
+        /// Some player abilities might give extra modifiers to the casting of spells, like extra dice.
+        /// </summary>
+        /// <param name="spell"></param>
+        /// <param name="level"></param>
+        /// <returns></returns>
+        public List<BonusValueModifier> GetExtraDieRollModifiersForSpell(PlayerSpell spell, int level)
+        {
+            BonusValues.SpellExtraDiceModifiers = new List<BonusValueModifier>();
+            CharacterSetupCastingForSpell?.Invoke(this, spell, level);
+
+            return BonusValues.SpellExtraDiceModifiers;
         }
 
         /*************************** Private functions **************************/

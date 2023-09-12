@@ -212,7 +212,6 @@ namespace CharacterManager.CharacterCreator
                 /* First we try to pay the cost if applicable. */
                 if (checkBoxAutoSpendGold.Checked)
                 {
-                    /* TODO : Spend the gold. */
                     if (GlobalEvents.SpendGoldGlobal(_totalCopyCost) == false)
                     {
                         if (MessageBox.Show("Not enough gold. Ignore cost?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

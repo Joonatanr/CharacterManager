@@ -414,6 +414,8 @@ namespace CharacterManager.Spells
                 myComponents.Add(new DieRollConstant(GlobalEvents.GetSpellcastingAbilityModifier()));
             }
             
+            /* Lets get more stuff from global events here....*/
+
             if (myComponents != null)
             {
                 dieRollTextBox1.Text = DieRollEquation.createStringFromDieRollComponents(myComponents, true); 

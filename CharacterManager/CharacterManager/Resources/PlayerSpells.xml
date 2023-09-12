@@ -3932,16 +3932,16 @@ Stage Condition
   </PlayerSpell>
   <PlayerSpell>
     <Description>You attempt to interrupt a creature in the process of
-casting a spell. If the creature is casting a spell o f 3rd
+casting a spell. If the creature is casting a spell of 3rd
 level or lower, its spell fails and has no effect. If it is
-casting a spell o f 4th level or higher, make an ability
+casting a spell of 4th level or higher, make an ability
 check using your spellcasting ability. The DC equals 10
 + the spell’s level. On a success, the creature’s spell fails
 and has no effect.</Description>
     <Name>Counterspell</Name>
     <SpellName>Counterspell</SpellName>
     <AtHigherLevels>When you cast this spell using a
-spell slot o f 4th level or higher, the interrupted spell has
+spell slot of 4th level or higher, the interrupted spell has
 no effect if its level is less than or equal to the level o f the
 spell slot you used.</AtHigherLevels>
     <School>Abjuration</School>
@@ -3964,14 +3964,14 @@ spell slot you used.</AtHigherLevels>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel3>1d20</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
     <DiceAtLevel7 />
     <DiceAtLevel8 />
     <DiceAtLevel9 />
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5135,14 +5135,14 @@ equal to or less than the level o f the spell slot you used.</AtHigherLevels>
     <DiceAtLevel0 />
     <DiceAtLevel1 />
     <DiceAtLevel2 />
-    <DiceAtLevel3 />
+    <DiceAtLevel3>1d20</DiceAtLevel3>
     <DiceAtLevel4 />
     <DiceAtLevel5 />
     <DiceAtLevel6 />
     <DiceAtLevel7 />
     <DiceAtLevel8 />
     <DiceAtLevel9 />
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>

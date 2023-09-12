@@ -1320,11 +1320,14 @@ feature again, or if it takes any damage.</Description>
 		<Description>Starting at 6th level, you can use your action to teleport
 up to 30 feet to an unoccupied space that you can see.
 Alternatively, you can choose a space within range
-that is occupied by a Sm all or Medium creature. If that
+that is occupied by a Small or Medium creature. If that
 creature is willing, you both teleport, swapping places.
 Once you use this feature, you can’t use it again until
 you finish a long rest or you cast a conjuration spell of
 1st level or higher.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -1359,6 +1362,8 @@ rolls. You must choose to do so before the roll, and you
 can replace a roll in this way only once per turn.
 Each foretelling roll can be used only once. When you
 finish a long rest, you lose any unused foretelling rolls.</Description>
+		<Dice>2d20</Dice>
+		<IsUsable>true</IsUsable>
 	</PlayerAbility>
 	
 	<PlayerAbility>

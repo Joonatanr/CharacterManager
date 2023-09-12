@@ -531,6 +531,48 @@ namespace CharacterManager
         }
     }
 
+    public class ImprovedAbjurationAbility : SpecialAttribute
+    {
+        public ImprovedAbjurationAbility()
+        {
+            this.Name = "Improved Abjuration";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.CharacterSetupCastingForSpell += C_CharacterSetupCastingForSpell;
+        }
+
+        private void C_CharacterSetupCastingForSpell(PlayerCharacter c, PlayerSpell sp, int level)
+        {
+            if (sp.School == "Abjuration" && sp.IsSpellCastingModifierAddedToDice)
+            {
+                c.BonusValues.SpellExtraDiceModifiers.Add(new BonusValueModifier("Improved Abjuration", c.ProficiencyBonus));
+            }
+        }
+    }
+
+    public class BenignTranspositionAbility : SpecialAttribute
+    {
+        public BenignTranspositionAbility()
+        {
+            this.Name = "Benign Transposition";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.CharacterSpellCast += C_CharacterSpellCast;
+        }
+
+        private void C_CharacterSpellCast(PlayerCharacter c, PlayerSpell sp, int level)
+        {
+            if(sp.SpellLevel >= 1 && sp.School == "Conjuration")
+            {
+                this.RemainingCharges = this.MaximumCharges;
+            }
+        }
+    }
+
     /*********************************************************************************************/
 
     /******* Bard class abilities. ********/

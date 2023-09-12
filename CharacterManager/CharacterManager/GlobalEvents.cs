@@ -71,6 +71,19 @@ namespace CharacterManager.Spells
             }
         }
 
+        public static List<BonusValueModifier> GetExtraDieRollModifiersForSpell(PlayerSpell spell, int level)
+        {
+            if (GetActiveCharacterExternal == null)
+            {
+                return null;
+            }
+            else
+            {
+                PlayerCharacter c = GetActiveCharacterExternal();
+                return c.GetExtraDieRollModifiersForSpell(spell, level);
+            }
+        }
+
         public static int getTotalCostOfCopyingSpells(List<PlayerSpell> spells)
         {
             if (GetActiveCharacterExternal == null)
