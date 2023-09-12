@@ -276,6 +276,9 @@
     <Compile Include="UserControls\Proficiency\UserControlSkillProficiency.Designer.cs">
       <DependentUpon>UserControlSkillProficiency.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SpellIndicators\UserControlChargeIndicatorLarge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\UserControlAttributeSetup.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -487,6 +490,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Proficiency\UserControlSkillProficiency.resx">
       <DependentUpon>UserControlSkillProficiency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SpellIndicators\UserControlChargeIndicatorLarge.resx">
+      <DependentUpon>UserControlChargeIndicatorLarge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControlAttributeSetup.resx">
       <DependentUpon>UserControlAttributeSetup.cs</DependentUpon>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CharacterManager.UserControls.SpellIndicators;
 
 namespace CharacterManager.UserControls
 {
@@ -42,7 +43,7 @@ namespace CharacterManager.UserControls
             public UserControlSpellSlotIndicator [] slotArray;
             private int numberOfSpellSlots;
 
-            private NumericUpDown LargeIndicator = null;
+            private UserControlChargeIndicatorLarge LargeIndicator = null;
 
             public AttributeControlData(PlayerAbility _attribute)
             {
@@ -101,7 +102,7 @@ namespace CharacterManager.UserControls
             }
 
 
-            public void setSpellSlotsLargeIndicator(NumericUpDown ctrl)
+            public void setSpellSlotsLargeIndicator(UserControlChargeIndicatorLarge ctrl)
             {
                 LargeIndicator = ctrl;
                 ctrl.ValueChanged += Ctrl_ValueChanged;
@@ -285,13 +286,15 @@ namespace CharacterManager.UserControls
                         else
                         {
                             /* We need to use a more compact control here. */
-                            /* TODO : Lets at one point create dedicated user control for this, but until then lets use an ordinaru numericupdpown */
-                            NumericUpDown LargeAmountControl = new NumericUpDown();
+                            /* TODO : Might combine these into a single user control class, that is smart enough to know to
+                             display itself differently if there are more than 5 charges. */
+
+                            UserControlChargeIndicatorLarge LargeAmountControl = new UserControlChargeIndicatorLarge();
                             LargeAmountControl.Minimum = 0;
                             LargeAmountControl.Maximum = attrib.MaximumCharges;
                             LargeAmountControl.Value = attrib.RemainingCharges;
-                            LargeAmountControl.Width = 60;
-                            AddControlOnLine(LargeAmountControl, y, 0, 2, false);
+                            LargeAmountControl.Width = 50;
+                            AddControlOnLine(LargeAmountControl, y, 0, false);
                             cData.setSpellSlotsLargeIndicator(LargeAmountControl);
                         }
                     }
