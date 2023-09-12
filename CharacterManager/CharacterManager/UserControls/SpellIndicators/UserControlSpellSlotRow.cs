@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterManager.UserControls.SpellIndicators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace CharacterManager.UserControls
         //private int number_of_slots = 3; /* Set some sane default value */
         private SpellSlotData mySpellSlotData = new SpellSlotData(3, 3);
         private List<UserControlSpellSlotIndicator> mySpellSlotIndicators = new List<UserControlSpellSlotIndicator>();
+        private UserControlChargeIndicatorLarge myLargeIndicator;
 
         public delegate void ActiveSlotsChangedListener(int active_cnt);
         public ActiveSlotsChangedListener ActiveSlotsChanged;
@@ -57,7 +59,6 @@ namespace CharacterManager.UserControls
                 mySpellSlotData.ActiveCount = value;
                 UpdateSpellSlotRowData();
             }
-
         }
 
 
@@ -78,42 +79,49 @@ namespace CharacterManager.UserControls
 
         public void UpdateSpellSlotRowData()
         {
-            /* Lets check if we actually need to update anything... */
-            int currentActive = 0;
-
-            for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
+            if (myLargeIndicator != null)
             {
-                try
-                {
-                    if (mySpellSlotIndicators[x].IsActive)
-                    {
-                        currentActive++;
-                    }
-                }
-                catch (Exception)
-                {
-                    /* Oh dear... */
-                }
+                myLargeIndicator.Value = mySpellSlotData.ActiveCount;
             }
-
-            if (currentActive != mySpellSlotData.ActiveCount)
+            else
             {
+                /* Lets check if we actually need to update anything... */
+                int currentActive = 0;
+
                 for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
                 {
                     try
                     {
-                        if (x < (mySpellSlotData.ActiveCount))
+                        if (mySpellSlotIndicators[x].IsActive)
                         {
-                            mySpellSlotIndicators[x].IsActive = true;
-                        }
-                        else
-                        {
-                            mySpellSlotIndicators[x].IsActive = false;
+                            currentActive++;
                         }
                     }
                     catch (Exception)
                     {
-                        /* Lets hope this does not happen... */
+                        /* Oh dear... */
+                    }
+                }
+
+                if (currentActive != mySpellSlotData.ActiveCount)
+                {
+                    for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
+                    {
+                        try
+                        {
+                            if (x < (mySpellSlotData.ActiveCount))
+                            {
+                                mySpellSlotIndicators[x].IsActive = true;
+                            }
+                            else
+                            {
+                                mySpellSlotIndicators[x].IsActive = false;
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            /* Lets hope this does not happen... */
+                        }
                     }
                 }
             }
@@ -140,37 +148,69 @@ namespace CharacterManager.UserControls
         {
             /* First clear any existing indicators. */
 
-            foreach (Control item in this.Controls.OfType<UserControlSpellSlotIndicator>().ToList())
+            foreach (Control item in groupBox1.Controls.OfType<UserControlSpellSlotIndicator>().ToList())
             {
-                this.Controls.Remove(item);
+                groupBox1.Controls.Remove(item);
             }
 
             int activeCount = mySpellSlotData.ActiveCount;
 
-            mySpellSlotIndicators = new List<UserControlSpellSlotIndicator>();
-
             /* Next lets set up some indicators. */
-            for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
+
+            if (mySpellSlotData.MaximumCount > 5)
             {
-                UserControlSpellSlotIndicator indicator = new UserControlSpellSlotIndicator();
-                indicator.Left = (x * 20) + label1.Right + 4;
-                
-                indicator.Top = (this.Height / 2) - (indicator.Height / 2);
+                mySpellSlotIndicators = null;
+                myLargeIndicator = new UserControlChargeIndicatorLarge();
+                myLargeIndicator.Maximum = mySpellSlotData.MaximumCount;
+                myLargeIndicator.Minimum = 0;
+                myLargeIndicator.Value = activeCount;
 
-                if(activeCount > 0)
+                myLargeIndicator.Width = 50;
+                myLargeIndicator.Height = 20;
+
+                myLargeIndicator.ValueChanged += MyLargeIndicator_ValueChanged;
+                myLargeIndicator.Left = label1.Right + 4;
+                myLargeIndicator.Top = (this.Height / 2) - (myLargeIndicator.Height / 2);
+
+                groupBox1.Controls.Add(myLargeIndicator);
+            }
+            else
+            {
+                mySpellSlotIndicators = new List<UserControlSpellSlotIndicator>();
+                myLargeIndicator = null;
+
+                for (int x = 0; x < mySpellSlotData.MaximumCount; x++)
                 {
-                    indicator.IsActive = true;
-                    activeCount--;
-                }
-                else
-                {
-                    indicator.IsActive = false;
-                }
+                    UserControlSpellSlotIndicator indicator = new UserControlSpellSlotIndicator();
+                    
+                    indicator.Left = (x * 20) + label1.Right + 4;
+                    indicator.Top = (this.Height / 2) - (indicator.Height / 2);
 
-                indicator.SpellSlotCheckedChangedByUser += new UserControlSpellSlotIndicator.SpellSlotCheckedChanged(HandleUserChangedSpellSlot);
+                    if (activeCount > 0)
+                    {
+                        indicator.IsActive = true;
+                        activeCount--;
+                    }
+                    else
+                    {
+                        indicator.IsActive = false;
+                    }
 
-                this.Controls.Add(indicator);
-                this.mySpellSlotIndicators.Add(indicator);
+                    indicator.SpellSlotCheckedChangedByUser += new UserControlSpellSlotIndicator.SpellSlotCheckedChanged(HandleUserChangedSpellSlot);
+
+                    groupBox1.Controls.Add(indicator);
+                    this.mySpellSlotIndicators.Add(indicator);
+                }
+            }
+        }
+
+        private void MyLargeIndicator_ValueChanged(object sender, EventArgs e)
+        {
+            mySpellSlotData.ActiveCount = myLargeIndicator.Value;
+
+            if (ActiveSlotsChanged != null)
+            {
+                ActiveSlotsChanged.Invoke(mySpellSlotData.ActiveCount);
             }
         }
     }
