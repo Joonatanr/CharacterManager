@@ -188,7 +188,7 @@ namespace CharacterManager.UserControls.SpellIndicators
             }
             else 
             { 
-                gfx.DrawString(_value.ToString(), font, new SolidBrush(textColor), new Rectangle(0, 0, Width, Height), format);
+                gfx.DrawString(_value.ToString() + "/" + _maximum.ToString(), font, new SolidBrush(textColor), new Rectangle(0, 0, Width, Height), format);
             }
         }
 

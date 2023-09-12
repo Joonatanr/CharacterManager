@@ -23,9 +23,62 @@ namespace CharacterManager.CharacterCreator
         private int NumberOfCantripsToChoose = 0;
         private int NumberOfSpellsToChoose = 0;
 
+        private bool _isSpellCostDisplayed = false;
+        private int _totalCopyCost = 0;
+
+        public bool IsSpellCostDisplayed
+        {
+            get
+            {
+                return _isSpellCostDisplayed;
+            }
+
+            set
+            {
+                _isSpellCostDisplayed = value;
+                if (_isSpellCostDisplayed)
+                {
+                    labelCostForCopying.Visible = true;
+                    labelCostForCopying.Enabled = true;
+                    textBoxCopyCost.Visible = true;
+                    textBoxCopyCost.Enabled = true;
+                    checkBoxAutoSpendGold.Visible = true;
+                    checkBoxAutoSpendGold.Enabled = true;
+                }
+                else
+                {
+                    labelCostForCopying.Visible = false;
+                    labelCostForCopying.Enabled = false;
+                    textBoxCopyCost.Visible = false;
+                    textBoxCopyCost.Enabled = false;
+                    checkBoxAutoSpendGold.Visible = false;
+                    checkBoxAutoSpendGold.Enabled = false;
+                }
+            }
+        }
+
         public FormChooseSpells()
         {
             InitializeComponent();
+
+            if (_isSpellCostDisplayed)
+            {
+                labelCostForCopying.Visible = true;
+                labelCostForCopying.Enabled = true;
+                textBoxCopyCost.Visible = true;
+                textBoxCopyCost.Enabled = true;
+                checkBoxAutoSpendGold.Visible = true;
+                checkBoxAutoSpendGold.Enabled = true;
+            }
+            else
+            {
+                labelCostForCopying.Visible = false;
+                labelCostForCopying.Enabled = false;
+                textBoxCopyCost.Visible = false;
+                textBoxCopyCost.Enabled = false;
+                checkBoxAutoSpendGold.Visible = false;
+                checkBoxAutoSpendGold.Enabled = false;
+            }
         }
 
         public void setSpellChoices(List<PlayerSpell> spells, int numberOfCantripsToChoose, int numberOfSpellsToChoose)
@@ -136,6 +189,18 @@ namespace CharacterManager.CharacterCreator
             selectedSpells.AddRange(level1spells);
 
             userControlChosenSpells.setSpellList(selectedSpells);
+
+            List<PlayerSpell> newSpells = new List<PlayerSpell>();
+            foreach(PlayerSpell spell in selectedSpells)
+            {
+                if (!_myLockedSpellList.Contains(spell))
+                {
+                    newSpells.Add(spell);
+                }
+            }
+
+            _totalCopyCost = GlobalEvents.getTotalCostOfCopyingSpells(newSpells);
+            textBoxCopyCost.Text = _totalCopyCost.ToString();
         }
 
 

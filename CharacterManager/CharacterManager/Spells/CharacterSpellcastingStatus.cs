@@ -100,13 +100,14 @@ namespace CharacterManager.Spells
         public SpellSlotData Level8SpellSlots = new SpellSlotData(0, 0);
         public SpellSlotData Level9SpellSlots = new SpellSlotData(0, 0);
 
+
         /// <summary>
         /// TODO
         /// </summary>
         /* This is a container class for the spellcasting status, spellslots, known spells, prepared spells, etc. Should be connected to a character.*/
         public CharacterSpellcastingStatus()
         {
-            
+
         }
 
         public void setSpellSlotDataForLevel(int SpellLevel, SpellSlotData data)

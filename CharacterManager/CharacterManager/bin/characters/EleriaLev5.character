@@ -284,15 +284,15 @@
     <SpellAbilityModifier>4</SpellAbilityModifier>
     <Level1SpellSlots>
       <MaximumCount>4</MaximumCount>
-      <ActiveCount>3</ActiveCount>
+      <ActiveCount>4</ActiveCount>
     </Level1SpellSlots>
     <Level2SpellSlots>
       <MaximumCount>3</MaximumCount>
-      <ActiveCount>2</ActiveCount>
+      <ActiveCount>3</ActiveCount>
     </Level2SpellSlots>
     <Level3SpellSlots>
       <MaximumCount>2</MaximumCount>
-      <ActiveCount>1</ActiveCount>
+      <ActiveCount>2</ActiveCount>
     </Level3SpellSlots>
     <Level4SpellSlots>
       <MaximumCount>0</MaximumCount>
@@ -344,5 +344,5 @@
   </BaseAttributes>
   <CharacterName>Eleria</CharacterName>
   <CurrentHitPoints>22</CurrentHitPoints>
-  <CurrentHitDice>0</CurrentHitDice>
+  <CurrentHitDice>5</CurrentHitDice>
 </PlayerCharacter>

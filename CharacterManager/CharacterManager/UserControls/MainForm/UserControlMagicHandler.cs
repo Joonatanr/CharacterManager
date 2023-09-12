@@ -16,13 +16,34 @@ namespace CharacterManager.UserControls
         private CharacterSpellcastingStatus myStat;
         private List<PlayerSpell> myKnownSpells = new List<PlayerSpell>();
         private List<PlayerSpell> myKnownCantrips = new List<PlayerSpell>();
+        private PlayerCharacter _connectedCharacter;
         
         public UserControlMagicHandler()
         {
             InitializeComponent();
         }
 
-        public void setCharSpellcastingStatus(CharacterSpellcastingStatus stat)
+        public void setConnectedCharacter(PlayerCharacter c)
+        {
+            _connectedCharacter = c;
+            if (_connectedCharacter != null)
+            {
+                setCharSpellcastingStatus(_connectedCharacter.CharacterSpellCastingStatus);
+                /* TODO : This will be a huge mess, if multiclassing ever gets implemented. */
+                if (_connectedCharacter.SpellCasting.SubType == "(Wizard)")
+                {
+                    buttonCopySpells.Visible = true;
+                    buttonCopySpells.Enabled = true;
+                }
+                else
+                {
+                    buttonCopySpells.Visible = false;
+                    buttonCopySpells.Enabled = false;
+                }
+            }
+        }
+
+        private void setCharSpellcastingStatus(CharacterSpellcastingStatus stat)
         {
             myStat = stat;
 
@@ -157,6 +178,39 @@ namespace CharacterManager.UserControls
             }
 
             return res;
+        }
+
+        private void buttonCopySpells_Click(object sender, EventArgs e)
+        {
+            CharacterCreator.FormChooseSpells myForm = new CharacterCreator.FormChooseSpells();
+
+            /* First lets get a list of spells that are already known. */
+            List<PlayerSpell> KnownSpells = _connectedCharacter.GetKnownSpells();
+
+            myForm.setFixedSpells(KnownSpells, 0);
+
+            List<PlayerSpell> SpellsAvailableForLearning = _connectedCharacter.SpellCasting.GetSpellsThatCanBeLearnedAtLevel(_connectedCharacter.Level);
+
+            /* Add spells */
+            /* TODO : Here we have a special case, as we have no limit really to how many spells can be copied. The cost will only be relevant. */
+            myForm.setSpellChoices(SpellsAvailableForLearning, 0, -1);
+            myForm.IsSpellCostDisplayed = true;
+
+            myForm.ShowDialog();
+
+            if (myForm.DialogResult == DialogResult.OK)
+            {
+                List<PlayerSpell> res = myForm.getChosenPlayerSpells();
+                List<string> resStrings = new List<string>();
+                foreach(PlayerSpell sp in res)
+                {
+                    resStrings.Add(sp.Name);
+                }
+
+                _connectedCharacter.CharacterSpellCastingStatus.KnownSpells.AddRange(resStrings);
+                /* Update all displayed data. */
+                setConnectedCharacter(this._connectedCharacter);
+            }
         }
     }
 }

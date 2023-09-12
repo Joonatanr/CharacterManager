@@ -71,6 +71,25 @@ namespace CharacterManager.Spells
             }
         }
 
+        public static int getTotalCostOfCopyingSpells(List<PlayerSpell> spells)
+        {
+            if (GetActiveCharacterExternal == null)
+            {
+                return 0;
+            }
+            else
+            {
+                PlayerCharacter c = GetActiveCharacterExternal();
+
+                if (c == null)
+                {
+                    return 0;
+                }
+
+                return c.GetCostForCopyingSpells(spells);
+            }
+        }
+
         public static bool CastSpell(PlayerSpell spell)
         {
             return CastSpell(spell, spell.SpellLevel);

@@ -47,9 +47,11 @@ namespace CharacterManager.UserControls
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(216, 12);
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.Location = new System.Drawing.Point(298, 12);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(133, 76);
+            this.richTextBox1.Size = new System.Drawing.Size(171, 99);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
@@ -79,7 +81,7 @@ namespace CharacterManager.UserControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 100);
+            this.ClientSize = new System.Drawing.Size(481, 123);
             this.Controls.Add(this.radioButtonChoiceTwo);
             this.Controls.Add(this.radioButtonChoiceOne);
             this.Controls.Add(this.richTextBox1);

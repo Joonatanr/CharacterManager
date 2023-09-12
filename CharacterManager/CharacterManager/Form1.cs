@@ -183,12 +183,12 @@ namespace CharacterManager
                 {
                     userControlMagicHandler1.Visible = true;
                     this.activeCharacter.UpdateSpellModifiers();
-                    userControlMagicHandler1.setCharSpellcastingStatus(this.activeCharacter.CharacterSpellCastingStatus);
+                    userControlMagicHandler1.setConnectedCharacter(this.activeCharacter);
                 }
                 else
                 {
                     userControlMagicHandler1.Visible = false;
-                    userControlMagicHandler1.setCharSpellcastingStatus(null);
+                    userControlMagicHandler1.setConnectedCharacter(null);
                 }
 
                 //15. Update passive perception and speed.

@@ -1067,6 +1067,34 @@ namespace CharacterManager
             /* TODO : Check for additional effects. */
         }
 
+
+        public int GetCostForCopyingSpells(List<PlayerSpell> spells)
+        {
+            int res = 0;
+            foreach (PlayerSpell sp in spells)
+            {
+                bool isHalved = false;
+
+                string SavantAbility = string.Format("{0} Savant", sp.School);
+
+                if(CharacterAbilitiesObjectList.Find(item => item.Name.ToLower() == SavantAbility.ToLower()) != null)
+                {
+                    isHalved = true;
+                }
+
+                if (isHalved)
+                {
+                    res += 25 * sp.SpellLevel;
+                }
+                else
+                {
+                    res += 50 * sp.SpellLevel;
+                }
+            }
+
+            return res;
+        }
+
         private Boolean isRangedAmmoOk(PlayerWeapon w)
         {
             /* Check if we have ammo and reduce it as applicable. */

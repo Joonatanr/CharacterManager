@@ -36,6 +36,9 @@
             this.userControlChosenSpells = new CharacterManager.UserControls.UserControlSpellChoice();
             this.panel3 = new System.Windows.Forms.Panel();
             this.userControlSpellChoice2 = new CharacterManager.UserControls.UserControlSpellChoice();
+            this.labelCostForCopying = new System.Windows.Forms.Label();
+            this.textBoxCopyCost = new System.Windows.Forms.TextBox();
+            this.checkBoxAutoSpendGold = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,6 +79,7 @@
             // 
             this.userControlSpellChoice1.IsAvailabilityCount = true;
             this.userControlSpellChoice1.IsBorder = true;
+            this.userControlSpellChoice1.IsCastingInfoEnabled = false;
             this.userControlSpellChoice1.IsCheckBoxed = true;
             this.userControlSpellChoice1.IsMultipleLevel = false;
             this.userControlSpellChoice1.Location = new System.Drawing.Point(3, 13);
@@ -105,6 +109,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlChosenSpells.IsAvailabilityCount = false;
             this.userControlChosenSpells.IsBorder = true;
+            this.userControlChosenSpells.IsCastingInfoEnabled = false;
             this.userControlChosenSpells.IsCheckBoxed = false;
             this.userControlChosenSpells.IsMultipleLevel = true;
             this.userControlChosenSpells.Location = new System.Drawing.Point(3, 3);
@@ -130,6 +135,7 @@
             // 
             this.userControlSpellChoice2.IsAvailabilityCount = true;
             this.userControlSpellChoice2.IsBorder = true;
+            this.userControlSpellChoice2.IsCastingInfoEnabled = false;
             this.userControlSpellChoice2.IsCheckBoxed = true;
             this.userControlSpellChoice2.IsMultipleLevel = true;
             this.userControlSpellChoice2.Location = new System.Drawing.Point(3, 3);
@@ -141,11 +147,43 @@
             this.userControlSpellChoice2.TitleString = "Available spells:";
             this.userControlSpellChoice2.SpellSelectionChanged += new CharacterManager.UserControls.UserControlSpellChoice.SpellChoiceChangedListener(this.userControlSpellChoice2_SpellSelectionChanged);
             // 
+            // labelCostForCopying
+            // 
+            this.labelCostForCopying.AutoSize = true;
+            this.labelCostForCopying.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.labelCostForCopying.Location = new System.Drawing.Point(12, 670);
+            this.labelCostForCopying.Name = "labelCostForCopying";
+            this.labelCostForCopying.Size = new System.Drawing.Size(106, 16);
+            this.labelCostForCopying.TabIndex = 16;
+            this.labelCostForCopying.Text = "Cost for Copying";
+            // 
+            // textBoxCopyCost
+            // 
+            this.textBoxCopyCost.Location = new System.Drawing.Point(124, 669);
+            this.textBoxCopyCost.Name = "textBoxCopyCost";
+            this.textBoxCopyCost.Size = new System.Drawing.Size(108, 20);
+            this.textBoxCopyCost.TabIndex = 17;
+            // 
+            // checkBoxAutoSpendGold
+            // 
+            this.checkBoxAutoSpendGold.AutoSize = true;
+            this.checkBoxAutoSpendGold.Checked = true;
+            this.checkBoxAutoSpendGold.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxAutoSpendGold.Location = new System.Drawing.Point(239, 671);
+            this.checkBoxAutoSpendGold.Name = "checkBoxAutoSpendGold";
+            this.checkBoxAutoSpendGold.Size = new System.Drawing.Size(143, 17);
+            this.checkBoxAutoSpendGold.TabIndex = 18;
+            this.checkBoxAutoSpendGold.Text = "Automatically spend gold";
+            this.checkBoxAutoSpendGold.UseVisualStyleBackColor = true;
+            // 
             // FormChooseSpells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 701);
+            this.Controls.Add(this.checkBoxAutoSpendGold);
+            this.Controls.Add(this.textBoxCopyCost);
+            this.Controls.Add(this.labelCostForCopying);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -159,6 +197,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -172,5 +211,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label labelCostForCopying;
+        private System.Windows.Forms.TextBox textBoxCopyCost;
+        private System.Windows.Forms.CheckBox checkBoxAutoSpendGold;
     }
 }
