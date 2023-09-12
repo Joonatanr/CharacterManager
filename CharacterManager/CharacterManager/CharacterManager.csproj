@@ -80,6 +80,7 @@
       <DependentUpon>UserControlClassFeature.cs</DependentUpon>
     </Compile>
     <Compile Include="CharacterFactory.cs" />
+    <Compile Include="Currency.cs" />
     <Compile Include="DieRoll.cs" />
     <Compile Include="EquipmentChoice.cs" />
     <Compile Include="Form1.cs">

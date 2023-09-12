@@ -70,7 +70,7 @@ namespace CharacterManager
 
         private void GoldChanged(int amount)
         {
-            if(activeCharacter != null)
+            if (activeCharacter != null)
             {
                 activeCharacter.CopperPieces = userControlCurrencyCopper.CurrencyAmount;
                 activeCharacter.SilverPieces = userControlCurrencySilver.CurrencyAmount;
@@ -167,13 +167,8 @@ namespace CharacterManager
                 //12. Update general inventory.
                 UpdateGeneralEquipmentDisplay();
 
-
                 //12.1 Update general currency.
-                userControlCurrencyElectrum.CurrencyAmount = activeCharacter.ElectrumPieces;
-                userControlCurrencyGold.CurrencyAmount = activeCharacter.GoldPieces;
-                userControlCurrencyCopper.CurrencyAmount = activeCharacter.CopperPieces;
-                userControlCurrencyPlatinum.CurrencyAmount = activeCharacter.PlatinumPieces;
-                userControlCurrencySilver.CurrencyAmount = activeCharacter.SilverPieces;
+                updateCurrencyIndicators();
 
                 //13. Update initiative bonus.
                 updateInitiativeBonus();
@@ -326,7 +321,10 @@ namespace CharacterManager
         {
             activeCharacter.CharacterHPChanged += characterHpChangedListener;
             activeCharacter.CharacterHitDieChanged += C_CharacterHitDieChanged;
+            activeCharacter.CurrencyChanged += ActiveCharacter_CurrencyChanged;
         }
+
+
 
         /*********************** Listener functions ***********************/
         /* TODO : We should move everything that's possible to this logic here. */
@@ -338,6 +336,20 @@ namespace CharacterManager
         private void C_CharacterHitDieChanged(PlayerCharacter c)
         {
             UpdateHitPoints();
+        }
+
+        private void ActiveCharacter_CurrencyChanged(PlayerCharacter c)
+        {
+            updateCurrencyIndicators();
+        }
+
+        private void updateCurrencyIndicators()
+        {
+            userControlCurrencyElectrum.CurrencyAmount = activeCharacter.ElectrumPieces;
+            userControlCurrencyGold.CurrencyAmount = activeCharacter.GoldPieces;
+            userControlCurrencyCopper.CurrencyAmount = activeCharacter.CopperPieces;
+            userControlCurrencyPlatinum.CurrencyAmount = activeCharacter.PlatinumPieces;
+            userControlCurrencySilver.CurrencyAmount = activeCharacter.SilverPieces;
         }
         /*************** Button functions *************/
 
@@ -858,6 +870,14 @@ namespace CharacterManager
                 myEquation.RollValue(out rollResult);
 
                 handleRollReport("Initiative : " + rollResult + Environment.NewLine, Color.Black, false, HorizontalAlignment.Left);
+            }
+        }
+
+        private void buttonConvertToGold_Click(object sender, EventArgs e)
+        {
+            if (activeCharacter != null)
+            {
+                activeCharacter.ConvertAllCurrencyToGold();
             }
         }
     }

@@ -97,11 +97,11 @@ namespace CharacterManager
         public List<PlayerWeapon> CharacterWeapons = new List<PlayerWeapon>();
         public List<PlayerArmor> CharacterArmors = new List<PlayerArmor>();
         public List<PlayerItem> CharacterGeneralEquipment = new List<PlayerItem>();
-        public int GoldPieces;
-        public int ElectrumPieces;
-        public int CopperPieces;
-        public int SilverPieces;
-        public int PlatinumPieces;
+        public int GoldPieces       { get { return _myCurrency.GoldPieces;      } set { if (_myCurrency.GoldPieces != value)        { _myCurrency.GoldPieces = value; this.CurrencyChanged?.Invoke(this); } } }
+        public int ElectrumPieces   { get { return _myCurrency.ElectrumPieces;  } set { if (_myCurrency.ElectrumPieces != value)    { _myCurrency.ElectrumPieces = value; this.CurrencyChanged?.Invoke(this); } } }
+        public int CopperPieces     { get { return _myCurrency.CopperPieces;    } set { if (_myCurrency.CopperPieces != value)      { _myCurrency.CopperPieces = value; this.CurrencyChanged?.Invoke(this); } } }
+        public int SilverPieces     { get { return _myCurrency.SilverPieces;    } set { if (_myCurrency.SilverPieces != value)      { _myCurrency.SilverPieces = value; this.CurrencyChanged?.Invoke(this); } } }
+        public int PlatinumPieces   { get { return _myCurrency.PlatinumPieces;  } set { if (_myCurrency.PlatinumPieces != value)    { _myCurrency.PlatinumPieces = value; this.CurrencyChanged?.Invoke(this); } } }
 
         public CharacterSpellcastingStatus CharacterSpellCastingStatus = new CharacterSpellcastingStatus();
 
@@ -119,6 +119,9 @@ namespace CharacterManager
         public int Speed = 0;
         private int _CurrentHitPoints;
         private int _CurrentHitDice;
+
+        [XmlIgnore]
+        private Currency _myCurrency = new Currency();
 
         public PlayerSize Size;
         public PlayerAlignment Alignment;
@@ -336,6 +339,7 @@ namespace CharacterManager
         public event PlayerEvent CharacterSkillBonuseUpdated;
         public event PlayerEvent CharacterSavingThrowBonusUpdated;
         public event PlayerEvent InitiativeRollMade;
+        public event PlayerEvent CurrencyChanged;
 
         public delegate void PlayerSpellEvent(PlayerCharacter c, PlayerSpell sp, int level);
         public event PlayerSpellEvent CharacterSpellCast;
@@ -666,6 +670,7 @@ namespace CharacterManager
             CharacterSkillBonuseUpdated = null;
             CharacterSavingThrowBonusUpdated = null;
             InitiativeRollMade = null;
+            CurrencyChanged = null;
         }
 
         private void abilityUsed(PlayerAbility ability)
@@ -948,6 +953,12 @@ namespace CharacterManager
             {
                 /* TODO : Report error. */
             }
+        }
+
+        internal void ConvertAllCurrencyToGold()
+        {
+            _myCurrency.ConvertToGoldPieces();
+            CurrencyChanged?.Invoke(this);
         }
 
         public List<BonusValueModifier> GetInitiativeRollModifiers()
