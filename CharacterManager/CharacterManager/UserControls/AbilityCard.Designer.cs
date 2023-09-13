@@ -137,7 +137,6 @@ namespace CharacterManager.UserControls
             // 
             this.userControlPlayerAbilityInfoItem1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlPlayerAbilityInfoItem1.IsBorder = false;
-            this.userControlPlayerAbilityInfoItem1.LabelText = "Ability Data";
             this.userControlPlayerAbilityInfoItem1.Location = new System.Drawing.Point(399, 165);
             this.userControlPlayerAbilityInfoItem1.Name = "userControlPlayerAbilityInfoItem1";
             this.userControlPlayerAbilityInfoItem1.Size = new System.Drawing.Size(251, 150);

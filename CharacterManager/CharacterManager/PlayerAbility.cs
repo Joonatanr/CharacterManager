@@ -460,5 +460,15 @@ So we get to an issue where upgrades to the description are added multiple times
             //By default we return an empty list.
             return res;
         }
+
+        public virtual void UseAbilityInfoItem(PlayerAbilityInfoItem item)
+        {
+            /* By default we do not do anything here. */
+        }
+
+        public virtual String GetInfoItemsLabel()
+        {
+            return "Ability Data";
+        }
     }
 }

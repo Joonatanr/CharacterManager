@@ -35,7 +35,7 @@ namespace CharacterManager.UserControls
                 this.Click += new System.EventHandler(button_Click);
                 this.Name = name;
                 this.Font = new Font("Arial", 8.0f);
-                this.ButtonText = "Info";
+                this.Text = "Info";
                 this.Size = new Size(40, 17);
                 this.infoString = info;
             }
@@ -45,7 +45,7 @@ namespace CharacterManager.UserControls
                 this.Click += new System.EventHandler(button_Click);
                 this.Name = name;
                 this.Font = new Font("Arial", 8.0f);
-                this.ButtonText = "Info";
+                this.Text = "Info";
                 this.Size = new Size(40, 17);
                 this.showInfo = clickHandler;
             }

@@ -175,7 +175,7 @@ namespace CharacterManager.UserControls
                     {
                         if (this.UseButton != null)
                         {
-                            this.UseButton.ButtonText = "Disable";
+                            this.UseButton.Text = "Disable";
                         }
                         //Attribute.RemainingCharges--;
                     }
@@ -183,7 +183,7 @@ namespace CharacterManager.UserControls
                     {
                         if (this.UseButton != null)
                         {
-                            this.UseButton.ButtonText = "Activate";
+                            this.UseButton.Text = "Activate";
                         }
                     }
                     
@@ -253,16 +253,16 @@ namespace CharacterManager.UserControls
                         {
                             if (attrib.IsActive) 
                             {
-                                useButton.ButtonText = "Disable";
+                                useButton.Text = "Disable";
                             }
                             else
                             {
-                                useButton.ButtonText = "Activate";
+                                useButton.Text = "Activate";
                             }
                         }
                         else
                         {
-                            useButton.ButtonText = "Use";
+                            useButton.Text = "Use";
                         }
                         AddButtonOnLine(useButton, y, 1);
 

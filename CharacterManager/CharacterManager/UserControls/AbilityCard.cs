@@ -61,7 +61,7 @@ namespace CharacterManager.UserControls
             }
 
             /* TODO : Might hide this if it is not relevant. Usually there will not be anything listed here... */
-            userControlPlayerAbilityInfoItem1.SetListData(_myAbility.GetInfoItems());
+            userControlPlayerAbilityInfoItem1.SetAbility(_myAbility);
         }
 
         private void _abilityChargesUsedManually(int amount)

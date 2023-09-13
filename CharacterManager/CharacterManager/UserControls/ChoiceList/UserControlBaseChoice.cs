@@ -192,7 +192,7 @@ namespace CharacterManager.UserControls
             {
                 CustomButton iBtn = new CustomButton();
                 iBtn.Size = new Size(40, 18);
-                iBtn.ButtonText = getInfoButtonLabel();
+                iBtn.Text = getInfoButtonLabel();
                 ItemHandleControl<ItemType> ctrl = new ItemHandleControl<ItemType>(myItemDictionary[index], iBtn);
                 ctrl.ItemDescriptionArgs = this.ItemDescriptionArgs;
                 myControlList.Add(ctrl);

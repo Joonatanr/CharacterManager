@@ -31,7 +31,7 @@ namespace CharacterManager.UserControls
         public Color ClickColor { get; set; } = Color.Crimson; /* TODO : Change default to something more neutral. */
         public Color HoverColor { get; set; } = Color.DarkGray;
 
-        public String ButtonText { get; set; } = "Text";
+        public override String Text { get; set; } = "Text";
         public event EventHandler Click;
 
         private Color _defaultBackGroundColor = Color.LightGray; /* The color to be used if button is not selected or pressed, etc. */
@@ -59,7 +59,7 @@ namespace CharacterManager.UserControls
             sf.Alignment = StringAlignment.Center;
 
             /* Draw the text centered. */
-            gfx.DrawString(ButtonText, Font, new SolidBrush(Color.Black), this.ClientRectangle, sf);
+            gfx.DrawString(Text, Font, new SolidBrush(Color.Black), this.ClientRectangle, sf);
 
             /* Draw the border of the button. */
             gfx.DrawRectangle(new Pen(BorderColor), new Rectangle(0,0,Width - 1, Height - 1));

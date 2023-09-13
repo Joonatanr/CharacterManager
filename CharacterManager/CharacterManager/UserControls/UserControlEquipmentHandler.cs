@@ -28,7 +28,7 @@ namespace CharacterManager.UserControls
 
                 DropButton = new CustomButton();
                 DropButton.Size = new Size(40, 16);
-                DropButton.ButtonText = "Drop";
+                DropButton.Text = "Drop";
                 DropButton.Font = new Font("Arial", 8.0f);
                 DropButton.Click += DropButton_Click;
             }

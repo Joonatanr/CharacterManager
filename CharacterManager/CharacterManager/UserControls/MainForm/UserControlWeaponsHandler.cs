@@ -30,18 +30,18 @@ namespace CharacterManager.UserControls
                 infoBtn = new InfoButton("Button " + buttonNumber++, w.getExtendedDescription());
                 EquipButton = new CustomButton();
                 EquipButton.Size = new Size(70, 16);
-                EquipButton.ButtonText = "Equip";
+                EquipButton.Text = "Equip";
                 EquipButton.Font = new Font("Arial", 8.0f);
                 EquipButton.Click += new System.EventHandler(EquipButton_Click);
 
                 AttackBtn = new CustomButton();
                 AttackBtn.Size = new Size(40, 17);
-                AttackBtn.ButtonText = "Attack";
+                AttackBtn.Text = "Attack";
                 AttackBtn.Click += new System.EventHandler(AttackBtn_Click);
 
                 DropButton = new CustomButton();
                 DropButton.Size = new Size(40, 16);
-                DropButton.ButtonText = "Drop";
+                DropButton.Text = "Drop";
                 DropButton.Font = new Font("Arial", 8.0f);
                 DropButton.Click += DropButton_Click;
             }
@@ -67,18 +67,18 @@ namespace CharacterManager.UserControls
                     {
                         EquipButton.BackGroundColor = Color.LightYellow;
                         EquipButton.HoverColor = Color.Orange;
-                        EquipButton.ButtonText = "Equipped 2H";
+                        EquipButton.Text = "Equipped 2H";
                     }
                     else
                     {
                         EquipButton.BackGroundColor = Color.LightGreen;
                         EquipButton.HoverColor = Color.Green;
-                        EquipButton.ButtonText = "Equipped";
+                        EquipButton.Text = "Equipped";
                     }
                 }
                 else
                 {
-                    EquipButton.ButtonText = "Equip";
+                    EquipButton.Text = "Equip";
                     EquipButton.BackGroundColor = Color.LightGray;
                     EquipButton.HoverColor = Color.DarkGray;
                 }

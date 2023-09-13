@@ -606,10 +606,42 @@ namespace CharacterManager
             Die1Item.IsUsable = true;
             Die2Item.IsUsable = true;
 
-            res.Add(Die1Item);
-            res.Add(Die2Item);
+            Die1Item.Value = _portentDie1;
+            Die2Item.Value = _portentDie2;
+
+            if (_portentDie1 != 0)
+            {
+                res.Add(Die1Item);
+            }
+
+            if (_portentDie2 != 0)
+            {
+                res.Add(Die2Item);
+            }
 
             return res;
+        }
+
+        public override void UseAbilityInfoItem(PlayerAbilityInfoItem item)
+        {
+            base.UseAbilityInfoItem(item);
+            if(_portentDie1 == item.Value)
+            {
+                _portentDie1 = 0;
+            }
+            else if(_portentDie2 == item.Value)
+            {
+                _portentDie2 = 0;
+            }
+            else
+            {
+                /* Huh? */
+            }
+        }
+
+        public override string GetInfoItemsLabel()
+        {
+            return "Portent Dice:";
         }
 
         public override PlayerAbilityDescriptor ConvertToDescriptor()

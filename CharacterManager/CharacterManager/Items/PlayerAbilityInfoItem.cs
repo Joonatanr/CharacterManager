@@ -9,6 +9,7 @@ namespace CharacterManager.Items
     public class PlayerAbilityInfoItem : PlayerBaseItem
     {
         public bool IsUsable = false;
+        public int Value = 0;
         
         public PlayerAbilityInfoItem(string name)
         {
