@@ -59,6 +59,9 @@ namespace CharacterManager.UserControls
             {
                 userControlRemainingCharges.Visible = false;
             }
+
+            /* TODO : Might hide this if it is not relevant. Usually there will not be anything listed here... */
+            userControlPlayerAbilityInfoItem1.SetListData(_myAbility.GetInfoItems());
         }
 
         private void _abilityChargesUsedManually(int amount)

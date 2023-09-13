@@ -108,6 +108,7 @@
     <Compile Include="Items\FormAddItem.Designer.cs">
       <DependentUpon>FormAddItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Items\PlayerAbilityInfoItem.cs" />
     <Compile Include="Items\PlayerArmor.cs" />
     <Compile Include="Items\PlayerBaseItem.cs" />
     <Compile Include="Items\PlayerItem.cs" />
@@ -347,6 +348,9 @@
       <DependentUpon>UserControlProficiency.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Proficiency\UserControlProficiencyList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControlPlayerAbilityInfoItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UserControlSavingThrows.cs">

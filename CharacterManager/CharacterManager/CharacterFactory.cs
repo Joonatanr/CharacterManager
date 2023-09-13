@@ -727,6 +727,7 @@ namespace CharacterManager
             SpecialAttributeList.Add(new ArcaneWardAbility());
             SpecialAttributeList.Add(new ImprovedAbjurationAbility());
             SpecialAttributeList.Add(new BenignTranspositionAbility());
+            SpecialAttributeList.Add(new PortentAbility());
 
             SpecialAttributeList.Add(new JackOfAllTradesAbility());
 

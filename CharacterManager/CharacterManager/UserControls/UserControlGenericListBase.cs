@@ -75,7 +75,7 @@ namespace CharacterManager.UserControls
             originalHeight = this.Height;
         }
 
-        public void SetListData(List<ListItemType> data)
+        public virtual void SetListData(List<ListItemType> data)
         {
             myItemList = data;
 

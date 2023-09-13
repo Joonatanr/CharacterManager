@@ -29,7 +29,7 @@ namespace CharacterManager.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            CharacterManager.Spells.CharacterSpellcastingStatus.SpellSlotData spellSlotData1 = new CharacterManager.Spells.CharacterSpellcastingStatus.SpellSlotData();
+            CharacterManager.Spells.CharacterSpellcastingStatus.SpellSlotData spellSlotData2 = new CharacterManager.Spells.CharacterSpellcastingStatus.SpellSlotData();
             this.labelAbilityName = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelDice = new System.Windows.Forms.Label();
@@ -38,6 +38,7 @@ namespace CharacterManager.UserControls
             this.userControlRemainingCharges = new CharacterManager.UserControls.UserControlSpellSlotRow();
             this.dieRollTextBox1 = new CharacterManager.UserControls.DieRollTextBox();
             this.customRTBDescription = new CharacterManager.Spells.CustomRTB();
+            this.userControlPlayerAbilityInfoItem1 = new CharacterManager.UserControls.UserControlPlayerAbilityInfoItem();
             this.SuspendLayout();
             // 
             // labelAbilityName
@@ -107,7 +108,7 @@ namespace CharacterManager.UserControls
             this.userControlRemainingCharges.NumberOfRemainingSlots = 0;
             this.userControlRemainingCharges.NumberOfSlots = 0;
             this.userControlRemainingCharges.Size = new System.Drawing.Size(251, 34);
-            this.userControlRemainingCharges.SpellSlots = spellSlotData1;
+            this.userControlRemainingCharges.SpellSlots = spellSlotData2;
             this.userControlRemainingCharges.TabIndex = 7;
             // 
             // dieRollTextBox1
@@ -132,12 +133,23 @@ namespace CharacterManager.UserControls
             this.customRTBDescription.TabIndex = 0;
             this.customRTBDescription.Text = "<Description>";
             // 
+            // userControlPlayerAbilityInfoItem1
+            // 
+            this.userControlPlayerAbilityInfoItem1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlPlayerAbilityInfoItem1.IsBorder = false;
+            this.userControlPlayerAbilityInfoItem1.LabelText = "Ability Data";
+            this.userControlPlayerAbilityInfoItem1.Location = new System.Drawing.Point(399, 165);
+            this.userControlPlayerAbilityInfoItem1.Name = "userControlPlayerAbilityInfoItem1";
+            this.userControlPlayerAbilityInfoItem1.Size = new System.Drawing.Size(251, 150);
+            this.userControlPlayerAbilityInfoItem1.TabIndex = 8;
+            // 
             // AbilityCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CharacterManager.Properties.Resources.old_paper_texture;
             this.ClientSize = new System.Drawing.Size(662, 360);
+            this.Controls.Add(this.userControlPlayerAbilityInfoItem1);
             this.Controls.Add(this.userControlRemainingCharges);
             this.Controls.Add(this.buttonRoll);
             this.Controls.Add(this.richTextBoxDieRollResult);
@@ -163,5 +175,6 @@ namespace CharacterManager.UserControls
         private System.Windows.Forms.RichTextBox richTextBoxDieRollResult;
         private System.Windows.Forms.Button buttonRoll;
         private UserControlSpellSlotRow userControlRemainingCharges;
+        private UserControlPlayerAbilityInfoItem userControlPlayerAbilityInfoItem1;
     }
 }

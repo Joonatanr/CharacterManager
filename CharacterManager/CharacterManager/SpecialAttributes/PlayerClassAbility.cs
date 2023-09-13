@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -569,6 +570,77 @@ namespace CharacterManager
             if(sp.SpellLevel >= 1 && sp.School == "Conjuration")
             {
                 this.RemainingCharges = this.MaximumCharges;
+            }
+        }
+    }
+
+    public class PortentAbility : SpecialAttribute
+    {
+        private int _portentDie1 = 0;
+        private int _portentDie2 = 0;
+        
+        public PortentAbility()
+        {
+            this.Name = "Portent";
+        }
+
+        public override void HandleLongRest()
+        {
+            base.HandleLongRest();
+            DieRollEquation myEquation = new DieRollEquation("d20");
+            string rollResult;
+
+            _portentDie1 = myEquation.RollValue(out rollResult);
+            GlobalEvents.ReportRollGlobal("Portent Die : "  + rollResult, Color.Black, true);
+            _portentDie2 = myEquation.RollValue(out rollResult);
+            GlobalEvents.ReportRollGlobal("Portent Die : " + rollResult, Color.Black, true);
+        }
+
+        public override List<PlayerAbilityInfoItem> GetInfoItems()
+        {
+            List<PlayerAbilityInfoItem> res = base.GetInfoItems();
+
+            PlayerAbilityInfoItem Die1Item = new PlayerAbilityInfoItem("Die 1: " + _portentDie1.ToString());
+            PlayerAbilityInfoItem Die2Item = new PlayerAbilityInfoItem("Die 2: " + _portentDie2.ToString());
+
+            Die1Item.IsUsable = true;
+            Die2Item.IsUsable = true;
+
+            res.Add(Die1Item);
+            res.Add(Die2Item);
+
+            return res;
+        }
+
+        public override PlayerAbilityDescriptor ConvertToDescriptor()
+        {
+            PlayerAbilityDescriptor desc = base.ConvertToDescriptor();
+
+            desc.Options1 = new List<string>();
+            desc.Options1.Add(_portentDie1.ToString());
+            desc.Options1.Add(_portentDie2.ToString());
+
+            return desc;
+        }
+
+        public override void ResolveFromDescriptor(PlayerAbilityDescriptor desc)
+        {
+            base.ResolveFromDescriptor(desc);
+            int x = 0;
+
+
+            foreach (string opt in desc.Options1)
+            {
+                if(x == 0)
+                {
+                    int.TryParse(opt, out _portentDie1);
+                    x++;
+                }
+                else if(x == 1)
+                {
+                    int.TryParse(opt, out _portentDie2);
+                    x++;
+                }
             }
         }
     }

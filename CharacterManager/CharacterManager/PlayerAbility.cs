@@ -447,5 +447,18 @@ So we get to an issue where upgrades to the description are added multiple times
         {
             /* This can be overwritten by special abilities. */
         }
+
+        /// <summary>
+        /// Some abilities might have generic "options" or info items that can be returned here.
+        /// Some of these might depend on player choices or dierolls, or the ability could be activated in
+        /// a certain way... Lets try and handle these here.
+        /// </summary>
+        /// <returns></returns>
+        public virtual List<PlayerAbilityInfoItem> GetInfoItems()
+        {
+            List<PlayerAbilityInfoItem> res = new List<PlayerAbilityInfoItem>();
+            //By default we return an empty list.
+            return res;
+        }
     }
 }
