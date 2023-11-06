@@ -2240,4 +2240,46 @@ within 10 feet of you can’t be frightened while you are conscious.
 At 18th level, the range of this aura increases to 30 feet</Description>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<Name>Cleansing Touch</Name>
+		<Description>Beginning at 14th level, you can use your action to
+end one spell on yourself or on one willing creature that you touch.
+
+You can use this feature a number of times equal
+to your Charisma modifier (a minimum of once). You
+regain expended uses when you finish a long rest.</Description>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<ChargesBasedOnAbilityModifier>CHA</ChargesBasedOnAbilityModifier>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Purity Of Spirit</Name>
+		<Description>Beginning at 15th level, you are always under the effects
+of a protection from evil and good spell.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Undying Sentinel</Name>
+		<Description>Starting at 15th level, when you are reduced to 0 hit
+points and are not killed outright, you can choose to
+drop to 1 hit point instead. Once you use this ability, you
+can’t use it again until you finish a long rest.
+Additionally, you suffer none of the drawbacks of old
+age, and you can’t be aged magically.</Description>
+		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Soul Of Vengeance</Name>
+		<Description>Starting at 15th level, the authority with which you
+speak your Vow of Enmity gives you greater power over
+your foe. When a creature under the effect of your Vow
+of Enmity makes an attack, you can use your reaction to
+make a melee weapon attack against that creature if it is
+within range.</Description>
+	</PlayerAbility>
+	
 </ArrayOfPlayerAbility>

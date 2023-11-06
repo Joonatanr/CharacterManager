@@ -262,6 +262,24 @@ makes you immune to disease.</Description>
 	<!-- Level 12 -->
 	<!-- Ability Score Improvement -->
 	
+	<!-- Level 13 -->
+	<!-- No new abilities -->
+	
+	<!-- Level 14 -->
+	<AvailableClassAbilitiesLevel14>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Cleansing Touch</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel14>
+	
+	<!-- Level 15 -->
+	<!-- Sacred Oath Feature -->
+	
+	<!-- Level 16 -->
+	<!-- Ability Score Improvement -->
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Oath Of Devotion</Name>
@@ -297,7 +315,6 @@ helmets or coats of arms.</Description>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel3>
 			
-			
 			<AvailableAbilitiesAtLevel7>
 				<PlayerClassAbilityChoice>
 					<AvailableChoices>
@@ -306,10 +323,14 @@ helmets or coats of arms.</Description>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel7>
 			
-			<AvailableAbilitiesAtLevel10>
-			</AvailableAbilitiesAtLevel10>
 			<AvailableAbilitiesAtLevel15>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Purity Of Spirit</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel15>
+			
 			<AvailableAbilitiesAtLevel18>
 			</AvailableAbilitiesAtLevel18>
 		</PlayerClassArchetype>
@@ -354,10 +375,15 @@ life and light in the world.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel7>
-			<AvailableAbilitiesAtLevel10>
-			</AvailableAbilitiesAtLevel10>
+
 			<AvailableAbilitiesAtLevel15>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Undying Sentinel</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel15>
+			
 			<AvailableAbilitiesAtLevel18>
 			</AvailableAbilitiesAtLevel18>
 		</PlayerClassArchetype>
@@ -401,10 +427,14 @@ purity is not as important as delivering justice.</Description>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel7>
 			
-			<AvailableAbilitiesAtLevel10>
-			</AvailableAbilitiesAtLevel10>
 			<AvailableAbilitiesAtLevel15>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Soul Of Vengeance</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel15>
+			
 			<AvailableAbilitiesAtLevel18>
 			</AvailableAbilitiesAtLevel18>
 		</PlayerClassArchetype>
@@ -790,4 +820,11 @@ spellcasting and chapter 11 for the paladin spell list.</Description>
 		</SpellsReplacedAtLevelup>
 	</SpellCasting>
 	
+	<AbilityScoreImprovementsAtLevels>
+		<int>4</int>
+		<int>8</int>
+		<int>12</int>
+		<int>16</int>
+		<int>19</int>
+	</AbilityScoreImprovementsAtLevels>
 </PlayerClass>
