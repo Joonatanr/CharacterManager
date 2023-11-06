@@ -47,7 +47,7 @@ namespace CharacterManager
 
         public static PlayerSpell getPlayerSpellFromString(string str)
         {
-            PlayerSpell res = SpellList.Find(s => s.SpellName == str);
+            PlayerSpell res = SpellList.Find(s => s.SpellName.ToLower() == str.ToLower());
             return res;
         }
 

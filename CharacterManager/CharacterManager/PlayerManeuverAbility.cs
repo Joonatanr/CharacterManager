@@ -18,6 +18,9 @@ namespace CharacterManager
         public List<string> AvailableManeuvers = new List<string>();
         public List<string> ChosenManeuvers = new List<string>();
 
+        /* Some maneuver abilities are static. By default we assume that choices are available. */
+        public bool IsManeuverChoiceAvailable = true;
+
         public int AvailableManeuversAtLevel1 = 0;
         public int AvailableManeuversAtLevel2 = 0;
         public int AvailableManeuversAtLevel3 = 0;
@@ -70,7 +73,15 @@ namespace CharacterManager
                     resolveManeuverList();
                     isListResolved = true;
                 }
-                return _chosenManeuverAbilities;
+                if (IsManeuverChoiceAvailable)
+                {
+                    return _chosenManeuverAbilities;
+                }
+                else
+                {
+                    /* We return all available maneuvers. */
+                    return _availableManeuverAbilities;
+                }
             }
 
             set
@@ -93,9 +104,19 @@ namespace CharacterManager
 
         public override bool ExtraChoiceOptions(out string btnText, out ExtraChoiceEventHandler clickHandler)
         {
-            btnText = "Choose Maneuvers";
-            clickHandler = new ExtraChoiceEventHandler(handleManeuverChoice);
-            return true;
+            if (IsManeuverChoiceAvailable)
+            {
+                btnText = "Choose Maneuvers";
+                clickHandler = new ExtraChoiceEventHandler(handleManeuverChoice);
+                return true;
+            }
+            else
+            {
+                /* Static maneuver ability. No choices to be made here. */
+                clickHandler = null;
+                btnText = "";
+                return false;
+            }
         }
 
 

@@ -162,4 +162,41 @@ to the attack’s damage roll, and if the target is Large or
 smaller, it must make a Strength saving throw. On a
 failed save, you knock the target prone.</Description>
 	</CombatManeuver>
+	
+	<!-- Paladin "maneuvers", these are channel divinity options, but they behave just like maneuvers -->
+	
+	<CombatManeuver>
+		<ManeuverName>Sacred Weapon</ManeuverName>
+		<Description>As an action, you can imbue one
+weapon that you are holding with positive energy,
+using your Channel Divinity. For 1 minute, you add
+your Charisma modifier to attack rolls made with that
+weapon (with a minimum bonus of +1). The weapon also
+emits bright light in a 20-foot radius and dim light 20
+feet beyond that. If the weapon is not already magical, it
+becomes magical for the duration.
+You can end this effect on your turn as part of any
+other action. If you are no longer holding or carrying
+this weapon, or if you fall unconscious, this effect ends.</Description>
+	</CombatManeuver>
+	
+	<CombatManeuver>
+		<ManeuverName>Turn The Unholy</ManeuverName>
+		<Description>As an action, you present your
+holy sym bol and speak a prayer censuring fiends and
+undead, using your Channel Divinity. Each fiend or
+undead that can see or hear you within 30 feet of you
+must make a Wisdom saving throw. If the creature
+fails its saving throw, it is turned for 1 minute or until
+it takes damage.
+
+A turned creature must spend its turns trying to move
+as far away from you as it can, and it can’t willingly
+move to a space within 30 feet of you. It also can’t take
+reactions. For its action, it can use only the Dash action
+or try to escape from an effect that prevents it from
+moving. If there’s nowhere to move, the creature can use
+the Dodge action.</Description>
+	</CombatManeuver>
+	
 </ArrayOfCombatManeuver>

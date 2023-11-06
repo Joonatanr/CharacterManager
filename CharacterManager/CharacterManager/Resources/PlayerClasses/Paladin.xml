@@ -241,6 +241,11 @@ helmets or coats of arms.</Description>
 						<string>Oath Of Devotion Spells</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity (Devotion)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel3>
 			
 			
@@ -279,6 +284,13 @@ life and light in the world.</Description>
 						<string>Oath Of The Ancients Spells</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
+				<!--
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity (Ancients)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				-->
 			</AvailableAbilitiesAtLevel3>
 			
 			
@@ -316,6 +328,13 @@ purity is not as important as delivering justice.</Description>
 						<string>Oath Of Vengeance Spells</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
+				<!--
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity (Vengeance)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				-->
 			</AvailableAbilitiesAtLevel3>
 			
 			
