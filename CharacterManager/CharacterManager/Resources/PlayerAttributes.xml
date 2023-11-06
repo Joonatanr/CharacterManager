@@ -1818,6 +1818,19 @@ by 1d8 if the target is an undead or a fiend.</Description>
 		<IsCombatAbility>true</IsCombatAbility>
 		<IsUsable>true</IsUsable>
 	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Improved Divine Smite</Name>
+		<Description>By 11th level, you are so suffused with righteous
+might that all your melee weapon strikes carry divine
+power with them. Whenever you hit a creature with a
+melee weapon, the creature takes an extra 1d8 radiant
+damage. If you also use your Divine Smite with an
+attack, you add this damage to the extra damage of your
+Divine Smite.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+		<IsUsable>false</IsUsable>
+	</PlayerAbility>
 
 	<PlayerAbility>
 		<Name>Divine Health</Name>
@@ -2179,6 +2192,52 @@ it drops to 0 hit points or falls unconscious.</Description>
 		<DcAbility>CHA</DcAbility>
 		<ManeuverListTitle>Channel Divinity Options</ManeuverListTitle>
 		<ChargesDisplayedName>Charges</ChargesDisplayedName>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Aura Of Protection</Name>
+		<Description>Starting at 6th level, whenever you or a friendly creature
+within 10 feet of you must make a saving throw, the
+creature gains a bonus to the saving throw equal to your
+Charisma modifier (with a minimum bonus of +1). You
+must be conscious to grant this bonus.
+At 18th level, the range of this aura increases to 30 feet.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Aura Of Devotion</Name>
+		<Description>Starting at 7th level, you and friendly creatures within
+10 feet of you can’t be charmed while you are conscious.
+
+At 18th level, the range of this aura increases to 30 feet</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Aura Of Warding</Name>
+		<Description>Beginning at 7th level, ancient magic lies so heavily
+upon you that it form san eldritch ward. You and friendly
+creatures within 10 feet of you have resistance to
+damage from spells.
+
+At 18th level, the range of this aura increases to 30 feet.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Relentless Avenger</Name>
+		<Description>By 7th level, your supernatural focus helps you close
+off a foe’s retreat. When you hit a creature with an
+opportunity attack, you can move up to half your
+speed immediately after the attack and as part of
+the same reaction. This movement doesn’t provoke
+opportunity attacks.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Aura Of Courage</Name>
+		<Description>Starting at 10th level, you and friendly creatures
+within 10 feet of you can’t be frightened while you are conscious.
+
+At 18th level, the range of this aura increases to 30 feet</Description>
 	</PlayerAbility>
 	
 </ArrayOfPlayerAbility>

@@ -735,6 +735,7 @@ namespace CharacterManager
             SpecialAttributeList.Add(new SneakAttack());
 
             SpecialAttributeList.Add(new DivineSmite());
+            SpecialAttributeList.Add(new ImprovedDivineSmite());
         }
 
         private static void logError(String err)

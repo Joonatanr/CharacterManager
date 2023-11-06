@@ -223,6 +223,45 @@ makes you immune to disease.</Description>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel5>
 	
+	<!-- Level 6 -->
+	<AvailableClassAbilitiesLevel6>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Aura Of Protection</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel6>
+	
+	<!-- Level 7 -->
+	<!-- Oath Feature -->
+	
+	<!-- Level 8 -->
+	<!-- Ability Score Improvement -->
+	
+	<!-- Level 9 -->
+	<!-- No extra abilities -->
+	
+	<!-- Level 10 -->
+	<AvailableClassAbilitiesLevel10>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Aura Of Courage</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel10>
+	
+	<!-- Level 11 -->
+	<AvailableClassAbilitiesLevel11>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Improved Divine Smite</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel11>
+	
+	<!-- Level 12 -->
+	<!-- Ability Score Improvement -->
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Oath Of Devotion</Name>
@@ -260,7 +299,13 @@ helmets or coats of arms.</Description>
 			
 			
 			<AvailableAbilitiesAtLevel7>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Aura Of Devotion</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel7>
+			
 			<AvailableAbilitiesAtLevel10>
 			</AvailableAbilitiesAtLevel10>
 			<AvailableAbilitiesAtLevel15>
@@ -303,6 +348,11 @@ life and light in the world.</Description>
 			
 			
 			<AvailableAbilitiesAtLevel7>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Aura Of Warding</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel7>
 			<AvailableAbilitiesAtLevel10>
 			</AvailableAbilitiesAtLevel10>
@@ -343,9 +393,14 @@ purity is not as important as delivering justice.</Description>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel3>
 			
-			
 			<AvailableAbilitiesAtLevel7>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Relentless Avenger</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel7>
+			
 			<AvailableAbilitiesAtLevel10>
 			</AvailableAbilitiesAtLevel10>
 			<AvailableAbilitiesAtLevel15>

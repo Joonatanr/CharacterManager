@@ -872,5 +872,26 @@ namespace CharacterManager
             return true;
         }
     }
+
+    public class ImprovedDivineSmite : SpecialAttribute
+    {
+        public ImprovedDivineSmite()
+        {
+            this.Name = "Improved Divine Smite";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += C_AttackRoll;
+        }
+
+        private void C_AttackRoll(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (!w.IsRanged)
+            {
+                c.BonusValues.AttackDamageBonusModifiers.Add(new BonusValueModifier("Improved Divine Smite", "1d8"));
+            }
+        }
+    }
 }
 
