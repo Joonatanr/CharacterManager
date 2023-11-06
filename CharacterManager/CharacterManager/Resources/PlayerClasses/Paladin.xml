@@ -213,6 +213,16 @@ makes you immune to disease.</Description>
 	
 	<!-- Level 4 -->
 	<!-- Ability Score Increase -->
+	
+	<!-- Level 5 -->
+	<AvailableClassAbilitiesLevel5>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Multiattack x2</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel5>
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Oath Of Devotion</Name>
@@ -305,14 +315,14 @@ life and light in the world.</Description>
 		<PlayerClassArchetype>
 			<Name>Oath Of Vengeance</Name>
 			<Description>The Oath of Vengeance is a solem n com m itm ent to
-punish those who have com m itted a grievous sin. W hen
+punish those who have com m itted a grievous sin. When
 evil forces slaughter helpless villagers, when an entire
-people turns against the w ill of the gods, when a thieves’
-guild grow s too violent and powerful, when a dragon
-rampages through the countryside—at times like these,
+people turns against the will of the gods, when a thieves’
+guild grows too violent and powerful, when a dragon
+rampages through the countryside — at times like these,
 paladins arise and swear an Oath of Vengeance to set
 right that which has gone wrong. To these paladins—
-som etim es called avengers or dark knights—their own
+sometim es called avengers or dark knights — their own
 purity is not as important as delivering justice.</Description>
 
 			<AvailableAbilitiesAtLevel3>
