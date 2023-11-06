@@ -60,8 +60,15 @@ namespace CharacterManager.UserControls
                 userControlRemainingCharges.Visible = false;
             }
 
-            /* TODO : Might hide this if it is not relevant. Usually there will not be anything listed here... */
-            userControlPlayerAbilityInfoItem1.SetAbility(_myAbility);
+            if (_myAbility.GetInfoItems().Count == 0)
+            {
+                userControlPlayerAbilityInfoItem1.Visible = false;
+            }
+            else
+            {
+                userControlPlayerAbilityInfoItem1.Visible = true;
+                userControlPlayerAbilityInfoItem1.SetAbility(_myAbility);
+            }
         }
 
         private void _abilityChargesUsedManually(int amount)
