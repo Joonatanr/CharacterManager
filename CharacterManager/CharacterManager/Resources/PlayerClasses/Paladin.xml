@@ -280,6 +280,18 @@ makes you immune to disease.</Description>
 	<!-- Level 16 -->
 	<!-- Ability Score Improvement -->
 	
+	<!-- Level 17 -->
+	<!-- No new abilities -->
+	
+	<!-- Level 18 -->
+	<!-- Aura Improvements -->
+	
+	<!-- Level 19 -->
+	<!-- Ability Score Improvement -->
+	
+	<!-- Level 20 -->
+	<!-- Sacred Oath Feature -->
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>Oath Of Devotion</Name>
@@ -331,8 +343,13 @@ helmets or coats of arms.</Description>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel15>
 			
-			<AvailableAbilitiesAtLevel18>
-			</AvailableAbilitiesAtLevel18>
+			<AvailableAbilitiesAtLevel20>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Holy Nimbus</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel20>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -384,8 +401,13 @@ life and light in the world.</Description>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel15>
 			
-			<AvailableAbilitiesAtLevel18>
-			</AvailableAbilitiesAtLevel18>
+			<AvailableAbilitiesAtLevel20>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Elder Champion</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel20>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -435,8 +457,13 @@ purity is not as important as delivering justice.</Description>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel15>
 			
-			<AvailableAbilitiesAtLevel18>
-			</AvailableAbilitiesAtLevel18>
+			<AvailableAbilitiesAtLevel20>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Avenging Angel</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel20>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	

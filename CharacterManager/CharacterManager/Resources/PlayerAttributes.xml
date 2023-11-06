@@ -2270,6 +2270,7 @@ age, and you can’t be aged magically.</Description>
 		<MaximumCharges>1</MaximumCharges>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
 		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -2280,6 +2281,75 @@ your foe. When a creature under the effect of your Vow
 of Enmity makes an attack, you can use your reaction to
 make a melee weapon attack against that creature if it is
 within range.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Holy Nimbus</Name>
+		<Description>At 20th level, as an action, you can emanate an aura of
+sunlight. For 1 minute, bright light shines from you in a
+30-foot radius, and dim light shines 30 feet beyond that.
+Whenever an enemy creature starts its turn in the
+bright light, the creature takes 10 radiant damage.
+In addition, for the duration, you have advantage on
+saving throws against spells cast by fiends or undead.
+Once you use this feature, you can’t use it again until
+you finish a long rest.</Description>
+		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Elder Champion</Name>
+		<Description>At 20th level, you can assume the form of an ancient
+force of nature, taking on an appearance you choose.
+For example, your skin might turn green or take on a
+bark-like texture, your hair might become leafy or mosslike, or you might sprout antlers or a lion-like mane.
+Using your action, you undergo a transformation.
+For 1 minute, you gain the following benefits:
+
+• At the start of each of your turns, you regain 10 hit
+points.
+
+• Whenever you cast a paladin spell that has a casting
+time of 1 action, you can cast it using a bonus action
+instead.
+
+• Enemy creatures within 10 feet of you have disadvantage on saving throws against your paladin spells and
+Channel Divinity options.
+
+Once you use this feature, you can’t use it again until
+you finish a long rest.</Description>
+		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Avenging Angel</Name>
+		<Description>At 20th level, you can assume the form of an
+angelic avenger. Using your action, you undergo a
+transformation. For 1 hour, you gain the following
+benefits:
+
+• Wings sprout from your back and grant you a flying
+speed of 60 feet.
+
+• You emanate an aura of menace in a 30-foot radius.
+The first time any enemy creature enters the aura or
+starts its turn there during a battle, the creature must
+succeed on a Wisdom saving throw or become frightened of you for 1 minute or until it takes any damage.
+Attack rolls against the frightened creature have
+advantage.
+
+Once you use this feature, you can’t use it again until
+you finish a long rest.</Description>
+		<MaximumCharges>1</MaximumCharges>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
 </ArrayOfPlayerAbility>
