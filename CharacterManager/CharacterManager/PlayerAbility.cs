@@ -50,7 +50,7 @@ namespace CharacterManager
         [XmlIgnore]
         public List<string> UpgradeDescriptions = new List<string>();
 
-        /* TODO : Implement this part. */
+        /* Some abilities can add new spells. */
         public List<string> SpellsAddedByAbility = new List<string>();
 
         /* Often abilities have charges that are equal to an attribute modifier (such as charges based on CHA mod) */
@@ -176,6 +176,12 @@ namespace CharacterManager
 
             /* Here we can also resolve cases where the total number of charges depend on player attributes. */
             this.MaximumCharges = GetMaximumCharges(c);
+
+            /* Here we add any new spells granted by the ability. */
+            foreach(string spellName in SpellsAddedByAbility)
+            {
+                c.AddSpell(spellName);
+            }
         }
 
         public virtual void HandleLongRest()
@@ -284,6 +290,8 @@ So we get to an issue where upgrades to the description are added multiple times
                 fullString += upgrade.AdditionalDescription;
                 UpgradeDescriptions.Add(fullString);
             }
+
+            SpellsAddedByAbility.AddRange(upgrade.AdditionalSpellsAddedByAbility);
         }
 
         /// <summary>

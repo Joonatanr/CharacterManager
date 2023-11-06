@@ -189,7 +189,6 @@ namespace CharacterManager.CharacterCreator
                 CreatedCharacter.GoldPieces = myChooseBackGroundForm.getInitialGoldAmount();
 
                 /* 11 Add spells */
-                /* TODO : If a class knows all available spells, then we should add all of these. */
                 if (SelectedClass.SpellCasting != null)
                 {
                     if (!myChooseSpellsForm.IsAllSpellsChosen() || (isSelectedSpellsFormOpened == false))

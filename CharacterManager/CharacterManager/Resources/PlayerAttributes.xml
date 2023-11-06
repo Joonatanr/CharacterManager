@@ -1832,11 +1832,11 @@ Devotion vary, paladins of this oath share these tenets.
 Honesty. -> Don’t lie or cheat. Let your word be
 your promise.
 
-Courage. -> Never fear to act, though caution is w ise.
+Courage. -> Never fear to act, though caution is wise.
 
 Compassion. -> Aid others, protect the weak, and
 punish those who threaten them. Show mercy to your
-foes, but temper it with wisdom .
+foes, but temper it with wisdom.
 
 Honor-> Treat others with fairness, and let your
 honorable deeds be an example to them. Do as
@@ -1856,6 +1856,191 @@ and obey those who have just authority over you.</Description>
 		9th -> beacon of hope, dispel magic
 		13th-> freedom of movement, guardian of faith
 		17th-> commune, flame strike</Description>
+		<SpellsAddedByAbility>
+			<string>Protection From Evil And Good</string>
+			<string>Sanctuary</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Lesser Restoration</string>
+					<string>Zone Of Truth</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Beacon Of Hope</string>
+					<string>Dispel Magic</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>13</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Freedom Of Movement</string>
+					<string>Guardian Of Faith</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>17</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Commune</string>
+					<string>Flame Strike</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Tenets Of The Ancients</Name>
+		<Description>The tenets of the Oath of the Ancients have been
+preserved for uncounted centuries. This oath
+emphasizes the principles of good above any concerns
+of law or chaos. Its four central principles are simple.
+
+Kindle the Light. -> Through your acts of mercy,
+kindness, and forgiveness, kindle the light of hope in the
+world, beating back despair.
+
+Shelter the Light -> Where there is good, beauty, love,
+and laughter in the world, stand against the wickedness
+that would swallow it. Where life flourishes, stand
+against the forces that would render it barren
+
+Preserve Your Own Light -> Delight in song and
+laughter, in beauty and art. If you allow the light to die in
+your own heart, you can’t preserve it in the world.
+
+Be the Light-> Be a glorious beacon for all w ho live in
+despair. Let the light of your joy and courage shine forth
+in all your deeds.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Oath Of The Ancients Spells</Name>
+		<Description>You gain oath spells at the paladin levels listed:
+		3rd -> ensnaring strike, speak with animals
+		5th -> moonbeam, misty step
+		9th -> plant growth, protection from energy
+		13th-> ice storm, stoneskin
+		17th-> commune with nature, tree stride</Description>
+		<SpellsAddedByAbility>
+			<string>Ensnaring Strike</string>
+			<string>Speak With Animals</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Moonbeam</string>
+					<string>Misty Step</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Plant Growth</string>
+					<string>Protection From Energy</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>13</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Ice Storm</string>
+					<string>Stoneskin</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>17</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Commune With Nature</string>
+					<string>Tree Stride</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>	
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Tenets Of Vengeance</Name>
+		<Description>The tenets of the Oath of Vengeance vary by paladin, but
+all the tenets revolve around punishing wrongdoers by
+any m eans necessary. Paladins who uphold these tenets
+are willing to sacrifice even their own righteousness to
+mete out justice upon those who do evil, so the paladins
+are often neutral or lawful neutral in alignment. The
+core principles of the tenets are brutally simple.
+
+Fight the Greater Evil. -> Faced with a choice of fighting
+my sworn foes or combating a lesser evil. I choose the
+greater evil.
+
+No Mercy for the Wicked -> Ordinary foes might win
+my mercy, but my sworn enemies do not.
+
+By Any Means Necessary -> My qualms can’t get in the
+way of exterminating my foes.
+
+Restitution -> . If my foes wreak ruin on the world, it is
+because I failed to stop them. I must help those harmed
+by their misdeeds.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Oath Of Vengeance Spells</Name>
+		<Description>You gain oath spells at the paladin levels listed:
+		3rd -> bane, hunter’s mark
+		5th -> hold person, misty step
+		9th -> haste, protection from energy
+		13th-> banishment, dimension door
+		17th-> hold monster, scrying</Description>
+		<SpellsAddedByAbility>
+			<string>Bane</string>
+			<string>Hunter's Mark</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Hold Person</string>
+					<string>Misty Step</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Haste</string>
+					<string>Protection From Energy</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>13</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Banishment</string>
+					<string>Dimension Door</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>17</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Hold Monster</string>
+					<string>Scrying</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>	
+		</Upgrades>
 	</PlayerAbility>
 	
 </ArrayOfPlayerAbility>

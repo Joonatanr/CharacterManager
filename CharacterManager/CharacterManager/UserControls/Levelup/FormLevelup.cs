@@ -247,6 +247,12 @@ namespace CharacterManager.UserControls
                 }
             }
 
+            /* We reset the known spells here and start rebuilding this information. 
+             Spells will be updated based on player selection as well as abilities that can provide new spells.
+             */
+
+            _myCharacter.KnownSpells = new List<string>();
+            
             _myCharacter.setCharacterAbilitiesList(resultAbilities, true);
 
             foreach (PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
@@ -280,16 +286,18 @@ namespace CharacterManager.UserControls
                 {
                     List<PlayerSpell> allSpells = _myCharacter.SpellCasting.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
 
-                    _myCharacter.KnownSpells = new List<string>();
                     foreach (PlayerSpell sp in allSpells)
                     {
-                        _myCharacter.KnownSpells.Add(sp.SpellName);
+                        _myCharacter.AddSpell(sp);
                     }
                 }
                 else
                 {
                     /* Update the spell selections. */
-                    _myCharacter.KnownSpells = SelectedSpellNames;
+                    foreach (string spellName in SelectedSpellNames)
+                    {
+                        _myCharacter.AddSpell(spellName);
+                    }
                 }
                 /* Update spell slot amount. */
                 SpellSlots_T slotsForThisLevel = _myCharacter.SpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);

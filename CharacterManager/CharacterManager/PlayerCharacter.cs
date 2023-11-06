@@ -650,6 +650,24 @@ namespace CharacterManager
             }
         }
 
+
+        public void AddSpell(PlayerSpell sp)
+        {
+            AddSpell(sp.SpellName);
+        }
+
+        public void AddSpell(string spellName)
+        {
+            if (KnownSpells.Contains(spellName))
+            {
+                /* Do Nothing. Cannot learn a spell twice. */
+            }
+            else
+            {
+                KnownSpells.Add(spellName);
+            }
+        }
+
         /// <summary>
         /// Currently in order to prevent double subscriptions, all events should be added here as well...
         /// Not an ideal solution, maybe we can find a better one...
