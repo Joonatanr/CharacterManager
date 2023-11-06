@@ -1816,5 +1816,46 @@ than 1st, to a maximum of 5d8. The damage increases
 by 1d8 if the target is an undead or a fiend.</Description>
 		<IsCombatAbility>true</IsCombatAbility>
 		<IsUsable>true</IsUsable>
-	</PlayerAbility>	
+	</PlayerAbility>
+
+	<PlayerAbility>
+		<Name>Divine Health</Name>
+		<Description>By 3rd level, the divine magic flowing through you
+makes you immune to disease.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Tenets Of Devotion</Name>
+		<Description>Though the exact words and strictures of the Oath of
+Devotion vary, paladins of this oath share these tenets.
+
+Honesty. -> Don’t lie or cheat. Let your word be
+your promise.
+
+Courage. -> Never fear to act, though caution is w ise.
+
+Compassion. -> Aid others, protect the weak, and
+punish those who threaten them. Show mercy to your
+foes, but temper it with wisdom .
+
+Honor-> Treat others with fairness, and let your
+honorable deeds be an example to them. Do as
+much good as possible while causing the least
+amount of harm.
+
+Duty-> Be responsible for your actions and their
+consequences, protect those entrusted to your care,
+and obey those who have just authority over you.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Oath Of Devotion Spells</Name>
+		<Description>You gain oath spells at the paladin levels listed:
+		3rd -> protection from evil and good, sanctuary
+		5th -> lesser restoration, zone of truth
+		9th -> beacon of hope, dispel magic
+		13th-> freedom of movement, guardian of faith
+		17th-> commune, flame strike</Description>
+	</PlayerAbility>
+	
 </ArrayOfPlayerAbility>

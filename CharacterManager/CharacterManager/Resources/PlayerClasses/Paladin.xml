@@ -190,6 +190,71 @@ by 1d8 if the target is an undead or a fiend.</Description>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel2>
 	
+	<!-- Level 3 -->
+	<AvailableClassAbilitiesLevel3>
+		<PlayerClassAbilityChoice>
+			<Description>Sacred Oath</Description>
+			<ClassAbilityName>Archetype</ClassAbilityName>
+			<AvailableChoices>
+				<string>Oath Of Devotion</string>
+				<!--<string>Oath Of The Ancients</string>-->
+				<!--<string>Oath Of Vengeance</string>-->
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+		<PlayerClassAbilityChoice>
+			<Description>By 3rd level, the divine magic flowing through you
+makes you immune to disease.</Description>
+			<ClassAbilityName>Divine Health</ClassAbilityName>
+				<AvailableChoices>
+					<string>Divine Health</string>
+				</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel3>
+	
+	<!-- Level 4 -->
+	<!-- Ability Score Increase -->
+	<ArcheTypes>
+		<PlayerClassArchetype>
+			<Name>Oath Of Devotion</Name>
+			<Description>The Oath of Devotion binds a paladin to the loftiest
+ideals of justice, virtue, and order. Sometimes called
+cavaliers, white knights, or holy warriors, these
+paladins meet the ideal of the knight in shining armor,
+acting with honor in pursuit of justice and the greater
+good. They hold themselves to the highest standards of
+conduct, and some, for better or worse, hold the rest of
+the world to the same standards. Many who swear this
+oath are devoted to gods of law and good and use their
+gods’ tenets as the measure of their devotion. They hold
+angels — the perfect servants of good — as their ideals,
+and incorporate images of angelic wings into their
+helmets or coats of arms.</Description>
+
+			<AvailableAbilitiesAtLevel3>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Tenets Of Devotion</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Oath Of Devotion Spells</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel3>
+			
+			
+			<AvailableAbilitiesAtLevel7>
+			</AvailableAbilitiesAtLevel7>
+			<AvailableAbilitiesAtLevel10>
+			</AvailableAbilitiesAtLevel10>
+			<AvailableAbilitiesAtLevel15>
+			</AvailableAbilitiesAtLevel15>
+			<AvailableAbilitiesAtLevel18>
+			</AvailableAbilitiesAtLevel18>
+		</PlayerClassArchetype>
+	</ArcheTypes>
+	
 	<SpellCasting>
 		<Description>By 2nd level, you have learned to draw on divine
 magic through meditation and prayer to cast spells as
