@@ -17,6 +17,9 @@ namespace CharacterManager
     {
         public List<string> AvailableManeuvers = new List<string>();
         public List<string> ChosenManeuvers = new List<string>();
+        public string DcAbility = "STR";
+        public string ManeuverListTitle = "Maneuvers";
+        public string ChargesDisplayedName = "Charges";
 
         /* Some maneuver abilities are static. By default we assume that choices are available. */
         public bool IsManeuverChoiceAvailable = true;
@@ -228,18 +231,25 @@ namespace CharacterManager
 
             if (_connectedCharacter != null)
             {
-                int dexMod = _connectedCharacter.getModifier("DEX");
-                int strMod = _connectedCharacter.getModifier("STR");
-
                 modifiers.Add(new BonusValueModifier("Base", 8));
-
-                if (strMod >= dexMod)
+                if (DcAbility == "STR") /* For combat maneuvers we use highest value of either STR or DEX*/
                 {
-                    modifiers.Add(new BonusValueModifier("STR bonus", strMod));
+                    int dexMod = _connectedCharacter.getModifier("DEX");
+                    int strMod = _connectedCharacter.getModifier("STR");                    
+
+                    if (strMod >= dexMod)
+                    {
+                        modifiers.Add(new BonusValueModifier("STR bonus", strMod));
+                    }
+                    else
+                    {
+                        modifiers.Add(new BonusValueModifier("DEX bonus", dexMod));
+                    }
                 }
                 else
                 {
-                    modifiers.Add(new BonusValueModifier("DEX bonus", dexMod));
+                    int abilityMod = _connectedCharacter.getModifier(DcAbility);
+                    modifiers.Add(new BonusValueModifier(DcAbility + "bonus", abilityMod));
                 }
 
                 modifiers.Add(new BonusValueModifier("Proficiency Bonus", _connectedCharacter.ProficiencyBonus));

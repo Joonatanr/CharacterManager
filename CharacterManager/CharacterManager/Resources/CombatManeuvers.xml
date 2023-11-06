@@ -199,4 +199,67 @@ moving. If there’s nowhere to move, the creature can use
 the Dodge action.</Description>
 	</CombatManeuver>
 	
+	<CombatManeuver>
+		<ManeuverName>Nature's Wrath</ManeuverName>
+		<Description>You can use your Channel Divinity
+to invoke primeval forces to ensnare a foe. As an action,
+you can cause spectral vines to spring up and reach
+for a creature within 10 feet of you that you can see.
+The creature must succeed on a Strength or Dexterity
+saving throw (its choice) or be restrained. W hile
+restrained by the vines, the creature repeats the saving
+throw at the end of each of its turns. On a success, it
+frees itself and the vines vanish.</Description>
+	</CombatManeuver>
+	
+	<CombatManeuver>
+		<ManeuverName>Turn The Faithless</ManeuverName>
+		<Description> You can use your Channel
+Divinity to utter ancient words that are painful for fey
+and fiends to hear. As an action, you present your holy
+symbol, and each fey or fiend within 30 feet of you that
+can hear you must make a Wisdom saving throw. On a
+failed save, the creature is turned for 1 minute or until it
+takes damage.
+
+A turned creature must spend its turns trying to move
+as far away from you as it can, and it can’t willingly
+move to a space within 30 feet of you. It also can’t take
+reactions. For its action, it can use only the Dash action
+or try to escape from an effect that prevents it from
+moving. If there’s nowhere to move, the creature can use
+the Dodge action.
+
+If the creature’s true form is concealed by an illusion,
+shapeshifting, or other effect, that form is revealed while
+it is turned.</Description>
+	</CombatManeuver>
+	
+	<CombatManeuver>
+		<ManeuverName>Abjure Enemy</ManeuverName>
+		<Description> As an action, you present your holy
+symbol and speak a prayer of denunciation, using your
+Channel Divinity. Choose one creature within 60 feet
+of you that you can see. That creature must make a
+Wisdom saving throw, unless it is immune to being
+frightened. Fiends and undead have disadvantage on
+this saving throw.
+
+On a failed save, the creature is frightened for 1
+minute or until it takes any damage. While frightened,
+the creature’s speed is 0, and it can’t benefit from any
+bonus to its speed.
+
+On a successful save, the creature’s speed is halved
+for 1 minute or until the creature takes any damage.</Description>
+	</CombatManeuver>
+	
+	<CombatManeuver>
+		<ManeuverName>Vow Of Enmity</ManeuverName>
+		<Description>As a bonus action, you can utter a vow
+of enmity against a creature you can see within 10 feet
+of you, using your Channel Divinity. You gain advantage
+on attack rolls against the creature for 1 minute or until
+it drops to 0 hit points or falls unconscious.</Description>
+	</CombatManeuver>
 </ArrayOfCombatManeuver>

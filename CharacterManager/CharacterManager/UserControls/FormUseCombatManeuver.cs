@@ -21,6 +21,19 @@ namespace CharacterManager.UserControls
             set
             {
                 _myManeuverAbility = value;
+                this.Text = "Use " + _myManeuverAbility.DisplayedName;
+                userControlManeuverChoice1.TitleString = _myManeuverAbility.ManeuverListTitle;
+                userControlSpellSlotRow1.LabelName = _myManeuverAbility.ChargesDisplayedName;
+
+                if (string.IsNullOrEmpty(_myManeuverAbility.Dice))
+                {
+                    groupBoxDice.Visible = false;
+                }
+                else
+                {
+                    groupBoxDice.Visible = true;
+                }
+
                 _myManeuverAbility.RemainingChargesChanged += new PlayerAbility.PlayerAbilityValueChanged(HandleManeuverChargesChanged);
                 updateDisplayedData();
             }
@@ -63,6 +76,11 @@ namespace CharacterManager.UserControls
             int result = dieRollTextBox1.Roll(out rollResult);
             textBox1.Text = result.ToString();
             richTextBox1.AppendText(rollResult + Environment.NewLine);
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
