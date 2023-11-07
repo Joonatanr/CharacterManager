@@ -19,6 +19,7 @@ namespace CharacterManager
         private static List<PlayerRace> Races;
         private static List<PlayerClass> Classes;
         private static List<PlayerAbility> AttributesList;
+        private static List<PlayerAbility> FeatsList = new List<PlayerAbility>();
         private static List<CharacterManager.SpecialAttributes.SpecialAttribute> SpecialAttributeList = new List<CharacterManager.SpecialAttributes.SpecialAttribute>();
         private static List<Spells.PlayerSpell> SpellList = new List<Spells.PlayerSpell>();
         
@@ -252,6 +253,11 @@ namespace CharacterManager
         {
             PlayerAbility res = AttributesList.Find(a => a.Name == s);
             return res;
+        }
+
+        public static List<PlayerAbility> getAllAvailableFeats()
+        {
+            return FeatsList;
         }
 
         public static List<Language> getAllLanguages()
@@ -540,8 +546,6 @@ namespace CharacterManager
                 logError("Failed to open file : " + mainFilepath + " " + ex.Message);
                 return;
             }
-
-            List<PlayerAbility> FeatsList = new List<PlayerAbility>();
 
             /* Feats are stored in a separate XML file*/
             try
