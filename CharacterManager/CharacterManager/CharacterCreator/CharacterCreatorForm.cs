@@ -66,165 +66,175 @@ namespace CharacterManager.CharacterCreator
 
         private bool CreateCharacter(out String msg)
         {
-            bool res = true;
             msg = String.Empty;
 
-            if (textBoxCharName.Text != String.Empty && SelectedClass != null && SelectedMainRace != null)
+            if (string.IsNullOrEmpty(textBoxCharName.Text))
             {
-                //1. Set player name.
-                CreatedCharacter = new PlayerCharacter(textBoxCharName.Text);
-                CreatedCharacter.ClassName = SelectedClass.PlayerClassName;
-                CreatedCharacter.SubClassName = ""; /* No archetype yet. */
+                msg = "No character name set";
+                return false;
+            }
 
-                //2. Set base attributes.
-                CreatedCharacter.StrengthAttribute = userControlAttributeSetupSTR.TotalAttributeValue;
-                CreatedCharacter.WisAttribute = userControlAttributeSetupWIS.TotalAttributeValue;
-                CreatedCharacter.IntAttribute = userControlAttributeSetupINT.TotalAttributeValue;
-                CreatedCharacter.DexAttribute = userControlAttributeSetupDEX.TotalAttributeValue;
-                CreatedCharacter.ConAttribute = userControlAttributeSetupCON.TotalAttributeValue;
-                CreatedCharacter.CharAttribute = userControlAttributeSetupCHA.TotalAttributeValue;
+            if (SelectedMainRace == null)
+            {
+                msg = "No race set for character";
+                return false;
+            }
 
-                CreatedCharacter.Level = 1;
-                CreatedCharacter.ProficiencyBonus = 2;
-                CreatedCharacter.ExperiencePoints = 0;
-
-                //3. Set race and subrace.
-                if (SelectedMainRace == null)
-                {
-                    msg = "Error : No race is selected.";
-                    return false;
-                }
-                else
-                {
-                    CreatedCharacter.setMainAndSubrace(SelectedMainRace, SelectedSubRace);
-                }
-
-                //3.5 Set speed.
-                CreatedCharacter.Speed = getSpeedValue();
-
-                //4. Set weapon and armor proficiencies.
-                CreatedCharacter.WeaponProficiencies = getAllWeaponProficiencies();
-                CreatedCharacter.ArmorProficiencies = getAllArmorProficiencies();
-
-                //4.1 Set Tool Proficiencies
-                //CreatedCharacter.ToolProficiencies = userControlToolProficiencyChoice1.getChosenToolProficiencies();
-                CreatedCharacter.ToolProficiencies = userControlKnownToolProficiencies.getProficiencies();
-
-                //4.2 Set Known Languages
-                CreatedCharacter.Languages = userControlKnownLanguages.getProficiencies();
-
-                //5. Set saving throw proficiencies.
-                CreatedCharacter.SavingThrowProficiencies = SelectedClass.SavingThrowProficiencies;
-
-                //6. Set skill proficiencies
-                CreatedCharacter.SkillProficiencies = userControlSkillProficiencies1.getAllSkillProficiencies();
-
-                //7. Set Player HitPoints.
-                CreatedCharacter.MaxHitPoints = currentMaxHp;
-                CreatedCharacter.CurrentHitPoints = currentMaxHp;
-
-                //8. Set Player attributes.
-                CreatedCharacter.setCharacterAbilitiesList(myAttributeList, true);
-
-                //9. Set Player alignment.
-                CreatedCharacter.Alignment = alignmentChoice1.getSelectedAlignment();
-
-                //10. Set Player Equipment.
-
-                /* Note that each armor or weapon can be separate, so we only use quantity 1 here. */
-                /* 10.1 -> Add Weapons*/
-                List<PlayerWeapon> wList = userControlGenericEquipmentList1.getWeaponList();
-                List<PlayerWeapon> duplicatesList = new List<PlayerWeapon>();
-
-                foreach(PlayerWeapon w in wList)
-                {
-                    if (w.Quantity > 1)
-                    {
-                        int total = w.Quantity;
-                        for (int x = total; x > 1; x--)
-                        {
-                            PlayerWeapon duplicate = w.Clone();
-                            duplicate.Quantity = 1;
-                            duplicatesList.Add(duplicate);
-                            w.Quantity--;
-                        }                        
-                    }
-                }
-
-                foreach(PlayerWeapon w in duplicatesList)
-                {
-                    wList.Add(w);
-                }
-                CreatedCharacter.CharacterWeapons = wList;
-
-                /*10.2 -> Add Armor*/
-                List<PlayerArmor> aList = userControlGenericEquipmentList1.getArmorList();
-                List<PlayerArmor> duplicateArmorList = new List<PlayerArmor>();
-
-                foreach (PlayerArmor a in aList)
-                {
-                    if (a.Quantity > 1)
-                    {
-                        int total = a.Quantity;
-                        for (int x = total; x > 1; x--)
-                        {
-                            PlayerArmor duplicate = a.Clone();
-                            duplicate.Quantity = 1;
-                            duplicateArmorList.Add(duplicate);
-                            a.Quantity--;
-                        }
-                    }
-                }
-
-                foreach (PlayerArmor a in duplicateArmorList)
-                {
-                    aList.Add(a);
-                }
-                CreatedCharacter.CharacterArmors = aList;
-
-                /* 10.3 Add generic Equipment and tools. */
-                CreatedCharacter.CharacterGeneralEquipment = userControlGenericEquipmentList1.getAllGeneralEquipment();
-
-                /* 10.4 Add gold provided by background */
-                CreatedCharacter.GoldPieces = myChooseBackGroundForm.getInitialGoldAmount();
-
-                /* 11 Add spells */
-                if (SelectedClass.SpellCasting != null)
-                {
-                    if (!myChooseSpellsForm.IsAllSpellsChosen() || (isSelectedSpellsFormOpened == false))
-                    {
-                        msg = "Not all available spells have been chosen!";
-                        return false;
-                    }
-                }
-
-                List<PlayerSpell> chosenSpells = myChooseSpellsForm.getChosenPlayerSpells();
-                List<String> chosenSpellNames = new List<String>();
-
-                foreach(PlayerSpell sp in chosenSpells)
-                {
-                    chosenSpellNames.Add(sp.SpellName);
-                }
-
-                CreatedCharacter.KnownSpells = chosenSpellNames;
-
-                SpellSlotData dataForLevel1Spellslots = new SpellSlotData(0,0);
-                dataForLevel1Spellslots.MaximumCount = SelectedClass.getSpellSlotsForLevel(1, 1);
-                dataForLevel1Spellslots.ActiveCount = dataForLevel1Spellslots.MaximumCount;
-                CreatedCharacter.setSpellSlotData(1, dataForLevel1Spellslots);
-                CreatedCharacter.UpdateSpellModifiers();
+            if (SelectedClass == null)
+            {
+                msg = "No class selected"; 
+                return false;
+            }
 
 
-                /* We perform a long rest in order to make sure that all abilities are at full charge etc.. */
-                CreatedCharacter.PerformLongRest();
+            //1. Set player name.
+            CreatedCharacter = new PlayerCharacter(textBoxCharName.Text);
+            CreatedCharacter.ClassName = SelectedClass.PlayerClassName;
+            CreatedCharacter.SubClassName = ""; /* No archetype yet. */
 
+            //2. Set base attributes.
+            CreatedCharacter.StrengthAttribute = userControlAttributeSetupSTR.TotalAttributeValue;
+            CreatedCharacter.WisAttribute = userControlAttributeSetupWIS.TotalAttributeValue;
+            CreatedCharacter.IntAttribute = userControlAttributeSetupINT.TotalAttributeValue;
+            CreatedCharacter.DexAttribute = userControlAttributeSetupDEX.TotalAttributeValue;
+            CreatedCharacter.ConAttribute = userControlAttributeSetupCON.TotalAttributeValue;
+            CreatedCharacter.CharAttribute = userControlAttributeSetupCHA.TotalAttributeValue;
+
+            CreatedCharacter.Level = 1;
+            CreatedCharacter.ProficiencyBonus = 2;
+            CreatedCharacter.ExperiencePoints = 0;
+
+            //3. Set race and subrace.
+            if (SelectedMainRace == null)
+            {
+                msg = "Error : No race is selected.";
+                return false;
             }
             else
             {
-                res = false;
+                CreatedCharacter.setMainAndSubrace(SelectedMainRace, SelectedSubRace);
             }
 
-            return res;
+            //3.5 Set speed.
+            CreatedCharacter.Speed = getSpeedValue();
+
+            //4. Set weapon and armor proficiencies.
+            CreatedCharacter.WeaponProficiencies = getAllWeaponProficiencies();
+            CreatedCharacter.ArmorProficiencies = getAllArmorProficiencies();
+
+            //4.1 Set Tool Proficiencies
+            //CreatedCharacter.ToolProficiencies = userControlToolProficiencyChoice1.getChosenToolProficiencies();
+            CreatedCharacter.ToolProficiencies = userControlKnownToolProficiencies.getProficiencies();
+
+            //4.2 Set Known Languages
+            CreatedCharacter.Languages = userControlKnownLanguages.getProficiencies();
+
+            //5. Set saving throw proficiencies.
+            CreatedCharacter.SavingThrowProficiencies = SelectedClass.SavingThrowProficiencies;
+
+            //6. Set skill proficiencies
+            CreatedCharacter.SkillProficiencies = userControlSkillProficiencies1.getAllSkillProficiencies();
+
+            //7. Set Player HitPoints.
+            CreatedCharacter.MaxHitPoints = currentMaxHp;
+            CreatedCharacter.CurrentHitPoints = currentMaxHp;
+
+            //8. Set Player attributes.
+            CreatedCharacter.setCharacterAbilitiesList(myAttributeList, true);
+
+            //9. Set Player alignment.
+            CreatedCharacter.Alignment = alignmentChoice1.getSelectedAlignment();
+
+            //10. Set Player Equipment.
+
+            /* Note that each armor or weapon can be separate, so we only use quantity 1 here. */
+            /* 10.1 -> Add Weapons*/
+            List<PlayerWeapon> wList = userControlGenericEquipmentList1.getWeaponList();
+            List<PlayerWeapon> duplicatesList = new List<PlayerWeapon>();
+
+            foreach(PlayerWeapon w in wList)
+            {
+                if (w.Quantity > 1)
+                {
+                    int total = w.Quantity;
+                    for (int x = total; x > 1; x--)
+                    {
+                        PlayerWeapon duplicate = w.Clone();
+                        duplicate.Quantity = 1;
+                        duplicatesList.Add(duplicate);
+                        w.Quantity--;
+                    }                        
+                }
+            }
+
+            foreach(PlayerWeapon w in duplicatesList)
+            {
+                wList.Add(w);
+            }
+            CreatedCharacter.CharacterWeapons = wList;
+
+            /*10.2 -> Add Armor*/
+            List<PlayerArmor> aList = userControlGenericEquipmentList1.getArmorList();
+            List<PlayerArmor> duplicateArmorList = new List<PlayerArmor>();
+
+            foreach (PlayerArmor a in aList)
+            {
+                if (a.Quantity > 1)
+                {
+                    int total = a.Quantity;
+                    for (int x = total; x > 1; x--)
+                    {
+                        PlayerArmor duplicate = a.Clone();
+                        duplicate.Quantity = 1;
+                        duplicateArmorList.Add(duplicate);
+                        a.Quantity--;
+                    }
+                }
+            }
+
+            foreach (PlayerArmor a in duplicateArmorList)
+            {
+                aList.Add(a);
+            }
+            CreatedCharacter.CharacterArmors = aList;
+
+            /* 10.3 Add generic Equipment and tools. */
+            CreatedCharacter.CharacterGeneralEquipment = userControlGenericEquipmentList1.getAllGeneralEquipment();
+
+            /* 10.4 Add gold provided by background */
+            CreatedCharacter.GoldPieces = myChooseBackGroundForm.getInitialGoldAmount();
+
+            /* 11 Add spells */
+            if (SelectedClass.SpellCasting != null)
+            {
+                if (!myChooseSpellsForm.IsAllSpellsChosen() || (isSelectedSpellsFormOpened == false))
+                {
+                    msg = "Not all available spells have been chosen!";
+                    return false;
+                }
+            }
+
+            List<PlayerSpell> chosenSpells = myChooseSpellsForm.getChosenPlayerSpells();
+            List<String> chosenSpellNames = new List<String>();
+
+            foreach(PlayerSpell sp in chosenSpells)
+            {
+                chosenSpellNames.Add(sp.SpellName);
+            }
+
+            CreatedCharacter.KnownSpells = chosenSpellNames;
+
+            SpellSlotData dataForLevel1Spellslots = new SpellSlotData(0,0);
+            dataForLevel1Spellslots.MaximumCount = SelectedClass.getSpellSlotsForLevel(1, 1);
+            dataForLevel1Spellslots.ActiveCount = dataForLevel1Spellslots.MaximumCount;
+            CreatedCharacter.setSpellSlotData(1, dataForLevel1Spellslots);
+            CreatedCharacter.UpdateSpellModifiers();
+
+
+            /* We perform a long rest in order to make sure that all abilities are at full charge etc.. */
+            CreatedCharacter.PerformLongRest();
+
+            return true;
         }
 
 
