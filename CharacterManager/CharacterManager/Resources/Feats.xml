@@ -1,0 +1,12 @@
+<ArrayOfPlayerAbility xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">	
+	<PlayerAbility>
+		<Name>Dummy feat1</Name>
+		<Description>Dummy feat for testing</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+	<PlayerAbility>
+		<Name>Dummy feat2</Name>
+		<Description>Another Dummy feat for testing</Description>
+		<MaximumCharges>0</MaximumCharges>
+	</PlayerAbility>
+</ArrayOfPlayerAbility>
