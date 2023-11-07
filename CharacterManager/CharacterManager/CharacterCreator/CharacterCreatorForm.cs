@@ -205,7 +205,7 @@ namespace CharacterManager.CharacterCreator
             CreatedCharacter.GoldPieces = myChooseBackGroundForm.getInitialGoldAmount();
 
             /* 11 Add spells */
-            if (SelectedClass.SpellCasting != null)
+            if (isChoosingSpellsRequiredForClass() == true)
             {
                 if (!myChooseSpellsForm.IsAllSpellsChosen() || (isSelectedSpellsFormOpened == false))
                 {
@@ -1069,6 +1069,32 @@ namespace CharacterManager.CharacterCreator
         private bool isSelectedSpellsFormOpened = false;
         private PlayerClass currentClassForSpellcasting = null;
 
+
+        private bool isChoosingSpellsRequiredForClass()
+        {
+            if (SelectedClass == null)
+            {
+                return false;
+            }
+
+            if (SelectedClass.SpellCasting == null)
+            {
+                return false;
+            }
+
+            List<PlayerClassAbilityChoice> choices = SelectedClass.getAvailableClassAbilities(1);
+
+            if (choices.Find(ch => ch.ClassAbilityName.ToLower() == "spellcasting") != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
         private void buttonChooseSpells_Click(object sender, EventArgs e)
         {
             if (SelectedClass == null)
@@ -1083,11 +1109,9 @@ namespace CharacterManager.CharacterCreator
                 return;
             }
 
-            List <PlayerClassAbilityChoice> choices = SelectedClass.getAvailableClassAbilities(1);
-
-            if(choices.Find(ch => ch.ClassAbilityName.ToLower() == "spellcasting") == null)
-            {
-                MessageBox.Show("No spellcassting for this class at level 1");
+            if(isChoosingSpellsRequiredForClass() == false) 
+            { 
+                MessageBox.Show("No spellcasting for this class at level 1");
                 return;
             }
 
