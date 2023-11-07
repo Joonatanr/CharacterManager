@@ -91,7 +91,7 @@ namespace CharacterManager
 
                 parseRacesFromXml("Resources/PlayerRaces");
                 parseClassesFromXml("Resources/PlayerClasses");
-                parseAttributesFromXml("Resources/PlayerAttributes.xml");
+                parseAttributesFromXml("Resources/PlayerAttributes.xml", "Resources/Feats.xml");
                 parseBackGroundsFromXml("Resources/PlayerBackgrounds.xml");
                 parseItemsFromXml("Resources/PlayerItems/PlayerItems.xml");
                 parseArmorFromXml("Resources/PlayerItems/PlayerArmor.xml");
@@ -524,22 +524,41 @@ namespace CharacterManager
 
         }
 
-        private static void parseAttributesFromXml(String filepath)
+        private static void parseAttributesFromXml(String mainFilepath, string featsFilePath)
         {
             try
             {
                 Type[] ExtraTypes = { typeof(PlayerManeuverAbility) };
                 XmlSerializer reader = new XmlSerializer(typeof(List<PlayerAbility>), ExtraTypes);
-                StreamReader file = new System.IO.StreamReader(filepath);
+                StreamReader file = new System.IO.StreamReader(mainFilepath);
 
                 AttributesList = (List<PlayerAbility>)reader.Deserialize(file);
                 file.Close();
             }
             catch (Exception ex)
             {
-                logError("Failed to open file : " + ex.Message);
+                logError("Failed to open file : " + mainFilepath + " " + ex.Message);
+                return;
             }
 
+            List<PlayerAbility> FeatsList = new List<PlayerAbility>();
+
+            /* Feats are stored in a separate XML file*/
+            try
+            {
+                Type[] ExtraTypes = { typeof(PlayerManeuverAbility) };
+                XmlSerializer reader = new XmlSerializer(typeof(List<PlayerAbility>), ExtraTypes);
+                StreamReader file = new System.IO.StreamReader(featsFilePath);
+
+                FeatsList = (List<PlayerAbility>)reader.Deserialize(file);
+            }
+            catch (Exception ex)
+            {
+                logError("Failed to parse feats from file : " + featsFilePath + " " + ex.Message);
+                //We still continue though... 
+            }
+
+            AttributesList.AddRange(FeatsList);
 
             //Lets resolve the special attributes.
             for (int i = 0; i < AttributesList.Count; i++)
