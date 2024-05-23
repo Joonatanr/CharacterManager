@@ -1123,6 +1123,13 @@ rolled to its AC against that attack, after seeing the roll
 but before knowing whether it hits or misses.</Description>
 		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Font Of Inspiration</Name>
+		<Description>Beginning when you reach 5th level, you regain all of
+your expended uses of Bardic Inspiration when you
+finish a short or long rest.</Description>
+	</PlayerAbility>
 
 <!-- Rogue class abilities -->
 

@@ -229,15 +229,13 @@ namespace CharacterManager
 
         public static int getAbilityModifierValue(int score)
         {
-            /* TODO : Move this modifier elsewhere. */
             Decimal modifier = Math.Floor(((Decimal)score - 10) / 2);
             return (int)modifier;
         }
 
-        public static String getAbilityWithModifierString(Decimal score)
+        public static String getAbilityWithModifierString(int score)
         {
-            /* TODO : Move this modifier elsewhere. */
-            Decimal modifier = Math.Floor(((Decimal)score - 10) / 2);
+            Decimal modifier = getAbilityModifierValue(score);
 
             String txt = score + " " + "(";
             if (modifier >= 0)

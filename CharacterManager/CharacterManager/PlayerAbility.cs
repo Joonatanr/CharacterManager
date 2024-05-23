@@ -380,6 +380,10 @@ So we get to an issue where upgrades to the description are added multiple times
             return res;
         }
 
+        public void RechargeAbility()
+        {
+            this.RemainingCharges = this.MaximumCharges;
+        }
 
         /* This will be overwritten by special abilities. */
         public virtual bool UseAbilitySpecial()

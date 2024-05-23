@@ -721,9 +721,31 @@ namespace CharacterManager
         }
     }
 
+    public class FontOfInspiration : SpecialAttribute
+    {
+        public FontOfInspiration()
+        {
+            this.Name = "Font Of Inspiration";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.ShortRestMade += C_ShortRestMade;
+        }
+
+        private void C_ShortRestMade(PlayerCharacter c)
+        {
+            PlayerAbility inspirationAbility = c.CharacterAbilitiesObjectList.Find(ability => ability.Name == "Bardic Inspiration");
+            
+            if (inspirationAbility != null)
+            {
+                inspirationAbility.RechargeAbility();
+            }
+        }
+    }
+
 
     /*********************************************************************************************/
-
     /******* Rogue class abilities. ********/
     public class RogueExpertise : SpecialAttribute
     {

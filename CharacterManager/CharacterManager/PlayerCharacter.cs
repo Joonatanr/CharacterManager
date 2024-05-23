@@ -341,6 +341,9 @@ namespace CharacterManager
         public event PlayerEvent InitiativeRollMade;
         public event PlayerEvent CurrencyChanged;
 
+        public event PlayerEvent LongRestMade;
+        public event PlayerEvent ShortRestMade;
+
         public delegate void PlayerSpellEvent(PlayerCharacter c, PlayerSpell sp, int level);
         public event PlayerSpellEvent CharacterSpellCast;
         public event PlayerSpellEvent CharacterSetupCastingForSpell;
@@ -511,6 +514,9 @@ namespace CharacterManager
             /* 4. Restore half of total hit Dice. */
             int addition = Math.Max (1, Level / 2);
             CurrentHitDice = Math.Min(Level, CurrentHitDice + addition);
+
+            /* 5. Callback */
+            LongRestMade?.Invoke(this);
         }
 
         internal void PerformShortRest()
@@ -519,6 +525,8 @@ namespace CharacterManager
             {
                 ability.HandleShortRest();
             }
+
+            ShortRestMade?.Invoke(this);
         }
 
         internal bool RollHitDie(out string RollResult)

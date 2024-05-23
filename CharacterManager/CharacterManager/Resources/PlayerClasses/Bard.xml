@@ -193,6 +193,24 @@
 		<string>Silence</string>
 		<string>Suggestion</string>
 		<string>Zone Of Truth</string>
+		<!-- Level 3 spells-->
+		<string>Bestow Curse</string>
+		<string>Clairvoyance</string>
+		<string>Dispel Magic</string>
+		<string>Fear</string>
+		<string>Feign Death</string>
+		<string>Glyph Of Warding</string>
+		<string>Hypnotic Pattern</string>
+		<string>Leomund's Tiny Hut</string>
+		<string>Major Image</string>
+		<string>Nondetection</string>
+		<string>Plant Growth</string>
+		<string>Sending</string>
+		<string>Speak With The Dead</string>
+		<string>Speak With Plants</string>
+		<string>Stinking Cloud</string>
+		<string>Tongues</string>
+
 	</AvailableSpells>
 	
 	<SpellslotPerLevel>
@@ -554,6 +572,18 @@
     </PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel3>
   
+  <AvailableClassAbilitiesLevel4>
+  <!-- Ability score improvement -->
+  </AvailableClassAbilitiesLevel4>
+  
+  <AvailableClassAbilitiesLevel5>
+	<PlayerClassAbilityChoice>
+      <AvailableChoices>
+        <string>Font Of Inspiration</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
+  </AvailableClassAbilitiesLevel5>
+  
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>College Of Lore</Name>
@@ -629,10 +659,8 @@ accomplishment as the heroes of old.</Description>
 	
 	<AbilityScoreImprovementsAtLevels>
 		<int>4</int>
-		<int>6</int>
 		<int>8</int>
 		<int>12</int>
-		<int>14</int>
 		<int>16</int>
 		<int>19</int>
 	</AbilityScoreImprovementsAtLevels>
