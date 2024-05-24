@@ -292,7 +292,6 @@
   <CharacterSpellCastingStatus>
     <KnownSpells>
       <string>Dancing Lights</string>
-      <string>Eldritch Blast</string>
       <string>Mage Hand</string>
       <string>Vicious Mockery</string>
       <string>Cure Wounds</string>
@@ -302,10 +301,10 @@
       <string>Hold Person</string>
       <string>Knock</string>
       <string>Dispel Magic</string>
-      <string>Haste</string>
       <string>Hypnotic Pattern</string>
-      <string>Leomund's Tiny Hut</string>
       <string>Speak With The Dead</string>
+      <string>True Strike</string>
+      <string>Lightning Bolt</string>
     </KnownSpells>
     <PreparedSpells />
     <SpellCastingAbility>CHA</SpellCastingAbility>
@@ -320,7 +319,7 @@
     </Level2SpellSlots>
     <Level3SpellSlots>
       <MaximumCount>3</MaximumCount>
-      <ActiveCount>2</ActiveCount>
+      <ActiveCount>3</ActiveCount>
     </Level3SpellSlots>
     <Level4SpellSlots>
       <MaximumCount>0</MaximumCount>
@@ -350,7 +349,7 @@
   <Level>6</Level>
   <ProficiencyBonus>3</ProficiencyBonus>
   <ExperiencePoints>14000</ExperiencePoints>
-  <MaxHitPoints>46</MaxHitPoints>
+  <MaxHitPoints>49</MaxHitPoints>
   <Speed>30</Speed>
   <Size>
     <height>0</height>
@@ -375,6 +374,6 @@
   <SilverPieces>0</SilverPieces>
   <PlatinumPieces>0</PlatinumPieces>
   <CharacterName>MyBard</CharacterName>
-  <CurrentHitPoints>46</CurrentHitPoints>
-  <CurrentHitDice>5</CurrentHitDice>
+  <CurrentHitPoints>49</CurrentHitPoints>
+  <CurrentHitDice>6</CurrentHitDice>
 </PlayerCharacter>

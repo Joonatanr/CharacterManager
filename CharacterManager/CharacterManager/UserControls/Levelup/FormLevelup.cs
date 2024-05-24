@@ -187,19 +187,8 @@ namespace CharacterManager.UserControls
             PlayerClass _myClass = _myCharacter.GetPlayerClass();
             List<PlayerSpell> spellsAddedByAbilities = new List<PlayerSpell>();
 
-            /* Some abilities might just fire once and they will not be added to the abilities list. */
-
-            /* TODO : Some abilities might add things like proficiencies, languages etc. TODO : Handle this here. */
-            _myCharacter.SkillProficiencies.AddRange(newSelectedProficiencies);
-            _myCharacter.SkillExpertise.AddRange(newSelectedExpertise);
-
-            foreach(PlayerAbility selectedAbility in SelectedPlayerAbilities)
-            {
-                List<PlayerSpell> spellsAddedByAbility;
-                selectedAbility.HandleAbilitySelected(_myCharacter, out spellsAddedByAbility);
-                spellsAddedByAbilities.AddRange(spellsAddedByAbility);
-            }
-
+            /* Some abilities might just fire once and they will not be added to the abilities list. 
+             So we create a list of selected abilities that should be removed once character has been finalized */
             List<PlayerAbility> HiddenAbilities = new List<PlayerAbility>();
 
             foreach (PlayerAbility ability in SelectedPlayerAbilities)
@@ -210,11 +199,29 @@ namespace CharacterManager.UserControls
                 }
             }
 
+
+            /* 1.  Handle the case of a new archetype being selected. */
+            finalizeNewArchetypeSelection();
+            /* 2. Handle any new language and tool proficiencies that have been added */
+            finalizeNewProficiencies();
+            /* 3. Handle all the spells that have been chosen by the ordinary spell selection mechanism. */
+            finalizeSpellselections();
+
+            /* 4. Fire the application of more complex new selected abilities. */
+            foreach (PlayerAbility selectedAbility in SelectedPlayerAbilities)
+            {
+                List<PlayerSpell> spellsAddedByAbility;
+                selectedAbility.HandleAbilitySelected(_myCharacter, out spellsAddedByAbility);
+                spellsAddedByAbilities.AddRange(spellsAddedByAbility);
+            }
+
+            /* 5. Remove the hidden abilities from the list. */
             foreach (PlayerAbility Hidden in HiddenAbilities)
             {
                 SelectedPlayerAbilities.Remove(Hidden);
             }
 
+            /* 6. Connect the new abilities to the character. */
             List<PlayerAbility> resultAbilities = _myCharacter.CharacterAbilitiesObjectList;
 
             foreach (PlayerAbility newAbility in SelectedPlayerAbilities) 
@@ -225,18 +232,7 @@ namespace CharacterManager.UserControls
                 }
             }
 
-            /* We might have selected a new Archetype. Lets update the Subclass property here. */
-            foreach (PlayerAbility ability in SelectedPlayerAbilities)
-            {
-                PlayerClassArchetype _myArchetype = _myClass.ArcheTypes.Find(at => at.ArcheTypeName == ability.Name);
-                if (_myArchetype != null)
-                {
-                    _myCharacter.SubClassName = _myArchetype.Name;
-                    break; /* Lets assume that there is no way to select more than one archetype at a time... */
-                }
-            }
-
-            /* We could have abilities that replace other abilities. */
+            /* 7. Handle abilities that replace other abilities. */
             foreach (PlayerAbility ability in SelectedPlayerAbilities)
             {
                 if (!string.IsNullOrEmpty(ability.ReplacesAbility))
@@ -249,18 +245,31 @@ namespace CharacterManager.UserControls
                 }
             }
 
-            /* We reset the known spells here and start rebuilding this information. 
-             Spells will be updated based on player selection as well as abilities that can provide new spells.
-             */
-            _myCharacter.KnownSpells = new List<string>();
-            
+            /* 8. Handle spells that have been added by abilities. */
+            foreach (PlayerSpell sp in spellsAddedByAbilities)
+            {
+                _myCharacter.AddSpell(sp);
+            }
+
+            /* 9. Connect the abilities list to the character. */
             _myCharacter.setCharacterAbilitiesList(resultAbilities, true);
 
+            /* 10. Initialize new abilities */
             foreach (PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
             {
                 ability.HandleInit();
             }
 
+            /* 11. Update character main attributes. */
+            finalizeCharacterAttributes();
+
+            /* 12. Update the proficiency bonus if applicable */
+            updateProficiencyBonus();
+        }
+
+
+        private void finalizeCharacterAttributes()
+        {
             /* Check if CON score has been raised. NOTE that this is a special case. */
             if (CharacterFactory.getAbilityModifierValue((int)numericUpDownCON.Value) > _myCharacter.getModifier("CON"))
             {
@@ -272,22 +281,49 @@ namespace CharacterManager.UserControls
             _myCharacter.CurrentHitPoints += (_myCharacter.MaxHitPoints - prevMaxHp);
 
             /* Update base attributes. */
-            _myCharacter.StrengthAttribute =    (int)numericUpDownSTR.Value;
-            _myCharacter.DexAttribute =         (int)numericUpDownDEX.Value;
-            _myCharacter.ConAttribute =         (int)numericUpDownCON.Value;
-            _myCharacter.IntAttribute =         (int)numericUpDownINT.Value;
-            _myCharacter.WisAttribute =         (int)numericUpDownWIS.Value;
-            _myCharacter.CharAttribute =        (int)numericUpDownCHA.Value;
+            _myCharacter.StrengthAttribute = (int)numericUpDownSTR.Value;
+            _myCharacter.DexAttribute = (int)numericUpDownDEX.Value;
+            _myCharacter.ConAttribute = (int)numericUpDownCON.Value;
+            _myCharacter.IntAttribute = (int)numericUpDownINT.Value;
+            _myCharacter.WisAttribute = (int)numericUpDownWIS.Value;
+            _myCharacter.CharAttribute = (int)numericUpDownCHA.Value;
+
+            /* We definitely get a new hit die with a new level. */
+            _myCharacter.CurrentHitDice++;
+        }
+
+        private void finalizeNewArchetypeSelection()
+        {
+            PlayerClass _myClass = _myCharacter.GetPlayerClass();
+
+            /* We might have selected a new Archetype. Lets update the Subclass property here. */
+            foreach (PlayerAbility ability in SelectedPlayerAbilities)
+            {
+                PlayerClassArchetype _myArchetype = _myClass.ArcheTypes.Find(at => at.ArcheTypeName == ability.Name);
+                if (_myArchetype != null)
+                {
+                    _myCharacter.SubClassName = _myArchetype.Name;
+                    break; /* Lets assume that there is no way to select more than one archetype at a time... */
+                }
+            }
+        }
+
+        private void finalizeNewProficiencies()
+        {
+            /* TODO : Some abilities might add things like proficiencies, languages etc. TODO : Handle this here. */
+            _myCharacter.SkillProficiencies.AddRange(newSelectedProficiencies);
+            _myCharacter.SkillExpertise.AddRange(newSelectedExpertise);
+        }
+
+        private void finalizeSpellselections()
+        {
+            /* We reset the known spells here and start rebuilding this information. 
+                Spells will be updated based on player selection as well as abilities that can provide new spells. */
+            _myCharacter.KnownSpells = new List<string>();
 
             /* Update spell data. */
             if (_myCharacter.SpellCasting != null)
-            {
-                /* Handle spells that have been added by abilities. */
-                foreach(PlayerSpell sp in spellsAddedByAbilities)
-                {
-                    _myCharacter.AddSpell(sp);
-                }
-
+            { 
                 if (_myCharacter.SpellCasting.IsAllSpellsAvailable)
                 {
                     List<PlayerSpell> allSpells = _myCharacter.SpellCasting.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
@@ -307,16 +343,15 @@ namespace CharacterManager.UserControls
                 }
                 /* Update spell slot amount. */
                 SpellSlots_T slotsForThisLevel = _myCharacter.SpellCasting.getSpellSlotDataForLevel(_myCharacter.Level);
-                
+
                 for (int SpellLevel = 1; SpellLevel <= 9; SpellLevel++)
                 {
                     int numberOfSlots = slotsForThisLevel.getNumberOfSlotsPerLevel(SpellLevel);
                     _myCharacter.setSpellSlotData(SpellLevel, new CharacterSpellcastingStatus.SpellSlotData(numberOfSlots, numberOfSlots));
                 }
             }
-
-            updateProficiencyBonus();
         }
+
 
         private void updateProficiencyBonus()
         {

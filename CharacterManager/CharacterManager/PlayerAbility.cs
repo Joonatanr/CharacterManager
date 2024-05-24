@@ -458,10 +458,13 @@ So we get to an issue where upgrades to the description are added multiple times
                 {
                     numberOfAnySpells++;
                 }
-
-                if (spellString.ToLower() == "anyspellorcantrip")
+                else if (spellString.ToLower() == "anyspellorcantrip")
                 {
                     numberOfAnySpellOrCantrip++;
+                }
+                else
+                {
+
                 }
             }
 
