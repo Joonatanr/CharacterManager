@@ -2433,4 +2433,134 @@ you finish a long rest.</Description>
 		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 	
+	
+	
+	<!-- Cleric class abilities -->
+	
+	
+	<PlayerAbility>
+		<Name>Blessings Of Knowledge</Name>
+		<Description>At 1st level, you learn two languages of your choice.
+You also become proficient in your choice of two of the
+following skills: Arcana, History, Nature, or Religion.
+Your proficiency bonus is doubled for any ability check
+you make that uses either of those skills. TODO : Implement this very specific ability.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Knowledge Domain Spells</Name>
+		<Description>You gain domain spells at the cleric levels listed:
+		1st -> Command, Identify
+		3rd -> Augury, Suggestion
+		5th -> Nondetection, Speak With The Dead
+		7th -> Arcane Eye, Confusion
+		9th -> Legend Lore, Scrying</Description>
+		
+		<SpellsAddedByAbility>
+			<string>Command</string>
+			<string>Identify</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>3</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Augury</string>
+					<string>Suggestion</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Nondetection</string>
+					<string>Speak With The Dead</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>7</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Arcane Eye</string>
+					<string>Confusion</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Legend Lore</string>
+					<string>Scrying</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>	
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Heavy Armor Proficiency</Name>
+		<Description>When you choose this domain at 1st level, you gain
+proficiency with heavy armor.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalArmorProficiencies>
+			<string>Heavy Armor</string>
+		</AdditionalArmorProficiencies>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Disciple Of Life</Name>
+		<Description>Also starting at 1st level, your healing spells are more
+effective. Whenever you use a spell of 1st level or higher
+to restore hit points to a creature, the creature regains
+additional hit points equal to 2 + the spell's level.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Life Domain Spells</Name>
+		<Description>You gain domain spells at the cleric levels listed:
+		1st -> Bless, Cure Wounds
+		3rd -> Lesser Restoration, Spiritual Weapon
+		5th -> Beacon Of Hope, Revivify
+		7th -> Death Ward, Guardian Of Faith
+		9th -> Mass Cure Wounds, Raise Dead</Description>
+		
+		<SpellsAddedByAbility>
+			<string>Bless</string>
+			<string>Cure Wounds</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>3</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Lesser Restoration</string>
+					<string>Spiritual Weapon</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Beacon Of Hope</string>
+					<string>Revivify</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>7</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Death Ward</string>
+					<string>Guardian Of Faith</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Mass Cure Wounds</string>
+					<string>Raise Dead</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>	
+		</Upgrades>
+	</PlayerAbility>
+	
 </ArrayOfPlayerAbility>

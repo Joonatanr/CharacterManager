@@ -67,6 +67,8 @@ namespace CharacterManager
         public int AdditionalProficiencyChoices { get; set; } = 0;
         public int AdditionalExpertiseChoices { get; set; } = 0;
 
+        public List<String> AdditionalArmorProficiencies = new List<string>();
+
         /* Some abilities might increase base attributes. */
         public int StrIncrease = 0;
         public int DexIncrease = 0;
@@ -495,6 +497,15 @@ So we get to an issue where upgrades to the description are added multiple times
                 else
                 {
                     /* TODO : What do we do if the selection is cancelled??? Should be possible perhaps to go back and modify all the choices? */
+                }
+            }
+
+            /* We might get new armor proficiencies from abilities... */
+            foreach(string armorProficiency in this.AdditionalArmorProficiencies)
+            {
+                if (!c.ArmorProficiencies.Contains(armorProficiency))
+                {
+                    c.ArmorProficiencies.Add(armorProficiency);
                 }
             }
         }

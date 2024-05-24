@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PlayerClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<PlayerClassName>Rogue</PlayerClassName>
+	<HitDie>8</HitDie>
+	<WeaponProficiencies>
+		<string>Simple Weapons</string>
+	</WeaponProficiencies>
+	<ArmorProficiencies>
+		<string>Light Armor</string>
+		<string>Medium Armor</string>
+		<string>Shields</string>
+	</ArmorProficiencies>
+	<SavingThrowProficiencies>
+		<string>WIS</string>
+		<string>CHA</string>
+	</SavingThrowProficiencies>
+	<AvailableSkillProficiencies>
+		<string>History</string>
+		<string>Insight</string>
+		<string>Medicine</string>
+		<string>Persuasion</string>
+		<string>Religion</string>
+	</AvailableSkillProficiencies>
+	<NumberOfSkillsToChoose>2</NumberOfSkillsToChoose>
+	
+	<AvailableEquipment>
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Mace</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Warhammer</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+			<optionC />
+			<optionD />
+		</EquipmentChoiceList>
+		
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Scale Mail</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Leather</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+			<optionC>
+				<EquipmentChoice>
+					<Equipment>Chain Mail</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionC>
+			<optionD />
+		</EquipmentChoiceList>
+		
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Light rossbow</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+				<EquipmentChoice>
+					<Equipment>Bolts</Equipment>
+					<Quantity>20</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>AnySimple</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+			<optionC>
+			</optionC>
+			<optionD />
+		</EquipmentChoiceList>
+		
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Priest's Pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Explorer's Pack</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+			<optionC />
+			<optionD />
+		</EquipmentChoiceList>
+		
+		<EquipmentChoiceList>
+			<optionA>
+				<EquipmentChoice>
+					<Equipment>Shield</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionA>
+			<optionB>
+				<EquipmentChoice>
+					<Equipment>Holy Symbol</Equipment>
+					<Quantity>1</Quantity>
+				</EquipmentChoice>
+			</optionB>
+			<optionC />
+			<optionD />
+		</EquipmentChoiceList>
+	</AvailableEquipment>
+	
+	<SpellCasting>
+		<Description>As a conduit for divine power, you can cast cleric spells.
+See chapter 10 for the general rules o f spellcasting and
+chapter 11 for the cleric spell list..</Description>
+		<AttributeName>Spellcasting</AttributeName>
+		<SubType>(Cleric)</SubType>
+		<MaximumCharges>0</MaximumCharges>
+		<IsToggle>false</IsToggle>
+		<SpellCastingAttribute>WIS</SpellCastingAttribute>
+		<NumberOfInitialCantrips>3</NumberOfInitialCantrips>
+		<NumberOfInitialLev1Spells>0</NumberOfInitialLev1Spells>
+		<SpellPreparation>PREPARATION_FULL</SpellPreparation>
+		<IsAllSpellsAvailable>true</IsAllSpellsAvailable>
+		
+		<AvailableSpells>
+			<!-- Cantrips-->
+			<string>Guidance</string>
+			<string>Light</string>
+			<string>Mending</string>
+			<string>Resistance</string>
+			<string>Sacred Flame</string>
+			<string>Spare The Dying</string>
+			<string>Thaumaturgy</string>
+			<!-- Level 1 spells-->
+			<string>Bane</string>
+			<string>Bless</string>
+			<string>Command</string>
+			<string>Create Or Destroy Water</string>
+			<string>Cure Wounds</string>
+			<string>Detect Evil and Good</string>
+			<string>Detect Magic</string>
+			<string>Detect Poison And Disease</string>
+			<string>Guiding Bolt</string>
+			<string>Healing Word</string>
+			<string>Inflict Wounds</string>
+			<string>Protection From Evil and Good</string>
+			<string>Purify Food And Drink</string>
+			<string>Sanctuary</string>
+			<string>Shield Of Faith</string>
+			<!-- Level 2 spells-->
+			<string>Aid</string>
+			<string>Augury</string>
+			<string>Blindness/Deafness</string>
+			<string>Calm Emotions</string>
+			<string>Continual Flame</string>
+			<string>Enhance Ability</string>
+			<string>Find Traps</string>
+			<string>Gentle Repose</string>
+			<string>Hold Person</string>
+			<string>Lesser Restoration</string>
+			<string>Locate Object</string>
+			<string>Prayer Of Healing</string>
+			<string>Protection from Poison</string>
+			<string>Silence</string>
+			<string>Spiritual Weapon</string>
+			<string>Warding Bond</string>
+			<string>Zone Of Truth</string>
+			<!-- Level 3 spells-->
+			
+		</AvailableSpells>
+		
+		<SpellslotPerLevel>
+		<!-- Level 1 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>2</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 2 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>3</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>0</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 3 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>2</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 4 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>0</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 5 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>2</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 6 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>0</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 7 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>1</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 8 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>2</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>0</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 9 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>1</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 10 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>0</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 11 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 12 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>0</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 13 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 14 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>0</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 15 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 16 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>0</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 17 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>2</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 18 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>1</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 19 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>1</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+		<!-- Level 20 -->
+		<SpellSlots_T>
+			<NumberOfLev1SpellSlots>4</NumberOfLev1SpellSlots>
+			<NumberOfLev2SpellSlots>3</NumberOfLev2SpellSlots>
+			<NumberOfLev3SpellSlots>3</NumberOfLev3SpellSlots>
+			<NumberOfLev4SpellSlots>3</NumberOfLev4SpellSlots>
+			<NumberOfLev5SpellSlots>3</NumberOfLev5SpellSlots>
+			<NumberOfLev6SpellSlots>2</NumberOfLev6SpellSlots>
+			<NumberOfLev7SpellSlots>2</NumberOfLev7SpellSlots>
+			<NumberOfLev8SpellSlots>1</NumberOfLev8SpellSlots>
+			<NumberOfLev9SpellSlots>1</NumberOfLev9SpellSlots>
+		</SpellSlots_T>
+	</SpellslotPerLevel>
+	
+	<!-- Level 1 -->
+	<AvailableClassAbilitiesLevel1>
+		<PlayerClassAbilityChoice>
+			<Description>Divine Domain</Description>
+			<ClassAbilityName>Archetype</ClassAbilityName>
+			<AvailableChoices>
+				<string>Knowledge Domain</string>
+				<string>Life Domain</string>
+				<!-- 
+				<string>Light Domain</string>
+				<string>Nature Domain</string>
+				<string>Tempest Domain</string>
+				<string>Trickery Domain</string>
+				<string>War Domain</string>
+				-->
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel1>
+	
+	
+	<ArcheTypes>
+		<PlayerClassArchetype>
+			<Name>Knowledge Domain</Name>
+			<Description>The gods of knowledge — including Oghma, Boccob,
+Gilean, Aureon, and Thoth — value learning and
+understanding above all. Some teach that knowledge is
+to be gathered and shared in libraries and universities,
+or promote the practical knowledge of craft and
+invention. Some deities hoard knowledge and keep its
+secrets to themselves. And some promise their followers
+that they will gain tremendous power if they unlock the
+secrets of the multiverse. Followers of these gods study
+esoteric lore, collect old tomes, delve into the secret
+places of the earth, and learn all they can. Some gods
+of knowledge promote the practical knowledge of craft
+and invention, including smith deities like Gond, Reorx,
+Onatar, Moradin, Hephaestus, and Goibhniu.</Description>
+			<AvailableAbilitiesAtLevel1>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Blessings Of Knowledge</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Knowledge Domain Spells</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel1>
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>Life Domain</Name>
+			<Description>The Life domain focuses on the vibrant positive
+energy — one of the fundamental forces of the universe —
+that sustains all life. The gods of life promote vitality
+and health through healing the sick and wounded,
+caring for those in need, and driving away the forces of
+death and undeath. Almost any non-evil deity can claim
+influence over this domain, particularly agricultural
+deities (such as Chauntea, Arawai, and Demeter), sun
+gods (such as Lathander, Pelor, and Re-Horakhty), 
+gods of healing or endurance (such as Ilmater, Mishakal,
+Apollo, and Diancecht), and gods of home and
+community (such as Hestia, Hathor, and Boldrei).</Description>
+			<AvailableAbilitiesAtLevel1>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Heavy Armor Proficiency</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Life Domain Spells</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Disciple Of Life</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel1>
+		</PlayerClassArchetype>
+		
+		<!-- 
+		<PlayerClassArchetype>
+			<Name>Light Domain</Name>
+			<Description>TODO</Description>
+			<AvailableAbilitiesAtLevel1>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Blessings Of Knowledge</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel1>
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>Nature Domain</Name>
+			<Description>TODO</Description>
+			<AvailableAbilitiesAtLevel1>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Blessings Of Knowledge</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel1>
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>Tempest Domain</Name>
+			<Description>TODO</Description>
+			<AvailableAbilitiesAtLevel1>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Blessings Of Knowledge</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel1>
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>Trickery Domain</Name>
+			<Description>TODO</Description>
+			<AvailableAbilitiesAtLevel1>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Blessings Of Knowledge</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel1>
+		</PlayerClassArchetype>
+		
+		<PlayerClassArchetype>
+			<Name>War Domain</Name>
+			<Description>TODO</Description>
+			<AvailableAbilitiesAtLevel1>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Blessings Of Knowledge</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel1>
+		</PlayerClassArchetype>
+		-->
+	</ArcheTypes>
+</PlayerClass>
