@@ -745,6 +745,30 @@ namespace CharacterManager
     }
 
 
+    public class SuperiorInspiration : SpecialAttribute
+    {
+        public SuperiorInspiration()
+        {
+            this.Name = "Superior Inspiration";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.InitiativeRollMade += C_InitiativeRollMade;
+        }
+
+        private void C_InitiativeRollMade(PlayerCharacter c)
+        {
+            PlayerAbility inspirationAbility = c.CharacterAbilitiesObjectList.Find(ability => ability.Name == "Bardic Inspiration");
+
+            if (inspirationAbility != null)
+            {
+                inspirationAbility.RemainingCharges = Math.Max(1, inspirationAbility.RemainingCharges);
+            }
+        }
+    }
+
+
     /*********************************************************************************************/
     /******* Rogue class abilities. ********/
     public class RogueExpertise : SpecialAttribute

@@ -785,6 +785,7 @@ namespace CharacterManager
 
             SpecialAttributeList.Add(new JackOfAllTradesAbility());
             SpecialAttributeList.Add(new FontOfInspiration());
+            SpecialAttributeList.Add(new SuperiorInspiration());
 
             SpecialAttributeList.Add(new RogueExpertise());
             SpecialAttributeList.Add(new SneakAttack());

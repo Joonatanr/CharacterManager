@@ -210,7 +210,63 @@
 		<string>Speak With Plants</string>
 		<string>Stinking Cloud</string>
 		<string>Tongues</string>
-
+		<!-- Level 4 spells-->
+		<string>Compulsion</string>
+		<string>Confusion</string>
+		<string>Dimension Door</string>
+		<string>Freedom of Movement</string>
+		<string>Greater Invisibility</string>
+		<string>Hallucinatory Terrain</string>
+		<string>Locate Creature</string>
+		<string>Polymorph</string>
+		<!-- Level 5 spells-->
+		<string>Animate Objects</string>
+		<string>Awaken</string>
+		<string>Dominate Person</string>
+		<string>Dream</string>
+		<string>Geas</string>
+		<string>Greater Restoration</string>
+		<string>Hold Monster</string>
+		<string>Legend Lore</string>
+		<string>Mass Cure Wounds</string>
+		<string>Mislead</string>
+		<string>Modify Memory</string>
+		<string>Planar Binding</string>
+		<string>Raise Dead</string>
+		<string>Scrying</string>
+		<string>Seeming</string>
+		<string>Teleportation Circle</string>
+		<!-- Level 6 spells-->
+		<string>Eyebite</string>
+		<string>Find The Path</string>
+		<string>Guards And Wards</string>
+		<string>Mass Suggestion</string>
+		<string>Otto's Irresistible Dance</string>
+		<string>Programmed Illusion</string>
+		<string>True Seeing</string>
+		<!-- Level 7 spells-->
+		<string>Etherealness</string>
+		<string>Forcecage</string>
+		<string>Mirage Arcane</string>
+		<string>Mordenkainen's Magnificent Mansion</string>
+		<string>Mordenkainen's Sword</string>
+		<string>Project Image</string>
+		<string>Regenerate</string>
+		<string>Resurrection</string>
+		<string>Symbol</string>
+		<string>Teleport</string>
+		<!-- Level 8 spells-->
+		<string>Dominate Monster</string>
+		<string>Feeblemind</string>
+		<string>Glibness</string>
+		<string>Mind Blank</string>
+		<string>Power Word Stun</string>
+		<!-- Level 9 spells-->
+		<string>Foresight</string>
+		<string>Power Word Heal</string>
+		<string>Power Word Kill</string>
+		<string>True Polymorph</string>
+		
 	</AvailableSpells>
 	
 	<SpellslotPerLevel>
@@ -591,7 +647,83 @@
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel6>
+	
+	<AvailableClassAbilitiesLevel7>
+	</AvailableClassAbilitiesLevel7>
+	
+	<AvailableClassAbilitiesLevel8>
+		<!-- Ability score improvement -->
+	</AvailableClassAbilitiesLevel8>
+	
+	<AvailableClassAbilitiesLevel9>
+		<!-- Song of Rest (d8) -->
+	</AvailableClassAbilitiesLevel9>
+	
+	<AvailableClassAbilitiesLevel10>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Expertise(Bard)</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Magical Secrets</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel10>
+	
+	<AvailableClassAbilitiesLevel11>
+		<!-- No new abilities -->
+	</AvailableClassAbilitiesLevel11>
+	
+	<AvailableClassAbilitiesLevel12>
+		<!-- Ability Score Improvement -->
+	</AvailableClassAbilitiesLevel12>
+	
+	<AvailableClassAbilitiesLevel13>
+		<!-- Song of Rest (d10) -->
+	</AvailableClassAbilitiesLevel13>
+	
+	<AvailableClassAbilitiesLevel14>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Magical Secrets</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel14>
+	
+	<AvailableClassAbilitiesLevel15>
+		<!-- Bardic Inspiration (d12) -->
+	</AvailableClassAbilitiesLevel15>
+	
+	<AvailableClassAbilitiesLevel16>
+		<!-- Ability Score Improvement -->
+	</AvailableClassAbilitiesLevel16>
+	
+	<AvailableClassAbilitiesLevel17>
+		<!-- Song of Rest(d12) -->
+	</AvailableClassAbilitiesLevel17>
+	
+	<AvailableClassAbilitiesLevel18>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Magical Secrets</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel18>
+	
+	<AvailableClassAbilitiesLevel19>
+		<!-- Ability Score Improvement -->
+	</AvailableClassAbilitiesLevel19>
   	
+	<AvailableClassAbilitiesLevel20>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Superior Inspiration</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel20>
+	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>College Of Lore</Name>
@@ -639,6 +771,14 @@ figures of authority.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Peerless Skill</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -666,6 +806,22 @@ accomplishment as the heroes of old.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel3>
+			
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Multiattack x2</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
+			
+			<AvailableAbilitiesAtLevel14>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Battle Magic</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel14>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	

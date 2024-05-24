@@ -1077,6 +1077,7 @@ level, and to 1d 12 at 17th level.</Description>
 		<Name>Expertise(Bard)</Name>
 		<Description>At 3rd level, choose two of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies. At 10th level, you can choose another two skill proficiencies to gain this benefit.</Description>
 		<AdditionalExpertiseChoices>2</AdditionalExpertiseChoices>
+		<IsHidden>true</IsHidden>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -1157,6 +1158,51 @@ against the number of bard spells you know.</Description>
 			<string>AnySpellOrCantrip</string>
 			<string>AnySpellOrCantrip</string>
 		</SpellsAddedByAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Magical Secrets</Name>
+		<Description>By 10th level, you have plundered magical knowledge
+from a wide spectrum of disciplines. Choose two spells
+from any class, including this one. A spell you choose
+must be of a level you can cast, as shown on the Bard
+table, or a cantrip.
+The chosen spells count as bard spells for you and are
+included in the number in the Spells Known column of
+the Bard table.
+You learn two additional spells from any class at 14th
+level and again at 18th level.</Description>
+		<IsHidden>true</IsHidden>
+		<SpellsAddedByAbility>
+			<string>AnySpellOrCantrip</string>
+			<string>AnySpellOrCantrip</string>
+		</SpellsAddedByAbility>
+	</PlayerAbility>
+
+	<PlayerAbility>
+		<Name>Peerless Skill</Name>
+		<Description>Starting at 14th level, when you make an ability check,
+you can expend one use of Bardic Inspiration. Roll a
+Bardic Inspiration die and add the number rolled to
+your ability check. You can choose to do so after you roil
+the die for the ability check, but before the DM tells you
+whether you succeed or fail.</Description>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Battle Magic</Name>
+		<Description>At 14th level, you have mastered the art of weaving
+spellcasting and weapon use into a single harmonious
+act. When you use your action to cast a bard spell, you
+can make one weapon attack as a bonus action.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Superior Inspiration</Name>
+		<Description>At 20th level, when you roll initiative and have no uses
+of Bardic Inspiration left, you regain one use.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
 	</PlayerAbility>
 
 <!-- Rogue class abilities -->

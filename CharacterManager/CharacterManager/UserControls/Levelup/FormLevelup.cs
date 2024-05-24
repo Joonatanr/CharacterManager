@@ -152,7 +152,6 @@ namespace CharacterManager.UserControls
             {
                 /* We set up the current abilities. */
                 /* TODO : Add a way to visually distinguish between current and new abilities. */
-
                 userControlGenericAbilitiesList1.setAttributeList(_myCharacter.CharacterAbilitiesObjectList);
 
                 /* Lets add all abilities for which there is only a single choice already to the list. */
@@ -198,7 +197,6 @@ namespace CharacterManager.UserControls
                     HiddenAbilities.Add(ability);
                 }
             }
-
 
             /* 1.  Handle the case of a new archetype being selected. */
             finalizeNewArchetypeSelection();
