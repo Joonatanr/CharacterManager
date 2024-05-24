@@ -1154,8 +1154,8 @@ spells count as bard spells for you but don’t count
 against the number of bard spells you know.</Description>
 		<IsHidden>true</IsHidden>
 		<SpellsAddedByAbility>
-			<string>AnySpell</string>
-			<string>Anyspell</string>
+			<string>AnySpellOrCantrip</string>
+			<string>AnySpellOrCantrip</string>
 		</SpellsAddedByAbility>
 	</PlayerAbility>
 

@@ -22,6 +22,7 @@ namespace CharacterManager.CharacterCreator
 
         private int NumberOfCantripsToChoose = 0;
         private int NumberOfSpellsToChoose = 0;
+        private int NumberOfSpellsOrCantripsToChoose = 0;
 
         private bool _isSpellCostDisplayed = false;
         private int _totalCopyCost = 0;
@@ -81,10 +82,13 @@ namespace CharacterManager.CharacterCreator
             }
         }
 
-        public void setSpellChoices(List<PlayerSpell> spells, int numberOfCantripsToChoose, int numberOfSpellsToChoose)
+        public void setSpellChoices(List<PlayerSpell> spells, int numberOfCantripsToChoose, int numberOfSpellsToChoose, int numberOfEitherSpellsOrCantripsToChoose)
         {
             NumberOfCantripsToChoose = numberOfCantripsToChoose;
             NumberOfSpellsToChoose = numberOfSpellsToChoose;
+
+            /* Note that this is a special case. */
+            NumberOfSpellsOrCantripsToChoose = numberOfEitherSpellsOrCantripsToChoose;
 
             _myCantripList = new List<PlayerSpell>();
             _mySpellList = new List<PlayerSpell>();
@@ -154,21 +158,28 @@ namespace CharacterManager.CharacterCreator
 
         private void updateNumberOfChoices()
         {
-            userControlSpellChoice1.MaximumAvailableChoices = NumberOfCantripsToChoose;
-            userControlSpellChoice2.MaximumAvailableChoices = NumberOfSpellsToChoose;
-
-            /* We lock the choices here if the number of available choices are 0. */
-            if (NumberOfCantripsToChoose == 0)
+            if (NumberOfSpellsOrCantripsToChoose > 0)
             {
-                userControlSpellChoice1.setSelectionsLocked(true);
+                /* Special case. */
+                userControlSpellChoice1.MaximumAvailableChoices = NumberOfSpellsOrCantripsToChoose;
+                userControlSpellChoice2.MaximumAvailableChoices = NumberOfSpellsOrCantripsToChoose;
             }
-
-            if (NumberOfSpellsToChoose == 0)
+            else 
             {
-                /* TODO */
-                userControlSpellChoice2.setSelectionsLocked(true);
-            }
+                userControlSpellChoice1.MaximumAvailableChoices = NumberOfCantripsToChoose;
+                userControlSpellChoice2.MaximumAvailableChoices = NumberOfSpellsToChoose;
 
+                /* We lock the choices here if the number of available choices are 0. */
+                if (NumberOfCantripsToChoose == 0)
+                {
+                    userControlSpellChoice1.setSelectionsLocked(true);
+                }
+
+                if (NumberOfSpellsToChoose == 0)
+                {
+                    userControlSpellChoice2.setSelectionsLocked(true);
+                }
+            }
         }
 
         private void updateVisualControlData()
@@ -258,11 +269,23 @@ namespace CharacterManager.CharacterCreator
 
         private void userControlSpellChoice1_SpellSelectionChanged(PlayerSpell Spell, bool isChosen)
         {
+            if (NumberOfSpellsOrCantripsToChoose > 0)
+            {
+                /* TODO : Special case. */
+               userControlSpellChoice2.MaximumAvailableChoices = userControlSpellChoice1.RemainingAvailableChoices;
+            }
+            
             updateSelectedSpellData();
         }
 
         private void userControlSpellChoice2_SpellSelectionChanged(PlayerSpell Spell, bool isChosen)
         {
+            if (NumberOfSpellsOrCantripsToChoose > 0)
+            {
+                /* TODO : Special case */
+                userControlSpellChoice1.MaximumAvailableChoices = userControlSpellChoice2.RemainingAvailableChoices;
+            }
+
             updateSelectedSpellData();
         }
 

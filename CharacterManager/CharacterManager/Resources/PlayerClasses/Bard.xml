@@ -572,27 +572,26 @@
     </PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel3>
   
-  <AvailableClassAbilitiesLevel4>
-  <!-- Ability score improvement -->
-  </AvailableClassAbilitiesLevel4>
+	<AvailableClassAbilitiesLevel4>
+		<!-- Ability score improvement -->
+	</AvailableClassAbilitiesLevel4>
   
-  <AvailableClassAbilitiesLevel5>
-	<PlayerClassAbilityChoice>
-      <AvailableChoices>
-        <string>Font Of Inspiration</string>
-      </AvailableChoices>
-    </PlayerClassAbilityChoice>
-  </AvailableClassAbilitiesLevel5>
+	<AvailableClassAbilitiesLevel5>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Font Of Inspiration</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel5>
   
-  <!--
-  <AvailableClassAbilitiesLevel6>
-	<PlayerClassAbilityChoice>
-      <AvailableChoices>
-        <string>Countercharm</string>
-      </AvailableChoices>
-    </PlayerClassAbilityChoice>
-  </AvailableClassAbilitiesLevel6>
-  -->
+	<AvailableClassAbilitiesLevel6>
+		<PlayerClassAbilityChoice>
+			<AvailableChoices>
+				<string>Countercharm</string>
+			</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel6>
+  	
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>College Of Lore</Name>
@@ -633,7 +632,6 @@ figures of authority.</Description>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel3>
 			
-			<!--
 			<AvailableAbilitiesAtLevel6>
 				<PlayerClassAbilityChoice>
 					<AvailableChoices>
@@ -641,7 +639,6 @@ figures of authority.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
-			 -->
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>

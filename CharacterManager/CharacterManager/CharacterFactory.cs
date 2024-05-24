@@ -52,6 +52,11 @@ namespace CharacterManager
             return res;
         }
 
+        public static List<PlayerSpell> getSpellsOfLevelAndLower(int level)
+        {
+            return SpellList.FindAll(sp => sp.SpellLevel <= level);
+        }
+
         public static List<String> getSubRaceList(String mainRaceName)
         {
             List<String> res = new List<string>();
@@ -779,6 +784,7 @@ namespace CharacterManager
             SpecialAttributeList.Add(new PortentAbility());
 
             SpecialAttributeList.Add(new JackOfAllTradesAbility());
+            SpecialAttributeList.Add(new FontOfInspiration());
 
             SpecialAttributeList.Add(new RogueExpertise());
             SpecialAttributeList.Add(new SneakAttack());

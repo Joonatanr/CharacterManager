@@ -193,7 +193,7 @@ namespace CharacterManager.UserControls
 
             /* Add spells */
             /* TODO : Here we have a special case, as we have no limit really to how many spells can be copied. The cost will only be relevant. */
-            myForm.setSpellChoices(SpellsAvailableForLearning, 0, -1);
+            myForm.setSpellChoices(SpellsAvailableForLearning, 0, -1, 0);
             myForm.IsSpellCostDisplayed = true;
 
             myForm.ShowDialog();

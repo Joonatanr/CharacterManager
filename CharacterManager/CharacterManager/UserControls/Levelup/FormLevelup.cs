@@ -185,6 +185,7 @@ namespace CharacterManager.UserControls
         private void finalizeCharacter()
         {
             PlayerClass _myClass = _myCharacter.GetPlayerClass();
+            List<PlayerSpell> spellsAddedByAbilities = new List<PlayerSpell>();
 
             /* Some abilities might just fire once and they will not be added to the abilities list. */
 
@@ -194,7 +195,9 @@ namespace CharacterManager.UserControls
 
             foreach(PlayerAbility selectedAbility in SelectedPlayerAbilities)
             {
-                selectedAbility.HandleAbilitySelected(_myCharacter);
+                List<PlayerSpell> spellsAddedByAbility;
+                selectedAbility.HandleAbilitySelected(_myCharacter, out spellsAddedByAbility);
+                spellsAddedByAbilities.AddRange(spellsAddedByAbility);
             }
 
             List<PlayerAbility> HiddenAbilities = new List<PlayerAbility>();
@@ -249,7 +252,6 @@ namespace CharacterManager.UserControls
             /* We reset the known spells here and start rebuilding this information. 
              Spells will be updated based on player selection as well as abilities that can provide new spells.
              */
-
             _myCharacter.KnownSpells = new List<string>();
             
             _myCharacter.setCharacterAbilitiesList(resultAbilities, true);
@@ -277,10 +279,15 @@ namespace CharacterManager.UserControls
             _myCharacter.WisAttribute =         (int)numericUpDownWIS.Value;
             _myCharacter.CharAttribute =        (int)numericUpDownCHA.Value;
 
-
             /* Update spell data. */
             if (_myCharacter.SpellCasting != null)
             {
+                /* Handle spells that have been added by abilities. */
+                foreach(PlayerSpell sp in spellsAddedByAbilities)
+                {
+                    _myCharacter.AddSpell(sp);
+                }
+
                 if (_myCharacter.SpellCasting.IsAllSpellsAvailable)
                 {
                     List<PlayerSpell> allSpells = _myCharacter.SpellCasting.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
@@ -306,26 +313,30 @@ namespace CharacterManager.UserControls
                     int numberOfSlots = slotsForThisLevel.getNumberOfSlotsPerLevel(SpellLevel);
                     _myCharacter.setSpellSlotData(SpellLevel, new CharacterSpellcastingStatus.SpellSlotData(numberOfSlots, numberOfSlots));
                 }
-
             }
 
+            updateProficiencyBonus();
+        }
+
+        private void updateProficiencyBonus()
+        {
             /* Update proficiency bonus... Pretty straightforward this one. */
             if (_myCharacter.Level == 5)
             {
                 _myCharacter.ProficiencyBonus = 3;
             }
 
-            if(_myCharacter.Level == 9)
+            if (_myCharacter.Level == 9)
             {
                 _myCharacter.ProficiencyBonus = 4;
             }
 
-            if(_myCharacter.Level == 13)
+            if (_myCharacter.Level == 13)
             {
                 _myCharacter.ProficiencyBonus = 5;
             }
 
-            if(_myCharacter.Level == 17)
+            if (_myCharacter.Level == 17)
             {
                 _myCharacter.ProficiencyBonus = 6;
             }
@@ -457,7 +468,7 @@ namespace CharacterManager.UserControls
                 selectedSpellcasting = _myCharacter.SpellCasting;
             }
 
-            /* TODO - First we do a naive implementation. Not taking into account that selected abilities might give the PC a spellcasting ability.  */
+
             if (selectedSpellcasting != null)
             {
                 if (selectedSpellcasting.IsAllSpellsAvailable)
@@ -472,13 +483,12 @@ namespace CharacterManager.UserControls
                 /* First lets get a list of spells that are already known. */
                 List<PlayerSpell> KnownSpells = _myCharacter.GetKnownSpells();
 
-                /* TODO : Consider abilities that might add new spells. */
                 myForm.setFixedSpells(KnownSpells, selectedSpellcasting.SpellsReplacedAtLevelup[_myCharacter.Level - 1]);
 
                 List<PlayerSpell> SpellsAvailableForLearning = selectedSpellcasting.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
 
                 /* Add spells */
-                myForm.setSpellChoices(SpellsAvailableForLearning, selectedSpellcasting.GetNewCantripsLearnedAtLevel(_myCharacter.Level), selectedSpellcasting.GetNewSpellsLearnedAtLevel(_myCharacter.Level));
+                myForm.setSpellChoices(SpellsAvailableForLearning, selectedSpellcasting.GetNewCantripsLearnedAtLevel(_myCharacter.Level), selectedSpellcasting.GetNewSpellsLearnedAtLevel(_myCharacter.Level), 0);
 
                 myForm.ShowDialog();
 

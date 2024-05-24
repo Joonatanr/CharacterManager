@@ -31,6 +31,7 @@ namespace CharacterManager.UserControls
             { 
                 _maximumAvailableChoices = value;
                 _remainingAvailableChoices = value;
+                this.Invalidate();
 
                 if (value == 0)
                 {

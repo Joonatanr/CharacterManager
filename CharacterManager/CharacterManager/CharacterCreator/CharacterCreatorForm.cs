@@ -1124,7 +1124,7 @@ namespace CharacterManager.CharacterCreator
                 List<PlayerSpell> AvailableSpells = SelectedClass.SpellCasting.GetAvailableSpells(0);
                 AvailableSpells.AddRange(SelectedClass.SpellCasting.GetAvailableSpells(1));
 
-                myChooseSpellsForm.setSpellChoices(AvailableSpells, NumberOfCantripsToChoose, NumberOfSpellsToChoose);
+                myChooseSpellsForm.setSpellChoices(AvailableSpells, NumberOfCantripsToChoose, NumberOfSpellsToChoose, 0);
 
                 currentClassForSpellcasting = SelectedClass;
                 isSelectedSpellsFormOpened = true;

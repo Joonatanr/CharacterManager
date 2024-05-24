@@ -1,4 +1,5 @@
 ﻿using CharacterManager.Items;
+using CharacterManager.Spells;
 using CharacterManager.UserControls;
 using System;
 using System.Collections.Generic;
@@ -433,8 +434,10 @@ So we get to an issue where upgrades to the description are added multiple times
         /// to the character, such as weapon, tool, language proficiencies, skills, expertise etc.
         /// </summary>
         /// <param name="c"></param>
-        public virtual void HandleAbilitySelected(PlayerCharacter c)
+        public virtual void HandleAbilitySelected(PlayerCharacter c, out List<PlayerSpell> spellsAddedByAbility)
         {
+            spellsAddedByAbility = new List<PlayerSpell>();
+            
             /* Can be overridden by abilities. */
             c.StrengthAttribute += StrIncrease;
             c.DexAttribute += DexIncrease;
@@ -445,26 +448,56 @@ So we get to an issue where upgrades to the description are added multiple times
 
 
             int numberOfAnySpells = 0;
+            int numberOfAnySpellOrCantrip = 0;
+
             /* Some abilities might allow us to select new spells */
             foreach(string spellString in SpellsAddedByAbility)
             {
                 /* TODO : Some abilities might give us new spells from another class spell list. That can also be handled here... */
-                if (spellString == "AnySpell")
+                if (spellString.ToLower() == "anyspell")
                 {
                     numberOfAnySpells++;
                 }
+
+                if (spellString.ToLower() == "anyspellorcantrip")
+                {
+                    numberOfAnySpellOrCantrip++;
+                }
             }
 
-            if (numberOfAnySpells != 0)
+            if (numberOfAnySpells > 0 || numberOfAnySpellOrCantrip > 0)
             {
-                /* TODO : Placeholder. */
-                MessageBox.Show("You can choose " + numberOfAnySpells + " spells from any class. NOT YET IMPLEMENTED!!!");
+
+                if (numberOfAnySpells > 0)
+                {
+                    MessageBox.Show("You can choose " + numberOfAnySpells + " spells from any class.");
+                }
+
+                if (numberOfAnySpellOrCantrip > 0)
+                {
+                    MessageBox.Show("You can choose " + numberOfAnySpellOrCantrip + " spells or cantrips from any class.");
+                }
+
+                CharacterCreator.FormChooseSpells myForm = new CharacterCreator.FormChooseSpells();
+
+                myForm.setFixedSpells(c.GetKnownSpells(), 0);
+
+                /* So in this case the only restriction for learning spells is their level. */
+                List<PlayerSpell> SpellsAvailableForLearning = CharacterFactory.getSpellsOfLevelAndLower(c.SpellCasting.GetMaximumSpellSlotLevelAtLevel(c.Level));
+                myForm.setSpellChoices(SpellsAvailableForLearning, 0, numberOfAnySpells, numberOfAnySpellOrCantrip);
+                if (myForm.ShowDialog() == DialogResult.OK)
+                {
+                    spellsAddedByAbility.AddRange(myForm.getChosenPlayerSpells());                    
+                }
+                else
+                {
+                    /* TODO : What do we do if the selection is cancelled??? Should be possible perhaps to go back and modify all the choices? */
+                }
             }
         }
 
         public virtual void HandleInfoButtonClicked(object sender, EventArgs e)
         {
-            //MessageBox.Show(this.Description);
             AbilityCard card = new AbilityCard();
             card.setAbility(this);
             card.RollReporter = this.RollReporter;

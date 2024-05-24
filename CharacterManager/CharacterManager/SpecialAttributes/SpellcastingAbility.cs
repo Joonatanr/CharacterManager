@@ -66,15 +66,7 @@ namespace CharacterManager.SpecialAttributes
         {
             List<PlayerSpell> res = new List<PlayerSpell>();
 
-            int MaxLevelSpellSlot = 0;
-            SpellSlots_T slots = SpellslotPerLevel[playerLevel - 1];
-            for (int x = 0; x <= 9; x++)
-            {
-                if (slots.getNumberOfSlotsPerLevel(x) > 0)
-                {
-                    MaxLevelSpellSlot = Math.Max(MaxLevelSpellSlot, x);
-                }
-            }
+            int MaxLevelSpellSlot = GetMaximumSpellSlotLevelAtLevel(playerLevel);
 
             for (int x = 0; x <= MaxLevelSpellSlot; x++)
             {
@@ -162,6 +154,22 @@ namespace CharacterManager.SpecialAttributes
             }
 
             return NewSpellsLearnedAtLevelup[PlayerLevel - 1];
+        }
+
+        public int GetMaximumSpellSlotLevelAtLevel(int playerLevel)
+        {
+            int MaxLevelSpellSlot = 0;
+            SpellSlots_T slots = SpellslotPerLevel[playerLevel - 1];
+
+            for (int x = 0; x <= 9; x++)
+            {
+                if (slots.getNumberOfSlotsPerLevel(x) > 0)
+                {
+                    MaxLevelSpellSlot = Math.Max(MaxLevelSpellSlot, x);
+                }
+            }
+
+            return MaxLevelSpellSlot;
         }
 
         public int GetNewCantripsLearnedAtLevel(int PlayerLevel)

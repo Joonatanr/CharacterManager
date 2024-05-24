@@ -294,8 +294,10 @@ namespace CharacterManager
             return true;
         }
 
-        public override void HandleAbilitySelected(PlayerCharacter c)
+        public override void HandleAbilitySelected(PlayerCharacter c, out List<PlayerSpell> chosenSpells)
         {
+            chosenSpells = new List<PlayerSpell>();
+
             if (chosenAbility != null)
             {
                 c.ToolProficiencies.Add(chosenAbility);
