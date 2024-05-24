@@ -207,6 +207,8 @@ namespace CharacterManager.UserControls
 
         public Boolean IsSlotsVisible { get; set; } = false;
 
+        public DieRollTextBox.RollResultHandler RollReporter;
+
         public UserControlGenericAbilitiesList() : base()
         {
             InitializeComponent();
@@ -230,10 +232,10 @@ namespace CharacterManager.UserControls
                 this.Controls.Remove(c);
             }
 
-
             int y = 1;
             foreach (PlayerAbility attrib in myItemList)
             {
+                attrib.RollReporter = this.RollReporter;
                 AttributeControlData cData = new AttributeControlData(attrib);
 
                 InfoButton myBtn = new InfoButton("InfoButton" + buttonNumber.ToString(), new EventHandler(attrib.HandleInfoButtonClicked));

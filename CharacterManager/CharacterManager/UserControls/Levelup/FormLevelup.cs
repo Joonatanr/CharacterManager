@@ -170,7 +170,6 @@ namespace CharacterManager.UserControls
             else
             {
                 /* TODO : Placeholder. */
-                //groupBoxAbilities.Visible = false;
                 buttonSelectNewAbilities.Enabled = false;
             }
         }

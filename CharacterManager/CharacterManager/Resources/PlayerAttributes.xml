@@ -1130,6 +1130,34 @@ but before knowing whether it hits or misses.</Description>
 your expended uses of Bardic Inspiration when you
 finish a short or long rest.</Description>
 	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Countercharm</Name>
+		<Description>At 6th level, you gain the ability to use musical notes or
+words of power to disrupt mind-influencing effects. As
+an action, you can start a performance that lasts until
+the end of your next turn. During that time, you and any
+friendly creatures within 30 feet o f you have advantage
+on saving throws against being frightened or charmed.
+A creature must be able to hear you to gain this benefit.
+The performance ends early if you are incapacitated or
+silenced or if you voluntarily end it (no action required).</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Additional Magical Secrets</Name>
+		<Description>At 6th level, you learn two spells of your choice from any
+class. A spell you choose must be of a level you can cast,
+as shown on the Bard table, or a cantrip. The chosen
+spells count as bard spells for you but don’t count
+against the number of bard spells you know.</Description>
+		<IsHidden>true</IsHidden>
+		<SpellsAddedByAbility>
+			<string>AnySpell</string>
+			<string>Anyspell</string>
+		</SpellsAddedByAbility>
+	</PlayerAbility>
 
 <!-- Rogue class abilities -->
 

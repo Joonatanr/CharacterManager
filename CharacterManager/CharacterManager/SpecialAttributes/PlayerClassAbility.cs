@@ -15,8 +15,6 @@ using static CharacterManager.CharacterCreator.UserControlClassFeature;
 
 namespace CharacterManager
 {
-    /* Soo this is pretty experimental. We are going to be trying this out. */
-
     /******* Fighter class abilities. ********/
 
     /* Fighting Styles */

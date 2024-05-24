@@ -13,7 +13,8 @@ namespace CharacterManager.UserControls
     public partial class AbilityCard : Form
     {
         private PlayerAbility _myAbility = null;
-        
+        public DieRollTextBox.RollResultHandler RollReporter = null;
+
         public AbilityCard()
         {
             InitializeComponent();
@@ -97,6 +98,12 @@ namespace CharacterManager.UserControls
             string rollResult;
             dieRollTextBox1.Roll(out rollResult);
             richTextBoxDieRollResult.AppendText(rollResult + Environment.NewLine);
+
+            if (RollReporter != null)
+            {
+                string msg = _myAbility.DisplayedName + " roll : " + rollResult;
+                RollReporter(msg + Environment.NewLine, Color.Black, false, HorizontalAlignment.Left);
+            }
         }
     }
 }

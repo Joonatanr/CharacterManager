@@ -494,6 +494,11 @@ namespace CharacterManager
                     logError("Failed to open file : " + ex.Message);
                 }
             }
+
+            if (Races == null || Races.Count == 0)
+            {
+                throw new Exception("Failed to parse races");
+            }
         }
 
         private static void parseClassesFromXml(String filefolder)
@@ -512,12 +517,6 @@ namespace CharacterManager
                     curr = ((PlayerClass)reader.Deserialize(file));
                     Classes.Add(curr);
 
-                    /* Only for debug... */
-                    
-                    //StreamWriter sw = new System.IO.StreamWriter(filepath + "OUT");
-                    //reader.Serialize(sw, curr);
-                    //sw.Flush();
-                    //sw.Close();
                     file.Close();
                 }
                 catch (Exception ex)
@@ -526,6 +525,10 @@ namespace CharacterManager
                 }
             }
 
+            if (Classes == null || Classes.Count == 0)
+            {
+                throw new Exception("Failed to parse player classes from XML");
+            }
         }
 
         private static void parseAttributesFromXml(String mainFilepath, string featsFilePath)
@@ -574,6 +577,11 @@ namespace CharacterManager
                     AttributesList[i]= specialAttribute; //We basically replace the original prototype with a SpecialAttribute object.
                 }
             }
+
+            if (AttributesList == null || AttributesList.Count == 0)
+            {
+                throw new Exception("Failed to parse Player Attributes list");
+            }
         }
 
         private static void parseItemsFromXml(string filepath)
@@ -591,6 +599,11 @@ namespace CharacterManager
             {
                 logError("Failed to open file : " + ex.Message);
             }
+
+            if (GenericItemList == null || GenericItemList.Count == 0)
+            {
+                throw new Exception("Failed to parse item list from xml");
+            }
         }
 
         private static void parseArmorFromXml(String filepath)
@@ -607,6 +620,11 @@ namespace CharacterManager
             {
                 logError("Failed to open file : " + ex.Message);
             }
+
+            if (ArmorList == null || ArmorList.Count == 0)
+            {
+                throw new Exception("Failed to parse armor list from xml");
+            }
         }
 
         private static void parseWeaponsFromXml(String filepath)
@@ -622,6 +640,11 @@ namespace CharacterManager
             catch (Exception ex)
             {
                 logError("Failed to open file : " + ex.Message);
+            }
+
+            if (WeaponList == null || WeaponList.Count == 0)
+            {
+                throw new Exception("Failed to parse weapon list from XML");
             }
         }
 
@@ -718,6 +741,11 @@ namespace CharacterManager
             catch (Exception ex)
             {
                 logError("Failed to open file : " + ex.Message);
+            }
+
+            if (CharacterBackGroundList == null || CharacterBackGroundList.Count == 0)
+            {
+                throw new Exception("Failed to parse character background list");
             }
         }
 

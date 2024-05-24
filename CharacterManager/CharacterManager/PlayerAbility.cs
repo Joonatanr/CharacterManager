@@ -149,6 +149,9 @@ namespace CharacterManager
         public event PlayerAbilityUsedListener AbilityUsed;
 
         [XmlIgnore]
+        public DieRollTextBox.RollResultHandler RollReporter = null;
+
+        [XmlIgnore]
         protected PlayerCharacter _connectedCharacter;
 
         public PlayerAbility()
@@ -439,6 +442,24 @@ So we get to an issue where upgrades to the description are added multiple times
             c.CharAttribute += ChaIncrease;
             c.IntAttribute += IntIncrease;
             c.WisAttribute += WisIncrease;
+
+
+            int numberOfAnySpells = 0;
+            /* Some abilities might allow us to select new spells */
+            foreach(string spellString in SpellsAddedByAbility)
+            {
+                /* TODO : Some abilities might give us new spells from another class spell list. That can also be handled here... */
+                if (spellString == "AnySpell")
+                {
+                    numberOfAnySpells++;
+                }
+            }
+
+            if (numberOfAnySpells != 0)
+            {
+                /* TODO : Placeholder. */
+                MessageBox.Show("You can choose " + numberOfAnySpells + " spells from any class. NOT YET IMPLEMENTED!!!");
+            }
         }
 
         public virtual void HandleInfoButtonClicked(object sender, EventArgs e)
@@ -446,6 +467,7 @@ So we get to an issue where upgrades to the description are added multiple times
             //MessageBox.Show(this.Description);
             AbilityCard card = new AbilityCard();
             card.setAbility(this);
+            card.RollReporter = this.RollReporter;
             card.Show();
         }
 

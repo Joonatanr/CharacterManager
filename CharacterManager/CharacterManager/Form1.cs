@@ -229,6 +229,7 @@ namespace CharacterManager
 
         private void UpdateCharacterAbilities()
         {
+            userControlGenericAbilitiesList1.RollReporter = new DieRollTextBox.RollResultHandler(handleRollReport);
             userControlGenericAbilitiesList1.setAttributeList(activeCharacter.CharacterAbilitiesObjectList);
         }
 

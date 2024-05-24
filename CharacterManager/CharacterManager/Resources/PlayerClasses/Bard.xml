@@ -584,6 +584,15 @@
     </PlayerClassAbilityChoice>
   </AvailableClassAbilitiesLevel5>
   
+  <!--
+  <AvailableClassAbilitiesLevel6>
+	<PlayerClassAbilityChoice>
+      <AvailableChoices>
+        <string>Countercharm</string>
+      </AvailableChoices>
+    </PlayerClassAbilityChoice>
+  </AvailableClassAbilitiesLevel6>
+  -->
 	<ArcheTypes>
 		<PlayerClassArchetype>
 			<Name>College Of Lore</Name>
@@ -624,9 +633,15 @@ figures of authority.</Description>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel3>
 			
+			<!--
 			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Additional Magical Secrets</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
-			
+			 -->
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
