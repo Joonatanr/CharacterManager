@@ -939,5 +939,66 @@ namespace CharacterManager
             }
         }
     }
+
+
+    /*********************************************************************************************/
+
+    /******* Cleric class abilities. ********/
+    public class BlessingsOfKnowledge : SpecialAttribute
+    {
+        private string chosenLanguage1 = null;
+        private string chosenLanguage2 = null;
+
+        public BlessingsOfKnowledge()
+        {
+            this.Name = "Blessings Of Knowledge";
+        }
+
+        public override bool ExtraChoiceOptions(out string btnText, out UserControlClassFeature.ExtraChoiceEventHandler clickHandler)
+        {
+            btnText = "Choose Options";
+            clickHandler = new ExtraChoiceEventHandler(handleKnowledgeChoices);
+            return true;
+        }
+
+        public override void HandleAbilitySelected(PlayerCharacter c, out List<PlayerSpell> chosenSpells)
+        {
+            /* Not used here. */
+            chosenSpells = new List<PlayerSpell>();
+
+            if (chosenLanguage1 != null)
+            {
+                c.Languages.Add(chosenLanguage1);
+            }
+
+            if (chosenLanguage2 != null)
+            {
+                c.Languages.Add(chosenLanguage2);
+            }
+        }
+
+        private void handleKnowledgeChoices(PlayerCharacter Character)
+        {
+            /* Basically we can add 2 languages of the player's choice as well as
+             choose 2 proficiencies from Arcana, History, Nature, or Religion */
+            GenericMultipleListChoiceForm myForm = new GenericMultipleListChoiceForm(2);
+            myForm.ChoiceDescriptionText = "Choose 2 extra languages:";
+
+            /* Lets do languages first. */
+            List<string> allLanguages = CharacterFactory.getAllLanguageNames();
+
+            /* Now pass these on... */
+            myForm.setChoiceList(allLanguages, 0);
+            myForm.setChoiceList(allLanguages, 1);
+
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                chosenLanguage1 = myForm.getSelectedItem(0);
+                chosenLanguage2 = myForm.getSelectedItem(1);
+            }
+        }
+
+    }
+
 }
 

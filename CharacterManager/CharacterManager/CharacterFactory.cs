@@ -268,6 +268,17 @@ namespace CharacterManager
             return LanguageList;
         }
 
+        public static List<string> getAllLanguageNames()
+        {
+            List<string> strings = new List<string>();
+            foreach(Language lang in LanguageList)
+            {
+                strings.Add(lang.LanguageName);
+            }
+
+            return strings;
+        }
+
         public static List<CombatManeuver> getAllCombatManeuvers()
         {
             return CombatManeuverList;
@@ -792,6 +803,8 @@ namespace CharacterManager
 
             SpecialAttributeList.Add(new DivineSmite());
             SpecialAttributeList.Add(new ImprovedDivineSmite());
+
+            SpecialAttributeList.Add(new BlessingsOfKnowledge());
         }
 
         private static void logError(String err)
