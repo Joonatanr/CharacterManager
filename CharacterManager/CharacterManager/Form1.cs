@@ -176,6 +176,7 @@ namespace CharacterManager
                 //14. Update Magic and Spellcasting.
                 if (activeCharacter.IsCharacterSpellCasting())
                 {
+                    activeCharacter.UpdateKnownSpellData();                    
                     userControlMagicHandler1.Visible = true;
                     this.activeCharacter.UpdateSpellModifiers();
                     userControlMagicHandler1.setConnectedCharacter(this.activeCharacter);

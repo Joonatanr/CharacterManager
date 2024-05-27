@@ -1039,6 +1039,23 @@ namespace CharacterManager
             return BonusValues.SpellExtraDiceModifiers;
         }
 
+        public void UpdateKnownSpellData()
+        {
+            /* Lets update any known spells here for classes like the cleric and the paladin, where the whole spell list is available. */
+            if (this.SpellCasting != null)
+            {
+                if (this.SpellCasting.IsAllSpellsAvailable)
+                {
+                    List<PlayerSpell> allSpells = this.SpellCasting.GetSpellsThatCanBeLearnedAtLevel(this.Level);
+                    foreach(PlayerSpell spell in allSpells) 
+                    {
+                        this.AddSpell(spell);
+                    }
+                }
+            }
+        }
+
+
         /*************************** Private functions **************************/
         private List<BonusValueModifier> getHitBonuses(PlayerWeapon w)
         {
