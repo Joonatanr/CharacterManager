@@ -551,5 +551,22 @@ So we get to an issue where upgrades to the description are added multiple times
         {
             return "Ability Data";
         }
+
+        /* This is to handle a case, where an ability gives some kind of a choice between languages. By default we return an empty list here. */
+        public virtual List<string> GetExtraChosenLanguagesGivenByAbility()
+        {
+            return new List<string>();
+        }
+
+        public virtual List<string> GetExtraChosenSkillProficienciesGivenByAbility()
+        {
+            return new List<string>();
+        }
+
+        public virtual List<string> GetExtraChosenSkillExpertiseGivenByAbility()
+        {
+            return new List<string>();
+        }
+
     }
 }

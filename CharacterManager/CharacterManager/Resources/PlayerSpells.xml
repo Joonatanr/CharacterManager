@@ -14976,7 +14976,7 @@ impossible there.</Description>
     <Name>Silence</Name>
     <SpellName>Silence</SpellName>
     <School>Illusion</School>
-    <SpellLevel>0</SpellLevel>
+    <SpellLevel>2</SpellLevel>
     <SpellRange>120</SpellRange>
     <SpellDuration>100</SpellDuration>
     <IsUntilDispelled>false</IsUntilDispelled>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CharacterManager.CharacterCreator;
@@ -948,6 +949,8 @@ namespace CharacterManager
     {
         private string chosenLanguage1 = null;
         private string chosenLanguage2 = null;
+        private string chosenExpertise1 = null;
+        private string chosenExpertise2 = null;
 
         public BlessingsOfKnowledge()
         {
@@ -977,6 +980,46 @@ namespace CharacterManager
             }
         }
 
+        /* Here we need extra handling, because the ability can be selected directly on the Character Creator Form. */
+        public override List<string> GetExtraChosenLanguagesGivenByAbility()
+        {
+            List<string > result = new List<string>();
+            
+            if (chosenLanguage1 != null)
+            {
+                result.Add(chosenLanguage1);
+            }
+
+            if(chosenLanguage2 != null) 
+            {
+                result.Add(chosenLanguage2);
+            } 
+
+            return result;
+        }
+
+        public override List<string> GetExtraChosenSkillProficienciesGivenByAbility()
+        {
+            List<string> result = new List<string>();
+
+            if (chosenExpertise1 != null)
+            {
+                result.Add(chosenExpertise1);
+            }
+
+            if (chosenExpertise2 != null)
+            {
+                result.Add(chosenExpertise2);
+            }
+
+            return result;
+        }
+
+        public override List<string> GetExtraChosenSkillExpertiseGivenByAbility()
+        {
+            return GetExtraChosenSkillProficienciesGivenByAbility();
+        }
+
         private void handleKnowledgeChoices(PlayerCharacter Character)
         {
             /* Basically we can add 2 languages of the player's choice as well as
@@ -995,6 +1038,19 @@ namespace CharacterManager
             {
                 chosenLanguage1 = myForm.getSelectedItem(0);
                 chosenLanguage2 = myForm.getSelectedItem(1);
+            }
+
+            myForm = new GenericMultipleListChoiceForm(2);
+            myForm.ChoiceDescriptionText = "Choose 2 doubled skill profs. :";
+            List<string> myProfOptions = new List<string> { "Arcana", "History", "Nature", "Religion" };
+
+            myForm.setChoiceList(myProfOptions, 0);
+            myForm.setChoiceList(myProfOptions, 1);
+
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                chosenExpertise1 = myForm.getSelectedItem(0);
+                chosenExpertise2 = myForm.getSelectedItem(1);
             }
         }
 

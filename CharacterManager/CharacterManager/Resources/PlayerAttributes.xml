@@ -2444,7 +2444,8 @@ you finish a long rest.</Description>
 You also become proficient in your choice of two of the
 following skills: Arcana, History, Nature, or Religion.
 Your proficiency bonus is doubled for any ability check
-you make that uses either of those skills. TODO : Implement this very specific ability.</Description>
+you make that uses either of those skills.</Description>
+		<IsHidden>true</IsHidden>
 	</PlayerAbility>
 	
 	<PlayerAbility>

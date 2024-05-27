@@ -27,7 +27,7 @@ namespace CharacterManager.CharacterCreator
         private int currentExtraAttributes = 0;
         private int maxExtraAttributes = 0;
 
-        private List<PlayerAbility> myAttributeList = new List<PlayerAbility>();
+        private List<PlayerAbility> myAbilitiesList = new List<PlayerAbility>();
         private List<Items.PlayerItem> myItemList = new List<Items.PlayerItem>();
 
 
@@ -139,8 +139,8 @@ namespace CharacterManager.CharacterCreator
             CreatedCharacter.MaxHitPoints = currentMaxHp;
             CreatedCharacter.CurrentHitPoints = currentMaxHp;
 
-            //8. Set Player attributes.
-            CreatedCharacter.setCharacterAbilitiesList(myAttributeList, true);
+            //8. Set Player abilities.
+            CreatedCharacter.setCharacterAbilitiesList(myAbilitiesList, true);
 
             //9. Set Player alignment.
             CreatedCharacter.Alignment = alignmentChoice1.getSelectedAlignment();
@@ -500,7 +500,7 @@ namespace CharacterManager.CharacterCreator
             updateSavingThrowFields();
 
             //6. Update skill proficiency values.
-            updateSkillProficiencyFields();
+            updateSkillProficiencyModifiers();
 
             //6.1 Update Known Languages.
             updateKnownLanguages();
@@ -558,7 +558,7 @@ namespace CharacterManager.CharacterCreator
         private void updateGenericAbilitiesField()
         {
             /*1. Add main race abilities. */
-            myAttributeList.Clear();
+            myAbilitiesList.Clear();
 
             if (SelectedMainRace == null)
             {
@@ -567,7 +567,7 @@ namespace CharacterManager.CharacterCreator
 
             foreach (PlayerAbility attrib in SelectedMainRace.getPlayerAttributes())
             {
-                myAttributeList.Add(attrib);
+                myAbilitiesList.Add(attrib);
             }
 
             /* 2. Add subrace abilities. */
@@ -575,7 +575,7 @@ namespace CharacterManager.CharacterCreator
             {
                 foreach (PlayerAbility attrib in SelectedSubRace.getPlayerAttributes())
                 {
-                    myAttributeList.Add(attrib);
+                    myAbilitiesList.Add(attrib);
                 }
             }
 
@@ -585,20 +585,19 @@ namespace CharacterManager.CharacterCreator
             {
                 if (myChooseClassFeaturesForm != null)
                 {
-                    /* TODO */
                     List<PlayerAbility> classAbilities = myChooseClassFeaturesForm.getAllSelectedAbilities();
                     foreach(PlayerAbility ability in classAbilities)
                     {
-                        myAttributeList.Add(ability);
+                        myAbilitiesList.Add(ability);
                     }
                 }
             }
 
-            userControlGenericAttributeList1.setAttributeList(myAttributeList);
+            userControlGenericAttributeList1.setAttributeList(myAbilitiesList);
         }
 
-        /* TODO : Rename this to prevent confusion. */
-        private void updateSkillProficiencyFields()
+
+        private void updateSkillProficiencyModifiers()
         {
             userControlSkillProficiencies1.updateSkillProficiencyFields(getCurrentAttributeBonus("STR"),
                                                      getCurrentAttributeBonus("DEX"),
@@ -627,7 +626,7 @@ namespace CharacterManager.CharacterCreator
         {
             List<string> knownLanguages = new List<string>();
 
-            /* First lets get the languages given to us by our race. */
+            /* 1. Get the languages given to us by our race. */
             if(SelectedMainRace != null)
             {
                 knownLanguages.AddRange(SelectedMainRace.KnownLanguages);
@@ -646,10 +645,12 @@ namespace CharacterManager.CharacterCreator
                 }
             }
             
-            /* Now we might have selected some more languages from our background. */
+            /* 2. We add languages selected from our background. */
             if (myChooseBackGroundForm != null)
             {
-                /* TODO : It should not be possible to choose duplicate languages on the background form... */
+                /* TODO : It should not be possible to choose duplicate languages on the background form... 
+                   Still this might require implementing some kind of global scope for selecting languages.
+                 */
                 List<Language> bgLanguages = myChooseBackGroundForm.getAllSelectedLanguages();
                 
                 foreach(Language bgLanguage in bgLanguages)
@@ -665,6 +666,17 @@ namespace CharacterManager.CharacterCreator
             {
                 knownLanguages.Remove("ChooseAny");
             }
+
+            /* 3. Get any languages provided by our abilites. */
+            List<PlayerAbility> classAbilities = myChooseClassFeaturesForm.getAllSelectedAbilities();
+            
+            foreach (PlayerAbility ability in classAbilities)
+            {
+                knownLanguages.AddRange(ability.GetExtraChosenLanguagesGivenByAbility());
+            }
+
+            /* 4. Remove any duplicates. */
+            knownLanguages = knownLanguages.Distinct().ToList();
 
             userControlKnownLanguages.setProficiencylist(knownLanguages);
         }
@@ -849,7 +861,36 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
-            //4. Set up choosing new skill proficiencies.
+            //4. Now get the skill proficiencies and expertise from class abilities.
+            List<PlayerAbility> classAbilities = myChooseClassFeaturesForm.getAllSelectedAbilities();
+            List<string> skillsProfsFromAbilites = new List<string>();
+            List<string> skillExpertiseFromAbilities = new List<string>();
+
+            foreach (PlayerAbility ability in classAbilities)
+            {
+                skillsProfsFromAbilites.AddRange(ability.GetExtraChosenSkillProficienciesGivenByAbility());
+                skillExpertiseFromAbilities.AddRange(ability.GetExtraChosenSkillExpertiseGivenByAbility());
+            }
+
+            /* 4.1 Skill proficiencies from abilities. */
+            foreach(string skillProf in skillsProfsFromAbilites)
+            {
+                if (!userControlSkillProficiencies1.setProficientAtSkill(skillProf))
+                {
+                    MessageBox.Show("Incorrect skill proficiency : " + skillProf + ", failed to parse");
+                }
+            }
+
+            /* 4.2 Skill Expertise from abilities. */
+            foreach(string skillExpertise in skillExpertiseFromAbilities)
+            {
+                if (!userControlSkillProficiencies1.setExpertiseAtSkill(skillExpertise))
+                {
+                    MessageBox.Show("Incorrect skill expertise : " + skillExpertise + ", failed to parse");
+                }
+            }
+
+            //5. Set up choosing new skill proficiencies.
             if (SelectedClass != null)
             {
                 int numberOfSkillsToChoose = SelectedClass.NumberOfSkillsToChoose;
@@ -1049,7 +1090,6 @@ namespace CharacterManager.CharacterCreator
 
         private void buttonChooseClassFeatures_Click(object sender, EventArgs e)
         {
-            /* TODO */
             if (SelectedClass == null)
             {
                 MessageBox.Show("No class selected");
@@ -1062,6 +1102,8 @@ namespace CharacterManager.CharacterCreator
             {
                 updateGenericAbilitiesField();
                 updateKnownToolProficiencies();
+                updateKnownLanguages();
+                updateSkillProficiencies();
             }
         }
 

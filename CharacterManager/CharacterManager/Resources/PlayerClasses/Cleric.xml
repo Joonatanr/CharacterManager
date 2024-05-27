@@ -442,6 +442,13 @@ chapter 11 for the cleric spell list..</Description>
 				-->
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
+		<PlayerClassAbilityChoice>
+			<Description>Cleric Spellcasting</Description>
+				<ClassAbilityName>SpellCasting</ClassAbilityName>
+					<AvailableChoices>
+						<string>SpellCasting</string>
+					</AvailableChoices>
+		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel1>
 	
 	
