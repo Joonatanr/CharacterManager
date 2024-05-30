@@ -68,6 +68,7 @@ namespace CharacterManager
         public int AdditionalExpertiseChoices { get; set; } = 0;
 
         public List<String> AdditionalArmorProficiencies = new List<string>();
+        public List<String> AdditionalWeaponProficiencies = new List<string>();
 
         /* Some abilities might increase base attributes. */
         public int StrIncrease = 0;
@@ -568,5 +569,20 @@ So we get to an issue where upgrades to the description are added multiple times
             return new List<string>();
         }
 
+        public virtual List<string> GetExtraChosenArmorProficienciesGivenByAbility()
+        {
+            List<string> res = new List<string>();
+            res.AddRange(AdditionalArmorProficiencies);
+            
+            return res;
+        }
+
+        public virtual List<string> GetExtraChosenWeaponProficienciesGivenByAbility()
+        {
+            List<string> res = new List<string>();
+            res.AddRange(AdditionalWeaponProficiencies);
+
+            return res;
+        }
     }
 }

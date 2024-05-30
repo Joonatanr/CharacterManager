@@ -270,6 +270,7 @@ namespace CharacterManager.CharacterCreator
         {
             List<String> res = new List<String>();
 
+            /* 1. Get all Armor proficiencies from the main race */
             if (SelectedMainRace != null)
             {
                 foreach (String aProf in SelectedMainRace.ArmorProficiencies)
@@ -278,6 +279,7 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
+            /* 2. Get all the Armor Proficiencies from the subrace */
             if (SelectedSubRace != null)
             {
                 foreach (String aProf in SelectedSubRace.ArmorProficiencies)
@@ -286,6 +288,7 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
+            /* 3. Get all the Armor proficiencies from the selected class. */
             if (SelectedClass != null)
             {
                 foreach (String aProf in SelectedClass.ArmorProficiencies)
@@ -297,6 +300,17 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
+            /* 4. Get all the armor proficiencies from selected abilities. */
+            List<PlayerAbility> classAbilities = myChooseClassFeaturesForm.getAllSelectedAbilities();
+
+            foreach (PlayerAbility ability in classAbilities)
+            {
+                res.AddRange(ability.GetExtraChosenArmorProficienciesGivenByAbility());
+            }
+
+            /* 5. Remove duplicates */
+            res = res.Distinct().ToList();
+
             return res;
         }
 
@@ -304,6 +318,7 @@ namespace CharacterManager.CharacterCreator
         {
             List<String> res = new List<String>();
 
+            /* 1. Get all weapon proficiencies from the Main Race */
             if (SelectedMainRace != null) 
             { 
                 foreach (String wProf in SelectedMainRace.WeaponProficiencies)
@@ -312,6 +327,7 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
+            /* 2. Get all weapon proficiencies from the Sub Race */
             if (SelectedSubRace != null)
             {
                 foreach (String wProf in SelectedSubRace.WeaponProficiencies)
@@ -320,6 +336,7 @@ namespace CharacterManager.CharacterCreator
                 }
             }
 
+            /* 3. Get all weapon proficiencies from the selected class. */
             if (SelectedClass != null)
             {
                 foreach(String wProf in SelectedClass.WeaponProficiencies)
@@ -330,6 +347,17 @@ namespace CharacterManager.CharacterCreator
                     };
                 }
             }
+
+            /* 4. Get all weapon proficiencies from selected abilities */
+            List<PlayerAbility> classAbilities = myChooseClassFeaturesForm.getAllSelectedAbilities();
+
+            foreach (PlayerAbility ability in classAbilities)
+            {
+                res.AddRange(ability.GetExtraChosenWeaponProficienciesGivenByAbility());
+            }
+
+            /* 5. Remove duplicates */
+            res = res.Distinct().ToList();
 
             return res;
         }
@@ -462,32 +490,7 @@ namespace CharacterManager.CharacterCreator
             }
 
             //2. Lets next try showing weapon and armor proficiencies...
-            //TODO : This is just a test, we really should make the proficiency and attribute displays into a separate class.
-            richTextBoxProficiencyTest.Clear();
-            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Bold);
-            richTextBoxProficiencyTest.AppendText("Weapon Proficiencies:\n");
-            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Regular);
-
-            List<String> wProfList = getAllWeaponProficiencies();
-
-            if (wProfList != null)
-            {
-                foreach (String wProf in wProfList)
-                {
-                    richTextBoxProficiencyTest.AppendText(wProf + "\n");
-                }
-            }
-
-
-            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Bold);
-            richTextBoxProficiencyTest.AppendText("\nArmorProficiencies:\n");
-            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Regular);
-
-            List<String> aProfList = getAllArmorProficiencies();
-            foreach (String aProf in aProfList)
-            {
-                richTextBoxProficiencyTest.AppendText(aProf + "\n");
-            }
+            UpdateWeaponAndArmorProficiencies();
 
             //3. Update the speed of the character.
             textBoxSpeed.Text = getSpeedValue().ToString() + " ft";
@@ -527,6 +530,36 @@ namespace CharacterManager.CharacterCreator
                 
                 /* These might have been changed by special attributes. */
                 UpdateHitPoints(false);
+            }
+        }
+
+
+        private void UpdateWeaponAndArmorProficiencies()
+        {
+            richTextBoxProficiencyTest.Clear();
+            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Bold);
+            richTextBoxProficiencyTest.AppendText("Weapon Proficiencies:\n");
+            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Regular);
+
+            List<String> wProfList = getAllWeaponProficiencies();
+
+            if (wProfList != null)
+            {
+                foreach (String wProf in wProfList)
+                {
+                    richTextBoxProficiencyTest.AppendText(wProf + "\n");
+                }
+            }
+
+
+            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Bold);
+            richTextBoxProficiencyTest.AppendText("\nArmorProficiencies:\n");
+            richTextBoxProficiencyTest.SelectionFont = new Font(richTextBoxProficiencyTest.Font, FontStyle.Regular);
+
+            List<String> aProfList = getAllArmorProficiencies();
+            foreach (String aProf in aProfList)
+            {
+                richTextBoxProficiencyTest.AppendText(aProf + "\n");
             }
         }
 
@@ -737,8 +770,6 @@ namespace CharacterManager.CharacterCreator
 
         private void updateEquipmentList()
         {
-            //richTextBoxEquipmentAndSpells.Clear();
-
             /* TODO : Consider making these lists global? */
             List<Items.PlayerWeapon> weaponList = new List<Items.PlayerWeapon>();
             List<Items.PlayerArmor> armorList = new List<Items.PlayerArmor>();
@@ -754,7 +785,6 @@ namespace CharacterManager.CharacterCreator
             }
 
             /* 2. Get all the equipment from the background selection form. */
-            /* TODO */
             List<PlayerItem> characterBackGroundItems = myChooseBackGroundForm.getAllBackGroundEquipment();
             foreach(PlayerItem item in characterBackGroundItems)
             {
@@ -1104,6 +1134,7 @@ namespace CharacterManager.CharacterCreator
                 updateKnownToolProficiencies();
                 updateKnownLanguages();
                 updateSkillProficiencies();
+                UpdateWeaponAndArmorProficiencies();
             }
         }
 

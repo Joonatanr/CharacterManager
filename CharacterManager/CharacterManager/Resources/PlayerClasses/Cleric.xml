@@ -108,12 +108,12 @@
 					<Equipment>Shield</Equipment>
 					<Quantity>1</Quantity>
 				</EquipmentChoice>
-			</optionA>
-			<optionB>
 				<EquipmentChoice>
 					<Equipment>Holy Symbol</Equipment>
 					<Quantity>1</Quantity>
 				</EquipmentChoice>
+			</optionA>
+			<optionB>
 			</optionB>
 			<optionC />
 			<optionD />

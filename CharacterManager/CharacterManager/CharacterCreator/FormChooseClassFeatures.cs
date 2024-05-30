@@ -16,6 +16,7 @@ namespace CharacterManager.CharacterCreator
         private PlayerClass _selectedClass = null;
         private int _currentLevel;
         private PlayerCharacter _currentCharacter = null;
+        private PlayerClassArchetype currArchetype = null;
 
         public FormChooseClassFeatures()
         {
@@ -157,7 +158,7 @@ namespace CharacterManager.CharacterCreator
             return yloc;
         }
 
-        private PlayerClassArchetype currArchetype = null;
+        
 
         private void SelectedArchetypeChanged(PlayerClassArchetype newArcheType)
         {   
