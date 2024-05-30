@@ -209,6 +209,7 @@ namespace SpellEditor
 
             checkBoxIsAttackRoll.Checked = spell.IsAttackRoll;
             checkBoxAddAbilityModToDice.Checked = spell.IsSpellCastingModifierAddedToDice;
+            checkBoxIsHealingSpell.Checked = spell.IsHealingSpell;
         }
 
 
@@ -745,6 +746,18 @@ namespace SpellEditor
                 if (selectedSpell.IsSpellCastingModifierAddedToDice != checkBoxAddAbilityModToDice.Checked)
                 {
                     selectedSpell.IsSpellCastingModifierAddedToDice = checkBoxAddAbilityModToDice.Checked;
+                    setSpellDataAsModified();
+                }
+            }
+        }
+
+        private void checkBoxIsHealingSpell_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.selectedSpell != null)
+            {
+                if (selectedSpell.IsHealingSpell != checkBoxIsHealingSpell.Checked)
+                {
+                    selectedSpell.IsHealingSpell = checkBoxIsHealingSpell.Checked;
                     setSpellDataAsModified();
                 }
             }

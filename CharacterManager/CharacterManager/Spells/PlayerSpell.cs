@@ -91,6 +91,7 @@ namespace CharacterManager.Spells
         public string DiceAtLevel8 = "";
         public string DiceAtLevel9 = "";
         public bool IsSpellCastingModifierAddedToDice = false;
+        public bool IsHealingSpell = false;
 
         [XmlIgnore]
         public Boolean IsModified = false; /* Used only by the SpellEditor. */

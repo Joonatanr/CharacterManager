@@ -81,6 +81,7 @@ namespace SpellEditor
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.checkBoxAddAbilityModToDice = new System.Windows.Forms.CheckBox();
             this.textBoxLevel9Dice = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.textBoxLevel8Dice = new System.Windows.Forms.TextBox();
@@ -101,7 +102,7 @@ namespace SpellEditor
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxLevel0Dice = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.checkBoxAddAbilityModToDice = new System.Windows.Forms.CheckBox();
+            this.checkBoxIsHealingSpell = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLevel)).BeginInit();
@@ -713,6 +714,7 @@ namespace SpellEditor
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.checkBoxIsHealingSpell);
             this.groupBox8.Controls.Add(this.checkBoxAddAbilityModToDice);
             this.groupBox8.Controls.Add(this.textBoxLevel9Dice);
             this.groupBox8.Controls.Add(this.label25);
@@ -740,6 +742,17 @@ namespace SpellEditor
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Dice";
+            // 
+            // checkBoxAddAbilityModToDice
+            // 
+            this.checkBoxAddAbilityModToDice.AutoSize = true;
+            this.checkBoxAddAbilityModToDice.Location = new System.Drawing.Point(6, 311);
+            this.checkBoxAddAbilityModToDice.Name = "checkBoxAddAbilityModToDice";
+            this.checkBoxAddAbilityModToDice.Size = new System.Drawing.Size(113, 19);
+            this.checkBoxAddAbilityModToDice.TabIndex = 20;
+            this.checkBoxAddAbilityModToDice.Text = "Add Ability Mod\r\n";
+            this.checkBoxAddAbilityModToDice.UseVisualStyleBackColor = true;
+            this.checkBoxAddAbilityModToDice.CheckedChanged += new System.EventHandler(this.checkBoxAddAbilityModToDice_CheckedChanged);
             // 
             // textBoxLevel9Dice
             // 
@@ -911,16 +924,16 @@ namespace SpellEditor
             this.label16.TabIndex = 0;
             this.label16.Text = "Level 0";
             // 
-            // checkBoxAddAbilityModToDice
+            // checkBoxIsHealingSpell
             // 
-            this.checkBoxAddAbilityModToDice.AutoSize = true;
-            this.checkBoxAddAbilityModToDice.Location = new System.Drawing.Point(6, 311);
-            this.checkBoxAddAbilityModToDice.Name = "checkBoxAddAbilityModToDice";
-            this.checkBoxAddAbilityModToDice.Size = new System.Drawing.Size(113, 19);
-            this.checkBoxAddAbilityModToDice.TabIndex = 20;
-            this.checkBoxAddAbilityModToDice.Text = "Add Ability Mod\r\n";
-            this.checkBoxAddAbilityModToDice.UseVisualStyleBackColor = true;
-            this.checkBoxAddAbilityModToDice.CheckedChanged += new System.EventHandler(this.checkBoxAddAbilityModToDice_CheckedChanged);
+            this.checkBoxIsHealingSpell.AutoSize = true;
+            this.checkBoxIsHealingSpell.Location = new System.Drawing.Point(6, 336);
+            this.checkBoxIsHealingSpell.Name = "checkBoxIsHealingSpell";
+            this.checkBoxIsHealingSpell.Size = new System.Drawing.Size(106, 19);
+            this.checkBoxIsHealingSpell.TabIndex = 21;
+            this.checkBoxIsHealingSpell.Text = "Is Healing Spell";
+            this.checkBoxIsHealingSpell.UseVisualStyleBackColor = true;
+            this.checkBoxIsHealingSpell.CheckedChanged += new System.EventHandler(this.checkBoxIsHealingSpell_CheckedChanged);
             // 
             // Form1
             // 
@@ -1037,6 +1050,7 @@ namespace SpellEditor
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.CheckBox checkBoxIsAttackRoll;
         private System.Windows.Forms.CheckBox checkBoxAddAbilityModToDice;
+        private System.Windows.Forms.CheckBox checkBoxIsHealingSpell;
     }
 }
 

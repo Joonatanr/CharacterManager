@@ -37,6 +37,7 @@ This spell’s damage increases by 1d6 when you reach
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -76,6 +77,7 @@ increase by an additional 5 for each slot level above 2nd.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -121,6 +123,7 @@ the sound of a hand bell for 10 seconds within 60 feet.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -188,6 +191,7 @@ make using it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -231,6 +235,7 @@ additional beast for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -286,6 +291,7 @@ increases by 48 hours for each slot level above 2nd.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -348,6 +354,7 @@ can’t activate, wield, or otherwise benefit from any of its equipment.</Descri
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -415,6 +422,7 @@ from a different corpse or pile of bones.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -501,6 +509,7 @@ additional objects for each slot level above 5th.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -546,6 +555,7 @@ pass through the barrier, the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -639,6 +649,7 @@ nullify each other.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -718,6 +729,7 @@ affected again.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -763,6 +775,7 @@ inch in diameter.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -817,6 +830,7 @@ faces in a different direction.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -863,6 +877,7 @@ locks on it increases by 10.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -904,6 +919,7 @@ both the temporary hit points and the cold damage increase by
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -947,6 +963,7 @@ spell slot of 2nd level or higher, the damage increases by
     <DiceAtLevel8>9d6</DiceAtLevel8>
     <DiceAtLevel9>10d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1025,6 +1042,7 @@ to 0 hit points.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1080,6 +1098,7 @@ get a random reading. The DM makes this roll in secret.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1120,6 +1139,7 @@ when it starts its turn in the aura with 0 hit points.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1162,6 +1182,7 @@ frightened, paralyzed, poisoned, and stunned.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1200,6 +1221,7 @@ cause one creature in the aura (including you) to regain
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1251,6 +1273,7 @@ it w as charmed.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1293,6 +1316,7 @@ additional creature for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1340,6 +1364,7 @@ space is occupied.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1394,6 +1419,7 @@ additional creature for each slot level above 4th.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1432,6 +1458,7 @@ of armor it is wearing.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1471,6 +1498,7 @@ number of hit points possible from any healing.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1513,6 +1541,7 @@ own surroundings.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1576,6 +1605,7 @@ that doesn’t require concentration.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1662,6 +1692,7 @@ level above 5th.</AtHigherLevels>
     <DiceAtLevel8>10d8</DiceAtLevel8>
     <DiceAtLevel9>12d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1710,6 +1741,7 @@ save, the creature takes half as much damage.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1747,6 +1779,7 @@ dealt by weapon attacks.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1788,6 +1821,7 @@ creature for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1836,6 +1870,7 @@ spell slot o f 5th level or higher, the damage increases by
     <DiceAtLevel8>12d8</DiceAtLevel8>
     <DiceAtLevel9>13d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1880,6 +1915,7 @@ On a successful save, it is no longer blinded.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1922,6 +1958,7 @@ each slot level above 2nd.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -1976,6 +2013,7 @@ have the ability to do so.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2015,6 +2053,7 @@ with truesight.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2059,6 +2098,7 @@ each slot level above 2nd.</AtHigherLevels>
     <DiceAtLevel8>8d6</DiceAtLevel8>
     <DiceAtLevel9>9d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2100,6 +2140,7 @@ the damage increases by 1d6 for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8>10d6</DiceAtLevel8>
     <DiceAtLevel9>11d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2157,6 +2198,7 @@ slot level above 3rd.</AtHigherLevels>
     <DiceAtLevel8>8d10</DiceAtLevel8>
     <DiceAtLevel9>9d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2208,6 +2250,7 @@ again, unless the DM rules otherwise.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2255,6 +2298,7 @@ level above 6th.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2301,6 +2345,7 @@ you target them.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2345,6 +2390,7 @@ This spell’s damage increases by 1d8 when you reach
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2387,6 +2433,7 @@ spell slot of 2nd level or higher, the damage increases by
     <DiceAtLevel8>10d8</DiceAtLevel8>
     <DiceAtLevel9>11d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2428,6 +2475,7 @@ slot level above 6th.</AtHigherLevels>
     <DiceAtLevel8>12d6</DiceAtLevel8>
     <DiceAtLevel9>14d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2472,6 +2520,7 @@ no damage if it succeeds on the saving throw.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2520,6 +2569,7 @@ luminous, intangible orb about the size of your fist.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2570,6 +2620,7 @@ is elsewhere.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2611,6 +2662,7 @@ its turn there.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2660,6 +2712,7 @@ the damage increases by 1d8 for each slot level above 5th.</AtHigherLevels>
     <DiceAtLevel8>8d8</DiceAtLevel8>
     <DiceAtLevel9>9d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2705,6 +2758,7 @@ for each slot level above 1st</AtHigherLevels>
     <DiceAtLevel8>20d10</DiceAtLevel8>
     <DiceAtLevel9>22d20</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2770,6 +2824,7 @@ you target them.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2819,6 +2874,7 @@ answer. The DM makes this roll in secret.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2874,6 +2930,7 @@ nearby towns.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2923,6 +2980,7 @@ than 30 feet away from the target.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -2963,6 +3021,7 @@ that isn’t part of a written language</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3011,6 +3070,7 @@ opportunity attacks to move in the designated direction.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3055,6 +3115,7 @@ spell slot o f 6th level or higher, the damage increases by
     <DiceAtLevel8>11d8</DiceAtLevel8>
     <DiceAtLevel9>12d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3116,6 +3177,7 @@ by 5 feet for each slot level above 4th.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3175,6 +3237,7 @@ with a 7th-level slot, and four times as many with a
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3217,6 +3280,7 @@ the weapon or ammunition used as a component.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3264,6 +3328,7 @@ you summon a celestial of challenge rating 5 or lower.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3322,6 +3387,7 @@ increases by 1 for each slot level above 5th.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3381,6 +3447,7 @@ increases by 1 for each slot level above 6th.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3438,6 +3505,7 @@ many with an 8th-level slot.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3482,6 +3550,7 @@ same as that of the ammunition or weapon.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3539,6 +3608,7 @@ many with an 8th-level slot.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3591,6 +3661,7 @@ the DM might instead offer a short phrase as an answer.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3668,6 +3739,7 @@ stunned until the end o f its next turn.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3721,6 +3793,7 @@ ever not on your person.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3759,6 +3832,7 @@ not smothered or quenched.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>50</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3851,6 +3925,7 @@ damage occurs each round it remains in the vortex.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3928,6 +4003,7 @@ Stage Condition
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -3972,6 +4048,7 @@ spell slot you used.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4012,6 +4089,7 @@ doesn’t go bad.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4059,6 +4137,7 @@ each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4127,6 +4206,7 @@ or two mummies.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>150</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4184,6 +4264,7 @@ the cube increases by 5 feet for each slot level above 5th.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4234,6 +4315,7 @@ of each o f its turns. On a success, the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4273,6 +4355,7 @@ when it hits with a w eapon attack.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4312,6 +4395,7 @@ spell slot of 2nd level or higher, the healing increases by
     <DiceAtLevel8>8d8</DiceAtLevel8>
     <DiceAtLevel9>9d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4356,6 +4440,7 @@ spell, and a light winks out if it exceeds the spell’s range.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4403,6 +4488,7 @@ created the light is dispelled.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4439,6 +4525,7 @@ darkvision out to a range of 60 feet.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4485,6 +4572,7 @@ spell that created the darkness is dispelled.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4529,6 +4617,7 @@ the target, and the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4591,6 +4680,7 @@ increases by 1d6 for each slot level above 7th.</AtHigherLevels>
     <DiceAtLevel8>13d6</DiceAtLevel8>
     <DiceAtLevel9>14d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4643,6 +4733,7 @@ connect to its demiplane instead.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4684,6 +4775,7 @@ knocked prone.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4727,6 +4819,7 @@ of lead, or 3 feet of wood or dirt.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4769,6 +4862,7 @@ of lead, or 3 feet of wood or dirt.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4810,6 +4904,7 @@ of lead, or 3 feet of wood or dirt.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4883,6 +4978,7 @@ be within range.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4932,6 +5028,7 @@ teleport you.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -4987,6 +5084,7 @@ spell save DC.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5043,10 +5141,11 @@ spell slot of 7th level or higher, the damage increases by
     <DiceAtLevel8>16d6+40</DiceAtLevel8>
     <DiceAtLevel9>19d6+40</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>Shim m ering energy surrounds and protects you from
+    <Description>Shimmering energy surrounds and protects you from
 fey, undead, and creatures originating from beyond the
 Material Plane. For the duration, celestials, elementals,
 fey, fiends, and undead have disadvantage on attack
@@ -5100,6 +5199,7 @@ and fey are sent to the Feywild</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5143,6 +5243,7 @@ equal to or less than the level o f the spell slot you used.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5193,6 +5294,7 @@ spell slot of 2nd level or higher, the damage increases by
     <DiceAtLevel8>10d6</DiceAtLevel8>
     <DiceAtLevel9>11d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5241,6 +5343,7 @@ random reading. The DM makes this roll in secret.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5249,6 +5352,7 @@ the spell ends, your weapon attacks deal an extra 1d4
 radiant damage on a hit.</Description>
     <Name>Divine Favor</Name>
     <SpellName>Divine Favor</SpellName>
+    <AtHigherLevels />
     <School>Evocation</School>
     <SpellLevel>1</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -5277,6 +5381,7 @@ radiant damage on a hit.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5329,6 +5434,7 @@ means short of a wish spell.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5394,6 +5500,7 @@ concentration, up to 8 hours.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5456,6 +5563,7 @@ the duration is concentration, up to 8 hours</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5521,6 +5629,7 @@ concentration, up to 8 hours.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5575,6 +5684,7 @@ the sapphire ends this spell’s effect.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5643,6 +5753,7 @@ makes its saving throw with disadvantage.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5695,6 +5806,7 @@ small campfire.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5773,6 +5885,7 @@ damage and doesn’t fall prone or become buried.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5814,6 +5927,7 @@ a separate attack roll for each beam.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5858,6 +5972,7 @@ increases to 3d4.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5918,6 +6033,7 @@ additional creature for each slot level above 2nd</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -5984,6 +6100,7 @@ damage (this can’t reduce the damage below 1).</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6033,6 +6150,7 @@ for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8>8d6</DiceAtLevel8>
     <DiceAtLevel9>9d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6080,6 +6198,7 @@ When the spell ends, the conjured plants wilt away</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6126,6 +6245,7 @@ incapacitated or can no longer speak.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6195,6 +6315,7 @@ when you cast the spell.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6245,6 +6366,7 @@ against your spell save DC. On a success, it frees itself.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6282,6 +6404,7 @@ the Dash action.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6341,6 +6464,7 @@ the effect ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6395,6 +6519,7 @@ artisan’s tools used to craft such objects.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6438,6 +6563,7 @@ creature or object can’t benefit from being invisible.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6477,6 +6603,7 @@ temporary hit points for each slot level above 1st.
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6524,6 +6651,7 @@ On a successful save, the spell ends for that creature.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6562,6 +6690,7 @@ on its feet, and the spell ends for that creature.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6612,6 +6741,7 @@ The spell can also be ended by greater restoration, heal, or wish.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6658,6 +6788,7 @@ effect until the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6713,6 +6844,7 @@ it. If the spell requires an attack roll, you use your attack modifier for the r
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6778,6 +6910,7 @@ from its bond at any time, causing it to disappear.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6826,6 +6959,7 @@ necessarily the safest route) to the destination.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6872,6 +7006,7 @@ general nature o f the danger posed by a trap you sense.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6915,6 +7050,7 @@ of its ability.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -6954,6 +7090,7 @@ worn or carried. This spell’s damage increases by 1d10 when you reach
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7001,6 +7138,7 @@ shield, or 2d8 cold damage from a cold shield.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7047,6 +7185,7 @@ by this spell.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7091,6 +7230,7 @@ the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
     <DiceAtLevel8>13d6</DiceAtLevel8>
     <DiceAtLevel9>14d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7138,6 +7278,7 @@ spell slot of 4th level or higher, the damage increases by
     <DiceAtLevel8>6d6</DiceAtLevel8>
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7181,6 +7322,7 @@ higher, the fire damage or the radiant damage
     <DiceAtLevel8>7d6+7d6</DiceAtLevel8>
     <DiceAtLevel9>8d6+8d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7231,6 +7373,7 @@ the damage increases by 1d6 for each slot level above 2nd.</AtHigherLevels>
     <DiceAtLevel8>8d6</DiceAtLevel8>
     <DiceAtLevel9>9d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7286,6 +7429,7 @@ until the effect is removed.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7327,6 +7471,7 @@ additional creature for each slot level above 3rd.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7368,6 +7513,7 @@ increases by 20 feet for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7429,6 +7575,7 @@ on the last casting.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7492,6 +7639,7 @@ This spell can’t be dispelled by dispel magic.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7534,6 +7682,7 @@ its duration ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7578,6 +7727,7 @@ movement or attacks.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7619,6 +7769,7 @@ depending on the nature o f your interaction with it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7672,6 +7823,7 @@ with. The target can’t attack or cast spells.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7730,6 +7882,7 @@ might leave, attack you, or help you.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>5000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7787,6 +7940,7 @@ mentioned above.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7828,6 +7982,7 @@ limit of spells such as raise dead.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7880,6 +8035,7 @@ might have the sam e statistics as a giant wasp.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7918,6 +8074,7 @@ are being truthful.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -7966,6 +8123,7 @@ for each slot level above 6th.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8064,11 +8222,12 @@ the glyph of warding.</AtHigherLevels>
     <DiceAtLevel8>10d8</DiceAtLevel8>
     <DiceAtLevel9>11d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>200</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
     <Description>Up to ten berries appear in your hand and are infused
-with m agic for the duration. A creature can use its
+with magic for the duration. A creature can use its
 action to eat one berry. Eating a berry restores 1 hit
 point, and the berry provides enough nourishment to
 sustain a creature for one day
@@ -8106,6 +8265,7 @@ consum ed within 24 hours of the casting of this spell.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8149,6 +8309,7 @@ on each of your turns.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8190,6 +8351,7 @@ or fall prone.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8226,6 +8388,7 @@ invisible as long as it is on the target’s person.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8269,6 +8432,7 @@ cursed magic item
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8314,6 +8478,7 @@ vanishes when it has dealt a total of 60 damage.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8406,6 +8571,7 @@ for one year.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>10</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8443,6 +8609,7 @@ or after making the ability check. The spell then ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8487,6 +8654,7 @@ spell slot of 2nd level or higher, the damage increases by
     <DiceAtLevel8>11d6</DiceAtLevel8>
     <DiceAtLevel9>12d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8540,6 +8708,7 @@ line blasts from you.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8585,6 +8754,7 @@ the damage increases by 1d10 for each slot level above 1st
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8681,6 +8851,7 @@ com m on language.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8732,6 +8903,7 @@ im age superim posed on the terrain.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8775,6 +8947,7 @@ maximum to return to norm al before that time passes.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8819,6 +8992,7 @@ sw eeps over it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8860,6 +9034,7 @@ increases by 10 for each slot level above 6th.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8899,6 +9074,7 @@ or higher, the healing increases by 1d4 for each slot level above 1st.</AtHigher
     <DiceAtLevel8>8d4</DiceAtLevel8>
     <DiceAtLevel9>9d4</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8947,6 +9123,7 @@ the damage increases by 1d8 for each slot level above 2nd.</AtHigherLevels>
     <DiceAtLevel8>8d8</DiceAtLevel8>
     <DiceAtLevel9>9d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -8991,11 +9168,12 @@ spell slot of 2nd level or higher, the damage increases by
     <DiceAtLevel8>9d10</DiceAtLevel8>
     <DiceAtLevel9>10d0</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
     <Description>You bring forth a great feast, including magnificent
-food and drink. The feast takes 1 hour to consum e and
+food and drink. The feast takes 1 hour to consume and
 disappears at the end of that time, and the beneficial
 effects don’t set in until this hour is over. Up to twelve
 other creatures can partake of the feast.
@@ -9005,7 +9183,7 @@ benefits. The creature is cured of all diseases and
 poison, becomes immune to poison and being
 frightened, and makes all Wisdom saving throws with
 advantage. Its hit point maximum also increases by
-2d10, and it gains the sam e number of hit points. These
+2d10, and it gains the same number of hit points. These
 benefits last for 24 hours.</Description>
     <Name>Heroes' Feast</Name>
     <SpellName>Heroes' Feast</SpellName>
@@ -9038,6 +9216,7 @@ benefits last for 24 hours.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9045,7 +9224,7 @@ benefits last for 24 hours.</Description>
 Until the spell ends, the creature is immune to being
 frightened and gains tem porary hit points equal to
 your spellcasting ability modifier at the start of each
-of its turns. W hen the spell ends, the target loses any
+of its turns. When the spell ends, the target loses any
 remaining temporary hit points from this spell.
 
 </Description>
@@ -9082,6 +9261,7 @@ each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9132,6 +9312,7 @@ your concentration on the spell for up to 24 hours.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9176,6 +9357,7 @@ you target them.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9218,6 +9400,7 @@ you target them.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9263,6 +9446,7 @@ the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9283,6 +9467,7 @@ saving throw or take 2d6 acid damage as milky,
 otherworldly tentacles rub against it.</Description>
     <Name>Hunger Of Hadar</Name>
     <SpellName>Hunger Of Hadar</SpellName>
+    <AtHigherLevels />
     <School>Conjuration</School>
     <SpellLevel>3</SpellLevel>
     <SpellRange>150</SpellRange>
@@ -9311,6 +9496,7 @@ otherworldly tentacles rub against it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9356,6 +9542,7 @@ your concentration on the spell for up to 24 hours.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9402,6 +9589,7 @@ creature out of its stupor.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9446,6 +9634,7 @@ increases by 1d8 for each slot level above 4th.</AtHigherLevels>
     <DiceAtLevel8>6d8+4d6</DiceAtLevel8>
     <DiceAtLevel9>7d8+4d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9491,6 +9680,7 @@ you learn what spells, if any, are currently affecting it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9543,6 +9733,7 @@ A creature with truesight can read the hidden message.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9649,6 +9840,7 @@ is immediately freed from its binding.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9699,6 +9891,7 @@ of your turns.</Description>
     <DiceAtLevel8>10d8</DiceAtLevel8>
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9737,6 +9930,7 @@ spell slot of 2nd level or higher, the damage increases by
     <DiceAtLevel8>10d10</DiceAtLevel8>
     <DiceAtLevel9>11d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9785,6 +9979,7 @@ or higher, the damage increases by
     <DiceAtLevel8>7d10</DiceAtLevel8>
     <DiceAtLevel9>8d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9824,6 +10019,7 @@ you can target one additional creature for each slot level above 2nd.</AtHigherL
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9860,6 +10056,7 @@ tripled until the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9909,6 +10106,7 @@ far away as 300 feet, emanates from the target object.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -9960,6 +10158,7 @@ only with the sacred word Rudnogg on the lips.”</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>450</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10012,6 +10211,7 @@ Plane, it is irretrievably lost.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>5050</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10063,6 +10263,7 @@ from the inside.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10099,6 +10300,7 @@ deafened, paralyzed, or poisoned.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10150,6 +10352,7 @@ ground if it is still aloft</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10192,6 +10395,7 @@ saving throw to avoid the spell.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10243,6 +10447,7 @@ level above 3rd.</AtHigherLevels>
     <DiceAtLevel8>9d8</DiceAtLevel8>
     <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10285,6 +10490,7 @@ the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
     <DiceAtLevel8>13d6</DiceAtLevel8>
     <DiceAtLevel9>14d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10324,6 +10530,7 @@ if any are present.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10373,6 +10580,7 @@ the creature.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10420,6 +10628,7 @@ and the object.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10458,6 +10667,7 @@ additional creature for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10497,6 +10707,7 @@ armor or if you dismiss the spell as an action.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10542,6 +10753,7 @@ more than 10 pounds.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10601,6 +10813,7 @@ the duration increases by 1 hour for each slot level above 3rd.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10682,6 +10895,7 @@ When the spell ends, the container is destroyed.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10723,6 +10937,7 @@ more dart for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8>10d4+10</DiceAtLevel8>
     <DiceAtLevel9>11d4+11</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10783,6 +10998,7 @@ object or when a silver bell rings within 30 feet o f it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>10</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10822,6 +11038,7 @@ slot of 6th level or higher, the bonus increases to +3.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10888,6 +11105,7 @@ dispelled, without requiring your concentration.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10929,6 +11147,7 @@ the healing increases by 1d8 for each slot level above 5th.</AtHigherLevels>
     <DiceAtLevel8>6d8</DiceAtLevel8>
     <DiceAtLevel9>7d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -10970,6 +11189,7 @@ effect on undead or constructs.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11010,6 +11230,7 @@ spell slot of 4th level or higher, the healing increases by
     <DiceAtLevel8>6d4</DiceAtLevel8>
     <DiceAtLevel9>7d4</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11073,6 +11294,7 @@ year and a day.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11119,6 +11341,7 @@ unoccupied space.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11176,6 +11399,7 @@ closest to where you first entered.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11219,6 +11443,7 @@ the damage (both initial and later) increases by 1d4
     <DiceAtLevel8>10d4+8d4</DiceAtLevel8>
     <DiceAtLevel9>11d4+9d4</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11261,6 +11486,7 @@ such an object.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11305,6 +11531,7 @@ through openings.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11350,6 +11577,7 @@ flammable objects that aren’t being worn or carried.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9>20d6+20d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11389,6 +11617,7 @@ target’s mind or to gain information about the target.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11444,6 +11673,7 @@ the creature
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11502,6 +11732,7 @@ interact with the illusion.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11558,6 +11789,7 @@ if it can perceive illusions as false, as with truesight.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11606,6 +11838,7 @@ own surroundings.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11641,6 +11874,7 @@ feet to an unoccupied space that you can see.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11717,6 +11951,7 @@ or any time in the creature’s past (9th level).</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11770,6 +12005,7 @@ spell slot of 3rd level or higher, the damage increases by
     <DiceAtLevel8>8d10</DiceAtLevel8>
     <DiceAtLevel9>9d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11822,6 +12058,7 @@ On a hit, it deals 4d8 piercing damage.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11887,6 +12124,7 @@ spaces nearest to the entrance.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>5</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11945,6 +12183,7 @@ on one side by using a spell slot o f 5th level.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -11990,6 +12229,7 @@ target or a different one.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>250</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12051,6 +12291,7 @@ growth. The moved earth carries any plants along with it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12090,6 +12331,7 @@ scrying sensors.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12151,6 +12393,7 @@ type or o f that alignment.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12213,6 +12456,7 @@ spell slot o f 7th level or higher, the damage increases by
     <DiceAtLevel8>12d6</DiceAtLevel8>
     <DiceAtLevel9>13d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12270,6 +12514,7 @@ without harming anything inside it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12316,6 +12561,7 @@ the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12356,6 +12602,7 @@ behind no tracks or other traces o f its passage.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12400,6 +12647,7 @@ which you cast the spell.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12470,6 +12718,7 @@ as a type appropriate to the illusion.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12515,6 +12764,7 @@ spell slot of 5th level or higher, the damage increases by
     <DiceAtLevel8>8d10</DiceAtLevel8>
     <DiceAtLevel9>9d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12564,6 +12814,7 @@ an action to dismiss it or if the steed takes any damage.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12642,6 +12893,7 @@ points awarded.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12703,6 +12955,7 @@ day with a 9th-level spell slot.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12763,6 +13016,7 @@ current plane of existence.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>250</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12811,6 +13065,7 @@ yield twice the normal amount o f food when harvested.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12851,6 +13106,7 @@ This spell’s damage increases by 1d12 when you reach
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12914,6 +13170,7 @@ from any of its equipment.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12925,6 +13182,7 @@ reaction to stand up. This spell has no effect on undead
 or constructs.</Description>
     <Name>Power Word Heal</Name>
     <SpellName>Power Word Heal</SpellName>
+    <AtHigherLevels />
     <School>Evocation</School>
     <SpellLevel>9</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -12953,6 +13211,7 @@ or constructs.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -12990,6 +13249,7 @@ Otherwise, the spell has no effect.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13031,6 +13291,7 @@ save, this stunning effect ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13071,6 +13332,7 @@ undead or constructs.</Description>
     <DiceAtLevel8>8d8</DiceAtLevel8>
     <DiceAtLevel9>9d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13101,6 +13363,7 @@ and you can dismiss such an effect as an action
 		</Description>
     <Name>Presdigitation</Name>
     <SpellName>Presdigitation</SpellName>
+    <AtHigherLevels />
     <School>Transmutation</School>
     <SpellLevel>0</SpellLevel>
     <SpellRange>10</SpellRange>
@@ -13129,6 +13392,7 @@ and you can dismiss such an effect as an action
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13204,6 +13468,7 @@ more, rerolling any 8.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13320,6 +13585,7 @@ magical effects.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13368,6 +13634,7 @@ This spell’s damage increases by 1d8 when you reach
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13430,6 +13697,7 @@ sounds hollow to the creature.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13490,6 +13758,7 @@ sounds hollow to the creature.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13526,6 +13795,7 @@ fire, lightning, or thunder.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13571,6 +13841,7 @@ relevant effect.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13612,6 +13883,7 @@ poison damage.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13648,6 +13920,7 @@ purified and rendered free of poison and disease.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13703,6 +13976,7 @@ the penalty is reduced by 1 until it disappears.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13748,6 +14022,7 @@ of existence.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13790,6 +14065,7 @@ success, the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13831,6 +14107,7 @@ The spell’s damage increases by 1d8 when you reach
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13873,6 +14150,7 @@ spell slot of 2nd level or higher, the damage increases by
     <DiceAtLevel8>9d8</DiceAtLevel8>
     <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13917,6 +14195,7 @@ to the stump.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -13981,6 +14260,7 @@ the new one and changes its racial traits accordingly.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14018,6 +14298,7 @@ the object so it can be removed or discarded.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14056,6 +14337,7 @@ spell then ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14112,6 +14394,7 @@ and saving throws.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14162,6 +14445,7 @@ creatures fall back down.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14199,6 +14483,7 @@ old age, nor can it restore any missing body parts.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>300</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14251,6 +14536,7 @@ when the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14291,6 +14577,7 @@ The spell’s damage increases by 1d8 when you reach
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14333,6 +14620,7 @@ that affects an enemy creature, this spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14372,6 +14660,7 @@ you create one additional ray for each slot level above 2nd.</AtHigherLevels>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14435,6 +14724,7 @@ doesn’t move.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14482,6 +14772,7 @@ the attack increases by 1d6 for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8>8d6</DiceAtLevel8>
     <DiceAtLevel9>9d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14520,6 +14811,7 @@ and translucent.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14581,6 +14873,7 @@ target is disguised.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14626,6 +14919,7 @@ the message doesn’t arrive.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14676,6 +14970,7 @@ takes any damage.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>5000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14757,6 +15052,7 @@ one, your hit points remain at their current value.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1500</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14804,6 +15100,7 @@ the damage increases by 1d8 for each slot level above 2nd.</AtHigherLevels>
     <DiceAtLevel8>9d8</DiceAtLevel8>
     <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14843,6 +15140,7 @@ and you take no damage from magic missile.
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14880,6 +15178,7 @@ for the duration.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14921,6 +15220,7 @@ of the weapon.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -14963,6 +15263,7 @@ The spell’s damage increases by 1d8 when you reach
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15003,6 +15304,7 @@ impossible there.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15056,6 +15358,7 @@ can see through the image.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15116,6 +15419,7 @@ instantly destroyed.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15171,6 +15475,7 @@ each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8>12d8</DiceAtLevel8>
     <DiceAtLevel9>13d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15218,6 +15523,7 @@ throw against your spell save DC or lose concentration.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15272,6 +15578,7 @@ successful save, the effect ends for it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15308,6 +15615,7 @@ undead or constructs.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15350,6 +15658,7 @@ DM’s discretion.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15409,6 +15718,7 @@ spell to release a restrained creature.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15458,6 +15768,7 @@ died, and can’t speculate about future events.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15496,6 +15807,7 @@ equal to its walking speed.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15539,6 +15851,7 @@ terrain as hazardous before entering it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15589,6 +15902,7 @@ level above 3rd.</AtHigherLevels>
     <DiceAtLevel8>8d8</DiceAtLevel8>
     <DiceAtLevel9>9d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15640,6 +15954,7 @@ the damage increases by 1d8 for every two slot levels above the 2nd.</AtHigherLe
     <DiceAtLevel8>7d8</DiceAtLevel8>
     <DiceAtLevel9>8d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>true</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15681,6 +15996,7 @@ can't take reactions, until the end of its next turn.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15729,6 +16045,7 @@ miles per hour) disperses it after 1 round.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15771,6 +16088,7 @@ and a latch, but finer mechanical detail isn’t possible.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15808,6 +16126,7 @@ slashing damage.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15879,6 +16198,7 @@ whether mundane or magical.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15936,6 +16256,7 @@ the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -15984,6 +16305,7 @@ dim light for an additional 30 feet. This light is sunlight.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16031,6 +16353,7 @@ created by a spell.</Description>
     <DiceAtLevel8>12d6</DiceAtLevel8>
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16076,6 +16399,7 @@ the quiver leaves your possession, the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16190,54 +16514,8 @@ throw and becomes stunned for 1 minute on a failed save.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>1000</MaterialCost>
-  </PlayerSpell>
-  <PlayerSpell>
-    <Description>You create a magical zone that guards against deception
-in a 15-foot-radius sphere centered on a point of your
-choice within range. Until the spell ends, a creature
-that enters the spell’s area for the first time on a turn
-or starts its turn there must make a Charisma saving
-throw. On a failed save, a creature can’t speak a
-deliberate lie while in the radius. You know whether
-each creature succeeds or fails on its saving throw.
-
-An affected creature is aware of the spell and can thus
-avoid answering questions to which it would normally
-respond with a lie. Such a creature can be evasive in
-its answers as long as it remains within the boundaries
-of the truth.</Description>
-    <Name>Zone Of Truth</Name>
-    <SpellName>Zone Of Truth</SpellName>
-    <School>Enchantment</School>
-    <SpellLevel>2</SpellLevel>
-    <SpellRange>60</SpellRange>
-    <SpellDuration>100</SpellDuration>
-    <IsUntilDispelled>false</IsUntilDispelled>
-    <AoeSize>15</AoeSize>
-    <AoeType>AOE_TYPE_SPHERE</AoeType>
-    <RangeType>RANGE_TYPE_RANGED</RangeType>
-    <CastingTime>CASTING_TIME_ACTION</CastingTime>
-    <CastingTimePeriod>0</CastingTimePeriod>
-    <IsVerbalComponent>true</IsVerbalComponent>
-    <IsSomaticComponent>true</IsSomaticComponent>
-    <IsMaterialComponent>false</IsMaterialComponent>
-    <IsConcentration>false</IsConcentration>
-    <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
-    <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3 />
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
-    <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
     <Description>A creature of your choice that you can see within range
@@ -16283,6 +16561,7 @@ it’s triggered by damage. On a success, the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16352,6 +16631,7 @@ contents from a vial.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16399,6 +16679,7 @@ sensory messages you send to it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16506,6 +16787,7 @@ can occur, dealing damage each time).</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16566,6 +16848,7 @@ cast the spell in this way.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>50</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16617,6 +16900,7 @@ the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16671,6 +16955,7 @@ dismiss such an effect as an action.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16713,6 +16998,7 @@ This spell’s damage increases by 1d6 w hen you reach
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16753,6 +17039,7 @@ from you and knocked prone.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16799,6 +17086,7 @@ spell slot of 2nd level or higher, the damage increases by
     <DiceAtLevel8>9d8</DiceAtLevel8>
     <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16844,6 +17132,7 @@ In addition, the spell ends if you move to a place more than
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16882,6 +17171,7 @@ what it says.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16922,6 +17212,7 @@ using 5 feet o f movement.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -16968,6 +17259,7 @@ for the duration. You must end each turn outside a tree.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17054,6 +17346,7 @@ and it returns to its normal form.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17101,6 +17394,7 @@ unoccupied space you choose within 10 feet o f you.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>100000</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17139,6 +17433,7 @@ range of 120 feet.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>25</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17177,6 +17472,7 @@ this spell hasn’t ended.
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17238,6 +17534,7 @@ of the area falls to the ground.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17290,6 +17587,94 @@ the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>The touch of your shadow-wreathed hand can siphon life
+force from others to heal your wounds. Make a melee
+spell attack against a creature within your reach. On
+a hit, the target takes 3d6 necrotic damage, and you
+regain hit points equal to half the amount o f necrotic
+damage dealt. Until the spell ends, you can make the
+attack again on each of your turns as an action.</Description>
+    <Name>Vampiric Touch</Name>
+    <SpellName>Vampiric Touch</SpellName>
+    <AtHigherLevels>When you cast this spell using a spell slot of 4th level or higher, 
+the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
+    <School>Necromancy</School>
+    <SpellLevel>3</SpellLevel>
+    <SpellRange>0</SpellRange>
+    <SpellDuration>10</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_SELF</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>true</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <IsAttackRoll>true</IsAttackRoll>
+    <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3>3d8</DiceAtLevel3>
+    <DiceAtLevel4>4d8</DiceAtLevel4>
+    <DiceAtLevel5>5d8</DiceAtLevel5>
+    <DiceAtLevel6>6d8</DiceAtLevel6>
+    <DiceAtLevel7>7d8</DiceAtLevel7>
+    <DiceAtLevel8>8d8</DiceAtLevel8>
+    <DiceAtLevel9>9d8</DiceAtLevel9>
+    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>true</IsHealingSpell>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You unleash a string o f insults laced with subtle
+enchantments at a creature you can see within range. If
+the target can hear you (though it need not understand
+you), it must succeed on a W isdom saving throw or take
+1d4 psychic damage and have disadvantage on the next
+attack roll it makes before the end o f its next turn.
+
+This spell’s damage increases by 1d4 when you reach
+5th level (2d4), 11th level (3d4), and 17th level (4d4).</Description>
+    <Name>Vicious Mockery</Name>
+    <SpellName>Vicious Mockery</SpellName>
+    <AtHigherLevels />
+    <School>Enchantment</School>
+    <SpellLevel>0</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>0</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>0</AoeSize>
+    <AoeType>AOE_TYPE_NONE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>false</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <IsAttackRoll>false</IsAttackRoll>
+    <MaterialComponent />
+    <DiceAtLevel0>1d4</DiceAtLevel0>
+    <DiceAtLevel1>2d4</DiceAtLevel1>
+    <DiceAtLevel2>3d4</DiceAtLevel2>
+    <DiceAtLevel3>4d4</DiceAtLevel3>
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
+    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17343,6 +17728,7 @@ spell slot o f 5th level or higher, the damage increases by
     <DiceAtLevel8>9d8</DiceAtLevel8>
     <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17396,6 +17782,7 @@ blocking ethereal travel through the wall.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17457,6 +17844,7 @@ air increases by 1d6, for each slot level above 6th.</AtHigherLevels>
     <DiceAtLevel8>14d6+7d6</DiceAtLevel8>
     <DiceAtLevel9>16d6+8d6</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17528,6 +17916,7 @@ the spell ends.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17585,48 +17974,7 @@ increase by 1d8 for each slot level above 6th.</AtHigherLevels>
     <DiceAtLevel8>9d8</DiceAtLevel8>
     <DiceAtLevel9>10d8</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
-    <MaterialCost>0</MaterialCost>
-  </PlayerSpell>
-  <PlayerSpell>
-    <Description>The touch of your shadow-wreathed hand can siphon life
-force from others to heal your w ounds. Make a melee
-spell attack against a creature within your reach. On
-a hit, the target takes 3d6 necrotic damage, and you
-regain hit points equal to half the amount o f necrotic
-damage dealt. Until the spell ends, you can make the
-attack again on each o f your turns as an action.</Description>
-    <Name>Vampiric Touch</Name>
-    <SpellName>Vampiric Touch</SpellName>
-    <AtHigherLevels>When you cast this spell using a spell slot of 4th level or higher, 
-the damage increases by 1d6 for each slot level above 3rd.</AtHigherLevels>
-    <School>Necromancy</School>
-    <SpellLevel>3</SpellLevel>
-    <SpellRange>0</SpellRange>
-    <SpellDuration>10</SpellDuration>
-    <IsUntilDispelled>false</IsUntilDispelled>
-    <AoeSize>0</AoeSize>
-    <AoeType>AOE_TYPE_NONE</AoeType>
-    <RangeType>RANGE_TYPE_SELF</RangeType>
-    <CastingTime>CASTING_TIME_ACTION</CastingTime>
-    <CastingTimePeriod>0</CastingTimePeriod>
-    <IsVerbalComponent>true</IsVerbalComponent>
-    <IsSomaticComponent>true</IsSomaticComponent>
-    <IsMaterialComponent>false</IsMaterialComponent>
-    <IsConcentration>true</IsConcentration>
-    <IsRitual>false</IsRitual>
-    <IsAttackRoll>true</IsAttackRoll>
-    <MaterialComponent />
-    <DiceAtLevel0 />
-    <DiceAtLevel1 />
-    <DiceAtLevel2 />
-    <DiceAtLevel3>3d8</DiceAtLevel3>
-    <DiceAtLevel4>4d8</DiceAtLevel4>
-    <DiceAtLevel5>5d8</DiceAtLevel5>
-    <DiceAtLevel6>6d8</DiceAtLevel6>
-    <DiceAtLevel7>7d8</DiceAtLevel7>
-    <DiceAtLevel8>8d8</DiceAtLevel8>
-    <DiceAtLevel9>9d8</DiceAtLevel9>
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17673,6 +18021,7 @@ as an action.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>100</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17710,6 +18059,7 @@ mode of respiration.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17754,6 +18104,7 @@ rate o f 60 feet per round.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17809,10 +18160,11 @@ damage to any creature that starts its turn in the fire.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
-    <Description>Drawing on the deepest fears o f a group o f creatures,
+    <Description>Drawing on the deepest fears of a group of creatures,
 you create illusory creatures in their minds, visible
 only to them. Each creature in a 30-foot-radius
 sphere centered on a point of your choice within
@@ -17821,9 +18173,9 @@ save, a creature becomes frightened for the duration.
 
 The illusion calls on the creature’s deepest fears,
 manifesting its worst nightmares as an implacable
-threat. At the start o f each of the frightened creature’s
+threat. At the start of each of the frightened creature’s
 turns, it must succeed on a Wisdom saving throw or
-take 4 d10 psychic damage. On a successful save, the
+take 4d10 psychic damage. On a successful save, the
 spell ends for that creature.</Description>
     <Name>Weird</Name>
     <SpellName>Weird</SpellName>
@@ -17855,49 +18207,7 @@ spell ends for that creature.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9>4d10</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
-    <MaterialCost>0</MaterialCost>
-  </PlayerSpell>
-  <PlayerSpell>
-    <Description>You unleash a string o f insults laced with subtle
-enchantments at a creature you can see within range. If
-the target can hear you (though it need not understand
-you), it must succeed on a W isdom saving throw or take
-1d4 psychic damage and have disadvantage on the next
-attack roll it makes before the end o f its next turn.
-
-This spell’s damage increases by 1d4 when you reach
-5th level (2d4), 11th level (3d4), and 17th level (4d4).</Description>
-    <Name>Vicious Mockery</Name>
-    <SpellName>Vicious Mockery</SpellName>
-    <AtHigherLevels />
-    <School>Enchantment</School>
-    <SpellLevel>0</SpellLevel>
-    <SpellRange>60</SpellRange>
-    <SpellDuration>0</SpellDuration>
-    <IsUntilDispelled>false</IsUntilDispelled>
-    <AoeSize>0</AoeSize>
-    <AoeType>AOE_TYPE_NONE</AoeType>
-    <RangeType>RANGE_TYPE_RANGED</RangeType>
-    <CastingTime>CASTING_TIME_ACTION</CastingTime>
-    <CastingTimePeriod>0</CastingTimePeriod>
-    <IsVerbalComponent>true</IsVerbalComponent>
-    <IsSomaticComponent>false</IsSomaticComponent>
-    <IsMaterialComponent>false</IsMaterialComponent>
-    <IsConcentration>false</IsConcentration>
-    <IsRitual>false</IsRitual>
-    <IsAttackRoll>false</IsAttackRoll>
-    <MaterialComponent />
-    <DiceAtLevel0>1d4</DiceAtLevel0>
-    <DiceAtLevel1>2d4</DiceAtLevel1>
-    <DiceAtLevel2>3d4</DiceAtLevel2>
-    <DiceAtLevel3>4d4</DiceAtLevel3>
-    <DiceAtLevel4 />
-    <DiceAtLevel5 />
-    <DiceAtLevel6 />
-    <DiceAtLevel7 />
-    <DiceAtLevel8 />
-    <DiceAtLevel9 />
-    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -17947,6 +18257,7 @@ after 1 minute, the creature falls the remaining distance.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -18001,6 +18312,7 @@ can’t pass through it.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -18071,6 +18383,7 @@ Finally, there is a 33 percent chance that you are unable to
 cast wish ever again if you suffer this stress.</Description>
     <Name>Wish</Name>
     <SpellName>Wish</SpellName>
+    <AtHigherLevels />
     <School>Conjuration</School>
     <SpellLevel>9</SpellLevel>
     <SpellRange>0</SpellRange>
@@ -18099,6 +18412,7 @@ cast wish ever again if you suffer this stress.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -18145,6 +18459,7 @@ increases by 1d12 for each slot level above 1st.</AtHigherLevels>
     <DiceAtLevel8>8d12</DiceAtLevel8>
     <DiceAtLevel9>9d12</DiceAtLevel9>
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -18191,6 +18506,7 @@ your deity, the spell has no effect.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
   <PlayerSpell>
@@ -18232,6 +18548,55 @@ save DC to steel its resolve and end this spell.</Description>
     <DiceAtLevel8 />
     <DiceAtLevel9 />
     <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
+    <MaterialCost>0</MaterialCost>
+  </PlayerSpell>
+  <PlayerSpell>
+    <Description>You create a magical zone that guards against deception
+in a 15-foot-radius sphere centered on a point of your
+choice within range. Until the spell ends, a creature
+that enters the spell’s area for the first time on a turn
+or starts its turn there must make a Charisma saving
+throw. On a failed save, a creature can’t speak a
+deliberate lie while in the radius. You know whether
+each creature succeeds or fails on its saving throw.
+
+An affected creature is aware of the spell and can thus
+avoid answering questions to which it would normally
+respond with a lie. Such a creature can be evasive in
+its answers as long as it remains within the boundaries
+of the truth.</Description>
+    <Name>Zone Of Truth</Name>
+    <SpellName>Zone Of Truth</SpellName>
+    <School>Enchantment</School>
+    <SpellLevel>2</SpellLevel>
+    <SpellRange>60</SpellRange>
+    <SpellDuration>100</SpellDuration>
+    <IsUntilDispelled>false</IsUntilDispelled>
+    <AoeSize>15</AoeSize>
+    <AoeType>AOE_TYPE_SPHERE</AoeType>
+    <RangeType>RANGE_TYPE_RANGED</RangeType>
+    <CastingTime>CASTING_TIME_ACTION</CastingTime>
+    <CastingTimePeriod>0</CastingTimePeriod>
+    <IsVerbalComponent>true</IsVerbalComponent>
+    <IsSomaticComponent>true</IsSomaticComponent>
+    <IsMaterialComponent>false</IsMaterialComponent>
+    <IsConcentration>false</IsConcentration>
+    <IsRitual>false</IsRitual>
+    <IsAttackRoll>false</IsAttackRoll>
+    <MaterialComponent />
+    <DiceAtLevel0 />
+    <DiceAtLevel1 />
+    <DiceAtLevel2 />
+    <DiceAtLevel3 />
+    <DiceAtLevel4 />
+    <DiceAtLevel5 />
+    <DiceAtLevel6 />
+    <DiceAtLevel7 />
+    <DiceAtLevel8 />
+    <DiceAtLevel9 />
+    <IsSpellCastingModifierAddedToDice>false</IsSpellCastingModifierAddedToDice>
+    <IsHealingSpell>false</IsHealingSpell>
     <MaterialCost>0</MaterialCost>
   </PlayerSpell>
 </ArrayOfPlayerSpell>
