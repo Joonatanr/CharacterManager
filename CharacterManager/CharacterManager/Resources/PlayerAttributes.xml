@@ -346,7 +346,7 @@ following options:
 
 1. Clockwork Toy. This toy is a clockw ork animal, monster, 
 or person, such as a frog, mouse, bird, dragon, or 
-soldier. W hen placed on the ground, the toy m oves 
+soldier. When placed on the ground, the toy moves 
 5 feet across the ground on each of your turns in a 
 random direction. It makes noises as appropriate 
 to the creature it represents.
@@ -359,7 +359,7 @@ requires your action.
 3. Music Box. When opened, this music box 
 plays a single song at a moderate volume.
 The box stops playing when it 
-reaches the son g’s end or 
+reaches the song’s end or 
 when it is closed.</Description>
 		<MaximumCharges>0</MaximumCharges>
 	</PlayerAbility>
@@ -2434,9 +2434,7 @@ you finish a long rest.</Description>
 	</PlayerAbility>
 	
 	
-	
 	<!-- Cleric class abilities -->
-	
 	
 	<PlayerAbility>
 		<Name>Blessings Of Knowledge</Name>
@@ -2562,6 +2560,349 @@ additional hit points equal to 2 + the spell's level.</Description>
 				</AdditionalSpellsAddedByAbility>
 			</PlayerAbilityUpgrade>	
 		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Light Domain Spells</Name>
+		<Description>You gain domain spells at the cleric levels listed:
+		1st -> Burning Hands, Faerie Fire, Light
+		3rd -> Flaming Sphere, Scorching Ray
+		5th -> Daylight, Fireball
+		7th -> Guardian Of Faith, Wall Of Fire
+		9th -> Flame Strike, Scrying</Description>
+		
+		<SpellsAddedByAbility>
+			<string>Burning Hands</string>
+			<string>Faerie Fire</string>
+			<string>Light</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>3</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Flaming Sphere</string>
+					<string>Scorching Ray</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Daylight</string>
+					<string>Fireball</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>7</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Guardian Of Faith</string>
+					<string>Wall Of Fire</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Flame Strike</string>
+					<string>Scrying</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>	
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Warding Flare</Name>
+		<Description>Also at 1st level, you can interpose divine light between
+yourself and an attacking enemy. When you are attacked
+by a creature within 30 feet of you that you can see,
+you can use your reaction to impose disadvantage on
+the attack roll, causing light to flare before the attacker
+before it hits or misses. An attacker that can’t be blinded
+is immune to this feature.
+You can use this feature a number of times equal to
+your Wisdom modifier (a minimum of once). You regain
+all expended uses when you finish a long rest.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+		<ChargesBasedOnAbilityModifier>WIS</ChargesBasedOnAbilityModifier>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Nature Domain Spells</Name>
+		<Description>You gain domain spells at the cleric levels listed:
+		1st -> Animal Friendship, Speak With Animals
+		3rd -> Barkskin, Spike Growth
+		5th -> Plant Growth, Wind Wall
+		7th -> Dominate Beast, Grasping Vine
+		9th -> Insect Plague, Tree Stride</Description>
+		
+		<SpellsAddedByAbility>
+			<string>Animal Friendship</string>
+			<string>Speak With Animals</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>3</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Barkskin</string>
+					<string>Spike Growth</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Plant Growth</string>
+					<string>Wind Wall</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>7</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Dominate Beast</string>
+					<string>Grasping Vine</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Insect Plague</string>
+					<string>Tree Stride</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>	
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Acolyte Of Nature</Name>
+		<Description>At 1st level, you learn one druid cantrip of your choice.
+You also gain proficiency in one of the following skills of
+your choice: Animal Handling, Nature, or Survival.</Description>
+		<IsHidden>true</IsHidden>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Tempest Domain Spells</Name>
+		<Description>You gain domain spells at the cleric levels listed:
+		1st -> Fog Cloud, Thunderwave
+		3rd -> Gust Of Wind, Shatter
+		5th -> Call Lightning, Sleet Storm
+		7th -> Control Water, Ice Storm
+		9th -> Destructive Wave, Insect Plague</Description>
+		
+		<SpellsAddedByAbility>
+			<string>Fog Cloud</string>
+			<string>Thunderwave</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>3</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Gust Of Wind</string>
+					<string>Shatter</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Call Lightning</string>
+					<string>Sleet Storm</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>7</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Control Water</string>
+					<string>Ice Storm</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Insect Plague</string>
+					<string>Destrucrive Wave</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>	
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Bonus Proficiencies(Tempest Domain)</Name>
+		<Description>At 1st level, you gain proficiency with martial weapons
+and heavy armor.</Description>
+		<AdditionalWeaponProficiencies>
+			<string>Martial Weapons</string>
+		</AdditionalWeaponProficiencies>
+		<AdditionalArmorProficiencies>
+			<string>Heavy Armor</string>
+		</AdditionalArmorProficiencies>
+		<IsHidden>true</IsHidden>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Wrath Of The Storm</Name>
+		<Description>Also at 1st level, you can thunderously rebuke attackers.
+When a creature within 5 feet of you that you can see
+hits you with an attack, you can use your reaction to
+cause the creature to make a Dexterity saving throw.
+The creature takes 2d8 lightning or thunder damage
+(your choice) on a failed saving throw, and half as much
+damage on a successful one.
+You can use this feature a number of times equal to
+your Wisdom modifier (a minimum of once). You regain
+all expended uses when you finish a long rest.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+		<Dice>2d8</Dice>
+		<ChargesBasedOnAbilityModifier>WIS</ChargesBasedOnAbilityModifier>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Trickery Domain Spells</Name>
+		<Description>You gain domain spells at the cleric levels listed:
+		1st -> Charm Person, Disguise Self
+		3rd -> Mirror Image, Pass Without Trace
+		5th -> Blink, Dispel Magic
+		7th -> Dimension Door, Polymorph
+		9th -> Dominate Person, Modify Memory</Description>
+		
+		<SpellsAddedByAbility>
+			<string>Charm Person</string>
+			<string>Disguise Self</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>3</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Mirror Image</string>
+					<string>Pass Without Trace</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Blink</string>
+					<string>Dispel Magic</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>7</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Dimension Door</string>
+					<string>Polymorph</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Dominate Person</string>
+					<string>Modify Memory</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>	
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Blessing Of The Trickster</Name>
+		<Description>Starting w hen you choose this dom ain at 1st level, you
+can use your action to touch a willing creature other
+than yourself to give it advantage on Dexterity (Stealth)
+checks. This blessing lasts for 1 hour or until you use
+this feature again.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>War Domain Spells</Name>
+		<Description>You gain domain spells at the cleric levels listed:
+		1st -> Divine Favor, Shield Of Faith
+		3rd -> Magic Weapon, Spiritual Weapon
+		5th -> Crusader's Mantle, Spirit Guardians
+		7th -> Freedom Of Movement, Stoneskin
+		9th -> Flame Strike, Hold Monster</Description>
+		
+		<SpellsAddedByAbility>
+			<string>Divine Favor</string>
+			<string>Shield Of Faith</string>
+		</SpellsAddedByAbility>
+		
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>3</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Magic Weapon</string>
+					<string>Spiritual Weapon</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>5</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Crusader's Mantle</string>
+					<string>Spirit Guardians</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>7</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Freedom Of Movement</string>
+					<string>Stoneskin</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>
+			
+			<PlayerAbilityUpgrade>
+				<Level>9</Level>
+				<AdditionalSpellsAddedByAbility>
+					<string>Flame Strike</string>
+					<string>Hold Monster</string>
+				</AdditionalSpellsAddedByAbility>
+			</PlayerAbilityUpgrade>	
+		</Upgrades>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Bonus Proficiencies(War Domain)</Name>
+		<Description>At 1st level, you gain proficiency with martial weapons
+and heavy armor.</Description>
+		<AdditionalWeaponProficiencies>
+			<string>Martial Weapons</string>
+		</AdditionalWeaponProficiencies>
+		<AdditionalArmorProficiencies>
+			<string>Heavy Armor</string>
+		</AdditionalArmorProficiencies>
+		<IsHidden>true</IsHidden>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>War Priest</Name>
+		<Description>From 1st level, your god delivers bolts of inspiration to
+you while you are engaged in battle. When you use the
+Attack action, you can make one weapon attack as a
+bonus action.
+
+You can use this feature a number of times equal to
+your Wisdom modifier (a minim um of once). You regain
+all expended uses when you finish a long rest.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+		<ChargesBasedOnAbilityModifier>WIS</ChargesBasedOnAbilityModifier>
+		<RechargeAtLongRest>true</RechargeAtLongRest>
+		<RechargeAtShortRest>false</RechargeAtShortRest>
 	</PlayerAbility>
 	
 </ArrayOfPlayerAbility>

@@ -805,6 +805,8 @@ namespace CharacterManager
             SpecialAttributeList.Add(new ImprovedDivineSmite());
 
             SpecialAttributeList.Add(new BlessingsOfKnowledge());
+            SpecialAttributeList.Add(new DiscipleOfLifeAbility());
+            SpecialAttributeList.Add(new AcolyteOfNature());
         }
 
         private static void logError(String err)

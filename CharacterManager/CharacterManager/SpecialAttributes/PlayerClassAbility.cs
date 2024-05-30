@@ -1040,6 +1040,7 @@ namespace CharacterManager
                 chosenLanguage2 = myForm.getSelectedItem(1);
             }
 
+            /* Now handle expertise given by this ability. */
             myForm = new GenericMultipleListChoiceForm(2);
             myForm.ChoiceDescriptionText = "Choose 2 doubled skill profs. :";
             List<string> myProfOptions = new List<string> { "Arcana", "History", "Nature", "Religion" };
@@ -1053,8 +1054,104 @@ namespace CharacterManager
                 chosenExpertise2 = myForm.getSelectedItem(1);
             }
         }
-
     }
 
+    public class DiscipleOfLifeAbility : SpecialAttribute
+    {
+        public DiscipleOfLifeAbility()
+        {
+            this.Name = "Disciple Of Life";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.CharacterSetupCastingForSpell += C_CharacterSetupCastingForSpell;
+        }
+
+        private void C_CharacterSetupCastingForSpell(PlayerCharacter c, PlayerSpell sp, int level)
+        {
+            if (sp.IsHealingSpell)
+            { 
+                c.BonusValues.SpellExtraDiceModifiers.Add(new BonusValueModifier("Disciple Of Life", level + 2));
+            }
+        }
+    }
+
+    public class AcolyteOfNature : SpecialAttribute
+    {
+        public string selectedCantrip;
+        public string selectedProficiency;
+        
+        public AcolyteOfNature()
+        {
+            this.Name = "Acolyte Of Nature";
+        }
+
+        public override bool ExtraChoiceOptions(out string btnText, out UserControlClassFeature.ExtraChoiceEventHandler clickHandler)
+        {
+            btnText = "Choose Options";
+            clickHandler = new ExtraChoiceEventHandler(handleAcolyteChoices);
+            return true;
+        }
+
+        public override void HandleAbilitySelected(PlayerCharacter c, out List<PlayerSpell> chosenSpells)
+        {
+            chosenSpells = new List<PlayerSpell>();
+            chosenSpells.Add(CharacterFactory.getPlayerSpellFromString(selectedCantrip));
+        }
+
+
+        public override List<string> GetExtraChosenSkillProficienciesGivenByAbility()
+        {
+            List<string> result = new List<string>();
+
+            if (selectedProficiency != null)
+            {
+                result.Add(selectedProficiency);
+            }
+
+            return result;
+        }
+
+        public override List<string> GetExtraChosenSpellsGivenByAbility()
+        {
+            List<string> res = new List<string>();
+            if (!string.IsNullOrEmpty(selectedCantrip))
+            {
+                res.Add(selectedCantrip);
+            }
+            return res;
+        }
+
+        private void handleAcolyteChoices(PlayerCharacter Character)
+        {
+            /* 1. We select one druid cantrip of your choice. */
+            GenericListChoiceForm myForm = new GenericListChoiceForm();
+            myForm.ChoiceDescriptionText = "Choose 1 druid cantrip:";
+
+            /* TODO : Connect this to the actual class, when the druid class has been implemented!!! */
+            List<string> druidCantrips = new List<string> { "Druidcraft", "Guidance", "Mending", "Poison Spray", "Produce Flame", "Resistance", "Shillelagh", "Thorn Whip"};
+
+            /* Now pass these on... */
+            myForm.setChoiceList(druidCantrips);
+
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                selectedCantrip = myForm.getSelectedItem();
+            }
+
+            /* 2.  Now handle extra proficiency from this ability  */
+            myForm = new GenericListChoiceForm();
+            myForm.ChoiceDescriptionText = "Choose 1 extra proficiency:";
+            List<string> myProfOptions = new List<string> { "Animal Handling", "Nature", "Survival" };
+
+            myForm.setChoiceList(myProfOptions);
+
+            if (myForm.ShowDialog() == DialogResult.OK)
+            {
+                selectedProficiency = myForm.getSelectedItem();
+            }
+        }
+    }
 }
 

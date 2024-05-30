@@ -433,13 +433,11 @@ chapter 11 for the cleric spell list..</Description>
 			<AvailableChoices>
 				<string>Knowledge Domain</string>
 				<string>Life Domain</string>
-				<!-- 
 				<string>Light Domain</string>
 				<string>Nature Domain</string>
 				<string>Tempest Domain</string>
 				<string>Trickery Domain</string>
 				<string>War Domain</string>
-				-->
 			</AvailableChoices>
 		</PlayerClassAbilityChoice>
 		<PlayerClassAbilityChoice>
@@ -516,26 +514,67 @@ community (such as Hestia, Hathor, and Boldrei).</Description>
 			</AvailableAbilitiesAtLevel1>
 		</PlayerClassArchetype>
 		
-		<!-- 
+		
 		<PlayerClassArchetype>
 			<Name>Light Domain</Name>
-			<Description>TODO</Description>
+			<Description>Gods of light—including Helm, Lathander, Pholtus,
+Branchala, the Silver Flame, Belenus, Apollo, and
+Re-Horakhty—promote the ideals of rebirth and
+renewal, truth, vigilance, and beauty, often using the
+symbol of the sun. Some of these gods are portrayed
+as the sun itself or as a charioteer who guides the sun
+
+across the sky. Others are tireless sentinels w hose eyes
+pierce every shadow and see through every deception.
+Some are deities of beauty and artistry, who teach that
+art is a vehicle for the soul's improvement. Clerics of a
+god of light are enlightened souls infused with radiance
+and the power of their gods’ discerning vision, charged
+with chasing away lies and burning away darkness.</Description>
 			<AvailableAbilitiesAtLevel1>
 				<PlayerClassAbilityChoice>
 					<AvailableChoices>
-						<string>Blessings Of Knowledge</string>
+						<string>Warding Flare</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Light Domain Spells</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
 		</PlayerClassArchetype>
 		
+		
 		<PlayerClassArchetype>
 			<Name>Nature Domain</Name>
-			<Description>TODO</Description>
+			<Description>Gods of nature are as varied as the natural world
+itself, from inscrutable gods of the deep forests (such
+as Silvanus, Obad-Hai, Chislev, Balinor, and Pan) to
+friendly deities associated with particular springs and
+groves (such as Eldath). Druids revere nature as a
+whole and might serve one of these deities, practicing
+mysterious rites and reciting all-but-forgotten prayers in
+their own secret tongue. But many of these gods have
+clerics as well, cham pions who take a more active role
+in advancing the interests of a particular nature god.
+These clerics might hunt the evil monstrosities that
+despoil the w oodlands, bless the harvest of the faithful,
+or wither the crops of those who anger their gods.</Description>
 			<AvailableAbilitiesAtLevel1>
 				<PlayerClassAbilityChoice>
 					<AvailableChoices>
-						<string>Blessings Of Knowledge</string>
+						<string>Acolyte Of Nature</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Nature Domain Spells</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Heavy Armor Proficiency</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
@@ -543,11 +582,32 @@ community (such as Hestia, Hathor, and Boldrei).</Description>
 		
 		<PlayerClassArchetype>
 			<Name>Tempest Domain</Name>
-			<Description>TODO</Description>
+			<Description>G ods whose portfolios include the Tempest domain -
+including Talos, Umberlee, Kord, Zeboim , the
+Devourer, Zeus, and Thor — govern storms, sea, and
+sky. They include gods of lightning and thunder, gods
+of earthquakes, som e fire gods, and certain gods of
+violence, physical strength, and courage. In som e
+pantheons, a god of this dom ain rules over other deities
+and is known for swift justice delivered by thunderbolts.
+In the pantheons of seafaring people, gods of this
+dom ain are ocean deities and the patrons of sailors.
+Tempest gods send their clerics to inspire fear in the
+common folk, either to keep those folk on the path of</Description>
 			<AvailableAbilitiesAtLevel1>
 				<PlayerClassAbilityChoice>
 					<AvailableChoices>
-						<string>Blessings Of Knowledge</string>
+						<string>Tempest Domain Spells</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Bonus Proficiencies(Tempest Domain)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Wrath Of The Storm</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
@@ -555,11 +615,26 @@ community (such as Hestia, Hathor, and Boldrei).</Description>
 		
 		<PlayerClassArchetype>
 			<Name>Trickery Domain</Name>
-			<Description>TODO</Description>
+			<Description>Gods of trickery—such as Tymora, Beshaba,
+Olidammara, the Traveler, Garl Glittergold, and
+Loki—are mischief-makers and instigators who stand
+as a constant challenge to the accepted order am ong
+both gods and mortals. They’re patrons of thieves,
+scoundrels, gamblers, rebels, and liberators. Their
+clerics are a disruptive force in the world, puncturing
+pride, mocking tyrants, stealing from the rich, freeing
+captives, and flouting hollow traditions. They prefer subterfuge, 
+pranks, deception, and theft rather than
+direct confrontation</Description>
 			<AvailableAbilitiesAtLevel1>
 				<PlayerClassAbilityChoice>
 					<AvailableChoices>
-						<string>Blessings Of Knowledge</string>
+						<string>Trickery Domain Spells</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Blessing Of The Trickster</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
@@ -567,15 +642,39 @@ community (such as Hestia, Hathor, and Boldrei).</Description>
 		
 		<PlayerClassArchetype>
 			<Name>War Domain</Name>
-			<Description>TODO</Description>
+			<Description>War has many manifestations. It can make heroes of
+ordinary people. It can be desperate and horrific, with
+acts of cruelty and cowardice eclipsing instances of
+excellence and courage. In either case, the gods of war
+watch over warriors and reward them for their great
+deeds. The clerics of such gods excel in battle, inspiring
+others to fight the good fight or offering acts of violence
+as prayers. Gods of war include champions of honor
+and chivalry (such as Torm, Heironeous, and KiriJolith) 
+as well as gods of destruction and pillage (such
+as Erythnul, the Fury, Gruumsh, and Ares) and gods of
+conquest and domination (such as Bane, Hextor, and
+Maglubiyet). Other war gods (such as Tempus, Nike,
+and Nuada) take a more neutral stance, promoting war
+in all its manifestations and supporting warriors in any
+circumstance.</Description>
 			<AvailableAbilitiesAtLevel1>
 				<PlayerClassAbilityChoice>
 					<AvailableChoices>
-						<string>Blessings Of Knowledge</string>
+						<string>War Domain Spells</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Bonus Proficiencies(War Domain)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>War Priest</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
 		</PlayerClassArchetype>
-		-->
 	</ArcheTypes>
 </PlayerClass>

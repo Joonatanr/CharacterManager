@@ -222,6 +222,12 @@ namespace CharacterManager.CharacterCreator
                 chosenSpellNames.Add(sp.SpellName);
             }
 
+            /* 11.1 Get extra spells added by abilities */
+            foreach(PlayerAbility ability in myAbilitiesList)
+            {
+                chosenSpellNames.AddRange(ability.GetExtraChosenSpellsGivenByAbility());
+            }
+
             CreatedCharacter.KnownSpells = chosenSpellNames;
 
             SpellSlotData dataForLevel1Spellslots = new SpellSlotData(0,0);

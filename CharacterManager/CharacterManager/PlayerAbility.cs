@@ -584,5 +584,11 @@ So we get to an issue where upgrades to the description are added multiple times
 
             return res;
         }
+
+        public virtual List<string> GetExtraChosenSpellsGivenByAbility()
+        {
+            List<string> res = new List<string>();
+            return res;
+        }
     }
 }
