@@ -53,6 +53,12 @@ namespace CharacterManager
 
         public List<int> AbilityScoreImprovementsAtLevels = new List<int>();
 
+        public bool IsClassResource = false;
+        public string ClassResourceName = "";
+
+        public int[] ClassResourceAtLevels = new int[20];
+
+
         public PlayerClass()
         {
             PlayerClassName = "UNKNOWN";
