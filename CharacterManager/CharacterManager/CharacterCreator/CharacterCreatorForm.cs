@@ -140,7 +140,8 @@ namespace CharacterManager.CharacterCreator
             CreatedCharacter.CurrentHitPoints = currentMaxHp;
 
             //8. Set Player abilities.
-            CreatedCharacter.setCharacterAbilitiesList(myAbilitiesList, true);
+            //CreatedCharacter.setCharacterAbilitiesList(myAbilitiesList, true);
+            CreatedCharacter.setupCharacterNewAbilitiesList(myAbilitiesList);
 
             //9. Set Player alignment.
             CreatedCharacter.Alignment = alignmentChoice1.getSelectedAlignment();

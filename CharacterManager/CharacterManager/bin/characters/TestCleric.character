@@ -1,19 +1,20 @@
 <PlayerCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SkillProficiencies>
-    <string>Survival</string>
-    <string>Insight</string>
+    <string>Persuasion</string>
+    <string>Medicine</string>
     <string>History</string>
-    <string>Animal Handling</string>
+    <string>Arcana</string>
   </SkillProficiencies>
   <SkillExpertise />
   <ToolExpertise />
   <Languages>
     <string>Common</string>
     <string>Draconic</string>
+    <string>Gnomish</string>
+    <string>Orcish</string>
   </Languages>
   <WeaponProficiencies>
     <string>Simple Weapons</string>
-    <string>Martial Weapons</string>
   </WeaponProficiencies>
   <ArmorProficiencies>
     <string>Light Armor</string>
@@ -21,10 +22,7 @@
     <string>Shields</string>
     <string>Heavy Armor</string>
   </ArmorProficiencies>
-  <ToolProficiencies>
-    <string>Land Vehicles</string>
-    <string>Brewer’s Supplies</string>
-  </ToolProficiencies>
+  <ToolProficiencies />
   <SavingThrowProficiencies>
     <string>WIS</string>
     <string>CHA</string>
@@ -45,7 +43,7 @@
       <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
-      <AbilityName>Tempest Domain</AbilityName>
+      <AbilityName>Life Domain</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
@@ -59,22 +57,15 @@
       <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
-      <AbilityName>Tempest Domain Spells</AbilityName>
+      <AbilityName>Life Domain Spells</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
       <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
-      <AbilityName>Bonus Proficiencies(Tempest Domain)</AbilityName>
+      <AbilityName>Disciple Of Life</AbilityName>
       <RemainingCharges>0</RemainingCharges>
-      <IsActive>false</IsActive>
-      <Options1 />
-      <SubType />
-    </PlayerAbilityDescriptor>
-    <PlayerAbilityDescriptor>
-      <AbilityName>Wrath Of The Storm</AbilityName>
-      <RemainingCharges>2</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
       <SubType />
@@ -157,16 +148,6 @@
     </PlayerArmor>
   </CharacterArmors>
   <CharacterGeneralEquipment>
-    <PlayerItem
-      xsi:type="PlayerToolKit">
-      <Description />
-      <Name>Cook's Utensils</Name>
-      <Weight>8</Weight>
-      <Cost>1</Cost>
-      <Quantity>1</Quantity>
-      <IsAmmo>false</IsAmmo>
-      <ToolType>TYPE_ARTISAN</ToolType>
-    </PlayerItem>
     <PlayerItem>
       <Name>Light rossbow</Name>
       <Weight>0</Weight>
@@ -184,10 +165,10 @@
     </PlayerItem>
     <PlayerItem
       xsi:type="ItemContainer">
-      <Description>Includes a backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, and a waterskin.</Description>
-      <Name>Priest's Pack</Name>
+      <Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
+      <Name>Explorer's Pack</Name>
       <Weight>10</Weight>
-      <Cost>19</Cost>
+      <Cost>10</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
       <ContainedItems>
@@ -196,40 +177,32 @@
           <Quantity>1</Quantity>
         </ContainerContent>
         <ContainerContent>
-          <Name>Blanket</Name>
+          <Name>Bedroll</Name>
           <Quantity>1</Quantity>
         </ContainerContent>
         <ContainerContent>
-          <Name>Candle</Name>
-          <Quantity>10</Quantity>
+          <Name>Mess Kit</Name>
+          <Quantity>1</Quantity>
         </ContainerContent>
         <ContainerContent>
           <Name>Tinderbox</Name>
           <Quantity>1</Quantity>
         </ContainerContent>
         <ContainerContent>
-          <Name>Alms Box</Name>
-          <Quantity>1</Quantity>
-        </ContainerContent>
-        <ContainerContent>
-          <Name>Block of Incense</Name>
-          <Quantity>2</Quantity>
-        </ContainerContent>
-        <ContainerContent>
-          <Name>Censer</Name>
-          <Quantity>1</Quantity>
-        </ContainerContent>
-        <ContainerContent>
-          <Name>Vestments</Name>
-          <Quantity>1</Quantity>
+          <Name>Torch</Name>
+          <Quantity>10</Quantity>
         </ContainerContent>
         <ContainerContent>
           <Name>Rations</Name>
-          <Quantity>2</Quantity>
+          <Quantity>10</Quantity>
         </ContainerContent>
         <ContainerContent>
           <Name>Waterskin</Name>
           <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Rope</Name>
+          <Quantity>50</Quantity>
         </ContainerContent>
       </ContainedItems>
     </PlayerItem>
@@ -242,14 +215,29 @@
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <Name>Shovel</Name>
+      <Name>A bottle of Ink</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <Name>Iron Pot</Name>
+      <Name>Quill</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Name>Small knife</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Description>A letter from a dead colleague posing a question you have not yet been able to answer.</Description>
+      <Name>Letter</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
@@ -266,11 +254,11 @@
   <CharacterSpellCastingStatus>
     <KnownSpells>
       <string>Light</string>
+      <string>Resistance</string>
       <string>Sacred Flame</string>
-      <string>Spare The Dying</string>
       <string>Guidance</string>
       <string>Mending</string>
-      <string>Resistance</string>
+      <string>Spare The Dying</string>
       <string>Thaumaturgy</string>
       <string>Bane</string>
       <string>Bless</string>
@@ -340,15 +328,15 @@
   </Size>
   <Alignment>NeutralGood</Alignment>
   <MainRaceName>Dragonborn</MainRaceName>
-  <SubRaceName>Bronze Dragon Ancestry</SubRaceName>
+  <SubRaceName>Blue Dragon Ancestry</SubRaceName>
   <ClassName>Cleric</ClassName>
-  <SubClassName />
+  <SubClassName>Life Domain</SubClassName>
   <BaseAttributes>
     <STR>14</STR>
-    <DEX>8</DEX>
+    <DEX>13</DEX>
     <INT>10</INT>
-    <CHA>15</CHA>
-    <CON>13</CON>
+    <CHA>9</CHA>
+    <CON>12</CON>
     <WIS>15</WIS>
   </BaseAttributes>
   <GoldPieces>10</GoldPieces>

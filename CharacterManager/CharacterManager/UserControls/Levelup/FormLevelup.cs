@@ -183,85 +183,18 @@ namespace CharacterManager.UserControls
 
         private void finalizeCharacter()
         {
-            PlayerClass _myClass = _myCharacter.GetPlayerClass();
-            List<PlayerSpell> spellsAddedByAbilities = new List<PlayerSpell>();
-
-            /* Some abilities might just fire once and they will not be added to the abilities list. 
-             So we create a list of selected abilities that should be removed once character has been finalized */
-            List<PlayerAbility> HiddenAbilities = new List<PlayerAbility>();
-
-            foreach (PlayerAbility ability in SelectedPlayerAbilities)
-            {
-                if (ability.IsHidden)
-                {
-                    HiddenAbilities.Add(ability);
-                }
-            }
-
-            /* 1.  Handle the case of a new archetype being selected. */
-            finalizeNewArchetypeSelection();
-            /* 2. Handle any new language and tool proficiencies that have been added */
+            /* 1. Handle any new language and tool proficiencies that have been added */
             finalizeNewProficiencies();
-            /* 3. Handle all the spells that have been chosen by the ordinary spell selection mechanism. */
+            /* 2. Handle all the spells that have been chosen by the ordinary spell selection mechanism. */
             finalizeSpellselections();
 
-            /* 4. Fire the application of more complex new selected abilities. */
-            foreach (PlayerAbility selectedAbility in SelectedPlayerAbilities)
-            {
-                List<PlayerSpell> spellsAddedByAbility;
-                selectedAbility.HandleAbilitySelected(_myCharacter, out spellsAddedByAbility);
-                spellsAddedByAbilities.AddRange(spellsAddedByAbility);
-            }
+            /* 3. Handle all new abilities and update the character ability list. */
+            _myCharacter.setupCharacterNewAbilitiesList(SelectedPlayerAbilities);
 
-            /* 5. Remove the hidden abilities from the list. */
-            foreach (PlayerAbility Hidden in HiddenAbilities)
-            {
-                SelectedPlayerAbilities.Remove(Hidden);
-            }
-
-            /* 6. Connect the new abilities to the character. */
-            List<PlayerAbility> resultAbilities = _myCharacter.CharacterAbilitiesObjectList;
-
-            foreach (PlayerAbility newAbility in SelectedPlayerAbilities) 
-            {
-                if (!resultAbilities.Contains(newAbility))
-                {
-                    resultAbilities.Add(newAbility);
-                }
-            }
-
-            /* 7. Handle abilities that replace other abilities. */
-            foreach (PlayerAbility ability in SelectedPlayerAbilities)
-            {
-                if (!string.IsNullOrEmpty(ability.ReplacesAbility))
-                {
-                    PlayerAbility toRemove = resultAbilities.Find(a => a.Name == ability.ReplacesAbility);
-                    if(toRemove != null)
-                    {
-                        resultAbilities.Remove(toRemove);
-                    }
-                }
-            }
-
-            /* 8. Handle spells that have been added by abilities. */
-            foreach (PlayerSpell sp in spellsAddedByAbilities)
-            {
-                _myCharacter.AddSpell(sp);
-            }
-
-            /* 9. Connect the abilities list to the character. */
-            _myCharacter.setCharacterAbilitiesList(resultAbilities, true);
-
-            /* 10. Initialize new abilities */
-            foreach (PlayerAbility ability in _myCharacter.CharacterAbilitiesObjectList)
-            {
-                ability.HandleInit();
-            }
-
-            /* 11. Update character main attributes. */
+            /* 4. Update character main attributes. */
             finalizeCharacterAttributes();
 
-            /* 12. Update the proficiency bonus if applicable */
+            /* 5. Update the proficiency bonus if applicable */
             updateProficiencyBonus();
         }
 
@@ -290,25 +223,10 @@ namespace CharacterManager.UserControls
             _myCharacter.CurrentHitDice++;
         }
 
-        private void finalizeNewArchetypeSelection()
-        {
-            PlayerClass _myClass = _myCharacter.GetPlayerClass();
 
-            /* We might have selected a new Archetype. Lets update the Subclass property here. */
-            foreach (PlayerAbility ability in SelectedPlayerAbilities)
-            {
-                PlayerClassArchetype _myArchetype = _myClass.ArcheTypes.Find(at => at.ArcheTypeName == ability.Name);
-                if (_myArchetype != null)
-                {
-                    _myCharacter.SubClassName = _myArchetype.Name;
-                    break; /* Lets assume that there is no way to select more than one archetype at a time... */
-                }
-            }
-        }
 
         private void finalizeNewProficiencies()
         {
-            /* TODO : Some abilities might add things like proficiencies, languages etc. TODO : Handle this here. */
             _myCharacter.SkillProficiencies.AddRange(newSelectedProficiencies);
             _myCharacter.SkillExpertise.AddRange(newSelectedExpertise);
         }

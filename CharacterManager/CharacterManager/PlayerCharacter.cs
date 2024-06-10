@@ -627,6 +627,96 @@ namespace CharacterManager
             return result;
         }
 
+        public void setupCharacterNewAbilitiesList(List<PlayerAbility> newList)
+        {
+            /* Some abilities might just fire once and they will not be added to the abilities list. 
+             So we create a list of selected abilities that should be removed once character has been finalized */
+            List<PlayerAbility> HiddenAbilities = new List<PlayerAbility>();
+            List<PlayerSpell> spellsAddedByAbilities = new List<PlayerSpell>();
+
+            foreach (PlayerAbility ability in newList)
+            {
+                if (ability.IsHidden)
+                {
+                    HiddenAbilities.Add(ability);
+                }
+            }
+
+            /* 1.  Handle the case of a new archetype being selected. */
+            handleNewArchetypeSelection(newList);
+
+            /* 2. Fire the application of more complex new selected abilities. */
+            foreach (PlayerAbility selectedAbility in newList)
+            {
+                List<PlayerSpell> spellsAddedByAbility;
+                selectedAbility.HandleAbilitySelected(this, out spellsAddedByAbility);
+                spellsAddedByAbilities.AddRange(spellsAddedByAbility);
+            }
+
+            /* 3. Remove the hidden abilities from the list. */
+            foreach (PlayerAbility Hidden in HiddenAbilities)
+            {
+                newList.Remove(Hidden);
+            }
+
+            /* 4. Connect the new abilities to the character. */
+            List<PlayerAbility> resultAbilities = this.CharacterAbilitiesObjectList;
+
+            foreach (PlayerAbility newAbility in newList)
+            {
+                if (!resultAbilities.Contains(newAbility))
+                {
+                    resultAbilities.Add(newAbility);
+                }
+            }
+
+            /* 5. Handle abilities that replace other abilities. */
+            foreach (PlayerAbility ability in newList)
+            {
+                if (!string.IsNullOrEmpty(ability.ReplacesAbility))
+                {
+                    PlayerAbility toRemove = resultAbilities.Find(a => a.Name == ability.ReplacesAbility);
+                    if (toRemove != null)
+                    {
+                        resultAbilities.Remove(toRemove);
+                    }
+                }
+            }
+
+            /* 6. Handle spells that have been added by abilities. */
+            foreach (PlayerSpell sp in spellsAddedByAbilities)
+            {
+                this.AddSpell(sp);
+            }
+
+            /* 7. Connect the abilities list to the character. */
+            this.setCharacterAbilitiesList(resultAbilities, true);
+
+            /* 8. Initialize new abilities */
+            foreach (PlayerAbility ability in this.CharacterAbilitiesObjectList)
+            {
+                ability.HandleInit();
+            }
+        }
+
+
+        private void handleNewArchetypeSelection(List<PlayerAbility> newList)
+        {
+            PlayerClass _myClass = this.GetPlayerClass();
+
+            /* We might have selected a new Archetype. Lets update the Subclass property here. */
+            foreach (PlayerAbility ability in newList)
+            {
+                PlayerClassArchetype _myArchetype = _myClass.ArcheTypes.Find(at => at.ArcheTypeName == ability.Name);
+                if (_myArchetype != null)
+                {
+                    this.SubClassName = _myArchetype.Name;
+                    break; /* Lets assume that there is no way to select more than one archetype at a time... */
+                }
+            }
+        }
+
+
         public void setCharacterAbilitiesList(List<PlayerAbility> abilityList, Boolean overwriteDescriptors)
         {
             CharacterAbilitiesObjectList = abilityList;
