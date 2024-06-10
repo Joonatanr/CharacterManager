@@ -129,14 +129,45 @@ namespace CharacterManager
         [XmlIgnore]
         public List<string> KnownSpells
         {
-            get { return CharacterSpellCastingStatus.KnownSpells;     }
+            get 
+            {
+                if (CharacterSpellCastingStatus != null)
+                {
+                    return CharacterSpellCastingStatus.KnownSpells;
+                }
+                else
+                {
+                    return new List<string>();
+                }
+            }
             set 
             {
-                /* TODO : Consider if Spellcasting is null??? */
                 if (CharacterSpellCastingStatus != null)
                 {
                     CharacterSpellCastingStatus.KnownSpells = value;
                 }
+            }
+        }
+
+        [XmlIgnore]
+        public List<string> KnownCantrips
+        {
+            get
+            {
+                List<string> res = new List<string>();
+                if (CharacterSpellCastingStatus != null)
+                {
+                    foreach (string sp in CharacterSpellCastingStatus.KnownSpells)
+                    {
+                        PlayerSpell spellObj = CharacterFactory.getPlayerSpellFromString(sp);
+                        if(spellObj.SpellLevel == 0)
+                        {
+                            res.Add(spellObj.Name);
+                        }
+                    }
+                }
+
+                return res;
             }
         }
 

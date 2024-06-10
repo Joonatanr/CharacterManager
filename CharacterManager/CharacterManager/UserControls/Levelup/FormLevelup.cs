@@ -233,6 +233,10 @@ namespace CharacterManager.UserControls
 
         private void finalizeSpellselections()
         {
+            /* Here is the issue : Even if all spells are available, then not all cantrips are...
+             Soo.. even if we are rebuilding the whole spell list, then we need to preserve cantrip data for this particular case. */
+            List<string> knownCantrips = _myCharacter.KnownCantrips;
+
             /* We reset the known spells here and start rebuilding this information. 
                 Spells will be updated based on player selection as well as abilities that can provide new spells. */
             _myCharacter.KnownSpells = new List<string>();
@@ -247,6 +251,11 @@ namespace CharacterManager.UserControls
                     foreach (PlayerSpell sp in allSpells)
                     {
                         _myCharacter.AddSpell(sp);
+                    }
+
+                    foreach(string knownCantrip in knownCantrips)
+                    {
+                        _myCharacter.AddSpell(knownCantrip);
                     }
                 }
                 else

@@ -535,6 +535,16 @@ chapter 11 for the cleric spell list..</Description>
 	<!-- Level 4 -->
 	<!-- Ability score improvement -->
 	
+	<!-- Level 5 -->
+	<AvailableClassAbilitiesLevel5>
+		<PlayerClassAbilityChoice>
+			<Description>Channel Divinity: Destroy Undead</Description>
+				<ClassAbilityName>Channel Divinity: Destroy Undead</ClassAbilityName>
+					<AvailableChoices>
+						<string>Channel Divinity: Destroy Undead</string>
+					</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel5>
 	
 	<ArcheTypes>
 		<PlayerClassArchetype>
