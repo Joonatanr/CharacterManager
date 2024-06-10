@@ -489,13 +489,13 @@ Onatar, Moradin, Hephaestus, and Goibhniu.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
-			<AvailableClassAbilitiesLevel2>
+			<AvailableAbilitiesAtLevel2>
 				<PlayerClassAbilityChoice>
 					<AvailableChoices>
 						<string>Channel Divinity: Knowledge Of The Ages</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
-			</AvailableClassAbilitiesLevel2>
+			</AvailableAbilitiesAtLevel2>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -567,6 +567,13 @@ with chasing away lies and burning away darkness.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity: Radiance Of The Dawn</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
 		</PlayerClassArchetype>
 		
 		
@@ -602,11 +609,18 @@ or wither the crops of those who anger their gods.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity: Charm Animals And Plants</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
 			<Name>Tempest Domain</Name>
-			<Description>G ods whose portfolios include the Tempest domain -
+			<Description>Gods whose portfolios include the Tempest domain -
 including Talos, Umberlee, Kord, Zeboim , the
 Devourer, Zeus, and Thor — govern storms, sea, and
 sky. They include gods of lightning and thunder, gods
@@ -635,6 +649,13 @@ common folk, either to keep those folk on the path of</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity: Destructive Wrath</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -662,6 +683,13 @@ direct confrontation</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity: Invoke Duplicity</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -699,6 +727,13 @@ circumstance.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity: War God's Blessing</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	

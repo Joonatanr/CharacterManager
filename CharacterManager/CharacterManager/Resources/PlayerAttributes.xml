@@ -2980,4 +2980,94 @@ use this feature on an undead or a construct.</Description>
 		</AdditionalManeuversAdded>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<Name>Channel Divinity: Radiance Of The Dawn</Name>
+		<Description>Starting at 2nd level, you can use your Channel Divinity
+to harness sunlight, banishing darkness and dealing
+radiant damage to your foes.
+As an action, you present your holy symbol, and any
+magical darkness within 30 feet of you is dispelled.
+Additionally, each hostile creature within 30 feet of
+you must make a Constitution saving throw. A creature
+takes radiant damage equal to 2d10 + your cleric level
+on a failed saving throw, and half as much damage on a
+successful one. A creature that has total cover from you
+is not affected.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>Radiance Of The Dawn</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Channel Divinity: Charm Animals And Plants</Name>
+		<Description>Starting at 2nd level, you can use your Channel Divinity
+to charm animals and plants.
+As an action, you present your holy sym bol and invoke
+the name of your deity. Each beast or plant creature that
+can see you within 30 feet of you must make a Wisdom
+saving throw. If the creature fails its saving throw, it is
+charm ed by you for 1 minute or until it takes damage.
+While it is charmed by you, it is friendly to you and other
+creatures you designate.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>Charm Animals And Plants</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Channel Divinity: Destructive Wrath</Name>
+		<Description>Starting at 2nd level, you can use your Channel Divinity
+to wield the power of the storm with unchecked ferocity.
+When you roll lightning or thunder damage, you can
+use your Channel Divinity to deal maximum damage,
+idnstead of rolling.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>Destructive Wrath</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Channel Divinity: Invoke Duplicity</Name>
+		<Description>Starting at 2nd level, you can use your Channel Divinity
+to create an illusory duplicate o f yourself.
+As an action, you create a perfect illusion of
+yourself that lasts for 1 minute, or until you lose your
+concentration (as if you were concentrating on a spell).
+The illusion appears in an unoccupied space that you
+can see within 30 feet of you. As a bonus action on your
+turn, you can move the illusion up to 30 feet to a space
+you can see, but it must remain within 120 feet o f you.
+For the duration, you can cast spells as though you
+were in the illusion’s space, but you must use your own
+senses. Additionally, when both you and your illusion
+are within 5 feet of a creature that can see the illusion,
+you have advantage on attack rolls against that creature,
+given how distracting the illusion is to the target..</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>Invoke Duplicity</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Channel Divinity: War God's Blessing</Name>
+		<Description>At 6th level, when a creature within 30 feet of you
+makes an attack roll, you can use your reaction to grant
+that creature a +10 bonus to the roll, using your Channel
+Divinity. You make this choice after you see the roll, but
+before the DM says whether the attack hits or misses.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>War God's Blessing</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+	
 </ArrayOfPlayerAbility>
