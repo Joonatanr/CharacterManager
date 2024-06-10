@@ -244,7 +244,7 @@ namespace CharacterManager.UserControls
             /* Update spell data. */
             if (_myCharacter.SpellCasting != null)
             { 
-                if (_myCharacter.SpellCasting.IsAllSpellsAvailable)
+                if (_myCharacter.SpellCasting.IsAllSpellsAvailable && (_myCharacter.SpellCasting.GetNewCantripsLearnedAtLevel(_myCharacter.Level) == 0))
                 {
                     List<PlayerSpell> allSpells = _myCharacter.SpellCasting.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
 
@@ -431,7 +431,7 @@ namespace CharacterManager.UserControls
 
             if (selectedSpellcasting != null)
             {
-                if (selectedSpellcasting.IsAllSpellsAvailable)
+                if (selectedSpellcasting.IsAllSpellsAvailable && (selectedSpellcasting.GetNewCantripsLearnedAtLevel(_myCharacter.Level) == 0))
                 {
                     /* This is going to be really fun when implementing multiclassing.... */
                     MessageBox.Show("With current class, all spells are available");
