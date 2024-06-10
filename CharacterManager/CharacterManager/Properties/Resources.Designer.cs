@@ -19,7 +19,7 @@ namespace CharacterManager.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -153,6 +153,10 @@ namespace CharacterManager.Properties {
         ///	&lt;MaximumAge&gt;100&lt;/MaximumAge&gt;
         ///	&lt;Size&gt;Medium&lt;/Size&gt;
         ///	&lt;BaseSpeed&gt;30&lt;/BaseSpeed&gt;
+        ///	&lt;KnownLanguages&gt;
+        ///		&lt;string&gt;Common&lt;/string&gt;
+        ///		&lt;string&gt;ChooseAny&lt;/string&gt;
+        ///	&lt;/KnownLanguages&gt;
         ///&lt;/PlayerRace&gt;.
         /// </summary>
         internal static string Human {

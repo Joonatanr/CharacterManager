@@ -448,6 +448,16 @@ chapter 11 for the cleric spell list..</Description>
 					</AvailableChoices>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel1>
+	<!-- Level 2 -->
+	<AvailableClassAbilitiesLevel2>
+		<PlayerClassAbilityChoice>
+			<Description>Channel Divinity</Description>
+				<ClassAbilityName>Channel Divinity</ClassAbilityName>
+					<AvailableChoices>
+						<string>Channel Divinity (Cleric)</string>
+					</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel2>
 	
 	
 	<ArcheTypes>
@@ -677,4 +687,13 @@ circumstance.</Description>
 			</AvailableAbilitiesAtLevel1>
 		</PlayerClassArchetype>
 	</ArcheTypes>
+	
+	<AbilityScoreImprovementsAtLevels>
+		<int>4</int>
+		<int>8</int>
+		<int>12</int>
+		<int>16</int>
+		<int>19</int>
+	</AbilityScoreImprovementsAtLevels>
+	
 </PlayerClass>
