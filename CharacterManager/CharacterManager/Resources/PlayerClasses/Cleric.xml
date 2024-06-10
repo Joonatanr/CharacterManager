@@ -178,7 +178,79 @@ chapter 11 for the cleric spell list..</Description>
 			<string>Warding Bond</string>
 			<string>Zone Of Truth</string>
 			<!-- Level 3 spells-->
-			
+			<string>Animate Dead</string>
+			<string>Beacon Of Hope</string>
+			<string>Bestow Curse</string>
+			<string>Clairvoyance</string>
+			<string>Create Food And Water</string>
+			<string>Daylight</string>
+			<string>Dispel Magic</string>
+			<string>Feign Death</string>
+			<string>Glyph Of Warding</string>
+			<string>Magic Circle</string>
+			<string>Mass Healing Word</string>
+			<string>Meld Into Stone</string>
+			<string>Protection From Energy</string>
+			<string>Remove Curse</string>
+			<string>Revivify</string>
+			<string>Sending</string>
+			<string>Speak With The Dead</string>
+			<string>Spirit Guardians</string>
+			<string>Tongues</string>
+			<string>Water Walk</string>
+			<!-- Level 4 spells-->
+			<string>Banishment</string>
+			<string>Control Water</string>
+			<string>Death Ward</string>
+			<string>Divination</string>
+			<string>Freedom Of Movement</string>
+			<string>Guardian Of Faith</string>
+			<string>Locate Creature</string>
+			<string>Stone Shape</string>
+			<!-- Level 5 spells-->
+			<string>Commune</string>
+			<string>Contagion</string>
+			<string>Dispel Evil and Good</string>
+			<string>Flame Strike</string>
+			<string>Geas</string>
+			<string>Greater Restoration</string>
+			<string>Hallow</string>
+			<string>Insect Plague</string>
+			<string>Legend Lore</string>
+			<string>Mass Cure Wounds</string>
+			<string>Planar Binding</string>
+			<string>Raise Dead</string>
+			<string>Scrying</string>
+			<!-- Level 6 spells-->
+			<string>Blade Barrier</string>
+			<string>Create Undead</string>
+			<string>Find the Path</string>
+			<string>Forbiddance</string>
+			<string>Harm</string>
+			<string>Heal</string>
+			<string>Heroes' Feast</string>
+			<string>Planar Ally</string>
+			<string>True Seeing</string>
+			<string>Word Of Recall</string>
+			<!-- Level 7 spells-->
+			<string>Conjure Celestial</string>
+			<string>Divine Word</string>
+			<string>Etherealness</string>
+			<string>Fire Storm</string>
+			<string>Plane Shift</string>
+			<string>Regenerate</string>
+			<string>Resurrection</string>
+			<string>Symbol</string>
+			<!-- Level 8 spells-->
+			<string>Antimagic Field</string>
+			<string>Control Weather</string>
+			<string>Earthquake</string>
+			<string>Holy Aura</string>
+			<!-- Level 9 spells-->
+			<string>Astral Projection</string>
+			<string>Gate</string>
+			<string>Mass Heal</string>
+			<string>True Resurrection</string>
 		</AvailableSpells>
 		
 		<SpellslotPerLevel>
@@ -458,6 +530,10 @@ chapter 11 for the cleric spell list..</Description>
 					</AvailableChoices>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel2>
+	<!-- Level 3 -->
+	<!-- No new abilities at level 3 -->
+	<!-- Level 4 -->
+	<!-- Ability score improvement -->
 	
 	
 	<ArcheTypes>
