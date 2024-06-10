@@ -489,6 +489,13 @@ Onatar, Moradin, Hephaestus, and Goibhniu.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
+			<AvailableClassAbilitiesLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity: Knowledge Of The Ages</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableClassAbilitiesLevel2>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -522,6 +529,13 @@ community (such as Hestia, Hathor, and Boldrei).</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel1>
+			<AvailableAbilitiesAtLevel2>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity: Preserve Life</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel2>
 		</PlayerClassArchetype>
 		
 		

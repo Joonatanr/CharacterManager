@@ -697,6 +697,13 @@ namespace CharacterManager
             {
                 ability.HandleInit();
             }
+
+            /* 9. Special case : Here we might have abilities that are hidden, but need to be fired in the very end.
+             These for example might modify other existing abilities, such as by adding new maneuvers. */
+            foreach(PlayerAbility ability in HiddenAbilities)
+            {
+                ability.HandleAbilitySelectedFinal(this);
+            }
         }
 
 

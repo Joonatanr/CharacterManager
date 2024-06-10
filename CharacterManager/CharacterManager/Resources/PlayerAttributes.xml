@@ -2949,4 +2949,35 @@ a short or long rest, you regain your expended uses.</Description>
 		</Upgrades>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<Name>Channel Divinity: Knowledge Of The Ages</Name>
+		<Description>Starting at 2nd level, you can use your Channel Divinity
+to tap into a divine well of knowledge. As an action,
+you choose one skill or tool. For 10 minutes, you have
+proficiency with the chosen skill or tool.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>Knowledge Of The Ages</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Channel Divinity: Preserve Life</Name>
+		<Description>Starting at 2nd level, you can use your Channel Divinity
+to heal the badly injured.
+As an action, you present your holy symbol and
+evoke healing energy that can restore a number of hit
+points equal to five times your cleric level. Choose any
+creatures within 30 feet of you, and divide those hit
+points among them. This feature can restore a creature
+to no more than half of its hit point maximum. You can’t
+use this feature on an undead or a construct.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>Preserve Life</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+	
 </ArrayOfPlayerAbility>

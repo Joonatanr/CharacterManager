@@ -1,4 +1,5 @@
 ﻿using CharacterManager.Items;
+using CharacterManager.SpecialAttributes;
 using CharacterManager.Spells;
 using CharacterManager.UserControls;
 using System;
@@ -69,6 +70,11 @@ namespace CharacterManager
 
         public List<String> AdditionalArmorProficiencies = new List<string>();
         public List<String> AdditionalWeaponProficiencies = new List<string>();
+
+        /* This one is a bit tricky... Some abilities might give extra maneuvers to already existing abilities. */
+        /* TODO : Implement this. */
+        public string AdditionalManeuversToAbility = "";
+        public List<string> AdditionalManeuversAdded = new List<string>();
 
         /* Some abilities might increase base attributes. */
         public int StrIncrease = 0;
@@ -507,6 +513,36 @@ So we get to an issue where upgrades to the description are added multiple times
                 if (!c.ArmorProficiencies.Contains(armorProficiency))
                 {
                     c.ArmorProficiencies.Add(armorProficiency);
+                }
+            }
+
+
+        }
+
+        /// <summary>
+        /// This should be called at the very end for hidden abilities that are used to modify
+        /// other abilities (such as by providing new combat maneuvers).
+        /// </summary>
+        /// <param name="c"></param>
+        public virtual void HandleAbilitySelectedFinal(PlayerCharacter c)
+        {
+            /* Here is a more complex option : We might get new maneuvers from abilities. */
+            if (!string.IsNullOrEmpty(this.AdditionalManeuversToAbility))
+            {
+                if (this.AdditionalManeuversAdded.Count > 0)
+                {
+                    /* First we need to find the corresponding master ability... */
+                    PlayerAbility MasterAbility = c.CharacterAbilitiesObjectList.Find(ability => ability.Name == this.AdditionalManeuversToAbility);
+                    if (MasterAbility != null)
+                    {
+                        PlayerManeuverAbility maneuverObj = MasterAbility as PlayerManeuverAbility;
+
+                        foreach (string newManeuver in this.AdditionalManeuversAdded)
+                        {
+                            CombatManeuver myNewManeuverObj = CharacterFactory.getCombatManeuverByName(newManeuver);
+                            maneuverObj.ChosenManeuverObjects.Add(myNewManeuverObj);
+                        }
+                    }
                 }
             }
         }

@@ -284,6 +284,11 @@ namespace CharacterManager
             return CombatManeuverList;
         }
 
+        public static CombatManeuver getCombatManeuverByName(string name)
+        {
+            return CombatManeuverList.Find(m => m.Name == name);
+        }
+
 
         public static List<CharacterBackGround> getAllBackGrounds()
         {
