@@ -189,7 +189,7 @@ namespace CharacterManager.UserControls
 
             myForm.setFixedSpells(KnownSpells, 0);
 
-            List<PlayerSpell> SpellsAvailableForLearning = _connectedCharacter.SpellCasting.GetSpellsThatCanBeLearnedAtLevel(_connectedCharacter.Level);
+            List<PlayerSpell> SpellsAvailableForLearning = _connectedCharacter.SpellCasting.GetSpellsAndCantripsThatCanBeLearnedAtLevel(_connectedCharacter.Level);
 
             /* Add spells */
             /* TODO : Here we have a special case, as we have no limit really to how many spells can be copied. The cost will only be relevant. */

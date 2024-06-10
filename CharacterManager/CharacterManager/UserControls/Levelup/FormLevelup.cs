@@ -436,7 +436,7 @@ namespace CharacterManager.UserControls
 
                 myForm.setFixedSpells(KnownSpells, selectedSpellcasting.SpellsReplacedAtLevelup[_myCharacter.Level - 1]);
 
-                List<PlayerSpell> SpellsAvailableForLearning = selectedSpellcasting.GetSpellsThatCanBeLearnedAtLevel(_myCharacter.Level);
+                List<PlayerSpell> SpellsAvailableForLearning = selectedSpellcasting.GetSpellsAndCantripsThatCanBeLearnedAtLevel(_myCharacter.Level);
 
                 /* Add spells */
                 myForm.setSpellChoices(SpellsAvailableForLearning, selectedSpellcasting.GetNewCantripsLearnedAtLevel(_myCharacter.Level), selectedSpellcasting.GetNewSpellsLearnedAtLevel(_myCharacter.Level), 0);

@@ -1,7 +1,7 @@
 <PlayerCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SkillProficiencies>
-    <string>Persuasion</string>
     <string>Medicine</string>
+    <string>Insight</string>
     <string>History</string>
     <string>Arcana</string>
   </SkillProficiencies>
@@ -10,8 +10,8 @@
   <Languages>
     <string>Common</string>
     <string>Draconic</string>
+    <string>Dwarvish</string>
     <string>Gnomish</string>
-    <string>Orcish</string>
   </Languages>
   <WeaponProficiencies>
     <string>Simple Weapons</string>
@@ -29,14 +29,14 @@
   </SavingThrowProficiencies>
   <CharacterAbilities>
     <PlayerAbilityDescriptor>
-      <AbilityName>Lightning Breath</AbilityName>
+      <AbilityName>Fire Breath(Brass)</AbilityName>
       <RemainingCharges>1</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
       <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
-      <AbilityName>Lightning Resistance</AbilityName>
+      <AbilityName>Fire Resistance</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
@@ -110,6 +110,45 @@
       <IsMagical>false</IsMagical>
       <MagicalBonus>0</MagicalBonus>
     </PlayerWeapon>
+    <PlayerWeapon>
+      <Name>Quarterstaff</Name>
+      <Weight>4</Weight>
+      <Cost>0.2</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>false</IsAmmunition>
+      <IsFinesse>false</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>false</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>false</IsThrown>
+      <IsTwoHanded>false</IsTwoHanded>
+      <IsVersatile>true</IsVersatile>
+      <IsRanged>false</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Simple</Type>
+      <Range>
+        <NormalRange>0</NormalRange>
+        <LongRange>0</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d6</DamageValue>
+        <Type>Bludgeoning</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <DamageValue>1d8</DamageValue>
+        <Type>Bludgeoning</Type>
+      </TwoHandedDamage>
+      <ExtraDamage>
+        <Type>None</Type>
+      </ExtraDamage>
+      <IsEquipped>false</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType />
+      <IsMagical>false</IsMagical>
+      <MagicalBonus>0</MagicalBonus>
+    </PlayerWeapon>
   </CharacterWeapons>
   <CharacterArmors>
     <PlayerArmor>
@@ -148,21 +187,6 @@
     </PlayerArmor>
   </CharacterArmors>
   <CharacterGeneralEquipment>
-    <PlayerItem>
-      <Name>Light rossbow</Name>
-      <Weight>0</Weight>
-      <Cost>0</Cost>
-      <Quantity>1</Quantity>
-      <IsAmmo>false</IsAmmo>
-    </PlayerItem>
-    <PlayerItem>
-      <Description>Ammunition for crossbows</Description>
-      <Name>Bolts</Name>
-      <Weight>0.075</Weight>
-      <Cost>0.05</Cost>
-      <Quantity>20</Quantity>
-      <IsAmmo>true</IsAmmo>
-    </PlayerItem>
     <PlayerItem
       xsi:type="ItemContainer">
       <Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
@@ -254,12 +278,8 @@
   <CharacterSpellCastingStatus>
     <KnownSpells>
       <string>Light</string>
-      <string>Resistance</string>
-      <string>Sacred Flame</string>
-      <string>Guidance</string>
       <string>Mending</string>
-      <string>Spare The Dying</string>
-      <string>Thaumaturgy</string>
+      <string>Resistance</string>
       <string>Bane</string>
       <string>Bless</string>
       <string>Command</string>
@@ -276,7 +296,11 @@
       <string>Sanctuary</string>
       <string>Shield Of Faith</string>
     </KnownSpells>
-    <PreparedSpells />
+    <PreparedSpells>
+      <string>Command</string>
+      <string>Guiding Bolt</string>
+      <string>Inflict Wounds</string>
+    </PreparedSpells>
     <SpellCastingAbility>WIS</SpellCastingAbility>
     <SpellAbilityModifier>2</SpellAbilityModifier>
     <Level1SpellSlots>
@@ -319,24 +343,24 @@
   <Level>1</Level>
   <ProficiencyBonus>2</ProficiencyBonus>
   <ExperiencePoints>0</ExperiencePoints>
-  <MaxHitPoints>9</MaxHitPoints>
+  <MaxHitPoints>10</MaxHitPoints>
   <Speed>30</Speed>
   <Size>
     <height>0</height>
     <weight>0</weight>
     <sizeType>Tiny</sizeType>
   </Size>
-  <Alignment>NeutralGood</Alignment>
+  <Alignment>TrueNeutral</Alignment>
   <MainRaceName>Dragonborn</MainRaceName>
-  <SubRaceName>Blue Dragon Ancestry</SubRaceName>
+  <SubRaceName>Brass Dragon Ancestry</SubRaceName>
   <ClassName>Cleric</ClassName>
   <SubClassName>Life Domain</SubClassName>
   <BaseAttributes>
     <STR>14</STR>
-    <DEX>13</DEX>
-    <INT>10</INT>
+    <DEX>10</DEX>
+    <INT>13</INT>
     <CHA>9</CHA>
-    <CON>12</CON>
+    <CON>14</CON>
     <WIS>15</WIS>
   </BaseAttributes>
   <GoldPieces>10</GoldPieces>
@@ -345,6 +369,6 @@
   <SilverPieces>0</SilverPieces>
   <PlatinumPieces>0</PlatinumPieces>
   <CharacterName>TestCleric</CharacterName>
-  <CurrentHitPoints>9</CurrentHitPoints>
+  <CurrentHitPoints>10</CurrentHitPoints>
   <CurrentHitDice>1</CurrentHitDice>
 </PlayerCharacter>

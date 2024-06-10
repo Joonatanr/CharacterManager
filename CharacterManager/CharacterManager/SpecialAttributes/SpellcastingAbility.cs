@@ -62,7 +62,13 @@ namespace CharacterManager.SpecialAttributes
             this.IsToggle = false;
         }
 
-        public List<PlayerSpell> GetSpellsThatCanBeLearnedAtLevel(int playerLevel)
+
+        /// <summary>
+        /// We return a list of all spells and cantrips that are available for this level.
+        /// </summary>
+        /// <param name="playerLevel"></param>
+        /// <returns></returns>
+        public List<PlayerSpell> GetSpellsAndCantripsThatCanBeLearnedAtLevel(int playerLevel)
         {
             List<PlayerSpell> res = new List<PlayerSpell>();
 
@@ -81,9 +87,23 @@ namespace CharacterManager.SpecialAttributes
                 {
                     PlayerClass wizardClass = CharacterFactory.getPlayerClassByName("Wizard");
                     SpellcastingAbility wizardSpellcasting = CharacterFactory.GetSpellCastingAbilityOfClass(wizardClass, null);
-                    res.AddRange(wizardSpellcasting.GetSpellsThatCanBeLearnedAtLevel((playerLevel + 1) / 3));
+                    res.AddRange(wizardSpellcasting.GetSpellsAndCantripsThatCanBeLearnedAtLevel((playerLevel + 1) / 3));
                 }
             }
+
+            return res;
+        }
+
+        /// <summary>
+        /// We return a list of spells that can be learned at this level
+        /// NOTE : No cantrips are included here!!! 
+        /// </summary>
+        /// <param name="playerLevel"></param>
+        /// <returns></returns>
+        public List<PlayerSpell>GetSpellsThatCanBeLearnedAtLevel(int playerLevel)
+        {
+            List<PlayerSpell> allSpells = GetSpellsAndCantripsThatCanBeLearnedAtLevel(playerLevel);
+            List<PlayerSpell> res = allSpells.FindAll(sp => sp.SpellLevel > 0);
 
             return res;
         }
