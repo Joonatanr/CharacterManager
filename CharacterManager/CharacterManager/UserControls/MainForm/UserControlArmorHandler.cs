@@ -109,6 +109,7 @@ namespace CharacterManager.UserControls
         {
             SetListData(aList);
             setupButtons();
+            this.updateBackgroundImage();
             this.Invalidate();
         }
     

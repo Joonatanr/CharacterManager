@@ -307,6 +307,7 @@ namespace CharacterManager.UserControls
                 y++;
             }
 
+            this.updateBackgroundImage();
             this.Invalidate();
         }
 

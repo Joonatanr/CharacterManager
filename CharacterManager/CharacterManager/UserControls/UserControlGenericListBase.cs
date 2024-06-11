@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CharacterManager.Items;
+using System.Drawing.Drawing2D;
 
 namespace CharacterManager.UserControls
 {
@@ -68,11 +69,15 @@ namespace CharacterManager.UserControls
         }
 
 
+        private Bitmap background_bitmap;
+
         public UserControlGenericListBase()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             originalHeight = this.Height;
+
+            updateBackgroundImage();
         }
 
         public virtual void SetListData(List<ListItemType> data)
@@ -82,6 +87,8 @@ namespace CharacterManager.UserControls
             /* We reset any previous margin data. */
             LeftMargin = new Dictionary<int, int>();
             RightMargin = new Dictionary<int, int>();
+
+            updateBackgroundImage();
         }
 
         /// <summary>
@@ -196,30 +203,14 @@ namespace CharacterManager.UserControls
         {
             base.OnPaint(pea);
 
-
-            pea.Graphics.TranslateTransform(this.AutoScrollPosition.X,
-                                this.AutoScrollPosition.Y);
+            //pea.Graphics.TranslateTransform(this.AutoScrollPosition.X,
+            //                    this.AutoScrollPosition.Y);
 
             //Lets use the panel for drawing.
             Graphics gfx = pea.Graphics;
 
-            maxLine = 0;
-
-            drawBackGround(gfx);
-            //So lets draw the lines next.
-
-            drawLines(gfx);
-
-            Font myFont = new Font("Arial", 14);
-
-            drawDisplayedData(gfx, myFont);
-
-            /* A crude automatic resizing mechanism... */
-            if (getNumberOfVisibleLines() < maxLine) 
-            {
-                this.Height = ((maxLine + 1) * lineInterval) + 4;
-            }
-
+            /* Beginning test. */
+            gfx.DrawImage(background_bitmap, 0, 0);
         }
 
        
@@ -365,7 +356,39 @@ namespace CharacterManager.UserControls
 
         private void UserControlGenericListBase_SizeChanged(object sender, EventArgs e)
         {
-            //this.Invalidate();
+            updateBackgroundImage();
+            this.Invalidate();
+        }
+
+        protected void updateBackgroundImage()
+        {
+#if true
+            background_bitmap = new Bitmap(Width, Height);
+            Graphics g = Graphics.FromImage(background_bitmap);
+            drawBackGround(g);
+
+            maxLine = 0;
+            //So lets draw the lines next.
+
+            drawLines(g);
+
+            Font myFont = new Font("Arial", 14);
+            drawDisplayedData(g, myFont);
+
+            /* A crude automatic resizing mechanism... */
+            if (getNumberOfVisibleLines() < maxLine) 
+            {
+                this.Height = ((maxLine + 1) * lineInterval) + 4;
+            }
+
+#else
+            /* Test with a gradient bitmap */
+            background_bitmap = new Bitmap(Width, Height);
+            Graphics g = Graphics.FromImage(background_bitmap);
+            LinearGradientBrush lgb = new LinearGradientBrush(new Point(0, 0), new Point(Width, Height), Color.Black, Color.Red);
+            g.FillRectangle(lgb, 0, 0, Width, Height);
+            /* End of test. */
+#endif
         }
     }
 }

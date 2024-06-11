@@ -64,6 +64,8 @@ namespace CharacterManager.UserControls
             SetListData(eList);
             setupButtons();
             this.DoubleBuffered = true;
+
+            this.updateBackgroundImage();
             this.Invalidate();
         }
 

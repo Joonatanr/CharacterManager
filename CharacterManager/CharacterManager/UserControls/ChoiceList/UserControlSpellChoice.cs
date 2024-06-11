@@ -139,6 +139,7 @@ namespace CharacterManager.UserControls
             if(SpellSelectionChanged != null)
             {
                 SpellSelectionChanged.Invoke(spell, isChosen);
+                this.updateBackgroundImage();
             }
         }
     }

@@ -140,6 +140,8 @@ namespace CharacterManager.UserControls
             SetListData(wList);
             setupButtons();
             this.DoubleBuffered = true;
+
+            this.updateBackgroundImage();
             this.Invalidate();
         }
 

@@ -16,7 +16,7 @@ namespace CharacterManager.UserControls
         public String TitleString
         {
             get { return _titleString; }
-            set { _titleString = value; this.Invalidate(); }
+            set { _titleString = value; this.updateBackgroundImage(); this.Invalidate(); }
         }
 
         public bool IsAvailabilityCount { get; set; } = true;
@@ -195,6 +195,8 @@ namespace CharacterManager.UserControls
                 CustomButton iBtn = new CustomButton();
                 iBtn.Size = new Size(40, 18);
                 iBtn.Text = getInfoButtonLabel();
+                iBtn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+
                 ItemHandleControl<ItemType> ctrl = new ItemHandleControl<ItemType>(myItemDictionary[index], iBtn);
                 ctrl.ItemDescriptionArgs = this.ItemDescriptionArgs;
                 myControlList.Add(ctrl);
@@ -205,6 +207,8 @@ namespace CharacterManager.UserControls
                 {
                     CheckBox myCheckBox = new CheckBox();
                     myCheckBox.Size = new Size(16, 16);
+                    myCheckBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+
                     ctrl.setCheckBox(myCheckBox);
 
                     if (myLockedItemList.Find(lockedItem => lockedItem.Name == myItemDictionary[index].Name) != null)
@@ -236,6 +240,8 @@ namespace CharacterManager.UserControls
             }
 
             this.ResumeLayout();
+
+            this.updateBackgroundImage();
             this.Invalidate();
         }
 

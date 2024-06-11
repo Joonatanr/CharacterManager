@@ -17,7 +17,7 @@ namespace CharacterManager.UserControls
     {
         private string _titleString = "Proficiencies";
         
-        public string TitleString { get { return _titleString; } set { _titleString = value; this.Invalidate(); } }
+        public string TitleString { get { return _titleString; } set { _titleString = value; this.Invalidate(); this.updateBackgroundImage(); } }
         
         private List<string> _proficiencies = new List<string>();
 
@@ -29,6 +29,8 @@ namespace CharacterManager.UserControls
         public void setProficiencylist(List<string> proficiencies)
         {
             _proficiencies = proficiencies;
+
+            this.updateBackgroundImage();
             this.Invalidate();
         }
 
@@ -41,7 +43,6 @@ namespace CharacterManager.UserControls
         {
             int y = 0;
 
-            //gfx.DrawString(_titleString, font, new SolidBrush(Color.Black), new Point(1, 1));
             drawTextOnLine(gfx, _titleString, y, FontStyle.Bold);
             y++;
 

@@ -28,7 +28,7 @@ namespace CharacterManager.UserControls
         {
             updateLists(equipment);
             updateInfoButtons();
-
+            updateBackgroundImage();
             this.Invalidate();
         }
 
@@ -68,6 +68,7 @@ namespace CharacterManager.UserControls
 
             toolList = toolsets;
             updateInfoButtons();
+            updateBackgroundImage();
             this.Invalidate();
         }
 
@@ -129,6 +130,8 @@ namespace CharacterManager.UserControls
                 AddButtonOnLine(myBtn, y, 0);
                 y++;
             }
+
+            updateBackgroundImage();    
         }
 
 
