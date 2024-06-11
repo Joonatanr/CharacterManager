@@ -110,13 +110,22 @@ namespace CharacterManager.UserControls
                 userControlMaxPreparedSpells.Value = myStat.MaxNumberOfPreparedSpells.ToString();
                 userControlMaxPreparedSpells.ToolTip = BonusValueModifier.getToolTipStringFromList(myStat.MaxNumberOfPreparedModifiers);
                 userControlKnownSpells.MaximumAvailableChoices = myStat.MaxNumberOfPreparedSpells;
+                userControlKnownSpells.MaximumAvailableChoices += myStat.AlwaysPreparedSpells.Count;
 
                 if (myStat.PreparedSpells != null)
                 {
                     foreach (string sp in myStat.PreparedSpells)
                     {
                         /* We must programmatically set the selected spells... */
-                        userControlKnownSpells.setSpellSelection(sp, true);
+                        userControlKnownSpells.setSpellSelection(sp, true, false);
+                    }
+                }
+
+                if (myStat.AlwaysPreparedSpells != null)
+                {
+                    foreach (string sp in myStat.AlwaysPreparedSpells)
+                    {
+                        userControlKnownSpells.setSpellSelection(sp, true, true);
                     }
                 }
             }

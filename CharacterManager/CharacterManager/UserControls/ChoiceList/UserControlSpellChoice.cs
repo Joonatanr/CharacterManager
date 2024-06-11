@@ -60,9 +60,9 @@ namespace CharacterManager.UserControls
         }
 
         
-        internal void setSpellSelection(string spell, bool isSelected)
+        internal void setSpellSelection(string spell, bool isSelected, bool isLocked)
         {
-            setItemSelection(spell, isSelected);
+            setItemSelection(spell, isSelected, isLocked);
         }
 
         public UserControlSpellChoice() : base()

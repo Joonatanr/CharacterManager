@@ -104,13 +104,14 @@ namespace CharacterManager.UserControls
         }
 
 
-        public void setItemSelection(string item, bool isSelected)
+        public void setItemSelection(string item, bool isSelected, bool isLocked)
         {
             foreach (ItemHandleControl<ItemType> ctrl in myControlList)
             {
                 if (ctrl.Item.Name == item)
                 {
                     ctrl.isChecked = isSelected;
+                    ctrl.isEnabled = !isLocked;
                     break;
                 }
             }
