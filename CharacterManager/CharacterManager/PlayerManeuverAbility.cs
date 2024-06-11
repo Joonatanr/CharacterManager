@@ -76,14 +76,21 @@ namespace CharacterManager
                     resolveManeuverList();
                     isListResolved = true;
                 }
+                
+                /* TODO : This solution is a bit of a hack... */
                 if (IsManeuverChoiceAvailable)
                 {
                     return _chosenManeuverAbilities;
                 }
                 else
                 {
-                    /* We return all available maneuvers. */
-                    return _availableManeuverAbilities;
+                    /* We return all available maneuvers. The thing is we might have received some extra maneuvers here through abilities etc. */
+                    List<CombatManeuver> res = new List<CombatManeuver>();
+                    res.AddRange(_availableManeuverAbilities);
+                    res.AddRange(_chosenManeuverAbilities);
+                    res = res.Distinct().ToList();
+
+                    return res;
                 }
             }
 
@@ -298,7 +305,7 @@ namespace CharacterManager
             
             foreach(string chosenManeuver in ChosenManeuvers)
             {
-                CombatManeuver obj = _availableManeuverAbilities.Find(m => m.ManeuverName == chosenManeuver);
+                CombatManeuver obj = definedManeuvers.Find(m => m.ManeuverName == chosenManeuver);
                 if(obj != null)
                 {
                     _chosenManeuverAbilities.Add(obj);
