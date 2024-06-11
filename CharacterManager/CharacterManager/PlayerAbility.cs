@@ -444,9 +444,9 @@ So we get to an issue where upgrades to the description are added multiple times
         /// to the character, such as weapon, tool, language proficiencies, skills, expertise etc.
         /// </summary>
         /// <param name="c"></param>
-        public virtual void HandleAbilitySelected(PlayerCharacter c, out List<PlayerSpell> spellsAddedByAbility)
+        public virtual void HandleAbilitySelected(PlayerCharacter c, out List<PlayerSpell> resListOfNewSpells)
         {
-            spellsAddedByAbility = new List<PlayerSpell>();
+            resListOfNewSpells = new List<PlayerSpell>();
             
             /* Can be overridden by abilities. */
             c.StrengthAttribute += StrIncrease;
@@ -474,7 +474,7 @@ So we get to an issue where upgrades to the description are added multiple times
                 }
                 else
                 {
-
+                    resListOfNewSpells.Add(CharacterFactory.getPlayerSpellFromString(spellString));
                 }
             }
 
@@ -500,7 +500,7 @@ So we get to an issue where upgrades to the description are added multiple times
                 myForm.setSpellChoices(SpellsAvailableForLearning, 0, numberOfAnySpells, numberOfAnySpellOrCantrip);
                 if (myForm.ShowDialog() == DialogResult.OK)
                 {
-                    spellsAddedByAbility.AddRange(myForm.getChosenPlayerSpells());                    
+                    resListOfNewSpells.AddRange(myForm.getChosenPlayerSpells());                    
                 }
                 else
                 {
@@ -516,8 +516,6 @@ So we get to an issue where upgrades to the description are added multiple times
                     c.ArmorProficiencies.Add(armorProficiency);
                 }
             }
-
-
         }
 
         /// <summary>
@@ -626,6 +624,7 @@ So we get to an issue where upgrades to the description are added multiple times
         public virtual List<string> GetExtraChosenSpellsGivenByAbility()
         {
             List<string> res = new List<string>();
+            res.AddRange(SpellsAddedByAbility);
             return res;
         }
     }

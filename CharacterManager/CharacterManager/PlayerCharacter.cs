@@ -140,13 +140,6 @@ namespace CharacterManager
                     return new List<string>();
                 }
             }
-            set 
-            {
-                if (CharacterSpellCastingStatus != null)
-                {
-                    CharacterSpellCastingStatus.KnownSpells = value;
-                }
-            }
         }
 
         [XmlIgnore]
@@ -827,24 +820,36 @@ namespace CharacterManager
             AddSpell(sp.SpellName, isAlwaysPrepared);
         }
 
+        public void ResetAllKnownSpells()
+        {
+            if (this.CharacterSpellCastingStatus != null)
+            {
+                this.CharacterSpellCastingStatus.KnownSpells = new List<string>();
+            }
+        }
+
         public void AddSpell(string spellName, bool isAlwaysPrepared)
         {
-            if (KnownSpells.Contains(spellName))
+            try
             {
-                /* Do Nothing. Cannot learn a spell twice. */
-            }
-            else
-            {
-                KnownSpells.Add(spellName);
-            }
-
-            if (isAlwaysPrepared)
-            {
-                if (!AlwaysPreparedSpells.Contains(spellName))
+                if (KnownSpells.Contains(spellName))
                 {
-                    AlwaysPreparedSpells.Add(spellName);
+                    /* Do Nothing. Cannot learn a spell twice. */
+                }
+                else
+                {
+                    KnownSpells.Add(spellName);
+                }
+
+                if (isAlwaysPrepared && CharacterFactory.getPlayerSpellFromString(spellName).SpellLevel > 0)
+                {
+                    if (!AlwaysPreparedSpells.Contains(spellName))
+                    {
+                        AlwaysPreparedSpells.Add(spellName);
+                    }
                 }
             }
+            catch (Exception) { }
         }
 
         /// <summary>

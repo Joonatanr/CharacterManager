@@ -239,7 +239,7 @@ namespace CharacterManager.UserControls
 
             /* We reset the known spells here and start rebuilding this information. 
                 Spells will be updated based on player selection as well as abilities that can provide new spells. */
-            _myCharacter.KnownSpells = new List<string>();
+            _myCharacter.ResetAllKnownSpells();
 
             /* Update spell data. */
             if (_myCharacter.SpellCasting != null)

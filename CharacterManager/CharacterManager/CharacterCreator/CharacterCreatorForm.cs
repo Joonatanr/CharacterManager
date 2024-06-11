@@ -86,6 +86,9 @@ namespace CharacterManager.CharacterCreator
                 return false;
             }
 
+            /* Reset just in case. */
+            CreatedCharacter?.ResetAllKnownSpells();
+
 
             //1. Set player name.
             CreatedCharacter = new PlayerCharacter(textBoxCharName.Text);
@@ -229,7 +232,10 @@ namespace CharacterManager.CharacterCreator
                 chosenSpellNames.AddRange(ability.GetExtraChosenSpellsGivenByAbility());
             }
 
-            CreatedCharacter.KnownSpells = chosenSpellNames;
+            foreach(string Spellname in chosenSpellNames)
+            {
+                CreatedCharacter.AddSpell(Spellname, false);
+            }
 
             SpellSlotData dataForLevel1Spellslots = new SpellSlotData(0,0);
             dataForLevel1Spellslots.MaximumCount = SelectedClass.getSpellSlotsForLevel(1, 1);
