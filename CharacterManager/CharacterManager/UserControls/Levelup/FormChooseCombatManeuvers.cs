@@ -87,7 +87,7 @@ namespace CharacterManager.UserControls.Levelup
                     {
                         /* Simple sanity check */
                         PlayerManeuverAbility existingManeuverAbility = existingAbility as PlayerManeuverAbility;
-                        List<CombatManeuver> existingManeuvers = existingManeuverAbility.ChosenManeuverObjects;
+                        List<CombatManeuver> existingManeuvers = existingManeuverAbility.GetAllChosenManeuvers();
 
                         /* TODO : We might be able to replace maneuvers in some cases. */
                         userControlManeuverChoiceAvailableManeuvers.setFixedItemList(existingManeuvers, 0);
@@ -99,7 +99,13 @@ namespace CharacterManager.UserControls.Levelup
         private void buttonOk_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            this._myAbility.ChosenManeuverObjects = userControlManeuverChoiceAvailableManeuvers.getSelectedItems();
+            List<string> resChoices = new List<string>();
+            foreach(CombatManeuver maneuver in userControlManeuverChoiceAvailableManeuvers.getSelectedItems())
+            {
+                resChoices.Add(maneuver.Name);
+            }
+
+            this._myAbility.SetManeuverList(resChoices);
             this.Close();
         }
     }

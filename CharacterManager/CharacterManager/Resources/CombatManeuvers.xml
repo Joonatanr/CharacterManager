@@ -366,7 +366,7 @@ before the DM says whether the attack hits or misses.</Description>
 	</CombatManeuver>
 	
 	<CombatManeuver>
-		<ManeuverName>Channel Divinity: Destroy Undead</ManeuverName>
+		<ManeuverName>Destroy Undead</ManeuverName>
 		<Description>Starting at 5th level, when an undead fails its saving
 throw against your Turn Undead feature, the creature is
 instantly destroyed if its challenge rating is at or below a

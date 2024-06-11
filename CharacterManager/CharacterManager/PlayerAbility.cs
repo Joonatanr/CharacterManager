@@ -541,7 +541,8 @@ So we get to an issue where upgrades to the description are added multiple times
                         foreach (string newManeuver in this.AdditionalManeuversAdded)
                         {
                             CombatManeuver myNewManeuverObj = CharacterFactory.getCombatManeuverByName(newManeuver);
-                            maneuverObj.ChosenManeuverObjects.Add(myNewManeuverObj);
+                            //maneuverObj.ChosenManeuverObjects.Add(myNewManeuverObj);
+                            maneuverObj.AddNewManeuver(myNewManeuverObj);
                         }
                     }
                 }

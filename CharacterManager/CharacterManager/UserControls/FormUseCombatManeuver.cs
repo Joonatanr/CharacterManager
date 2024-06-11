@@ -48,7 +48,7 @@ namespace CharacterManager.UserControls
         {
             if(_myManeuverAbility != null)
             {
-                userControlManeuverChoice1.setAvailableManeuverChoices(_myManeuverAbility.ChosenManeuverObjects);
+                userControlManeuverChoice1.setAvailableManeuverChoices(_myManeuverAbility.GetAllChosenManeuvers());
                 userControlSpellSlotRow1.NumberOfSlots = _myManeuverAbility.MaximumCharges;
                 userControlSpellSlotRow1.NumberOfRemainingSlots = _myManeuverAbility.RemainingCharges;
                 userControlSpellSlotRow1.ActiveSlotsChanged = new UserControlSpellSlotRow.ActiveSlotsChangedListener(HandleManeuverChargesChangedByUser);

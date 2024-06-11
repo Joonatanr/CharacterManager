@@ -17,6 +17,8 @@ namespace CharacterManager
     {
         public List<string> AvailableManeuvers = new List<string>();
         public List<string> ChosenManeuvers = new List<string>();
+
+
         public string DcAbility = "STR";
         public string ManeuverListTitle = "Maneuvers";
         public string ChargesDisplayedName = "Charges";
@@ -45,71 +47,37 @@ namespace CharacterManager
         public int AvailableManeuversAtLevel19 = 0;
         public int AvailableManeuversAtLevel20 = 0;
 
-        private List<CombatManeuver> _availableManeuverAbilities = null;
         [XmlIgnore]
         public List<CombatManeuver> AvailableManeuverObjects
         {
             get
             {
-                if (!isListResolved)
+                List<CombatManeuver> res = new List<CombatManeuver>();
+                foreach(string maneuverString in AvailableManeuvers)
                 {
-                    resolveManeuverList();
-                    isListResolved = true;
+                    res.Add(CharacterFactory.getCombatManeuverByName(maneuverString));
                 }
-                return _availableManeuverAbilities;
-            }
 
-            set
-            {
-                _availableManeuverAbilities = value;
+                return res;
             }
         }
 
-        private List<CombatManeuver> _chosenManeuverAbilities = null;
         [XmlIgnore]
         public List<CombatManeuver> ChosenManeuverObjects
         {
             get
             {
-                if (!isListResolved)
+                List<CombatManeuver> res = new List<CombatManeuver>();
+                foreach (string maneuverString in ChosenManeuvers)
                 {
-                    resolveManeuverList();
-                    isListResolved = true;
+                    res.Add(CharacterFactory.getCombatManeuverByName(maneuverString));
                 }
-                
-                /* TODO : This solution is a bit of a hack... */
-                if (IsManeuverChoiceAvailable)
-                {
-                    return _chosenManeuverAbilities;
-                }
-                else
-                {
-                    /* We return all available maneuvers. The thing is we might have received some extra maneuvers here through abilities etc. */
-                    List<CombatManeuver> res = new List<CombatManeuver>();
-                    res.AddRange(_availableManeuverAbilities);
-                    res.AddRange(_chosenManeuverAbilities);
-                    res = res.Distinct().ToList();
 
-                    return res;
-                }
-            }
-
-            set
-            {
-                _chosenManeuverAbilities = value;
-                ChosenManeuvers = new List<string>();
-                
-                foreach(CombatManeuver maneuver in _chosenManeuverAbilities)
-                {
-                    ChosenManeuvers.Add(maneuver.ManeuverName);
-                }
+                return res;
             }
         }
 
-        [XmlIgnore]
-        private Boolean isListResolved = false;
-        
-        
+
         /* TODO : We should notifiy if the user has not selected all available maneuvers. */
 
         public override bool ExtraChoiceOptions(out string btnText, out ExtraChoiceEventHandler clickHandler)
@@ -141,8 +109,6 @@ namespace CharacterManager
                 choice.Description = this.Description;
                 choice.AvailableChoices.Add(this.Name);
                 res.Add(choice);
-                /* TODO : WIP */
-
             }
 
             res.AddRange(base.GetUpgradeChoicesForLevel(level));
@@ -205,7 +171,7 @@ namespace CharacterManager
 
             desc.Options1 = new List<string>();
 
-            List<CombatManeuver> chosenManeuvers = ChosenManeuverObjects;
+            List<CombatManeuver> chosenManeuvers = GetAllChosenManeuvers();
 
             if (chosenManeuvers != null)
             {
@@ -222,7 +188,6 @@ namespace CharacterManager
         {
             base.ResolveFromDescriptor(desc);
             ChosenManeuvers = desc.Options1;
-            resolveManeuverList();
         }
 
         public override void HandleInfoButtonClicked(object sender, EventArgs e)
@@ -264,6 +229,42 @@ namespace CharacterManager
             return modifiers;
         }
 
+        public void AddNewManeuver(CombatManeuver maneuver)
+        {
+            AddNewManeuver(maneuver.ManeuverName);
+        }
+
+        public void AddNewManeuver(string name)
+        {
+            if (!ChosenManeuvers.Contains(name))
+            {
+                ChosenManeuvers.Add(name);
+            }
+        }
+
+        public void SetManeuverList(List<string> maneuvers)
+        {
+            ChosenManeuvers = maneuvers;
+        }
+
+        public List<CombatManeuver> GetAllChosenManeuvers()
+        {
+            if (IsManeuverChoiceAvailable)
+            {
+                return ChosenManeuverObjects;
+            }
+            else
+            {
+                /* We return all available maneuvers. The thing is we might have received some extra maneuvers here through abilities etc. */
+                List<CombatManeuver> res = new List<CombatManeuver>();
+                res.AddRange(AvailableManeuverObjects);
+                res.AddRange(ChosenManeuverObjects);
+                res = res.Distinct().ToList();
+
+                return res;
+            }
+        }
+
 
         public override List<BonusValueModifier> getSituationalDamageModifiers()
         {
@@ -277,40 +278,9 @@ namespace CharacterManager
         private void handleManeuverChoice(PlayerCharacter Character)
         {
             FormChooseCombatManeuvers myForm = new FormChooseCombatManeuvers();
-            resolveManeuverList();
             myForm.ManeuverAbility = this;
             myForm.Character = Character;
             myForm.Show();
-        }
-
-        
-
-        private void resolveManeuverList()
-        {
-            _availableManeuverAbilities = new List<CombatManeuver>();
-            _chosenManeuverAbilities = new List<CombatManeuver>();
-
-            List<CombatManeuver> definedManeuvers = CharacterFactory.getAllCombatManeuvers();
-            
-            foreach (string maneuever in AvailableManeuvers)
-            {
-                CombatManeuver resolvedManeuver = definedManeuvers.Find(m => m.ManeuverName == maneuever);
-                
-                if(resolvedManeuver != null)
-                {
-                    _availableManeuverAbilities.Add(resolvedManeuver);
-                }
-            }
-
-            
-            foreach(string chosenManeuver in ChosenManeuvers)
-            {
-                CombatManeuver obj = definedManeuvers.Find(m => m.ManeuverName == chosenManeuver);
-                if(obj != null)
-                {
-                    _chosenManeuverAbilities.Add(obj);
-                }
-            }
         }
     }
 }
