@@ -2459,6 +2459,7 @@ you make that uses either of those skills.</Description>
 			<string>Command</string>
 			<string>Identify</string>
 		</SpellsAddedByAbility>
+		<IsSpellsAddedAlwaysPrepared>true</IsSpellsAddedAlwaysPrepared>
 		
 		<Upgrades>
 			<PlayerAbilityUpgrade>
@@ -2526,6 +2527,7 @@ additional hit points equal to 2 + the spell's level.</Description>
 			<string>Bless</string>
 			<string>Cure Wounds</string>
 		</SpellsAddedByAbility>
+		<IsSpellsAddedAlwaysPrepared>true</IsSpellsAddedAlwaysPrepared>
 		
 		<Upgrades>
 			<PlayerAbilityUpgrade>
@@ -2576,6 +2578,7 @@ additional hit points equal to 2 + the spell's level.</Description>
 			<string>Faerie Fire</string>
 			<string>Light</string>
 		</SpellsAddedByAbility>
+		<IsSpellsAddedAlwaysPrepared>true</IsSpellsAddedAlwaysPrepared>
 		
 		<Upgrades>
 			<PlayerAbilityUpgrade>
@@ -2643,6 +2646,7 @@ all expended uses when you finish a long rest.</Description>
 			<string>Animal Friendship</string>
 			<string>Speak With Animals</string>
 		</SpellsAddedByAbility>
+		<IsSpellsAddedAlwaysPrepared>true</IsSpellsAddedAlwaysPrepared>
 		
 		<Upgrades>
 			<PlayerAbilityUpgrade>
@@ -2700,6 +2704,7 @@ your choice: Animal Handling, Nature, or Survival.</Description>
 			<string>Fog Cloud</string>
 			<string>Thunderwave</string>
 		</SpellsAddedByAbility>
+		<IsSpellsAddedAlwaysPrepared>true</IsSpellsAddedAlwaysPrepared>
 		
 		<Upgrades>
 			<PlayerAbilityUpgrade>
@@ -2781,6 +2786,7 @@ all expended uses when you finish a long rest.</Description>
 			<string>Charm Person</string>
 			<string>Disguise Self</string>
 		</SpellsAddedByAbility>
+		<IsSpellsAddedAlwaysPrepared>true</IsSpellsAddedAlwaysPrepared>
 		
 		<Upgrades>
 			<PlayerAbilityUpgrade>
@@ -2840,6 +2846,7 @@ this feature again.</Description>
 			<string>Divine Favor</string>
 			<string>Shield Of Faith</string>
 		</SpellsAddedByAbility>
+		<IsSpellsAddedAlwaysPrepared>true</IsSpellsAddedAlwaysPrepared>
 		
 		<Upgrades>
 			<PlayerAbilityUpgrade>

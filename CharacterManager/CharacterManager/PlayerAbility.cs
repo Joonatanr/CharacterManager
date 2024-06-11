@@ -54,6 +54,7 @@ namespace CharacterManager
 
         /* Some abilities can add new spells. */
         public List<string> SpellsAddedByAbility = new List<string>();
+        public Boolean IsSpellsAddedAlwaysPrepared = false;
 
         /* Often abilities have charges that are equal to an attribute modifier (such as charges based on CHA mod) */
         public string ChargesBasedOnAbilityModifier = "NONE";
@@ -193,7 +194,7 @@ namespace CharacterManager
             /* Here we add any new spells granted by the ability. */
             foreach(string spellName in SpellsAddedByAbility)
             {
-                c.AddSpell(spellName);
+                c.AddSpell(spellName, this.IsSpellsAddedAlwaysPrepared);
             }
         }
 

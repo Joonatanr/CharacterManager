@@ -306,6 +306,10 @@
       <string>Mending</string>
       <string>Resistance</string>
     </KnownSpells>
+    <AlwaysPreparedSpells>
+      <string>Bless</string>
+      <string>Cure Wounds</string>
+    </AlwaysPreparedSpells>
     <PreparedSpells>
       <string>Command</string>
       <string>Guiding Bolt</string>

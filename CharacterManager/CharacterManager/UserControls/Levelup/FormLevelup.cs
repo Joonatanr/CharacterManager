@@ -250,12 +250,12 @@ namespace CharacterManager.UserControls
 
                     foreach (PlayerSpell sp in allSpells)
                     {
-                        _myCharacter.AddSpell(sp);
+                        _myCharacter.AddSpell(sp, false);
                     }
 
                     foreach(string knownCantrip in knownCantrips)
                     {
-                        _myCharacter.AddSpell(knownCantrip);
+                        _myCharacter.AddSpell(knownCantrip, false);
                     }
                 }
                 else
@@ -263,7 +263,7 @@ namespace CharacterManager.UserControls
                     /* Update the spell selections. */
                     foreach (string spellName in SelectedSpellNames)
                     {
-                        _myCharacter.AddSpell(spellName);
+                        _myCharacter.AddSpell(spellName, false);
                     }
                 }
                 /* Update spell slot amount. */

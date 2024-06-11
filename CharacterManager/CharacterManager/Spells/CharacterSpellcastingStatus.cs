@@ -11,6 +11,7 @@ namespace CharacterManager.Spells
     public class CharacterSpellcastingStatus
     {
         public List<string> KnownSpells = new List<string>();
+        public List<string> AlwaysPreparedSpells = new List<string>();
         public List<string> PreparedSpells = new List<string>();
         public string SpellCastingAbility;
 

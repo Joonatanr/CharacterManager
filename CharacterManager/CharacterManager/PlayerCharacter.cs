@@ -150,6 +150,29 @@ namespace CharacterManager
         }
 
         [XmlIgnore]
+        public List<string> AlwaysPreparedSpells
+        {
+            get
+            {
+                if (CharacterSpellCastingStatus != null)
+                {
+                    return CharacterSpellCastingStatus.AlwaysPreparedSpells;
+                }
+                else
+                {
+                    return new List<string>();
+                }
+            }
+            set
+            {
+                if (CharacterSpellCastingStatus != null)
+                {
+                    CharacterSpellCastingStatus.AlwaysPreparedSpells = value;
+                }
+            }
+        }
+
+        [XmlIgnore]
         public List<string> KnownCantrips
         {
             get
@@ -664,6 +687,7 @@ namespace CharacterManager
              So we create a list of selected abilities that should be removed once character has been finalized */
             List<PlayerAbility> HiddenAbilities = new List<PlayerAbility>();
             List<PlayerSpell> spellsAddedByAbilities = new List<PlayerSpell>();
+            List<PlayerSpell> spellsAlwaysPreparedAddedByAbilities = new List<PlayerSpell>();
 
             foreach (PlayerAbility ability in newList)
             {
@@ -682,6 +706,10 @@ namespace CharacterManager
                 List<PlayerSpell> spellsAddedByAbility;
                 selectedAbility.HandleAbilitySelected(this, out spellsAddedByAbility);
                 spellsAddedByAbilities.AddRange(spellsAddedByAbility);
+                if (selectedAbility.IsSpellsAddedAlwaysPrepared)
+                {
+                    spellsAlwaysPreparedAddedByAbilities.AddRange(spellsAddedByAbility);
+                }
             }
 
             /* 3. Remove the hidden abilities from the list. */
@@ -717,7 +745,14 @@ namespace CharacterManager
             /* 6. Handle spells that have been added by abilities. */
             foreach (PlayerSpell sp in spellsAddedByAbilities)
             {
-                this.AddSpell(sp);
+                if (spellsAlwaysPreparedAddedByAbilities.Contains(sp))
+                {
+                    this.AddSpell(sp, true);
+                }
+                else
+                {
+                    this.AddSpell(sp, false);
+                }
             }
 
             /* 7. Connect the abilities list to the character. */
@@ -787,12 +822,12 @@ namespace CharacterManager
         }
 
 
-        public void AddSpell(PlayerSpell sp)
+        public void AddSpell(PlayerSpell sp, bool isAlwaysPrepared)
         {
-            AddSpell(sp.SpellName);
+            AddSpell(sp.SpellName, isAlwaysPrepared);
         }
 
-        public void AddSpell(string spellName)
+        public void AddSpell(string spellName, bool isAlwaysPrepared)
         {
             if (KnownSpells.Contains(spellName))
             {
@@ -801,6 +836,14 @@ namespace CharacterManager
             else
             {
                 KnownSpells.Add(spellName);
+            }
+
+            if (isAlwaysPrepared)
+            {
+                if (!AlwaysPreparedSpells.Contains(spellName))
+                {
+                    AlwaysPreparedSpells.Add(spellName);
+                }
             }
         }
 
@@ -1177,7 +1220,7 @@ namespace CharacterManager
                     List<PlayerSpell> allSpells = this.SpellCasting.GetSpellsThatCanBeLearnedAtLevel(this.Level);
                     foreach(PlayerSpell spell in allSpells) 
                     {
-                        this.AddSpell(spell);
+                        this.AddSpell(spell, false);
                     }
                 }
             }
