@@ -196,6 +196,7 @@ namespace CharacterManager.UserControls
         {
             base.OnPaint(pea);
 
+
             pea.Graphics.TranslateTransform(this.AutoScrollPosition.X,
                                 this.AutoScrollPosition.Y);
 
@@ -207,11 +208,7 @@ namespace CharacterManager.UserControls
             drawBackGround(gfx);
             //So lets draw the lines next.
 
-            Pen myPen = new Pen(Color.LightGray);
-            for (int x = lineInterval + 2; x < this.Size.Height; x += lineInterval)
-            {
-                gfx.DrawLine(myPen, new Point(2, x), new Point(this.Width - 2, x));
-            }
+            drawLines(gfx);
 
             Font myFont = new Font("Arial", 14);
 
@@ -222,6 +219,7 @@ namespace CharacterManager.UserControls
             {
                 this.Height = ((maxLine + 1) * lineInterval) + 4;
             }
+
         }
 
        
@@ -356,9 +354,18 @@ namespace CharacterManager.UserControls
             gfx.FillRectangle(b, rect);
         }
 
+        private void drawLines(Graphics gfx) 
+        {
+            Pen myPen = new Pen(Color.LightGray);
+            for (int x = lineInterval + 2; x < this.Size.Height; x += lineInterval)
+            {
+                gfx.DrawLine(myPen, new Point(2, x), new Point(this.Width - 2, x));
+            }
+        }
+
         private void UserControlGenericListBase_SizeChanged(object sender, EventArgs e)
         {
-            this.Invalidate();
+            //this.Invalidate();
         }
     }
 }

@@ -30,15 +30,15 @@ namespace CharacterManager.UserControls
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.buttonCopySpells = new System.Windows.Forms.Button();
             this.userControlKnownSpells = new CharacterManager.UserControls.UserControlSpellChoice();
             this.userControlPreparedSpells = new CharacterManager.UserControls.UserControlSpellChoice();
             this.userControlSpellSlotsArea1 = new CharacterManager.UserControls.UserControlSpellSlotsArea();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.userControlCantripList = new CharacterManager.UserControls.UserControlSpellChoice();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.userControlMaxPreparedSpells = new CharacterManager.UserControls.UserControlGenericValue();
             this.userControlSpellAttackBonus = new CharacterManager.UserControls.UserControlGenericValue();
             this.userControlSpellsaveDc = new CharacterManager.UserControls.UserControlGenericValue();
@@ -70,6 +70,15 @@ namespace CharacterManager.UserControls
             this.groupBox1.Text = "SpellCasting";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Location = new System.Drawing.Point(208, 560);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(8, 8);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -92,37 +101,6 @@ namespace CharacterManager.UserControls
             this.splitContainer1.SplitterDistance = 300;
             this.splitContainer1.TabIndex = 5;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.userControlCantripList);
-            this.panel1.Location = new System.Drawing.Point(6, 119);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 230);
-            this.panel1.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.userControlMaxPreparedSpells);
-            this.groupBox2.Controls.Add(this.userControlSpellAttackBonus);
-            this.groupBox2.Controls.Add(this.userControlSpellsaveDc);
-            this.groupBox2.Controls.Add(this.userControlSpellcastingAbility);
-            this.groupBox2.Location = new System.Drawing.Point(6, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(848, 94);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Location = new System.Drawing.Point(208, 560);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(8, 8);
-            this.groupBox4.TabIndex = 7;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
-            // 
             // buttonCopySpells
             // 
             this.buttonCopySpells.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -138,8 +116,7 @@ namespace CharacterManager.UserControls
             // 
             // userControlKnownSpells
             // 
-            this.userControlKnownSpells.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.userControlKnownSpells.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlKnownSpells.IsAvailabilityCount = true;
             this.userControlKnownSpells.IsBorder = true;
@@ -180,6 +157,14 @@ namespace CharacterManager.UserControls
             this.userControlSpellSlotsArea1.Size = new System.Drawing.Size(250, 273);
             this.userControlSpellSlotsArea1.TabIndex = 4;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.userControlCantripList);
+            this.panel1.Location = new System.Drawing.Point(6, 119);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(247, 230);
+            this.panel1.TabIndex = 1;
+            // 
             // userControlCantripList
             // 
             this.userControlCantripList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -196,6 +181,20 @@ namespace CharacterManager.UserControls
             this.userControlCantripList.Size = new System.Drawing.Size(239, 224);
             this.userControlCantripList.TabIndex = 0;
             this.userControlCantripList.TitleString = "Cantrips";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.userControlMaxPreparedSpells);
+            this.groupBox2.Controls.Add(this.userControlSpellAttackBonus);
+            this.groupBox2.Controls.Add(this.userControlSpellsaveDc);
+            this.groupBox2.Controls.Add(this.userControlSpellcastingAbility);
+            this.groupBox2.Location = new System.Drawing.Point(6, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(848, 94);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
             // 
             // userControlMaxPreparedSpells
             // 

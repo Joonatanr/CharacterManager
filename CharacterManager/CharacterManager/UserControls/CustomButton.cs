@@ -42,6 +42,7 @@ namespace CharacterManager.UserControls
         {
             InitializeComponent();
             _backgroundColor = BackGroundColor;
+            this.DoubleBuffered = true;
         }
 
         protected override void OnPaint(PaintEventArgs e)
