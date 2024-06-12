@@ -824,7 +824,9 @@ namespace CharacterManager
             SpecialAttributeList.Add(new DivineStrikeNatureDomain());
             SpecialAttributeList.Add(new DivineStrikeTempestDomain());
             SpecialAttributeList.Add(new DivineStrikeTrickeryDomain());
-            SpecialAttributeList.Add(new DivineStrikeWarDomain()); 
+            SpecialAttributeList.Add(new DivineStrikeWarDomain());
+
+            SpecialAttributeList.Add(new SupremeHealing());
         }
 
         private static void logError(String err)

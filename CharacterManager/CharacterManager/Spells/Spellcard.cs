@@ -416,20 +416,19 @@ namespace CharacterManager.Spells
             if (mySpell != null)
             {
                 int selectedLevel = (int)numericUpDown1.Value;
-                List<DieRollComponent> myComponents = mySpell.getDiceForSpellLevel(selectedLevel);
+                //List<DieRollComponent> myComponents = mySpell.getDiceForSpellLevel(selectedLevel);
+                List<DieRollComponent> myComponents = GlobalEvents.GetBaseDiceForSpell(mySpell, selectedLevel);
 
                 if (mySpell.IsSpellCastingModifierAddedToDice)
                 {
                     myComponents.Add(new DieRollConstant(GlobalEvents.GetSpellcastingAbilityModifier()));
                 }
 
-                /* TODO Lets get more stuff from global events here....*/
-                List<BonusValueModifier> extraRollModifiers = GlobalEvents.GetExtraDieRollModifiersForSpell(mySpell, selectedLevel);
-                DieRollEquation eq = BonusValueModifier.GetEquationFromList(extraRollModifiers);
-                myComponents.AddRange(eq.DieRollComponents);
-
                 if (myComponents != null)
                 {
+                    List<BonusValueModifier> extraRollModifiers = GlobalEvents.GetExtraDieRollModifiersForSpell(mySpell, selectedLevel);
+                    DieRollEquation eq = BonusValueModifier.GetEquationFromList(extraRollModifiers);
+                    myComponents.AddRange(eq.DieRollComponents);
                     dieRollTextBox1.Text = DieRollEquation.createStringFromDieRollComponents(myComponents, true);
                 }
                 else

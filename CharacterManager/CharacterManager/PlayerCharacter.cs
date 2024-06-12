@@ -369,6 +369,7 @@ namespace CharacterManager
         /*** Lets test with some events here. ***/
         public delegate void PlayerEvent(PlayerCharacter c);
         public delegate void PlayerAttackEvent(PlayerCharacter c, PlayerWeapon w);
+        public delegate bool PlayerSpellDiceOverrideEvent(PlayerSpell spell, int level ,PlayerCharacter c, out List<DieRollComponent> roll);
 
         public event PlayerEvent ArmorDonned;
         public event PlayerAttackEvent AttackRoll;      /* This one is for setting up the attack roll.      */
@@ -394,6 +395,9 @@ namespace CharacterManager
         public delegate void PlayerSpellEvent(PlayerCharacter c, PlayerSpell sp, int level);
         public event PlayerSpellEvent CharacterSpellCast;
         public event PlayerSpellEvent CharacterSetupCastingForSpell;
+
+        [XmlIgnore]
+        public PlayerSpellDiceOverrideEvent SpellDiceOverride = null;
 
         public PlayerCharacter()
         {
@@ -874,6 +878,14 @@ namespace CharacterManager
             CharacterSavingThrowBonusUpdated = null;
             InitiativeRollMade = null;
             CurrencyChanged = null;
+
+            LongRestMade = null;
+            ShortRestMade = null;
+
+            CharacterSpellCast = null;
+            CharacterSetupCastingForSpell = null;
+
+            SpellDiceOverride = null;
         }
 
         private void abilityUsed(PlayerAbility ability)
@@ -1228,6 +1240,33 @@ namespace CharacterManager
                         this.AddSpell(spell, false);
                     }
                 }
+            }
+        }
+
+        /// <summary>
+        /// This function makes it possible for abilities to override the die rolls for some spells.
+        /// Some complex abilities can modify die rolls, such as by rerolling 1s and 2s, or by using the maximum die results for rolls.
+        /// </summary>
+        /// <param name="spell"></param>
+        /// <param name="level"></param>
+        /// <returns></returns>
+        public List<DieRollComponent> GetBaseDiceForSpell(PlayerSpell spell, int level)
+        {
+            if (SpellDiceOverride != null)
+            {
+                List<DieRollComponent> res;
+                if (SpellDiceOverride.Invoke(spell, level, this , out res) == true)
+                {
+                    return res;
+                }
+                else
+                {
+                    return (spell.getDiceForSpellLevel(level));
+                }
+            }
+            else
+            {
+                return (spell.getDiceForSpellLevel(level));
             }
         }
 

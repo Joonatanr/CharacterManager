@@ -1286,5 +1286,24 @@ namespace CharacterManager
             }
         }
     }
+
+    public class SupremeHealing : SpecialAttribute
+    {
+        public SupremeHealing()
+        {
+            this.Name = "Supreme Healing";
+        }
+
+        /* TODO : Maybe this can be done in a clever way? We add a bonus to the roll so that the final result is maximised? */
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.CharacterSpellCast += C_CharacterSpellCast;
+        }
+
+        private void C_CharacterSpellCast(PlayerCharacter c, PlayerSpell sp, int level)
+        {
+            
+        }
+    }
 }
 

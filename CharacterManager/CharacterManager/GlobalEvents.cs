@@ -174,5 +174,19 @@ namespace CharacterManager.Spells
 
             return 0;
         }
+
+        public static List<DieRollComponent> GetBaseDiceForSpell(PlayerSpell spell, int level)
+        {
+            PlayerCharacter c = GetActiveCharacterExternal();
+            if (c == null)
+            {
+                return spell.getDiceForSpellLevel(level);
+            }
+            else
+            {
+                /* Here we handle possible cases where this might be overridden by player attributes/abilities etc. */
+                return c.GetBaseDiceForSpell(spell, level);
+            }
+        }
     }
 }

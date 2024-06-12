@@ -592,6 +592,17 @@ chapter 11 for the cleric spell list..</Description>
 	<!-- Destroy Undead CR2 -->
 	<!-- Level 12 -->
 	<!-- Ability Score Improvement -->
+	<!-- Level 13 -->
+	<!-- No new abilities at level 13 -->
+	<!-- Level 14 -->
+	<!-- Destroy Undead CR3 -->
+	<!-- Level 15 -->
+	<!-- No new abilities at level 15 -->
+	<!-- Level 16 -->
+	<!-- Ability Score Improvement -->
+	<!-- Level 17 -->
+	<!-- Destroy Undead CR4 -->
+	<!-- Divine Domain Feature -->
 	
 	<ArcheTypes>
 		<PlayerClassArchetype>
@@ -643,6 +654,13 @@ Onatar, Moradin, Hephaestus, and Goibhniu.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel8>
+			<AvailableAbilitiesAtLevel17>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Visions Of The Past</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel17>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -697,6 +715,13 @@ community (such as Hestia, Hathor, and Boldrei).</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel8>
+			<AvailableAbilitiesAtLevel17>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Supreme Healing</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel17>
 		</PlayerClassArchetype>
 		
 		
