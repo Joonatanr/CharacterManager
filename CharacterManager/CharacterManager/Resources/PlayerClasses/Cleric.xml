@@ -605,6 +605,13 @@ Onatar, Moradin, Hephaestus, and Goibhniu.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel2>
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity: Read Thoughts</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -645,6 +652,13 @@ community (such as Hestia, Hathor, and Boldrei).</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel2>
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Blessed Healer</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
 		</PlayerClassArchetype>
 		
 		
@@ -683,6 +697,9 @@ with chasing away lies and burning away darkness.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel2>
+			<AvailableAbilitiesAtLevel6>
+				<!-- Improved Flare -->
+			</AvailableAbilitiesAtLevel6>
 		</PlayerClassArchetype>
 		
 		
@@ -725,6 +742,13 @@ or wither the crops of those who anger their gods.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel2>
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Dampen Elements</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -765,6 +789,13 @@ common folk, either to keep those folk on the path of</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel2>
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Thunderbolt Strike</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -799,6 +830,13 @@ direct confrontation</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel2>
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity : Cloak Of Shadows</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -839,10 +877,17 @@ circumstance.</Description>
 			<AvailableAbilitiesAtLevel2>
 				<PlayerClassAbilityChoice>
 					<AvailableChoices>
-						<string>Channel Divinity: War God's Blessing</string>
+						<string>Channel Divinity: Guided Strike</string>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel2>
+			<AvailableAbilitiesAtLevel6>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Channel Divinity: War God's Blessing</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel6>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	

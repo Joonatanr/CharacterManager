@@ -357,12 +357,13 @@ given how distracting the illusion is to the target.</Description>
 	</CombatManeuver>
 	
 	<CombatManeuver>
-		<ManeuverName>War God's Blessing</ManeuverName>
-		<Description>At 6th level, when a creature within 30 feet of you
-makes an attack roll, you can use your reaction to grant
-that creature a +10 bonus to the roll, using your Channel
-Divinity. You make this choice after you see the roll, but
-before the DM says whether the attack hits or misses.</Description>
+		<ManeuverName>Guided Strike</ManeuverName>
+		<Description>Starting at 2nd level, you can use your Channel Divinity
+to strike with supernatural accuracy. When you make
+an attack roll, you can use your Channel Divinity to gain
+a +10 bonus to the roll. You make this choice after you
+see the roll, but before the DM says whether the attack
+hits or misses.</Description>
 	</CombatManeuver>
 	
 	<CombatManeuver>
@@ -379,6 +380,44 @@ Cleric Level 	| 	Destroys Undead of CR
 11th level		|	2 or lower
 14th level		|	3 or lower
 17th level 		|	4 or lower</Description>
+	</CombatManeuver>
+	
+	<CombatManeuver>
+		<ManeuverName>Read Thoughts</ManeuverName>
+		<Description>At 6th level, you can use your Channel Divinity to read a
+creature’s thoughts. You can then use your access to the
+creature’s mind to command it. As an action, choose one creature that you can see
+within 60 feet of you. That creature must make a
+Wisdom saving throw. If the creature succeeds on the
+saving throw, you can’t use this feature on it again until
+you finish a long rest.
+If the creature fails its save, you can read its surface
+thoughts (those foremost in its mind, reflecting its
+current emotions and what it is actively thinking
+about) when it is within 60 feet of you. This effect lasts
+for 1 minute.
+During that time, you can use your action to end this
+effect and cast the suggestion spell on the creature
+without expending a spell slot. The target automatically
+fails its saving throw against the spell.</Description>
+	</CombatManeuver>
+	
+	<CombatManeuver>
+		<ManeuverName>Cloak Of Shadows</ManeuverName>
+		<Description>Starting at 6th level, you can use your Channel
+Divinity to vanish.
+
+As an action, you become invisible until the end of your
+next turn. You become visible if you attack or cast a spell.</Description>
+	</CombatManeuver>
+	
+	<CombatManeuver>
+		<ManeuverName>War God's Blessing</ManeuverName>
+		<Description>At 6th level, when a creature within 30 feet of you
+makes an attack roll, you can use your reaction to grant
+that creature a +10 bonus to the roll, using your Channel
+Divinity. You make this choice after you see the roll, but
+before the DM says whether the attack hits or misses..</Description>
 	</CombatManeuver>
 	
 </ArrayOfCombatManeuver>

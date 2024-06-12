@@ -2631,6 +2631,16 @@ all expended uses when you finish a long rest.</Description>
 		<ChargesBasedOnAbilityModifier>WIS</ChargesBasedOnAbilityModifier>
 		<RechargeAtLongRest>true</RechargeAtLongRest>
 		<RechargeAtShortRest>false</RechargeAtShortRest>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>6</Level>
+				<AdditionalDescription>Improved Flare:
+				
+Starting at 6th level, you can also use your Warding
+Flare feature when a creature that you can see within
+30 feet of you attacks a creature other than you.</AdditionalDescription>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -3064,16 +3074,17 @@ given how distracting the illusion is to the target..</Description>
 	</PlayerAbility>
 	
 	<PlayerAbility>
-		<Name>Channel Divinity: War God's Blessing</Name>
-		<Description>At 6th level, when a creature within 30 feet of you
-makes an attack roll, you can use your reaction to grant
-that creature a +10 bonus to the roll, using your Channel
-Divinity. You make this choice after you see the roll, but
-before the DM says whether the attack hits or misses.</Description>
+		<Name>Channel Divinity: Guided Strike</Name>
+		<Description>Starting at 2nd level, you can use your Channel Divinity
+to strike with supernatural accuracy. When you make
+an attack roll, you can use your Channel Divinity to gain
+a +10 bonus to the roll. You make this choice after you
+see the roll, but before the DM says whether the attack
+hits or misses.</Description>
 		<IsHidden>true</IsHidden>
 		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
 		<AdditionalManeuversAdded>
-			<string>War God's Blessing</string>
+			<string>Guided Strike</string>
 		</AdditionalManeuversAdded>
 	</PlayerAbility>
 	
@@ -3098,4 +3109,86 @@ Cleric Level 	| 	Destroys Undead of CR
 		</AdditionalManeuversAdded>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<Name>Channel Divinity: Read Thoughts</Name>
+		<Description>At 6th level, you can use your Channel Divinity to read a
+creature’s thoughts. You can then use your access to the
+creature’s mind to command it. As an action, choose one creature that you can see
+within 60 feet of you. That creature must make a
+Wisdom saving throw. If the creature succeeds on the
+saving throw, you can’t use this feature on it again until
+you finish a long rest.
+If the creature fails its save, you can read its surface
+thoughts (those foremost in its mind, reflecting its
+current emotions and what it is actively thinking
+about) when it is within 60 feet of you. This effect lasts
+for 1 minute.
+During that time, you can use your action to end this
+effect and cast the suggestion spell on the creature
+without expending a spell slot. The target automatically
+fails its saving throw against the spell.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>Read Thoughts</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Blessed Healer</Name>
+		<Description>Beginning at 6th level, the healing spells you cast on
+others heal you as well. When you cast a spell of 1st
+level or higher that restores hit points to a creature
+other than you, you regain hit points equal to 2 + the
+spell's level.</Description>
+		<IsHidden>false</IsHidden>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Dampen Elements</Name>
+		<Description>Starting at 6th level, when you or a creature within 30
+feet of you takes acid, cold, fire, lightning, or thunder
+damage, you can use your reaction to grant resistance to
+the creature against that instance of the damage.</Description>
+		<IsHidden>false</IsHidden>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Thunderbolt Strike</Name>
+		<Description>At 6th level, when you deal lightning damage to a Large
+or smaller creature, you can also push it up to 10 feet
+away from you.</Description>
+		<IsHidden>false</IsHidden>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Channel Divinity: Cloak Of Shadows</Name>
+		<Description>Starting at 6th level, you can use your Channel
+Divinity to vanish.
+
+As an action, you become invisible until the end of your
+next turn. You become visible if you attack or cast a spell.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>Cloak Of Shadows</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Channel Divinity: War God's Blessing</Name>
+		<Description>At 6th level, when a creature within 30 feet of you
+makes an attack roll, you can use your reaction to grant
+that creature a +10 bonus to the roll, using your Channel
+Divinity. You make this choice after you see the roll, but
+before the DM says whether the attack hits or misses.</Description>
+		<IsHidden>true</IsHidden>
+		<AdditionalManeuversToAbility>Channel Divinity (Cleric)</AdditionalManeuversToAbility>
+		<AdditionalManeuversAdded>
+			<string>War God's Blessing</string>
+		</AdditionalManeuversAdded>
+	</PlayerAbility>
+
 </ArrayOfPlayerAbility>
