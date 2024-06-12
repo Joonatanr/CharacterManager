@@ -1163,13 +1163,13 @@ namespace CharacterManager
 
         public override void InitializeSubscriptions(PlayerCharacter c)
         {
-            c.CharacterSpellCast += C_CharacterSpellCast;
+            c.CharacterSetupCastingForSpell += C_CharacterSpellCast;
         }
 
         private void C_CharacterSpellCast(PlayerCharacter c, PlayerSpell sp, int level)
         {
             /* We add the WIS modifier to damage dealt with any cleric cantrip. */
-            if (level == 0)
+            if (sp.IsCantrip())
             {
                 if (!sp.IsHealingSpell)
                 {

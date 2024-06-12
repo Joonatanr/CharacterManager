@@ -236,5 +236,17 @@ namespace CharacterManager.Spells
             card.setSpell(this);
             card.Show();
         }
+
+        public bool IsCantrip()
+        {
+            if(this.SpellLevel == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

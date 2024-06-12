@@ -423,7 +423,10 @@ namespace CharacterManager.Spells
                     myComponents.Add(new DieRollConstant(GlobalEvents.GetSpellcastingAbilityModifier()));
                 }
 
-                /* Lets get more stuff from global events here....*/
+                /* TODO Lets get more stuff from global events here....*/
+                List<BonusValueModifier> extraRollModifiers = GlobalEvents.GetExtraDieRollModifiersForSpell(mySpell, selectedLevel);
+                DieRollEquation eq = BonusValueModifier.GetEquationFromList(extraRollModifiers);
+                myComponents.AddRange(eq.DieRollComponents);
 
                 if (myComponents != null)
                 {
