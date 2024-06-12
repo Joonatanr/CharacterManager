@@ -101,14 +101,14 @@ namespace CharacterManager
 
     public class DieRoll : DieRollComponent
     {
-        protected int numberOfDice;
-        protected int DieType;
+        public int NumberOfDice;
+        public int DieType;
 
         private static Random rnd = new Random();
 
         public DieRoll(int number_of_dice, int die_value)
         {
-            this.numberOfDice = number_of_dice;
+            this.NumberOfDice = number_of_dice;
             this.DieType = die_value;
         }
 
@@ -117,7 +117,7 @@ namespace CharacterManager
             int sum = 0;
             String logres = String.Empty;
 
-            for (int x = 0; x < numberOfDice; x++)
+            for (int x = 0; x < NumberOfDice; x++)
             {
                 int value = rnd.Next(1, DieType + 1);
                 sum += value;
@@ -131,7 +131,7 @@ namespace CharacterManager
 
         public override string ToString()
         {
-            return this.numberOfDice + "d" + this.DieType;
+            return this.NumberOfDice + "d" + this.DieType;
         }
     }
 

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
+using System.Net.Configuration;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -1294,15 +1296,43 @@ namespace CharacterManager
             this.Name = "Supreme Healing";
         }
 
-        /* TODO : Maybe this can be done in a clever way? We add a bonus to the roll so that the final result is maximised? */
         public override void InitializeSubscriptions(PlayerCharacter c)
         {
-            c.CharacterSpellCast += C_CharacterSpellCast;
+            c.SpellDiceOverride = new PlayerCharacter.PlayerSpellDiceOverrideEvent(spellDiceOverrideFunc);
         }
 
-        private void C_CharacterSpellCast(PlayerCharacter c, PlayerSpell sp, int level)
+        private bool spellDiceOverrideFunc(PlayerSpell spell, int level, PlayerCharacter c, out List<DieRollComponent> roll)
         {
-            
+            roll = new List<DieRollComponent>();
+            try
+            {
+                List<DieRollComponent> originalRoll = spell.getDiceForSpellLevel(level);
+                if (spell.IsHealingSpell && originalRoll.Count > 0)
+                {
+                    foreach(DieRollComponent d in originalRoll)
+                    {
+                        if (d is DieRoll)
+                        {
+                            DieRoll conv = d as DieRoll;
+                            roll.Add(new DieRollConstant(conv.DieType * conv.NumberOfDice));
+                        }
+                        else
+                        {
+                            roll.Add(d);
+                        }
+                    }
+                    return true;
+                }
+                else
+                {
+                    /* Return empty list */
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }

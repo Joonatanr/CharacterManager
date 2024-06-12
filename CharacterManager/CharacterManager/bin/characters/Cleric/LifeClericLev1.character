@@ -1,19 +1,24 @@
 <PlayerCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SkillProficiencies>
+    <string>Religion</string>
+    <string>Perception</string>
     <string>Medicine</string>
     <string>Insight</string>
     <string>History</string>
-    <string>Arcana</string>
   </SkillProficiencies>
   <SkillExpertise />
   <ToolExpertise />
   <Languages>
     <string>Common</string>
-    <string>Draconic</string>
-    <string>Dwarvish</string>
+    <string>Elvish</string>
     <string>Gnomish</string>
+    <string>Draconic</string>
   </Languages>
   <WeaponProficiencies>
+    <string>longsword</string>
+    <string>shortsword</string>
+    <string>shortbow</string>
+    <string>longbow</string>
     <string>Simple Weapons</string>
   </WeaponProficiencies>
   <ArmorProficiencies>
@@ -29,14 +34,21 @@
   </SavingThrowProficiencies>
   <CharacterAbilities>
     <PlayerAbilityDescriptor>
-      <AbilityName>Fire Breath(Brass)</AbilityName>
-      <RemainingCharges>1</RemainingCharges>
+      <AbilityName>Darkvision</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
       <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
-      <AbilityName>Fire Resistance</AbilityName>
+      <AbilityName>Fey Ancestry</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Trance</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
@@ -50,11 +62,11 @@
       <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
-      <AbilityName>Spellcasting</AbilityName>
+      <AbilityName>SpellCasting</AbilityName>
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
-      <SubType>(Cleric)</SubType>
+      <SubType />
     </PlayerAbilityDescriptor>
     <PlayerAbilityDescriptor>
       <AbilityName>Life Domain Spells</AbilityName>
@@ -68,16 +80,6 @@
       <RemainingCharges>0</RemainingCharges>
       <IsActive>false</IsActive>
       <Options1 />
-      <SubType />
-    </PlayerAbilityDescriptor>
-    <PlayerAbilityDescriptor>
-      <AbilityName>Channel Divinity (Cleric)</AbilityName>
-      <RemainingCharges>1</RemainingCharges>
-      <IsActive>false</IsActive>
-      <Options1>
-        <string>Turn Undead</string>
-        <string>Preserve Life</string>
-      </Options1>
       <SubType />
     </PlayerAbilityDescriptor>
   </CharacterAbilities>
@@ -120,60 +122,21 @@
       <IsMagical>false</IsMagical>
       <MagicalBonus>0</MagicalBonus>
     </PlayerWeapon>
-    <PlayerWeapon>
-      <Name>Quarterstaff</Name>
-      <Weight>4</Weight>
-      <Cost>0.2</Cost>
-      <Quantity>1</Quantity>
-      <IsAmmo>false</IsAmmo>
-      <IsAmmunition>false</IsAmmunition>
-      <IsFinesse>false</IsFinesse>
-      <IsHeavy>false</IsHeavy>
-      <IsLight>false</IsLight>
-      <IsLoading>false</IsLoading>
-      <IsThrown>false</IsThrown>
-      <IsTwoHanded>false</IsTwoHanded>
-      <IsVersatile>true</IsVersatile>
-      <IsRanged>false</IsRanged>
-      <IsReach>false</IsReach>
-      <Type>Simple</Type>
-      <Range>
-        <NormalRange>0</NormalRange>
-        <LongRange>0</LongRange>
-      </Range>
-      <Reach>5</Reach>
-      <Damage>
-        <DamageValue>1d6</DamageValue>
-        <Type>Bludgeoning</Type>
-      </Damage>
-      <TwoHandedDamage>
-        <DamageValue>1d8</DamageValue>
-        <Type>Bludgeoning</Type>
-      </TwoHandedDamage>
-      <ExtraDamage>
-        <Type>None</Type>
-      </ExtraDamage>
-      <IsEquipped>false</IsEquipped>
-      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
-      <AmmoType />
-      <IsMagical>false</IsMagical>
-      <MagicalBonus>0</MagicalBonus>
-    </PlayerWeapon>
   </CharacterWeapons>
   <CharacterArmors>
     <PlayerArmor>
-      <Name>Chain Mail</Name>
-      <Weight>55</Weight>
-      <Cost>75</Cost>
+      <Name>Scale Mail</Name>
+      <Weight>45</Weight>
+      <Cost>50</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
-      <ArmorClass>16</ArmorClass>
-      <Type>Heavy</Type>
+      <ArmorClass>14</ArmorClass>
+      <Type>Medium</Type>
       <IsShield>false</IsShield>
-      <MinStrength>13</MinStrength>
+      <MinStrength>0</MinStrength>
       <IsStealthDisadvantage>true</IsStealthDisadvantage>
-      <IsDexterityModifier>false</IsDexterityModifier>
-      <MaxDexModifier>0</MaxDexModifier>
+      <IsDexterityModifier>true</IsDexterityModifier>
+      <MaxDexModifier>2</MaxDexModifier>
       <IsEquipped>true</IsEquipped>
       <IsMagical>false</IsMagical>
       <MagicalAcBonus>0</MagicalAcBonus>
@@ -197,12 +160,27 @@
     </PlayerArmor>
   </CharacterArmors>
   <CharacterGeneralEquipment>
+    <PlayerItem>
+      <Name>Light rossbow</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Description>Ammunition for crossbows</Description>
+      <Name>Bolts</Name>
+      <Weight>0.075</Weight>
+      <Cost>0.05</Cost>
+      <Quantity>20</Quantity>
+      <IsAmmo>true</IsAmmo>
+    </PlayerItem>
     <PlayerItem
       xsi:type="ItemContainer">
-      <Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
-      <Name>Explorer's Pack</Name>
+      <Description>Includes a backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, and a waterskin.</Description>
+      <Name>Priest's Pack</Name>
       <Weight>10</Weight>
-      <Cost>10</Cost>
+      <Cost>19</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
       <ContainedItems>
@@ -211,32 +189,40 @@
           <Quantity>1</Quantity>
         </ContainerContent>
         <ContainerContent>
-          <Name>Bedroll</Name>
+          <Name>Blanket</Name>
           <Quantity>1</Quantity>
         </ContainerContent>
         <ContainerContent>
-          <Name>Mess Kit</Name>
-          <Quantity>1</Quantity>
+          <Name>Candle</Name>
+          <Quantity>10</Quantity>
         </ContainerContent>
         <ContainerContent>
           <Name>Tinderbox</Name>
           <Quantity>1</Quantity>
         </ContainerContent>
         <ContainerContent>
-          <Name>Torch</Name>
-          <Quantity>10</Quantity>
+          <Name>Alms Box</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Block of Incense</Name>
+          <Quantity>2</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Censer</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Vestments</Name>
+          <Quantity>1</Quantity>
         </ContainerContent>
         <ContainerContent>
           <Name>Rations</Name>
-          <Quantity>10</Quantity>
+          <Quantity>2</Quantity>
         </ContainerContent>
         <ContainerContent>
           <Name>Waterskin</Name>
           <Quantity>1</Quantity>
-        </ContainerContent>
-        <ContainerContent>
-          <Name>Rope</Name>
-          <Quantity>50</Quantity>
         </ContainerContent>
       </ContainedItems>
     </PlayerItem>
@@ -249,29 +235,29 @@
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <Name>A bottle of Ink</Name>
+      <Description> A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus, as described in chapter 10. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.  </Description>
+      <Name>Holy Symbol</Name>
+      <Weight>2</Weight>
+      <Cost>5</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Name>Prayer Book</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <Name>Quill</Name>
+      <Name>Stick of Incence</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
-      <Quantity>1</Quantity>
+      <Quantity>5</Quantity>
       <IsAmmo>false</IsAmmo>
     </PlayerItem>
     <PlayerItem>
-      <Name>Small knife</Name>
-      <Weight>0</Weight>
-      <Cost>0</Cost>
-      <Quantity>1</Quantity>
-      <IsAmmo>false</IsAmmo>
-    </PlayerItem>
-    <PlayerItem>
-      <Description>A letter from a dead colleague posing a question you have not yet been able to answer.</Description>
-      <Name>Letter</Name>
+      <Name>Vestments</Name>
       <Weight>0</Weight>
       <Cost>0</Cost>
       <Quantity>1</Quantity>
@@ -287,11 +273,14 @@
   </CharacterGeneralEquipment>
   <CharacterSpellCastingStatus>
     <KnownSpells>
-      <string>Bane</string>
       <string>Bless</string>
+      <string>Cure Wounds</string>
+      <string>Light</string>
+      <string>Sacred Flame</string>
+      <string>Spare The Dying</string>
+      <string>Bane</string>
       <string>Command</string>
       <string>Create Or Destroy Water</string>
-      <string>Cure Wounds</string>
       <string>Detect Evil And Good</string>
       <string>Detect Magic</string>
       <string>Detect Poison And Disease</string>
@@ -302,53 +291,27 @@
       <string>Purify Food And Drink</string>
       <string>Sanctuary</string>
       <string>Shield Of Faith</string>
-      <string>Aid</string>
-      <string>Augury</string>
-      <string>Blindness/Deafness</string>
-      <string>Calm Emotions</string>
-      <string>Continual Flame</string>
-      <string>Enhance Ability</string>
-      <string>Find Traps</string>
-      <string>Gentle Repose</string>
-      <string>Hold Person</string>
-      <string>Lesser Restoration</string>
-      <string>Locate Object</string>
-      <string>Prayer Of Healing</string>
-      <string>Protection From Poison</string>
-      <string>Silence</string>
-      <string>Spiritual Weapon</string>
-      <string>Warding Bond</string>
-      <string>Zone Of Truth</string>
-      <string>Light</string>
-      <string>Mending</string>
-      <string>Resistance</string>
     </KnownSpells>
     <AlwaysPreparedSpells>
       <string>Bless</string>
       <string>Cure Wounds</string>
-      <string>Lesser Restoration</string>
-      <string>Spiritual Weapon</string>
     </AlwaysPreparedSpells>
     <PreparedSpells>
       <string>Bless</string>
-      <string>Command</string>
       <string>Cure Wounds</string>
+      <string>Detect Magic</string>
       <string>Guiding Bolt</string>
-      <string>Inflict Wounds</string>
-      <string>Hold Person</string>
-      <string>Lesser Restoration</string>
-      <string>Spiritual Weapon</string>
-      <string>Zone Of Truth</string>
+      <string>Healing Word</string>
     </PreparedSpells>
     <SpellCastingAbility>WIS</SpellCastingAbility>
     <SpellAbilityModifier>2</SpellAbilityModifier>
     <Level1SpellSlots>
-      <MaximumCount>4</MaximumCount>
-      <ActiveCount>4</ActiveCount>
+      <MaximumCount>2</MaximumCount>
+      <ActiveCount>2</ActiveCount>
     </Level1SpellSlots>
     <Level2SpellSlots>
-      <MaximumCount>2</MaximumCount>
-      <ActiveCount>1</ActiveCount>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
     </Level2SpellSlots>
     <Level3SpellSlots>
       <MaximumCount>0</MaximumCount>
@@ -379,35 +342,35 @@
       <ActiveCount>0</ActiveCount>
     </Level9SpellSlots>
   </CharacterSpellCastingStatus>
-  <Level>3</Level>
+  <Level>1</Level>
   <ProficiencyBonus>2</ProficiencyBonus>
-  <ExperiencePoints>900</ExperiencePoints>
-  <MaxHitPoints>19</MaxHitPoints>
+  <ExperiencePoints>0</ExperiencePoints>
+  <MaxHitPoints>10</MaxHitPoints>
   <Speed>30</Speed>
   <Size>
     <height>0</height>
     <weight>0</weight>
     <sizeType>Tiny</sizeType>
   </Size>
-  <Alignment>TrueNeutral</Alignment>
-  <MainRaceName>Dragonborn</MainRaceName>
-  <SubRaceName>Brass Dragon Ancestry</SubRaceName>
+  <Alignment>NeutralGood</Alignment>
+  <MainRaceName>Elf</MainRaceName>
+  <SubRaceName>High Elf</SubRaceName>
   <ClassName>Cleric</ClassName>
   <SubClassName>Life Domain</SubClassName>
   <BaseAttributes>
-    <STR>14</STR>
-    <DEX>10</DEX>
-    <INT>13</INT>
-    <CHA>9</CHA>
+    <STR>12</STR>
+    <DEX>15</DEX>
+    <INT>11</INT>
+    <CHA>8</CHA>
     <CON>14</CON>
     <WIS>15</WIS>
   </BaseAttributes>
-  <GoldPieces>10</GoldPieces>
+  <GoldPieces>15</GoldPieces>
   <ElectrumPieces>0</ElectrumPieces>
   <CopperPieces>0</CopperPieces>
   <SilverPieces>0</SilverPieces>
   <PlatinumPieces>0</PlatinumPieces>
-  <CharacterName>TestCleric</CharacterName>
-  <CurrentHitPoints>19</CurrentHitPoints>
-  <CurrentHitDice>3</CurrentHitDice>
+  <CharacterName>Alya</CharacterName>
+  <CurrentHitPoints>10</CurrentHitPoints>
+  <CurrentHitDice>1</CurrentHitDice>
 </PlayerCharacter>
