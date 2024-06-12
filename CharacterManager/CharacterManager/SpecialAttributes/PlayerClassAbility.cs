@@ -1304,28 +1304,36 @@ namespace CharacterManager
         private bool spellDiceOverrideFunc(PlayerSpell spell, int level, PlayerCharacter c, out List<DieRollComponent> roll)
         {
             roll = new List<DieRollComponent>();
+            
             try
             {
                 List<DieRollComponent> originalRoll = spell.getDiceForSpellLevel(level);
-                if (spell.IsHealingSpell && originalRoll.Count > 0)
+                if (originalRoll != null)
                 {
-                    foreach(DieRollComponent d in originalRoll)
+                    if (spell.IsHealingSpell && originalRoll.Count > 0)
                     {
-                        if (d is DieRoll)
+                        foreach (DieRollComponent d in originalRoll)
                         {
-                            DieRoll conv = d as DieRoll;
-                            roll.Add(new DieRollConstant(conv.DieType * conv.NumberOfDice));
+                            if (d is DieRoll)
+                            {
+                                DieRoll conv = d as DieRoll;
+                                roll.Add(new DieRollConstant(conv.DieType * conv.NumberOfDice));
+                            }
+                            else
+                            {
+                                roll.Add(d);
+                            }
                         }
-                        else
-                        {
-                            roll.Add(d);
-                        }
+                        return true;
                     }
-                    return true;
+                    else
+                    {
+                        /* Return empty list */
+                        return false;
+                    }
                 }
                 else
                 {
-                    /* Return empty list */
                     return false;
                 }
             }

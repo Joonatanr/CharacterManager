@@ -1,0 +1,540 @@
+<PlayerCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SkillProficiencies>
+    <string>Religion</string>
+    <string>Perception</string>
+    <string>Medicine</string>
+    <string>Insight</string>
+    <string>History</string>
+  </SkillProficiencies>
+  <SkillExpertise />
+  <ToolExpertise />
+  <Languages>
+    <string>Common</string>
+    <string>Elvish</string>
+    <string>Gnomish</string>
+    <string>Draconic</string>
+  </Languages>
+  <WeaponProficiencies>
+    <string>longsword</string>
+    <string>shortsword</string>
+    <string>shortbow</string>
+    <string>longbow</string>
+    <string>Simple Weapons</string>
+  </WeaponProficiencies>
+  <ArmorProficiencies>
+    <string>Light Armor</string>
+    <string>Medium Armor</string>
+    <string>Shields</string>
+    <string>Heavy Armor</string>
+  </ArmorProficiencies>
+  <ToolProficiencies />
+  <SavingThrowProficiencies>
+    <string>WIS</string>
+    <string>CHA</string>
+  </SavingThrowProficiencies>
+  <CharacterAbilities>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Darkvision</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Fey Ancestry</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Trance</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Life Domain</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Spellcasting</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType>(Cleric)</SubType>
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Life Domain Spells</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Disciple Of Life</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Channel Divinity (Cleric)</AbilityName>
+      <RemainingCharges>2</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1>
+        <string>Turn Undead</string>
+        <string>Preserve Life</string>
+        <string>Destroy Undead</string>
+      </Options1>
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Blessed Healer</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Divine Strike(Life Domain)</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Divine Intervention</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+  </CharacterAbilities>
+  <CharacterWeapons>
+    <PlayerWeapon>
+      <Name>Mace</Name>
+      <Weight>4</Weight>
+      <Cost>5</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>false</IsAmmunition>
+      <IsFinesse>false</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>false</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>false</IsThrown>
+      <IsTwoHanded>false</IsTwoHanded>
+      <IsVersatile>false</IsVersatile>
+      <IsRanged>false</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Simple</Type>
+      <Range>
+        <NormalRange>0</NormalRange>
+        <LongRange>0</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d6</DamageValue>
+        <Type>Bludgeoning</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <Type>None</Type>
+      </TwoHandedDamage>
+      <ExtraDamage>
+        <Type>None</Type>
+      </ExtraDamage>
+      <IsEquipped>false</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType />
+      <IsMagical>false</IsMagical>
+      <MagicalBonus>0</MagicalBonus>
+    </PlayerWeapon>
+    <PlayerWeapon>
+      <Description />
+      <Name>Mace +2</Name>
+      <Weight>4</Weight>
+      <Cost>5</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>false</IsAmmunition>
+      <IsFinesse>false</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>false</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>false</IsThrown>
+      <IsTwoHanded>false</IsTwoHanded>
+      <IsVersatile>false</IsVersatile>
+      <IsRanged>false</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Simple</Type>
+      <Range>
+        <NormalRange>0</NormalRange>
+        <LongRange>0</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d6</DamageValue>
+        <Type>Bludgeoning</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <Type>None</Type>
+      </TwoHandedDamage>
+      <ExtraDamage>
+        <Type>None</Type>
+      </ExtraDamage>
+      <IsEquipped>true</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType />
+      <IsMagical>true</IsMagical>
+      <MagicalBonus>2</MagicalBonus>
+    </PlayerWeapon>
+  </CharacterWeapons>
+  <CharacterArmors>
+    <PlayerArmor>
+      <Name>Scale Mail</Name>
+      <Weight>45</Weight>
+      <Cost>50</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ArmorClass>14</ArmorClass>
+      <Type>Medium</Type>
+      <IsShield>false</IsShield>
+      <MinStrength>0</MinStrength>
+      <IsStealthDisadvantage>true</IsStealthDisadvantage>
+      <IsDexterityModifier>true</IsDexterityModifier>
+      <MaxDexModifier>2</MaxDexModifier>
+      <IsEquipped>true</IsEquipped>
+      <IsMagical>false</IsMagical>
+      <MagicalAcBonus>0</MagicalAcBonus>
+    </PlayerArmor>
+    <PlayerArmor>
+      <Name>Shield</Name>
+      <Weight>6</Weight>
+      <Cost>10</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ArmorClass>2</ArmorClass>
+      <Type>Heavy</Type>
+      <IsShield>true</IsShield>
+      <MinStrength>0</MinStrength>
+      <IsStealthDisadvantage>false</IsStealthDisadvantage>
+      <IsDexterityModifier>false</IsDexterityModifier>
+      <MaxDexModifier>0</MaxDexModifier>
+      <IsEquipped>true</IsEquipped>
+      <IsMagical>false</IsMagical>
+      <MagicalAcBonus>0</MagicalAcBonus>
+    </PlayerArmor>
+  </CharacterArmors>
+  <CharacterGeneralEquipment>
+    <PlayerItem>
+      <Name>Light rossbow</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Description>Ammunition for crossbows</Description>
+      <Name>Bolts</Name>
+      <Weight>0.075</Weight>
+      <Cost>0.05</Cost>
+      <Quantity>20</Quantity>
+      <IsAmmo>true</IsAmmo>
+    </PlayerItem>
+    <PlayerItem
+      xsi:type="ItemContainer">
+      <Description>Includes a backpack, a blanket, 10 candles, a tinderbox, an alms box, 2 blocks of incense, a censer, vestments, 2 days of rations, and a waterskin.</Description>
+      <Name>Priest's Pack</Name>
+      <Weight>10</Weight>
+      <Cost>19</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ContainedItems>
+        <ContainerContent>
+          <Name>Backpack</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Blanket</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Candle</Name>
+          <Quantity>10</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Tinderbox</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Alms Box</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Block of Incense</Name>
+          <Quantity>2</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Censer</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Vestments</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Rations</Name>
+          <Quantity>2</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Waterskin</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+      </ContainedItems>
+    </PlayerItem>
+    <PlayerItem>
+      <Description> A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus, as described in chapter 10. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.  </Description>
+      <Name>Holy Symbol</Name>
+      <Weight>2</Weight>
+      <Cost>5</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Description> A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic. Appendix B lists the symbols commonly associated with many gods in the multiverse. A cleric or paladin can use a holy symbol as a spellcasting focus, as described in chapter 10. To use the symbol in this way, the caster must hold it in hand, wear it visibly, or bear it on a shield.  </Description>
+      <Name>Holy Symbol</Name>
+      <Weight>2</Weight>
+      <Cost>5</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Name>Prayer Book</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Name>Stick of Incence</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>5</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Name>Vestments</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Name>Common Clothes</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+  </CharacterGeneralEquipment>
+  <CharacterSpellCastingStatus>
+    <KnownSpells>
+      <string>Bane</string>
+      <string>Bless</string>
+      <string>Command</string>
+      <string>Create Or Destroy Water</string>
+      <string>Cure Wounds</string>
+      <string>Detect Evil And Good</string>
+      <string>Detect Magic</string>
+      <string>Detect Poison And Disease</string>
+      <string>Guiding Bolt</string>
+      <string>Healing Word</string>
+      <string>Inflict Wounds</string>
+      <string>Protection from Evil and Good</string>
+      <string>Purify Food And Drink</string>
+      <string>Sanctuary</string>
+      <string>Shield Of Faith</string>
+      <string>Aid</string>
+      <string>Augury</string>
+      <string>Blindness/Deafness</string>
+      <string>Calm Emotions</string>
+      <string>Continual Flame</string>
+      <string>Enhance Ability</string>
+      <string>Find Traps</string>
+      <string>Gentle Repose</string>
+      <string>Hold Person</string>
+      <string>Lesser Restoration</string>
+      <string>Locate Object</string>
+      <string>Prayer Of Healing</string>
+      <string>Protection From Poison</string>
+      <string>Silence</string>
+      <string>Spiritual Weapon</string>
+      <string>Warding Bond</string>
+      <string>Zone Of Truth</string>
+      <string>Animate Dead</string>
+      <string>Beacon Of Hope</string>
+      <string>Bestow Curse</string>
+      <string>Clairvoyance</string>
+      <string>Create Food And Water</string>
+      <string>Daylight</string>
+      <string>Dispel Magic</string>
+      <string>Feign Death</string>
+      <string>Glyph Of Warding</string>
+      <string>Magic Circle</string>
+      <string>Mass Healing Word</string>
+      <string>Meld Into Stone</string>
+      <string>Protection From Energy</string>
+      <string>Remove Curse</string>
+      <string>Revivify</string>
+      <string>Sending</string>
+      <string>Speak With The Dead</string>
+      <string>Spirit Guardians</string>
+      <string>Tongues</string>
+      <string>Banishment</string>
+      <string>Control Water</string>
+      <string>Death Ward</string>
+      <string>Divination</string>
+      <string>Freedom Of Movement</string>
+      <string>Guardian Of Faith</string>
+      <string>Locate Creature</string>
+      <string>Stone Shape</string>
+      <string>Commune</string>
+      <string>Contagion</string>
+      <string>Dispel Evil And Good</string>
+      <string>Flame Strike</string>
+      <string>Geas</string>
+      <string>Greater Restoration</string>
+      <string>Hallow</string>
+      <string>Insect Plague</string>
+      <string>Legend Lore</string>
+      <string>Mass Cure Wounds</string>
+      <string>Planar Binding</string>
+      <string>Raise Dead</string>
+      <string>Scrying</string>
+      <string>Blade Barrier</string>
+      <string>Create Undead</string>
+      <string>Find The Path</string>
+      <string>Forbiddance</string>
+      <string>Harm</string>
+      <string>Heal</string>
+      <string>Heroes' Feast</string>
+      <string>Planar Ally</string>
+      <string>True Seeing</string>
+      <string>Word Of Recall</string>
+      <string>Guidance</string>
+      <string>Light</string>
+      <string>Sacred Flame</string>
+      <string>Spare The Dying</string>
+      <string>Thaumaturgy</string>
+    </KnownSpells>
+    <AlwaysPreparedSpells>
+      <string>Bless</string>
+      <string>Cure Wounds</string>
+      <string>Lesser Restoration</string>
+      <string>Spiritual Weapon</string>
+      <string>Beacon Of Hope</string>
+      <string>Revivify</string>
+      <string>Death Ward</string>
+      <string>Guardian Of Faith</string>
+      <string>Mass Cure Wounds</string>
+      <string>Raise Dead</string>
+    </AlwaysPreparedSpells>
+    <PreparedSpells>
+      <string>Bless</string>
+      <string>Cure Wounds</string>
+      <string>Guiding Bolt</string>
+      <string>Healing Word</string>
+      <string>Inflict Wounds</string>
+      <string>Aid</string>
+      <string>Continual Flame</string>
+      <string>Hold Person</string>
+      <string>Lesser Restoration</string>
+      <string>Spiritual Weapon</string>
+      <string>Zone Of Truth</string>
+      <string>Beacon Of Hope</string>
+      <string>Dispel Magic</string>
+      <string>Revivify</string>
+      <string>Speak With The Dead</string>
+      <string>Death Ward</string>
+      <string>Guardian Of Faith</string>
+      <string>Flame Strike</string>
+      <string>Greater Restoration</string>
+      <string>Mass Cure Wounds</string>
+      <string>Raise Dead</string>
+    </PreparedSpells>
+    <SpellCastingAbility>WIS</SpellCastingAbility>
+    <SpellAbilityModifier>5</SpellAbilityModifier>
+    <Level1SpellSlots>
+      <MaximumCount>4</MaximumCount>
+      <ActiveCount>4</ActiveCount>
+    </Level1SpellSlots>
+    <Level2SpellSlots>
+      <MaximumCount>3</MaximumCount>
+      <ActiveCount>3</ActiveCount>
+    </Level2SpellSlots>
+    <Level3SpellSlots>
+      <MaximumCount>3</MaximumCount>
+      <ActiveCount>3</ActiveCount>
+    </Level3SpellSlots>
+    <Level4SpellSlots>
+      <MaximumCount>3</MaximumCount>
+      <ActiveCount>3</ActiveCount>
+    </Level4SpellSlots>
+    <Level5SpellSlots>
+      <MaximumCount>2</MaximumCount>
+      <ActiveCount>2</ActiveCount>
+    </Level5SpellSlots>
+    <Level6SpellSlots>
+      <MaximumCount>1</MaximumCount>
+      <ActiveCount>1</ActiveCount>
+    </Level6SpellSlots>
+    <Level7SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level7SpellSlots>
+    <Level8SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level8SpellSlots>
+    <Level9SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level9SpellSlots>
+  </CharacterSpellCastingStatus>
+  <Level>12</Level>
+  <ProficiencyBonus>4</ProficiencyBonus>
+  <ExperiencePoints>100000</ExperiencePoints>
+  <MaxHitPoints>89</MaxHitPoints>
+  <Speed>30</Speed>
+  <Size>
+    <height>0</height>
+    <weight>0</weight>
+    <sizeType>Tiny</sizeType>
+  </Size>
+  <Alignment>NeutralGood</Alignment>
+  <MainRaceName>Elf</MainRaceName>
+  <SubRaceName>High Elf</SubRaceName>
+  <ClassName>Cleric</ClassName>
+  <SubClassName>Life Domain</SubClassName>
+  <BaseAttributes>
+    <STR>12</STR>
+    <DEX>16</DEX>
+    <INT>11</INT>
+    <CHA>8</CHA>
+    <CON>14</CON>
+    <WIS>20</WIS>
+  </BaseAttributes>
+  <GoldPieces>15</GoldPieces>
+  <ElectrumPieces>0</ElectrumPieces>
+  <CopperPieces>0</CopperPieces>
+  <SilverPieces>0</SilverPieces>
+  <PlatinumPieces>0</PlatinumPieces>
+  <CharacterName>Alya</CharacterName>
+  <CurrentHitPoints>89</CurrentHitPoints>
+  <CurrentHitDice>12</CurrentHitDice>
+</PlayerCharacter>
