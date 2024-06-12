@@ -112,7 +112,7 @@ namespace CharacterManager
                 c.BonusValues.CharacterSavingThrowBonusesFromAbilities["STR"].Add(new BonusValueModifier("Remarkable Athlete", (c.ProficiencyBonus + 1) / 2));
             }
 
-            if (!c.isSavingThrowProficientIn("DEX")) 
+            if (!c.isSavingThrowProficientIn("DEX"))
             {
                 if (!c.BonusValues.CharacterSavingThrowBonusesFromAbilities.Keys.Contains("DEX"))
                 {
@@ -120,9 +120,9 @@ namespace CharacterManager
                 }
                 c.BonusValues.CharacterSavingThrowBonusesFromAbilities["DEX"].Add(new BonusValueModifier("Remarkable Athlete", (c.ProficiencyBonus + 1) / 2));
             }
-            
-            if (!c.isSavingThrowProficientIn("CON")) 
-            { 
+
+            if (!c.isSavingThrowProficientIn("CON"))
+            {
                 if (!c.BonusValues.CharacterSavingThrowBonusesFromAbilities.Keys.Contains("CON"))
                 {
                     c.BonusValues.CharacterSavingThrowBonusesFromAbilities.Add("CON", new List<BonusValueModifier>());
@@ -272,7 +272,7 @@ namespace CharacterManager
         {
             /* We also strike a critical on 19, so lets add it to the list */
             c.BonusValues.ExtraCritValues.Add(19);
-            if(c.Level >= 15)
+            if (c.Level >= 15)
             {
                 c.BonusValues.ExtraCritValues.Add(18);
             }
@@ -350,7 +350,7 @@ namespace CharacterManager
             {
                 /* We just add the HP, since there is not really any way to detect if a turn has ended. 
                  Lets check the half HP rule though...*/
-                if(_connectedCharacter.CurrentHitPoints <= (_connectedCharacter.MaxHitPoints / 2) && (_connectedCharacter.CurrentHitPoints > 0))
+                if (_connectedCharacter.CurrentHitPoints <= (_connectedCharacter.MaxHitPoints / 2) && (_connectedCharacter.CurrentHitPoints > 0))
                 {
                     int value = 5 + _connectedCharacter.getModifier("CON");
                     _connectedCharacter.CurrentHitPoints += value;
@@ -459,11 +459,11 @@ namespace CharacterManager
         {
             string dieString = w.Damage.DamageValue;
             DieRollComponent damageDie = DieRollComponent.parseFromString(dieString);
-            if(c.Level < 13)
+            if (c.Level < 13)
             {
                 c.BonusValues.ExtraCriticalDamageModifiers.Add(new BonusValueModifier("Brutal critical", damageDie));
             }
-            else if(c.Level < 17)
+            else if (c.Level < 17)
             {
 
             }
@@ -482,7 +482,7 @@ namespace CharacterManager
     {
         /* TODO : Consider that when loading or saving, then this data will be lost. Maybe that's OK for now. */
         private bool isInitialCast = true;
-        
+
         public ArcaneWardAbility()
         {
             this.Name = "Arcane Ward";
@@ -568,7 +568,7 @@ namespace CharacterManager
 
         private void C_CharacterSpellCast(PlayerCharacter c, PlayerSpell sp, int level)
         {
-            if(sp.SpellLevel >= 1 && sp.School == "Conjuration")
+            if (sp.SpellLevel >= 1 && sp.School == "Conjuration")
             {
                 this.RemainingCharges = this.MaximumCharges;
             }
@@ -579,7 +579,7 @@ namespace CharacterManager
     {
         private int _portentDie1 = 0;
         private int _portentDie2 = 0;
-        
+
         public PortentAbility()
         {
             this.Name = "Portent";
@@ -592,7 +592,7 @@ namespace CharacterManager
             string rollResult;
 
             _portentDie1 = myEquation.RollValue(out rollResult);
-            GlobalEvents.ReportRollGlobal("Portent Die : "  + rollResult, Color.Black, true);
+            GlobalEvents.ReportRollGlobal("Portent Die : " + rollResult, Color.Black, true);
             _portentDie2 = myEquation.RollValue(out rollResult);
             GlobalEvents.ReportRollGlobal("Portent Die : " + rollResult, Color.Black, true);
         }
@@ -626,11 +626,11 @@ namespace CharacterManager
         public override void UseAbilityInfoItem(PlayerAbilityInfoItem item)
         {
             base.UseAbilityInfoItem(item);
-            if(_portentDie1 == item.Value)
+            if (_portentDie1 == item.Value)
             {
                 _portentDie1 = 0;
             }
-            else if(_portentDie2 == item.Value)
+            else if (_portentDie2 == item.Value)
             {
                 _portentDie2 = 0;
             }
@@ -664,12 +664,12 @@ namespace CharacterManager
 
             foreach (string opt in desc.Options1)
             {
-                if(x == 0)
+                if (x == 0)
                 {
                     int.TryParse(opt, out _portentDie1);
                     x++;
                 }
-                else if(x == 1)
+                else if (x == 1)
                 {
                     int.TryParse(opt, out _portentDie2);
                     x++;
@@ -737,7 +737,7 @@ namespace CharacterManager
         private void C_ShortRestMade(PlayerCharacter c)
         {
             PlayerAbility inspirationAbility = c.CharacterAbilitiesObjectList.Find(ability => ability.Name == "Bardic Inspiration");
-            
+
             if (inspirationAbility != null)
             {
                 inspirationAbility.RechargeAbility();
@@ -797,7 +797,7 @@ namespace CharacterManager
 
         private void C_CharacterCreated(PlayerCharacter c)
         {
-            if (c.ToolExpertise.Contains("Thieves Tools")) 
+            if (c.ToolExpertise.Contains("Thieves Tools"))
             {
                 /* Then we have no other choice. */
                 FormChooseSkillProfs myForm = new FormChooseSkillProfs();
@@ -869,7 +869,7 @@ namespace CharacterManager
         {
             this.Name = "Sneak Attack";
         }
-        
+
         public override void InitializeSubscriptions(PlayerCharacter c)
         {
             c.AttackRoll += C_AttackRoll;
@@ -983,17 +983,17 @@ namespace CharacterManager
         /* Here we need extra handling, because the ability can be selected directly on the Character Creator Form. */
         public override List<string> GetExtraChosenLanguagesGivenByAbility()
         {
-            List<string > result = new List<string>();
-            
+            List<string> result = new List<string>();
+
             if (chosenLanguage1 != null)
             {
                 result.Add(chosenLanguage1);
             }
 
-            if(chosenLanguage2 != null) 
+            if (chosenLanguage2 != null)
             {
                 result.Add(chosenLanguage2);
-            } 
+            }
 
             return result;
         }
@@ -1071,7 +1071,7 @@ namespace CharacterManager
         private void C_CharacterSetupCastingForSpell(PlayerCharacter c, PlayerSpell sp, int level)
         {
             if (sp.IsHealingSpell)
-            { 
+            {
                 c.BonusValues.SpellExtraDiceModifiers.Add(new BonusValueModifier("Disciple Of Life", level + 2));
             }
         }
@@ -1081,7 +1081,7 @@ namespace CharacterManager
     {
         public string selectedCantrip;
         public string selectedProficiency;
-        
+
         public AcolyteOfNature()
         {
             this.Name = "Acolyte Of Nature";
@@ -1130,7 +1130,7 @@ namespace CharacterManager
             myForm.ChoiceDescriptionText = "Choose 1 druid cantrip:";
 
             /* TODO : Connect this to the actual class, when the druid class has been implemented!!! */
-            List<string> druidCantrips = new List<string> { "Druidcraft", "Guidance", "Mending", "Poison Spray", "Produce Flame", "Resistance", "Shillelagh", "Thorn Whip"};
+            List<string> druidCantrips = new List<string> { "Druidcraft", "Guidance", "Mending", "Poison Spray", "Produce Flame", "Resistance", "Shillelagh", "Thorn Whip" };
 
             /* Now pass these on... */
             myForm.setChoiceList(druidCantrips);
@@ -1150,6 +1150,31 @@ namespace CharacterManager
             if (myForm.ShowDialog() == DialogResult.OK)
             {
                 selectedProficiency = myForm.getSelectedItem();
+            }
+        }
+    }
+
+    public class PotentSpellcasting : SpecialAttribute
+    {
+        public PotentSpellcasting()
+        {
+            this.Name = "Potent Spellcasting";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.CharacterSpellCast += C_CharacterSpellCast;
+        }
+
+        private void C_CharacterSpellCast(PlayerCharacter c, PlayerSpell sp, int level)
+        {
+            /* We add the WIS modifier to damage dealt with any cleric cantrip. */
+            if (level == 0)
+            {
+                if (!sp.IsHealingSpell)
+                {
+                    c.BonusValues.SpellExtraDiceModifiers.Add(new BonusValueModifier(this.Name, c.getModifier("WIS")));
+                }
             }
         }
     }

@@ -137,6 +137,7 @@ namespace CharacterManager.CharacterCreator
 
             //6. Set skill proficiencies
             CreatedCharacter.SkillProficiencies = userControlSkillProficiencies1.getAllSkillProficiencies();
+            CreatedCharacter.SkillExpertise = userControlSkillProficiencies1.getAllSkillExpertise();
 
             //7. Set Player HitPoints.
             CreatedCharacter.MaxHitPoints = currentMaxHp;

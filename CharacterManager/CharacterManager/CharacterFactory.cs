@@ -812,6 +812,7 @@ namespace CharacterManager
             SpecialAttributeList.Add(new BlessingsOfKnowledge());
             SpecialAttributeList.Add(new DiscipleOfLifeAbility());
             SpecialAttributeList.Add(new AcolyteOfNature());
+            SpecialAttributeList.Add(new PotentSpellcasting());
         }
 
         private static void logError(String err)

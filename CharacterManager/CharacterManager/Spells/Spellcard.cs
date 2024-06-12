@@ -362,6 +362,8 @@ namespace CharacterManager.Spells
                     }
                 }
             }
+
+            updateDieRollTextbox();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -406,23 +408,31 @@ namespace CharacterManager.Spells
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            int selectedLevel = (int)numericUpDown1.Value;
-            List<DieRollComponent> myComponents = mySpell.getDiceForSpellLevel(selectedLevel);
+            updateDieRollTextbox();
+        }
 
-            if (mySpell.IsSpellCastingModifierAddedToDice)
+        private void updateDieRollTextbox()
+        {
+            if (mySpell != null)
             {
-                myComponents.Add(new DieRollConstant(GlobalEvents.GetSpellcastingAbilityModifier()));
-            }
-            
-            /* Lets get more stuff from global events here....*/
+                int selectedLevel = (int)numericUpDown1.Value;
+                List<DieRollComponent> myComponents = mySpell.getDiceForSpellLevel(selectedLevel);
 
-            if (myComponents != null)
-            {
-                dieRollTextBox1.Text = DieRollEquation.createStringFromDieRollComponents(myComponents, true); 
-            }
-            else
-            {
-                dieRollTextBox1.Text = "";    
+                if (mySpell.IsSpellCastingModifierAddedToDice)
+                {
+                    myComponents.Add(new DieRollConstant(GlobalEvents.GetSpellcastingAbilityModifier()));
+                }
+
+                /* Lets get more stuff from global events here....*/
+
+                if (myComponents != null)
+                {
+                    dieRollTextBox1.Text = DieRollEquation.createStringFromDieRollComponents(myComponents, true);
+                }
+                else
+                {
+                    dieRollTextBox1.Text = "";
+                }
             }
         }
 

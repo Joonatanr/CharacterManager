@@ -568,6 +568,15 @@ chapter 11 for the cleric spell list..</Description>
 					</AvailableChoices>
 		</PlayerClassAbilityChoice>
 	</AvailableClassAbilitiesLevel5>
+	<!-- Level 6 -->
+	<!-- Channel Divinity 2/per rest -->
+	<!-- Divine Domain Feature -->
+	<!-- Level 7-->
+	<!-- No new abilities at level 7 -->
+	<!-- Level 8 -->
+	<!-- Ability Score Improvement -->
+	<!-- Destroy Undead CR1 -->
+	<!-- Divine Domain Feature -->
 	
 	<ArcheTypes>
 		<PlayerClassArchetype>
@@ -612,6 +621,13 @@ Onatar, Moradin, Hephaestus, and Goibhniu.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
+			<AvailableAbilitiesAtLevel8>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Potent Spellcasting</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel8>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>

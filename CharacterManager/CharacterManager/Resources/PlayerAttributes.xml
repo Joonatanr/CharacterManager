@@ -3190,5 +3190,13 @@ before the DM says whether the attack hits or misses.</Description>
 			<string>War God's Blessing</string>
 		</AdditionalManeuversAdded>
 	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Potent Spellcasting</Name>
+		<Description>Starting at 8th level, you add your Wisdom modifier to
+the damage you deal with any cleric cantrip.</Description>
+		<IsHidden>false</IsHidden>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
 
 </ArrayOfPlayerAbility>

@@ -635,8 +635,6 @@
             // 
             // userControlLanguageProficiencies
             // 
-            this.userControlLanguageProficiencies.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
             this.userControlLanguageProficiencies.IsBorder = true;
             this.userControlLanguageProficiencies.Location = new System.Drawing.Point(3, 1);
             this.userControlLanguageProficiencies.Name = "userControlLanguageProficiencies";
