@@ -159,7 +159,7 @@ namespace CharacterManager.UserControls
             {
                 if (Attribute.UseAbility())
                 {
-                     /* Should we do something here. */
+                    DisplayDataChanged?.Invoke();
                 }
                 else
                 {
@@ -313,6 +313,7 @@ namespace CharacterManager.UserControls
 
         private void handleDisplayDataChanged()
         {
+            this.updateBackgroundImage();
             this.Invalidate();
         }
 
