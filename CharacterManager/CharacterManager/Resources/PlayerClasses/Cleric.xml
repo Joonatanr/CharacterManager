@@ -579,6 +579,19 @@ chapter 11 for the cleric spell list..</Description>
 	<!-- Divine Domain Feature -->
 	<!-- Level 9 -->
 	<!-- No new abilities at level 9 -->
+	<AvailableClassAbilitiesLevel10>
+		<PlayerClassAbilityChoice>
+			<Description>Divine Intervention</Description>
+				<ClassAbilityName>Divine Intervention</ClassAbilityName>
+					<AvailableChoices>
+						<string>Divine Intervention</string>
+					</AvailableChoices>
+		</PlayerClassAbilityChoice>
+	</AvailableClassAbilitiesLevel10>
+	<!-- Level 11 -->
+	<!-- Destroy Undead CR2 -->
+	<!-- Level 12 -->
+	<!-- Ability Score Improvement -->
 	
 	<ArcheTypes>
 		<PlayerClassArchetype>
