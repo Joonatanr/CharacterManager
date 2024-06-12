@@ -603,6 +603,12 @@ chapter 11 for the cleric spell list..</Description>
 	<!-- Level 17 -->
 	<!-- Destroy Undead CR4 -->
 	<!-- Divine Domain Feature -->
+	<!-- Level 18 -->
+	<!-- Channel Divinity 3/rest -->
+	<!-- Level 19 -->
+	<!-- Channel Ability Score Improvement -->
+	<!-- Level 20 -->
+	<!-- Divine Intervention Improvement -->
 	
 	<ArcheTypes>
 		<PlayerClassArchetype>
@@ -770,6 +776,13 @@ with chasing away lies and burning away darkness.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel8>
+			<AvailableAbilitiesAtLevel17>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Corona Of Light</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel17>
 		</PlayerClassArchetype>
 		
 		
@@ -826,6 +839,13 @@ or wither the crops of those who anger their gods.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel8>
+			<AvailableAbilitiesAtLevel17>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Master Of Nature</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel17>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -880,6 +900,13 @@ common folk, either to keep those folk on the path of</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel8>
+			<AvailableAbilitiesAtLevel17>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Stormborn</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel17>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -928,6 +955,13 @@ direct confrontation</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel8>
+			<AvailableAbilitiesAtLevel17>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Improved Duplicity</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel17>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -986,6 +1020,13 @@ circumstance.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel8>
+			<AvailableAbilitiesAtLevel17>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Avatar Of Battle</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel17>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	

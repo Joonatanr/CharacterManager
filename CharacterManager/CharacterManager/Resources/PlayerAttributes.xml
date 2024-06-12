@@ -3313,14 +3313,21 @@ cleric spell or cleric dom ain spell would be appropriate.
 
 If your deity intervenes, you can’t use this feature
 again for 7 days. Otherwise, you can use it again after
-you finish a long rest.
-
-At 20th level, your call for intervention succeeds
-automatically, no roll required.</Description>
+you finish a long rest.</Description>
 		<IsHidden>false</IsHidden>
 		<IsCombatAbility>false</IsCombatAbility>
 		<IsToggle>false</IsToggle>
 		<Dice>1d20</Dice>
+		<Upgrades>
+			<PlayerAbilityUpgrade>
+				<Level>20</Level>
+				<AdditionalDescription>Improved Divine Intervention:
+
+At 20th level, your call for intervention succeeds
+automatically, no roll required.
+				</AdditionalDescription>
+			</PlayerAbilityUpgrade>
+		</Upgrades>
 	</PlayerAbility>
 	
 	<PlayerAbility>
@@ -3376,5 +3383,57 @@ creature, you restore 12.</Description>
 		<IsCombatAbility>false</IsCombatAbility>
 		<IsToggle>false</IsToggle>
 	</PlayerAbility>
-
+	
+	<PlayerAbility>
+		<Name>Corona Of Light</Name>
+		<Description>Starting at 17th level, you can use your action to activate
+an aura of sunlight that lasts for 1 minute or until you
+dism iss it using another action. You emit bright light in
+a 60-foot radius and dim light 30 feet beyond that. Your
+enem ies in the bright light have disadvantage on saving
+throws against any spell that deals fire or radiant damage.</Description>
+		<IsHidden>false</IsHidden>
+		<IsCombatAbility>true</IsCombatAbility>
+		<IsToggle>true</IsToggle>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Master Of Nature</Name>
+		<Description>At 17th level, you gain the ability to command animals
+and plant creatures. While creatures are charmed by
+your Charm Animals and Plants feature, you can take
+a bonus action on your turn to verbally command what
+each of those creatures will do on its next turn.</Description>
+		<IsHidden>false</IsHidden>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Stormborn</Name>
+		<Description>At 17th level, you have a flying speed equal to
+your current walking speed whenever you are not
+underground or indoors.</Description>
+		<IsHidden>false</IsHidden>
+		<IsCombatAbility>false</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Improved Duplicity</Name>
+		<Description>At 17th level, you can create up to four duplicates
+of yourself, instead of one, when you use Invoke
+Duplicity. As a bonus action on your turn, you can
+move any number of them up to 30 feet, to a maximum
+range of 120 feet.</Description>
+		<IsHidden>false</IsHidden>
+		<IsCombatAbility>false</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Avatar Of Battle</Name>
+		<Description>At 17th level, you gain resistance to bludgeoning, piercing,
+and slashing damage from nonm agical weapons.</Description>
+		<IsHidden>false</IsHidden>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
 </ArrayOfPlayerAbility>
