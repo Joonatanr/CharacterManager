@@ -396,8 +396,6 @@ namespace CharacterManager
                 }
             }
         }
-
-        /* TODO : Take into account resistance to bludgeoning, piercing and slashing damage. */
     }
 
 
@@ -1175,6 +1173,116 @@ namespace CharacterManager
                 {
                     c.BonusValues.SpellExtraDiceModifiers.Add(new BonusValueModifier(this.Name, c.getModifier("WIS")));
                 }
+            }
+        }
+    }
+
+    public class DivineStrikeLifeDomain : SpecialAttribute
+    {
+        public DivineStrikeLifeDomain()
+        {
+            this.Name = "Divine Strike(Life Domain)";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += C_AttackRoll;
+        }
+
+        private void C_AttackRoll(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (this.IsActive)
+            {
+                DieRollComponent bonus = DieRollComponent.parseFromString(this.Dice);
+                c.BonusValues.AttackDamageBonusModifiers.Add(new BonusValueModifier(this.Name, bonus));
+            }
+        }
+    }
+
+    public class DivineStrikeNatureDomain : SpecialAttribute
+    {
+        public DivineStrikeNatureDomain()
+        {
+            this.Name = "Divine Strike(Nature Domain)";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += C_AttackRoll;
+        }
+
+        private void C_AttackRoll(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (this.IsActive)
+            {
+                DieRollComponent bonus = DieRollComponent.parseFromString(this.Dice);
+                c.BonusValues.AttackDamageBonusModifiers.Add(new BonusValueModifier(this.Name, bonus));
+            }
+        }
+    }
+
+    public class DivineStrikeTempestDomain : SpecialAttribute
+    {
+        public DivineStrikeTempestDomain()
+        {
+            this.Name = "Divine Strike(Tempest Domain)";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += C_AttackRoll;
+        }
+
+        private void C_AttackRoll(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (this.IsActive)
+            {
+                DieRollComponent bonus = DieRollComponent.parseFromString(this.Dice);
+                c.BonusValues.AttackDamageBonusModifiers.Add(new BonusValueModifier(this.Name, bonus));
+            }
+        }
+    }
+
+    public class DivineStrikeTrickeryDomain : SpecialAttribute
+    {
+        public DivineStrikeTrickeryDomain()
+        {
+            this.Name = "Divine Strike(Trickery Domain)";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += C_AttackRoll;
+        }
+
+        private void C_AttackRoll(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (this.IsActive)
+            {
+                DieRollComponent bonus = DieRollComponent.parseFromString(this.Dice);
+                c.BonusValues.AttackDamageBonusModifiers.Add(new BonusValueModifier(this.Name, bonus));
+            }
+        }
+    }
+
+    public class DivineStrikeWarDomain : SpecialAttribute
+    {
+        public DivineStrikeWarDomain()
+        {
+            this.Name = "Divine Strike(War Domain)";
+        }
+
+        public override void InitializeSubscriptions(PlayerCharacter c)
+        {
+            c.AttackRoll += C_AttackRoll;
+        }
+
+        private void C_AttackRoll(PlayerCharacter c, PlayerWeapon w)
+        {
+            if (this.IsActive)
+            {
+                DieRollComponent bonus = DieRollComponent.parseFromString(this.Dice);
+                c.BonusValues.AttackDamageBonusModifiers.Add(new BonusValueModifier(this.Name, bonus));
             }
         }
     }

@@ -789,30 +789,42 @@ namespace CharacterManager
             SpecialAttributeList.Add(new RemarkableAthleteAbility());
             SpecialAttributeList.Add(new SurvivorAbility());
 
+            /* Barbarian special abilities */
             SpecialAttributeList.Add(new RageAbility());
             SpecialAttributeList.Add(new UnarmoredDefenseAbility());
             SpecialAttributeList.Add(new FastMovementAbility());
             SpecialAttributeList.Add(new BrutalCriticalAbility());
 
+            /* Wizard special abilities */
             SpecialAttributeList.Add(new ArcaneWardAbility());
             SpecialAttributeList.Add(new ImprovedAbjurationAbility());
             SpecialAttributeList.Add(new BenignTranspositionAbility());
             SpecialAttributeList.Add(new PortentAbility());
 
+            /* Bard special abilities */
             SpecialAttributeList.Add(new JackOfAllTradesAbility());
             SpecialAttributeList.Add(new FontOfInspiration());
             SpecialAttributeList.Add(new SuperiorInspiration());
 
+            /* Rogue special abilities */
             SpecialAttributeList.Add(new RogueExpertise());
             SpecialAttributeList.Add(new SneakAttack());
 
+            /* Paladin special abilities */
             SpecialAttributeList.Add(new DivineSmite());
             SpecialAttributeList.Add(new ImprovedDivineSmite());
 
+            /* Cleric special abilities */
             SpecialAttributeList.Add(new BlessingsOfKnowledge());
             SpecialAttributeList.Add(new DiscipleOfLifeAbility());
             SpecialAttributeList.Add(new AcolyteOfNature());
             SpecialAttributeList.Add(new PotentSpellcasting());
+
+            SpecialAttributeList.Add(new DivineStrikeLifeDomain());
+            SpecialAttributeList.Add(new DivineStrikeNatureDomain());
+            SpecialAttributeList.Add(new DivineStrikeTempestDomain());
+            SpecialAttributeList.Add(new DivineStrikeTrickeryDomain());
+            SpecialAttributeList.Add(new DivineStrikeWarDomain()); 
         }
 
         private static void logError(String err)

@@ -577,6 +577,8 @@ chapter 11 for the cleric spell list..</Description>
 	<!-- Ability Score Improvement -->
 	<!-- Destroy Undead CR1 -->
 	<!-- Divine Domain Feature -->
+	<!-- Level 9 -->
+	<!-- No new abilities at level 9 -->
 	
 	<ArcheTypes>
 		<PlayerClassArchetype>
@@ -675,6 +677,13 @@ community (such as Hestia, Hathor, and Boldrei).</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
+			<AvailableAbilitiesAtLevel8>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Divine Strike(Life Domain)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel8>
 		</PlayerClassArchetype>
 		
 		
@@ -716,6 +725,13 @@ with chasing away lies and burning away darkness.</Description>
 			<AvailableAbilitiesAtLevel6>
 				<!-- Improved Flare -->
 			</AvailableAbilitiesAtLevel6>
+			<AvailableAbilitiesAtLevel8>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Potent Spellcasting</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel8>
 		</PlayerClassArchetype>
 		
 		
@@ -765,6 +781,13 @@ or wither the crops of those who anger their gods.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
+			<AvailableAbilitiesAtLevel8>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Divine Strike(Nature Domain)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel8>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -812,6 +835,13 @@ common folk, either to keep those folk on the path of</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
+			<AvailableAbilitiesAtLevel8>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Divine Strike(Tempest Domain)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel8>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -853,6 +883,13 @@ direct confrontation</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
+			<AvailableAbilitiesAtLevel8>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Divine Strike(Trickery Domain)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel8>
 		</PlayerClassArchetype>
 		
 		<PlayerClassArchetype>
@@ -904,6 +941,13 @@ circumstance.</Description>
 					</AvailableChoices>
 				</PlayerClassAbilityChoice>
 			</AvailableAbilitiesAtLevel6>
+			<AvailableAbilitiesAtLevel8>
+				<PlayerClassAbilityChoice>
+					<AvailableChoices>
+						<string>Divine Strike(War Domain)</string>
+					</AvailableChoices>
+				</PlayerClassAbilityChoice>
+			</AvailableAbilitiesAtLevel8>
 		</PlayerClassArchetype>
 	</ArcheTypes>
 	
