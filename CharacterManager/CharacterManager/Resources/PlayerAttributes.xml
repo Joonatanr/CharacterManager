@@ -1235,7 +1235,7 @@ the attack roll.
 
 The amount of the extra damage increases as you
 gain levels in this class, as shown in the Sneak Attack
-colum n of the Rogue table.</Description>
+column of the Rogue table.</Description>
 		<IsHidden>false</IsHidden>
 		<IsCombatAbility>true</IsCombatAbility>
 		<IsToggle>true</IsToggle>
@@ -1296,6 +1296,85 @@ people in an area are easy marks or will provide a safe
 house for thieves on the run.</Description>
 	</PlayerAbility>
 	
+	<PlayerAbility>
+		<Name>Cunning Action</Name>
+		<Description>Starting at 2nd level, your quick thinking and agility
+allow you to move and act quickly. You can take a
+bonus action on each of your turns in combat. This
+action can be used only to take the Dash, Disengage,
+or Hide action.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Fast Hands</Name>
+		<Description>Starting at 3rd level, you can use the bonus action
+granted by your Cunning Action to make a Dexterity
+(Sleight of Hand) check, use your thieves’ tools to
+disarm a trap or open a lock, or take the Use an
+Object action.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Second-Story Work</Name>
+		<Description>When you choose this archetype at 3rd level, you gain
+the ability to climb faster than normal; climbing no
+longer costs you extra movement.
+
+In addition, when you make a running jump, the
+distance you cover increases by a num ber of feet equal
+to your Dexterity modifier.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Bonus Proficiencies(Assassin)</Name>
+		<Description>When you choose this archetype at 3rd level, you gain
+proficiency with the disguise kit and the poisoner’s kit.</Description>
+		<IsCombatAbility>false</IsCombatAbility>
+		<IsHidden>true</IsHidden>
+		<AdditionalToolProficiencies>
+			<string>Disguise Kit</string>
+			<string>Poisoner's Kit</string>
+		</AdditionalToolProficiencies>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Assassinate</Name>
+		<Description>Starting at 3rd level, you are at your deadliest when you
+get the drop on your enemies. You have advantage on
+attack rolls against any creature that hasn’t taken a turn
+in the combat yet. In addition, any hit you score against
+a creature that is surprised is a critical hit.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+	</PlayerAbility>
+	
+	<PlayerAbility>
+		<Name>Mage Hand Legerdemain</Name>
+		<Description>Starting at 3rd level, when you cast mage hand, you can
+make the spectral hand invisible, and you can perform
+the following additional tasks with it:
+
+• You can stow one object the hand is holding in a
+container w orn or carried by another creature.
+• You can retrieve an object in a container w orn or
+carried by another creature.
+• You can use thieves’ tools to pick locks and disarm
+traps at range.
+
+You can perform one of these tasks without being
+noticed by a creature if you succeed on a Dexterity
+(Sleight of Hand) check contested by the creature’s
+Wisdom (Perception) check.
+
+In addition, you can use the bonus action granted by
+your Cunning Action to control the hand.</Description>
+		<IsCombatAbility>true</IsCombatAbility>
+		<SpellsAddedByAbility>
+			<string>Mage Hand</string>
+		</SpellsAddedByAbility>
+	</PlayerAbility>
 	
 <!-- Wizard class abilities -->
 	<PlayerAbility>

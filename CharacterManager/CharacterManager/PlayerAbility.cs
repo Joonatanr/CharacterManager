@@ -71,6 +71,7 @@ namespace CharacterManager
 
         public List<String> AdditionalArmorProficiencies = new List<string>();
         public List<String> AdditionalWeaponProficiencies = new List<string>();
+        public List<String> AdditionalToolProficiencies = new List<string>();
 
         /* This one is a bit tricky... Some abilities might give extra maneuvers to already existing abilities. */
         /* TODO : Implement this. */
@@ -516,6 +517,15 @@ So we get to an issue where upgrades to the description are added multiple times
                     c.ArmorProficiencies.Add(armorProficiency);
                 }
             }
+
+            /* Also there might be new tool proficiencies. */
+            foreach (string toolProf in this.AdditionalToolProficiencies)
+            {
+                if (!c.ToolProficiencies.Contains(toolProf))
+                {
+                    c.ToolProficiencies.Add(toolProf);
+                }
+            }
         }
 
         /// <summary>
@@ -625,6 +635,13 @@ So we get to an issue where upgrades to the description are added multiple times
         {
             List<string> res = new List<string>();
             res.AddRange(SpellsAddedByAbility);
+            return res;
+        }
+
+        public virtual List<string> GetExtraChosenToolProficienciesGivenByAbility()
+        {
+            List<string> res = new List<string>();
+            res.AddRange(AdditionalToolProficiencies);
             return res;
         }
     }

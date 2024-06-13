@@ -1,0 +1,422 @@
+<PlayerCharacter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SkillProficiencies>
+    <string>Stealth</string>
+    <string>Persuasion</string>
+    <string>Performance</string>
+    <string>Perception</string>
+    <string>Insight</string>
+    <string>Deception</string>
+    <string>Acrobatics</string>
+  </SkillProficiencies>
+  <SkillExpertise />
+  <ToolExpertise />
+  <Languages>
+    <string>Common</string>
+    <string>Elvish</string>
+  </Languages>
+  <WeaponProficiencies>
+    <string>rapier</string>
+    <string>shortsword</string>
+    <string>light crossbow</string>
+    <string>Simple Weapons</string>
+    <string>Hand Crossbow</string>
+    <string>Longsword</string>
+    <string>Rapier</string>
+    <string>Shortsword</string>
+  </WeaponProficiencies>
+  <ArmorProficiencies>
+    <string>Light Armor</string>
+  </ArmorProficiencies>
+  <ToolProficiencies>
+    <string>Thieves' Tools</string>
+    <string>Dragonchess Set</string>
+    <string>Thieves' Tools</string>
+  </ToolProficiencies>
+  <SavingThrowProficiencies>
+    <string>DEX</string>
+    <string>INT</string>
+  </SavingThrowProficiencies>
+  <CharacterAbilities>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Darkvision</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Fey Ancestry</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Trance</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Superior Darkvision</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Sunlight Sensitivity</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Drow Magic</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Sneak Attack</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+    <PlayerAbilityDescriptor>
+      <AbilityName>Thieves' Cant</AbilityName>
+      <RemainingCharges>0</RemainingCharges>
+      <IsActive>false</IsActive>
+      <Options1 />
+      <SubType />
+    </PlayerAbilityDescriptor>
+  </CharacterAbilities>
+  <CharacterWeapons>
+    <PlayerWeapon>
+      <Name>Rapier</Name>
+      <Weight>2</Weight>
+      <Cost>25</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>false</IsAmmunition>
+      <IsFinesse>true</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>false</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>false</IsThrown>
+      <IsTwoHanded>false</IsTwoHanded>
+      <IsVersatile>false</IsVersatile>
+      <IsRanged>false</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Martial</Type>
+      <Range>
+        <NormalRange>0</NormalRange>
+        <LongRange>0</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d8</DamageValue>
+        <Type>Piercing</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <Type>None</Type>
+      </TwoHandedDamage>
+      <ExtraDamage>
+        <Type>None</Type>
+      </ExtraDamage>
+      <IsEquipped>true</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType />
+      <IsMagical>false</IsMagical>
+      <MagicalBonus>0</MagicalBonus>
+    </PlayerWeapon>
+    <PlayerWeapon>
+      <Name>Shortbow</Name>
+      <Weight>2</Weight>
+      <Cost>25</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>true</IsAmmunition>
+      <IsFinesse>false</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>false</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>false</IsThrown>
+      <IsTwoHanded>true</IsTwoHanded>
+      <IsVersatile>false</IsVersatile>
+      <IsRanged>true</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Simple</Type>
+      <Range>
+        <NormalRange>80</NormalRange>
+        <LongRange>320</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d6</DamageValue>
+        <Type>Piercing</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <Type>None</Type>
+      </TwoHandedDamage>
+      <ExtraDamage>
+        <Type>None</Type>
+      </ExtraDamage>
+      <IsEquipped>false</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType>Arrows</AmmoType>
+      <IsMagical>false</IsMagical>
+      <MagicalBonus>0</MagicalBonus>
+    </PlayerWeapon>
+    <PlayerWeapon>
+      <Name>Dagger</Name>
+      <Weight>1</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>false</IsAmmunition>
+      <IsFinesse>true</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>true</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>true</IsThrown>
+      <IsTwoHanded>false</IsTwoHanded>
+      <IsVersatile>false</IsVersatile>
+      <IsRanged>false</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Simple</Type>
+      <Range>
+        <NormalRange>20</NormalRange>
+        <LongRange>60</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d4</DamageValue>
+        <Type>Piercing</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <Type>None</Type>
+      </TwoHandedDamage>
+      <ExtraDamage>
+        <Type>None</Type>
+      </ExtraDamage>
+      <IsEquipped>true</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType />
+      <IsMagical>false</IsMagical>
+      <MagicalBonus>0</MagicalBonus>
+    </PlayerWeapon>
+    <PlayerWeapon>
+      <Name>Dagger</Name>
+      <Weight>1</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <IsAmmunition>false</IsAmmunition>
+      <IsFinesse>true</IsFinesse>
+      <IsHeavy>false</IsHeavy>
+      <IsLight>true</IsLight>
+      <IsLoading>false</IsLoading>
+      <IsThrown>true</IsThrown>
+      <IsTwoHanded>false</IsTwoHanded>
+      <IsVersatile>false</IsVersatile>
+      <IsRanged>false</IsRanged>
+      <IsReach>false</IsReach>
+      <Type>Simple</Type>
+      <Range>
+        <NormalRange>20</NormalRange>
+        <LongRange>60</LongRange>
+      </Range>
+      <Reach>5</Reach>
+      <Damage>
+        <DamageValue>1d4</DamageValue>
+        <Type>Piercing</Type>
+      </Damage>
+      <TwoHandedDamage>
+        <Type>None</Type>
+      </TwoHandedDamage>
+      <ExtraDamage>
+        <Type>None</Type>
+      </ExtraDamage>
+      <IsEquipped>false</IsEquipped>
+      <IsEquippedTwoHanded>false</IsEquippedTwoHanded>
+      <AmmoType />
+      <IsMagical>false</IsMagical>
+      <MagicalBonus>0</MagicalBonus>
+    </PlayerWeapon>
+  </CharacterWeapons>
+  <CharacterArmors>
+    <PlayerArmor>
+      <Name>Leather</Name>
+      <Weight>10</Weight>
+      <Cost>10</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ArmorClass>11</ArmorClass>
+      <Type>Light</Type>
+      <IsShield>false</IsShield>
+      <MinStrength>0</MinStrength>
+      <IsStealthDisadvantage>false</IsStealthDisadvantage>
+      <IsDexterityModifier>true</IsDexterityModifier>
+      <MaxDexModifier>20</MaxDexModifier>
+      <IsEquipped>true</IsEquipped>
+      <IsMagical>false</IsMagical>
+      <MagicalAcBonus>0</MagicalAcBonus>
+    </PlayerArmor>
+  </CharacterArmors>
+  <CharacterGeneralEquipment>
+    <PlayerItem
+      xsi:type="PlayerToolKit">
+      <Description>This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.</Description>
+      <Name>Thieves' Tools</Name>
+      <Weight>1</Weight>
+      <Cost>25</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ToolType>TYPE_GENERIC</ToolType>
+    </PlayerItem>
+    <PlayerItem>
+      <Name>Arrow</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>20</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem
+      xsi:type="ItemContainer">
+      <Description> Includes a backpack, a bedroll, a mess kit, a tinderbox, 10 torches, 10 days of rations, and a waterskin. The pack also has 50 feet of hempen rope strapped to the side of it. </Description>
+      <Name>Explorer's Pack</Name>
+      <Weight>10</Weight>
+      <Cost>10</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+      <ContainedItems>
+        <ContainerContent>
+          <Name>Backpack</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Bedroll</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Mess Kit</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Tinderbox</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Torch</Name>
+          <Quantity>10</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Rations</Name>
+          <Quantity>10</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Waterskin</Name>
+          <Quantity>1</Quantity>
+        </ContainerContent>
+        <ContainerContent>
+          <Name>Rope</Name>
+          <Quantity>50</Quantity>
+        </ContainerContent>
+      </ContainedItems>
+    </PlayerItem>
+    <PlayerItem>
+      <Description>Using a crowbar grants advantage to Strength checks where the crowbar’s leverage can be applied.</Description>
+      <Name>Crowbar</Name>
+      <Weight>10</Weight>
+      <Cost>2</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+    <PlayerItem>
+      <Name>Set of dark common clothes including a hood</Name>
+      <Weight>0</Weight>
+      <Cost>0</Cost>
+      <Quantity>1</Quantity>
+      <IsAmmo>false</IsAmmo>
+    </PlayerItem>
+  </CharacterGeneralEquipment>
+  <CharacterSpellCastingStatus>
+    <KnownSpells>
+      <string>Dancing Lights</string>
+    </KnownSpells>
+    <AlwaysPreparedSpells />
+    <PreparedSpells />
+    <SpellAbilityModifier>0</SpellAbilityModifier>
+    <Level1SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level1SpellSlots>
+    <Level2SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level2SpellSlots>
+    <Level3SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level3SpellSlots>
+    <Level4SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level4SpellSlots>
+    <Level5SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level5SpellSlots>
+    <Level6SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level6SpellSlots>
+    <Level7SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level7SpellSlots>
+    <Level8SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level8SpellSlots>
+    <Level9SpellSlots>
+      <MaximumCount>0</MaximumCount>
+      <ActiveCount>0</ActiveCount>
+    </Level9SpellSlots>
+  </CharacterSpellCastingStatus>
+  <Level>1</Level>
+  <ProficiencyBonus>2</ProficiencyBonus>
+  <ExperiencePoints>0</ExperiencePoints>
+  <MaxHitPoints>10</MaxHitPoints>
+  <Speed>30</Speed>
+  <Size>
+    <height>0</height>
+    <weight>0</weight>
+    <sizeType>Tiny</sizeType>
+  </Size>
+  <Alignment>ChaoticNeutral</Alignment>
+  <MainRaceName>Elf</MainRaceName>
+  <SubRaceName>Drow</SubRaceName>
+  <ClassName>Rogue</ClassName>
+  <SubClassName />
+  <BaseAttributes>
+    <STR>8</STR>
+    <DEX>17</DEX>
+    <INT>11</INT>
+    <CHA>12</CHA>
+    <CON>14</CON>
+    <WIS>13</WIS>
+  </BaseAttributes>
+  <GoldPieces>15</GoldPieces>
+  <ElectrumPieces>0</ElectrumPieces>
+  <CopperPieces>0</CopperPieces>
+  <SilverPieces>0</SilverPieces>
+  <PlatinumPieces>0</PlatinumPieces>
+  <CharacterName>TestRogue</CharacterName>
+  <CurrentHitPoints>10</CurrentHitPoints>
+  <CurrentHitDice>1</CurrentHitDice>
+</PlayerCharacter>
